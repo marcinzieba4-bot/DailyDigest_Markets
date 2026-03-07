@@ -1066,16 +1066,20 @@ def _html_to_pdf_bytes(full_html):
     today = datetime.now().strftime('%A, %B %d %Y')
 
     # Title
-    pdf.set_font('Helvetica', 'B', 18)
-    pdf.set_text_color(26, 26, 46)   # #1a1a2e
-    pdf.multi_cell(0, 9, 'Market Intelligence Briefing', align='L')
-    pdf.set_font('Helvetica', '', 9)
-    pdf.set_text_color(136, 136, 136)
-    pdf.multi_cell(0, 5, today + '  --  Macro . Sectors . Flows . Crypto . Quant Models', align='L')
-    pdf.set_draw_color(26, 115, 232)   # #1a73e8
-    pdf.set_line_width(0.8)
-    pdf.line(pdf.l_margin, pdf.get_y() + 2, pdf.w - pdf.r_margin, pdf.get_y() + 2)
-    pdf.ln(6)
+    try:
+        pdf.set_font('Helvetica', 'B', 18)
+        pdf.set_text_color(26, 26, 46)   # #1a1a2e
+        pdf.multi_cell(0, 9, 'Market Intelligence Briefing', align='L')
+        pdf.set_font('Helvetica', '', 9)
+        pdf.set_text_color(136, 136, 136)
+        pdf.multi_cell(0, 5, today + '  --  Macro . Sectors . Flows . Crypto . Quant Models', align='L')
+        pdf.set_draw_color(26, 115, 232)   # #1a73e8
+        pdf.set_line_width(0.8)
+        pdf.line(pdf.l_margin, pdf.get_y() + 2, pdf.w - pdf.r_margin, pdf.get_y() + 2)
+        pdf.ln(6)
+    except Exception as exc:
+        logger.warning("PDF title block skipped: %s", exc)
+        pdf.ln(6)
 
     usable_w = pdf.w - pdf.l_margin - pdf.r_margin
 
@@ -1091,7 +1095,7 @@ def _html_to_pdf_bytes(full_html):
                 pdf.ln(6)
             continue
 
-        safe = _safe(text)
+        safe = _safe(text).strip()
         if not safe:
             continue
 
