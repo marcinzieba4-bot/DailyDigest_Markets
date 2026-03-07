@@ -5,13 +5,8 @@ Normal mode  : polls Telegram every 60 s, passes every message to Claude
                (Anthropic API) for interpretation, and dispatches one of:
                  • run_report  — invoke daily-trends-digest Lambda
                  • reply       — send Claude's plain-text reply to the user
-                 • modify_code — fetch report Lambda code, propose a unified
-                                 diff in Telegram, then wait for "yes" before
-                                 deploying
-
-Pending-patch: a proposed code change is carried in the invocation payload
-               (base64-encoded new file) until the user replies "yes" or "no".
-               No extra AWS services needed — state lives in the event chain.
+                 • modify_code — fetch report Lambda code, apply the change
+                                 immediately and deploy without approval
 
 Busy mode    : after triggering a report, sleeps BUSY_WAIT_S (300 s) before
                resuming, so only one report runs at a time.
@@ -19,7 +14,6 @@ Busy mode    : after triggering a report, sleeps BUSY_WAIT_S (300 s) before
 DEPLOY_ID    : generation tag stamped by deploy_webhook.py — stale chains from
                previous deploys exit immediately on their next self-reinvocation.
 """
-import base64
 import difflib
 import io
 import json
@@ -302,57 +296,29 @@ def _invoke_report(chat_id, lam_client):
             pass
 
 
-def handle_message(text, chat_id, pending_patch, lam_client):
-    """Process one incoming message.
+def handle_message(text, chat_id, lam_client):
+    """Process one incoming message.  Returns report_triggered: bool."""
 
-    Returns (report_triggered: bool, new_pending_patch: dict|None).
-    """
-
-    # ── Pending patch awaiting yes/no ─────────────────────────────────────────
-    if pending_patch:
-        answer = text.strip().lower()
-        if answer in ('yes', 'y', 'да', 'yep', 'ok', 'okay'):
-            try:
-                send_message(chat_id, '\U0001f527 Applying change and deploying\u2026')
-                new_code = base64.b64decode(pending_patch['code_b64']).decode('utf-8')
-                apply_and_deploy(new_code, lam_client)
-                _invoke_report(chat_id, lam_client)
-                return True, None   # report triggered, patch cleared
-            except Exception as e:
-                logger.error("Failed to apply patch: %s", e)
-                send_message(chat_id, f'\u274c Deploy failed: {e}')
-                return False, None
-
-        if answer in ('no', 'n', 'нет', '/cancel', 'nope', 'cancel'):
-            send_message(chat_id, '\u21a9\ufe0f Change cancelled.')
-            return False, None
-
-        # Any other message while patch is pending — remind the user
-        send_message(chat_id,
-            '\u23f3 There is a pending code change awaiting your confirmation.\n'
-            'Reply `yes` to deploy it or `no` to cancel.')
-        return False, pending_patch
-
-    # ── No pending patch: classify intent via Claude ───────────────────────────
+    # ── Classify intent via Claude ─────────────────────────────────────────────
     if not ANTHROPIC_API_KEY:
         # Graceful fallback when API key is missing
         if text.startswith('/report'):
             _invoke_report(chat_id, lam_client)
-            return True, None
+            return True
         send_message(chat_id, '\u274c ANTHROPIC_API_KEY not configured in Lambda env.')
-        return False, None
+        return False
 
     try:
         action, payload_str = classify_intent(text)
     except Exception as e:
         logger.error("classify_intent failed: %s", e)
         send_message(chat_id, f'\u274c Could not interpret request: {e}')
-        return False, None
+        return False
 
     # ── run_report ─────────────────────────────────────────────────────────────
     if action == 'run_report':
         _invoke_report(chat_id, lam_client)
-        return True, None
+        return True
 
     # ── reply ──────────────────────────────────────────────────────────────────
     if action == 'reply':
@@ -360,7 +326,7 @@ def handle_message(text, chat_id, pending_patch, lam_client):
             send_message(chat_id, payload_str or '\U0001f914')
         except Exception as e:
             logger.error("send_message (reply) failed: %s", e)
-        return False, None
+        return False
 
     # ── modify_code ────────────────────────────────────────────────────────────
     if action == 'modify_code':
@@ -378,29 +344,27 @@ def handle_message(text, chat_id, pending_patch, lam_client):
             if len(diff) > 3200:
                 diff_preview += '\n\u2026 _(diff truncated)_'
 
-            patch = {
-                'code_b64': base64.b64encode(new_code.encode()).decode(),
-                'summary':  summary,
-            }
-
             send_message(chat_id,
-                f'\U0001f4dd *Proposed change*: {summary}\n\n'
-                f'```\n{diff_preview}\n```\n\n'
-                'Reply `yes` to deploy, `no` to cancel.')
-            return False, patch
+                f'\U0001f4dd *Applying change*: {summary}\n\n'
+                f'```\n{diff_preview}\n```')
+
+            apply_and_deploy(new_code, lam_client)
+            send_message(chat_id, '\u2705 Deployed. Running report now\u2026')
+            _invoke_report(chat_id, lam_client)
+            return True
 
         except Exception as e:
             logger.error("modify_code failed: %s", e)
             send_message(chat_id, f'\u274c Failed to generate change: {e}')
-            return False, None
+            return False
 
-    return False, None
+    return False
 
 
 # ── Polling loop ───────────────────────────────────────────────────────────────
 
-def poll_once(lam_client, offset, pending_patch):
-    """Poll Telegram once.  Returns (next_offset, report_triggered, pending_patch)."""
+def poll_once(lam_client, offset):
+    """Poll Telegram once.  Returns (next_offset, report_triggered)."""
     now = int(time.time())
     try:
         result = tg_post('getUpdates', {
@@ -411,11 +375,11 @@ def poll_once(lam_client, offset, pending_patch):
         })
     except Exception as e:
         logger.error("getUpdates failed: %s", e)
-        return offset, False, pending_patch
+        return offset, False
 
     updates = result.get('result', [])
     if not updates:
-        return offset, False, pending_patch
+        return offset, False
 
     next_offset      = max(upd['update_id'] for upd in updates) + 1
     report_triggered = False
@@ -452,12 +416,11 @@ def poll_once(lam_client, offset, pending_patch):
                 logger.error("Failed to send help: %s", e)
             continue
 
-        triggered, pending_patch = handle_message(text, chat_id, pending_patch, lam_client)
-        if triggered:
+        if handle_message(text, chat_id, lam_client):
             report_triggered = True
             break   # one action per poll cycle
 
-    return next_offset, report_triggered, pending_patch
+    return next_offset, report_triggered
 
 
 # ── Lambda entrypoint ──────────────────────────────────────────────────────────
@@ -479,15 +442,14 @@ def lambda_handler(event, context):
 
     lam = boto3.client('lambda', region_name=REGION)
 
-    offset        = event.get('offset') or get_fresh_offset()
-    pending_patch = event.get('pending_patch')  # dict or None, carried across invocations
+    offset = event.get('offset') or get_fresh_offset()
 
-    logger.info("Starting loop: %d cycles × %ds  deploy_id=%s  offset=%d  pending=%s",
-                CYCLES_PER_RUN, POLL_INTERVAL_S, DEPLOY_ID, offset, bool(pending_patch))
+    logger.info("Starting loop: %d cycles × %ds  deploy_id=%s  offset=%d",
+                CYCLES_PER_RUN, POLL_INTERVAL_S, DEPLOY_ID, offset)
 
     for cycle in range(CYCLES_PER_RUN):
         logger.info("Cycle %d/%d (offset=%d)", cycle + 1, CYCLES_PER_RUN, offset)
-        offset, report_triggered, pending_patch = poll_once(lam, offset, pending_patch)
+        offset, report_triggered = poll_once(lam, offset)
 
         if report_triggered:
             logger.info("Busy mode: sleeping %ds while report generates\u2026", BUSY_WAIT_S)
@@ -496,13 +458,8 @@ def lambda_handler(event, context):
         elif cycle < CYCLES_PER_RUN - 1:
             time.sleep(POLL_INTERVAL_S)
 
-    # Re-invoke self — carry offset, deploy_id, and any pending patch
     payload = {'offset': offset, 'deploy_id': DEPLOY_ID}
-    if pending_patch:
-        payload['pending_patch'] = pending_patch
-
-    logger.info("Re-invoking self (offset=%d, deploy_id=%s, pending=%s)\u2026",
-                offset, DEPLOY_ID, bool(pending_patch))
+    logger.info("Re-invoking self (offset=%d, deploy_id=%s)\u2026", offset, DEPLOY_ID)
     try:
         lam.invoke(
             FunctionName=context.function_name,
