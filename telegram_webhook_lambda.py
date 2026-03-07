@@ -86,6 +86,7 @@ POLL_INTERVAL_S = 60    # seconds between polls in normal mode
 BUSY_WAIT_S     = 300   # seconds to pause after triggering a report
 CYCLES_PER_RUN  = 12    # ~12 min per Lambda invocation
 MAX_AGE_SECONDS = 180   # ignore messages older than 3 min
+REINVOKE_BUFFER_MS = 90_000  # bail out and self-reinvoke when less than 90s remains
 
 
 # ── Telegram helpers ───────────────────────────────────────────────────────────
@@ -448,12 +449,27 @@ def lambda_handler(event, context):
                 CYCLES_PER_RUN, POLL_INTERVAL_S, DEPLOY_ID, offset)
 
     for cycle in range(CYCLES_PER_RUN):
+        # Safety: if less than REINVOKE_BUFFER_MS remains, break now so the
+        # self-reinvocation has time to complete before the Lambda times out.
+        remaining_ms = context.get_remaining_time_in_millis()
+        if remaining_ms < REINVOKE_BUFFER_MS:
+            logger.info("Low time remaining (%dms) — breaking early to self-reinvoke.", remaining_ms)
+            break
+
         logger.info("Cycle %d/%d (offset=%d)", cycle + 1, CYCLES_PER_RUN, offset)
         offset, report_triggered = poll_once(lam, offset)
 
         if report_triggered:
-            logger.info("Busy mode: sleeping %ds while report generates\u2026", BUSY_WAIT_S)
-            time.sleep(BUSY_WAIT_S)
+            # Sleep in small increments so we can bail out if time is running low
+            slept = 0
+            while slept < BUSY_WAIT_S:
+                if context.get_remaining_time_in_millis() < REINVOKE_BUFFER_MS:
+                    logger.info("Low time during busy wait (%dms left) — breaking early.",
+                                context.get_remaining_time_in_millis())
+                    break
+                chunk = min(30, BUSY_WAIT_S - slept)
+                time.sleep(chunk)
+                slept += chunk
             logger.info("Busy mode over, resuming.")
         elif cycle < CYCLES_PER_RUN - 1:
             time.sleep(POLL_INTERVAL_S)
