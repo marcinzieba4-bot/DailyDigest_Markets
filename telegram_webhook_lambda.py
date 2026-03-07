@@ -1,32 +1,40 @@
 """
-Telegram Self-Scheduling Poller Lambda
-Runs in a 12-minute polling loop, then re-invokes itself before Lambda timeout.
-Creates a continuous cycle without requiring EventBridge.
+Telegram Self-Scheduling Poller + Claude Agent Lambda
 
-Architecture:
-  - Lambda timeout: 15 minutes
-  - Each invocation: polls Telegram every 60 s for 12 cycles (~12 min)
-  - Before exiting: re-invokes itself asynchronously (fire-and-forget)
-  - Net effect: continuous 60-second polling, self-sustaining
+Normal mode  : polls Telegram every 60 s, passes every message to Claude
+               (Anthropic API) for interpretation, and dispatches one of:
+                 • run_report  — invoke daily-trends-digest Lambda
+                 • reply       — send Claude's plain-text reply to the user
+                 • modify_code — fetch report Lambda code, propose a unified
+                                 diff in Telegram, then wait for "yes" before
+                                 deploying
 
-Generation / deploy-id:
-  Every deploy stamps a unique DEPLOY_ID into the Lambda env.  When an old
-  running instance self-reinvokes it carries its old deploy_id in the payload.
-  The new invocation sees the mismatch (env DEPLOY_ID ≠ event deploy_id) and
-  exits immediately, killing the stale chain.  Only the fresh chain started by
-  the deploy script (which carries the current deploy_id) keeps running.
+Pending-patch: a proposed code change is carried in the invocation payload
+               (base64-encoded new file) until the user replies "yes" or "no".
+               No extra AWS services needed — state lives in the event chain.
+
+Busy mode    : after triggering a report, sleeps BUSY_WAIT_S (300 s) before
+               resuming, so only one report runs at a time.
+
+DEPLOY_ID    : generation tag stamped by deploy_webhook.py — stale chains from
+               previous deploys exit immediately on their next self-reinvocation.
 """
+import base64
+import difflib
+import io
 import json
 import logging
 import os
 import time
 import urllib.request
+import zipfile
 import boto3
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 import boto3 as _boto3, time as _time
+
 
 class _CWHandler(logging.Handler):
     """Write log records to the permitted CloudWatch log group."""
@@ -70,19 +78,23 @@ try:
     _cw_handler.setFormatter(logging.Formatter('[POLLER] %(levelname)s %(message)s'))
     logger.addHandler(_cw_handler)
 except Exception:
-    pass  # fall back to default (silent) logging if CW handler fails
+    pass
 
+# ── Config ─────────────────────────────────────────────────────────────────────
 TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN', '')
 TELEGRAM_CHAT_ID   = os.environ.get('TELEGRAM_CHAT_ID', '')
 REPORT_LAMBDA_NAME = os.environ.get('REPORT_LAMBDA_NAME', 'daily-trends-digest')
+ANTHROPIC_API_KEY  = os.environ.get('ANTHROPIC_API_KEY', '')
 REGION             = os.environ.get('AWS_REGION', 'eu-north-1')
-DEPLOY_ID          = os.environ.get('DEPLOY_ID', '')   # set by deploy script
+DEPLOY_ID          = os.environ.get('DEPLOY_ID', '')
 
-POLL_INTERVAL_S = 60    # seconds between Telegram polls (normal mode)
-BUSY_WAIT_S     = 300   # seconds to pause after triggering /report (busy mode)
-CYCLES_PER_RUN  = 12    # ~12 min total, well within 15-min Lambda timeout
-MAX_AGE_SECONDS = 180   # ignore messages older than this (3 min; covers busy wait)
+POLL_INTERVAL_S = 60    # seconds between polls in normal mode
+BUSY_WAIT_S     = 300   # seconds to pause after triggering a report
+CYCLES_PER_RUN  = 12    # ~12 min per Lambda invocation
+MAX_AGE_SECONDS = 180   # ignore messages older than 3 min
 
+
+# ── Telegram helpers ───────────────────────────────────────────────────────────
 
 def tg_post(method, payload):
     url  = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/{method}"
@@ -110,31 +122,302 @@ def get_fresh_offset():
     return 0
 
 
-def poll_once(lam_client, offset):
-    """Poll Telegram once and handle any new /report or /help commands.
+# ── Anthropic helpers ──────────────────────────────────────────────────────────
 
-    Returns (next_offset, report_triggered).
-    Stops processing updates after the first /report so we never double-fire.
+def _anthropic_post(body, timeout=60):
+    data = json.dumps(body).encode()
+    req  = urllib.request.Request(
+        'https://api.anthropic.com/v1/messages',
+        data=data,
+        headers={
+            'x-api-key':           ANTHROPIC_API_KEY,
+            'anthropic-version':   '2023-06-01',
+            'content-type':        'application/json',
+        },
+        method='POST',
+    )
+    resp = urllib.request.urlopen(req, timeout=timeout)
+    return json.loads(resp.read())
+
+
+def classify_intent(user_text):
+    """Ask Claude Haiku to pick an action for the user's message.
+
+    Returns ('run_report'|'reply'|'modify_code', payload_str).
+    payload_str is the reply text for 'reply' and a one-line summary for
+    'modify_code'; it is empty for 'run_report'.
     """
+    tools = [
+        {
+            'name': 'run_report',
+            'description': (
+                'User wants to trigger the daily financial-markets report '
+                '(e.g. "generate report", "run report", "/report").'
+            ),
+            'input_schema': {'type': 'object', 'properties': {}, 'required': []},
+        },
+        {
+            'name': 'reply',
+            'description': 'Answer the user with a short text message.',
+            'input_schema': {
+                'type': 'object',
+                'properties': {'text': {'type': 'string', 'description': 'Reply text.'}},
+                'required': ['text'],
+            },
+        },
+        {
+            'name': 'modify_code',
+            'description': (
+                'User wants to change how the report works — e.g. different date ranges, '
+                'new/removed sections, different data sources, formatting tweaks, '
+                'extended backtest history, new indicators, etc.'
+            ),
+            'input_schema': {
+                'type': 'object',
+                'properties': {
+                    'summary': {
+                        'type': 'string',
+                        'description': 'One-line human-readable summary of the requested change.',
+                    },
+                },
+                'required': ['summary'],
+            },
+        },
+    ]
+
+    result = _anthropic_post({
+        'model': 'claude-haiku-4-5-20251001',
+        'max_tokens': 256,
+        'system': (
+            'You control a Telegram bot that manages a daily financial-markets digest. '
+            'Choose the right tool for the user\'s message. '
+            'If the user asks anything unrelated to the report or code changes, use "reply".'
+        ),
+        'messages': [{'role': 'user', 'content': user_text}],
+        'tools': tools,
+        'tool_choice': {'type': 'auto'},
+    })
+
+    for block in result.get('content', []):
+        if block.get('type') == 'tool_use':
+            name = block['name']
+            inp  = block.get('input', {})
+            if name == 'run_report':
+                return 'run_report', ''
+            if name == 'reply':
+                return 'reply', inp.get('text', '')
+            if name == 'modify_code':
+                return 'modify_code', inp.get('summary', 'Code change')
+        if block.get('type') == 'text':
+            return 'reply', block['text']
+
+    return 'reply', "I'm not sure how to help with that."
+
+
+def get_report_lambda_code(lam_client):
+    """Download and return current lambda_function.py from the report Lambda."""
+    resp     = lam_client.get_function(FunctionName=REPORT_LAMBDA_NAME)
+    zip_data = urllib.request.urlopen(resp['Code']['Location'], timeout=30).read()
+    with zipfile.ZipFile(io.BytesIO(zip_data)) as zf:
+        return zf.read('lambda_function.py').decode('utf-8')
+
+
+def generate_modified_code(user_request, current_code):
+    """Ask Claude Sonnet to return a fully modified lambda_function.py."""
+    result = _anthropic_post({
+        'model': 'claude-sonnet-4-6',
+        'max_tokens': 8192,
+        'system': (
+            'You are a Python expert modifying an AWS Lambda function that generates a daily '
+            'financial-markets digest. Return ONLY the complete modified Python source file — '
+            'no explanation, no markdown fences, no commentary. '
+            'Start directly with the import statements.'
+        ),
+        'messages': [{
+            'role': 'user',
+            'content': (
+                f'Requested change: {user_request}\n\n'
+                f'Current lambda_function.py:\n{current_code}\n\n'
+                'Return the complete modified file.'
+            ),
+        }],
+    }, timeout=120)
+
+    for block in result.get('content', []):
+        if block.get('type') == 'text':
+            text = block['text'].strip()
+            # Strip markdown fences if the model added them
+            if text.startswith('```'):
+                lines = text.split('\n')
+                end   = -1 if lines[-1].strip() == '```' else len(lines)
+                text  = '\n'.join(lines[1:end])
+            return text
+
+    raise RuntimeError('No text content in Claude Sonnet response')
+
+
+def make_unified_diff(old_code, new_code):
+    return ''.join(difflib.unified_diff(
+        old_code.splitlines(keepends=True),
+        new_code.splitlines(keepends=True),
+        fromfile='lambda_function.py (current)',
+        tofile='lambda_function.py (proposed)',
+        n=3,
+    ))
+
+
+def apply_and_deploy(new_code, lam_client):
+    """Zip the new code and push it to the report Lambda."""
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, 'w', zipfile.ZIP_DEFLATED) as zf:
+        zf.writestr('lambda_function.py', new_code)
+    lam_client.update_function_code(
+        FunctionName=REPORT_LAMBDA_NAME,
+        ZipFile=buf.getvalue(),
+    )
+    logger.info("Deployed new code to %s", REPORT_LAMBDA_NAME)
+
+
+# ── Message dispatcher ─────────────────────────────────────────────────────────
+
+def _invoke_report(chat_id, lam_client):
+    try:
+        send_message(chat_id,
+            "\u23f3 *Generating report\u2026*\n"
+            "This takes ~3\u20135 minutes. I'll send the briefing when ready.")
+    except Exception as e:
+        logger.error("Failed to send ack: %s", e)
+    try:
+        resp = lam_client.invoke(
+            FunctionName=REPORT_LAMBDA_NAME,
+            InvocationType='Event',
+            Payload=b'{}',
+        )
+        logger.info("Invoked %s — status %s", REPORT_LAMBDA_NAME, resp.get('StatusCode'))
+    except Exception as e:
+        logger.error("Failed to invoke report Lambda: %s", e)
+        try:
+            send_message(chat_id, "\u274c Failed to trigger report: " + str(e))
+        except Exception:
+            pass
+
+
+def handle_message(text, chat_id, pending_patch, lam_client):
+    """Process one incoming message.
+
+    Returns (report_triggered: bool, new_pending_patch: dict|None).
+    """
+
+    # ── Pending patch awaiting yes/no ─────────────────────────────────────────
+    if pending_patch:
+        answer = text.strip().lower()
+        if answer in ('yes', 'y', 'да', 'yep', 'ok', 'okay'):
+            try:
+                send_message(chat_id, '\U0001f527 Applying change and deploying\u2026')
+                new_code = base64.b64decode(pending_patch['code_b64']).decode('utf-8')
+                apply_and_deploy(new_code, lam_client)
+                _invoke_report(chat_id, lam_client)
+                return True, None   # report triggered, patch cleared
+            except Exception as e:
+                logger.error("Failed to apply patch: %s", e)
+                send_message(chat_id, f'\u274c Deploy failed: {e}')
+                return False, None
+
+        if answer in ('no', 'n', 'нет', '/cancel', 'nope', 'cancel'):
+            send_message(chat_id, '\u21a9\ufe0f Change cancelled.')
+            return False, None
+
+        # Any other message while patch is pending — remind the user
+        send_message(chat_id,
+            '\u23f3 There is a pending code change awaiting your confirmation.\n'
+            'Reply `yes` to deploy it or `no` to cancel.')
+        return False, pending_patch
+
+    # ── No pending patch: classify intent via Claude ───────────────────────────
+    if not ANTHROPIC_API_KEY:
+        # Graceful fallback when API key is missing
+        if text.startswith('/report'):
+            _invoke_report(chat_id, lam_client)
+            return True, None
+        send_message(chat_id, '\u274c ANTHROPIC_API_KEY not configured in Lambda env.')
+        return False, None
+
+    try:
+        action, payload_str = classify_intent(text)
+    except Exception as e:
+        logger.error("classify_intent failed: %s", e)
+        send_message(chat_id, f'\u274c Could not interpret request: {e}')
+        return False, None
+
+    # ── run_report ─────────────────────────────────────────────────────────────
+    if action == 'run_report':
+        _invoke_report(chat_id, lam_client)
+        return True, None
+
+    # ── reply ──────────────────────────────────────────────────────────────────
+    if action == 'reply':
+        try:
+            send_message(chat_id, payload_str or '\U0001f914')
+        except Exception as e:
+            logger.error("send_message (reply) failed: %s", e)
+        return False, None
+
+    # ── modify_code ────────────────────────────────────────────────────────────
+    if action == 'modify_code':
+        summary = payload_str
+        try:
+            send_message(chat_id,
+                f'\U0001f50d Fetching current code and generating change\u2026\n'
+                f'_{summary}_')
+            current_code = get_report_lambda_code(lam_client)
+            new_code     = generate_modified_code(text, current_code)
+            diff         = make_unified_diff(current_code, new_code)
+
+            # Telegram message limit is 4096 chars; keep diff readable
+            diff_preview = diff[:3200]
+            if len(diff) > 3200:
+                diff_preview += '\n\u2026 _(diff truncated)_'
+
+            patch = {
+                'code_b64': base64.b64encode(new_code.encode()).decode(),
+                'summary':  summary,
+            }
+
+            send_message(chat_id,
+                f'\U0001f4dd *Proposed change*: {summary}\n\n'
+                f'```\n{diff_preview}\n```\n\n'
+                'Reply `yes` to deploy, `no` to cancel.')
+            return False, patch
+
+        except Exception as e:
+            logger.error("modify_code failed: %s", e)
+            send_message(chat_id, f'\u274c Failed to generate change: {e}')
+            return False, None
+
+    return False, None
+
+
+# ── Polling loop ───────────────────────────────────────────────────────────────
+
+def poll_once(lam_client, offset, pending_patch):
+    """Poll Telegram once.  Returns (next_offset, report_triggered, pending_patch)."""
     now = int(time.time())
     try:
         result = tg_post('getUpdates', {
-            'offset':  offset,
-            'limit':   10,
-            'timeout': 0,
+            'offset':          offset,
+            'limit':           10,
+            'timeout':         0,
             'allowed_updates': ['message'],
         })
     except Exception as e:
         logger.error("getUpdates failed: %s", e)
-        return offset, False
+        return offset, False, pending_patch
 
     updates = result.get('result', [])
     if not updates:
-        return offset, False
+        return offset, False, pending_patch
 
-    # Advance offset past all received updates (acknowledges them so they won't repeat)
-    next_offset = max(upd['update_id'] for upd in updates) + 1
-
+    next_offset      = max(upd['update_id'] for upd in updates) + 1
     report_triggered = False
 
     for upd in updates:
@@ -149,62 +432,45 @@ def poll_once(lam_client, offset):
 
         chat_id = str(message.get('chat', {}).get('id', ''))
         text    = message.get('text', '').strip()
-        logger.info("New message chat_id=%s age=%ds: %r", chat_id, age, text)
+        logger.info("Message chat_id=%s age=%ds: %r", chat_id, age, text)
 
         if chat_id != TELEGRAM_CHAT_ID:
             continue
 
-        if text.startswith('/report'):
+        # /help is handled locally; everything else flows through the agent
+        if text.startswith('/start') or text.startswith('/help'):
             try:
                 send_message(chat_id,
-                    "\u23f3 *Generating report\u2026*\n"
-                    "This takes ~3\u20135 minutes. I'll send the briefing when ready.")
-            except Exception as e:
-                logger.error("Failed to send ack: %s", e)
-
-            try:
-                resp = lam_client.invoke(
-                    FunctionName=REPORT_LAMBDA_NAME,
-                    InvocationType='Event',
-                    Payload=b'{}',
-                )
-                logger.info("Invoked %s — status %s", REPORT_LAMBDA_NAME, resp.get('StatusCode'))
-            except Exception as e:
-                logger.error("Failed to invoke report Lambda: %s", e)
-                try:
-                    send_message(chat_id, "\u274c Failed to trigger report: " + str(e))
-                except Exception:
-                    pass
-
-            report_triggered = True
-            # Stop processing further updates this cycle — one report at a time.
-            break
-
-        elif text.startswith('/start') or text.startswith('/help'):
-            try:
-                send_message(chat_id,
-                    "\U0001f4ca *Daily Market Digest Bot*\n\n"
-                    "Commands:\n"
-                    "`/report` \u2014 generate and send today's full market briefing\n"
-                    "`/help` \u2014 show this message\n\n"
-                    "_Reports are also delivered automatically every morning._")
+                    '\U0001f4ca *Daily Market Digest Bot*\n\n'
+                    'Just write naturally \u2014 I understand plain English:\n'
+                    '\u2022 _"Generate the report"_ or `/report`\n'
+                    '\u2022 _"Extend backtest history to 2012 and re-run"_\n'
+                    '\u2022 _"Add a crypto section to the report"_\n'
+                    '\u2022 _"What data sources does the report use?"_\n'
+                    '\u2022 `/help` \u2014 show this message')
             except Exception as e:
                 logger.error("Failed to send help: %s", e)
+            continue
 
-    return next_offset, report_triggered
+        triggered, pending_patch = handle_message(text, chat_id, pending_patch, lam_client)
+        if triggered:
+            report_triggered = True
+            break   # one action per poll cycle
 
+    return next_offset, report_triggered, pending_patch
+
+
+# ── Lambda entrypoint ──────────────────────────────────────────────────────────
 
 def lambda_handler(event, context):
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
         logger.error("Telegram env vars not set")
         return
 
-    # ── Generation check ──────────────────────────────────────────────────────
-    # Each deploy stamps a unique DEPLOY_ID into the env.  Self-reinvocations
-    # carry deploy_id in the payload.  Any invocation whose deploy_id doesn't
-    # match the current env — including old chains that pre-date this feature
-    # and therefore carry no deploy_id at all — exits immediately so the stale
-    # chain dies and only the fresh deploy chain continues.
+    # ── Generation check ───────────────────────────────────────────────────────
+    # Each deploy stamps DEPLOY_ID into the env.  Any invocation whose
+    # deploy_id doesn't match — including old chains with no deploy_id at all
+    # — exits immediately, killing stale chains from previous deploys.
     event_deploy_id = event.get('deploy_id', '')
     if DEPLOY_ID and event_deploy_id != DEPLOY_ID:
         logger.info("Stale chain detected (event deploy_id=%r, current=%s) — stopping.",
@@ -213,45 +479,42 @@ def lambda_handler(event, context):
 
     lam = boto3.client('lambda', region_name=REGION)
 
-    # Use offset from event (continuation of existing chain).
-    # If absent (fresh deploy kick-off), skip past all existing updates so we
-    # never replay stale /report commands.
-    offset = event.get('offset') or get_fresh_offset()
+    offset        = event.get('offset') or get_fresh_offset()
+    pending_patch = event.get('pending_patch')  # dict or None, carried across invocations
 
-    logger.info("Starting polling loop: %d cycles × %ds (deploy_id=%s, offset=%d)",
-                CYCLES_PER_RUN, POLL_INTERVAL_S, DEPLOY_ID, offset)
+    logger.info("Starting loop: %d cycles × %ds  deploy_id=%s  offset=%d  pending=%s",
+                CYCLES_PER_RUN, POLL_INTERVAL_S, DEPLOY_ID, offset, bool(pending_patch))
 
     for cycle in range(CYCLES_PER_RUN):
         logger.info("Cycle %d/%d (offset=%d)", cycle + 1, CYCLES_PER_RUN, offset)
-        offset, report_triggered = poll_once(lam, offset)
+        offset, report_triggered, pending_patch = poll_once(lam, offset, pending_patch)
 
         if report_triggered:
-            # ── Busy mode ────────────────────────────────────────────────────
-            # Report Lambda is now running.  Sleep so we don't respond to any
-            # further messages while the report is being generated.
-            logger.info("Busy mode: sleeping %ds while report generates…", BUSY_WAIT_S)
+            logger.info("Busy mode: sleeping %ds while report generates\u2026", BUSY_WAIT_S)
             time.sleep(BUSY_WAIT_S)
-            logger.info("Busy mode over, resuming normal polling.")
+            logger.info("Busy mode over, resuming.")
         elif cycle < CYCLES_PER_RUN - 1:
             time.sleep(POLL_INTERVAL_S)
 
-    # Re-invoke self to continue the polling loop indefinitely.
-    # Pass current offset AND deploy_id so the generation check works on the
-    # next invocation.
-    payload = json.dumps({'offset': offset, 'deploy_id': DEPLOY_ID}).encode()
-    logger.info("Re-invoking self for next run (offset=%d, deploy_id=%s)…", offset, DEPLOY_ID)
+    # Re-invoke self — carry offset, deploy_id, and any pending patch
+    payload = {'offset': offset, 'deploy_id': DEPLOY_ID}
+    if pending_patch:
+        payload['pending_patch'] = pending_patch
+
+    logger.info("Re-invoking self (offset=%d, deploy_id=%s, pending=%s)\u2026",
+                offset, DEPLOY_ID, bool(pending_patch))
     try:
         lam.invoke(
             FunctionName=context.function_name,
-            InvocationType='Event',   # fire-and-forget, don't wait
-            Payload=payload,
+            InvocationType='Event',
+            Payload=json.dumps(payload).encode(),
         )
         logger.info("Self-invocation scheduled")
     except Exception as e:
         logger.error("CRITICAL: self-invocation failed — polling will stop! %s", e)
         try:
             send_message(TELEGRAM_CHAT_ID,
-                "\u26a0\ufe0f *Polling daemon stopped* — self-invocation failed.\n"
-                "Contact admin to restart the `/report` handler.")
+                "\u26a0\ufe0f *Polling daemon stopped* \u2014 self-invocation failed.\n"
+                "Contact admin to restart.")
         except Exception:
             pass

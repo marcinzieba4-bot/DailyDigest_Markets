@@ -55,10 +55,13 @@ print(f"  zip size: {len(zip_bytes)} bytes")
 
 # ── 2. Deploy poller Lambda (15-minute timeout for the polling loop) ──────────
 print("\n[2/5] Deploying poller Lambda...")
+ANTHROPIC_API_KEY = os.environ['ANTHROPIC_API_KEY']
+
 env_vars = {
     'TELEGRAM_BOT_TOKEN': TELEGRAM_BOT_TOKEN,
     'TELEGRAM_CHAT_ID':   TELEGRAM_CHAT_ID,
     'REPORT_LAMBDA_NAME': REPORT_FUNCTION_NAME,
+    'ANTHROPIC_API_KEY':  ANTHROPIC_API_KEY,
     'DEPLOY_ID':          DEPLOY_ID,
 }
 
