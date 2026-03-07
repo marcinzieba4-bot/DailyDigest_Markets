@@ -28,15 +28,25 @@ import lambda_function as lf
 # requests that contain an invalid X-Api-Key even when Bearer is valid.
 import anthropic as _anthropic
 def _patched_call_claude(prompt_text, max_tokens=16000):
+    import time
     saved = os.environ.pop("ANTHROPIC_API_KEY", None)
     try:
         client = _anthropic.Anthropic(auth_token=api_key)
-        msg = client.beta.messages.create(
-            model="claude-opus-4-6",
-            max_tokens=max_tokens,
-            betas=["output-128k-2025-02-19"],
-            messages=[{"role": "user", "content": prompt_text}]
-        )
+        for attempt in range(5):
+            try:
+                msg = client.beta.messages.create(
+                    model="claude-opus-4-6",
+                    max_tokens=max_tokens,
+                    betas=["output-128k-2025-02-19"],
+                    messages=[{"role": "user", "content": prompt_text}]
+                )
+                break
+            except _anthropic.RateLimitError as e:
+                wait = 60 * (attempt + 1)  # 60s, 120s, 180s, 240s, 300s
+                logger.warning(f"Rate limit hit (attempt {attempt+1}/5) — waiting {wait}s: {e}")
+                if attempt == 4:
+                    raise
+                time.sleep(wait)
     finally:
         if saved is not None:
             os.environ["ANTHROPIC_API_KEY"] = saved

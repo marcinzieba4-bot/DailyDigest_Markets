@@ -511,18 +511,27 @@ When in doubt: quote the snapshot line verbatim and let the number speak.
 """
 
 def call_claude(prompt_text, max_tokens=16000):
+    import time
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-    msg = client.beta.messages.create(
-        model="claude-opus-4-6",
-        max_tokens=max_tokens,
-        betas=["output-128k-2025-02-19"],
-        messages=[{"role": "user", "content": prompt_text}]
-    )
-    text = msg.content[0].text
-    logger.info(f"Claude call done — {len(text)} chars, stop_reason={msg.stop_reason}")
-    if msg.stop_reason == "max_tokens":
-        logger.warning("Still truncated at max_tokens — increase if needed")
-    return text
+    for attempt in range(5):
+        try:
+            msg = client.beta.messages.create(
+                model="claude-opus-4-6",
+                max_tokens=max_tokens,
+                betas=["output-128k-2025-02-19"],
+                messages=[{"role": "user", "content": prompt_text}]
+            )
+            text = msg.content[0].text
+            logger.info(f"Claude call done — {len(text)} chars, stop_reason={msg.stop_reason}")
+            if msg.stop_reason == "max_tokens":
+                logger.warning("Still truncated at max_tokens — increase if needed")
+            return text
+        except anthropic.RateLimitError as e:
+            wait = 60 * (attempt + 1)  # 60s, 120s, 180s, 240s, 300s
+            logger.warning(f"Rate limit hit (attempt {attempt+1}/5) — waiting {wait}s: {e}")
+            if attempt == 4:
+                raise
+            time.sleep(wait)
 
 # ── Part 1: Geography + Sectors + Underowned + Quant models ──────────────────
 
