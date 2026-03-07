@@ -200,12 +200,14 @@ def lambda_handler(event, context):
         return
 
     # ── Generation check ──────────────────────────────────────────────────────
-    # If the event carries a deploy_id that differs from the current env var,
-    # this is a self-reinvocation from a stale (pre-deploy) chain.  Exit so the
-    # old chain dies and only the fresh deploy chain continues.
+    # Each deploy stamps a unique DEPLOY_ID into the env.  Self-reinvocations
+    # carry deploy_id in the payload.  Any invocation whose deploy_id doesn't
+    # match the current env — including old chains that pre-date this feature
+    # and therefore carry no deploy_id at all — exits immediately so the stale
+    # chain dies and only the fresh deploy chain continues.
     event_deploy_id = event.get('deploy_id', '')
-    if DEPLOY_ID and event_deploy_id and event_deploy_id != DEPLOY_ID:
-        logger.info("Stale chain detected (event deploy_id=%s, current=%s) — stopping.",
+    if DEPLOY_ID and event_deploy_id != DEPLOY_ID:
+        logger.info("Stale chain detected (event deploy_id=%r, current=%s) — stopping.",
                     event_deploy_id, DEPLOY_ID)
         return
 
