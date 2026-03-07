@@ -2,11 +2,7 @@ import json, boto3, urllib.request, re, os, logging, csv, io
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 import anthropic
-from reportlab.lib.pagesizes import A4
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, HRFlowable
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.lib.units import mm
-from reportlab.lib import colors
+from fpdf import FPDF
 import html as html_lib
 
 logger = logging.getLogger()
@@ -959,80 +955,113 @@ No other text outside the HTML blocks."""
 # ── Email ─────────────────────────────────────────────────────────────────────
 
 def _html_to_pdf_bytes(full_html):
-    """Convert the report HTML to a PDF byte string using reportlab."""
-    buf = io.BytesIO()
-    doc = SimpleDocTemplate(
-        buf, pagesize=A4,
-        leftMargin=18*mm, rightMargin=18*mm,
-        topMargin=16*mm, bottomMargin=16*mm,
-    )
-    styles = getSampleStyleSheet()
-    title_style  = ParagraphStyle('Title2',  parent=styles['Title'],
-                                  fontSize=18, spaceAfter=4, textColor=colors.HexColor('#1a1a2e'))
-    h1_style     = ParagraphStyle('H1',      parent=styles['Heading1'],
-                                  fontSize=14, spaceBefore=10, spaceAfter=4,
-                                  textColor=colors.HexColor('#1a73e8'))
-    h2_style     = ParagraphStyle('H2',      parent=styles['Heading2'],
-                                  fontSize=12, spaceBefore=8, spaceAfter=3,
-                                  textColor=colors.HexColor('#333'))
-    body_style   = ParagraphStyle('Body2',   parent=styles['Normal'],
-                                  fontSize=9, leading=13, spaceAfter=4)
-    caption_style= ParagraphStyle('Caption', parent=styles['Normal'],
-                                  fontSize=8, textColor=colors.grey, spaceAfter=6)
+    """Convert the report HTML to a PDF byte string using fpdf2 (pure Python)."""
+    # Strip style/script blocks and extract plain text segments with tag context
+    clean = re.sub(r'<style[^>]*>.*?</style>', '', full_html, flags=re.DOTALL | re.IGNORECASE)
+    clean = re.sub(r'<script[^>]*>.*?</script>', '', clean, flags=re.DOTALL | re.IGNORECASE)
 
-    # Strip tags and convert to simple flowables
-    clean = re.sub(r'<style[^>]*>.*?</style>', '', full_html, flags=re.DOTALL|re.IGNORECASE)
-    clean = re.sub(r'<script[^>]*>.*?</script>', '', clean, flags=re.DOTALL|re.IGNORECASE)
+    tag_re = re.compile(r'<(/?)(\w+)[^>]*>', re.IGNORECASE)
 
-    tag_re  = re.compile(r'<(/?)(\w+)[^>]*>', re.IGNORECASE)
-    story   = []
-    today   = datetime.now().strftime('%A, %B %d %Y')
-    story.append(Paragraph('Market Intelligence Briefing', title_style))
-    story.append(Paragraph(today, caption_style))
-    story.append(HRFlowable(width='100%', thickness=2, color=colors.HexColor('#1a73e8'), spaceAfter=8))
-
-    buf2    = []
-    in_skip = 0
-    tag_stack = []
+    # Build a list of (tag_or_None, text) tuples
+    segments = []  # ('tag', tag_name, closing) or ('text', text)
     for token in re.split(r'(<[^>]+>)', clean):
         m = tag_re.match(token)
         if m:
-            closing, tag = m.group(1) == '/', m.group(2).lower()
+            segments.append(('tag', m.group(2).lower(), m.group(1) == '/'))
+        else:
+            segments.append(('text', token, None))
+
+    # Walk segments, flush text on block-closing tags
+    buf = []
+    paragraphs = []   # list of (style, text): style in 'title','h1','h2','h3','body','hr'
+    in_skip = 0
+    tag_stack = []
+
+    BLOCK_TAGS = {'p', 'div', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'td', 'th', 'blockquote'}
+
+    def flush(tag='body'):
+        text = html_lib.unescape(''.join(buf)).strip()
+        buf.clear()
+        if not text:
+            return
+        style = 'body'
+        if tag in ('h1',):
+            style = 'h1'
+        elif tag in ('h2', 'h3', 'h4', 'h5'):
+            style = 'h2'
+        paragraphs.append((style, text))
+
+    for kind, val, closing in segments:
+        if kind == 'tag':
+            tag = val
             if tag in ('head', 'style', 'script'):
                 in_skip += -1 if closing else 1
+            elif in_skip > 0:
+                pass
             elif not closing:
                 tag_stack.append(tag)
                 if tag == 'hr':
-                    text = html_lib.unescape(''.join(buf2)).strip()
-                    if text:
-                        story.append(Paragraph(text, body_style))
-                        buf2.clear()
-                    story.append(HRFlowable(width='100%', thickness=1,
-                                            color=colors.HexColor('#cccccc'), spaceAfter=6))
+                    flush()
+                    paragraphs.append(('hr', ''))
                 elif tag == 'br':
-                    buf2.append(' ')
+                    buf.append('\n')
             else:
                 if tag_stack and tag_stack[-1] == tag:
                     tag_stack.pop()
-                if tag in ('p', 'div', 'li', 'h1', 'h2', 'h3', 'h4', 'td', 'th'):
-                    text = html_lib.unescape(''.join(buf2)).strip()
-                    if text:
-                        if tag in ('h1',):
-                            story.append(Paragraph(text, h1_style))
-                        elif tag in ('h2', 'h3', 'h4'):
-                            story.append(Paragraph(text, h2_style))
-                        else:
-                            story.append(Paragraph(text, body_style))
-                    buf2.clear()
-        elif in_skip == 0:
-            buf2.append(token)
+                if tag in BLOCK_TAGS:
+                    flush(tag)
+        else:
+            if in_skip == 0:
+                buf.append(val)
 
-    leftover = html_lib.unescape(''.join(buf2)).strip()
-    if leftover:
-        story.append(Paragraph(leftover, body_style))
+    flush()
 
-    doc.build(story)
-    return buf.getvalue()
+    # Build PDF with fpdf2
+    pdf = FPDF()
+    pdf.set_auto_page_break(auto=True, margin=15)
+    pdf.add_page()
+
+    today = datetime.now().strftime('%A, %B %d %Y')
+
+    # Title
+    pdf.set_font('Helvetica', 'B', 18)
+    pdf.set_text_color(26, 26, 46)   # #1a1a2e
+    pdf.multi_cell(0, 9, 'Market Intelligence Briefing', align='L')
+    pdf.set_font('Helvetica', '', 9)
+    pdf.set_text_color(136, 136, 136)
+    pdf.multi_cell(0, 5, today + '  —  Macro · Sectors · Flows · Crypto · Quant Models', align='L')
+    pdf.set_draw_color(26, 115, 232)   # #1a73e8
+    pdf.set_line_width(0.8)
+    pdf.line(pdf.l_margin, pdf.get_y() + 2, pdf.w - pdf.r_margin, pdf.get_y() + 2)
+    pdf.ln(6)
+
+    for style, text in paragraphs:
+        # Sanitise text: keep only latin-1 printable chars (Helvetica core font limit)
+        safe = text.encode('latin-1', errors='replace').decode('latin-1')
+        if style == 'hr':
+            pdf.set_draw_color(200, 200, 200)
+            pdf.set_line_width(0.3)
+            pdf.line(pdf.l_margin, pdf.get_y() + 1, pdf.w - pdf.r_margin, pdf.get_y() + 1)
+            pdf.ln(4)
+        elif style == 'h1':
+            pdf.ln(3)
+            pdf.set_font('Helvetica', 'B', 13)
+            pdf.set_text_color(26, 115, 232)
+            pdf.multi_cell(0, 7, safe, align='L')
+            pdf.ln(1)
+        elif style == 'h2':
+            pdf.ln(2)
+            pdf.set_font('Helvetica', 'B', 11)
+            pdf.set_text_color(51, 51, 51)
+            pdf.multi_cell(0, 6, safe, align='L')
+            pdf.ln(1)
+        else:
+            pdf.set_font('Helvetica', '', 9)
+            pdf.set_text_color(34, 34, 34)
+            pdf.multi_cell(0, 5, safe, align='L')
+            pdf.ln(1)
+
+    return pdf.output()
 
 
 def save_pdf_to_s3(full_html):
