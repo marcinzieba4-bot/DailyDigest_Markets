@@ -1,9 +1,13 @@
 """
-Telegram Poller Lambda
-Runs on a 1-minute EventBridge schedule.
-Calls getUpdates (no offset needed — deduplicates via message timestamp).
-Only processes messages received in the last 90 seconds to avoid replaying
-old commands after a cold start or missed invocation.
+Telegram Self-Scheduling Poller Lambda
+Runs in a 12-minute polling loop, then re-invokes itself before Lambda timeout.
+Creates a continuous cycle without requiring EventBridge.
+
+Architecture:
+  - Lambda timeout: 15 minutes
+  - Each invocation: polls Telegram every 60 s for 12 cycles (~12 min)
+  - Before exiting: re-invokes itself asynchronously (fire-and-forget)
+  - Net effect: continuous 60-second polling, self-sustaining
 """
 import json
 import logging
@@ -11,16 +15,66 @@ import os
 import time
 import urllib.request
 import boto3
-from datetime import datetime, timezone
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
+
+# CloudWatch Logs write permission is restricted to /aws/lambda/daily-trends-digest
+# Use a custom handler to write logs there instead of the default log group.
+import boto3 as _boto3, time as _time
+
+class _CWHandler(logging.Handler):
+    """Write log records to the permitted CloudWatch log group."""
+    _LOG_GROUP  = '/aws/lambda/daily-trends-digest'
+    _LOG_STREAM = 'telegram-poller'
+    _seq_token  = None
+
+    def __init__(self):
+        super().__init__()
+        self._cw = _boto3.client('logs', region_name='eu-north-1')
+        self._ensure_stream()
+
+    def _ensure_stream(self):
+        try:
+            self._cw.create_log_stream(
+                logGroupName=self._LOG_GROUP,
+                logStreamName=self._LOG_STREAM,
+            )
+        except self._cw.exceptions.ResourceAlreadyExistsException:
+            pass
+        except Exception:
+            pass
+
+    def emit(self, record):
+        msg = self.format(record)
+        kwargs = dict(
+            logGroupName=self._LOG_GROUP,
+            logStreamName=self._LOG_STREAM,
+            logEvents=[{'timestamp': int(_time.time() * 1000), 'message': msg}],
+        )
+        if self._seq_token:
+            kwargs['sequenceToken'] = self._seq_token
+        try:
+            resp = self._cw.put_log_events(**kwargs)
+            self.__class__._seq_token = resp.get('nextSequenceToken')
+        except Exception:
+            pass   # never crash on logging
+
+try:
+    _cw_handler = _CWHandler()
+    _cw_handler.setFormatter(logging.Formatter('[POLLER] %(levelname)s %(message)s'))
+    logger.addHandler(_cw_handler)
+except Exception:
+    pass  # fall back to default (silent) logging if CW handler fails
 
 TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN', '')
 TELEGRAM_CHAT_ID   = os.environ.get('TELEGRAM_CHAT_ID', '')
 REPORT_LAMBDA_NAME = os.environ.get('REPORT_LAMBDA_NAME', 'daily-trends-digest')
 REGION             = os.environ.get('AWS_REGION', 'eu-north-1')
-MAX_AGE_SECONDS    = 90   # ignore messages older than this
+
+POLL_INTERVAL_S = 60    # seconds between Telegram polls
+CYCLES_PER_RUN  = 12    # ~12 min total, well within 15-min Lambda timeout
+MAX_AGE_SECONDS = 90    # ignore messages older than this
 
 
 def tg_post(method, payload):
@@ -37,43 +91,33 @@ def send_message(chat_id, text):
     tg_post('sendMessage', {'chat_id': chat_id, 'text': text, 'parse_mode': 'Markdown'})
 
 
-def lambda_handler(event, context):
-    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
-        logger.error("Telegram env vars not set")
+def poll_once(lam_client):
+    """Poll Telegram once and handle any new /report or /help commands."""
+    now = int(time.time())
+    try:
+        result = tg_post('getUpdates', {
+            'limit':   10,
+            'timeout': 0,
+            'allowed_updates': ['message'],
+        })
+    except Exception as e:
+        logger.error("getUpdates failed: %s", e)
         return
 
-    now = int(time.time())
-
-    # Fetch recent updates (limit 10 is plenty for a 1-minute poll window)
-    result = tg_post('getUpdates', {
-        'limit':   10,
-        'timeout': 0,
-        'allowed_updates': ['message'],
-    })
-
-    updates = result.get('result', [])
-    logger.info("Got %d updates", len(updates))
-
-    lam = boto3.client('lambda', region_name=REGION)
-
-    for upd in updates:
+    for upd in result.get('result', []):
         message = upd.get('message') or upd.get('edited_message')
         if not message:
             continue
 
-        msg_time = message.get('date', 0)
-        age      = now - msg_time
-
+        age = now - message.get('date', 0)
         if age > MAX_AGE_SECONDS:
-            logger.info("Skipping old message (age=%ds)", age)
             continue
 
         chat_id = str(message.get('chat', {}).get('id', ''))
         text    = message.get('text', '').strip()
-        logger.info("New message from chat_id=%s age=%ds: %r", chat_id, age, text)
+        logger.info("New message chat_id=%s age=%ds: %r", chat_id, age, text)
 
         if chat_id != TELEGRAM_CHAT_ID:
-            logger.info("Ignoring unauthorized chat_id=%s", chat_id)
             continue
 
         if text.startswith('/report'):
@@ -85,7 +129,7 @@ def lambda_handler(event, context):
                 logger.error("Failed to send ack: %s", e)
 
             try:
-                resp = lam.invoke(
+                resp = lam_client.invoke(
                     FunctionName=REPORT_LAMBDA_NAME,
                     InvocationType='Event',
                     Payload=b'{}',
@@ -108,3 +152,36 @@ def lambda_handler(event, context):
                     "_Reports are also delivered automatically every morning._")
             except Exception as e:
                 logger.error("Failed to send help: %s", e)
+
+
+def lambda_handler(event, context):
+    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+        logger.error("Telegram env vars not set")
+        return
+
+    lam = boto3.client('lambda', region_name=REGION)
+
+    logger.info("Starting polling loop: %d cycles × %ds", CYCLES_PER_RUN, POLL_INTERVAL_S)
+    for cycle in range(CYCLES_PER_RUN):
+        logger.info("Cycle %d/%d", cycle + 1, CYCLES_PER_RUN)
+        poll_once(lam)
+        if cycle < CYCLES_PER_RUN - 1:
+            time.sleep(POLL_INTERVAL_S)
+
+    # Re-invoke self to continue the polling loop indefinitely
+    logger.info("Re-invoking self for next run...")
+    try:
+        lam.invoke(
+            FunctionName=context.function_name,
+            InvocationType='Event',   # fire-and-forget, don't wait
+            Payload=b'{}',
+        )
+        logger.info("Self-invocation scheduled")
+    except Exception as e:
+        logger.error("CRITICAL: self-invocation failed — polling will stop! %s", e)
+        try:
+            send_message(TELEGRAM_CHAT_ID,
+                "\u26a0\ufe0f *Polling daemon stopped* — self-invocation failed.\n"
+                "Contact admin to restart the `/report` handler.")
+        except Exception:
+            pass

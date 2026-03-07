@@ -1,18 +1,16 @@
 """
-Deploy the Telegram polling infrastructure:
+Deploy the Telegram self-scheduling polling daemon:
   1. Package telegram_webhook_lambda.py into a zip
-  2. Create/update the poller Lambda function
-  3. Add resource-based policy so poller can invoke daily-trends-digest
-  4. Create SSM parameter for offset tracking
-  5. Create EventBridge rule to run poller every 1 minute
+  2. Create/update the poller Lambda (timeout=15 min)
+  3. Allow poller role to invoke daily-trends-digest
+  4. Allow poller role to invoke itself (self-scheduling)
+  5. Kick off the first invocation
 """
 import boto3
 import io
 import json
 import os
-import sys
 import time
-import urllib.request
 import zipfile
 
 # ── credentials from env ──────────────────────────────────────────────────────
@@ -31,9 +29,8 @@ session = boto3.Session(
     aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
     region_name=REGION,
 )
-lam      = session.client('lambda')
-events   = session.client('events')
-sts      = session.client('sts')
+lam = session.client('lambda')
+sts = session.client('sts')
 
 account_id = sts.get_caller_identity()['Account']
 print(f"Account: {account_id}  Region: {REGION}")
@@ -48,7 +45,7 @@ zip_bytes = buf.getvalue()
 print(f"  zip size: {len(zip_bytes)} bytes")
 
 
-# ── 2. Deploy poller Lambda ───────────────────────────────────────────────────
+# ── 2. Deploy poller Lambda (15-minute timeout for the polling loop) ──────────
 print("\n[2/5] Deploying poller Lambda...")
 env_vars = {
     'TELEGRAM_BOT_TOKEN': TELEGRAM_BOT_TOKEN,
@@ -63,10 +60,16 @@ try:
     lam.update_function_configuration(
         FunctionName=POLLER_FUNCTION_NAME,
         Environment={'Variables': env_vars},
-        Timeout=30,
+        Timeout=900,   # 15 minutes — Lambda max; loop runs for ~12 min then re-invokes
     )
     fn_arn = existing['Configuration']['FunctionArn']
     print(f"  Updated: {fn_arn}")
+    # Wait for update to finish
+    for _ in range(20):
+        st = lam.get_function_configuration(FunctionName=POLLER_FUNCTION_NAME)
+        if st.get('LastUpdateStatus') == 'Successful':
+            break
+        time.sleep(3)
 except lam.exceptions.ResourceNotFoundException:
     resp = lam.create_function(
         FunctionName=POLLER_FUNCTION_NAME,
@@ -75,8 +78,8 @@ except lam.exceptions.ResourceNotFoundException:
         Handler='lambda_function.lambda_handler',
         Code={'ZipFile': zip_bytes},
         Environment={'Variables': env_vars},
-        Timeout=30,
-        Description='Polls Telegram for /report command and invokes daily-trends-digest',
+        Timeout=900,
+        Description='Self-scheduling Telegram poller for /report command',
     )
     fn_arn = resp['FunctionArn']
     print(f"  Created: {fn_arn}")
@@ -87,8 +90,8 @@ except lam.exceptions.ResourceNotFoundException:
         time.sleep(3)
 
 
-# ── 3. Allow poller to invoke the report Lambda ───────────────────────────────
-print("\n[3/5] Ensuring invoke permission on report Lambda...")
+# ── 3. Allow poller role to invoke the report Lambda ─────────────────────────
+print("\n[3/5] Ensuring report Lambda invoke permission...")
 try:
     lam.add_permission(
         FunctionName=REPORT_FUNCTION_NAME,
@@ -96,53 +99,37 @@ try:
         Action='lambda:InvokeFunction',
         Principal=EXISTING_ROLE_ARN,
     )
-    print("  Added invoke permission")
+    print("  Added")
 except lam.exceptions.ResourceConflictException:
-    print("  Permission already exists")
+    print("  Already exists")
 
 
-# ── 4. Create EventBridge rule — run every 1 minute ─────────────────────────
-print("\n[4/5] Setting up EventBridge schedule (every 1 minute)...")
-rule_name = 'daily-digest-telegram-poll'
-
-try:
-    rule_arn = events.put_rule(
-        Name=rule_name,
-        ScheduleExpression='rate(1 minute)',
-        State='ENABLED',
-        Description='Polls Telegram for /report command every minute',
-    )['RuleArn']
-    print(f"  Rule: {rule_arn}")
-except Exception as e:
-    print(f"  put_rule error: {e}")
-    sys.exit(1)
-
-# Allow EventBridge to invoke the Lambda
+# ── 4. Allow poller role to invoke itself (self-scheduling) ──────────────────
+print("\n[4/5] Ensuring self-invoke permission on poller Lambda...")
 try:
     lam.add_permission(
         FunctionName=POLLER_FUNCTION_NAME,
-        StatementId='allow-eventbridge-invoke',
+        StatementId='allow-self-invoke',
         Action='lambda:InvokeFunction',
-        Principal='events.amazonaws.com',
-        SourceArn=rule_arn,
+        Principal=EXISTING_ROLE_ARN,
     )
-    print("  Added EventBridge invoke permission")
+    print("  Added")
 except lam.exceptions.ResourceConflictException:
-    print("  EventBridge invoke permission already exists")
+    print("  Already exists")
 
-# Attach Lambda as target of the rule
-events.put_targets(
-    Rule=rule_name,
-    Targets=[{
-        'Id':  'daily-digest-telegram-poller',
-        'Arn': fn_arn,
-    }],
+
+# ── 5. Kick off the first invocation ─────────────────────────────────────────
+print("\n[5/5] Starting the polling daemon (first invocation)...")
+resp = lam.invoke(
+    FunctionName=POLLER_FUNCTION_NAME,
+    InvocationType='Event',   # async — returns immediately
+    Payload=b'{}',
 )
-print("  Attached Lambda as EventBridge target")
+print(f"  Dispatched — StatusCode: {resp['StatusCode']}")
 
 
 # ── Done ──────────────────────────────────────────────────────────────────────
 print("\n✅  Done!")
-print(f"   Poller Lambda    : {POLLER_FUNCTION_NAME}")
-print(f"   Schedule         : every 1 minute via EventBridge")
-print(f"\nSend /report in your Telegram chat — it will be picked up within 1 minute.")
+print(f"   Poller Lambda : {POLLER_FUNCTION_NAME}")
+print(f"   Architecture  : self-scheduling loop (12 polls/run × 60s, re-invokes itself)")
+print(f"\nSend /report in your Telegram chat — it will be picked up within ~60 seconds.")
