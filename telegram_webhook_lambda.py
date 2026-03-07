@@ -91,26 +91,36 @@ def send_message(chat_id, text):
     tg_post('sendMessage', {'chat_id': chat_id, 'text': text, 'parse_mode': 'Markdown'})
 
 
-def poll_once(lam_client):
-    """Poll Telegram once and handle any new /report or /help commands."""
+def poll_once(lam_client, offset):
+    """Poll Telegram once and handle any new /report or /help commands.
+    Returns the next offset to use (last_update_id + 1), or the same offset if no updates."""
     now = int(time.time())
     try:
         result = tg_post('getUpdates', {
+            'offset':  offset,
             'limit':   10,
             'timeout': 0,
             'allowed_updates': ['message'],
         })
     except Exception as e:
         logger.error("getUpdates failed: %s", e)
-        return
+        return offset
 
-    for upd in result.get('result', []):
+    updates = result.get('result', [])
+    if not updates:
+        return offset
+
+    # Advance offset past all received updates (acknowledges them so they won't repeat)
+    next_offset = max(upd['update_id'] for upd in updates) + 1
+
+    for upd in updates:
         message = upd.get('message') or upd.get('edited_message')
         if not message:
             continue
 
         age = now - message.get('date', 0)
         if age > MAX_AGE_SECONDS:
+            logger.info("Skipping stale message (age=%ds)", age)
             continue
 
         chat_id = str(message.get('chat', {}).get('id', ''))
@@ -153,6 +163,8 @@ def poll_once(lam_client):
             except Exception as e:
                 logger.error("Failed to send help: %s", e)
 
+    return next_offset
+
 
 def lambda_handler(event, context):
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
@@ -161,20 +173,24 @@ def lambda_handler(event, context):
 
     lam = boto3.client('lambda', region_name=REGION)
 
-    logger.info("Starting polling loop: %d cycles × %ds", CYCLES_PER_RUN, POLL_INTERVAL_S)
+    # Carry the offset across cycles within this invocation so processed
+    # updates are never re-delivered within the same run.
+    offset = event.get('offset', 0)
+
+    logger.info("Starting polling loop: %d cycles × %ds (offset=%d)", CYCLES_PER_RUN, POLL_INTERVAL_S, offset)
     for cycle in range(CYCLES_PER_RUN):
         logger.info("Cycle %d/%d", cycle + 1, CYCLES_PER_RUN)
-        poll_once(lam)
+        offset = poll_once(lam, offset)
         if cycle < CYCLES_PER_RUN - 1:
             time.sleep(POLL_INTERVAL_S)
 
-    # Re-invoke self to continue the polling loop indefinitely
-    logger.info("Re-invoking self for next run...")
+    # Re-invoke self to continue the polling loop indefinitely, passing current offset
+    logger.info("Re-invoking self for next run (offset=%d)...", offset)
     try:
         lam.invoke(
             FunctionName=context.function_name,
             InvocationType='Event',   # fire-and-forget, don't wait
-            Payload=b'{}',
+            Payload=json.dumps({'offset': offset}).encode(),
         )
         logger.info("Self-invocation scheduled")
     except Exception as e:
