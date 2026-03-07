@@ -11,6 +11,7 @@ import io
 import json
 import os
 import time
+import uuid
 import zipfile
 
 # ── credentials from env ──────────────────────────────────────────────────────
@@ -23,6 +24,13 @@ TELEGRAM_CHAT_ID      = os.environ['TELEGRAM_CHAT_ID']
 POLLER_FUNCTION_NAME = 'daily-digest-telegram-webhook'
 REPORT_FUNCTION_NAME = 'daily-trends-digest'
 EXISTING_ROLE_ARN    = 'arn:aws:iam::905418356298:role/service-role/daily-trends-digest-role-9ru0fj04'
+
+# Unique ID stamped into the Lambda env at every deploy.
+# The poller code exits immediately if the deploy_id in the event payload
+# doesn't match DEPLOY_ID in its env — this kills any stale self-scheduling
+# chains from previous deploys without needing to kill running instances.
+DEPLOY_ID = uuid.uuid4().hex[:8]
+print(f"Deploy ID: {DEPLOY_ID}")
 
 session = boto3.Session(
     aws_access_key_id=AWS_ACCESS_KEY_ID,
@@ -51,6 +59,7 @@ env_vars = {
     'TELEGRAM_BOT_TOKEN': TELEGRAM_BOT_TOKEN,
     'TELEGRAM_CHAT_ID':   TELEGRAM_CHAT_ID,
     'REPORT_LAMBDA_NAME': REPORT_FUNCTION_NAME,
+    'DEPLOY_ID':          DEPLOY_ID,
 }
 
 try:
@@ -132,7 +141,7 @@ print("\n[5/5] Starting the polling daemon (first invocation)...")
 resp = lam.invoke(
     FunctionName=POLLER_FUNCTION_NAME,
     InvocationType='Event',   # async — returns immediately
-    Payload=b'{}',
+    Payload=json.dumps({'deploy_id': DEPLOY_ID}).encode(),
 )
 print(f"  Dispatched — StatusCode: {resp['StatusCode']}")
 
