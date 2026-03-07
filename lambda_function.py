@@ -6,10 +6,12 @@ import anthropic
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-ANTHROPIC_API_KEY = os.environ['ANTHROPIC_API_KEY']
-SENDER_EMAIL      = os.environ['SENDER_EMAIL']
-RECIPIENT_EMAIL   = os.environ['RECIPIENT_EMAIL']
-REGION            = 'eu-north-1'
+ANTHROPIC_API_KEY  = os.environ['ANTHROPIC_API_KEY']
+SENDER_EMAIL       = os.environ['SENDER_EMAIL']
+RECIPIENT_EMAIL    = os.environ['RECIPIENT_EMAIL']
+REGION             = 'eu-north-1'
+TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN', '')
+TELEGRAM_CHAT_ID   = os.environ.get('TELEGRAM_CHAT_ID', '')
 
 HEADERS        = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'}
 FRESHNESS_DAYS = 7   # drop any RSS/Reddit item older than this
@@ -991,6 +993,93 @@ def send_email(html_part1, html_part2, html_part3, html_part4):
         logger.error(f"SES send_email failed — {type(e).__name__}: {e}")
         raise
 
+# ── Telegram ──────────────────────────────────────────────────────────────────
+
+def send_telegram(html_part1, html_part2, html_part3, html_part4):
+    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+        logger.info("Telegram not configured (TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID missing) — skipping")
+        return
+
+    today = datetime.now().strftime('%A, %B %d %Y')
+    full_html = f"""<html>
+<body style="font-family:Arial,sans-serif;max-width:820px;margin:auto;padding:24px;color:#222;line-height:1.6">
+  <h1 style="color:#1a1a2e;margin-bottom:4px">Market Intelligence Briefing</h1>
+  <p style="color:#888;margin-top:0">{today} &mdash; Macro &middot; Sectors &middot; Flows &middot; Crypto &middot; Quant Models</p>
+  <hr style="border:none;border-top:3px solid #1a73e8;margin:16px 0 24px">
+  {html_part1}
+  <hr style="border:none;border-top:3px solid #9c27b0;margin:32px 0 24px">
+  {html_part2}
+  <hr style="border:none;border-top:3px solid #1da1f2;margin:32px 0 24px">
+  {html_part3}
+  <hr style="border:none;border-top:3px solid #ff6b35;margin:32px 0 24px">
+  {html_part4}
+  <hr style="border:none;border-top:1px solid #ddd;margin:24px 0 12px">
+  <p style="color:#aaa;font-size:11px">Powered by AWS Lambda + Claude Opus &mdash; for informational purposes only, not financial advice.</p>
+</body>
+</html>"""
+
+    base = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}"
+
+    # 1 — brief intro message
+    intro = (
+        f"\U0001f4ca *Market Intelligence Briefing*\n"
+        f"{today}\n\n"
+        f"_Macro \u00b7 Sectors \u00b7 Flows \u00b7 Crypto \u00b7 Quant Models_\n\n"
+        f"Full report attached \U0001f447"
+    )
+    try:
+        msg_body = json.dumps({'chat_id': TELEGRAM_CHAT_ID, 'text': intro, 'parse_mode': 'Markdown'}).encode()
+        req = urllib.request.Request(
+            f"{base}/sendMessage",
+            data=msg_body,
+            headers={'Content-Type': 'application/json'},
+            method='POST'
+        )
+        urllib.request.urlopen(req, timeout=15)
+        logger.info("Telegram intro message sent")
+    except Exception as e:
+        logger.warning(f"Telegram sendMessage failed: {e}")
+
+    # 2 — send the HTML report as a document
+    filename = f"market_briefing_{datetime.now().strftime('%Y-%m-%d')}.html"
+    html_bytes = full_html.encode('utf-8')
+    boundary = b'TgBoundaryMarketDigest7890'
+
+    def _field(name, value):
+        return (
+            b'--' + boundary + b'\r\n'
+            b'Content-Disposition: form-data; name="' + name.encode() + b'"\r\n\r\n'
+            + str(value).encode() + b'\r\n'
+        )
+
+    def _file_field(name, fname, content):
+        return (
+            b'--' + boundary + b'\r\n'
+            b'Content-Disposition: form-data; name="' + name.encode() +
+            b'"; filename="' + fname.encode() + b'"\r\n'
+            b'Content-Type: text/html\r\n\r\n'
+            + content + b'\r\n'
+        )
+
+    body = (
+        _field('chat_id', TELEGRAM_CHAT_ID)
+        + _field('caption', f"Market Briefing — {today}")
+        + _file_field('document', filename, html_bytes)
+        + b'--' + boundary + b'--\r\n'
+    )
+
+    try:
+        req = urllib.request.Request(
+            f"{base}/sendDocument",
+            data=body,
+            headers={'Content-Type': f'multipart/form-data; boundary={boundary.decode()}'},
+            method='POST'
+        )
+        urllib.request.urlopen(req, timeout=60)
+        logger.info("Telegram document sent successfully")
+    except Exception as e:
+        logger.error(f"Telegram sendDocument failed: {e}")
+
 # ── Handler ───────────────────────────────────────────────────────────────────
 
 def lambda_handler(event, context):
@@ -1011,6 +1100,7 @@ def lambda_handler(event, context):
         html_part4 = analyze_part4(signals, today_str, quant_snapshot)
 
         send_email(html_part1, html_part2, html_part3, html_part4)
+        send_telegram(html_part1, html_part2, html_part3, html_part4)
         logger.info("All done successfully")
         return {'statusCode': 200, 'body': f'Sent digest with {total} raw signals'}
     except Exception as e:
