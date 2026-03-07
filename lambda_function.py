@@ -963,7 +963,8 @@ _UNICODE_SUBS = str.maketrans({
     '\u201d': '"',     # right double quote
     '\u2026': '...',   # ellipsis
     '\u2022': '*',     # bullet
-    '\u00b7': '.',     # middle dot (safe in latin-1 but keep consistent)
+    '\u00b7': '.',     # middle dot
+    '\u00a0': ' ',     # non-breaking space → regular space
     '\u2191': '^',     # up arrow
     '\u2193': 'v',     # down arrow
     '\u2192': '->',    # right arrow
@@ -1076,30 +1077,45 @@ def _html_to_pdf_bytes(full_html):
     pdf.line(pdf.l_margin, pdf.get_y() + 2, pdf.w - pdf.r_margin, pdf.get_y() + 2)
     pdf.ln(6)
 
+    usable_w = pdf.w - pdf.l_margin - pdf.r_margin
+
     for style, text in paragraphs:
-        safe = _safe(text)
         if style == 'hr':
-            pdf.set_draw_color(200, 200, 200)
-            pdf.set_line_width(0.3)
-            pdf.line(pdf.l_margin, pdf.get_y() + 1, pdf.w - pdf.r_margin, pdf.get_y() + 1)
-            pdf.ln(4)
-        elif style == 'h1':
-            pdf.ln(3)
-            pdf.set_font('Helvetica', 'B', 13)
-            pdf.set_text_color(26, 115, 232)
-            pdf.multi_cell(0, 7, safe, align='L')
-            pdf.ln(1)
-        elif style == 'h2':
-            pdf.ln(2)
-            pdf.set_font('Helvetica', 'B', 11)
-            pdf.set_text_color(51, 51, 51)
-            pdf.multi_cell(0, 6, safe, align='L')
-            pdf.ln(1)
-        else:
-            pdf.set_font('Helvetica', '', 9)
-            pdf.set_text_color(34, 34, 34)
-            pdf.multi_cell(0, 5, safe, align='L')
-            pdf.ln(1)
+            # Guard: if near the bottom, start a new page instead of drawing in the margin
+            if pdf.get_y() > pdf.h - pdf.b_margin - 12:
+                pdf.add_page()
+            else:
+                pdf.set_draw_color(200, 200, 200)
+                pdf.set_line_width(0.3)
+                pdf.line(pdf.l_margin, pdf.get_y() + 1, pdf.w - pdf.r_margin, pdf.get_y() + 1)
+                pdf.ln(6)
+            continue
+
+        safe = _safe(text)
+        if not safe:
+            continue
+
+        try:
+            pdf.set_x(pdf.l_margin)   # always reset x before writing
+            if style == 'h1':
+                pdf.ln(3)
+                pdf.set_font('Helvetica', 'B', 13)
+                pdf.set_text_color(26, 115, 232)
+                pdf.multi_cell(usable_w, 7, safe, align='L')
+                pdf.ln(1)
+            elif style == 'h2':
+                pdf.ln(2)
+                pdf.set_font('Helvetica', 'B', 11)
+                pdf.set_text_color(51, 51, 51)
+                pdf.multi_cell(usable_w, 6, safe, align='L')
+                pdf.ln(1)
+            else:
+                pdf.set_font('Helvetica', '', 9)
+                pdf.set_text_color(34, 34, 34)
+                pdf.multi_cell(usable_w, 5, safe, align='L')
+                pdf.ln(1)
+        except Exception as exc:
+            logger.warning(f"PDF paragraph skipped ({style}): {exc}")
 
     return pdf.output()
 
