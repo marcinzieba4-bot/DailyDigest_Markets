@@ -954,6 +954,47 @@ No other text outside the HTML blocks."""
 
 # ── Email ─────────────────────────────────────────────────────────────────────
 
+_UNICODE_SUBS = str.maketrans({
+    '\u2014': '--',    # em dash
+    '\u2013': '-',     # en dash
+    '\u2018': "'",     # left single quote
+    '\u2019': "'",     # right single quote
+    '\u201c': '"',     # left double quote
+    '\u201d': '"',     # right double quote
+    '\u2026': '...',   # ellipsis
+    '\u2022': '*',     # bullet
+    '\u00b7': '.',     # middle dot (safe in latin-1 but keep consistent)
+    '\u2191': '^',     # up arrow
+    '\u2193': 'v',     # down arrow
+    '\u2192': '->',    # right arrow
+    '\u2190': '<-',    # left arrow
+    '\u21d1': '^',     # up double arrow
+    '\u21d3': 'v',     # down double arrow
+    '\u25b2': '^',     # black up-pointing triangle
+    '\u25bc': 'v',     # black down-pointing triangle
+    '\u20ac': 'EUR',   # euro sign
+    '\u00a3': 'GBP',   # pound sign
+    '\u00a5': 'JPY',   # yen sign
+    '\u00ae': '(R)',   # registered trademark
+    '\u00a9': '(C)',   # copyright
+    '\u00b0': 'deg',   # degree sign
+    '\u2248': '~',     # approximately equal
+    '\u2260': '!=',    # not equal
+    '\u2265': '>=',    # greater than or equal
+    '\u2264': '<=',    # less than or equal
+    '\u00d7': 'x',     # multiplication sign
+    '\u00f7': '/',     # division sign
+    '\u03b1': 'alpha', '\u03b2': 'beta', '\u03b3': 'gamma',
+    '\u03b4': 'delta', '\u03c3': 'sigma',
+})
+
+def _safe(text):
+    """Map Unicode chars to latin-1-safe equivalents, drop anything still outside range."""
+    text = text.translate(_UNICODE_SUBS)
+    # Remove emoji and anything else outside latin-1
+    return text.encode('latin-1', errors='ignore').decode('latin-1')
+
+
 def _html_to_pdf_bytes(full_html):
     """Convert the report HTML to a PDF byte string using fpdf2 (pure Python)."""
     # Strip style/script blocks and extract plain text segments with tag context
@@ -1029,15 +1070,14 @@ def _html_to_pdf_bytes(full_html):
     pdf.multi_cell(0, 9, 'Market Intelligence Briefing', align='L')
     pdf.set_font('Helvetica', '', 9)
     pdf.set_text_color(136, 136, 136)
-    pdf.multi_cell(0, 5, today + '  —  Macro · Sectors · Flows · Crypto · Quant Models', align='L')
+    pdf.multi_cell(0, 5, today + '  --  Macro . Sectors . Flows . Crypto . Quant Models', align='L')
     pdf.set_draw_color(26, 115, 232)   # #1a73e8
     pdf.set_line_width(0.8)
     pdf.line(pdf.l_margin, pdf.get_y() + 2, pdf.w - pdf.r_margin, pdf.get_y() + 2)
     pdf.ln(6)
 
     for style, text in paragraphs:
-        # Sanitise text: keep only latin-1 printable chars (Helvetica core font limit)
-        safe = text.encode('latin-1', errors='replace').decode('latin-1')
+        safe = _safe(text)
         if style == 'hr':
             pdf.set_draw_color(200, 200, 200)
             pdf.set_line_width(0.3)
