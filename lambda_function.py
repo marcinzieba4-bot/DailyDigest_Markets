@@ -2,6 +2,12 @@ import json, boto3, urllib.request, re, os, logging, csv, io
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 import anthropic
+from reportlab.lib.pagesizes import A4
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, HRFlowable
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib.units import mm
+from reportlab.lib import colors
+import html as html_lib
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -12,6 +18,7 @@ RECIPIENT_EMAIL    = os.environ['RECIPIENT_EMAIL']
 REGION             = 'eu-north-1'
 TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN', '')
 TELEGRAM_CHAT_ID   = os.environ.get('TELEGRAM_CHAT_ID', '')
+S3_BUCKET          = os.environ.get('S3_BUCKET', 's3bucketmz')
 
 HEADERS        = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'}
 FRESHNESS_DAYS = 7   # drop any RSS/Reddit item older than this
@@ -951,6 +958,100 @@ No other text outside the HTML blocks."""
 
 # ── Email ─────────────────────────────────────────────────────────────────────
 
+def _html_to_pdf_bytes(full_html):
+    """Convert the report HTML to a PDF byte string using reportlab."""
+    buf = io.BytesIO()
+    doc = SimpleDocTemplate(
+        buf, pagesize=A4,
+        leftMargin=18*mm, rightMargin=18*mm,
+        topMargin=16*mm, bottomMargin=16*mm,
+    )
+    styles = getSampleStyleSheet()
+    title_style  = ParagraphStyle('Title2',  parent=styles['Title'],
+                                  fontSize=18, spaceAfter=4, textColor=colors.HexColor('#1a1a2e'))
+    h1_style     = ParagraphStyle('H1',      parent=styles['Heading1'],
+                                  fontSize=14, spaceBefore=10, spaceAfter=4,
+                                  textColor=colors.HexColor('#1a73e8'))
+    h2_style     = ParagraphStyle('H2',      parent=styles['Heading2'],
+                                  fontSize=12, spaceBefore=8, spaceAfter=3,
+                                  textColor=colors.HexColor('#333'))
+    body_style   = ParagraphStyle('Body2',   parent=styles['Normal'],
+                                  fontSize=9, leading=13, spaceAfter=4)
+    caption_style= ParagraphStyle('Caption', parent=styles['Normal'],
+                                  fontSize=8, textColor=colors.grey, spaceAfter=6)
+
+    # Strip tags and convert to simple flowables
+    clean = re.sub(r'<style[^>]*>.*?</style>', '', full_html, flags=re.DOTALL|re.IGNORECASE)
+    clean = re.sub(r'<script[^>]*>.*?</script>', '', clean, flags=re.DOTALL|re.IGNORECASE)
+
+    tag_re  = re.compile(r'<(/?)(\w+)[^>]*>', re.IGNORECASE)
+    story   = []
+    today   = datetime.now().strftime('%A, %B %d %Y')
+    story.append(Paragraph('Market Intelligence Briefing', title_style))
+    story.append(Paragraph(today, caption_style))
+    story.append(HRFlowable(width='100%', thickness=2, color=colors.HexColor('#1a73e8'), spaceAfter=8))
+
+    buf2    = []
+    in_skip = 0
+    tag_stack = []
+    for token in re.split(r'(<[^>]+>)', clean):
+        m = tag_re.match(token)
+        if m:
+            closing, tag = m.group(1) == '/', m.group(2).lower()
+            if tag in ('head', 'style', 'script'):
+                in_skip += -1 if closing else 1
+            elif not closing:
+                tag_stack.append(tag)
+                if tag == 'hr':
+                    text = html_lib.unescape(''.join(buf2)).strip()
+                    if text:
+                        story.append(Paragraph(text, body_style))
+                        buf2.clear()
+                    story.append(HRFlowable(width='100%', thickness=1,
+                                            color=colors.HexColor('#cccccc'), spaceAfter=6))
+                elif tag == 'br':
+                    buf2.append(' ')
+            else:
+                if tag_stack and tag_stack[-1] == tag:
+                    tag_stack.pop()
+                if tag in ('p', 'div', 'li', 'h1', 'h2', 'h3', 'h4', 'td', 'th'):
+                    text = html_lib.unescape(''.join(buf2)).strip()
+                    if text:
+                        if tag in ('h1',):
+                            story.append(Paragraph(text, h1_style))
+                        elif tag in ('h2', 'h3', 'h4'):
+                            story.append(Paragraph(text, h2_style))
+                        else:
+                            story.append(Paragraph(text, body_style))
+                    buf2.clear()
+        elif in_skip == 0:
+            buf2.append(token)
+
+    leftover = html_lib.unescape(''.join(buf2)).strip()
+    if leftover:
+        story.append(Paragraph(leftover, body_style))
+
+    doc.build(story)
+    return buf.getvalue()
+
+
+def save_pdf_to_s3(full_html):
+    """Render the report as PDF and save to s3://{S3_BUCKET}/Strategies/YYYY-MM-DD.pdf."""
+    try:
+        pdf_bytes = _html_to_pdf_bytes(full_html)
+        key = f"Strategies/{datetime.now().strftime('%Y-%m-%d')}_Market_Intelligence.pdf"
+        s3 = boto3.client('s3', region_name=REGION)
+        s3.put_object(
+            Bucket=S3_BUCKET,
+            Key=key,
+            Body=pdf_bytes,
+            ContentType='application/pdf',
+        )
+        logger.info(f"PDF saved to s3://{S3_BUCKET}/{key}  ({len(pdf_bytes):,} bytes)")
+    except Exception as e:
+        logger.error(f"save_pdf_to_s3 failed (non-fatal): {e}")
+
+
 def send_email(html_part1, html_part2, html_part3, html_part4):
     logger.info(f"Sending email — Source: {SENDER_EMAIL} | To: {RECIPIENT_EMAIL}")
     ses = boto3.client('ses', region_name=REGION)
@@ -1001,6 +1102,7 @@ def send_email(html_part1, html_part2, html_part3, html_part4):
     except Exception as e:
         logger.error(f"SES send_email failed — {type(e).__name__}: {e}")
         raise
+    return full_html
 
 # ── Telegram ──────────────────────────────────────────────────────────────────
 
@@ -1108,7 +1210,8 @@ def lambda_handler(event, context):
         html_part3 = analyze_part3(signals, today_str, quant_snapshot)
         html_part4 = analyze_part4(signals, today_str, quant_snapshot)
 
-        send_email(html_part1, html_part2, html_part3, html_part4)
+        full_html = send_email(html_part1, html_part2, html_part3, html_part4)
+        save_pdf_to_s3(full_html)
         send_telegram(html_part1, html_part2, html_part3, html_part4)
         logger.info("All done successfully")
         return {'statusCode': 200, 'body': f'Sent digest with {total} raw signals'}
