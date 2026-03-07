@@ -166,6 +166,18 @@ def poll_once(lam_client, offset):
     return next_offset
 
 
+def get_fresh_offset():
+    """Return offset just past the latest existing update so we skip the backlog."""
+    try:
+        result = tg_post('getUpdates', {'limit': 1, 'timeout': 0})
+        updates = result.get('result', [])
+        if updates:
+            return updates[-1]['update_id'] + 1
+    except Exception as e:
+        logger.warning("Could not fetch fresh offset: %s", e)
+    return 0
+
+
 def lambda_handler(event, context):
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
         logger.error("Telegram env vars not set")
@@ -173,9 +185,10 @@ def lambda_handler(event, context):
 
     lam = boto3.client('lambda', region_name=REGION)
 
-    # Carry the offset across cycles within this invocation so processed
-    # updates are never re-delivered within the same run.
-    offset = event.get('offset', 0)
+    # Use offset from event (continuation of an existing chain).
+    # If absent (fresh start / deploy kick-off), skip past all existing
+    # updates so we never replay stale /report commands.
+    offset = event.get('offset') or get_fresh_offset()
 
     logger.info("Starting polling loop: %d cycles × %ds (offset=%d)", CYCLES_PER_RUN, POLL_INTERVAL_S, offset)
     for cycle in range(CYCLES_PER_RUN):

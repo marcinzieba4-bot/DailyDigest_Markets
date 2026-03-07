@@ -90,6 +90,15 @@ except lam.exceptions.ResourceNotFoundException:
         time.sleep(3)
 
 
+# ── 2b. Enforce reserved concurrency = 1 (only one poller instance ever runs) ─
+print("\n[2b] Setting reserved concurrency = 1...")
+lam.put_function_concurrency(
+    FunctionName=POLLER_FUNCTION_NAME,
+    ReservedConcurrentExecutions=1,
+)
+print("  Done")
+
+
 # ── 3. Allow poller role to invoke the report Lambda ─────────────────────────
 print("\n[3/5] Ensuring report Lambda invoke permission...")
 try:
