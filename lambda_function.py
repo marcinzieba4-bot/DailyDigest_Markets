@@ -998,6 +998,15 @@ def _parse_html_paragraphs(full_html):
     return paragraphs
 
 
+def _sanitize_for_mpl(text):
+    """Escape matplotlib math-mode triggers and drop characters DejaVu Sans can't render."""
+    # Strip supplementary-plane characters (emojis, etc. — codepoint > U+FFFF)
+    text = ''.join(c if ord(c) <= 0xFFFF else '' for c in text)
+    # Escape $ so matplotlib doesn't treat it as a math-mode delimiter
+    text = text.replace('$', r'\$')
+    return text
+
+
 def _html_to_pdf_bytes(full_html, today_str):
     """Render the report HTML to PDF bytes using matplotlib PdfPages."""
     import textwrap
@@ -1114,7 +1123,7 @@ def _html_to_pdf_bytes(full_html, today_str):
                 ax.text(MX, PAGE_H - MT, 'Market Intelligence Briefing',
                         color=C_TITLE, fontsize=18, fontweight='bold',
                         va='top', ha='left', fontfamily='DejaVu Sans')
-                ax.text(MX, PAGE_H - MT - 0.30, today_str + '  ·  Macro  ·  Sectors  ·  Flows  ·  Crypto  ·  Quant',
+                ax.text(MX, PAGE_H - MT - 0.30, _sanitize_for_mpl(today_str) + '  ·  Macro  ·  Sectors  ·  Flows  ·  Crypto  ·  Quant',
                         color=C_MUTED, fontsize=8, va='top', ha='left', fontfamily='DejaVu Sans')
                 # underline
                 ax.plot([MX, PAGE_W - MX], [PAGE_H - MT - 0.52, PAGE_H - MT - 0.52],
@@ -1142,7 +1151,7 @@ def _html_to_pdf_bytes(full_html, today_str):
                 lh    = LH.get(style, LH['body'])
 
                 for ln in lines:
-                    ax.text(MX, y, ln,
+                    ax.text(MX, y, _sanitize_for_mpl(ln),
                             color=color, fontsize=fs,
                             fontweight='bold' if bold else 'normal',
                             va='top', ha='left', fontfamily='DejaVu Sans',
