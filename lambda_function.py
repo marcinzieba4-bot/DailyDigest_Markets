@@ -2,7 +2,6 @@ import json, boto3, urllib.request, re, os, logging, csv, io
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 import anthropic
-from fpdf import FPDF
 import html as html_lib
 
 logger = logging.getLogger()
@@ -954,193 +953,6 @@ No other text outside the HTML blocks."""
 
 # ── Email ─────────────────────────────────────────────────────────────────────
 
-_UNICODE_SUBS = str.maketrans({
-    '\u2014': '--',    # em dash
-    '\u2013': '-',     # en dash
-    '\u2018': "'",     # left single quote
-    '\u2019': "'",     # right single quote
-    '\u201c': '"',     # left double quote
-    '\u201d': '"',     # right double quote
-    '\u2026': '...',   # ellipsis
-    '\u2022': '*',     # bullet
-    '\u00b7': '.',     # middle dot
-    '\u00a0': ' ',     # non-breaking space → regular space
-    '\u2191': '^',     # up arrow
-    '\u2193': 'v',     # down arrow
-    '\u2192': '->',    # right arrow
-    '\u2190': '<-',    # left arrow
-    '\u21d1': '^',     # up double arrow
-    '\u21d3': 'v',     # down double arrow
-    '\u25b2': '^',     # black up-pointing triangle
-    '\u25bc': 'v',     # black down-pointing triangle
-    '\u20ac': 'EUR',   # euro sign
-    '\u00a3': 'GBP',   # pound sign
-    '\u00a5': 'JPY',   # yen sign
-    '\u00ae': '(R)',   # registered trademark
-    '\u00a9': '(C)',   # copyright
-    '\u00b0': 'deg',   # degree sign
-    '\u2248': '~',     # approximately equal
-    '\u2260': '!=',    # not equal
-    '\u2265': '>=',    # greater than or equal
-    '\u2264': '<=',    # less than or equal
-    '\u00d7': 'x',     # multiplication sign
-    '\u00f7': '/',     # division sign
-    '\u03b1': 'alpha', '\u03b2': 'beta', '\u03b3': 'gamma',
-    '\u03b4': 'delta', '\u03c3': 'sigma',
-})
-
-def _safe(text):
-    """Map Unicode chars to latin-1-safe equivalents, drop anything still outside range."""
-    text = text.translate(_UNICODE_SUBS)
-    # Remove emoji and anything else outside latin-1
-    return text.encode('latin-1', errors='ignore').decode('latin-1')
-
-
-def _html_to_pdf_bytes(full_html):
-    """Convert the report HTML to a PDF byte string using fpdf2 (pure Python)."""
-    # Strip style/script blocks and extract plain text segments with tag context
-    clean = re.sub(r'<style[^>]*>.*?</style>', '', full_html, flags=re.DOTALL | re.IGNORECASE)
-    clean = re.sub(r'<script[^>]*>.*?</script>', '', clean, flags=re.DOTALL | re.IGNORECASE)
-
-    tag_re = re.compile(r'<(/?)(\w+)[^>]*>', re.IGNORECASE)
-
-    # Build a list of (tag_or_None, text) tuples
-    segments = []  # ('tag', tag_name, closing) or ('text', text)
-    for token in re.split(r'(<[^>]+>)', clean):
-        m = tag_re.match(token)
-        if m:
-            segments.append(('tag', m.group(2).lower(), m.group(1) == '/'))
-        else:
-            segments.append(('text', token, None))
-
-    # Walk segments, flush text on block-closing tags
-    buf = []
-    paragraphs = []   # list of (style, text): style in 'title','h1','h2','h3','body','hr'
-    in_skip = 0
-    tag_stack = []
-
-    BLOCK_TAGS = {'p', 'div', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'td', 'th', 'blockquote'}
-
-    def flush(tag='body'):
-        text = html_lib.unescape(''.join(buf)).strip()
-        buf.clear()
-        if not text:
-            return
-        style = 'body'
-        if tag in ('h1',):
-            style = 'h1'
-        elif tag in ('h2', 'h3', 'h4', 'h5'):
-            style = 'h2'
-        paragraphs.append((style, text))
-
-    for kind, val, closing in segments:
-        if kind == 'tag':
-            tag = val
-            if tag in ('head', 'style', 'script'):
-                in_skip += -1 if closing else 1
-            elif in_skip > 0:
-                pass
-            elif not closing:
-                tag_stack.append(tag)
-                if tag == 'hr':
-                    flush()
-                    paragraphs.append(('hr', ''))
-                elif tag == 'br':
-                    buf.append('\n')
-            else:
-                if tag_stack and tag_stack[-1] == tag:
-                    tag_stack.pop()
-                if tag in BLOCK_TAGS:
-                    flush(tag)
-        else:
-            if in_skip == 0:
-                buf.append(val)
-
-    flush()
-
-    # Build PDF with fpdf2
-    pdf = FPDF()
-    pdf.set_auto_page_break(auto=True, margin=15)
-    pdf.add_page()
-
-    today = datetime.now().strftime('%A, %B %d %Y')
-
-    # Title
-    try:
-        pdf.set_font('Helvetica', 'B', 18)
-        pdf.set_text_color(26, 26, 46)   # #1a1a2e
-        pdf.multi_cell(0, 9, 'Market Intelligence Briefing', align='L')
-        pdf.set_font('Helvetica', '', 9)
-        pdf.set_text_color(136, 136, 136)
-        pdf.multi_cell(0, 5, today + '  --  Macro . Sectors . Flows . Crypto . Quant Models', align='L')
-        pdf.set_draw_color(26, 115, 232)   # #1a73e8
-        pdf.set_line_width(0.8)
-        pdf.line(pdf.l_margin, pdf.get_y() + 2, pdf.w - pdf.r_margin, pdf.get_y() + 2)
-        pdf.ln(6)
-    except Exception as exc:
-        logger.warning("PDF title block skipped: %s", exc)
-        pdf.ln(6)
-
-    usable_w = pdf.w - pdf.l_margin - pdf.r_margin
-
-    for style, text in paragraphs:
-        if style == 'hr':
-            # Guard: if near the bottom, start a new page instead of drawing in the margin
-            if pdf.get_y() > pdf.h - pdf.b_margin - 12:
-                pdf.add_page()
-            else:
-                pdf.set_draw_color(200, 200, 200)
-                pdf.set_line_width(0.3)
-                pdf.line(pdf.l_margin, pdf.get_y() + 1, pdf.w - pdf.r_margin, pdf.get_y() + 1)
-                pdf.ln(6)
-            continue
-
-        safe = _safe(text).strip()
-        if not safe:
-            continue
-
-        try:
-            pdf.set_x(pdf.l_margin)   # always reset x before writing
-            if style == 'h1':
-                pdf.ln(3)
-                pdf.set_font('Helvetica', 'B', 13)
-                pdf.set_text_color(26, 115, 232)
-                pdf.multi_cell(usable_w, 7, safe, align='L')
-                pdf.ln(1)
-            elif style == 'h2':
-                pdf.ln(2)
-                pdf.set_font('Helvetica', 'B', 11)
-                pdf.set_text_color(51, 51, 51)
-                pdf.multi_cell(usable_w, 6, safe, align='L')
-                pdf.ln(1)
-            else:
-                pdf.set_font('Helvetica', '', 9)
-                pdf.set_text_color(34, 34, 34)
-                pdf.multi_cell(usable_w, 5, safe, align='L')
-                pdf.ln(1)
-        except Exception as exc:
-            logger.warning(f"PDF paragraph skipped ({style}): {exc}")
-
-    return pdf.output()
-
-
-def save_pdf_to_s3(full_html):
-    """Render the report as PDF and save to s3://{S3_BUCKET}/Strategies/YYYY-MM-DD.pdf."""
-    try:
-        pdf_bytes = _html_to_pdf_bytes(full_html)
-        key = f"Strategies/{datetime.now().strftime('%Y-%m-%d')}_Market_Intelligence.pdf"
-        s3 = boto3.client('s3', region_name=REGION)
-        s3.put_object(
-            Bucket=S3_BUCKET,
-            Key=key,
-            Body=pdf_bytes,
-            ContentType='application/pdf',
-        )
-        logger.info(f"PDF saved to s3://{S3_BUCKET}/{key}  ({len(pdf_bytes):,} bytes)")
-    except Exception as e:
-        logger.error(f"save_pdf_to_s3 failed (non-fatal): {e}")
-
-
 def send_email(html_part1, html_part2, html_part3, html_part4):
     logger.info(f"Sending email — Source: {SENDER_EMAIL} | To: {RECIPIENT_EMAIL}")
     ses = boto3.client('ses', region_name=REGION)
@@ -1300,7 +1112,6 @@ def lambda_handler(event, context):
         html_part4 = analyze_part4(signals, today_str, quant_snapshot)
 
         full_html = send_email(html_part1, html_part2, html_part3, html_part4)
-        save_pdf_to_s3(full_html)
         send_telegram(html_part1, html_part2, html_part3, html_part4)
         logger.info("All done successfully")
         return {'statusCode': 200, 'body': f'Sent digest with {total} raw signals'}
