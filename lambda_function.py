@@ -951,6 +951,231 @@ No other text outside the HTML blocks."""
     logger.info("Calling Claude — Part 4 (What Retail Is Playing)")
     return call_claude(prompt, max_tokens=6000)
 
+# ── PDF (matplotlib PdfPages) ──────────────────────────────────────────────────
+
+def _parse_html_paragraphs(full_html):
+    """Strip HTML tags and return list of (style, text) tuples.
+    Styles: 'title', 'h1', 'h2', 'body', 'hr'
+    """
+    clean = re.sub(r'<style[^>]*>.*?</style>', '', full_html, flags=re.DOTALL | re.IGNORECASE)
+    clean = re.sub(r'<script[^>]*>.*?</script>', '', clean, flags=re.DOTALL | re.IGNORECASE)
+
+    tag_re = re.compile(r'<(/?)(\w+)[^>]*>', re.IGNORECASE)
+    buf, paragraphs, in_skip, tag_stack = [], [], 0, []
+    BLOCK_TAGS = {'p', 'div', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'td', 'th', 'blockquote'}
+
+    def flush(tag='body'):
+        text = html_lib.unescape(''.join(buf)).strip()
+        buf.clear()
+        if not text:
+            return
+        style = 'h1' if tag == 'h1' else ('h2' if tag in ('h2', 'h3', 'h4', 'h5') else 'body')
+        paragraphs.append((style, text))
+
+    for token in re.split(r'(<[^>]+>)', clean):
+        m = tag_re.match(token)
+        if m:
+            tag, closing = m.group(2).lower(), m.group(1) == '/'
+            if tag in ('head', 'style', 'script'):
+                in_skip += -1 if closing else 1
+            elif in_skip > 0:
+                pass
+            elif not closing:
+                tag_stack.append(tag)
+                if tag == 'hr':
+                    flush(); paragraphs.append(('hr', ''))
+                elif tag == 'br':
+                    buf.append('\n')
+            else:
+                if tag_stack and tag_stack[-1] == tag:
+                    tag_stack.pop()
+                if tag in BLOCK_TAGS:
+                    flush(tag)
+        elif in_skip == 0:
+            buf.append(token)
+
+    flush()
+    return paragraphs
+
+
+def _html_to_pdf_bytes(full_html, today_str):
+    """Render the report HTML to PDF bytes using matplotlib PdfPages."""
+    import textwrap
+    from io import BytesIO
+    import matplotlib
+    matplotlib.use('Agg')
+    from matplotlib.backends.backend_pdf import PdfPages
+    import matplotlib.pyplot as plt
+    import matplotlib.patches as mpatches
+
+    # ── design tokens ────────────────────────────────────────────────────────
+    C_BG     = '#0d1117'
+    C_TITLE  = '#e6edf3'
+    C_H1     = '#4fc3f7'
+    C_H2     = '#81d4a0'
+    C_BODY   = '#c9d1d9'
+    C_MUTED  = '#8b949e'
+    C_RULE   = '#30363d'
+    C_ACCENT = '#1a73e8'
+
+    PAGE_W, PAGE_H = 8.5, 11.0   # inches
+    MX, MT, MB = 0.75, 0.70, 0.55
+    TEXT_W_IN = PAGE_W - 2 * MX
+    TEXT_H_IN = PAGE_H - MT - MB
+
+    # ── font sizes → approximate line heights in axes-fraction coords ─────────
+    # 1 inch = 72 pt; at PAGE_H inches tall, 1pt ≈ 1/(PAGE_H*72) figure-height
+    # We express y in data-units 0..PAGE_H
+    FS = {'title': 16, 'h1': 12, 'h2': 10, 'body': 8.5}
+    LH = {'title': 0.26, 'h1': 0.22, 'h2': 0.19, 'body': 0.155}   # inches per line
+    GAP = {'title': 0.20, 'h1': 0.18, 'h2': 0.10, 'body': 0.06, 'hr': 0.18}
+
+    # Characters that fit across TEXT_W_IN at each font size
+    # Empirical: DejaVu Sans ≈ 0.055 in/char at 9pt → scale proportionally
+    def chars_per_line(style):
+        base_pt = 9; base_cpl = 100
+        return max(30, int(base_cpl * base_pt / FS.get(style, base_pt)))
+
+    paragraphs = _parse_html_paragraphs(full_html)
+
+    # ── helper: wrap a paragraph into lines, return list[str] ────────────────
+    def wrap(text, style):
+        lines = []
+        for raw_line in text.split('\n'):
+            stripped = raw_line.strip()
+            if not stripped:
+                lines.append('')
+                continue
+            lines.extend(textwrap.wrap(stripped, chars_per_line(style)) or [stripped])
+        return lines or ['']
+
+    # ── pre-compute line-sets per paragraph ──────────────────────────────────
+    items = []   # list of (style, lines_list)
+    for style, text in paragraphs:
+        if style == 'hr':
+            items.append(('hr', []))
+        else:
+            items.append((style, wrap(text, style)))
+
+    # ── paginate ─────────────────────────────────────────────────────────────
+    def paragraph_height(style, lines):
+        if style == 'hr':
+            return GAP['hr']
+        return len(lines) * LH.get(style, LH['body']) + GAP.get(style, GAP['body'])
+
+    pages = []   # list of list of (style, lines)
+    cur_page, cur_y = [], TEXT_H_IN
+
+    for style, lines in items:
+        h = paragraph_height(style, lines)
+        if h > TEXT_H_IN:
+            # very long paragraph: split across pages
+            if cur_page:
+                pages.append(cur_page); cur_page = []; cur_y = TEXT_H_IN
+            # chunk lines into pages
+            if style != 'hr':
+                chunk = []
+                chunk_h = GAP.get(style, GAP['body'])
+                for ln in lines:
+                    lh = LH.get(style, LH['body'])
+                    if chunk_h + lh > TEXT_H_IN and chunk:
+                        pages.append([(style, chunk)])
+                        chunk = []; chunk_h = GAP.get(style, GAP['body'])
+                    chunk.append(ln); chunk_h += lh
+                if chunk:
+                    cur_page = [(style, chunk)]; cur_y = TEXT_H_IN - chunk_h
+            continue
+
+        if h > cur_y and cur_page:
+            pages.append(cur_page); cur_page = []; cur_y = TEXT_H_IN
+
+        cur_page.append((style, lines))
+        cur_y -= h
+
+    if cur_page:
+        pages.append(cur_page)
+
+    # ── render ────────────────────────────────────────────────────────────────
+    buf = BytesIO()
+    with PdfPages(buf) as pdf:
+        total_pages = len(pages)
+        for page_idx, page_items in enumerate(pages):
+            fig = plt.figure(figsize=(PAGE_W, PAGE_H), facecolor=C_BG)
+            ax  = fig.add_axes([0, 0, 1, 1], facecolor=C_BG)
+            ax.set_xlim(0, PAGE_W); ax.set_ylim(0, PAGE_H); ax.axis('off')
+
+            # ── top accent bar ────────────────────────────────────────────────
+            ax.add_patch(mpatches.FancyBboxPatch(
+                (0, PAGE_H - 0.06), PAGE_W, 0.06,
+                boxstyle='square,pad=0', facecolor=C_ACCENT, linewidth=0))
+
+            # ── header: title + date on page 1 ───────────────────────────────
+            if page_idx == 0:
+                ax.text(MX, PAGE_H - MT, 'Market Intelligence Briefing',
+                        color=C_TITLE, fontsize=18, fontweight='bold',
+                        va='top', ha='left', fontfamily='DejaVu Sans')
+                ax.text(MX, PAGE_H - MT - 0.30, today_str + '  ·  Macro  ·  Sectors  ·  Flows  ·  Crypto  ·  Quant',
+                        color=C_MUTED, fontsize=8, va='top', ha='left', fontfamily='DejaVu Sans')
+                # underline
+                ax.plot([MX, PAGE_W - MX], [PAGE_H - MT - 0.52, PAGE_H - MT - 0.52],
+                        color=C_ACCENT, linewidth=0.8)
+                content_top = PAGE_H - MT - 0.65
+            else:
+                content_top = PAGE_H - MT + 0.05
+
+            # ── body content ──────────────────────────────────────────────────
+            y = content_top
+            for style, lines in page_items:
+                if style == 'hr':
+                    mid = y - GAP['hr'] / 2
+                    ax.plot([MX, PAGE_W - MX], [mid, mid], color=C_RULE, linewidth=0.4, alpha=0.7)
+                    y -= GAP['hr']
+                    continue
+
+                # top gap before heading
+                if style in ('h1', 'h2', 'title'):
+                    y -= GAP.get(style, 0.10) * 0.5
+
+                color = {'h1': C_H1, 'h2': C_H2, 'title': C_TITLE}.get(style, C_BODY)
+                fs    = FS.get(style, FS['body'])
+                bold  = style in ('h1', 'h2', 'title')
+                lh    = LH.get(style, LH['body'])
+
+                for ln in lines:
+                    ax.text(MX, y, ln,
+                            color=color, fontsize=fs,
+                            fontweight='bold' if bold else 'normal',
+                            va='top', ha='left', fontfamily='DejaVu Sans',
+                            clip_on=True)
+                    y -= lh
+
+                y -= GAP.get(style, GAP['body'])
+
+            # ── footer: page number ───────────────────────────────────────────
+            ax.text(PAGE_W / 2, MB - 0.30, f'Page {page_idx + 1} / {total_pages}',
+                    color=C_MUTED, fontsize=7, va='bottom', ha='center',
+                    fontfamily='DejaVu Sans')
+            ax.plot([MX, PAGE_W - MX], [MB - 0.15, MB - 0.15],
+                    color=C_RULE, linewidth=0.3)
+
+            pdf.savefig(fig, facecolor=C_BG, dpi=150)
+            plt.close(fig)
+
+    return buf.getvalue()
+
+
+def save_pdf_to_s3(full_html, today_str):
+    """Render report as a multi-page PDF via matplotlib PdfPages and upload to S3."""
+    try:
+        pdf_bytes = _html_to_pdf_bytes(full_html, today_str)
+        key = f"Strategies/{datetime.now().strftime('%Y-%m-%d')}_Market_Intelligence.pdf"
+        s3 = boto3.client('s3', region_name=REGION)
+        s3.put_object(Bucket=S3_BUCKET, Key=key, Body=pdf_bytes, ContentType='application/pdf')
+        logger.info(f"PDF saved → s3://{S3_BUCKET}/{key}  ({len(pdf_bytes):,} bytes)")
+    except Exception as e:
+        logger.error(f"save_pdf_to_s3 failed (non-fatal): {e}", exc_info=True)
+
+
 # ── Email ─────────────────────────────────────────────────────────────────────
 
 def send_email(html_part1, html_part2, html_part3, html_part4):
@@ -1112,6 +1337,7 @@ def lambda_handler(event, context):
         html_part4 = analyze_part4(signals, today_str, quant_snapshot)
 
         full_html = send_email(html_part1, html_part2, html_part3, html_part4)
+        save_pdf_to_s3(full_html, today_str)
         send_telegram(html_part1, html_part2, html_part3, html_part4)
         logger.info("All done successfully")
         return {'statusCode': 200, 'body': f'Sent digest with {total} raw signals'}
