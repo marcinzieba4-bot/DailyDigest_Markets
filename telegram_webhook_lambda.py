@@ -435,8 +435,13 @@ def lambda_handler(event, context):
     # Each deploy stamps DEPLOY_ID into the env.  Any invocation whose
     # deploy_id doesn't match — including old chains with no deploy_id at all
     # — exits immediately, killing stale chains from previous deploys.
-    event_deploy_id = event.get('deploy_id', '')
-    if DEPLOY_ID and event_deploy_id != DEPLOY_ID:
+    #
+    # Exception: events with NO deploy_id key are watchdog triggers from
+    # EventBridge.  They are allowed to run (as one-shot, non-self-reinvoking
+    # instances) so the chain can recover even when self-invocation fails.
+    event_deploy_id = event.get('deploy_id')          # None if key absent
+    is_watchdog     = event_deploy_id is None          # EventBridge sends {}
+    if not is_watchdog and DEPLOY_ID and event_deploy_id != DEPLOY_ID:
         logger.info("Stale chain detected (event deploy_id=%r, current=%s) — stopping.",
                     event_deploy_id, DEPLOY_ID)
         return
@@ -474,6 +479,13 @@ def lambda_handler(event, context):
         elif cycle < CYCLES_PER_RUN - 1:
             time.sleep(POLL_INTERVAL_S)
 
+    if is_watchdog:
+        # Watchdog runs are one-shot: they poll for the duration of this
+        # invocation and then exit.  EventBridge fires the next one in 15 min.
+        # This prevents duplicate self-reinvoking chains piling up.
+        logger.info("Watchdog run complete — exiting (EventBridge will fire next one).")
+        return
+
     payload = {'offset': offset, 'deploy_id': DEPLOY_ID}
     logger.info("Re-invoking self (offset=%d, deploy_id=%s)\u2026", offset, DEPLOY_ID)
     try:
@@ -488,6 +500,6 @@ def lambda_handler(event, context):
         try:
             send_message(TELEGRAM_CHAT_ID,
                 "\u26a0\ufe0f *Polling daemon stopped* \u2014 self-invocation failed.\n"
-                "Contact admin to restart.")
+                "EventBridge watchdog will restart polling within 15 minutes.")
         except Exception:
             pass

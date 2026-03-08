@@ -4,7 +4,8 @@ Deploy the Telegram self-scheduling polling daemon:
   2. Create/update the poller Lambda (timeout=15 min)
   3. Allow poller role to invoke daily-trends-digest
   4. Allow poller role to invoke itself (self-scheduling)
-  5. Kick off the first invocation
+  5. Create/update EventBridge watchdog rule (fires every 15 min as safety net)
+  6. Kick off the first invocation
 """
 import boto3
 import io
@@ -139,8 +140,54 @@ except lam.exceptions.ResourceConflictException:
     print("  Already exists")
 
 
-# ── 5. Kick off the first invocation ─────────────────────────────────────────
-print("\n[5/5] Starting the polling daemon (first invocation)...")
+# ── 5. EventBridge watchdog rule: fires every 15 min with {} payload ─────────
+print("\n[5/6] Setting up EventBridge watchdog rule (every 15 min)...")
+events = session.client('events')
+WATCHDOG_RULE = 'daily-digest-poller-watchdog'
+
+try:
+    events.put_rule(
+        Name=WATCHDOG_RULE,
+        ScheduleExpression='rate(15 minutes)',
+        State='ENABLED',
+        Description='Watchdog: restarts poller chain if self-invocation chain dies',
+    )
+    print("  Rule created/updated")
+except Exception as e:
+    print(f"  put_rule failed: {e}")
+
+# Allow EventBridge to invoke the poller Lambda
+try:
+    lam.add_permission(
+        FunctionName=POLLER_FUNCTION_NAME,
+        StatementId='allow-eventbridge-watchdog',
+        Action='lambda:InvokeFunction',
+        Principal='events.amazonaws.com',
+        SourceArn=f'arn:aws:events:{REGION}:{account_id}:rule/{WATCHDOG_RULE}',
+    )
+    print("  Lambda permission added")
+except lam.exceptions.ResourceConflictException:
+    print("  Lambda permission already exists")
+except Exception as e:
+    print(f"  add_permission failed: {e}")
+
+# Attach the Lambda as the rule target (empty input = {} = watchdog mode)
+try:
+    events.put_targets(
+        Rule=WATCHDOG_RULE,
+        Targets=[{
+            'Id':    'poller-lambda',
+            'Arn':   fn_arn,
+            'Input': '{}',
+        }],
+    )
+    print("  Target attached")
+except Exception as e:
+    print(f"  put_targets failed: {e}")
+
+
+# ── 6. Kick off the first invocation ─────────────────────────────────────────
+print("\n[6/6] Starting the polling daemon (first invocation)...")
 resp = lam.invoke(
     FunctionName=POLLER_FUNCTION_NAME,
     InvocationType='Event',   # async — returns immediately
@@ -151,6 +198,7 @@ print(f"  Dispatched — StatusCode: {resp['StatusCode']}")
 
 # ── Done ──────────────────────────────────────────────────────────────────────
 print("\n✅  Done!")
-print(f"   Poller Lambda : {POLLER_FUNCTION_NAME}")
-print(f"   Architecture  : self-scheduling loop (12 polls/run × 60s, re-invokes itself)")
+print(f"   Poller Lambda  : {POLLER_FUNCTION_NAME}")
+print(f"   Architecture   : self-scheduling loop (12 polls/run × 60s, re-invokes itself)")
+print(f"   Watchdog       : EventBridge rule '{WATCHDOG_RULE}' fires every 15 min")
 print(f"\nSend /report in your Telegram chat — it will be picked up within ~60 seconds.")
