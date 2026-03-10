@@ -1184,6 +1184,42 @@ def save_pdf_to_s3(full_html, today_str):
     except Exception as e:
         logger.error(f"save_pdf_to_s3 failed (non-fatal): {e}", exc_info=True)
 
+    # Also save a machine-readable JSON version
+    try:
+        paragraphs = _parse_html_paragraphs(full_html)
+        sections, current = [], None
+        for style, text in paragraphs:
+            if style == 'h1':
+                current = {'heading': text, 'subheadings': [], 'body': []}
+                sections.append(current)
+            elif style == 'h2':
+                if current is None:
+                    current = {'heading': '', 'subheadings': [], 'body': []}
+                    sections.append(current)
+                current['subheadings'].append(text)
+            elif style == 'body' and text:
+                if current is None:
+                    current = {'heading': '', 'subheadings': [], 'body': []}
+                    sections.append(current)
+                current['body'].append(text)
+            # 'hr' ignored — just a visual separator
+
+        payload = {
+            'date': today_str,
+            'generated_at': datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ'),
+            'sections': sections,
+        }
+        json_key = f"Strategies/json/{datetime.now().strftime('%Y-%m-%d')}_Market_Intelligence.json"
+        s3 = boto3.client('s3', region_name=REGION)
+        s3.put_object(
+            Bucket=S3_BUCKET, Key=json_key,
+            Body=json.dumps(payload, ensure_ascii=False, indent=2).encode('utf-8'),
+            ContentType='application/json',
+        )
+        logger.info(f"JSON saved → s3://{S3_BUCKET}/{json_key}  ({len(sections)} sections)")
+    except Exception as e:
+        logger.error(f"save JSON to S3 failed (non-fatal): {e}", exc_info=True)
+
 
 # ── Email ─────────────────────────────────────────────────────────────────────
 
