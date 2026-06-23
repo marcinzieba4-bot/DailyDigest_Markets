@@ -72,7 +72,7 @@ def main():
     logger.info(f"Signals keys: {list(signals.keys())}")
 
     logger.info("Step 3/3: Generating report parts via Claude...")
-    logger.info("  - Part 1: Geographic + Sectors + Quant models...")
+    logger.info("  - Part 1: Geographic + Sectors...")
     part1 = lf.analyze_part1(signals, today, quant_snapshot)
     logger.info(f"  Part 1 done: {len(part1)} chars")
 
@@ -80,13 +80,9 @@ def main():
     part2 = lf.analyze_part2(signals, today, quant_snapshot)
     logger.info(f"  Part 2 done: {len(part2)} chars")
 
-    logger.info("  - Part 3: Fintwit takes...")
+    logger.info("  - Part 3: Retail narratives...")
     part3 = lf.analyze_part3(signals, today, quant_snapshot)
     logger.info(f"  Part 3 done: {len(part3)} chars")
-
-    logger.info("  - Part 4: Retail narratives...")
-    part4 = lf.analyze_part4(signals, today, quant_snapshot)
-    logger.info(f"  Part 4 done: {len(part4)} chars")
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -115,7 +111,6 @@ def main():
 <div class="part">{part1}</div>
 <div class="part">{part2}</div>
 <div class="part">{part3}</div>
-<div class="part">{part4}</div>
 
 </body>
 </html>"""

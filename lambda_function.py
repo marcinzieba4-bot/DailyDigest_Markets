@@ -438,18 +438,7 @@ def compile_signals():
     signals['coindesk']            = get_rss_titles(
         'https://www.coindesk.com/arc/outboundfeeds/rss/', max_items=15)
 
-    # ── Part 3 sources: fresh social theories (48h only) ─────────────────────
     signals['stocktwits']          = get_stocktwits_trending()
-    signals['reddit_secanalysis']  = get_reddit_posts('SecurityAnalysis', limit=20)
-    signals['reddit_finance']      = get_reddit_posts('finance', limit=20)
-    # Fintwit roundups published in mainstream financial press
-    today_str_q = datetime.utcnow().strftime('%B+%d+%Y')
-    signals['fintwit_roundup']     = get_rss_titles(
-        f'https://news.google.com/rss/search?q=fintwit+OR+"X+post"+OR+"Twitter"+analyst+theory+market+{today_str_q}&hl=en-US&gl=US&ceid=US:en',
-        max_items=10)
-    signals['contrarian_views']    = get_rss_titles(
-        f'https://news.google.com/rss/search?q=contrarian+market+view+underappreciated+misunderstood+rally+{today_str_q}&hl=en-US&gl=US&ceid=US:en',
-        max_items=10)
 
     total = sum(len(v) for v in signals.values())
     logger.info(f"Total signals compiled: {total} items across {len(signals)} sources")
@@ -535,7 +524,7 @@ def call_claude(prompt_text, max_tokens=16000):
                 raise
             time.sleep(wait)
 
-# ── Part 1: Geography + Sectors + Underowned + Quant models ──────────────────
+# ── Part 1: Geography + Sectors + Underowned ──────────────────────────────────
 
 def analyze_part1(signals, today_str, quant_snapshot):
     raw = (
@@ -580,7 +569,7 @@ RAW SIGNAL FEED (all items are ≤{FRESHNESS_DAYS} days old, each tagged [Mon DD
 {raw}
 
 ---
-Produce a clean HTML fragment (NO <html>/<body> tags). Complete ALL FOUR sections below fully.
+Produce a clean HTML fragment (NO <html>/<body> tags). Complete ALL THREE sections below fully.
 
 <h2 style="color:#1a1a2e;border-bottom:2px solid #1a73e8;padding-bottom:6px">🌍 Geographic Macro Overview</h2>
 
@@ -634,52 +623,9 @@ Block per sector:
   <p><strong>Instrument:</strong> [specific ETF, stock, or pair trade]</p>
 </div>
 
-<hr style="border:none;border-top:2px solid #eee;margin:28px 0">
+"""
 
-<h2 style="color:#1a1a2e;border-bottom:2px solid #4285f4;padding-bottom:6px">📐 Quantitative Regime Models</h2>
-
-Build 5-7 concrete regime models grounded in the QUANT SNAPSHOT above. Be creative — go beyond the obvious.
-Think about: mean reversion, cross-asset divergence, lead-lag relationships, sentiment extremes, ratio breakdowns.
-
-Each model must:
-— Use real observable conditions quantified by the QUANT SNAPSHOT numbers
-— Explain WHY the relationship exists (economic mechanism, not just correlation)
-— Assess EACH condition with actual numbers from the snapshot
-— Give a clear status: 🟢 FIRING / 🟡 CLOSE / 🔴 NOT YET
-— Note the expected move size and timeframe (e.g. "3-6 week trade, historically +8%")
-— Cite a historical analog with approximate outcome
-
-Draw from these model families (but don't limit to them):
-• MOMENTUM: trend-following when multiple asset classes align in same direction
-• MEAN REVERSION: when ratios or spreads reach historical extremes
-• MACRO REGIME: ISM, yield curve, liquidity cycle → broad asset allocation
-• CROSS-ASSET DIVERGENCE: two assets that normally move together are split — one will catch up
-• SENTIMENT EXTREMES: VIX spikes, crowded positioning, fear/greed extremes
-• LEAD-LAG: Copper/Gold leads yields · DXY leads EM · Credit spreads lead equities by 2-4 weeks
-• SUPPLY SHOCK: rig count, inventory, backwardation/contango
-• LIQUIDITY SQUEEZE: when multiple risk indicators flash simultaneously
-
-Creative examples of the kind of precision you should aim for:
-"LONG Silver vs Gold: Gold/Silver ratio > 80 AND Gold 4W momentum > +5% AND Silver momentum < +1% → Silver mean-reversion catch-up, historically closes 60% of gap in 4-6 weeks"
-"SELL equities in 2 weeks: Credit spreads 4W widening > 50bps AND VIX rising AND S&P < 50D MA → credit leads equity by ~2 weeks; historically -5 to -12%"
-"BUY EM equities (EEM): DXY 4W change < -2% AND Gold 4W > +3% AND BTC 4W > +5% → dollar weakness + liquidity loosening = EM relief rally"
-"LONG Copper / SHORT Gold: ISM > 50 AND Copper 4W underperforming Gold by > 5pp → demand-driven commodity repricing, Cu/Au ratio reverts"
-"LONG small caps (IWM): Russell/Nasdaq ratio at 6M low AND ISM > 50 AND 2Y yield 4W change < -10bps → small-cap catch-up trade when macro supports it but positioning hasn't caught up"
-"BUY Oil: Rig count falling AND front-month backwardation per news feed AND DXY falling → classic supply squeeze setup"
-"LONG Banks / SHORT long-duration bonds (TLT): 10Y-2Y spread re-steepening from inversion AND credit spreads stable → bank NIM expansion trade"
-"VIX SPIKE REVERSION: VIX > 22 AND VIX 4W rise > +40% AND S&P 500 still above 200D MA (proxy: 4W chg > -10%) → fear extreme, buy SPY 2-week lag, historically +4-8% over 3 weeks"
-
-<div style="margin-bottom:20px;padding:16px;background:#f0f4ff;border-left:5px solid #4285f4;border-radius:4px">
-  <h4 style="margin:0 0 8px">📐 [Model name] &nbsp;<span style="font-size:12px;background:#dce8ff;padding:2px 8px;border-radius:10px">[MOMENTUM / MEAN REVERSION / REGIME / DIVERGENCE / SENTIMENT]</span></h4>
-  <p><strong>Thesis:</strong> [economic mechanism — WHY does this work?]</p>
-  <p><strong>Entry signal:</strong> <code style="background:#dce8ff;padding:2px 6px;border-radius:3px">[Condition A: metric threshold] AND [Condition B] AND [Condition C]</code></p>
-  <p><strong>Instrument:</strong> [specific ETF, pair trade, or futures]</p>
-  <p><strong>Current status:</strong> 🟢/🟡/🔴 [assess each condition with actual QUANT SNAPSHOT numbers]</p>
-  <p><strong>Expected move / timeframe:</strong> [e.g. "+5-10% over 3-5 weeks historically"]</p>
-  <p><strong>Historical analog:</strong> [when it last fired, what happened]</p>
-</div>"""
-
-    logger.info("Calling Claude — Part 1 (Geo + Sectors + Underowned + Quant)")
+    logger.info("Calling Claude — Part 1 (Geo + Sectors + Underowned)")
     return call_claude(prompt, max_tokens=16000)
 
 # ── Part 2: Crypto + Flows + Anticipatory + Stocks ───────────────────────────
@@ -801,85 +747,9 @@ No generic "AI tailwinds". Mechanism-level specificity only.
     logger.info("Calling Claude — Part 2 (Crypto + Flows + Anticipatory + Stocks)")
     return call_claude(prompt, max_tokens=16000)
 
-# ── Part 3: Top Fintwit / X Theories — today & yesterday only ────────────────
+# ── Part 3: What Retail Is Playing ───────────────────────────────────────────
 
 def analyze_part3(signals, today_str, quant_snapshot):
-    # Build a feed that skews heavily toward the freshest 48h content
-    raw = (
-        fmt("Stocktwits — Trending Messages",        signals.get('stocktwits', []))
-        + fmt("Reddit r/SecurityAnalysis",           signals.get('reddit_secanalysis', []))
-        + fmt("Reddit r/finance",                    signals.get('reddit_finance', []))
-        + fmt("Reddit r/investing (fresh posts)",    signals.get('reddit_investing', []))
-        + fmt("Reddit r/wallstreetbets",             signals.get('reddit_wsb', []))
-        + fmt("Reddit r/economics",                  signals.get('reddit_economics', []))
-        + fmt("Contrarian / Underappreciated Views", signals.get('contrarian_views', []))
-        + fmt("Fintwit Roundups in Press",           signals.get('fintwit_roundup', []))
-        + fmt("Google News — Markets",               signals.get('google_markets', []))
-        + fmt("Google News — Macro",                 signals.get('google_macro', []))
-        + fmt("Yahoo Finance",                       signals.get('yahoo_finance', []))
-        + fmt("X/Twitter Trending Topics",           signals.get('twitter_trends', []))
-    )
-
-    prompt = f"""You are the sharpest voice on financial X (Twitter). Today is {today_str}.
-You think like the best fintwit accounts — the ones who are always one step ahead, who see what the crowd misses,
-who write 280-character posts that make portfolio managers stop scrolling and think.
-
-{DATA_INTEGRITY_RULE}
-{FRESHNESS_RULE}
-
-{quant_snapshot}
-
-RAW SIGNAL FEED — focus ONLY on the freshest items (ideally today or yesterday, use [Mon DD] tags):
-{raw}
-
----
-TASK: Write exactly 20 sharp, insightful posts in the style of top fintwit accounts.
-These are NOT summaries. They are TAKES. Opinions. Theses. Contrarian angles.
-
-Each post must meet ALL of these criteria:
-✅ Grounded in something concrete from the signal feed or QUANT SNAPSHOT (not invented)
-✅ Reveals something the market/consensus is getting WRONG or underappreciating
-✅ Explains WHY an asset move has more to go (or is about to reverse) — the mechanism, not just the direction
-✅ Maximum 240 characters (like a real tweet — punchy, no fluff)
-✅ Uses a specific ticker, asset, data point, or ratio — never vague
-
-REJECT any post that:
-✗ States the obvious ("markets are volatile")
-✗ Uses your training-data memory for specific events — only signal feed + QUANT SNAPSHOT
-✗ Is just a headline rewrite
-✗ Is generic ("AI is changing everything")
-
-Categories to draw from (cover a mix — don't cluster in one theme):
-• Mean reversion setups visible in the QUANT SNAPSHOT ratios
-• Cross-asset divergence that hasn't been resolved yet
-• Consensus narratives that are factually wrong right now
-• Something everyone is watching for the wrong reason
-• A catalyst buried in the noise that most are missing
-• A sector or stock that is being mispriced because of a narrative from 6 months ago
-• A macro regime shift that started but hasn't been fully priced
-
-Format each post as:
-
-<div style="border:1px solid #e1e8ed;border-radius:12px;padding:16px 18px;margin-bottom:10px;background:#fff;font-family:Arial,sans-serif">
-  <p style="margin:0 0 8px;font-size:15px;line-height:1.5;color:#0f1419">[The post — max 240 chars, punchy, specific]</p>
-  <p style="margin:0;font-size:12px;color:#536471">
-    <span style="background:#e8f5e9;color:#1b5e20;padding:2px 7px;border-radius:10px;margin-right:6px">[category: MEAN REVERT / DIVERGENCE / WRONG CONSENSUS / MISPRICED / HIDDEN CATALYST / REGIME SHIFT]</span>
-    <span style="color:#aaa">[asset/ticker(s) involved]</span>
-  </p>
-</div>
-
-Produce a clean HTML fragment. Start with:
-<h2 style="color:#1a1a2e;border-bottom:2px solid #1da1f2;padding-bottom:6px">🐦 Top 20 Fintwit Theories — Today's Sharpest Takes</h2>
-<p style="color:#666;font-size:13px;margin-bottom:20px">Synthesized from Stocktwits, Reddit, and live market signals. Grounded in today's data — not recycled narratives.</p>
-
-Then the 20 posts. No other text."""
-
-    logger.info("Calling Claude — Part 3 (Fintwit theories)")
-    return call_claude(prompt, max_tokens=10000)
-
-# ── Part 4: What Retail Is Playing ───────────────────────────────────────────
-
-def analyze_part4(signals, today_str, quant_snapshot):
     raw = (
         fmt("Stocktwits — Trending Messages",        signals.get('stocktwits', []))
         + fmt("Reddit r/wallstreetbets",             signals.get('reddit_wsb', []))
@@ -948,7 +818,7 @@ Then 2–3 secondary themes also getting meaningful retail attention (smaller bl
 
 No other text outside the HTML blocks."""
 
-    logger.info("Calling Claude — Part 4 (What Retail Is Playing)")
+    logger.info("Calling Claude — Part 3 (What Retail Is Playing)")
     return call_claude(prompt, max_tokens=6000)
 
 # ── PDF (matplotlib PdfPages) ──────────────────────────────────────────────────
@@ -1223,7 +1093,7 @@ def save_pdf_to_s3(full_html, today_str):
 
 # ── Email ─────────────────────────────────────────────────────────────────────
 
-def send_email(html_part1, html_part2, html_part3, html_part4):
+def send_email(html_part1, html_part2, html_part3):
     logger.info(f"Sending email — Source: {SENDER_EMAIL} | To: {RECIPIENT_EMAIL}")
     ses = boto3.client('ses', region_name=REGION)
 
@@ -1240,15 +1110,13 @@ def send_email(html_part1, html_part2, html_part3, html_part4):
     full_html = f"""<html>
 <body style="font-family:Arial,sans-serif;max-width:820px;margin:auto;padding:24px;color:#222;line-height:1.6">
   <h1 style="color:#1a1a2e;margin-bottom:4px">Market Intelligence Briefing</h1>
-  <p style="color:#888;margin-top:0">{today} &mdash; Macro · Sectors · Flows · Crypto · Quant Models</p>
+  <p style="color:#888;margin-top:0">{today} &mdash; Macro · Sectors · Flows · Crypto</p>
   <hr style="border:none;border-top:3px solid #1a73e8;margin:16px 0 24px">
   {html_part1}
   <hr style="border:none;border-top:3px solid #9c27b0;margin:32px 0 24px">
   {html_part2}
-  <hr style="border:none;border-top:3px solid #1da1f2;margin:32px 0 24px">
-  {html_part3}
   <hr style="border:none;border-top:3px solid #ff6b35;margin:32px 0 24px">
-  {html_part4}
+  {html_part3}
   <hr style="border:none;border-top:1px solid #ddd;margin:24px 0 12px">
   <p style="color:#aaa;font-size:11px">Powered by AWS Lambda + Claude Opus &mdash; for informational purposes only, not financial advice.</p>
 </body>
@@ -1277,7 +1145,7 @@ def send_email(html_part1, html_part2, html_part3, html_part4):
 
 # ── Telegram ──────────────────────────────────────────────────────────────────
 
-def send_telegram(html_part1, html_part2, html_part3, html_part4):
+def send_telegram(html_part1, html_part2, html_part3):
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
         logger.info("Telegram not configured (TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID missing) — skipping")
         return
@@ -1286,15 +1154,13 @@ def send_telegram(html_part1, html_part2, html_part3, html_part4):
     full_html = f"""<html>
 <body style="font-family:Arial,sans-serif;max-width:820px;margin:auto;padding:24px;color:#222;line-height:1.6">
   <h1 style="color:#1a1a2e;margin-bottom:4px">Market Intelligence Briefing</h1>
-  <p style="color:#888;margin-top:0">{today} &mdash; Macro &middot; Sectors &middot; Flows &middot; Crypto &middot; Quant Models</p>
+  <p style="color:#888;margin-top:0">{today} &mdash; Macro &middot; Sectors &middot; Flows &middot; Crypto</p>
   <hr style="border:none;border-top:3px solid #1a73e8;margin:16px 0 24px">
   {html_part1}
   <hr style="border:none;border-top:3px solid #9c27b0;margin:32px 0 24px">
   {html_part2}
-  <hr style="border:none;border-top:3px solid #1da1f2;margin:32px 0 24px">
-  {html_part3}
   <hr style="border:none;border-top:3px solid #ff6b35;margin:32px 0 24px">
-  {html_part4}
+  {html_part3}
   <hr style="border:none;border-top:1px solid #ddd;margin:24px 0 12px">
   <p style="color:#aaa;font-size:11px">Powered by AWS Lambda + Claude Opus &mdash; for informational purposes only, not financial advice.</p>
 </body>
@@ -1306,7 +1172,7 @@ def send_telegram(html_part1, html_part2, html_part3, html_part4):
     intro = (
         f"\U0001f4ca *Market Intelligence Briefing*\n"
         f"{today}\n\n"
-        f"_Macro \u00b7 Sectors \u00b7 Flows \u00b7 Crypto \u00b7 Quant Models_\n\n"
+        f"_Macro \u00b7 Sectors \u00b7 Flows \u00b7 Crypto_\n\n"
         f"Full report attached \U0001f447"
     )
     try:
@@ -1379,11 +1245,10 @@ def lambda_handler(event, context):
         html_part1 = analyze_part1(signals, today_str, quant_snapshot)
         html_part2 = analyze_part2(signals, today_str, quant_snapshot)
         html_part3 = analyze_part3(signals, today_str, quant_snapshot)
-        html_part4 = analyze_part4(signals, today_str, quant_snapshot)
 
-        full_html = send_email(html_part1, html_part2, html_part3, html_part4)
+        full_html = send_email(html_part1, html_part2, html_part3)
         save_pdf_to_s3(full_html, today_str)
-        send_telegram(html_part1, html_part2, html_part3, html_part4)
+        send_telegram(html_part1, html_part2, html_part3)
         logger.info("All done successfully")
         return {'statusCode': 200, 'body': f'Sent digest with {total} raw signals'}
     except Exception as e:
