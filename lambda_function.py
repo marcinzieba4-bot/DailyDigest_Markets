@@ -1093,14 +1093,16 @@ def save_pdf_to_s3(full_html, today_str):
 
 # ── Email ─────────────────────────────────────────────────────────────────────
 
+RECIPIENT_EMAILS = [RECIPIENT_EMAIL, 'marcin.zieba@pkotfi.pl']
+
 def send_email(html_part1, html_part2, html_part3):
-    logger.info(f"Sending email — Source: {SENDER_EMAIL} | To: {RECIPIENT_EMAIL}")
+    logger.info(f"Sending email — Source: {SENDER_EMAIL} | To: {RECIPIENT_EMAILS}")
     ses = boto3.client('ses', region_name=REGION)
 
     try:
         quota = ses.get_send_quota()
         logger.info(f"SES quota — Max24H: {quota.get('Max24HourSend')}, Sent: {quota.get('SentLast24Hours')}")
-        attrs = ses.get_identity_verification_attributes(Identities=[SENDER_EMAIL, RECIPIENT_EMAIL])
+        attrs = ses.get_identity_verification_attributes(Identities=[SENDER_EMAIL] + RECIPIENT_EMAILS)
         for addr, info in attrs.get('VerificationAttributes', {}).items():
             logger.info(f"SES verification — {addr}: {info.get('VerificationStatus')}")
     except Exception as e:
@@ -1125,7 +1127,7 @@ def send_email(html_part1, html_part2, html_part3):
     try:
         response = ses.send_email(
             Source=SENDER_EMAIL,
-            Destination={'ToAddresses': [RECIPIENT_EMAIL]},
+            Destination={'ToAddresses': RECIPIENT_EMAILS},
             Message={
                 'Subject': {'Data': f'Market Intelligence — {today}'},
                 'Body': {'Html': {'Data': full_html}, 'Text': {'Data': 'Open in HTML mode.'}}
