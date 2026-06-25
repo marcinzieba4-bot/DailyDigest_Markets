@@ -1043,6 +1043,44 @@ def _html_to_pdf_bytes(full_html, today_str):
     return buf.getvalue()
 
 
+REPORTS_PREFIX = 'reports'
+
+def save_html_to_s3(full_html):
+    """Publish the report as a static HTML page to S3 (served via CloudFront) and
+    rebuild the archive index. Non-fatal on failure."""
+    try:
+        s3 = boto3.client('s3', region_name=REGION)
+        date_str = datetime.now().strftime('%Y-%m-%d')
+        archive_key = f"{REPORTS_PREFIX}/archive/{date_str}.html"
+        s3.put_object(Bucket=S3_BUCKET, Key=archive_key, Body=full_html.encode('utf-8'), ContentType='text/html')
+        s3.put_object(Bucket=S3_BUCKET, Key=f"{REPORTS_PREFIX}/latest.html", Body=full_html.encode('utf-8'), ContentType='text/html')
+        logger.info(f"HTML report saved → s3://{S3_BUCKET}/{archive_key}")
+
+        keys = sorted({
+            obj['Key'].rsplit('/', 1)[-1].replace('.html', '')
+            for obj in s3.list_objects_v2(Bucket=S3_BUCKET, Prefix=f"{REPORTS_PREFIX}/archive/").get('Contents', [])
+        }, reverse=True)
+
+        rows = '\n'.join(
+            f'  <li><a href="archive/{d}.html">{d}</a></li>' for d in keys
+        )
+        index_html = f"""<html>
+<head><meta charset="utf-8"><title>Market Intelligence Briefing — Archive</title></head>
+<body style="font-family:Arial,sans-serif;max-width:600px;margin:40px auto;color:#222">
+  <h1 style="color:#1a1a2e">Market Intelligence Briefing</h1>
+  <p><a href="latest.html">View latest report</a></p>
+  <h2>Archive</h2>
+  <ul style="line-height:1.8">
+{rows}
+  </ul>
+</body>
+</html>"""
+        s3.put_object(Bucket=S3_BUCKET, Key=f"{REPORTS_PREFIX}/index.html", Body=index_html.encode('utf-8'), ContentType='text/html')
+        logger.info(f"Archive index rebuilt — {len(keys)} reports")
+    except Exception as e:
+        logger.error(f"save_html_to_s3 failed (non-fatal): {e}", exc_info=True)
+
+
 def save_pdf_to_s3(full_html, today_str):
     """Render report as a multi-page PDF via matplotlib PdfPages and upload to S3."""
     try:
@@ -1250,6 +1288,7 @@ def lambda_handler(event, context):
 
         full_html = send_email(html_part1, html_part2, html_part3)
         save_pdf_to_s3(full_html, today_str)
+        save_html_to_s3(full_html)
         send_telegram(html_part1, html_part2, html_part3)
         logger.info("All done successfully")
         return {'statusCode': 200, 'body': f'Sent digest with {total} raw signals'}
