@@ -1093,7 +1093,7 @@ def save_pdf_to_s3(full_html, today_str):
 
 # ── Email ─────────────────────────────────────────────────────────────────────
 
-RECIPIENT_EMAILS = [RECIPIENT_EMAIL, 'marcin.zieba@pkotfi.pl']
+RECIPIENT_EMAILS = [RECIPIENT_EMAIL, 'marcin.zieba@pkotfi.pl', 'marcin.zieba4@gmail.com']
 
 def send_email(html_part1, html_part2, html_part3):
     logger.info(f"Sending email — Source: {SENDER_EMAIL} | To: {RECIPIENT_EMAILS}")
