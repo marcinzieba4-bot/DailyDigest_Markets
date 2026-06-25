@@ -1052,8 +1052,8 @@ def save_html_to_s3(full_html):
         s3 = boto3.client('s3', region_name=REGION)
         date_str = datetime.now().strftime('%Y-%m-%d')
         archive_key = f"{REPORTS_PREFIX}/archive/{date_str}.html"
-        s3.put_object(Bucket=S3_BUCKET, Key=archive_key, Body=full_html.encode('utf-8'), ContentType='text/html')
-        s3.put_object(Bucket=S3_BUCKET, Key=f"{REPORTS_PREFIX}/latest.html", Body=full_html.encode('utf-8'), ContentType='text/html')
+        s3.put_object(Bucket=S3_BUCKET, Key=archive_key, Body=full_html.encode('utf-8'), ContentType='text/html; charset=utf-8')
+        s3.put_object(Bucket=S3_BUCKET, Key=f"{REPORTS_PREFIX}/latest.html", Body=full_html.encode('utf-8'), ContentType='text/html; charset=utf-8')
         logger.info(f"HTML report saved → s3://{S3_BUCKET}/{archive_key}")
 
         keys = sorted({
@@ -1075,7 +1075,7 @@ def save_html_to_s3(full_html):
   </ul>
 </body>
 </html>"""
-        s3.put_object(Bucket=S3_BUCKET, Key=f"{REPORTS_PREFIX}/index.html", Body=index_html.encode('utf-8'), ContentType='text/html')
+        s3.put_object(Bucket=S3_BUCKET, Key=f"{REPORTS_PREFIX}/index.html", Body=index_html.encode('utf-8'), ContentType='text/html; charset=utf-8')
         logger.info(f"Archive index rebuilt — {len(keys)} reports")
     except Exception as e:
         logger.error(f"save_html_to_s3 failed (non-fatal): {e}", exc_info=True)
