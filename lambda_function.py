@@ -14,6 +14,7 @@ REGION             = 'eu-north-1'
 TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN', '')
 TELEGRAM_CHAT_ID   = os.environ.get('TELEGRAM_CHAT_ID', '')
 S3_BUCKET          = os.environ.get('S3_BUCKET', 's3bucketmz')
+CLOUDFRONT_DISTRIBUTION_ID = os.environ.get('CLOUDFRONT_DISTRIBUTION_ID', 'E15IJW4438D21G')
 
 HEADERS        = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'}
 FRESHNESS_DAYS = 7   # drop any RSS/Reddit item older than this
@@ -1077,6 +1078,16 @@ def save_html_to_s3(full_html):
 </html>"""
         s3.put_object(Bucket=S3_BUCKET, Key=f"{REPORTS_PREFIX}/index.html", Body=index_html.encode('utf-8'), ContentType='text/html; charset=utf-8')
         logger.info(f"Archive index rebuilt — {len(keys)} reports")
+
+        cf = boto3.client('cloudfront')
+        inv = cf.create_invalidation(
+            DistributionId=CLOUDFRONT_DISTRIBUTION_ID,
+            InvalidationBatch={
+                'Paths': {'Quantity': 1, 'Items': [f'/{REPORTS_PREFIX}/*']},
+                'CallerReference': f"{date_str}-{datetime.now().timestamp()}",
+            },
+        )
+        logger.info(f"CloudFront invalidation created — {inv['Invalidation']['Id']}")
     except Exception as e:
         logger.error(f"save_html_to_s3 failed (non-fatal): {e}", exc_info=True)
 
