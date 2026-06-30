@@ -502,6 +502,17 @@ If you write a direction that contradicts the QUANT SNAPSHOT arrow, it is a fact
 When in doubt: quote the snapshot line verbatim and let the number speak.
 """
 
+COMPANY_ACCURACY_RULE = """
+🏢  COMPANY ACCURACY — HARD RULE:
+When naming a specific company under "New Angle / Innovator" or any instrument recommendation:
+1. The company's described activity MUST be directly traceable to a headline in the signal feed — do NOT infer or embellish.
+2. If the signal is an M&A / acquisition / bid, state WHAT the target actually does — do not relabel the target's industry to match the sector narrative.
+   ✓ "MLM bidding $13.5B for [aggregates company X] — a pure-play M&A event in materials"
+   ✗ "MLM bidding on an AI megaproject" — if the target is not an AI company, NEVER call it one.
+3. If a company is a PARTNER or CO-BUILDER in a disruptive product, it is a BENEFICIARY — never list it as collateral damage or a threatened incumbent.
+4. If you cannot verify a company's role from the feed, write "role unclear — verify" rather than guessing.
+"""
+
 def call_claude(prompt_text, max_tokens=16000):
     import time
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
@@ -563,6 +574,7 @@ Be willing to take non-consensus or controversial views. When something is struc
 {FRESHNESS_RULE}
 {BREVITY_RULE}
 {DIRECTION_INTEGRITY_RULE}
+{COMPANY_ACCURACY_RULE}
 
 {quant_snapshot}
 
