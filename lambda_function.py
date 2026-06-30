@@ -617,11 +617,13 @@ Block per sector:
 
 3-5 themes showing disproportionate social activity vs. institutional ownership. Early-mover setups.
 
+CRITICAL RULE — Role clarity for every named company: Before listing any instrument, explicitly determine whether the company is a BENEFICIARY (innovator, enabler, partner) or a THREATENED INCUMBENT (disrupted by the theme). Never list a company as a short or as collateral damage if it is actually a direct participant or partner in the innovation being described. If a company is jointly building or partnering on the disruptive product, it is a LONG, not a short. State the role in the Instrument line.
+
 <div style="margin-bottom:16px;padding:14px;background:#fffdf0;border-left:4px solid #f4b400;border-radius:4px">
   <h4 style="margin:0 0 6px">🔍 [Theme]</h4>
   <p><strong>Why underowned institutionally:</strong> ...</p>
   <p><strong>X signal:</strong> [High/Medium — what specifically is being discussed]</p>
-  <p><strong>Instrument:</strong> [specific ETF, stock, or pair trade]</p>
+  <p><strong>Instrument:</strong> [specific ETF, stock, or pair trade — label each as BENEFICIARY or THREATENED INCUMBENT]</p>
 </div>
 
 """
