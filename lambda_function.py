@@ -416,6 +416,23 @@ def compile_signals():
         'https://news.google.com/rss/search?q=PBOC+China+rate+cut+stimulus+yuan+RRR&hl=en-US&gl=US&ceid=US:en',
         max_items=10)
 
+    # China deep-dive (parity with US coverage depth)
+    signals['china_data']          = get_rss_titles(
+        'https://news.google.com/rss/search?q=China+PMI+CPI+PPI+retail+sales+industrial+output+GDP+credit+TSF&hl=en-US&gl=US&ceid=US:en',
+        max_items=12)
+    signals['china_property']      = get_rss_titles(
+        'https://news.google.com/rss/search?q=China+property+home+prices+developer+Vanke+local+government+debt&hl=en-US&gl=US&ceid=US:en',
+        max_items=10)
+    signals['china_trade']         = get_rss_titles(
+        'https://news.google.com/rss/search?q=China+exports+trade+surplus+tariffs+rare+earths+export+controls&hl=en-US&gl=US&ceid=US:en',
+        max_items=10)
+    signals['china_policy']        = get_rss_titles(
+        'https://news.google.com/rss/search?q=China+Politburo+State+Council+fiscal+stimulus+special+bonds+NDRC&hl=en-US&gl=US&ceid=US:en',
+        max_items=10)
+    signals['china_markets']       = get_rss_titles(
+        'https://news.google.com/rss/search?q=CSI+300+Hang+Seng+China+stocks+government+bond+yield+northbound+foreign+outflows&hl=en-US&gl=US&ceid=US:en',
+        max_items=10)
+
     # Sector-specific
     signals['google_semis']        = get_rss_titles(
         'https://news.google.com/rss/search?q=semiconductor+NVIDIA+TSMC+ASML+AVGO+AI+chips&hl=en-US&gl=US&ceid=US:en',
@@ -560,6 +577,11 @@ def analyze_part1(signals, today_str, quant_snapshot):
         + fmt("CB Feed — RBA / Australia",      signals.get('cb_rba', []))
         + fmt("CB Feed — NBP / Poland",         signals.get('cb_nbp_poland', []))
         + fmt("CB Feed — PBOC / China",         signals.get('cb_pboc_china', []))
+        + fmt("China — Activity Data",          signals.get('china_data', []))
+        + fmt("China — Property & LGFV",        signals.get('china_property', []))
+        + fmt("China — Trade & Tariffs",        signals.get('china_trade', []))
+        + fmt("China — Fiscal & Policy",        signals.get('china_policy', []))
+        + fmt("China — Markets & Flows",        signals.get('china_markets', []))
         + fmt("Google News — Semis & AI Chips", signals.get('google_semis', []))
         + fmt("Google News — Energy & Oil",     signals.get('google_energy', []))
         + fmt("Google News — European Auto",    signals.get('google_euauto', []))
@@ -602,6 +624,16 @@ Block per geography:
 </div>
 
 Required geographies: 🇺🇸 United States · 🇪🇺 European Union · 🇨🇳 China · 🇯🇵 Japan · 🇦🇺 Australia · 🇵🇱 Poland · 🌏 EM (1-2 most interesting only, skip if nothing new)
+
+🇨🇳 CHINA DEPTH — write China at the SAME depth and length as the United States (never a 2-sentence stub).
+Use the dedicated "China —" feeds. Cover, where the feed supports it:
+• PBOC: LPR / RRR / liquidity operations, yuan fixing vs spot, CNY direction
+• Activity: PMIs, CPI/PPI (deflation risk), credit / TSF, retail sales, industrial output
+• Property & local-government debt: home prices, developer stress, LGFV / special bonds
+• Fiscal & policy: Politburo / State Council / NDRC signals — stimulus actually delivered vs promised
+• Trade: exports, surplus, US/EU tariffs, rare-earth / export controls
+• Markets & flows: CSI 300 / Hang Seng, CGB yields, foreign inflows vs outflows
+Divergence must explain the transmission mechanic to global assets (commodities, AUD, EM, European exporters).
 
 <hr style="border:none;border-top:2px solid #eee;margin:28px 0">
 
