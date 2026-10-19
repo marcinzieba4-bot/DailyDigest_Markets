@@ -1,4 +1,4 @@
-import json, boto3, urllib.request, re, os, logging, csv, io
+import json, boto3, urllib.request, urllib.parse, re, os, logging, csv, io
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 import anthropic
@@ -156,6 +156,9 @@ _YF_FALLBACK = {
     "hg.f":    "HG=F",
     "xauusd":  "GC=F",
     "btcusd":  "BTC-USD",
+    "usdpln":  "PLN=X",
+    "eurpln":  "EURPLN=X",
+    "epol.us": "EPOL",
 }
 
 def _stooq_rows(ticker, days_back=35):
@@ -334,6 +337,9 @@ def compile_quant_snapshot():
     add("hg.f",    "Copper")
     add("xauusd",  "Gold")
     add("btcusd",  "Bitcoin")
+    add("usdpln",  "USD/PLN")
+    add("eurpln",  "EUR/PLN")
+    add("epol.us", "EPOL (iShares MSCI Poland ETF, USD)")
 
     # ── Derived ratios ────────────────────────────────────────────────────────
 
@@ -506,6 +512,32 @@ def compile_signals():
     signals['cb_nbp_poland']       = get_rss_titles(
         'https://news.google.com/rss/search?q=Poland+NBP+interest+rate+zloty+inflation&hl=en-US&gl=US&ceid=US:en',
         max_items=10)
+    # ── Poland depth feeds (Polish-language Google News + English + Polish portals) ──
+    since = (datetime.utcnow() - timedelta(days=FRESHNESS_DAYS)).strftime('%Y-%m-%d')   # Google 'after:' keeps results fresh
+    def _pl(q, n=12):
+        return get_rss_titles('https://news.google.com/rss/search?q=' + urllib.parse.quote(f'{q} after:{since}')
+                              + '&hl=pl&gl=PL&ceid=PL:pl', max_items=n)
+    # Google News ANDs every term, so queries stay short (one topic each)
+    signals['pl_nbp']      = _pl('NBP stopy procentowe')
+    signals['pl_cpi']      = _pl('inflacja GUS')
+    signals['pl_data']     = _pl('PKB GUS', 6) + _pl('sprzedaż detaliczna', 6) + _pl('produkcja przemysłowa', 6) + _pl('wynagrodzenia GUS', 6)
+    signals['pl_gpw']      = _pl('WIG20')
+    signals['pl_pln']      = _pl('kurs złotego', 8) + _pl('obligacje skarbowe', 8)
+    signals['pl_fiscal']   = _pl('deficyt budżetu', 6) + _pl('dług publiczny', 6) + _pl('Ministerstwo Finansów', 6) + _pl('Sejm ustawa', 6)
+    signals['pl_corp']     = (_pl('Orlen', 5) + _pl('PKO BP', 5) + _pl('KGHM', 5) + _pl('PGE', 5)
+                              + _pl('Allegro', 4) + _pl('Dino', 4) + _pl('CD Projekt', 4) + _pl('LPP', 4))
+    signals['pl_banks']    = _pl('banki kredyty', 6) + _pl('WIBOR', 5) + _pl('frankowicze', 5)
+    signals['pl_energy_housing'] = _pl('ceny energii', 6) + _pl('elektrownia jądrowa', 4) + _pl('kredyt hipoteczny', 6) + _pl('ceny mieszkań', 6)
+    signals['pl_geo']      = _pl('Polska Ukraina', 8) + _pl('wojsko NATO', 6)
+    signals['pl_en']       = (get_rss_titles('https://news.google.com/rss/search?q=' + urllib.parse.quote(f'Poland economy after:{since}')
+                                             + '&hl=en-US&gl=US&ceid=US:en', max_items=10)
+                              + get_rss_titles('https://news.google.com/rss/search?q=' + urllib.parse.quote(f'Poland zloty after:{since}')
+                                               + '&hl=en-US&gl=US&ceid=US:en', max_items=6)
+                              + get_rss_titles('https://news.google.com/rss/search?q=' + urllib.parse.quote(f'Polish stocks after:{since}')
+                                               + '&hl=en-US&gl=US&ceid=US:en', max_items=6))
+    signals['pl_bankier']  = get_rss_titles('https://www.bankier.pl/rss/wiadomosci.xml', max_items=15)
+    signals['pl_money']    = get_rss_titles('https://www.money.pl/rss/', max_items=15)
+
     signals['cb_pboc_china']       = get_rss_titles(
         'https://news.google.com/rss/search?q=PBOC+China+rate+cut+stimulus+yuan+RRR&hl=en-US&gl=US&ceid=US:en',
         max_items=10)
@@ -685,6 +717,19 @@ def analyze_part1(signals, today_str, quant_snapshot):
         + fmt("CB Feed — Bank of Japan",        signals.get('cb_boj', []))
         + fmt("CB Feed — RBA / Australia",      signals.get('cb_rba', []))
         + fmt("CB Feed — NBP / Poland",         signals.get('cb_nbp_poland', []))
+        + fmt("Poland — NBP / RPP (PL)",        signals.get('pl_nbp', []))
+        + fmt("Poland — Inflation / GUS (PL)",  signals.get('pl_cpi', []))
+        + fmt("Poland — Activity Data (PL)",    signals.get('pl_data', []))
+        + fmt("Poland — GPW / WIG20 (PL)",      signals.get('pl_gpw', []))
+        + fmt("Poland — Zloty & POLGBs (PL)",   signals.get('pl_pln', []))
+        + fmt("Poland — Fiscal & Politics (PL)", signals.get('pl_fiscal', []))
+        + fmt("Poland — Corporates (PL)",       signals.get('pl_corp', []))
+        + fmt("Poland — Banks / WIBOR / CHF (PL)", signals.get('pl_banks', []))
+        + fmt("Poland — Energy & Housing (PL)", signals.get('pl_energy_housing', []))
+        + fmt("Poland — Geopolitics & Security (PL)", signals.get('pl_geo', []))
+        + fmt("Poland — English press",         signals.get('pl_en', []))
+        + fmt("Poland — Bankier.pl",            signals.get('pl_bankier', []))
+        + fmt("Poland — Money.pl",              signals.get('pl_money', []))
         + fmt("CB Feed — PBOC / China",         signals.get('cb_pboc_china', []))
         + fmt("China — Activity Data",          signals.get('china_data', []))
         + fmt("China — Property & LGFV",        signals.get('china_property', []))
@@ -744,6 +789,22 @@ Use the dedicated "China —" feeds. Cover, where the feed supports it:
 • Trade: exports, surplus, US/EU tariffs, rare-earth / export controls
 • Markets & flows: CSI 300 / Hang Seng, CGB yields, foreign inflows vs outflows
 Divergence must explain the transmission mechanic to global assets (commodities, AUD, EM, European exporters).
+
+🇵🇱 POLAND DEPTH — the reader is a Poland-based professional investor. Write Poland at LEAST as wide as the United
+States block (never a 2-sentence stub): 550-850 words. Use the dedicated "Poland —" feeds (Polish-language headlines —
+translate the substance; cite source and [Mon DD] tag for key claims). Replace the four generic labelled parts with
+these SEVEN labelled <p> parts, in this order:
+• Macro Stance — NBP / RPP decision and guidance, CPI (GUS flash / final), GDP, retail sales, industry, wages, labour
+• Markets — GPW / WIG20 action and leaders (from headlines); the zloty ONLY from the QUANT SNAPSHOT USD/PLN and EUR/PLN
+  lines; POLGB yields only if a headline gives them; EPOL from the snapshot
+• Fiscal & Politics — budget, deficit, debt issuance, government / Sejm / presidential decisions, EU funds (KPO), taxes
+• Corporate & Sectors — banks (PKO, Pekao, WIBOR, FX-mortgage cases), energy (Orlen, PGE, power prices, nuclear),
+  retail (Dino, LPP, Allegro), mining (KGHM), gaming (CD Projekt), housing / mortgages — whatever the feed supports
+• Geopolitics & Security — Ukraine, border, defence spending, NATO, Russia-related headlines affecting Poland
+• New / Most Important — the single development that matters most this week and why
+• Playbook ✓ … &nbsp;|&nbsp; ⚠️ Divergence … — one paragraph, as for other geographies
+If a topic has nothing in the feed, write one honest sentence saying so — never pad or invent. Every number must come
+from a headline or the QUANT SNAPSHOT (Polish decimal comma 3,1 proc. → 3.1%).
 
 <hr style="border:none;border-top:2px solid #eee;margin:28px 0">
 
