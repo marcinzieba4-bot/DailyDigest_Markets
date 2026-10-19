@@ -149,7 +149,6 @@ _YF_FALLBACK = {
     "dxy.f":   "DX=F",
     "^vix":    "^VIX",
     "10us.b":  "^TNX",    # Yahoo TNX = 10Y yield in %
-    "2us.b":   "^IRX",    # Yahoo IRX = 13W T-bill, close enough for short rate
     "^spx":    "^GSPC",
     "^rut":    "^RUT",
     "^ndq":    "^NDX",
@@ -225,18 +224,94 @@ def _close(rows, idx):
     except (IndexError, ValueError):
         return None
 
-def _summary_line(stooq_ticker, label, days_back=35):
+def _summary_line(stooq_ticker, label, days_back=35, kind='price'):
+    """kind='price' → 4W change in %; kind='yield' → 4W change in basis points
+    (a yield moving 4.49% → 4.74% is +25 bps, never '+5.6%')."""
     rows = _get_rows(stooq_ticker, days_back)
     cur  = _close(rows, -1)
     ref  = _close(rows, max(0, len(rows) - 21))   # ~4 trading weeks back
     if cur is None:
         return f"{label}: n/a", None, None, None
     if ref and ref != 0:
-        chg   = (cur - ref) / ref * 100
-        arrow = '↑' if chg >= 0 else '↓'
-        line  = f"{label}: {cur:.2f}  ({arrow}{abs(chg):.1f}% vs 4W ago)"
+        if kind == 'yield':
+            chg  = (cur - ref) * 100                      # bps
+            line = f"{label}: {cur:.2f}%  ({chg:+.0f} bps vs 4W ago)"
+        else:
+            chg   = (cur - ref) / ref * 100
+            arrow = '↑' if chg >= 0 else '↓'
+            line  = f"{label}: {cur:.2f}  ({arrow}{abs(chg):.1f}% vs 4W ago)"
         return line, cur, ref, chg
     return f"{label}: {cur:.2f}", cur, ref, None
+
+
+# ── Official US Treasury par yield curve (end-of-day closes) ──────────────────
+# The live feeds above only give a reliable intraday 10Y. The 2Y note has no
+# dependable live ticker (the old ^IRX fallback is the 13-week BILL, not the 2Y),
+# so the curve is taken from the official daily closes: Treasury first, FRED as
+# fallback. Values are the PRIOR business day's close and are labelled as such.
+
+_TREASURY_CSV = ("https://home.treasury.gov/resource-center/data-chart-center/interest-rates/"
+                 "daily-treasury-rates.csv/{year}/all?type=daily_treasury_yield_curve"
+                 "&field_tdr_date_value={year}&page&_format=csv")
+_FRED_CSV = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}&cosd={d1}&coed={d2}"
+
+def _treasury_curve_rows():
+    """[(date 'YYYY-MM-DD', {'3m','2y','5y','10y','30y'}), ...] sorted ascending."""
+    out = {}
+    year = datetime.utcnow().year
+    for y in (year - 1, year):
+        raw = fetch_url(_TREASURY_CSV.format(year=y), timeout=20)
+        if not raw or 'Date' not in raw[:200]:
+            continue
+        try:
+            for r in csv.DictReader(io.StringIO(raw)):
+                try:
+                    m, d, yy = r['Date'].split('/')
+                    out[f"{yy}-{m}-{d}"] = {'3m': float(r['3 Mo']), '2y': float(r['2 Yr']),
+                                           '5y': float(r['5 Yr']), '10y': float(r['10 Yr']),
+                                           '30y': float(r['30 Yr'])}
+                except (KeyError, ValueError):
+                    continue
+        except Exception as e:
+            logger.warning(f"Treasury CSV parse error {y}: {e}")
+    if out:
+        return sorted(out.items())
+    # FRED fallback (same official series, one day lag)
+    d2 = datetime.utcnow().strftime('%Y-%m-%d')
+    d1 = (datetime.utcnow() - timedelta(days=70)).strftime('%Y-%m-%d')
+    series = {}
+    for sid, key in (('DGS3MO', '3m'), ('DGS2', '2y'), ('DGS5', '5y'), ('DGS10', '10y'), ('DGS30', '30y')):
+        raw = fetch_url(_FRED_CSV.format(sid=sid, d1=d1, d2=d2), timeout=20)
+        if not raw:
+            continue
+        for r in csv.DictReader(io.StringIO(raw)):
+            v = r.get(sid, '.')
+            if v not in ('', '.'):
+                series.setdefault(r['observation_date'], {})[key] = float(v)
+    rows = [(k, v) for k, v in sorted(series.items()) if '2y' in v and '10y' in v]
+    if not rows:
+        logger.warning("No official Treasury curve data from Treasury or FRED")
+    return rows
+
+def _curve_shape(spread_bps):
+    if spread_bps < 0:   return "INVERTED"
+    if spread_bps < 25:  return "positive but very flat"
+    if spread_bps < 60:  return "positively sloped but still FLAT by historical standards (long-run average ≈ +90-100 bps)"
+    if spread_bps < 100: return "moderately steep, approaching the long-run average"
+    return "steep"
+
+def _curve_move(chg2, chg10):
+    if abs(chg2) < 4 and abs(chg10) < 4:
+        return "little changed"
+    if chg10 >= chg2 and chg10 > 0:
+        return "bear steepening (both up, 10Y up more)" if chg2 > 0 else "steepening (10Y up, 2Y down/flat)"
+    if chg10 < chg2 and chg2 > 0:
+        return "bear flattening (both up, 2Y up more)" if chg10 > 0 else "flattening (2Y up, 10Y down/flat)"
+    if chg10 <= chg2 and chg10 < 0:
+        return "bull flattening (both down, 10Y down more)" if chg2 < 0 else "flattening (10Y down, 2Y up/flat)"
+    if chg2 < chg10 and chg2 < 0:
+        return "bull steepening (both down, 2Y down more)" if chg10 < 0 else "steepening (2Y down, 10Y up/flat)"
+    return "mixed"
 
 def compile_quant_snapshot():
     """Fetch live market data. Returns a formatted text block for prompt injection
@@ -244,15 +319,14 @@ def compile_quant_snapshot():
     lines = ["=== LIVE QUANT SNAPSHOT (treat as current ground truth) ==="]
     raw_vals = {}   # stooq_ticker → (current, 4W_ref, 4W_chg_pct)
 
-    def add(stooq_ticker, label):
-        line, cur, ref, chg = _summary_line(stooq_ticker, label)
+    def add(stooq_ticker, label, kind='price'):
+        line, cur, ref, chg = _summary_line(stooq_ticker, label, kind=kind)
         lines.append(line)
         raw_vals[stooq_ticker] = (cur, ref, chg)
 
     add("dxy.f",   "DXY Dollar Index")
     add("^vix",    "VIX")
-    add("10us.b",  "US 10Y Yield (%)")
-    add("2us.b",   "US 2Y Yield (%)")
+    add("10us.b",  "US 10Y Yield (live)", kind='yield')
     add("^spx",    "S&P 500")
     add("^rut",    "Russell 2000")
     add("^ndq",    "Nasdaq 100")
@@ -263,13 +337,33 @@ def compile_quant_snapshot():
 
     # ── Derived ratios ────────────────────────────────────────────────────────
 
-    # 10Y-2Y yield curve spread
-    c10, c2 = raw_vals.get("10us.b", (None,))[0], raw_vals.get("2us.b", (None,))[0]
-    if c10 and c2:
-        spread_bps = (c10 - c2) * 100
-        lines.append(f"10Y-2Y Spread: {spread_bps:+.0f}bps  "
-                      f"({'normal' if spread_bps > 0 else 'INVERTED'})")
-        raw_vals['yield_spread_bps'] = spread_bps
+    # Official Treasury curve (prior business-day close): 2Y, 3M, 30Y and the 10Y-2Y spread.
+    # Both legs of the spread come from the SAME close so the curve is a consistent snapshot.
+    curve = _treasury_curve_rows()
+    today = datetime.utcnow().strftime('%Y-%m-%d')
+    curve = [(k, v) for k, v in curve if k < today]          # never use today's partial/forward data
+    if curve:
+        pdate, pc = curve[-1]
+        p4date, p4 = curve[max(0, len(curve) - 21)]           # ~4 trading weeks earlier
+        spread_bps = (pc['10y'] - pc['2y']) * 100
+        spread4    = (p4['10y'] - p4['2y']) * 100
+        chg2  = (pc['2y']  - p4['2y'])  * 100
+        chg10 = (pc['10y'] - p4['10y']) * 100
+        lines.append(f"--- Official US Treasury closes, prior business day ({pdate}) ---")
+        lines.append(f"US 2Y Yield (prior close): {pc['2y']:.2f}%  ({chg2:+.0f} bps vs 4W ago)")
+        lines.append(f"US 10Y Yield (prior close): {pc['10y']:.2f}%  ({chg10:+.0f} bps vs 4W ago)")
+        if '3m' in pc:
+            lines.append(f"US 3M T-bill (prior close): {pc['3m']:.2f}%")
+        if '30y' in pc:
+            lines.append(f"US 30Y Yield (prior close): {pc['30y']:.2f}%  (30Y-10Y: {(pc['30y']-pc['10y'])*100:+.0f} bps)")
+        lines.append(f"10Y-2Y Spread (prior close): {spread_bps:+.0f} bps  — {_curve_shape(spread_bps)}; "
+                     f"{spread_bps - spread4:+.0f} bps vs 4W ago → {_curve_move(chg2, chg10)}")
+        raw_vals['yield_spread_bps']   = spread_bps
+        raw_vals['yield_spread_4w_chg'] = spread_bps - spread4
+        raw_vals['2y_prior_close']     = pc['2y']
+        raw_vals['curve_date']         = pdate
+    else:
+        lines.append("US 2Y Yield / 10Y-2Y Spread: n/a (official curve unavailable — do NOT infer the 2Y from bills)")
 
     # Gold / Copper ratio  (risk appetite proxy — low = growth optimism, high = fear)
     gold, copper = raw_vals.get("xauusd", (None,))[0], raw_vals.get("hg.f", (None,))[0]
@@ -509,14 +603,29 @@ DIRECTION_INTEGRITY_RULE = """
 The QUANT SNAPSHOT encodes live price direction with an arrow: ↑ = rising, ↓ = falling vs 4 weeks ago.
 BEFORE writing ANY directional statement about an asset, check its QUANT SNAPSHOT arrow.
 
-YIELDS: If QUANT SNAPSHOT shows "US 10Y Yield: X.XX  (↑Y.Y% vs 4W ago)" → yields are RISING / SURGING / CLIMBING.
-  ✓ Write: "with yields surging" / "as the 10Y climbs" / "in a rising-rate environment"
-  ✗ NEVER write: "yields are declining" / "falling rates" / "rate relief" — if the arrow says ↑
-If QUANT SNAPSHOT shows ↓ for yields → they are falling. Write accordingly.
+YIELDS: If QUANT SNAPSHOT shows "US 10Y Yield (live): X.XX%  (+N bps vs 4W ago)" → yields are RISING / CLIMBING.
+  ✓ Write: "with the 10Y up 25 bps in four weeks" / "as the 10Y climbs" / "in a rising-rate environment"
+  ✗ NEVER write: "yields are declining" / "falling rates" / "rate relief" — if the change is positive
+If the bps change is negative → yields are falling. Write accordingly.
+Calibrate adjectives to size: <10 bps = "edged"/"drifted"; 10-25 bps = "rose"/"fell"; >25 bps in 4W = "surged"/"slid".
 
 Same rule applies to EVERY asset: DXY, Gold, Oil, S&P, BTC, VIX — arrow = ground truth.
 If you write a direction that contradicts the QUANT SNAPSHOT arrow, it is a factual error.
 When in doubt: quote the snapshot line verbatim and let the number speak.
+"""
+
+YIELD_UNITS_AND_CURVE_RULE = """
+📐  YIELD UNITS & CURVE — HARD RULE:
+1. Yield CHANGES are always in BASIS POINTS, never in percent of the yield. 4.49% → 4.74% is "+25 bps", NOT "+5.6%".
+   ✗ "yields surged 5.8%"  ✗ "10Y ↑5.0%"      ✓ "the 10Y rose 25 bps"  ✓ "10Y at 4.74% (+25 bps vs 4W)"
+2. The US 2Y and the 10Y-2Y spread in the QUANT SNAPSHOT are the OFFICIAL PRIOR-CLOSE values (both legs from the same
+   close). Quote them as such ("2Y at 4.28% at the prior close", "10Y-2Y +47 bps at the prior close"). Do not recompute
+   the spread from the live 10Y, and never use a T-bill rate as the 2Y.
+3. Describe the curve with the label given in the snapshot. A +20 to +50 bps 2s10s is "positively sloped but still flat"
+   — NOT "normal", "healthy", "steep" or "the best NIM environment in years". The long-run average is about +90-100 bps.
+4. Use the snapshot's curve-move label (bear steepening / bull flattening / little changed). "Bear steepening" means
+   BOTH yields rose with the 10Y rising more; do not claim the front end is "anchored" if the 2Y moved ≥10 bps.
+5. If the snapshot says the 2Y / spread is n/a, do not state a 2Y level or a spread figure at all.
 """
 
 COMPANY_ACCURACY_RULE = """
@@ -596,6 +705,7 @@ Be willing to take non-consensus or controversial views. When something is struc
 {FRESHNESS_RULE}
 {BREVITY_RULE}
 {DIRECTION_INTEGRITY_RULE}
+{YIELD_UNITS_AND_CURVE_RULE}
 {COMPANY_ACCURACY_RULE}
 
 {quant_snapshot}
@@ -708,6 +818,7 @@ Be specific, contrarian where warranted, and detailed on anything structurally n
 {FRESHNESS_RULE}
 {BREVITY_RULE}
 {DIRECTION_INTEGRITY_RULE}
+{YIELD_UNITS_AND_CURVE_RULE}
 
 {quant_snapshot}
 
@@ -815,6 +926,7 @@ def analyze_part3(signals, today_str, quant_snapshot):
 {DATA_INTEGRITY_RULE}
 {FRESHNESS_RULE}
 {DIRECTION_INTEGRITY_RULE}
+{YIELD_UNITS_AND_CURVE_RULE}
 
 {quant_snapshot}
 
