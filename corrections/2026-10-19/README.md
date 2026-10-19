@@ -1,8 +1,8 @@
-# Retrospective correction of the archived briefings (2026-06-25 to 2026-10-18)
+# Retrospective correction of the archived briefings (2026-06-25 to 2026-10-19)
 
 What is here:
 
-- `html/` — the 116 corrected reports, same file names as `reports/archive/` in S3. Only US Treasury yield / curve
+- `html/` — the 117 corrected reports, same file names as `reports/archive/` in S3. Only US Treasury yield / curve
   sentences were changed; everything else is untouched. No wording indicates a correction.
 - `json/` — matching machine-readable copies (same structure as `Strategies/json/`, original `date` and `generated_at` kept).
 - `cards/` — per-report ground truth used for the edits: official Treasury closes up to the prior business day, the live
