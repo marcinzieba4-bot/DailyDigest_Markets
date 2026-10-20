@@ -1,6 +1,7 @@
 import json, boto3, urllib.request, urllib.parse, re, os, logging, csv, io
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
+from concurrent.futures import ThreadPoolExecutor
 import anthropic
 import html as html_lib
 
@@ -18,6 +19,7 @@ CLOUDFRONT_DISTRIBUTION_ID = os.environ.get('CLOUDFRONT_DISTRIBUTION_ID', 'E15IJ
 
 HEADERS        = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'}
 FRESHNESS_DAYS = 7   # drop any RSS/Reddit item older than this
+MACRO_DATA_DAYS = 35 # monthly releases (PMIs, credit, home prices) stay relevant until the next print
 
 # ── HTTP helper ───────────────────────────────────────────────────────────────
 
@@ -53,10 +55,10 @@ def parse_date(s):
             continue
     return None
 
-def is_fresh(dt):
+def is_fresh(dt, max_age_days=FRESHNESS_DAYS):
     if dt is None:
         return True   # no date → let through (better than blanket-dropping)
-    return (datetime.now(timezone.utc) - dt).days < FRESHNESS_DAYS
+    return (datetime.now(timezone.utc) - dt).days < max_age_days
 
 # ── Source 1: X / Twitter trends ─────────────────────────────────────────────
 
@@ -100,7 +102,7 @@ def get_reddit_posts(subreddit, limit=25):
 
 # ── Source 3: RSS ─────────────────────────────────────────────────────────────
 
-def get_rss_titles(url, max_items=20):
+def get_rss_titles(url, max_items=20, max_age_days=FRESHNESS_DAYS):
     raw = fetch_url(url)
     if not raw:
         return []
@@ -116,8 +118,8 @@ def get_rss_titles(url, max_items=20):
             if not t:
                 continue
             dt = parse_date(item.findtext('pubDate', ''))
-            if not is_fresh(dt):
-                continue           # older than FRESHNESS_DAYS → drop
+            if not is_fresh(dt, max_age_days):
+                continue           # older than the window → drop
             tag = f" [{dt.strftime('%b %d')}]" if dt else ''
             titles.append(f"{t}{tag}")
 
@@ -131,7 +133,7 @@ def get_rss_titles(url, max_items=20):
                 pub = (entry.findtext('atom:published', '', ns) or
                        entry.findtext('atom:updated',   '', ns))
                 dt = parse_date(pub)
-                if not is_fresh(dt):
+                if not is_fresh(dt, max_age_days):
                     continue
                 tag = f" [{dt.strftime('%b %d')}]" if dt else ''
                 titles.append(f"{t}{tag}")
@@ -334,7 +336,7 @@ def compile_quant_snapshot():
     add("^rut",    "Russell 2000")
     add("^ndq",    "Nasdaq 100")
     add("cl.f",    "WTI Crude Oil")
-    add("hg.f",    "Copper")
+    add("hg.f",    "Copper (AI data-centre / grid capex metal — NOT a China-growth gauge)")
     add("xauusd",  "Gold")
     add("btcusd",  "Bitcoin")
     add("usdpln",  "USD/PLN")
@@ -371,15 +373,6 @@ def compile_quant_snapshot():
     else:
         lines.append("US 2Y Yield / 10Y-2Y Spread: n/a (official curve unavailable — do NOT infer the 2Y from bills)")
 
-    # Gold / Copper ratio  (risk appetite proxy — low = growth optimism, high = fear)
-    gold, copper = raw_vals.get("xauusd", (None,))[0], raw_vals.get("hg.f", (None,))[0]
-    if gold and copper and copper != 0:
-        gc_ratio = gold / copper
-        # historical context: ratio >500 typically fear, <400 growth
-        sentiment = "FEAR-elevated" if gc_ratio > 500 else ("growth-neutral" if gc_ratio > 400 else "GROWTH-optimistic")
-        lines.append(f"Gold/Copper Ratio: {gc_ratio:.0f}  ({sentiment})")
-        raw_vals['gold_copper_ratio'] = gc_ratio
-
     # Russell / Nasdaq ratio  (breadth vs concentration signal)
     rut_c, rut_r = raw_vals.get("^rut", (None, None))[:2]
     ndq_c, ndq_r = raw_vals.get("^ndq", (None, None))[:2]
@@ -391,14 +384,6 @@ def compile_quant_snapshot():
         desc      = 'small-caps outperforming (breadth expanding)' if ratio_chg > 0 else 'mega-cap dominance (narrow market)'
         lines.append(f"Russell/Nasdaq Ratio: {arrow}{abs(ratio_chg):.1f}% vs 4W ago  ({desc})")
         raw_vals['rut_ndq_ratio_chg'] = ratio_chg
-
-    # Oil / Copper ratio  (supply shock vs demand — spike = supply fear, not demand)
-    oil, cop = raw_vals.get("cl.f", (None,))[0], raw_vals.get("hg.f", (None,))[0]
-    if oil and cop and cop != 0:
-        oc_ratio = oil / cop
-        lines.append(f"Oil/Copper Ratio: {oc_ratio:.2f}  "
-                      f"(rising = supply shock narrative; falling = demand-led commodity move)")
-        raw_vals['oil_copper_ratio'] = oc_ratio
 
     # Gold / Bitcoin ratio  (convergence/divergence signal)
     gold_c, gold_ref = raw_vals.get("xauusd", (None, None))[:2]
@@ -542,22 +527,45 @@ def compile_signals():
         'https://news.google.com/rss/search?q=PBOC+China+rate+cut+stimulus+yuan+RRR&hl=en-US&gl=US&ceid=US:en',
         max_items=10)
 
-    # China deep-dive (parity with US coverage depth)
-    signals['china_data']          = get_rss_titles(
-        'https://news.google.com/rss/search?q=China+PMI+CPI+PPI+retail+sales+industrial+output+GDP+credit+TSF&hl=en-US&gl=US&ceid=US:en',
-        max_items=12)
-    signals['china_property']      = get_rss_titles(
-        'https://news.google.com/rss/search?q=China+property+home+prices+developer+Vanke+local+government+debt&hl=en-US&gl=US&ceid=US:en',
-        max_items=10)
-    signals['china_trade']         = get_rss_titles(
-        'https://news.google.com/rss/search?q=China+exports+trade+surplus+tariffs+rare+earths+export+controls&hl=en-US&gl=US&ceid=US:en',
-        max_items=10)
-    signals['china_policy']        = get_rss_titles(
-        'https://news.google.com/rss/search?q=China+Politburo+State+Council+fiscal+stimulus+special+bonds+NDRC&hl=en-US&gl=US&ceid=US:en',
-        max_items=10)
-    signals['china_markets']       = get_rss_titles(
-        'https://news.google.com/rss/search?q=CSI+300+Hang+Seng+China+stocks+government+bond+yield+northbound+foreign+outflows&hl=en-US&gl=US&ceid=US:en',
-        max_items=10)
+    # ── China deep-dive (parity with US coverage depth) + global growth pulse ──
+    # Same rule as Poland: Google News ANDs every term, so one short topic per query.
+    # Monthly releases (PMIs, credit, home prices, activity) use a 35-day window ('m') so the latest print is present.
+    since_m = (datetime.utcnow() - timedelta(days=MACRO_DATA_DAYS)).strftime('%Y-%m-%d')
+    W, M = 'w', 'm'
+    topic_queries = {
+        'china_pboc':     [('PBOC', 6, W), ('loan prime rate', 4, W), ('yuan fixing', 4, W)],
+        'china_pmi':      [('China PMI', 8, M), ('Caixin PMI', 4, M)],
+        'china_credit':   [('China credit data', 5, M), ('China aggregate financing', 5, M),
+                           ('China new loans', 4, M), ('China M1 M2', 3, M)],
+        'china_activity': [('China retail sales', 4, M), ('China industrial output', 4, M),
+                           ('China industrial profits', 3, M), ('China CPI PPI', 4, M), ('China GDP', 3, M)],
+        'china_property': [('China new home prices', 5, M), ('China property investment', 4, M),
+                           ('China property sales', 4, W), ('China developer debt', 4, W), ('Vanke', 3, W),
+                           ('China local government debt', 3, M)],
+        'china_policy':   [('China stimulus', 5, W), ('China special bonds', 3, W), ('Politburo economy', 3, W),
+                           ('State Council China economy', 3, W)],
+        'china_trade':    [('China exports', 5, M), ('China tariffs', 4, W), ('China rare earths', 3, W)],
+        'china_markets':  [('CSI 300', 4, W), ('Hang Seng', 4, W), ('China bond yields', 3, W), ('yuan dollar', 3, W)],
+        'growth_pmi':     [('flash PMI', 6, M), ('eurozone PMI', 4, M), ('Japan PMI', 3, M), ('Australia PMI', 3, M),
+                           ('UK PMI', 3, M), ('ISM services', 3, M)],
+        'growth_credit':  [('credit impulse', 4, M), ('bank lending eurozone', 3, M), ('US bank lending', 3, M),
+                           ('senior loan officer survey', 2, M)],
+        'growth_housing': [('housing starts', 4, M), ('existing home sales', 4, M), ('new home sales', 3, M),
+                           ('mortgage rates', 4, W), ('Case-Shiller', 3, M), ('house prices Europe', 3, M),
+                           ('Australia home prices', 3, M)],
+    }
+    def _en(job):
+        q, n, win = job
+        return get_rss_titles('https://news.google.com/rss/search?q=' + urllib.parse.quote(f'{q} after:{since_m if win == M else since}')
+                              + '&hl=en-US&gl=US&ceid=US:en', max_items=n,
+                              max_age_days=MACRO_DATA_DAYS if win == M else FRESHNESS_DAYS)
+    jobs = [(key, job) for key, js in topic_queries.items() for job in js]
+    with ThreadPoolExecutor(max_workers=8) as ex:          # ~48 short queries — parallel to protect the Lambda timeout
+        results = list(ex.map(lambda kj: _en(kj[1]), jobs))
+    for key in topic_queries:
+        signals[key] = []
+    for (key, _), items in zip(jobs, results):
+        signals[key] += [t for t in items if t not in signals[key]]
 
     # Sector-specific
     signals['google_semis']        = get_rss_titles(
@@ -671,6 +679,21 @@ When naming a specific company under "New Angle / Innovator" or any instrument r
 4. If you cannot verify a company's role from the feed, write "role unclear — verify" rather than guessing.
 """
 
+GROWTH_PULSE_RULE = """
+📈  GROWTH PULSE — READ GROWTH FROM PMIs, CREDIT AND HOUSING, NOT FROM COPPER:
+1. Copper is no longer a clean China / global-growth barometer: its marginal demand is AI data-centre build-out, power-grid
+   and electrification capex. NEVER infer China demand, global growth or risk appetite from copper, a gold/copper ratio or
+   an oil/copper ratio, and do not build models on them. Mention copper only as an asset in its own right (Materials,
+   miners, AI-infrastructure supply chain, KGHM). Gold is an asset (central-bank buying, real rates, dollar), not a gauge.
+2. Anchor every growth judgement on the growth pulse in the feed:
+   • PMIs — level vs 50, direction, and new orders / new export orders (ISM, S&P Global flash, NBS and private China PMIs)
+   • Credit impulse — is new credit accelerating or decelerating (China TSF / new loans / M1-M2; US and euro-area bank
+     lending, loan-officer surveys, credit spreads)
+   • Real estate — home prices, sales, starts / investment, mortgage rates, developer stress
+3. Monthly releases carry a [Mon DD] tag that can be weeks old: call them "the latest (May) print", never "this week".
+   Quote figures only as they appear in a headline; if a headline gives no number, describe the direction only.
+"""
+
 def call_claude(prompt_text, max_tokens=16000):
     import time
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
@@ -731,11 +754,17 @@ def analyze_part1(signals, today_str, quant_snapshot):
         + fmt("Poland — Bankier.pl",            signals.get('pl_bankier', []))
         + fmt("Poland — Money.pl",              signals.get('pl_money', []))
         + fmt("CB Feed — PBOC / China",         signals.get('cb_pboc_china', []))
-        + fmt("China — Activity Data",          signals.get('china_data', []))
+        + fmt("China — PBOC / LPR / Yuan",      signals.get('china_pboc', []))
+        + fmt("China — PMIs (monthly)",         signals.get('china_pmi', []))
+        + fmt("China — Credit / TSF / Loans (monthly)", signals.get('china_credit', []))
+        + fmt("China — Activity, CPI/PPI (monthly)", signals.get('china_activity', []))
         + fmt("China — Property & LGFV",        signals.get('china_property', []))
-        + fmt("China — Trade & Tariffs",        signals.get('china_trade', []))
         + fmt("China — Fiscal & Policy",        signals.get('china_policy', []))
+        + fmt("China — Trade & Tariffs",        signals.get('china_trade', []))
         + fmt("China — Markets & Flows",        signals.get('china_markets', []))
+        + fmt("Growth Pulse — Global PMIs (monthly)", signals.get('growth_pmi', []))
+        + fmt("Growth Pulse — Credit & Bank Lending (monthly)", signals.get('growth_credit', []))
+        + fmt("Growth Pulse — Housing & Mortgages (monthly)", signals.get('growth_housing', []))
         + fmt("Google News — Semis & AI Chips", signals.get('google_semis', []))
         + fmt("Google News — Energy & Oil",     signals.get('google_energy', []))
         + fmt("Google News — European Auto",    signals.get('google_euauto', []))
@@ -752,10 +781,11 @@ Be willing to take non-consensus or controversial views. When something is struc
 {DIRECTION_INTEGRITY_RULE}
 {YIELD_UNITS_AND_CURVE_RULE}
 {COMPANY_ACCURACY_RULE}
+{GROWTH_PULSE_RULE}
 
 {quant_snapshot}
 
-RAW SIGNAL FEED (all items are ≤{FRESHNESS_DAYS} days old, each tagged [Mon DD]):
+RAW SIGNAL FEED (news ≤{FRESHNESS_DAYS} days old; monthly-data feeds ≤{MACRO_DATA_DAYS} days; each tagged [Mon DD]):
 {raw}
 
 ---
@@ -765,7 +795,8 @@ Produce a clean HTML fragment (NO <html>/<body> tags). Complete ALL THREE sectio
 
 Cover EXACTLY these geographies. Never skip any.
 For EACH write FOUR explicit labelled parts:
-• Macro Stance — monetary direction, fiscal stance, key signals (qualitative only — no invented rate numbers)
+• Macro Stance — monetary direction, fiscal stance, and the GROWTH PULSE: latest PMIs (and new orders), credit
+  impulse / bank lending and housing data for that geography from the feed (no invented numbers; never copper)
 • New / Most Important — what has materially CHANGED per the signal feed this week (use past tense for completed events)
 • Playbook ✓ — what is going exactly as the consensus script predicts
 • ⚠️ Divergence — what BREAKS from the playbook. If structural, write 5-8 sentences on the mechanic.
@@ -780,15 +811,24 @@ Block per geography:
 
 Required geographies: 🇺🇸 United States · 🇪🇺 European Union · 🇨🇳 China · 🇯🇵 Japan · 🇦🇺 Australia · 🇵🇱 Poland · 🌏 EM (1-2 most interesting only, skip if nothing new)
 
-🇨🇳 CHINA DEPTH — write China at the SAME depth and length as the United States (never a 2-sentence stub).
-Use the dedicated "China —" feeds. Cover, where the feed supports it:
-• PBOC: LPR / RRR / liquidity operations, yuan fixing vs spot, CNY direction
-• Activity: PMIs, CPI/PPI (deflation risk), credit / TSF, retail sales, industrial output
-• Property & local-government debt: home prices, developer stress, LGFV / special bonds
-• Fiscal & policy: Politburo / State Council / NDRC signals — stimulus actually delivered vs promised
-• Trade: exports, surplus, US/EU tariffs, rare-earth / export controls
-• Markets & flows: CSI 300 / Hang Seng, CGB yields, foreign inflows vs outflows
-Divergence must explain the transmission mechanic to global assets (commodities, AUD, EM, European exporters).
+🇨🇳 CHINA DEPTH — write China at the SAME depth as the United States or wider (never a 2-sentence stub): 450-750 words.
+Use the dedicated "China —" feeds; cite source and [Mon DD] tag for key claims. Replace the four generic labelled parts
+with these EIGHT labelled <p> parts, in this order:
+• Macro Stance — PBOC: LPR / RRR / liquidity operations, yuan fixing vs spot, CNY direction; CPI / PPI (deflation risk)
+• PMIs & Activity — official NBS and private manufacturing / non-manufacturing PMIs (level vs 50, new orders, new export
+  orders), retail sales, industrial output, industrial profits, GDP
+• Credit Impulse — new yuan loans, total social financing growth, M1 / M2, government-bond share of credit: is the credit
+  impulse turning up or down, and is it reaching households and private firms
+• Property — new and resale home prices (70-city), sales, real-estate investment, starts, land sales, developer stress
+  (Vanke etc.), local-government / LGFV debt and special bonds
+• Fiscal, Policy & Trade — Politburo / State Council / NDRC signals (stimulus delivered vs promised), exports and the
+  surplus, US/EU tariffs, rare-earth / export controls
+• Markets & Flows — CSI 300 / Hang Seng, CGB yields, CNY, foreign inflows vs outflows
+• New / Most Important — the single development that matters most this week and why
+• Playbook ✓ … &nbsp;|&nbsp; ⚠️ Divergence … — one paragraph; Divergence must explain the transmission mechanic to global
+  assets (AUD, EM, European exporters, bulk commodities such as iron ore and oil) through PMIs, credit and property —
+  NOT through copper
+If a topic has nothing in the feed, write one honest sentence saying so — never pad or invent.
 
 🇵🇱 POLAND DEPTH — the reader is a Poland-based professional investor. Write Poland at LEAST as wide as the United
 States block (never a 2-sentence stub): 550-850 words. Use the dedicated "Poland —" feeds (Polish-language headlines —
@@ -812,6 +852,8 @@ from a headline or the QUANT SNAPSHOT (Polish decimal comma 3,1 proc. → 3.1%).
 
 Cover ALL sectors below — never skip any. Brief if quiet, but always include.
 Sectors: XLK · XLC · XLF · XLE · XLI · XLY · XLP · XLV · XLB · XLRE · XLU · European Auto (SXAP) · US/Asia Semis (SOXX/ASML/TSMC)
+Anchor cyclical sectors on the growth pulse: XLI / XLB on PMIs and new orders (copper as an AI / grid-capex input, not a
+growth gauge), XLRE / homebuilders on housing data and mortgage rates, XLF on credit growth and loan demand.
 
 For EACH write THREE labelled parts:
 • Narrative — current consensus and direction
@@ -867,6 +909,12 @@ def analyze_part2(signals, today_str, quant_snapshot):
         + fmt("CB Feed — ECB / Eurozone",       signals.get('cb_ecb', []))
         + fmt("CB Feed — Bank of Japan",        signals.get('cb_boj', []))
         + fmt("CB Feed — PBOC / China",         signals.get('cb_pboc_china', []))
+        + fmt("China — PMIs (monthly)",         signals.get('china_pmi', []))
+        + fmt("China — Credit / TSF / Loans (monthly)", signals.get('china_credit', []))
+        + fmt("China — Property & LGFV",        signals.get('china_property', []))
+        + fmt("Growth Pulse — Global PMIs (monthly)", signals.get('growth_pmi', []))
+        + fmt("Growth Pulse — Credit & Bank Lending (monthly)", signals.get('growth_credit', []))
+        + fmt("Growth Pulse — Housing & Mortgages (monthly)", signals.get('growth_housing', []))
         + fmt("Google News — Energy & Oil",     signals.get('google_energy', []))
         + fmt("Google News — Semis & AI Chips", signals.get('google_semis', []))
     )
@@ -880,10 +928,11 @@ Be specific, contrarian where warranted, and detailed on anything structurally n
 {BREVITY_RULE}
 {DIRECTION_INTEGRITY_RULE}
 {YIELD_UNITS_AND_CURVE_RULE}
+{GROWTH_PULSE_RULE}
 
 {quant_snapshot}
 
-RAW SIGNAL FEED (all items are ≤{FRESHNESS_DAYS} days old, each tagged [Mon DD]):
+RAW SIGNAL FEED (news ≤{FRESHNESS_DAYS} days old; monthly-data feeds ≤{MACRO_DATA_DAYS} days; each tagged [Mon DD]):
 {raw}
 
 ---
@@ -908,20 +957,26 @@ If truly nothing new: say so in 2 sentences.
 
 <h2 style="color:#1a1a2e;border-bottom:2px solid #e91e8c;padding-bottom:6px">💰 Capital Flows & Liquidity Framework</h2>
 
-Structure around four pillars. Use QUANT SNAPSHOT values where relevant:
+Structure around five pillars. Use QUANT SNAPSHOT values where relevant:
 1. GLOBAL LIQUIDITY — G4 CB balance sheets direction. Use fed_liquidity feed. Expanding or contracting? What does it mean for risk asset multiples? (Global M2 leads risk assets by 6-12 months)
 2. CROSS-BORDER FLOWS — DXY as the organizing variable (use QUANT SNAPSHOT DXY level + 4W change). Strong USD = EM stress = commodity headwind. Weak USD = EM relief, commodity tailwind, international equity outperformance.
 3. ROTATION — bonds and equities falling together (liquidity event) vs moving inversely (normal rotation)? Use S&P + VIX + yield data from QUANT SNAPSHOT.
-4. CROWDED TRADE RISK — 1-2 consensus positions that look vulnerable to unwinding
+4. GROWTH PULSE — is global growth momentum turning? PMIs (ISM, euro-area / Japan flash, China NBS and private, new
+   orders), the credit impulse (China TSF / new loans, US and euro-area bank lending) and housing (US starts / sales /
+   mortgage rates, China home prices). Liquidity without a credit impulse does not reach the real economy.
+5. CROWDED TRADE RISK — 1-2 consensus positions that look vulnerable to unwinding
 
 Embed 2-3 liquidity and flow models using ACTUAL QUANT SNAPSHOT numbers. Be creative:
-Think about: Dollar carry unwind signals, EM liquidity traps, stablecoin supply as on-chain M2, credit leading equity, repo stress.
+Think about: Dollar carry unwind signals, EM liquidity traps, stablecoin supply as on-chain M2, credit leading equity, repo stress,
+China credit impulse vs EM / AUD, PMI new-orders momentum vs cyclicals, housing / mortgage rates vs the Fed path.
+Models may use headline PMI / credit / housing figures from the feed, but never copper or gold/copper / oil/copper ratios.
 Format: "MODEL NAME: [Condition A: actual value ✓/✗] AND [Condition B: actual value ✓/✗] → [RISK-ON / RISK-OFF / MIXED] — [what to buy/sell]"
 
 Examples of creative models here:
 "DOLLAR CARRY UNWIND: DXY 4W change < -2% ✓ AND VIX falling ✓ AND EM bond spreads tightening → RISK-ON for EM and carry trades — long EEM, BRL, IDR"
 "CREDIT LEADS EQUITY REVERSAL: HY spreads 4W widening > 50bps ✗ AND S&P 500 near highs → equities have NOT priced in credit stress yet — sell SPY, 2-week lead"
-"GLOBAL LIQUIDITY EXPANSION: G4 CB balance sheets net expanding per news feed AND Gold rising AND BTC rising simultaneously → early liquidity cycle — RISK-ON across the board"
+"GLOBAL LIQUIDITY EXPANSION: G4 CB balance sheets net expanding per news feed AND BTC rising AND credit spreads tightening → early liquidity cycle — RISK-ON across the board"
+"CHINA CREDIT IMPULSE TURN: TSF growth re-accelerating per feed ✓ AND NBS manufacturing new orders > 50 ✗ → impulse not yet reaching the real economy — stay underweight AUD / European exporters"
 
 <div style="margin-bottom:20px;padding:16px;background:#fff0f8;border-left:5px solid #e91e8c;border-radius:4px">
   <h3 style="margin:0 0 10px">💰 Capital Flows & Liquidity</h3>
@@ -988,6 +1043,7 @@ def analyze_part3(signals, today_str, quant_snapshot):
 {FRESHNESS_RULE}
 {DIRECTION_INTEGRITY_RULE}
 {YIELD_UNITS_AND_CURVE_RULE}
+{GROWTH_PULSE_RULE}
 
 {quant_snapshot}
 
