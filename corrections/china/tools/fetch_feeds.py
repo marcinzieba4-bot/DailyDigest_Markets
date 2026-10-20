@@ -78,6 +78,6 @@ def one(d):
 
 if __name__ == '__main__':
     os.makedirs(OUT, exist_ok=True)
-    with cf.ThreadPoolExecutor(3) as ex:
+    with cf.ThreadPoolExecutor(4) as ex:
         for d, msg in ex.map(one, sys.argv[1:]):
             print(d, msg, flush=True)
