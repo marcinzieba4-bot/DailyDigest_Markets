@@ -8,7 +8,7 @@ new loans / M1-M2, US & euro-area bank lending, credit spreads) and real estate 
 mortgage rates, developer stress).
 
 All paths are relative to `/home/user/DailyDigest_Markets/corrections/china`. Run tools with `python3 -I tools/<tool>.py`.
-Worked examples (June, already published): `new/2026-06-2*.html`, `new/2026-06-30.html`, `edits/2026-06-*.json`.
+Worked examples (June and July, already published): `new/2026-06-2*.html`, `new/2026-06-30.html`, `edits/2026-06-*.json`.
 Read ONE new block and ONE edits file before starting; match their voice, density and format.
 
 ## Inputs per date D
@@ -73,7 +73,23 @@ Then: `python3 -I tools/apply_edits.py <D>` (rebuilds the report from `orig/` + 
 and `python3 -I tools/verify_report.py <D>` → must PASS with **no WARN**. Remaining copper mentions should be only XLB /
 miner / AI-grid framings and the Poland block. Typical: 5–12 edits per report.
 
+## Lessons from July (read before starting)
+- **Each date has its own feed.** Google returns a different set per harvest, so a headline in D's digest may be missing
+  from D+1's feed. When you reuse the previous day's block, re-check every citation: run
+  `python3 -I tools/check_cites.py <D>` — it matches each "(Source, [Mon DD])" to a headline with that source and date in
+  D's own feed and must report **0 unmatched**. Untagged references are allowed only for facts already in that day's
+  original report.
+- **News items age out.** Carrying a block forward easily keeps a PBOC / policy / market item past D-7. Only monthly data
+  may be older than 7 days.
+- **Stance word** must be exactly Bullish, Mixed or Bearish (verify_cn). If the original had a qualifier ("Bullish Lean",
+  "Bullish (contrarian)"), use the nearest single word, keep its colour, and keep the qualifier's argument in the text.
+- **verify_report false WARNs**: its character diff can split a correct number ("15.4%" → "5.4"); reword the sentence so
+  the number stays whole rather than leaving a WARN.
+- **show_copper** now prints every block segment (p / div / li / headings / `<br>` lines) — each is an exact substring.
+- Fix factual slips in edited sentences (e.g. "gold outperforming copper" when the snapshot shows the opposite).
+- Final gate for each date: `tools/final_check.sh <D>` → `cn=PASS(0 warn) report=PASS(0 warn) … cites_unmatched=0`.
+
 ## Done per date
-`verify_cn.py` PASS no WARN, `apply_edits.py` applied, `verify_report.py` PASS no WARN. Do NOT run build_json.py,
+`tools/final_check.sh <D>` shows cn=PASS(0 warn), report=PASS(0 warn), cites_unmatched=0. Do NOT run build_json.py,
 upload.py, git, or anything touching AWS. Report back per date: stance, the main China story (one line), number of edits,
 copper mentions before → after, and anything you were unsure about.
