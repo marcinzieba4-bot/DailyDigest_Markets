@@ -1,8 +1,10 @@
-# China widening + growth-pulse rewrite of the archived briefings — June done (2026-06-25 … 2026-06-30)
+# China widening + growth-pulse rewrite of the archived briefings — June and July done (2026-06-25 … 2026-07-31)
 
 Status: June live on S3 since 2026-10-20 (backups under `*/_pre_china_backup/`, CloudFront invalidated). The report Lambda
 `daily-trends-digest` runs the new prompt and feeds from the same day (code-only update; layer `daily-digest-deps:3` unchanged).
-July 2026 onwards: not yet done.
+July (31 reports) written by five parallel agents from `tools/BRIEF_CN.md`, live on S3 since 2026-10-20; June re-published
+the same day with citation fixes (7-day news window). All 37 reports pass `tools/final_check.sh` (verify_cn, verify_report
+and `check_cites.py`, which matches every "(Source, [Mon DD])" to a headline in that date's own feed). August onwards: not yet done.
 
 Two changes, applied to the corrected archive in `corrections/2026-10-19/html/` (which already carries the US-yield fix
 and the wide Poland block):
@@ -47,7 +49,7 @@ Do **not** use `corrections/2026-10-19/upload.py` for this: it re-uploads all 11
 `_pre_correction_backup/` and repoints `latest.html` to 2026-10-19.
 
 ## Next months
-Repeat per month: `fetch_feeds.py <dates>` → `extract_old.py` → write `new/` blocks and `edits/` → `apply_edits.py`,
-`verify_cn.py`, `verify_report.py` → `build_json.py` → `upload.py --go`. From 2026-09-28 the China block is already
+Repeat per month: `fetch_feeds.py <dates>` → `extract_old.py` → write `new/` blocks and `edits/` (brief: `tools/BRIEF_CN.md`)
+→ `apply_edits.py` → `final_check.sh <dates>` → `build_json.py` → `upload.py <dates> --go`. From 2026-09-28 the China block is already
 wide (but was starved by the broken China feeds), so later months mainly need the copper / gold pass and a PMI /
 credit / property refresh of the China block.
