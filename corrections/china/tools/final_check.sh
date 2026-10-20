@@ -10,4 +10,4 @@ one() {
     "$(echo "$b" | head -1 | grep -o 'left: [0-9]*, was [0-9]*')" "$(echo "$c" | grep -c 'NO MATCH')"
 }
 export -f one
-printf "%s\n" "$@" | xargs -P 8 -I{} bash -c 'one {}' | sort
+printf "%s\n" "$@" | xargs -P 8 -I{} bash -c 'one {}'
