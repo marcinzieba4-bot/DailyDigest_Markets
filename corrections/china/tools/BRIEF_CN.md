@@ -87,6 +87,9 @@ miner / AI-grid framings and the Poland block. Typical: 5–12 edits per report.
   the number stays whole rather than leaving a WARN.
 - **show_copper** now prints every block segment (p / div / li / headings / `<br>` lines) — each is an exact substring.
 - Fix factual slips in edited sentences (e.g. "gold outperforming copper" when the snapshot shows the opposite).
+- **No release-calendar knowledge (August lesson).** "Industrial profits are due this week", "the PMIs follow at
+  month-end", "ahead of the flash PMIs" are facts about the future and need a headline dated before D that announces
+  them (or the same wording in that day's original report). Without one, drop the clause or say "the next print".
 - Final gate for each date: `tools/final_check.sh <D>` → `cn=PASS(0 warn) report=PASS(0 warn) … cites_unmatched=0`.
 
 ## Done per date
