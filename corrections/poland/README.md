@@ -6,7 +6,7 @@ State saved from the session of 2026-10-19 so the job can resume without re-harv
   report date, 117 dates (2026-06-25 … 2026-10-19). This is the only news source the writers may use for a date.
 - `cards/<date>.json` — prior-session closes and 1W/4W moves for USD/PLN, EUR/PLN, EPOL and big Warsaw names.
 - `old/<date>.html` — the original thin Poland block of each report.
-- `new/<date>.html` — finished wide Poland blocks that pass `tools/verify_pl.py` (44 of 117 done; the rest still to write).
+- `new/<date>.html` — finished wide Poland blocks that pass `tools/verify_pl.py` (all 117 done and spliced into corrections/2026-10-19/html).
 - `tools/BRIEF_PL.md` — the writing rules; `tools/verify_pl.py` — checks structure, length, dates not after the report
   date, and that every number comes from the feed or card; `tools/splice.py` — inserts a passing block into the report.
   Paths inside the tools point at the original scratch directory; adjust the `W` constants when resuming.
