@@ -1,5 +1,9 @@
 # China widening + growth-pulse rewrite of the archived briefings — June done (2026-06-25 … 2026-06-30)
 
+Status: June live on S3 since 2026-10-20 (backups under `*/_pre_china_backup/`, CloudFront invalidated). The report Lambda
+`daily-trends-digest` runs the new prompt and feeds from the same day (code-only update; layer `daily-digest-deps:3` unchanged).
+July 2026 onwards: not yet done.
+
 Two changes, applied to the corrected archive in `corrections/2026-10-19/html/` (which already carries the US-yield fix
 and the wide Poland block):
 
