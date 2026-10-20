@@ -7,7 +7,9 @@ d = sys.argv[1]; D = dt.date.fromisoformat(d)
 try: new = open(os.path.join(C, 'new', f'{d}.html'), encoding='utf-8').read().strip()
 except FileNotFoundError: print(f'== {d}: FAIL new/{d}.html missing'); sys.exit(1)
 old = open(os.path.join(C, 'old', f'{d}.html'), encoding='utf-8').read()
-rep = report(d); m = china_block(rep)
+_o = os.path.join(C, 'orig', f'{d}.html')
+rep = open(_o, encoding='utf-8').read() if os.path.exists(_o) else report(d)   # pristine copy: numbers must not self-validate
+m = china_block(rep)
 rest = rep[:m.start()] + rep[m.end():]                       # the report outside the China block
 fails, warns = [], []
 opener = re.match(r'<div style="[^"]*">', old).group(0)
