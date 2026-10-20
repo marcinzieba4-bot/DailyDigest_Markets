@@ -1,10 +1,11 @@
-# China widening + growth-pulse rewrite of the archived briefings — June and July done (2026-06-25 … 2026-07-31)
+# China widening + growth-pulse rewrite of the archived briefings — June, July and August done (2026-06-25 … 2026-08-31)
 
 Status: June live on S3 since 2026-10-20 (backups under `*/_pre_china_backup/`, CloudFront invalidated). The report Lambda
 `daily-trends-digest` runs the new prompt and feeds from the same day (code-only update; layer `daily-digest-deps:3` unchanged).
 July (31 reports) written by five parallel agents from `tools/BRIEF_CN.md`, live on S3 since 2026-10-20; June re-published
 the same day with citation fixes (7-day news window). All 37 reports pass `tools/final_check.sh` (verify_cn, verify_report
-and `check_cites.py`, which matches every "(Source, [Mon DD])" to a headline in that date's own feed). August onwards: not yet done.
+and `check_cites.py`, which matches every "(Source, [Mon DD])" to a headline in that date's own feed). August (31 reports) done the same way and live on S3 since 2026-10-20 (all pass final_check.sh). September onwards:
+not yet done. From 2026-09-28 the China block is already wide, so those dates mainly need the copper / gold pass.
 
 Two changes, applied to the corrected archive in `corrections/2026-10-19/html/` (which already carries the US-yield fix
 and the wide Poland block):
