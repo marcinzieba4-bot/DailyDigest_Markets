@@ -550,6 +550,16 @@ def compile_signals():
                            ('UK PMI', 3, M), ('ISM services', 3, M)],
         'growth_credit':  [('credit impulse', 4, M), ('bank lending eurozone', 3, M), ('US bank lending', 3, M),
                            ('senior loan officer survey', 2, M)],
+        # Earnings: who reported (beat / miss / guidance) and who is set up for an EPS surprise — feeds the sector call
+        'earn_reported':  [('earnings beat estimates', 6, W), ('earnings miss estimates', 5, W), ('raises guidance', 5, W),
+                           ('cuts guidance', 4, W), ('quarterly results shares', 4, W)],
+        'earn_outlook':   [('earnings preview', 5, W), ('analysts raise estimates', 4, W), ('earnings estimates revised', 3, W),
+                           ('price target raised earnings', 3, W)],
+        'earn_sector':    [('tech earnings', 3, W), ('chipmaker earnings', 3, W), ('bank earnings', 3, W),
+                           ('oil company earnings', 3, W), ('retailer earnings', 3, W), ('pharma earnings', 3, W),
+                           ('industrial earnings', 3, W), ('airline earnings', 2, W), ('utility earnings', 2, W),
+                           ('homebuilder earnings', 2, W), ('automaker earnings', 3, W), ('media earnings', 2, W),
+                           ('REIT earnings', 2, W), ('chemical earnings', 2, W), ('food company earnings', 2, W)],
         'growth_housing': [('housing starts', 4, M), ('existing home sales', 4, M), ('new home sales', 3, M),
                            ('mortgage rates', 4, W), ('Case-Shiller', 3, M), ('house prices Europe', 3, M),
                            ('Australia home prices', 3, M)],
@@ -560,7 +570,7 @@ def compile_signals():
                               + '&hl=en-US&gl=US&ceid=US:en', max_items=n,
                               max_age_days=MACRO_DATA_DAYS if win == M else FRESHNESS_DAYS)
     jobs = [(key, job) for key, js in topic_queries.items() for job in js]
-    with ThreadPoolExecutor(max_workers=8) as ex:          # ~48 short queries — parallel to protect the Lambda timeout
+    with ThreadPoolExecutor(max_workers=8) as ex:          # ~75 short queries — parallel to protect the Lambda timeout
         results = list(ex.map(lambda kj: _en(kj[1]), jobs))
     for key in topic_queries:
         signals[key] = []
@@ -671,7 +681,7 @@ YIELD_UNITS_AND_CURVE_RULE = """
 
 COMPANY_ACCURACY_RULE = """
 🏢  COMPANY ACCURACY — HARD RULE:
-When naming a specific company under "New Angle / Innovator" or any instrument recommendation:
+When naming a specific company in the Sector Deep Dive (Reported / EPS Upside Watch) or any instrument recommendation:
 1. The company's described activity MUST be directly traceable to a headline in the signal feed — do NOT infer or embellish.
 2. If the signal is an M&A / acquisition / bid, state WHAT the target actually does — do not relabel the target's industry to match the sector narrative.
    ✓ "MLM bidding $13.5B for [aggregates company X] — a pure-play M&A event in materials"
@@ -860,17 +870,23 @@ Sectors: XLK · XLC · XLF · XLE · XLI · XLY · XLP · XLV · XLB · XLRE · 
 Anchor cyclical sectors on the growth pulse: XLI / XLB on PMIs and new orders (copper as an AI / grid-capex input, not a
 growth gauge), XLRE / homebuilders on housing data and mortgage rates, XLF on credit growth and loan demand.
 
-For EACH write THREE labelled parts:
-• Narrative — current consensus and direction
-• New Angle / Innovator — name the non-obvious company that is the new lens for this sector. Say WHY.
-• ⚡ Breaking Convention — any signal going against the standard narrative. If real, 4-6 sentences. If none: "None today."
+EARNINGS-FIRST, SHORT FORMAT. For EACH sector write THREE labelled parts, about 60-110 words in total:
+• Reported — who in this sector reported this week (from the "Earnings —" feeds): beat or miss, the EPS / revenue figure
+  vs estimates if a headline gives it, guidance, the share reaction and WHY (the driver). 1-3 names, one clause each.
+  If nobody relevant reported, write "No major reports this week." — never invent results.
+• EPS Upside Watch — 1-2 companies set up for a surprising EPS boost (guidance raised, estimates or targets lifted,
+  pricing / volume / margin tailwinds, a preview pointing to a beat) and the mechanism, from the feed only. If none: "None flagged."
+• Take — one sentence: sector stance and the single driver that matters now (rates, PMIs / new orders, credit, housing,
+  AI capex, oil). Copper only as an AI data-centre / grid metal.
+Global sectors only: never mention Polish companies, the Warsaw market (GPW / WIG) or Poland here — Poland has its
+own geography block. Every figure must be in a headline or the QUANT SNAPSHOT.
 
 Block per sector:
 <div style="margin-bottom:18px;padding:14px;background:#f9fff9;border-left:4px solid #34a853;border-radius:4px">
   <h3 style="margin:0 0 8px">[Emoji] [Sector / ETF] &nbsp;<span style="font-size:13px;font-weight:normal;color:[#2d7a2d/#c0392b/#b07d00]">[Bullish/Bearish/Mixed]</span></h3>
-  <p><strong>Narrative:</strong> ...</p>
-  <p><strong>New Angle / Innovator:</strong> ...</p>
-  <p>⚡ <strong>Breaking Convention:</strong> ...</p>
+  <p><strong>Reported:</strong> ...</p>
+  <p><strong>EPS Upside Watch:</strong> ...</p>
+  <p><strong>Take:</strong> ...</p>
 </div>
 
 <hr style="border:none;border-top:2px solid #eee;margin:28px 0">
@@ -893,6 +909,13 @@ CRITICAL RULE — Role clarity for every named company: Before listing any instr
     # Two calls in parallel: the wide China and Poland blocks made a single call hit max_tokens (cut-off Underowned
     # Themes) and pushed the run to the Lambda timeout. Same rules and feed; the task text is split in two.
     head, tasks = prompt.split('\n---\nProduce a clean HTML fragment', 1)
+    # Sector call: global feed only (the Polish feeds made Polish names leak into US sector blocks) + earnings feeds
+    raw_sec = ''.join(chunk for chunk in re.split(r'(?=\n### )', raw)
+                      if not re.match(r'\n### (Poland —|CB Feed — NBP)', chunk))
+    raw_sec += (fmt("Earnings — Reported / Guidance", signals.get('earn_reported', []))
+                + fmt("Earnings — Previews / Estimate Revisions", signals.get('earn_outlook', []))
+                + fmt("Earnings — By Sector", signals.get('earn_sector', [])))
+    head_sec = head.replace(raw, raw_sec)
     tasks = 'Produce a clean HTML fragment' + tasks
     cut = tasks.index('<hr style="border:none;border-top:2px solid #eee;margin:28px 0">\n\n'
                       '<h2 style="color:#1a1a2e;border-bottom:2px solid #34a853')
@@ -902,7 +925,7 @@ CRITICAL RULE — Role clarity for every named company: Before listing any instr
     logger.info("Calling Claude — Part 1a (Geo) and 1b (Sectors + Underowned) in parallel")
     with ThreadPoolExecutor(max_workers=2) as ex:
         geo = ex.submit(call_claude, head + '\n---\n' + geo_task, 16000)
-        sec = ex.submit(call_claude, head + '\n---\n' + sec_task, 16000)
+        sec = ex.submit(call_claude, head_sec + '\n---\n' + sec_task, 16000)
         return geo.result() + '\n<hr style="border:none;border-top:2px solid #eee;margin:28px 0">\n\n' + sec.result()
 
 # ── Part 2: Crypto + Flows + Anticipatory + Stocks ───────────────────────────
@@ -1594,6 +1617,14 @@ def compliance_issues(full_html):
     for pill in re.findall(r'color:#1a73e8">([^<]*)</span></h3>', full_html):
         if re.search(r'(?i)feed|unclear|limited data|n/a', pill):
             issues.append('meta rate pill: ' + pill)
+    a = full_html.find('Sector Deep Dive</h2>'); b = full_html.find('Underowned Themes', a)
+    if a >= 0 and b > a:
+        sectors = html_lib.unescape(re.sub(r'<[^>]+>', ' ', full_html[a:b]))
+        for label in ('Reported:', 'EPS Upside Watch:', 'Take:'):
+            if sectors.count(label) < 13:
+                issues.append(f'sector label "{label}" in {sectors.count(label)} of 13 sectors')
+        if re.search(r'Poland|Polish|Warsaw|\bGPW\b|\bWIG|KGHM|Orlen|\bPKO\b|Pekao|\bPZU\b|Allegro|\bXTB\b', sectors):
+            issues.append('Polish market reference in Sector Deep Dive')
     if 'Underowned Themes' not in full_html or 'What Retail Is Playing' not in full_html:
         issues.append('section missing (possible truncation)')
     return issues
