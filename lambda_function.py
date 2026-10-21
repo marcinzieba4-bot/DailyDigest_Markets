@@ -627,6 +627,7 @@ Every news headline in the feed has a [Mon DD] date tag.
 • NEVER call any event "upcoming" or "anticipated" unless the signal feed contains a headline
   explicitly dated in the FUTURE confirming that it has not yet occurred.
 • Do NOT rely on your training-data memory for event calendars — those dates may be months or years stale.
+  "Data due this week", "PMIs at month-end", "ahead of the flash PMIs" need a headline in the feed announcing them.
 • QUANT SNAPSHOT data is live — treat those figures as current ground truth.
 """
 
@@ -809,9 +810,13 @@ Block per geography:
   <p><strong>Playbook ✓:</strong> ... &nbsp;|&nbsp; <strong>⚠️ Divergence:</strong> ...</p>
 </div>
 
+The rate-direction pill must state a policy direction ("→ hold, easing bias", "↑ hike risk", "↓ cutting") — never
+"unclear", "n/a" or a remark about the feed or data availability.
+
 Required geographies: 🇺🇸 United States · 🇪🇺 European Union · 🇨🇳 China · 🇯🇵 Japan · 🇦🇺 Australia · 🇵🇱 Poland · 🌏 EM (1-2 most interesting only, skip if nothing new)
 
-🇨🇳 CHINA DEPTH — write China at the SAME depth as the United States or wider (never a 2-sentence stub): 450-750 words.
+🇨🇳 CHINA DEPTH — write China at the SAME depth as the United States or wider (never a 2-sentence stub): 450-800 words
+(hard cap 800 — the rest of the report must still fit).
 Use the dedicated "China —" feeds; cite source and [Mon DD] tag for key claims. Replace the four generic labelled parts
 with these EIGHT labelled <p> parts, in this order:
 • Macro Stance — PBOC: LPR / RRR / liquidity operations, yuan fixing vs spot, CNY direction; CPI / PPI (deflation risk)
@@ -885,8 +890,20 @@ CRITICAL RULE — Role clarity for every named company: Before listing any instr
 
 """
 
-    logger.info("Calling Claude — Part 1 (Geo + Sectors + Underowned)")
-    return call_claude(prompt, max_tokens=16000)
+    # Two calls in parallel: the wide China and Poland blocks made a single call hit max_tokens (cut-off Underowned
+    # Themes) and pushed the run to the Lambda timeout. Same rules and feed; the task text is split in two.
+    head, tasks = prompt.split('\n---\nProduce a clean HTML fragment', 1)
+    tasks = 'Produce a clean HTML fragment' + tasks
+    cut = tasks.index('<hr style="border:none;border-top:2px solid #eee;margin:28px 0">\n\n'
+                      '<h2 style="color:#1a1a2e;border-bottom:2px solid #34a853')
+    geo_task = tasks[:cut].replace('Complete ALL THREE sections below fully.', 'Complete the ONE section below fully.')
+    sec_task = ('Produce a clean HTML fragment (NO <html>/<body> tags). Complete BOTH sections below fully.\n\n'
+                + tasks[cut:].split('\n', 1)[1].lstrip('\n'))
+    logger.info("Calling Claude — Part 1a (Geo) and 1b (Sectors + Underowned) in parallel")
+    with ThreadPoolExecutor(max_workers=2) as ex:
+        geo = ex.submit(call_claude, head + '\n---\n' + geo_task, 16000)
+        sec = ex.submit(call_claude, head + '\n---\n' + sec_task, 16000)
+        return geo.result() + '\n<hr style="border:none;border-top:2px solid #eee;margin:28px 0">\n\n' + sec.result()
 
 # ── Part 2: Crypto + Flows + Anticipatory + Stocks ───────────────────────────
 
@@ -1556,6 +1573,31 @@ def send_telegram(html_part1, html_part2, html_part3):
 
 # ── Handler ───────────────────────────────────────────────────────────────────
 
+def compliance_issues(full_html):
+    """Report-scope self-check (China depth, copper rules, rate pills). Logged, never blocking."""
+    issues = []
+    text = html_lib.unescape(re.sub(r'<[^>]+>', ' ', full_html))
+    if re.search(r'(?i)(gold|oil)\s*/\s*copper|copper\s*/\s*(gold|oil)', text):
+        issues.append('copper ratio used')
+    m = re.search(r'<h3[^>]*>🇨🇳.*?</div>', full_html, flags=re.S)
+    if not m:
+        issues.append('China block missing')
+    else:
+        block = html_lib.unescape(re.sub(r'<[^>]+>', ' ', m.group(0)))
+        for label in ('Macro Stance', 'PMIs & Activity', 'Credit Impulse', 'Property', 'Fiscal, Policy & Trade',
+                      'Markets & Flows', 'New / Most Important', 'Playbook', 'Divergence'):
+            if label not in block:
+                issues.append('China label missing: ' + label)
+        words = len(re.findall(r"[A-Za-z][A-Za-z'’-]*", block))
+        if words < 400:
+            issues.append(f'China block thin ({words} words)')
+    for pill in re.findall(r'color:#1a73e8">([^<]*)</span></h3>', full_html):
+        if re.search(r'(?i)feed|unclear|limited data|n/a', pill):
+            issues.append('meta rate pill: ' + pill)
+    if 'Underowned Themes' not in full_html or 'What Retail Is Playing' not in full_html:
+        issues.append('section missing (possible truncation)')
+    return issues
+
 def lambda_handler(event, context):
     logger.info("Lambda started")
     try:
@@ -1568,9 +1610,13 @@ def lambda_handler(event, context):
             return {'statusCode': 500, 'body': 'No signals collected'}
 
         today_str  = datetime.now().strftime('%A, %B %d %Y')
-        html_part1 = analyze_part1(signals, today_str, quant_snapshot)
-        html_part2 = analyze_part2(signals, today_str, quant_snapshot)
-        html_part3 = analyze_part3(signals, today_str, quant_snapshot)
+        with ThreadPoolExecutor(max_workers=3) as ex:     # independent calls — parallel keeps the run well inside the timeout
+            f1 = ex.submit(analyze_part1, signals, today_str, quant_snapshot)
+            f2 = ex.submit(analyze_part2, signals, today_str, quant_snapshot)
+            f3 = ex.submit(analyze_part3, signals, today_str, quant_snapshot)
+            html_part1, html_part2, html_part3 = f1.result(), f2.result(), f3.result()
+        for issue in compliance_issues(html_part1 + html_part2 + html_part3):
+            logger.warning(f"Report-scope check: {issue}")
 
         full_html = send_email(html_part1, html_part2, html_part3)
         save_pdf_to_s3(full_html, today_str)
