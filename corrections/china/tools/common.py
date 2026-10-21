@@ -24,4 +24,10 @@ def nums(t):
 def feed_items(d):
     """Headlines eligible for report date d: dated strictly before d, within 35 days (monthly) / the harvest window."""
     f = json.load(open(os.path.join(C, 'feeds', f'{d}.json')))
-    return [x for items in f['feeds'].values() for x in items]
+    out = [x for items in f['feeds'].values() for x in items]
+    e = os.path.join(C, 'feeds_earn', f'{d}.json')               # earnings headlines for the Sector Deep Dive
+    if os.path.exists(e):
+        out += [x for items in json.load(open(e))['feeds'].values() for x in items]
+    return out
+
+SECTOR_RE = re.compile(r'(<h2[^>]*>📊 Sector Deep Dive</h2>)(.*?)(?=<hr style="border:none;border-top:2px solid #eee;margin:28px 0">\s*<h2[^>]*>🔍 Underowned)', re.S)

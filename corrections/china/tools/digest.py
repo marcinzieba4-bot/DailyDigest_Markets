@@ -8,7 +8,9 @@ DATA = {
  'growth_housing': re.compile(r"(?i)housing starts|home sales|house prices|home prices|mortgage|case-shiller|building permits|homebuilder|housing market|property prices|dwelling"),
 }
 JUNK = re.compile(r"(?i)statista|historical chart|guru ?focus|tradingeconomics|investing\.com.*(chart|forecast)|\bpdf\b|wikipedia|youtube")
-dates = sys.argv[1:]; keys = None; seen = {}
+earn = '--earn' in sys.argv
+dates = [a for a in sys.argv[1:] if not a.startswith('--')]; keys = None; seen = {}
+if earn: D = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'feeds_earn')
 for d in dates:
     f = json.load(open(os.path.join(D, f'{d}.json')))
     for k, items in f['feeds'].items():

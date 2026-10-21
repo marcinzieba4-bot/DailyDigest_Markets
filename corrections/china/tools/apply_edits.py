@@ -14,5 +14,10 @@ for old, rep in json.load(open(os.path.join(C, 'edits', f'{d}.json'), encoding='
     n = s.count(old)
     if n != 1: sys.exit(f'{d}: edit not unique ({n}x): {old[:80]}')
     s = s.replace(old, rep)
+sp = os.path.join(C, 'sectors', f'{d}.html')                       # earnings-first sector blocks, if written
+if os.path.exists(sp):
+    from common import SECTOR_RE
+    m2 = SECTOR_RE.search(s); assert m2, f'{d}: Sector Deep Dive not found'
+    s = s[:m2.start(2)] + '\n\n' + open(sp, encoding='utf-8').read().strip() + '\n\n' + s[m2.end(2):]
 open(path, 'w', encoding='utf-8').write(s)
 print(d, 'applied')

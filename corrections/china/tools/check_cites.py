@@ -17,7 +17,8 @@ def same(src, xs):
 bad = old = 0
 for d in sys.argv[1:]:
     D = dt.date.fromisoformat(d); items = feed_items(d)
-    text = html.unescape(re.sub(r'<[^>]+>', ' ', open(os.path.join(C, 'new', f'{d}.html'), encoding='utf-8').read()))
+    srcs = [os.path.join(C, 'new', f'{d}.html'), os.path.join(C, 'sectors', f'{d}.html')]
+    text = ' '.join(html.unescape(re.sub(r'<[^>]+>', ' ', open(f, encoding='utf-8').read())) for f in srcs if os.path.exists(f))
     for m in re.finditer(r'\(([^()\[\]]{2,60}?),\s*\[(\w{3}) (\d{1,2})\]\)', text):
         src, iso = m.group(1).strip(), dt.date(D.year, MON[m.group(2).lower()], int(m.group(3))).isoformat()
         hits = [x for x in items if x['t'] == iso and same(src, x['src'])]
