@@ -10,9 +10,18 @@ DATA = {
 JUNK = re.compile(r"(?i)statista|historical chart|guru ?focus|tradingeconomics|investing\.com.*(chart|forecast)|\bpdf\b|wikipedia|youtube")
 earn = '--earn' in sys.argv
 dates = [a for a in sys.argv[1:] if not a.startswith('--')]; keys = None; seen = {}
-if earn: D = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'feeds_earn')
-for d in dates:
-    f = json.load(open(os.path.join(D, f'{d}.json')))
+earn2 = '--earn2' in sys.argv
+if earn or earn2: D = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'feeds_earn')
+if earn2:      # two weeks: D's earnings feed + the previous week (feeds_earn_prev/<D> or feeds_earn/<D-7>)
+    import datetime as _dt
+    _extra = []
+    for d in dates:
+        pp = os.path.join(D, '..', 'feeds_earn_prev', f'{d}.json')
+        if not os.path.exists(pp): pp = os.path.join(D, (_dt.date.fromisoformat(d) - _dt.timedelta(days=7)).isoformat() + '.json')
+        if os.path.exists(pp): _extra.append(pp)
+srcs = [os.path.join(D, f'{d}.json') for d in dates] + (_extra if earn2 else [])
+for fp in srcs:
+    f = json.load(open(fp))
     for k, items in f['feeds'].items():
         for x in items:
             t = x['title']

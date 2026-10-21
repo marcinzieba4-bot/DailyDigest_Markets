@@ -19,5 +19,11 @@ if os.path.exists(sp):
     from common import SECTOR_RE
     m2 = SECTOR_RE.search(s); assert m2, f'{d}: Sector Deep Dive not found'
     s = s[:m2.start(2)] + '\n\n' + open(sp, encoding='utf-8').read().strip() + '\n\n' + s[m2.end(2):]
+pp = os.path.join(C, 'pattern', f'{d}.html')                       # Earnings Pattern section, if written
+if os.path.exists(pp):
+    from common import SECTOR_RE
+    m3 = SECTOR_RE.search(s); assert m3, f'{d}: Sector Deep Dive not found'
+    s = (s[:m3.end(2)] + '<hr style="border:none;border-top:2px solid #eee;margin:28px 0">\n\n'
+         + open(pp, encoding='utf-8').read().strip() + '\n\n' + s[m3.end(2):])
 open(path, 'w', encoding='utf-8').write(s)
 print(d, 'applied')

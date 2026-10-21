@@ -28,6 +28,18 @@ def feed_items(d):
     e = os.path.join(C, 'feeds_earn', f'{d}.json')               # earnings headlines for the Sector Deep Dive
     if os.path.exists(e):
         out += [x for items in json.load(open(e))['feeds'].values() for x in items]
+    out += prev_earn_items(d)
     return out
+
+def prev_earn_items(d):
+    """Earnings headlines of the PREVIOUS week (D-14 … D-8) for the Earnings Pattern: feeds_earn_prev/<D> if harvested,
+    else the earnings feed of D-7 (which covers exactly that week)."""
+    p = os.path.join(C, 'feeds_earn_prev', f'{d}.json')
+    if not os.path.exists(p):
+        p = os.path.join(C, 'feeds_earn', (dt.date.fromisoformat(d) - dt.timedelta(days=7)).isoformat() + '.json')
+    if not os.path.exists(p): return []
+    return [x for items in json.load(open(p))['feeds'].values() for x in items]
+
+PATTERN_H2 = '<h2 style="color:#1a1a2e;border-bottom:2px solid #00897b;padding-bottom:6px">🧮 Earnings Pattern — What the Market Pays For</h2>'
 
 SECTOR_RE = re.compile(r'(<h2[^>]*>📊 Sector Deep Dive</h2>)(.*?)(?=<hr style="border:none;border-top:2px solid #eee;margin:28px 0">\s*<h2[^>]*>🔍 Underowned)', re.S)

@@ -10,7 +10,8 @@ ALIAS = {'scmp': 'southchinamorningpost', 'ap': 'apnews', 'ft': 'financialtimes'
          'guardian': 'theguardian', 'economist': 'theeconomist', 'nikkei': 'nikkeiasia', 'chinadaily': 'chinadaily', 'ifr': 'internationalfinancingreview', 'biggofinance': 'financebiggo', 'biggo': 'financebiggo'}
 DATA = re.compile(r"(?i)pmi|cpi|ppi|inflation|deflation|retail sales|output|profit|loans|lending|credit|financing|tsf|\bm1\b|\bm2\b|gdp|"
                   r"home prices|house prices|price|property investment|real estate|investment|exports|imports|trade|surplus|housing starts|"
-                  r"home sales|ism|sales|reserves|economy|growth|data|consumption|factory|manufactur|services|industrial|fiscal|revenue")
+                  r"home sales|ism|sales|reserves|economy|growth|data|consumption|factory|manufactur|services|industrial|fiscal|revenue|"
+                  r"earnings|beat|miss|guidance|outlook|forecast|quarter|results|shares|stock")
 def same(src, xs):
     a, b = norm(src), norm(xs)
     return bool(b) and any(x == b or x in b or b in x for x in {a, ALIAS.get(a, a)})
@@ -29,7 +30,7 @@ weak = 0
 bad = old = 0
 for d in sys.argv[1:]:
     D = dt.date.fromisoformat(d); items = feed_items(d)
-    srcs = [os.path.join(C, 'new', f'{d}.html'), os.path.join(C, 'sectors', f'{d}.html')]
+    srcs = [os.path.join(C, 'new', f'{d}.html'), os.path.join(C, 'sectors', f'{d}.html'), os.path.join(C, 'pattern', f'{d}.html')]
     text = ' '.join(html.unescape(re.sub(r'<[^>]+>', ' ', open(f, encoding='utf-8').read())) for f in srcs if os.path.exists(f))
     for m in re.finditer(r'\(([^()\[\]]{2,60}?),\s*\[(\w{3}) (\d{1,2})\]\)', text):
         src, iso = m.group(1).strip(), dt.date(D.year, MON[m.group(2).lower()], int(m.group(3))).isoformat()
