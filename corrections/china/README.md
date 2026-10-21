@@ -1,4 +1,4 @@
-# China widening + growth-pulse rewrite of the archived briefings — June to September done (2026-06-25 … 2026-09-30)
+# China widening + growth-pulse rewrite of the archived briefings — June to October done (2026-06-25 … 2026-10-20)
 
 Status: June live on S3 since 2026-10-20 (backups under `*/_pre_china_backup/`, CloudFront invalidated). The report Lambda
 `daily-trends-digest` runs the new prompt and feeds from the same day (code-only update; layer `daily-digest-deps:3` unchanged).
@@ -6,8 +6,10 @@ July (31 reports) written by five parallel agents from `tools/BRIEF_CN.md`, live
 the same day with citation fixes (7-day news window). All 37 reports pass `tools/final_check.sh` (verify_cn, verify_report
 and `check_cites.py`, which matches every "(Source, [Mon DD])" to a headline in that date's own feed). August (31 reports) done the same way and live on S3 since 2026-10-20 (all pass final_check.sh). September (30 reports) done the
 same way and live since 2026-10-20 (Sep 28-30 rebuilt too: their wider block had been written on the broken feeds);
-Aug 31 re-published with a corrected rate pill. October (2026-10-01 … 2026-10-19): not yet done — China blocks there
-are already wide, so October needs mainly the copper / gold pass.
+Aug 31 re-published with a corrected rate pill. October 1-19 done the same way (their long
+China blocks, written on the broken feeds, rebuilt in the eight-part structure). October 20 is the first report generated
+by the new Lambda prompt: its China block was already compliant; only its last Underowned Theme, cut off mid-sentence by
+max_tokens, was removed (edits/2026-10-20.json).
 
 Two changes, applied to the corrected archive in `corrections/2026-10-19/html/` (which already carries the US-yield fix
 and the wide Poland block):
@@ -56,3 +58,12 @@ Repeat per month: `fetch_feeds.py <dates>` → `extract_old.py` → write `new/`
 → `apply_edits.py` → `final_check.sh <dates>` → `build_json.py` → `upload.py <dates> --go`. From 2026-09-28 the China block is already
 wide (but was starved by the broken China feeds), so later months mainly need the copper / gold pass and a PMI /
 credit / property refresh of the China block.
+
+## Future reports (live Lambda)
+The rules used here are built into `lambda_function.py` (deployed): wide eight-part China block (450-800 words) on
+short-query China feeds, the growth-pulse rule (PMIs, credit impulse, housing; copper only as an AI / grid asset, no
+copper ratios — the snapshot no longer computes them), rate pills that state a direction, and no release-calendar claims
+without a headline. Each run logs `Report-scope check:` warnings in CloudWatch (`compliance_issues()`) if a report slips:
+copper ratio used, China label missing, China block under 400 words, meta rate pill, or a missing section. Since
+2026-10-21 the four Claude calls run in parallel (part 1 split into Geo and Sectors + Underowned) with 512 MB memory,
+after the wider blocks made the 2026-10-20 run hit max_tokens and the Lambda timeout.
