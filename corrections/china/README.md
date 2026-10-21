@@ -67,3 +67,11 @@ without a headline. Each run logs `Report-scope check:` warnings in CloudWatch (
 copper ratio used, China label missing, China block under 400 words, meta rate pill, or a missing section. Since
 2026-10-21 the four Claude calls run in parallel (part 1 split into Geo and Sectors + Underowned) with 512 MB memory,
 after the wider blocks made the 2026-10-20 run hit max_tokens and the Lambda timeout.
+
+## Earnings-first Sector Deep Dive (from 2026-10-21; archive: June done)
+Each of the 13 sector blocks is now three short parts: **Reported** (who reported in the last 7 days — beat / miss,
+guidance, reaction, why), **EPS Upside Watch** (who is set up for an EPS surprise and the mechanism) and **Take** (one
+sentence: stance and driver). No Polish companies or Warsaw market in this section — the live sector call gets a feed
+without the Polish feeds plus three earnings feeds. Archive: `tools/fetch_earnings.py` → `feeds_earn/<date>.json`,
+blocks written to `sectors/<date>.html` (brief: `tools/BRIEF_SECTORS.md`), spliced by `apply_edits.py`, checked by
+`tools/verify_sectors.py` (part of `final_check.sh`). June 2026-06-25 … 30 rewritten and re-published; July onwards not yet.
