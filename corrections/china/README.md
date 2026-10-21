@@ -83,3 +83,10 @@ Convention with the copper fixes applied), spliced by `apply_edits.py`, checked 
 Status: June and July (2026-06-25 … 07-31) rewritten in the four-part format and live since 2026-10-21; August onwards
 not yet. `check_cites.py --content` additionally flags citations whose claim shares few words with the cited headline
 (a review aid — most flags are paraphrases or day-to-day harvest differences, not wrong sources).
+
+## Earnings Pattern in the archive (June and July done)
+`pattern/<date>.html` holds the section (brief: `tools/BRIEF_PATTERN.md`), built from two weeks of earnings headlines:
+the date's own earnings feed plus the previous week (`feeds_earn_prev/<date>.json` for 06-25 … 07-01, harvested by
+`tools/fetch_earn_prev.py`; otherwise the earnings feed of D-7). `apply_edits.py` inserts it after the Sector Deep Dive;
+`tools/verify_pattern.py` (part of `final_check.sh`) checks heading, five labels, length, the 14-day window and numbers.
+2026-06-25 … 07-31 live since 2026-10-21; August onwards not yet.
