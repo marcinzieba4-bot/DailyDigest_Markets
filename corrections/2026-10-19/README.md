@@ -20,4 +20,5 @@ The two bugs, both fixed in `lambda_function.py` on this branch:
    roughly 50 to 80 bps and the curve was called "normal" or "steep" when it was flat.
 2. Yield changes were quoted as percent of the yield ("↑5.8%") instead of basis points (+25 bps).
 
-Reports before 2026-06-25 exist only as JSON/PDF under `Strategies/` and were not corrected.
+Reports before 2026-06-25 exist only as JSON/PDF under `Strategies/` and were not corrected — except 2026-06-24, which
+was rebuilt from its JSON into an archive page with every correction layer (see `corrections/2026-06-24/README.md`).

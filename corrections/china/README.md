@@ -24,6 +24,11 @@ and the wide Poland block):
 
 No wording indicates a correction. Nothing dated on or after a report's date is used.
 
+**2026-06-24** (added 2026-10-21): the report of that day had no archive page (HTML publishing started 06-25). It
+was rebuilt from its original JSON and given every layer — yields, wide Poland and China blocks, copper rules,
+four-part sectors, Earnings Pattern — on feeds dated before 06-24; live with an index row. See
+`corrections/2026-06-24/README.md`.
+
 ## Layout
 - `feeds/<date>.json` — Google News headlines harvested with `after:/before:` bounds (`tools/fetch_feeds.py`). Google
   dates items by roughly US-Eastern date, so a Beijing release at 01:30 UTC carries the prior day and the private PMI for
