@@ -53,6 +53,8 @@ Pattern in one line each and put the weight on Attention into EPS and Playbook.
 1. Read the earnings digest (--earn2) and the day's Sector Deep Dive. Consecutive dates share most of the window:
    reuse the previous day's section, drop items older than 14 days (results) / 7 days (previews), add new ones and
    re-check every citation against D's own feeds (`check_cites.py --content <D>` lists weak matches to review).
+   check_cites matches source + date only: a carried-forward citation can "pass" against a different headline from the
+   same outlet that day, so confirm the headline TEXT is in D's feed (August lesson — each date's harvest differs).
 2. Write `pattern/<D>.html`; run `python3 -I tools/apply_edits.py <D>`.
 3. `python3 -I tools/verify_pattern.py <D>` → PASS, no WARN; then `tools/final_check.sh <D>` must show
    cn=PASS(0 warn) report=PASS(0 warn) cites_unmatched=0 sectors=PASS(0 warn) pattern=PASS(0 warn).
