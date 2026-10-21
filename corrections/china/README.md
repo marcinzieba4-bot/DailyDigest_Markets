@@ -82,7 +82,7 @@ Convention with the copper fixes applied), spliced by `apply_edits.py`, checked 
 (part of `final_check.sh`).
 Status: June and July (2026-06-25 … 07-31) rewritten in the four-part format and live since 2026-10-21. August
 (08-01 … 08-31) rewritten the same way by eight parallel agents on its own earnings feeds (31 dates, no failed queries);
-all 31 pass `final_check.sh`. September onwards not yet. `check_cites.py --content` additionally flags citations whose
+all 31 pass `final_check.sh`; live since 2026-10-21. September onwards not yet. `check_cites.py --content` additionally flags citations whose
 claim shares few words with the cited headline (a review aid — most flags are paraphrases or day-to-day harvest
 differences, not wrong sources).
 **August lesson:** `check_cites.py` matches source + date only, so a citation can pass against a *different* headline from
@@ -96,5 +96,7 @@ the date's own earnings feed plus the previous week (`feeds_earn_prev/<date>.jso
 `tools/fetch_earn_prev.py`; otherwise the earnings feed of D-7). `apply_edits.py` inserts it after the Sector Deep Dive;
 `tools/verify_pattern.py` (part of `final_check.sh`) checks heading, five labels, length, the 14-day window and numbers.
 2026-06-25 … 07-31 live since 2026-10-21. August 01 … 31 written and verified (the previous week comes from
-`feeds_earn/<D-7>`, so no `feeds_earn_prev` was needed); not yet published to S3 — run
-`python3 -I tools/upload.py <dates> --go` after `build_json.py`. September onwards not yet.
+`feeds_earn/<D-7>`, so no `feeds_earn_prev` was needed); live since 2026-10-21 (CloudFront invalidated). In the cloud
+session the default `AWS_ACCESS_KEY_ID` is invalid — publish with `AWS_ACCESS_KEY_ID=$AWS_Key
+AWS_SECRET_ACCESS_KEY=$AWS_Pass python3 -I tools/upload.py <dates> --go` (needs `boto3` and `matplotlib` for the PDF).
+September onwards not yet.
