@@ -60,6 +60,9 @@ wide (but was starved by the broken China feeds), so later months mainly need th
 credit / property refresh of the China block.
 
 ## Future reports (live Lambda)
+Since 2026-10-21 the report also has an **🧮 Earnings Pattern — What the Market Pays For** section after the Sector Deep
+Dive: Rewarded / Punished / Pattern / Attention into EPS / Playbook, read from two weeks of results and share reactions
+(this-week and previous-week earnings queries) and applied to the stocks getting attention into their reports.
 The rules used here are built into `lambda_function.py` (deployed): wide eight-part China block (450-800 words) on
 short-query China feeds, the growth-pulse rule (PMIs, credit impulse, housing; copper only as an AI / grid asset, no
 copper ratios — the snapshot no longer computes them), rate pills that state a direction, and no release-calendar claims
