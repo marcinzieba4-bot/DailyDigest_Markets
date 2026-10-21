@@ -870,23 +870,26 @@ Sectors: XLK · XLC · XLF · XLE · XLI · XLY · XLP · XLV · XLB · XLRE · 
 Anchor cyclical sectors on the growth pulse: XLI / XLB on PMIs and new orders (copper as an AI / grid-capex input, not a
 growth gauge), XLRE / homebuilders on housing data and mortgage rates, XLF on credit growth and loan demand.
 
-EARNINGS-FIRST, SHORT FORMAT. For EACH sector write THREE labelled parts, about 60-110 words in total:
+EARNINGS-FIRST, SHORT FORMAT. For EACH sector write FOUR labelled parts, about 100-160 words in total:
+• Narrative — 1-2 sentences: the current consensus, the direction and the single driver that matters now (rates,
+  PMIs / new orders, credit, housing, AI capex, oil). Copper only as an AI data-centre / grid metal.
 • Reported — who in this sector reported this week (from the "Earnings —" feeds): beat or miss, the EPS / revenue figure
   vs estimates if a headline gives it, guidance, the share reaction and WHY (the driver). 1-3 names, one clause each.
   If nobody relevant reported, write "No major reports this week." — never invent results.
 • EPS Upside Watch — 1-2 companies set up for a surprising EPS boost (guidance raised, estimates or targets lifted,
   pricing / volume / margin tailwinds, a preview pointing to a beat) and the mechanism, from the feed only. If none: "None flagged."
-• Take — one sentence: sector stance and the single driver that matters now (rates, PMIs / new orders, credit, housing,
-  AI capex, oil). Copper only as an AI data-centre / grid metal.
+• ⚡ Breaking Convention — 1-3 sentences on a signal that goes against the standard narrative for the sector, and why it
+  matters. If none: "None today."
 Global sectors only: never mention Polish companies, the Warsaw market (GPW / WIG) or Poland here — Poland has its
 own geography block. Every figure must be in a headline or the QUANT SNAPSHOT.
 
 Block per sector:
 <div style="margin-bottom:18px;padding:14px;background:#f9fff9;border-left:4px solid #34a853;border-radius:4px">
   <h3 style="margin:0 0 8px">[Emoji] [Sector / ETF] &nbsp;<span style="font-size:13px;font-weight:normal;color:[#2d7a2d/#c0392b/#b07d00]">[Bullish/Bearish/Mixed]</span></h3>
+  <p><strong>Narrative:</strong> ...</p>
   <p><strong>Reported:</strong> ...</p>
   <p><strong>EPS Upside Watch:</strong> ...</p>
-  <p><strong>Take:</strong> ...</p>
+  <p>⚡ <strong>Breaking Convention:</strong> ...</p>
 </div>
 
 <hr style="border:none;border-top:2px solid #eee;margin:28px 0">
@@ -1620,7 +1623,7 @@ def compliance_issues(full_html):
     a = full_html.find('Sector Deep Dive</h2>'); b = full_html.find('Underowned Themes', a)
     if a >= 0 and b > a:
         sectors = html_lib.unescape(re.sub(r'<[^>]+>', ' ', full_html[a:b]))
-        for label in ('Reported:', 'EPS Upside Watch:', 'Take:'):
+        for label in ('Narrative:', 'Reported:', 'EPS Upside Watch:', 'Breaking Convention:'):
             if sectors.count(label) < 13:
                 issues.append(f'sector label "{label}" in {sectors.count(label)} of 13 sectors')
         if re.search(r'Poland|Polish|Warsaw|\bGPW\b|\bWIG|KGHM|Orlen|\bPKO\b|Pekao|\bPZU\b|Allegro|\bXTB\b', sectors):
