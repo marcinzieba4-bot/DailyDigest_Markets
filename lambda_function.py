@@ -20,6 +20,7 @@ CLOUDFRONT_DISTRIBUTION_ID = os.environ.get('CLOUDFRONT_DISTRIBUTION_ID', 'E15IJ
 HEADERS        = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'}
 FRESHNESS_DAYS = 7   # drop any RSS/Reddit item older than this
 MACRO_DATA_DAYS = 35 # monthly releases (PMIs, credit, home prices) stay relevant until the next print
+EARNINGS_DAYS = 14   # earnings reactions: two weeks of results so the Earnings Pattern is not a single-day read
 
 # ── HTTP helper ───────────────────────────────────────────────────────────────
 
@@ -531,7 +532,8 @@ def compile_signals():
     # Same rule as Poland: Google News ANDs every term, so one short topic per query.
     # Monthly releases (PMIs, credit, home prices, activity) use a 35-day window ('m') so the latest print is present.
     since_m = (datetime.utcnow() - timedelta(days=MACRO_DATA_DAYS)).strftime('%Y-%m-%d')
-    W, M = 'w', 'm'
+    since_e = (datetime.utcnow() - timedelta(days=EARNINGS_DAYS)).strftime('%Y-%m-%d')
+    W, M, E, P = 'w', 'm', 'e', 'p'     # P = the week before the current 7-day window (earnings history)
     topic_queries = {
         'china_pboc':     [('PBOC', 6, W), ('loan prime rate', 4, W), ('yuan fixing', 4, W)],
         'china_pmi':      [('China PMI', 8, M), ('Caixin PMI', 4, M)],
@@ -551,10 +553,14 @@ def compile_signals():
         'growth_credit':  [('credit impulse', 4, M), ('bank lending eurozone', 3, M), ('US bank lending', 3, M),
                            ('senior loan officer survey', 2, M)],
         # Earnings: who reported (beat / miss / guidance) and who is set up for an EPS surprise — feeds the sector call
-        'earn_reported':  [('earnings beat estimates', 6, W), ('earnings miss estimates', 5, W), ('raises guidance', 5, W),
-                           ('cuts guidance', 4, W), ('quarterly results shares', 4, W)],
+        'earn_reported':  [('earnings beat estimates', 8, E), ('earnings miss estimates', 6, E), ('raises guidance', 6, E),
+                           ('cuts guidance', 5, E), ('quarterly results shares', 5, E), ('stock falls despite beat', 4, E),
+                           ('shares jump after earnings', 4, E)],
+        'earn_prev_week': [('earnings beat estimates', 6, P), ('earnings miss estimates', 4, P), ('raises guidance', 4, P),
+                           ('cuts guidance', 3, P), ('stock falls despite beat', 3, P), ('shares jump after earnings', 3, P)],
         'earn_outlook':   [('earnings preview', 5, W), ('analysts raise estimates', 4, W), ('earnings estimates revised', 3, W),
-                           ('price target raised earnings', 3, W)],
+                           ('price target raised earnings', 3, W), ('earnings this week', 4, W), ('earnings to watch', 3, W),
+                           ('options implied move earnings', 3, W), ('whisper number', 2, W)],
         'earn_sector':    [('tech earnings', 3, W), ('chipmaker earnings', 3, W), ('bank earnings', 3, W),
                            ('oil company earnings', 3, W), ('retailer earnings', 3, W), ('pharma earnings', 3, W),
                            ('industrial earnings', 3, W), ('airline earnings', 2, W), ('utility earnings', 2, W),
@@ -566,9 +572,11 @@ def compile_signals():
     }
     def _en(job):
         q, n, win = job
-        return get_rss_titles('https://news.google.com/rss/search?q=' + urllib.parse.quote(f'{q} after:{since_m if win == M else since}')
+        after = {M: since_m, E: since_e, P: since_e}.get(win, since)
+        before = f' before:{since}' if win == P else ''
+        return get_rss_titles('https://news.google.com/rss/search?q=' + urllib.parse.quote(f'{q} after:{after}{before}')
                               + '&hl=en-US&gl=US&ceid=US:en', max_items=n,
-                              max_age_days=MACRO_DATA_DAYS if win == M else FRESHNESS_DAYS)
+                              max_age_days={M: MACRO_DATA_DAYS, E: EARNINGS_DAYS, P: EARNINGS_DAYS}.get(win, FRESHNESS_DAYS))
     jobs = [(key, job) for key, js in topic_queries.items() for job in js]
     with ThreadPoolExecutor(max_workers=8) as ex:          # ~75 short queries — parallel to protect the Lambda timeout
         results = list(ex.map(lambda kj: _en(kj[1]), jobs))
@@ -800,7 +808,7 @@ RAW SIGNAL FEED (news ≤{FRESHNESS_DAYS} days old; monthly-data feeds ≤{MACRO
 {raw}
 
 ---
-Produce a clean HTML fragment (NO <html>/<body> tags). Complete ALL THREE sections below fully.
+Produce a clean HTML fragment (NO <html>/<body> tags). Complete ALL FOUR sections below fully.
 
 <h2 style="color:#1a1a2e;border-bottom:2px solid #1a73e8;padding-bottom:6px">🌍 Geographic Macro Overview</h2>
 
@@ -894,6 +902,26 @@ Block per sector:
 
 <hr style="border:none;border-top:2px solid #eee;margin:28px 0">
 
+<h2 style="color:#1a1a2e;border-bottom:2px solid #00897b;padding-bottom:6px">🧮 Earnings Pattern — What the Market Pays For</h2>
+
+Read the pattern from ALL results in the "Earnings —" feeds of the last two weeks (not just today): which result profiles
+the market rewarded and which it punished, judged by the share reaction in the headline — beat + raised guidance,
+beat + higher capex / costs, beat + China or tariff exposure, AI revenue line, pricing vs volume, miss + better guidance.
+Then apply it to the stocks getting the most attention into their upcoming reports. ~250-350 words, one block, five
+labelled parts, each claim tagged with source and [Mon DD]; never invent a result, an estimate or a reaction:
+<div style="margin-bottom:18px;padding:14px;background:#f0faf8;border-left:4px solid #00897b;border-radius:4px">
+  <p><strong>Rewarded:</strong> [the profile the market paid for — 2-4 examples with the share move]</p>
+  <p><strong>Punished:</strong> [the profile it sold even on a beat — 2-4 examples with the share move]</p>
+  <p><strong>Pattern:</strong> [the rule in 1-2 sentences — what matters more than the EPS beat itself right now]</p>
+  <p><strong>Attention into EPS:</strong> [3-5 stocks with previews, estimate / target changes or implied moves ahead of
+  their report (only if a headline announces it): what is priced in, which side of the pattern each falls on, and the
+  reaction the pattern implies]</p>
+  <p><strong>Playbook:</strong> [1-2 concrete ideas from the pattern (own into print / fade the beat / pair), with the risk]</p>
+</div>
+If fewer than ~5 results reported in two weeks, say so in one line and keep only Attention into EPS and Playbook.
+
+<hr style="border:none;border-top:2px solid #eee;margin:28px 0">
+
 <h2 style="color:#1a1a2e;border-bottom:2px solid #f4b400;padding-bottom:6px">🔍 Underowned Themes — Active on X, Underweight in Portfolios</h2>
 
 3-5 themes showing disproportionate social activity vs. institutional ownership. Early-mover setups.
@@ -915,17 +943,18 @@ CRITICAL RULE — Role clarity for every named company: Before listing any instr
     # Sector call: global feed only (the Polish feeds made Polish names leak into US sector blocks) + earnings feeds
     raw_sec = ''.join(chunk for chunk in re.split(r'(?=\n### )', raw)
                       if not re.match(r'\n### (Poland —|CB Feed — NBP)', chunk))
-    raw_sec += (fmt("Earnings — Reported / Guidance", signals.get('earn_reported', []))
-                + fmt("Earnings — Previews / Estimate Revisions", signals.get('earn_outlook', []))
+    raw_sec += (fmt("Earnings — Reported / Guidance / Reactions (this week)", signals.get('earn_reported', []))
+                + fmt("Earnings — Reported / Reactions (previous week)", signals.get('earn_prev_week', []))
+                + fmt("Earnings — Previews / Estimates / Calendar / Implied Moves", signals.get('earn_outlook', []))
                 + fmt("Earnings — By Sector", signals.get('earn_sector', [])))
     head_sec = head.replace(raw, raw_sec)
     tasks = 'Produce a clean HTML fragment' + tasks
     cut = tasks.index('<hr style="border:none;border-top:2px solid #eee;margin:28px 0">\n\n'
                       '<h2 style="color:#1a1a2e;border-bottom:2px solid #34a853')
-    geo_task = tasks[:cut].replace('Complete ALL THREE sections below fully.', 'Complete the ONE section below fully.')
-    sec_task = ('Produce a clean HTML fragment (NO <html>/<body> tags). Complete BOTH sections below fully.\n\n'
+    geo_task = tasks[:cut].replace('Complete ALL FOUR sections below fully.', 'Complete the ONE section below fully.')
+    sec_task = ('Produce a clean HTML fragment (NO <html>/<body> tags). Complete ALL THREE sections below fully.\n\n'
                 + tasks[cut:].split('\n', 1)[1].lstrip('\n'))
-    logger.info("Calling Claude — Part 1a (Geo) and 1b (Sectors + Underowned) in parallel")
+    logger.info("Calling Claude — Part 1a (Geo) and 1b (Sectors + Earnings Pattern + Underowned) in parallel")
     with ThreadPoolExecutor(max_workers=2) as ex:
         geo = ex.submit(call_claude, head + '\n---\n' + geo_task, 16000)
         sec = ex.submit(call_claude, head_sec + '\n---\n' + sec_task, 16000)
@@ -1628,6 +1657,14 @@ def compliance_issues(full_html):
                 issues.append(f'sector label "{label}" in {sectors.count(label)} of 13 sectors')
         if re.search(r'Poland|Polish|Warsaw|\bGPW\b|\bWIG|KGHM|Orlen|\bPKO\b|Pekao|\bPZU\b|Allegro|\bXTB\b', sectors):
             issues.append('Polish market reference in Sector Deep Dive')
+    ep = full_html.find('Earnings Pattern — What the Market Pays For')
+    if ep < 0:
+        issues.append('Earnings Pattern section missing')
+    else:
+        block = html_lib.unescape(re.sub(r'<[^>]+>', ' ', full_html[ep:full_html.find('Underowned Themes', ep)]))
+        for label in ('Attention into EPS:', 'Playbook:'):
+            if label not in block:
+                issues.append('Earnings Pattern label missing: ' + label)
     if 'Underowned Themes' not in full_html or 'What Retail Is Playing' not in full_html:
         issues.append('section missing (possible truncation)')
     return issues
