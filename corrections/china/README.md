@@ -76,7 +76,7 @@ copper ratio used, China label missing, China block under 400 words, meta rate p
 2026-10-21 the four Claude calls run in parallel (part 1 split into Geo and Sectors + Underowned) with 512 MB memory,
 after the wider blocks made the 2026-10-20 run hit max_tokens and the Lambda timeout.
 
-## Earnings-first Sector Deep Dive (live from 2026-10-21; archive: June to August)
+## Earnings-first Sector Deep Dive (live from 2026-10-21; archive: 06-24 to September)
 Each of the 13 sector blocks has four short parts (about 100-160 words): **Narrative** (consensus, direction, the driver
 that matters), **Reported** (who reported in the last 7 days — beat / miss, guidance, reaction, why), **EPS Upside Watch**
 (who is set up for an EPS surprise and the mechanism) and **⚡ Breaking Convention** (the signal against the standard
@@ -87,15 +87,22 @@ Convention with the copper fixes applied), spliced by `apply_edits.py`, checked 
 (part of `final_check.sh`).
 Status: June and July (2026-06-25 … 07-31) rewritten in the four-part format and live since 2026-10-21. August
 (08-01 … 08-31) rewritten the same way by eight parallel agents on its own earnings feeds (31 dates, no failed queries);
-all 31 pass `final_check.sh`; live since 2026-10-21. September onwards not yet. `check_cites.py --content` additionally flags citations whose
+all 31 pass `final_check.sh`; live since 2026-10-21. September (09-01 … 09-30) done the same way (30 earnings feeds, no
+failed queries; all 30 pass `final_check.sh`), live since 2026-10-21. October onwards not yet. `check_cites.py --content` additionally flags citations whose
 claim shares few words with the cited headline (a review aid — most flags are paraphrases or day-to-day harvest
 differences, not wrong sources).
 **August lesson:** `check_cites.py` matches source + date only, so a citation can pass against a *different* headline from
 the same outlet on the same day (each date's harvest differs, so a carried-forward citation often loses its headline).
 Check every carried-forward citation's headline text in the new date's own feed; for the China blocks this found wrong
 sources from the earlier pass (e.g. 08-02 BMW "China slump" is RTE.ie, not Investing.com), fixed in `new/`.
+**September lessons:** the same review fixed 09-03 / 11 / 12 / 15 China blocks, and the July-CPI claim carried in the China
+blocks of 08-25 … 09-08 ("CPI slowed to 0.5%") now cites the BigGo [Aug 9] headline that says so. A stricter triage
+(do the claim's proper nouns appear in any headline of the cited outlet that day?) is a useful extra pass — headlines
+often name a company by ticker only (OLLI, NEE, CRDO, IBKR), so a flag needs a look, not a fix. Writers also dropped
+re-dated stale results (Q2 recaps dated mid-September, TSMC "raises guidance"), conflicting share reactions (both "rose"
+and "fell" headlines → no reaction), and a Reuters PetroChina story that Reuters withdrew (08-31 now cites OilPrice.com).
 
-## Earnings Pattern in the archive (June to August done)
+## Earnings Pattern in the archive (06-24 to September done)
 `pattern/<date>.html` holds the section (brief: `tools/BRIEF_PATTERN.md`), built from two weeks of earnings headlines:
 the date's own earnings feed plus the previous week (`feeds_earn_prev/<date>.json` for 06-25 … 07-01, harvested by
 `tools/fetch_earn_prev.py`; otherwise the earnings feed of D-7). `apply_edits.py` inserts it after the Sector Deep Dive;
@@ -104,4 +111,4 @@ the date's own earnings feed plus the previous week (`feeds_earn_prev/<date>.jso
 `feeds_earn/<D-7>`, so no `feeds_earn_prev` was needed); live since 2026-10-21 (CloudFront invalidated). In the cloud
 session the default `AWS_ACCESS_KEY_ID` is invalid — publish with `AWS_ACCESS_KEY_ID=$AWS_Key
 AWS_SECRET_ACCESS_KEY=$AWS_Pass python3 -I tools/upload.py <dates> --go` (needs `boto3` and `matplotlib` for the PDF).
-September onwards not yet.
+September 01 … 30 written and verified the same way, live since 2026-10-21. October onwards not yet.
