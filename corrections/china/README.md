@@ -77,3 +77,6 @@ feeds plus three earnings feeds. Archive: `tools/fetch_earnings.py` → `feeds_e
 `sectors/<date>.html` (brief: `tools/BRIEF_SECTORS.md`; `tools/old_sectors.py` shows the original Narrative / Breaking
 Convention with the copper fixes applied), spliced by `apply_edits.py`, checked by `tools/verify_sectors.py`
 (part of `final_check.sh`).
+Status: June and July (2026-06-25 … 07-31) rewritten in the four-part format and live since 2026-10-21; August onwards
+not yet. `check_cites.py --content` additionally flags citations whose claim shares few words with the cited headline
+(a review aid — most flags are paraphrases or day-to-day harvest differences, not wrong sources).
