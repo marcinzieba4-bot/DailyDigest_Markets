@@ -66,6 +66,8 @@ A company appears in at most one sector.
 4. `python3 -I tools/verify_sectors.py <D>` → PASS, no WARN. Then `tools/final_check.sh <D>` must show
    cn=PASS(0 warn) report=PASS(0 warn) cites_unmatched=0 sectors=PASS(0 warn).
    (verify_report's character diff can split a correct number — reword so the number stays whole.)
+5. `check_cites.py` matches source + date only, so confirm each citation's headline TEXT is in D's own feed — a block
+   carried over from D-1 often keeps a citation whose headline is missing from D's harvest (August lesson).
 Do NOT edit new/, edits/, orig/, feeds*, or any tool; do NOT run build_json.py, upload.py, git or AWS.
 Report back per date: the 2–3 most notable earnings stories, number of sectors with "No major reports", and anything
 you were unsure about.

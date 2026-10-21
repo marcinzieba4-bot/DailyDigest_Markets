@@ -71,7 +71,7 @@ copper ratio used, China label missing, China block under 400 words, meta rate p
 2026-10-21 the four Claude calls run in parallel (part 1 split into Geo and Sectors + Underowned) with 512 MB memory,
 after the wider blocks made the 2026-10-20 run hit max_tokens and the Lambda timeout.
 
-## Earnings-first Sector Deep Dive (live from 2026-10-21; archive: June and July)
+## Earnings-first Sector Deep Dive (live from 2026-10-21; archive: June to August)
 Each of the 13 sector blocks has four short parts (about 100-160 words): **Narrative** (consensus, direction, the driver
 that matters), **Reported** (who reported in the last 7 days — beat / miss, guidance, reaction, why), **EPS Upside Watch**
 (who is set up for an EPS surprise and the mechanism) and **⚡ Breaking Convention** (the signal against the standard
@@ -80,13 +80,21 @@ feeds plus three earnings feeds. Archive: `tools/fetch_earnings.py` → `feeds_e
 `sectors/<date>.html` (brief: `tools/BRIEF_SECTORS.md`; `tools/old_sectors.py` shows the original Narrative / Breaking
 Convention with the copper fixes applied), spliced by `apply_edits.py`, checked by `tools/verify_sectors.py`
 (part of `final_check.sh`).
-Status: June and July (2026-06-25 … 07-31) rewritten in the four-part format and live since 2026-10-21; August onwards
-not yet. `check_cites.py --content` additionally flags citations whose claim shares few words with the cited headline
-(a review aid — most flags are paraphrases or day-to-day harvest differences, not wrong sources).
+Status: June and July (2026-06-25 … 07-31) rewritten in the four-part format and live since 2026-10-21. August
+(08-01 … 08-31) rewritten the same way by eight parallel agents on its own earnings feeds (31 dates, no failed queries);
+all 31 pass `final_check.sh`. September onwards not yet. `check_cites.py --content` additionally flags citations whose
+claim shares few words with the cited headline (a review aid — most flags are paraphrases or day-to-day harvest
+differences, not wrong sources).
+**August lesson:** `check_cites.py` matches source + date only, so a citation can pass against a *different* headline from
+the same outlet on the same day (each date's harvest differs, so a carried-forward citation often loses its headline).
+Check every carried-forward citation's headline text in the new date's own feed; for the China blocks this found wrong
+sources from the earlier pass (e.g. 08-02 BMW "China slump" is RTE.ie, not Investing.com), fixed in `new/`.
 
-## Earnings Pattern in the archive (June and July done)
+## Earnings Pattern in the archive (June to August done)
 `pattern/<date>.html` holds the section (brief: `tools/BRIEF_PATTERN.md`), built from two weeks of earnings headlines:
 the date's own earnings feed plus the previous week (`feeds_earn_prev/<date>.json` for 06-25 … 07-01, harvested by
 `tools/fetch_earn_prev.py`; otherwise the earnings feed of D-7). `apply_edits.py` inserts it after the Sector Deep Dive;
 `tools/verify_pattern.py` (part of `final_check.sh`) checks heading, five labels, length, the 14-day window and numbers.
-2026-06-25 … 07-31 live since 2026-10-21; August onwards not yet.
+2026-06-25 … 07-31 live since 2026-10-21. August 01 … 31 written and verified (the previous week comes from
+`feeds_earn/<D-7>`, so no `feeds_earn_prev` was needed); not yet published to S3 — run
+`python3 -I tools/upload.py <dates> --go` after `build_json.py`. September onwards not yet.
