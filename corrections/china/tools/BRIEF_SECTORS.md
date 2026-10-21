@@ -19,20 +19,27 @@ Exactly 13 blocks, nothing else (no `<h2>`; the tool splices them under the exis
 ```
 <div style="margin-bottom:18px;padding:14px;background:#f9fff9;border-left:4px solid #34a853;border-radius:4px">
   <h3 …copied from the original…</h3>
+  <p><strong>Narrative:</strong> …</p>
   <p><strong>Reported:</strong> …</p>
   <p><strong>EPS Upside Watch:</strong> …</p>
-  <p><strong>Take:</strong> …</p>
+  <p>⚡ <strong>Breaking Convention:</strong> …</p>
 </div>
 ```
-About 60–110 words per block (the verifier warns above 140). Simple, quick, factual:
+About 100–160 words per block (the verifier warns above 185). Simple, quick, factual:
+- **Narrative:** 1–2 sentences — the consensus, the direction (consistent with the heading's stance) and the single
+  driver that matters now (rates, PMIs / new orders, credit, housing, AI capex, oil). Condense it from the original
+  Narrative (`python3 -I tools/old_sectors.py <D>` prints it with the copper fixes applied) and the day's figures.
 - **Reported:** 1–3 companies in that sector that reported in the 7 days before D — beat / miss, EPS or revenue vs
   estimates if the headline gives it, guidance raised / cut, share reaction, and the WHY in a few words. Tag each with
   source and date like the rest of the report: "Micron beat on record HBM revenue and guided higher, shares +15%
   (Forbes, [Jun 24])". If nobody relevant reported: "No major reports this week."
 - **EPS Upside Watch:** 1–2 companies set up for a surprising EPS boost — guidance raised, estimates / targets lifted,
   pricing, volume or margin tailwinds, a preview pointing to a beat — with the mechanism, from the feed. If none: "None flagged."
-- **Take:** one sentence — sector stance (consistent with the heading) and the single driver that matters now (rates,
-  PMIs / new orders, credit, housing, AI capex, oil). Use the day's report figures where useful.
+- **⚡ Breaking Convention:** 1–3 sentences on the signal that goes against the sector's standard narrative and why it
+  matters. Condense the original Breaking Convention (old_sectors.py) — keep its point if it still stands; if the
+  original said none, or its point no longer fits the rest of the block, use a feed-backed one or "None today."
+Facts taken from the original paragraphs come from that day's report and may stay untagged; anything new needs a
+feed headline. Never carry over a Polish reference, a copper ratio or copper-as-China-gauge reasoning.
 
 Sector mapping: XLK tech/software/hardware · XLC media/telecom/internet platforms · XLF banks/brokers/insurers/payments ·
 XLE oil & gas, refiners, oil services · XLI industrials, transport, airlines, aerospace & defence · XLY retail,

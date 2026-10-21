@@ -24,10 +24,11 @@ for t in ('p', 'strong', 'div', 'span', 'h3'):
 for b in blocks:
     name = re.sub('<[^>]+>', '', re.search(r'<h3.*?</h3>', b, flags=re.S).group(0))[:30]
     t = totext(b)
-    for lab in ('Reported:', 'EPS Upside Watch:', 'Take:'):
+    for lab in ('Narrative:', 'Reported:', 'EPS Upside Watch:', 'Breaking Convention:'):
         if t.count(lab) != 1: fails.append(f'{name}: label {lab} x{t.count(lab)}')
     w = len(re.findall(r"[A-Za-z][A-Za-z'’\-]*", re.sub(r'\[[^\]]{1,12}\]', ' ', t)))
-    if w > 140: warns.append(f'{name}: {w} words (keep it short, ~60-110)')
+    if w > 185: warns.append(f'{name}: {w} words (keep it short, ~100-160)')
+    if 'Take:' in t: fails.append(f'{name}: old Take label — fold it into Narrative')
 text = totext(new)
 if re.search(r'Poland|Polish|Warsaw|\bGPW\b|\bWIG|KGHM|Orlen|\bPKO\b|Pekao|\bPZU\b|Allegro|\bXTB\b|zloty', text):
     fails.append('Polish market reference in sectors')
