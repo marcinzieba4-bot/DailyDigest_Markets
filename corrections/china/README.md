@@ -76,7 +76,7 @@ copper ratio used, China label missing, China block under 400 words, meta rate p
 2026-10-21 the four Claude calls run in parallel (part 1 split into Geo and Sectors + Underowned) with 512 MB memory,
 after the wider blocks made the 2026-10-20 run hit max_tokens and the Lambda timeout.
 
-## Earnings-first Sector Deep Dive (live from 2026-10-21; archive: 06-24 to September)
+## Earnings-first Sector Deep Dive (live from 2026-10-21; archive: 06-24 to 2026-10-20)
 Each of the 13 sector blocks has four short parts (about 100-160 words): **Narrative** (consensus, direction, the driver
 that matters), **Reported** (who reported in the last 7 days — beat / miss, guidance, reaction, why), **EPS Upside Watch**
 (who is set up for an EPS surprise and the mechanism) and **⚡ Breaking Convention** (the signal against the standard
@@ -88,7 +88,7 @@ Convention with the copper fixes applied), spliced by `apply_edits.py`, checked 
 Status: June and July (2026-06-25 … 07-31) rewritten in the four-part format and live since 2026-10-21. August
 (08-01 … 08-31) rewritten the same way by eight parallel agents on its own earnings feeds (31 dates, no failed queries);
 all 31 pass `final_check.sh`; live since 2026-10-21. September (09-01 … 09-30) done the same way (30 earnings feeds, no
-failed queries; all 30 pass `final_check.sh`), live since 2026-10-21. October onwards not yet. `check_cites.py --content` additionally flags citations whose
+failed queries; all 30 pass `final_check.sh`), live since 2026-10-21. October 01 … 20 done the same way by five parallel agents (`tools/BRIEF_OCTOBER.md`: sectors and Earnings Pattern in one pass per date; failed earnings queries re-run and merged), all 20 pass `final_check.sh`, live since 2026-10-23. 2026-10-20 keeps its live China block (no `new/` file: `apply_edits.py` leaves it, `final_check.sh` shows `cn=live`). From 2026-10-21 the Lambda writes both sections itself. `check_cites.py --content` additionally flags citations whose
 claim shares few words with the cited headline (a review aid — most flags are paraphrases or day-to-day harvest
 differences, not wrong sources).
 **August lesson:** `check_cites.py` matches source + date only, so a citation can pass against a *different* headline from
@@ -102,7 +102,7 @@ often name a company by ticker only (OLLI, NEE, CRDO, IBKR), so a flag needs a l
 re-dated stale results (Q2 recaps dated mid-September, TSMC "raises guidance"), conflicting share reactions (both "rose"
 and "fell" headlines → no reaction), and a Reuters PetroChina story that Reuters withdrew (08-31 now cites OilPrice.com).
 
-## Earnings Pattern in the archive (06-24 to September done)
+## Earnings Pattern in the archive (06-24 to 2026-10-20 done; live Lambda from 10-21)
 `pattern/<date>.html` holds the section (brief: `tools/BRIEF_PATTERN.md`), built from two weeks of earnings headlines:
 the date's own earnings feed plus the previous week (`feeds_earn_prev/<date>.json` for 06-25 … 07-01, harvested by
 `tools/fetch_earn_prev.py`; otherwise the earnings feed of D-7). `apply_edits.py` inserts it after the Sector Deep Dive;
@@ -111,4 +111,4 @@ the date's own earnings feed plus the previous week (`feeds_earn_prev/<date>.jso
 `feeds_earn/<D-7>`, so no `feeds_earn_prev` was needed); live since 2026-10-21 (CloudFront invalidated). In the cloud
 session the default `AWS_ACCESS_KEY_ID` is invalid — publish with `AWS_ACCESS_KEY_ID=$AWS_Key
 AWS_SECRET_ACCESS_KEY=$AWS_Pass python3 -I tools/upload.py <dates> --go` (needs `boto3` and `matplotlib` for the PDF).
-September 01 … 30 written and verified the same way, live since 2026-10-21. October onwards not yet.
+September 01 … 30 written and verified the same way, live since 2026-10-21. October 01 … 20 live since 2026-10-23.
