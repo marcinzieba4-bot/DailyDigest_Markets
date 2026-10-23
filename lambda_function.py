@@ -907,8 +907,8 @@ Block per sector:
 Read the pattern from ALL results in the "Earnings —" feeds of the last two weeks (not just today): which result profiles
 the market rewarded and which it punished, judged by the share reaction in the headline — beat + raised guidance,
 beat + higher capex / costs, beat + China or tariff exposure, AI revenue line, pricing vs volume, miss + better guidance.
-Then apply it to the stocks getting the most attention into their upcoming reports. SHORT: 250-350 words, hard cap 400.
-One block, five labelled parts written as plain sentences — no numbered or bulleted lists. Name each example once as
+Then apply it to the stocks getting the most attention into their upcoming reports. SHORT: 220-300 words, hard cap 330 (2-3
+examples per part). One block, five labelled parts written as plain sentences — no numbered or bulleted lists. Name each example once as
 "Company — what it reported — the share move (Source, [Mon DD])"; never a bare date tag. Never invent a result, an
 estimate or a reaction:
 <div style="margin-bottom:18px;padding:14px;background:#f0faf8;border-left:4px solid #00897b;border-radius:4px">
