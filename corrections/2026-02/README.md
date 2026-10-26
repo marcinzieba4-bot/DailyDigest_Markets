@@ -9,7 +9,8 @@ sources" list, JSON copy with an `evidence` map, PDF from the Lambda's own rende
 ## Time discipline
 - **News**: `tools/fetch_news.py` harvests Google News RSS with `after:/before:` bounds and keeps an item only if its
   RSS publication time is strictly before the cutoff (news 7 days, monthly releases 35 days, earnings reactions 14
-  days, as in the Lambda). 217 short queries per date (US, Europe, China, Japan, Australia, Poland incl. Polish-language
+  days, as in the Lambda). Google stamps most items with a date only (08:00 GMT), so an item dated the day before
+  the report can be a late US-evening story; that is the same convention as the earlier archive passes. 217 short queries per date (US, Europe, China, Japan, Australia, Poland incl. Polish-language
   queries, sectors, earnings, crypto, flows, retail, geopolitics), 0 failed queries.
 - **Market data**: `tools/fetch_market.py` + `tools/build_cards.py`. Each card holds only completed observations
   dated before the report date (exchange-local session dates; crypto UTC days; Treasury par curve at the prior

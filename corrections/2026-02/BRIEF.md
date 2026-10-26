@@ -42,7 +42,8 @@ Every number you write must be in the card, or in a headline cited **in the same
   crypto session date (weekends included) and say "prior completed daily close".
 - Yields with two decimals and %; **yield changes and spreads in bps, never in % of the yield**. Use the card's
   `curve_shape` and `curve_move_20obs` wording for the curve ("positively sloped but still flat by historical
-  standards", "bull flattening"). Never call a +60 bps 2s10s "steep" or "normal".
+  standards", "moderately steep, approaching the long-run average", "bull flattening") verbatim; never "normal",
+  "healthy" or "steepest in years".
 - Price changes: use the card's `chg_1s_pct` / `chg_5s_pct` / `chg_20s_pct` (you may round to one decimal). Say
   "over 20 sessions" / "over five sessions" / "in the prior session". Direction words must match the sign.
 - Allowed without a source: small counts (≤ 12), "20 sessions", years, and names such as S&P 500, Russell 2000,
