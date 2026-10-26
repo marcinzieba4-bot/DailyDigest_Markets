@@ -23,7 +23,18 @@ sources" list, JSON copy with an `evidence` map, PDF from the Lambda's own rende
   no month-day reference on/after the report date unless a cited headline carries it, data-source tags match card
   session dates, no hindsight wording, no copper-as-growth-gauge).
 
-Status: work in progress — data harvested and tooling in place; reports being written and verified.
+Status: **live on S3 since 2026-10-26** (`tools/upload.py <20 dates> --go`): `reports/archive/2026-02-*.html`,
+`Strategies/json/…` and `Strategies/….pdf`; the archive index went from 223 to 243 rows (its previous version is
+under `reports/_retrospective_backup/february-weekdays/20261026T215814Z/`); CloudFront invalidation
+I9070AIEUPDV8P4YAA73KQ9TJ3. No February object existed before, so nothing else was overwritten. All 20 pass
+`verify.py` with 0 FAIL (6 WARN on 02-10 / 02-11: "this week" wording, each backed by a week-ahead headline);
+70–92 cited headlines and 4,800–6,000 words per report.
+
+Writers dropped, among others: misdated headlines (an April payrolls preview dated Feb 4, "ECB hike / 3.8% inflation"
+items contradicting the 1.7% print, old FXStreet / ABC archive items with current dates), events that fell after the
+cutoff although Google dated them earlier (RBA decision 03:30 UTC Feb 3, China's private PMI 01:45 UTC Feb 2, the
+State of the Union 02:00 UTC Feb 25, Australia's CPI 00:30 UTC Feb 25, Monday Asia-session moves, Morning-Bid notes
+written after Nvidia's results), live / rolling pages, and directions that conflict with the card.
 
 ## Layout
 - `feeds/<date>.json.gz` — the harvested, date-bounded headlines (ids `nXXXX` are what the specs cite).
@@ -33,3 +44,23 @@ Status: work in progress — data harvested and tooling in place; reports being 
 - `tools/upload.py <dates> [--go]` — publishes HTML, JSON and PDF under the archive keys, adds the index rows, backs up
   anything it overwrites under `reports/_retrospective_backup/february-weekdays/<UTC stamp>/`, invalidates CloudFront.
   `reports/latest.html` is not touched. Needs `LAMBDA_PY` pointing at the report Lambda source (PDF renderer).
+- `posthoc/` — **not part of the reports and never visible to the writers** (prices after February, downloaded outside
+  the repo while the reports were written): `score.py` measures the sector stances against the S&P 500 5 and 20
+  sessions later.
+
+## Post-hoc check of the calls (for the reader, not in the pages)
+Sector stances vs the S&P 500 (SXAP vs STOXX 600), 20 reports × 13 sectors, overlapping windows (one month of
+calls, so not independent evidence):
+
+| Stance | n | 5 sessions: mean excess / hit | 20 sessions: mean excess / hit |
+|---|---|---|---|
+| Bullish | 117 | +1.26% / 87 of 117 | +1.33% / 50 of 117 |
+| Bearish | 67 | −0.07% / 39 of 67 | −0.63% / 45 of 67 |
+| Mixed | 76 | +0.31% | +0.30% |
+
+Persistent month-long calls and their excess return vs the S&P 500 from Feb 2 to Mar 31 / Apr 30: Energy Bullish
+16 of 20 days (+25.9% / +13.0%, the late-February Iran premium the feeds were already flagging), Utilities Bullish
+16 (+12.0% / +4.4%), Semis Bullish 19 (+0.8% / +29.4%), Materials Bullish 16 (+7.3% / +0.6%), Industrials Bullish
+20 (+3.7% / +1.6%); European autos Bearish 17 (−6.0% / −8.7% vs STOXX 600), Discretionary Bearish 16 (−4.1% /
+−6.2%). The miss: Technology Bearish 12 (−1.7% to Mar 31, but +7.0% to Apr 30) — the "AI eats software" selloff
+mean-reverted within two months.
