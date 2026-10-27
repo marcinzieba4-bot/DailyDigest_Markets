@@ -19,14 +19,14 @@ CN_PARTS = ['Macro Stance', 'PMIs & Activity', 'Credit Impulse', 'Property', 'Fi
 LABELS = {
     'sector': ['Narrative', 'Reported', 'EPS Upside Watch', '⚡ Breaking Convention'],
     'earnings_pattern': ['Rewarded', 'Punished', 'Pattern', 'Attention into EPS', 'Playbook'],
-    'underowned': ['Attention Gap', 'Exposure & Risk'],
+    'underowned': ['Attention Gap', 'Exposure & Risk', 'Trigger to Watch'],
     'crypto': ['Market Context', 'New / Most Important', 'Playbook'],
-    'flows': ['Rates & Dollar', 'Credit Check', 'Portfolio Implication'],
+    'flows': ['Global Liquidity', 'Rates & Dollar', 'Credit Check', 'Equity & Fund Flows', 'Portfolio Implication'],
     'anticipatory': ['What Is Priced', 'Conditional Expression', 'Risk'],
-    'catalysts': ['Catalyst & Thesis', 'Price Hurdle & Risk'],
+    'catalysts': ['Catalyst & Thesis', 'Price Hurdle & Risk', 'Trade Expression'],
     'retail': ['Observed Attention', 'Motivation & Bias', 'Instrument & Risk'],
 }
-COUNTS = {'underowned': 2, 'anticipatory': 2, 'catalysts': 3, 'retail': 4}
+COUNTS = {'underowned': 4, 'anticipatory': 4, 'catalysts': 6, 'retail': 4}
 STRUCTURAL = {500, 100, 2000, 600, 50, 40, 225, 200, 300, 20, 30, 14, 35, 24, 2025, 2026, 2027, 1000}
 MONTHS = {m: i for i, m in enumerate(['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'], 1)}
 MD = re.compile(r'\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|'
@@ -186,11 +186,11 @@ def verify(d):
         if COPPER.search(body): fails.append(f'{where} {lab}: copper ratio / growth-gauge wording')
         for m in CAL.finditer(body):
             warns.append(f'{where} {lab}: calendar wording "{m.group(0)}" — needs a dated headline')
-        if len(body.split()) > 140: warns.append(f'{where} {lab}: {len(body.split())} words (long)')
+        if len(body.split()) > 190: warns.append(f'{where} {lab}: {len(body.split())} words (long)')
     for n, k in usage.items():
         if k > 4: warns.append(f'citation {n} used {k} times')
-    if len(usage) < 30: fails.append(f'only {len(usage)} distinct citations (need ≥ 30)')
-    if not 3800 <= words <= 8000: warns.append(f'{words} words in total')
+    if len(usage) < 50: fails.append(f'only {len(usage)} distinct citations (need ≥ 50)')
+    if not 8000 <= words <= 12500: warns.append(f'{words} words in total')
     return fails, warns, len(usage), words
 
 
