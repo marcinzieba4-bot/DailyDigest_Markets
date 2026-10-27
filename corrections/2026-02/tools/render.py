@@ -152,6 +152,7 @@ def render(d):
 
     a(accent_rule(BOX['retail']['c']))
     a(heading('retail', '🔥 What Retail Is Playing'))
+    a(f'<p style="color:#666;font-size:13px;margin-bottom:20px">{doc.text(spec["retail_intro"])}</p>')
     for i, x in enumerate(spec['retail']):
         if i == 0:
             box('retail', hook(x['title'], 14, BOX['retail']['c']), x['parts'], tag='h3', hstyle='margin:0 0 12px;font-size:20px')

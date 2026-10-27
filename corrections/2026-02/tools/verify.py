@@ -24,7 +24,9 @@ LABELS = {
     'flows': ['Global Liquidity', 'Rates & Dollar', 'Credit Check', 'Equity & Fund Flows', 'Portfolio Implication'],
     'anticipatory': ['What Is Priced', 'Conditional Expression', 'Risk'],
     'catalysts': ['Catalyst & Thesis', 'Price Hurdle & Risk', 'Trade Expression'],
-    'retail': ['Observed Attention', 'Motivation & Bias', 'Instrument & Risk'],
+    'retail_lead': ['Why Retail Is Here', 'What Is Driving It', 'The Social Signal', 'Historical Analog', 'Smart Money View',
+                    'When the Narrative Breaks'],
+    'retail_small': ['Why Retail Is Here', 'Where It Breaks'],
 }
 COUNTS = {'underowned': 4, 'anticipatory': 4, 'catalysts': 6, 'retail': 4}
 STRUCTURAL = {500, 100, 2000, 600, 50, 40, 225, 200, 300, 20, 30, 14, 35, 24, 2025, 2026, 2027, 1000}
@@ -117,13 +119,16 @@ def paragraphs(spec):
         if [p[0] for p in b.get('parts', [])] != LABELS[key]: errs.append(f'{key} labels {[p[0] for p in b.get("parts", [])]}')
         for lab, t in b.get('parts', []):
             yield key, lab, t
+    if not spec.get('retail_intro'): errs.append('retail_intro missing')
+    else: yield 'retail_intro', 'Intro', spec['retail_intro']
     for key, n in COUNTS.items():
         arr = spec.get(key, [])
         if len(arr) != n: errs.append(f'{key}: {len(arr)} items, expected {n}')
         for i, b in enumerate(arr):
             if not b.get('title'): errs.append(f'{key}[{i}] has no title')
             if key == 'catalysts' and b.get('stance') not in ('Bullish', 'Bearish', 'Mixed'): errs.append(f'catalyst {i} stance')
-            if [p[0] for p in b.get('parts', [])] != LABELS[key]: errs.append(f'{key}[{i}] labels {[p[0] for p in b.get("parts", [])]}')
+            want = LABELS['retail_lead' if i == 0 else 'retail_small'] if key == 'retail' else LABELS[key]
+            if [p[0] for p in b.get('parts', [])] != want: errs.append(f'{key}[{i}] labels {[p[0] for p in b.get("parts", [])]}')
             for lab, t in b.get('parts', []):
                 yield f'{key}[{i}]', lab, t
     paragraphs.errs = errs
@@ -177,7 +182,7 @@ def verify(d):
         for m in NUM.finditer(scan_nums):
             raw = m.group(0).rstrip('.,'); v = fl(raw)
             if v is None: continue
-            if v in tnums or v in cardnums or v in STRUCTURAL or (v == int(v) and v <= 12):
+            if v in tnums or v in cardnums or v in STRUCTURAL or (v == int(v) and (v <= 12 or 1990 <= v <= 2025)):
                 continue
             if v in report_title_nums:
                 warns.append(f'{where} {lab}: number {raw} only in a headline cited elsewhere'); continue
@@ -186,7 +191,7 @@ def verify(d):
         if COPPER.search(body): fails.append(f'{where} {lab}: copper ratio / growth-gauge wording')
         for m in CAL.finditer(body):
             warns.append(f'{where} {lab}: calendar wording "{m.group(0)}" — needs a dated headline')
-        if len(body.split()) > 190: warns.append(f'{where} {lab}: {len(body.split())} words (long)')
+        if len(body.split()) > 260: warns.append(f'{where} {lab}: {len(body.split())} words (long)')
     for n, k in usage.items():
         if k > 4: warns.append(f'citation {n} used {k} times')
     if len(usage) < 50: fails.append(f'only {len(usage)} distinct citations (need ≥ 50)')

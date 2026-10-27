@@ -94,8 +94,10 @@ is good; boilerplate disclaimers in every paragraph ("this does not establish…
   "anticipatory": [{"title": "…", "parts": [["What Is Priced", "…"], ["Conditional Expression", "…"], ["Risk", "…"]]}, {…}, {…}, {…}],
   "catalysts": [{"title": "$NVDA — short thesis", "stance": "Bullish",
                  "parts": [["Catalyst & Thesis", "…"], ["Price Hurdle & Risk", "…"], ["Trade Expression", "…"]]}, {…}, {…}, {…}, {…}, {…}],
-  "retail": [{"title": "Company / TICKER — the hook", "parts": [["Observed Attention", "…"], ["Motivation & Bias", "…"],
-                                                                ["Instrument & Risk", "…"]]}, {…}, {…}, {…}]
+  "retail_intro": "One sentence: the dominant popular-narrative trade capturing retail attention, with two or three earlier episodes it resembles (years before the report date only).",
+  "retail": [{"title": "Name / TICKER — the hook", "parts": [["Why Retail Is Here", "…"], ["What Is Driving It", "…"],
+              ["The Social Signal", "…"], ["Historical Analog", "…"], ["Smart Money View", "…"],
+              ["When the Narrative Breaks", "…"]]}, {"title": "…", "parts": [["Why Retail Is Here", "…"], ["Where It Breaks", "…"]]}, {…}, {…}]
 }
 ```
 Plain text only (no HTML); `&`, quotes and arrows are fine. The renderer adds flags, sector names and colours.
@@ -146,9 +148,27 @@ Catalyst & Thesis (the dated catalyst from the feed + the thesis) · Price Hurdl
 20-session change if the ticker is there; otherwise no price) · Trade Expression (instrument, direction, what would
 invalidate it).
 
-**🔥 What Retail Is Playing** — four names/themes that retail attention headlines (Reddit, Stocktwits, meme / most-active
-lists, retail flow stories) show; title "Name / TICKER — the hook". Observed Attention · Motivation & Bias ·
-Instrument & Risk.
+**🔥 What Retail Is Playing** — the section is a narrative essay, not a list of capsules. Four trades in total:
+one lead trade and three smaller ones.
+
+- `retail_intro`: one sentence naming the dominant popular-narrative trade and two or three earlier episodes it resembles
+  (for example a past mania or a past single-stock run). Only episodes before the report date; no outcome of an episode
+  that happened after the report date.
+- **Lead trade** (650–850 words, six parts, in this order): **Why Retail Is Here** (the story retail tells itself, in
+  plain words) · **What Is Driving It** (the feed's evidence: price moves, earnings or news, with the card's figures and
+  cited headlines) · **The Social Signal** (what the feed shows of attention: Reddit, Stocktwits, most-active lists,
+  influencer and platform headlines; and how the crowd reads institutional skepticism, as the headlines say) ·
+  **Historical Analog** (one named earlier episode and the mechanical similarity: what happened first, what came second,
+  why retail is in the second wave) · **Smart Money View** (the institutional view, split honestly: what supports the
+  trade and what the institutions are hedging) · **When the Narrative Breaks** (specific, observable triggers, with
+  levels from the card where the card has them).
+- **Three smaller trades** (150–220 words each, two parts): **Why Retail Is Here** (one paragraph on the attraction)
+  · **Where It Breaks** (the trigger and the instrument risk).
+- Title format for every item: "Name / TICKER — the hook" (the hook is what the crowd says; it is shown in quotes).
+- Only facts from the item's feed headlines and the card. Interpretation (what retail believes, what the crowd reads
+  into a headline, how a narrative can break) is allowed and expected, and must be marked as the crowd's view or as
+  the writer's reading, not presented as a reported fact. Keep the same discipline as the rest of the report: no
+  hindsight, no number that is neither in the card nor in a headline cited in the same paragraph.
 
 ## Procedure per date
 1. `python3 -I tools/digest.py <date>` (prioritised headlines per topic) and `python3 -I tools/digest.py <date> --grep
