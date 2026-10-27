@@ -2,13 +2,12 @@
 ../json/<date>_Market_Intelligence.json, in the inline-styled layout of the August 2026 archive briefings (no stylesheet,
 one accent colour per section, the same block and rule styling).
 
-Citations are written in the spec as [[n0123]] (an item id of ../feeds/<date>.json) and rendered as
-<a href=URL title=HEADLINE>Source [Mon DD]</a>; every cited item is listed under "Dated sources" (oldest first) and
-in the JSON "evidence" map. Spec format: see BRIEF.md."""
+Citation markers ([[nXXXX]]) in the spec are dropped: the published pages carry no citations, links or source list.
+Spec format: see BRIEF.md."""
 import json, os, re, sys, html, datetime as dt
 
 T = os.path.dirname(os.path.abspath(__file__)); C = os.path.dirname(T)
-CITE = re.compile(r'\s*\[\[(n\d{4})\]\]')
+CITE = re.compile(r'\s*\[\[n\d{4}\]\]')
 COLORS = {'Bullish': '#2d7a2d', 'Bearish': '#c0392b', 'Mixed': '#b07d00'}
 ARROWS = {'Bullish': '↑', 'Bearish': '↓', 'Mixed': '→'}
 BODY = 'font-family:Arial,sans-serif;max-width:820px;margin:auto;padding:24px;color:#222;line-height:1.6'
@@ -41,39 +40,11 @@ esc = lambda s: html.escape(s, quote=False)
 attr = lambda s: html.escape(s, quote=True)
 
 
-def load_feed(d):
-    """../feeds/<date>.json, or the committed gzip copy ../feeds/<date>.json.gz."""
-    p = os.path.join(C, 'feeds', f'{d}.json')
-    if os.path.exists(p):
-        return json.load(open(p, encoding='utf-8'))
-    import gzip
-    return json.load(gzip.open(p + '.gz', 'rt', encoding='utf-8'))
-
-
-def feed(d):
-    return {x['id']: x for x in load_feed(d)['items']}
-
-
-def short_date(iso):
-    return dt.datetime.fromisoformat(iso).strftime('%b %d')
-
-
 class Doc:
-    def __init__(self, d):
-        self.d, self.items, self.cited = d, feed(d), []
-
-    def link(self, nid):
-        x = self.items[nid]
-        if nid not in self.cited:
-            self.cited.append(nid)
-        return f'<a href="{attr(x["url"])}" title="{attr(x["title"])}">{esc(x["src"])} [{short_date(x["published_at"])}]</a>'
+    """Text without citations: the [[nXXXX]] markers in the spec are dropped, no links or source list are written."""
 
     def text(self, s):
-        out, pos = [], 0
-        for m in CITE.finditer(s):
-            out.append(esc(s[pos:m.start()])); out.append(' ' + self.link(m.group(1))); pos = m.end()
-        out.append(esc(s[pos:]))
-        return ''.join(out).strip()
+        return esc(CITE.sub('', s)).strip()
 
     def parts(self, parts):
         return [f'<p><strong>{esc(lbl)}:</strong> {self.text(txt)}</p>' for lbl, txt in parts]
@@ -112,7 +83,7 @@ def hook(title, size, color):
 def render(d):
     spec = json.load(open(os.path.join(C, 'specs', f'{d}.json')))
     D = dt.date.fromisoformat(d); label = D.strftime('%A, %B %d %Y')
-    doc = Doc(d); L = []
+    doc = Doc(); L = []
     a = L.append
 
     def box(key, title, parts, tag='h4', hstyle='margin:0 0 6px'):
@@ -188,25 +159,15 @@ def render(d):
             box('retail_small', hook(x['title'], 12, '#888'), x['parts'])
     a('<hr style="border:none;border-top:1px solid #ddd;margin:24px 0 12px">')
     a(f'<p style="color:#aaa;font-size:11px">{FOOTER}</p>')
-    a('<details style="font-size:12px"><summary>Dated sources</summary><ol>')
-    for nid in sorted(doc.cited, key=lambda n: (doc.items[n]['published_at'], doc.cited.index(n))):
-        x = doc.items[nid]
-        a(f'<li><a href="{attr(x["url"])}">{attr(x["title"])}</a> — {esc(x["src"])}, {x["published_at"][:10]}</li>')
-    a('</ol></details>')
     a('</body></html>')
     page = '\n'.join(L) + '\n'
     os.makedirs(os.path.join(C, 'html'), exist_ok=True)
     open(os.path.join(C, 'html', f'{d}.html'), 'w', encoding='utf-8').write(page)
-    evidence = {}
-    for i, nid in enumerate(doc.cited, 1):
-        x = doc.items[nid]
-        evidence[f'e{i}'] = {'title': x['title'], 'published_at': x['published_at'], 'source': x['src'], 'url': x['url'],
-                             'category': x['cat'], 'feed_id': nid}
     payload = {'date': label, 'report_date': d, 'generated_at': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
-               'news_cutoff_utc': f'{d}T00:00:00Z', 'sections': sections(page), 'evidence': evidence}
+               'news_cutoff_utc': f'{d}T00:00:00Z', 'sections': sections(page)}
     os.makedirs(os.path.join(C, 'json'), exist_ok=True)
     json.dump(payload, open(os.path.join(C, 'json', f'{d}_Market_Intelligence.json'), 'w'), ensure_ascii=False, indent=2)
-    return page, doc
+    return page
 
 
 def parse_html_paragraphs(full_html):
@@ -266,5 +227,4 @@ def sections(page):
 
 if __name__ == '__main__':
     for d in sys.argv[1:]:
-        page, doc = render(d)
-        print(d, len(page), 'bytes,', len(doc.cited), 'sources')
+        print(d, len(render(d)), 'bytes')
