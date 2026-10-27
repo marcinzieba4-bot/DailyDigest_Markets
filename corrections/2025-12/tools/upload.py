@@ -1,9 +1,9 @@
-"""upload.py <dates> [--go] — publish the February 2026 retrospective briefings to the report archive.
+"""upload.py <dates> [--go] — publish the December 2025 retrospective briefings to the report archive.
 
 For each date: reports/archive/<date>.html, Strategies/json/<date>_Market_Intelligence.json and
 Strategies/<date>_Market_Intelligence.pdf (rendered with the report Lambda's own matplotlib renderer). Any object that
 already exists under those keys, and reports/index.html, are first copied to
-reports/_retrospective_backup/february-weekdays/<UTC timestamp>/<original key>. The archive index gets one row per date
+reports/_retrospective_backup/december-weekdays/<UTC timestamp>/<original key>. The archive index gets one row per date
 (newest first, same markup as the Lambda's index); reports/latest.html is never touched. Only the written paths are
 invalidated on CloudFront. Without --go it is a dry run.
 
@@ -17,7 +17,7 @@ T = os.path.dirname(os.path.abspath(__file__)); C = os.path.dirname(T)
 B = os.environ.get('S3_BUCKET', 's3bucketmz'); CF = os.environ.get('CLOUDFRONT_DISTRIBUTION_ID', 'E15IJW4438D21G')
 go = '--go' in sys.argv; dates = [a for a in sys.argv[1:] if not a.startswith('--')]
 stamp = dt.datetime.now(dt.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
-BAK = f'reports/_retrospective_backup/february-weekdays/{stamp}/'
+BAK = f'reports/_retrospective_backup/december-weekdays/{stamp}/'
 
 for v in ('ANTHROPIC_API_KEY', 'SENDER_EMAIL', 'RECIPIENT_EMAIL'):
     os.environ.setdefault(v, 'x')
@@ -68,7 +68,7 @@ if go:
     s3.put_object(Bucket=B, Key='reports/index.html', Body=new_idx.encode('utf-8'), ContentType='text/html; charset=utf-8')
     paths.append('/reports/index.html')
     inv = boto3.client('cloudfront').create_invalidation(DistributionId=CF, InvalidationBatch={
-        'Paths': {'Quantity': len(paths), 'Items': paths}, 'CallerReference': f'feb-retro-{stamp}'})
+        'Paths': {'Quantity': len(paths), 'Items': paths}, 'CallerReference': f'dec-retro-{stamp}'})
     print('uploaded', len(dates), 'dates; backups under', BAK, '; invalidation', inv['Invalidation']['Id'])
 else:
     print('dry run —', len(dates), 'dates')
