@@ -1,680 +1,253 @@
 {
- "date": "2026-02-27",
- "geo": [
-  {
-   "key": "US",
-   "stance": "Mixed",
-   "label": "Fed on hold / AI rotation",
-   "parts": [
-    [
-     "Macro Stance",
-     "Growth is slow, inflation sticky and the labour market steady, so the Fed stays parked. Fourth-quarter GDP rose just 1.4%, badly missing estimates, while inflation firmed to 3% [[n6805]]; initial jobless claims totalled 212,000, lower than expected [[n6717]]. The swing factor is AI: analysts estimate AI capex and the tech wealth effect now drive one-third of US GDP growth [[n6728]], which turns a sell-off in AI leaders into a macro risk rather than a sector story."
-    ],
-    [
-     "Rates & Curve",
-     "The 2Y closed at 3.42% and the 10Y at 4.02%, a 10Y−2Y spread of +60 bps; over 20 observations the 2Y fell 14 bps and the 10Y 24 bps, a bull flattening (both down, 10Y down more) that cut the spread by 10 bps (US Treasury, prior close 2026-02-26). The curve is positively sloped and approaching, but still below, its long-run average, and the 10Y is within touching distance of 4%. The S&P 500 closed at 6,908.86, down 0.54% in the prior session and 0.99% over 20 sessions, the Nasdaq 100 fell 1.16% and the VIX rose 0.7 points to 18.63 (Yahoo Finance, prior close 2026-02-26)."
-    ],
-    [
-     "New / Most Important",
-     "Nvidia's beat did not rescue the AI trade: Wall Street ended lower as the tech rally stalled and AI fervour waned after the results [[n7390]]. NVDA fell 5.46% to 184.89 while the Russell 2000 rose 0.52% (Yahoo Finance, prior close 2026-02-26) — money rotated toward breadth rather than leaving equities. That is healthy for market internals, but it leaves the S&P 500 exposed if expectations for AI capex, the engine of a third of growth [[n6728]], are trimmed."
-    ],
-    [
-     "Playbook ✓",
-     "Stay Mixed with a rotation tilt: own equal-weight and small caps (IWM) over mega-cap tech, and keep IEF duration while the 10Y holds below 4.26%, its level 20 observations ago (US Treasury, prior close 2026-02-26). The next test is the PPI release highlighted for Friday [[n6761]]: a soft print keeps Fed Governor Miran's case for four quarter-point cuts this year alive [[n7336]], while a hot one pushes the 2Y back toward 3.56% (US Treasury, prior close 2026-02-26) and favours banks over duration."
+  "date": "2026-02-27",
+  "geo": [
+    {"key": "US", "stance": "Mixed", "label": "hold / tariff uncertainty",
+     "parts": [
+      ["Macro Stance", "US growth data is steady and the labour market is not forcing the Fed's hand. Initial jobless claims were 212,000, lower than expected [[n6717]], and the unemployment rate is seen unchanged for February [[n6714]]. Fed speakers differ on timing: Goolsbee sees several more cuts this year but not soon [[n7335]], Miran still sees four quarter-point cuts this year [[n7336]], and the odds of early cuts under a Warsh-led Fed have slid [[n7333]]. The CBO sees the deficit reaching 5.9% of GDP by 2030 [[n6729]], which is the fiscal drag the rate debate has to absorb. Stance: Mixed. The data supports waiting, but the cut path now depends on who runs the Fed and on the deficit."],
+      ["Rates & Curve", "The 2Y closed at 3.42% and the 10Y at 4.02% (US Treasury, prior close 2026-02-26), leaving the 10Y-2Y spread at 60 bps and the 10Y-3M spread at 34 bps. The 30Y closed at 4.67% and the 3M at 3.68%, with the 30Y-10Y spread at 65 bps. Over 20 sessions the 10Y is down 24 bps and the 2Y down 14 bps, so the curve is a bull flattening (both down, 10Y down more), and it is moderately steep, approaching the long-run average. Over five sessions the 10Y is down 6 bps. Mortgage rates fell below 6% for the first time since 2022 [[n6735]], and Bloomberg reports the same threshold for the 30-year rate [[n6749]]. Treasury yields fell as investors awaited more data [[n7365]]. The S&P 500 closed at 6,908.86, down 0.54% in the prior session and 0.99% over 20 sessions; the Nasdaq 100 at 25,034.37 is down 3.80% over 20 sessions; the VIX closed at 18.63, up 13.94% over 20 sessions; the DXY at 97.79 is up 1.39% (Yahoo Finance, prior close 2026-02-26)."],
+      ["New / Most Important", "The new fact is that Nvidia fell after a record quarter. A CNBC headline says the blowout report disappointed Wall Street as the stock sank 5% [[n7380]], and the Nasdaq Composite dropped 1.2% as Nvidia pulled tech lower [[n7409]]. Nvidia's quarterly profit reached $43 billion [[n5585]], but investors wanted more cash return [[n5576]]. The software sell-off is the other half of the story: the WSJ calls it a $1.6 trillion meltdown [[n7379]], and Goldman's prime brokerage says US software stocks will keep rebounding [[n2779]]. Bond traders are pricing the risk in duration, with Barron's warning that the tariff ruling could hit bond portfolios [[n7367]]."],
+      ["Playbook ✓", "Mixed. Keep a benchmark US equity book but do not chase the index on the Nvidia print. The S&P 500 is caught in an extremely narrow trading range [[n7394]], so breadth needs to confirm any rally. Hold duration rather than cash while the 10Y is 24 bps lower over 20 sessions. Trigger to add risk: a VIX that gives back its 13.94% rise over 20 sessions while the 10Y holds below 4.02%. Trigger to cut risk: a reversal of the 10Y decline that puts the bull flattening into reverse, or a Nasdaq 100 break further below its 20-session level of 3.80% lower."]
+     ]},
+    {"key": "EU", "stance": "Mixed", "label": "ECB succession / fragmented trade",
+     "parts": [
+      ["Macro Stance", "European equities closed near records: the STOXX 600 is up 4.29% over 20 sessions at 633.18, the CAC 40 up 6.81% at 8,620.93, the FTSE 100 up 6.64% and the DAX up 4.03% (Yahoo Finance, prior close 2026-02-26). Engie jumped 7% after a $14 billion UK power grid deal [[n2470]], and a Bloomberg headline says European buybacks are at a record [[n2471]]. Stance: Mixed. The equity bid is real, but the trade frame is unsettled: the Reuters explainer asks whether Trump's new surcharge leaves the EU worse off than under the trade deal [[n3146]]."],
+      ["Credit & Inflation", "Euro-area food inflation is expected to settle just above 2%, the ECB says [[n2447]], and Lagarde says falling inflation still does not feel real for households [[n2451]]. Eurostat's January reading was 1.7% [[n2401]], so the disinflation is progressing but not finished. The ECB sold some dollar assets and cut the weight of the dollar in its reserves [[n2442]], a reserve-diversification signal that matters for the currency. On credit, global spreads widened by the most in months as strains mounted [[n2744]], which is a global signal rather than a Europe-only one."],
+      ["New / Most Important", "The ECB leadership is still the political story. Lagarde again hinted at completing her term [[n2443]], but economists expect her to exit early and hand the job to Knot [[n2385]], and the EU has set a March date for the customs race that Bloomberg frames as a prelude to the ECB tussle [[n2387]]. Lagarde's additional BIS salary remains under fire [[n2282]]. Merz concluded his China trip saying challenges remain [[n0946]], and the German chancellor's visit leaves Berlin with stronger ties to Beijing even as the Trump trade battle looms [[n2459]]."],
+      ["Playbook ✓", "Mixed. Own the European index into a weaker dollar, since the ECB is trimming its dollar reserves [[n2442]] and that supports the euro. Trigger to turn Bullish on cyclicals: the EU resuming its vote on the US trade deal with no new US tariff step. Trigger to turn Bearish: a US surcharge that Brussels answers with retaliation. Keep the ECB succession on the watch list, because a change at the top would change the rate path for the second half of the year."]
+     ]},
+    {"key": "CN", "stance": "Mixed", "label": "yuan strength / property divergence",
+     "parts": [
+      ["Macro Stance", "China's domestic story is holiday consumption and a strong currency, with a stall in internet and AI names. Chinese travellers spent little despite the rise in trips [[n0941]], although jewellery sales surged 33.4% a day during the Spring Festival holiday, per the chamber [[n0963]]. Baidu's revenue fell as AI cloud growth failed to offset advertising weakness [[n0943]]. Stance: Mixed. The consumption read is positive on volume and weak on value, and the currency is doing more of the work than the domestic economy."],
+      ["PMIs & Activity", "The feed carries no fresh official China manufacturing PMI in the window, so the activity read rests on holiday, retail and corporate data. Hong Kong Exchanges and Clearing's earnings show normalisation setting in as stimulus cycles through [[n0966]], and the Hang Seng Tech Index is stuck in a bear market [[n0986]]. The Hang Seng itself closed at 26,381.02, down 1.44% in the prior session and down 1.44% over 20 sessions (Yahoo Finance, prior close 2026-02-26). Confirmation would come from the next manufacturing print: a reading that holds above 50 would turn the stance Bullish, while a miss would confirm the stall."],
+      ["Credit Impulse", "The feed has no fresh total social financing print, so the credit impulse cannot be measured from headlines. The policy signal runs through the currency. The PBOC set another stronger fixing [[n0917]], while Beijing is trying to slow the yuan's gains by making it costlier to short the currency [[n0915]]. A Reuters commentary argues China must uncap the yuan to win Europe's embrace [[n0922]]. Until a TSF print turns positive, we read credit as stable rather than expanding, and the currency is not a substitute for credit."],
+      ["Property", "The price signal is split. Hong Kong home prices reached a 19-month high as the rise gathers pace [[n0882]], with analysts forecasting a 2026 rise of at least 10% [[n0881]]. The mainland is different: Shanghai eased residency requirements for homebuyers to spark a recovery [[n0883]], but the supply side is still being managed, with steel mills asked to curb output at a government meeting [[n0884]]. Hong Kong is a separate market from the mainland, so the Hong Kong recovery does not show up in mainland property prices."],
+      ["Fiscal, Policy & Trade", "The US is keeping China tariffs steady ahead of a key Trump–Xi meeting, according to Greer [[n0969]], and China has received a major reprieve on tariffs, though no reversal is expected [[n0968]]. Beijing's export controls are coming of age as Trump reins in China tech curbs [[n0961]], and China has opened its capital account in Hong Kong gently [[n0928]]. Japan is the sharper edge: China's export bans on Japanese firms escalated the pressure on Tokyo [[n0781]]. Nvidia still has not sold its US-approved China AI chips and is worried local rivals could take over [[n0944]]."],
+      ["Markets & Flows", "The Shanghai Composite closed at 4,146.63, down 0.01% in the prior session and up 0.72% over 20 sessions. ASHR, the CSI 300 tracker, closed at 34.17, up 1.52% over 20 sessions, while FXI fell 2.68% in the session to 37.39 and KWEB fell to 31.46, down 12.83% over 20 sessions (Yahoo Finance, prior close 2026-02-26). USD/CNY closed at 6.8692, down 1.23% over 20 sessions, so the yuan keeps strengthening. Four Hong Kong listings seek $626 million as the market revives after the Lunar New Year [[n0987]], and South Korean investors are pouring millions into Chinese AI and tech stocks [[n0989]]."],
+      ["New / Most Important", "The yuan is the new fact. The currency's rally is getting a policy response, with Beijing moving to slow the gains [[n0915]] while options traders target 5% gains [[n0923]]. Merz left China with stronger ties as the Trump trade battle looms [[n2459]], and the yuan had already picked up ahead of his visit [[n0924]]. For investors the question is whether the currency rally can hold through the Trump–Xi meeting without a policy brake."],
+      ["Playbook ✓", "Mixed. Prefer ASHR and broad onshore exposure over KWEB and the Hang Seng Tech. Trigger to turn Bullish: a tariff settlement before the Trump–Xi meeting or a consumption package that the holiday data can fund. Trigger to turn Bearish: a summit that stalls alongside a further escalation in export controls. ⚠ Divergence: the PBOC is leaning against yuan strength [[n0915]] while it keeps setting stronger fixings [[n0917]], and the Hang Seng is down 1.44% over 20 sessions despite the currency's rally."]
+     ]},
+    {"key": "JP", "stance": "Mixed", "label": "hawkish words, dovish board",
+     "parts": [
+      ["Macro Stance", "The BOJ has left the door open to near-term rate hikes, and the yen reclaimed some ground [[n7346]]. The yen strengthened after the BOJ signalled data-driven hikes [[n3446]], but the government has put two doves in a row on the board [[n3447]], and it picked reflationists for the board in line with Takaichi's view [[n3450]]. Stance: Mixed. The central bank is hawkish in its words and the board is dovish in its votes, and the yen is where that split shows."],
+      ["Activity & Currency", "Core inflation in Tokyo slowed below the BOJ's 2% target in a test for policy [[n6719]], while the yen touched roughly a two-week low on the board picks [[n3452]] and the finance minister signalled greater vigilance over yen weakness [[n3457]]. USD/JPY closed at 156.2000, up 2.03% over 20 sessions, and the Nikkei 225 closed at 58,753.39, up 10.16% over 20 sessions (Yahoo Finance, prior close 2026-02-26), with the index at a new record high [[n3467]]."],
+      ["Playbook ✓", "Mixed: own the Nikkei, which is at a record, but pair it with a yen hedge because the currency is where the policy risk sits. Trigger to turn Bullish on the yen: a BOJ hike in the spring that the board endorses. Trigger to turn Bearish on the yen: a hold with a dovish board majority and USD/JPY moving decisively through its 156.2000 close. Ultra-long JGBs stay a second-order risk until the board votes are clear."]
+     ]},
+    {"key": "AU", "stance": "Mixed", "label": "hawkish RBA, hot core",
+     "parts": [
+      ["Macro Stance", "The RBA is on the defensive. The governor says inflation is not taking off again [[n0239]], but the hot inflation figures kept a rate hike on the table [[n0231]], and Bullock says patience is needed as rate calls get tougher [[n0233]]. The March decision is a live risk after the inflation surprise [[n0232]]. Stance: Mixed, with a tightening bias: the domestic rate path leans hawkish while the currency and the stock market are still rising."],
+      ["Demand & Financing", "AUD/USD closed at 0.7120, up 1.15% over 20 sessions, and the ASX 200 at 9,175.30, up 2.33% (Yahoo Finance, prior close 2026-02-26). Carry-trade demand is lifting the currency [[n0234]]. Lenders are passing the cycle on, with Westpac and CBA raising fixed rates in a warning to borrowers [[n0242]]. WiseTech will cut 2,000 jobs as AI ends manual coding [[n0246]], and investors are weighing whether the AI-driven cuts and steady guidance change the case for the stock [[n1955]]. Qantas posted record earnings [[n2001]], and Chalmers is eyeing a budget upgrade as gold eclipses gas exports [[n0293]]."],
+      ["Playbook ✓", "Mixed. Hold the ASX 200 with a bias towards banks, which benefit from a hike, and keep the AUD exposure hedged around the March decision. Trigger to add: a March hike that is not followed by a pause. Trigger to cut: a core inflation print that falls back, which would take the May-hike bet off the table."]
+     ]},
+    {"key": "PL", "stance": "Mixed", "label": "easing bias / weak activity",
+     "parts": [
+      ["Monetary & Activity", "The monetary council decides on rates, and the decision will be felt beyond borrowers [[n4060]]. The economy is speeding up while the labour market cools [[n4063]], and the EBRD expects Polish growth of 3.7% this year [[n3575]]. The budget is the weak link: revenues for 2025 came in nearly 30 billion lower [[n3941]] while state spending grew [[n3942]], and the Commission warns that debt will breach 100% of GDP by 2036 [[n3569]]. Housing is turning: Poland saw its first annual house-price fall since 2013 [[n3557]], and 90 thousand mortgages left bank portfolios as variable rates gained [[n4153]], even as new mortgage lending rose 32% [[n4156]]."],
+      ["FX & Markets", "USD/PLN closed at 3.5654, down 0.38% in the prior session and up 1.59% over 20 sessions, and EUR/PLN at 4.2122, up 0.21% over 20 sessions (Yahoo Finance, prior close 2026-02-26). EPOL closed at 38.19, down 1.34% in the session, while the Beta ETF WIG20TR at 68.59 is up 1.99% over 20 sessions. Named stocks: KGHM closed at 321.80, down 5.91% in the session after a 7.63% gain over five sessions; PKN Orlen at 115.24, up 8.23% over 20 sessions; PKO BP at 93.60, up 3.06%; PGE at 11.09, up 16.30%; PZU at 67.54, down 2.60% (Yahoo Finance, prior close 2026-02-26). The zloty is stable against the franc [[n4068]]."],
+      ["Companies", "Orlen plans to inject 5.1 billion zloty into utility Energa [[n3571]], and its gas-bill change is one of the few household-facing moves in the state champion's plan [[n4010]]. KGHM has a new CEO [[n3961]] and a wage agreement with unions [[n4027]]. Chemical maker Azoty seeks an 83% debt writedown in its polymer restructuring [[n3538]]. The regulator is active too: the competition watchdog searched Allegro's offices in Poznań and Warsaw [[n3588]], and PKO BP had a large outage that customers reported before service was restored [[n4076]]."],
+      ["Security & New Development", "Security policy is now a market story. Poland withdrew from the treaty banning anti-personnel mines [[n3523]], and five countries will develop low-cost air-defence systems together [[n3549]]. Poland ended the special status of Ukrainian refugees [[n3517]], and nearly one million Ukrainian refugees are in Poland after four years of war [[n3556]]. Foreign Minister Sikorski says Poland is a loyal US ally but cannot be a 'sucker' [[n3590]]."],
+      ["Playbook ✓", "Mixed: own the state-linked cash generators, KGHM and Orlen, for the commodity and dividend tailwind; avoid domestic-demand names until labour and budget data turn; and treat the zloty's 1.59% gain on the dollar as a hedge cost rather than a trend. Trigger to turn Bullish on domestic names: a rate decision that signals cuts without a further labour slide. Trigger to turn Bearish: a further revenue shortfall in the budget. ⚠ Divergence: state-linked names rose strongly over 20 sessions, with PGE up 16.30% and PKN up 8.23%, while the budget revenue came in nearly 30 billion lower [[n3941]] and the labour market is cooling [[n4063]]."]
+     ]}
+  ],
+  "sectors": [
+    {"key": "XLK", "stance": "Mixed", "parts": [
+      ["Narrative", "Technology is split between AI hardware and AI software. XLK closed at 141.01, down 1.40% in the prior session and 5.51% over 20 sessions (Yahoo Finance, prior close 2026-02-26). The software sell-off is the driver: the WSJ calls it a $1.6 trillion meltdown [[n7379]], while AI is now seen as saving some software names [[n7382]]."],
+      ["Reported", "Nvidia's blowout quarter disappointed Wall Street and the stock sank 5% [[n7380]], with investors wanting more cash return [[n5576]]. Salesforce's record $50 billion buyback is controversial with Wall Street [[n7384]], and Intuit's guidance missed estimates [[n1948]]."],
+      ["EPS Upside Watch", "Dell expects AI server revenue to double in fiscal 2027 [[n5633]], the one hardware forward signal in the feed. The headwind is cost: the smartphone market is set for its biggest-ever decline in 2026 on a memory price surge [[n5625]], which also squeezes PC makers."],
+      ["⚡ Breaking Convention", "Nvidia's record quarter got a sell-off while Goldman's prime brokerage expects US software stocks to keep rebounding [[n2779]]. The AI-hardware and software-rebound trades are working against each other, which breaks the single AI consensus."]
+    ]},
+    {"key": "XLC", "stance": "Mixed", "parts": [
+      ["Narrative", "Communication services is a mix of ad platforms and streaming. XLC is flat over 20 sessions at 116.72 (Yahoo Finance, prior close 2026-02-26). Alphabet is down 8.52% over 20 sessions at 307.38, while Meta is down 1.75% at 657.01 and Netflix is up 9.86% over five sessions at 84.59."],
+      ["Reported", "Warner Bros. Discovery missed Q4 estimates and revenues fell year on year [[n1950]]. Zoom posted a rare quarterly earnings miss, although its fundamentals remain strong [[n1940]]."],
+      ["EPS Upside Watch", "Meta signed a multi-billion-dollar deal to rent Google AI chips [[n2787]], so platform compute is being sourced across rivals. The feed carries no preview headline for the other platform names in the card."],
+      ["⚡ Breaking Convention", "Meta renting Google's AI chips [[n2787]] is a sign that platform capex is spreading across vendors. That cuts against the single-winner consensus in AI hardware and is a reason the platform names are not yet rallying with Nvidia."]
+    ]},
+    {"key": "XLF", "stance": "Mixed", "parts": [
+      ["Narrative", "Financials are mixed. XLF is up 1.21% in the prior session but down 0.92% over 20 sessions at 52.50 (Yahoo Finance, prior close 2026-02-26). Private-credit stress is the drag: Apollo's private-credit fund marked down its portfolio on soured loans [[n5673]], and FS KKR's private-credit fund cut its dividend amid rising bad loans [[n5676]]."],
+      ["Reported", "RBC beat profit estimates on personal banking and wealth management [[n1930]], with a $5.79 billion first-quarter profit [[n2018]]. TD reported a $4.04 billion Q1 profit, up from $2.79 billion a year earlier [[n1968]], and CIBC posted record revenue across its divisions [[n2016]]."],
+      ["EPS Upside Watch", "Canadian banks are the beat-and-hold set-up. The feed says big Canadian banks beat profit estimates as the economy resists the tariff impact [[n1936]], and wealth and trading lines are the drivers. Those lines are the most likely to beat again."],
+      ["⚡ Breaking Convention", "Private-credit stress keeps landing on lenders' balance sheets. Marathon's Richards fears 15% direct-loan software defaults [[n5674]], and Bain Capital's Rufino warns the software default rate could hit double digits [[n2745]]. Bank beats do not offset that."]
+    ]},
+    {"key": "XLE", "stance": "Bullish", "parts": [
+      ["Narrative", "Energy has been the strongest sector over 20 sessions: XLE is up 9.99% at 55.05 (Yahoo Finance, prior close 2026-02-26), while Brent closed at 70.75 and WTI at 65.21. Oil settled down after a choppy session as traders followed the US–Iran talks [[n5636]], and a Reuters commentary says geopolitical turmoil gives OPEC+ cover for a cautious output hike [[n5641]]."],
+      ["Reported", "Alberta projects a C$9.4 billion deficit on lower oil prices [[n5638]], a sign of the price drag on producers. Trump pushed for lower gas prices and got them, and the oil industry is paying the price [[n5639]]."],
+      ["EPS Upside Watch", "The energy earnings set-up is price-sensitive rather than volume-driven. The falling gasoline price [[n5639]] and the provincial deficit [[n5638]] point to producers facing the price drop, so upside sits with hedged producers that have cash-return plans."],
+      ["⚡ Breaking Convention", "Energy is rallying over 20 sessions while the policy push is for lower pump prices [[n5639]]. A policy that works against the sector's price is the convention breaker: the sector is up on Iran risk while the administration is pushing prices down."]
+    ]},
+    {"key": "XLI", "stance": "Bullish", "parts": [
+      ["Narrative", "Industrials are in a capex cycle. XLI is up 7.65% over 20 sessions at 176.70 and up 0.63% in the prior session (Yahoo Finance, prior close 2026-02-26). Power and grid equipment are the engine, with GE up 16.53% over 20 sessions at 340.84."],
+      ["Reported", "Schneider Electric rose after earnings as AI data-centre growth drove its outlook [[n1978]], and Rolls-Royce shares popped as profits jumped nearly 40% [[n1979]]. Engie jumped 7% after a $14 billion UK grid deal [[n2470]]."],
+      ["EPS Upside Watch", "The set-up is data-centre power equipment and grid build-out. Schneider's AI data-centre outlook [[n1978]] is the forward line to watch, and the grid deals show the capex is moving from plans to contracts."],
+      ["⚡ Breaking Convention", "The White House data-centre power deal is short on specifics: Trump's deal is still unclear in its detail [[n5782]], and Georgia's Senate blocked a vote on a data-centre energy bill [[n5798]]. Industrials gain from the build-out only if the rules become clear."]
+    ]},
+    {"key": "XLY", "stance": "Bearish", "parts": [
+      ["Narrative", "Consumer discretionary is weak on the card: XLY is down 3.88% over 20 sessions at 117.05, Amazon is down 14.44% over 20 sessions at 207.92 and Tesla is down 5.30% at 408.58 (Yahoo Finance, prior close 2026-02-26). Tesla's China problem keeps getting worse in Europe [[n5692]], and China's carmakers are ceding ground in Europe [[n5684]]."],
+      ["Reported", "Shake Shack's earnings explosion sent its shares soaring [[n1939]], but Sweetgreen's $5 billion stock wipeout followed soggy fries and lettuce shortages [[n2061]]. Hertz is buying Dollar Thrifty for about $2.3 billion [[n2799]]."],
+      ["EPS Upside Watch", "The beats that work are the ones with a sales lift and a clear traffic story, as Shake Shack's rally shows [[n1939]]. Discretionary names without a forward raise are not the EPS set-up."],
+      ["⚡ Breaking Convention", "Hertz's purchase of Dollar Thrifty is a consolidation bet in a sector the card shows falling. Deal activity is supporting the rental names while the discretionary tape is weak, which is the reverse of the consumer-spending narrative."]
+    ]},
+    {"key": "XLP", "stance": "Mixed", "parts": [
+      ["Narrative", "Staples are the defensive winner over 20 sessions: XLP is up 7.94% at 88.86 (Yahoo Finance, prior close 2026-02-26), and Walmart is up 6.73% over the same window at 124.42. The driver is rotation out of AI-exposed growth and into cash-generating names."],
+      ["Reported", "Diageo's share price crashed after its dividend cut, and the question is whether it is a buy, a hold or a sell [[n1956]]. Hormel missed quarterly sales estimates on weak retail demand [[n6723]]."],
+      ["EPS Upside Watch", "The feed has no preview headline for the staples names in the card. The EPS upside sits with the staples that can hold price and volume, and the Hormel miss shows that volume is the test."],
+      ["⚡ Breaking Convention", "Staples are up while Diageo's dividend cut and Hormel's sales miss show defensive names are not immune to weaker volumes. The defensive label is the weak point of the trade."]
+    ]},
+    {"key": "XLV", "stance": "Mixed", "parts": [
+      ["Narrative", "Healthcare is mixed: XLV is up 2.02% over 20 sessions at 157.42 (Yahoo Finance, prior close 2026-02-26). The policy overhang is drug pricing: Politico asks whether the drug-pricing hurdle can be cleared [[n5824]], and TrumpRx savings for the insured are limited by US discount laws [[n5830]]."],
+      ["Reported", "Hikma's gloomy outlook sent its shares to a more-than-three-year low [[n5818]]. The Justice Department backs AbbVie in its bid to overturn a Colorado law guiding drug discounts [[n5826]]."],
+      ["EPS Upside Watch", "The drug-pricing rules are the main earnings driver in the feed, so the EPS upside is in names with little US price exposure. The feed carries no positive preview for the large caps in the card."],
+      ["⚡ Breaking Convention", "Lilly is down 0.17% over 20 sessions at 1,022.02, yet the TrumpRx headline shows that enforcement of the pricing push is limited [[n5830]]. The convention that price cuts hurt the leader is being tested by the limits on the policy itself."]
+    ]},
+    {"key": "XLB", "stance": "Bullish", "parts": [
+      ["Narrative", "Materials are a commodity-leverage trade: XLB is up 6.11% over 20 sessions at 53.00 (Yahoo Finance, prior close 2026-02-26). Gold closed at 5,194.20, down 2.06% over 20 sessions after a 3.94% gain over five sessions, while silver at 87.00 is down 23.09% over 20 sessions. JPMorgan sees gold at $6,300 by the end of the year [[n5865]]."],
+      ["Reported", "Lynas profit jumped as geopolitics 'reshape' the rare-earths market [[n0978]], and Lynas is cashing in on Trump's critical-minerals drive [[n0979]]. Copper's rally has run into a wall: copper edged lower as traders await China demand [[n5857]]."],
+      ["EPS Upside Watch", "The EPS set-up is producers whose costs stay put while prices rise. Gold miners are the candidates, and the feed shows Gunnison's updated study highlights 3.2 billion pounds of copper production [[n5862]], a long-dated supply story."],
+      ["⚡ Breaking Convention", "China's copper went from investment fad to scrap in a month [[n0937]], so copper's move is about China positioning rather than a growth read. Silver is down over 20 sessions even as the sector is up, which is the convention breaker in the materials trade."]
+    ]},
+    {"key": "XLRE", "stance": "Mixed", "parts": [
+      ["Narrative", "Real estate is a rate trade: XLRE is up 6.81% over 20 sessions at 43.63 (Yahoo Finance, prior close 2026-02-26). Mortgage rates below 6% for the first time since 2022 [[n6735]] are the driver, and the relief for US homeowners is widely reported [[n6752]]."],
+      ["Reported", "Bloomberg's headline on the 30-year mortgage rate confirms the threshold [[n6749]], and the Hill reports rates below 6% for the first time in more than three years [[n6758]]."],
+      ["EPS Upside Watch", "Builders are the EPS watch. Mortgage volume is the question: economists do not expect a housing boom from the lower rate [[n7366]], so the set-up favours builders that can convert rate relief into orders."],
+      ["⚡ Breaking Convention", "Rates are falling but transactions are not following: economists do not expect a housing boom [[n7366]]. The sector is priced for rates, while volume is the signal it does not yet have."]
+    ]},
+    {"key": "XLU", "stance": "Bullish", "parts": [
+      ["Narrative", "Utilities are the AI-power trade: XLU is up 8.89% over 20 sessions at 47.18 and Constellation is up 12.37% at 323.56 (Yahoo Finance, prior close 2026-02-26). The White House is hosting Big Tech after a pledge to rein in power costs [[n5779]], and the data-centre share of US electricity is seen doubling by 2030 [[n5781]]."],
+      ["Reported", "Vistra reported its fourth-quarter and full-year 2025 results [[n1992]], and Texas approved a data-centre gas power project [[n5796]]."],
+      ["EPS Upside Watch", "The capital plans carry the earnings. A new Google data centre triggers 1.9 GW of clean energy [[n5777]], which is demand that regulated and merchant generators can contract against."],
+      ["⚡ Breaking Convention", "The pledge is unclear on what it commits. Politico's headline asks what is in the Trump data-centre deal [[n5782]], and Semafor argues the problem is the data-centre power plan itself [[n5780]]. The power trade is priced for a commitment that is still undefined."]
+    ]},
+    {"key": "SXAP", "stance": "Bearish", "parts": [
+      ["Narrative", "European autos are the laggard within the rally. The iShares STOXX Europe 600 Automobiles tracker closed at 46.40 in euros, up 2.62% over 20 sessions (Yahoo Finance, prior close 2026-02-26), but Stellantis is down 17.01% over 20 sessions at 8.05. Stellantis posted its first annual loss in its history after EV write-downs [[n5704]]."],
+      ["Reported", "Stellantis warned of higher US tariff costs as it reported a €22 billion loss [[n5740]], and the US closed its probe into 7.4 million Stellantis vehicles without seeking a recall [[n5710]]. Its shares rose despite the loss [[n5728]]."],
+      ["EPS Upside Watch", "The EPS set-up for autos is a turnaround that has to show profit. Stellantis's CEO vows a profit rebound after the EV write-down [[n5701]], and Volkswagen is betting on self-driving to win the growth argument [[n5700]]."],
+      ["⚡ Breaking Convention", "Stellantis rose on an annual loss [[n5728]] while it weighs using Chinese EV technology for the first time in Europe [[n5716]]. The market rewards the turnaround, and the European supply chain is turning toward Chinese technology."]
+    ]},
+    {"key": "SOXX", "stance": "Bullish", "parts": [
+      ["Narrative", "Semis lead the AI hardware trade but are in a pullback: SOXX is down 1.02% over 20 sessions at 356.80 and fell 3.04% in the prior session; SMH is at 412.01, down 3.32% in the session (Yahoo Finance, prior close 2026-02-26). TSMC expects AI chip revenue to grow at a 60% CAGR through 2029 [[n5601]]."],
+      ["Reported", "Nvidia's stock fell after its record quarter [[n7383]]. ASML was down on the day [[n5607]], even as the company says its next-generation EUV tools are ready to mass-produce chips [[n5608]]."],
+      ["EPS Upside Watch", "Micron is up 326% in a year [[n5632]], but its shares are 4.53% lower over 20 sessions at 415.56 (Yahoo Finance, prior close 2026-02-26). The next memory print will show whether pricing carries into earnings; the smartphone market is set to shrink 13% on the memory crisis [[n5624]]."],
+      ["⚡ Breaking Convention", "The memory boom is a cost for device makers. IDC says the smartphone market faces its biggest-ever decline in 2026 on a memory price surge [[n5625]]. Semis gain from the cost that hurts their customers, and Nvidia's sell-off shows that a strong print is not enough when the forward line is only in line."]
+    ]}
+  ],
+  "earnings_pattern": {"title": "Earnings Pattern: the beat is priced, the guide decides",
+    "parts": [
+      ["Rewarded", "Beats with a forward line were paid. LSEG shares jumped as the exchange group forecast a profitability boost and promised $4 billion of buybacks [[n1975]], and Rolls-Royce's profit jumped nearly 40% [[n1979]]. IonQ jumped 22% after an earnings beat, with a 2026 revenue outlook above forecasts [[n1935]]. Shake Shack's earnings explosion sent its shares soaring [[n1939]]."],
+      ["Punished", "Beats without a forward raise were not. Nvidia sank 5% on a record quarter [[n7380]], Duolingo tumbled 22% on weak guidance and slowing user growth [[n1971]], CoreWeave slid as its quarterly revenue guidance disappointed [[n1963]], and Intuit's guidance missed estimates [[n1948]]. Salesforce crushed earnings by 25% and still cannot get any respect [[n1945]]."],
+      ["Pattern", "The guide is the pricing unit, and the beat is already in the price. Names with AI-supply exposure were sold on the forward line: Nvidia fell on returns [[n5582]] and CoreWeave on guidance [[n1963]]. Names with a profit trajectory rose: LSEG and Rolls-Royce. Salesforce's $50 billion buyback is controversial [[n7384]], which shows that capital return does not rescue a weak forward line. The card's Nvidia move (down 5.46% in the prior session) is the test case for the pattern."],
+      ["Attention into EPS", "The next tests are set up. Snowflake's beat lost steam after results [[n1932]], although its $7.88 billion revenue backlog is impressive [[n1941]]. Dell's AI server guide [[n5633]] is the next hardware read on whether the forward line holds up. The Nvidia case says the market is looking for more cash return and a lower-risk guide, not just a bigger quarter."],
+      ["Playbook", "Own beat-and-raise and profit-trajectory names into the next print. Sell AI-supply names into strength where the forward line is only in line, and avoid software that beats without a raise. Trigger to reverse: a cash-return announcement from Nvidia that answers the investor complaint [[n5576]], which would reset the AI-supply multiple."]
     ]
-   ]
   },
-  {
-   "key": "EU",
-   "stance": "Bullish",
-   "label": "ECB on hold / buyback bid",
-   "parts": [
-    [
-     "Macro Stance",
-     "Europe remains the better risk-reward. Euro-area inflation was confirmed at 1.7% in January [[n2401]], below target, and European markets closed flat on the day Wall Street sold AI leaders, with Engie jumping 7% after a $14 billion UK power-grid deal [[n2470]]. The STOXX 600 closed at 633.18, up 4.29% over 20 sessions, against a 0.99% fall for the S&P 500 (Yahoo Finance, prior close 2026-02-26)."
-    ],
-    [
-     "Activity & Inflation",
-     "Inflation at 1.7% [[n2401]] gives the ECB room to sit tight with an easing bias. The euro rose 0.34% to 1.1815 in the prior session but is still down 1.36% over 20 sessions (Yahoo Finance, prior close 2026-02-26), which keeps exporters competitive. The DAX closed at 25,289.02 and the CAC 40 at 8,620.93, up 4.03% and 6.81% over 20 sessions (Yahoo Finance, prior close 2026-02-26) — the rally is broad rather than concentrated in one sector."
-    ],
-    [
-     "New / Most Important",
-     "Two flow signals favour Europe: Bloomberg argues record stock buybacks make Europe an even better pick than the US [[n2471]], and the ECB is selling some dollar assets and cutting the dollar's weight in its reserves [[n2442]]. The ECB move is small in size but symbolically important — it reinforces the diversification away from US assets that has driven European outperformance."
-    ],
-    [
-     "Playbook ✓",
-     "Stay overweight European equities versus the US, led by utilities and grid owners — Engie's deal [[n2470]] shows the bid for regulated networks — and buyback-heavy banks, funded from US mega-cap tech. Add on dips while the Euro Stoxx 50 at 6,161.56 holds its 4.58% 20-session gain (Yahoo Finance, prior close 2026-02-26). What changes the call: a US-EU tariff escalation or a reversal in euro-area disinflation."
+  "underowned": [
+    {"title": "Chinese EV technology in Europe: the supply shift nobody models", "parts": [
+      ["Attention Gap", "Attention is on US tariffs and the EU trade deal, but the bigger European story is supply. Stellantis is weighing the use of Chinese EV technology for the first time in Europe [[n5716]], Leapmotor's technology could go into Fiat, Peugeot and Opel cars [[n5736]], and China's carmakers have ceded ground in Europe after surging in 2025 [[n5684]]."],
+      ["Exposure & Risk", "The exposure is Stellantis, which is down 17.01% over 20 sessions at 8.05 (Yahoo Finance, prior close 2026-02-26), and the European battery supply chain. Europe's battery dreams clash with China's manufacturing dominance [[n5690]]. The risk is that the shift is a loss of European jobs and a policy reversal, not a trade."],
+      ["Trigger to Watch", "A signed Stellantis deal on Chinese EV technology would make the theme consensus. A policy move to limit Chinese supply in Europe would reverse the thesis."]
+    ]},
+    {"title": "Hong Kong listings and the opening of the capital account", "parts": [
+      ["Attention Gap", "Hong Kong's listing revival gets less attention than the mainland stimulus debate. Four Hong Kong listings seek $626 million as the market revives after the Lunar New Year [[n0987]], and China is opening its capital account in Hong Kong gently [[n0928]]. Hong Kong's exchange earnings show normalisation setting in [[n0966]]."],
+      ["Exposure & Risk", "The exposure is Hong Kong exchanges and the offshore yuan, with the Hang Seng down 1.44% over 20 sessions at 26,381.02 (Yahoo Finance, prior close 2026-02-26). The risk is that the Hang Seng Tech Index stays in a bear market [[n0986]] even as the offshore currency gains."],
+      ["Trigger to Watch", "A formal step on the capital-account opening would make the Hong Kong listing story consensus. Further outflows from the Hang Seng Tech names would confirm the bear market."]
+    ]},
+    {"title": "Rare-earth magnets in the US: the shortage is the story", "parts": [
+      ["Attention Gap", "Rare-earth shortages are worsening in US aerospace and chips despite the trade truce, according to sources [[n0973]], and chipmakers are still suffering shortages [[n0974]]. The attention goes to Lynas and China, while the US magnet supply is still forming: MP Materials selected Texas for its rare-earth magnet manufacturing site [[n0975]]."],
+      ["Exposure & Risk", "Exposure is MP Materials, Lynas, and rare-earth-linked industrial names. Lynas's profit jumped as geopolitics reshapes the market [[n0978]], but the shortage is a supply constraint that can hurt chipmakers' output. The Economist warns that America's critical-mineral dominance is a dangerous pursuit [[n0970]]."],
+      ["Trigger to Watch", "The first commercial magnet output from the Texas site would move the theme to consensus. A renewed Chinese export restriction would widen the shortage and the premium."]
+    ]},
+    {"title": "Yen volatility and the split BOJ board", "parts": [
+      ["Attention Gap", "The yen is treated as a currency story, but the board split is the under-owned variable. The yen strengthened after the BOJ signalled data-driven hikes [[n3446]], while the government put two doves on the board [[n3447]] and picked reflationists [[n3450]]. The finance minister's vigilance over yen weakness [[n3457]] is the signal the market is still missing."],
+      ["Exposure & Risk", "The exposure is USD/JPY, at 156.2000 with a 2.03% gain over 20 sessions (Yahoo Finance, prior close 2026-02-26), and yen options. The risk is a dovish board majority that leaves the yen to slide while the Nikkei, at a record [[n3467]], keeps rising."],
+      ["Trigger to Watch", "A BOJ hike in the spring that the board endorses would reprice the yen. A joint or unilateral intervention would show the authorities' limit."]
+    ]}
+  ],
+  "crypto": {"title": "Crypto: the bounce above $70,000 did not hold",
+    "parts": [
+      ["Market Context", "Bitcoin closed at 67,453.77, down 0.81% over five sessions and 4.40% over 20 sessions (Yahoo Finance, prior completed daily close 2026-02-26). Ether closed at 2,026.79, down 1.77% over 20 sessions, and Solana at 85.91, down 1.78%. IBIT closed at 38.26, down 24.25% over 20 sessions, while MSTR closed at 133.40, down 15.81%, and COIN at 181.06, down 13.55%. Bitcoin rode the Nvidia wave above $70,000 before pulling back [[n1289]], and then resumed its slide after a quick pullback in risk appetite [[n1290]]."],
+      ["New / Most Important", "The stablecoin and institutional plumbing keep building. The GENIUS pitch has cast a dark cloud over the stablecoin model, according to CoinDesk [[n1341]], while Morgan Stanley says it will offer bitcoin custody, trading, yield and lending [[n1319]]. JPMorgan sees a crypto boost if the market-structure bill passes [[n1340]]. Circle is nearly 50% higher in two sessions since its earnings [[n4314]]."],
+      ["Playbook", "Mixed. The hurdle is the $70,000 close: Bitcoin spiked above it on the Nvidia wave [[n1289]] and failed to hold. Own protection on MSTR and COIN into any squeeze, and buy spot only on a daily close above $70,000. The trigger to turn bearish is another leg of ETF outflows, while BlackRock's dominance of the bitcoin ETF landscape [[n1317]] is the sign that flows are concentrating rather than leaving."]
     ]
-   ]
   },
-  {
-   "key": "CN",
-   "stance": "Mixed",
-   "label": "targeted easing / managed yuan",
-   "parts": [
-    [
-     "Macro Stance",
-     "China is a managed-currency, consumer-led story on top of weak credit, so we stay Mixed. The holiday headlines flattered: SCMP finds Chinese travellers spent little despite the rise in Lunar New Year trips [[n0941]], which tempers the consumption-rebound narrative. Policy remains targeted, and the market is now testing how far Beijing will let the yuan run."
-    ],
-    [
-     "PMIs & Activity",
-     "The latest official print is January's manufacturing PMI at 49.3 [[n0405]], in contraction; the February PMIs are next, and the feed carries no fresh activity data. Trips rose but spending per trip was thin [[n0941]], so we expect services to stabilise rather than accelerate. A manufacturing reading back above 50 would upgrade the view; another sub-50 print would confirm that external demand, not domestic, is doing the work."
-    ],
-    [
-     "Credit Impulse",
-     "January new loans jumped but missed forecasts as weak demand persisted [[n0556]]. With household borrowing soft, the credit impulse is flat; a stronger yuan gives the PBOC room to ease, but it has so far preferred targeted tools. The confirming signal would be a February loan beat led by household medium- and long-term lending, which the feed does not yet show."
-    ],
-    [
-     "Property",
-     "New home prices extended their decline in January as weak demand hounded the sector [[n0538]]. City-level relief has not yet put a floor under prices, so two consecutive months of narrowing declines would be the trigger to add developer exposure. Until then we stay underweight property and property-heavy banks, and treat any rally in developers as a selling opportunity."
-    ],
-    [
-     "Fiscal, Policy & Trade",
-     "USTR Greer says the US will keep China tariffs steady ahead of a key Trump-Xi meeting [[n0969]], removing near-term escalation risk for exporters and lowering the odds of Beijing retaliating. That stability matters after the US tariff reset. The feed carries no new fiscal stimulus figure; a consumption package aimed at the spending gap SCMP identifies [[n0941]] would be the upgrade trigger."
-    ],
-    [
-     "Markets & Flows",
-     "The Shanghai Composite closed flat at 4,146.63, up 0.72% over 20 sessions; ASHR fell 1.16% to 34.17, the Hang Seng 1.44% to 26,381.02 and KWEB 2.42% to 31.46, now down 12.83% over 20 sessions (Yahoo Finance, prior close 2026-02-26). USD/CNY closed at 6.8692, down 1.23% over 20 sessions (Yahoo Finance, prior close 2026-02-26): onshore equities and the currency are holding up while offshore tech keeps bleeding."
-    ],
-    [
-     "New / Most Important",
-     "Beijing is leaning against yuan strength: China is seeking to slow the yuan's gains by cutting the cost of shorting the currency [[n0915]]. That caps the pace of appreciation but signals tolerance for the trend rather than a reversal, and traders are doubling down on options that target 5% gains [[n0923]]. A managed, gradual appreciation is the best case for foreign holders of onshore assets."
-    ],
-    [
-     "Playbook ✓",
-     "Own the onshore leg via ASHR rather than KWEB, keep a modest long-CNY position sized for slow appreciation, and avoid developers until home-price declines narrow [[n0538]]. Upgrade to Bullish on a February manufacturing PMI above 50 plus a loan beat; downgrade if the Trump-Xi meeting slips or tariffs rise. ⚠ Divergence: holiday trips rose but travellers spent little [[n0941]] — the consumer rebound is in volumes, not wallets."
+  "flows": {"title": "Liquidity: spreads widen while the dollar's reserve role is contested",
+    "parts": [
+      ["Global Liquidity", "A Seeking Alpha headline says a $137 billion liquidity drain has begun and may mean trouble for stocks [[n2760]]. The ECB sold some dollar assets and cut the weight of the dollar in its reserves [[n2442]]. Hong Kong's shock move to tap its dollar defence fund fuels concern [[n2794]], while the Philippine peso is set for its best start in 14 years on stock inflows and a weak dollar [[n2786]]."],
+      ["Rates & Dollar", "The 10Y is 4.02% and the 2Y 3.42% (US Treasury, prior close 2026-02-26), a bull flattening over 20 sessions with the 10Y 24 bps lower. The DXY at 97.79 is up 1.39% over 20 sessions. Barron's warns the tariff ruling could hit bond portfolios [[n7367]], and Bloomberg says the Trump agenda needs allies to stick with Treasuries as the rest flee [[n7368]]. TLT closed at 90.27, up 3.05% over 20 sessions, and IEF at 97.60, up 1.77% (Yahoo Finance, prior close 2026-02-26)."],
+      ["Credit Check", "Global credit spreads widened by the most in months as strains mount [[n2744]]. Bain Capital's Rufino warns the software default rate could hit double digits [[n2745]], Dimon's 'dumb things' remark frames the private-credit debate [[n2746]], and FS KKR's private-credit fund cut its dividend [[n5676]]. HYG closed at 80.85, down 0.23% over 20 sessions, while LQD closed at 111.72, up 0.97% (Yahoo Finance, prior close 2026-02-26)."],
+      ["Equity & Fund Flows", "Private equity is targeting IPO escape velocity on AI winners [[n2783]], and Plaid's $8 billion valuation [[n2762]] shows private marks rising for some names. Man Group's shares fell as its profits declined even though its assets hit a record [[n2772]]. Retail is buying the dip: small investors bought Nvidia in record numbers after the open [[n5587]]. Buybacks are contested: Salesforce's $50 billion plan is proving controversial on Wall Street [[n7384]]."],
+      ["Portfolio Implication", "Mixed. Keep equity beta, but hedge credit by buying high-yield protection and staying in investment grade rather than high yield. Prefer duration while the curve bull-flattens and the 10Y is 4.02%. Keep a dollar hedge for emerging-market exposure, because reserve managers are trimming the dollar [[n2442]]. The signal to cut risk is HYG closing below its 80.85 level."]
     ]
-   ]
   },
-  {
-   "key": "JP",
-   "stance": "Bullish",
-   "label": "data-driven hikes / weak yen",
-   "parts": [
-    [
-     "Macro Stance",
-     "Japan stays the cleanest reflation equity trade. The yen strengthened after the Bank of Japan signalled data-driven rate hikes [[n3446]], but Takaichi has lined up doves on the board [[n3447]], so the hiking path is slower and more conditional. Gradual tightening with a still-weak yen is a supportive mix for equities."
-    ],
-    [
-     "Activity & Currency",
-     "USD/JPY closed at 156.20, up 2.03% over 20 sessions, and the Nikkei 225 at 58,753.39, up 10.16% (Yahoo Finance, prior close 2026-02-26). Core inflation in Tokyo slowed below the BOJ's 2% target [[n6719]], which weakens the case for a near-term hike, while the finance minister signalled greater vigilance over the yen's weakness [[n3457]] — official resistance now defines the yen's floor."
-    ],
-    [
-     "Playbook ✓",
-     "Stay long Japanese equities with half the yen exposure hedged, tilted to exporters over banks: below-target Tokyo inflation [[n6719]] pushes the next hike out. What changes the call: USD/JPY spiking well above its 156.20 close (Yahoo Finance, prior close 2026-02-26) into intervention territory, or a run of soft data that lets the board's dovish wing dominate [[n3447]] and drags on bank earnings."
-    ]
-   ]
-  },
-  {
-   "key": "AU",
-   "stance": "Mixed",
-   "label": "hiking bias / resource windfall",
-   "parts": [
-    [
-     "Macro Stance",
-     "Australia is split: sticky inflation on one side, a resource windfall on the other. Core inflation hit a 16-month high, raising bets on a May hike [[n6654]], while Treasurer Chalmers eyes a budget upgrade as gold eclipses gas exports [[n0293]]. We move to Mixed: the squeeze on households is real, but the terms-of-trade windfall supports the currency, the budget and the miners."
-    ],
-    [
-     "Demand & Financing",
-     "AUD/USD rose 0.84% to 0.7120 in the prior session and the S&P/ASX 200 0.51% to 9,175.30 (Yahoo Finance, prior close 2026-02-26), after Australian shares reset records as the earnings season rolled on [[n5438]]. We expect resources and banks to keep carrying the index while rate-sensitive retail and property lag, as long as the May hike [[n6654]] stays priced."
-    ],
-    [
-     "Playbook ✓",
-     "Own the AUD and gold and critical-mineral producers; underweight rate-sensitive retail and A-REITs. Trigger to turn Bullish: a soft next monthly CPI that removes the May hike. Trigger to turn Bearish: a global risk-off from failed US-Iran talks that hits the AUD and commodities together."
-    ]
-   ]
-  },
-  {
-   "key": "PL",
-   "stance": "Bullish",
-   "label": "easing cycle / strong growth",
-   "parts": [
-    [
-     "Monetary & Activity",
-     "Poland's growth case got another endorsement: the EBRD expects the economy to grow 3.7% this year [[n3575]]. January CPI landed in the target band though above forecasts, with economists weighing a March cut (inflacja w celu, ale powyżej prognoz — 'inflation on target but above forecasts') [[n3723]]. Mortgage demand is turning up, with the number of new home loans up 32% (Polacy ruszyli po hipoteki — 'Poles rush for mortgages') [[n4156]]."
-    ],
-    [
-     "FX & Markets",
-     "USD/PLN fell 0.38% to 3.5654 and EUR/PLN closed at 4.2122 (Yahoo Finance, prior close 2026-02-26). EPOL fell 1.34% to 38.19 and the Beta ETF WIG20TR 0.84% to 68.59, still up 1.99% over 20 sessions (Yahoo Finance, prior close 2026-02-26). KGHM dropped 5.91% to 321.80 alongside a 4.33% fall in silver futures, PZU lost 3.38% and Pekao 2.27%, while PGE jumped 7.67% to 11.09, up 16.3% over 20 sessions (Yahoo Finance, prior close 2026-02-26)."
-    ],
-    [
-     "Companies",
-     "Poland's competition watchdog searched Allegro's offices in Poznan and Warsaw [[n3588]]; ALE closed at 27.90, down 7.32% over 20 sessions (Yahoo Finance, prior close 2026-02-26). PKO BP suffered a major outage that left clients without access to their accounts (Wielka awaria w PKO BP — 'major outage at PKO BP') [[n4073]], an operational blemish rather than a balance-sheet issue. Orlen plans to inject 5.1 billion zlotys into utility unit Energa [[n3571]]."
-    ],
-    [
-     "Security & New Development",
-     "Poland, Germany, France, Italy and the UK will jointly develop low-cost air-defence systems [[n3549]], which keeps defence and engineering order books full and anchors Poland's role in European procurement. The cost is fiscal: defence spending competes with the room the RPP needs to keep cutting, which is why the zloty is sensitive to budget headlines."
-    ],
-    [
-     "Playbook ✓",
-     "Stay overweight Poland via EPOL or the WIG20TR ETF; use the KGHM and PZU sell-off to add, keep PKO and Pekao as core, and stay underweight Allegro while the competition probe runs. What changes the call: a hawkish RPP hold or fiscal slippage. ⚠ Divergence: consumer bankruptcies are clearly rising despite strong GDP (wyraźnie rośnie liczba upadłości konsumenckich — 'consumer bankruptcies clearly rising') [[n4062]] — household stress is building under the growth headline."
-    ]
-   ]
-  }
- ],
- "sectors": [
-  {
-   "key": "XLK",
-   "stance": "Mixed",
-   "parts": [
-    [
-     "Narrative",
-     "Tech is splitting in two: XLK fell 1.4% in the prior session and is down 5.51% over 20 sessions, while MSFT edged up 0.28% (Yahoo Finance, prior close 2026-02-26). After Nvidia, the market is rewarding cash and penalising capex — the driver has flipped from AI demand to AI returns."
-    ],
-    [
-     "Reported",
-     "Salesforce gave a disappointing sales outlook that fed AI fears [[n1881]], while Dell expects AI server revenue to double in fiscal 2027 on the data-centre boom [[n5633]]. Hardware with visible AI orders is out-guiding subscription software."
-    ],
-    [
-     "EPS Upside Watch",
-     "AI servers and infrastructure hardware: Dell's doubling target [[n5633]] implies upward revisions through the year, with memory costs as the swing factor for margins. Beaten-down software with stable renewals is where expectations are lowest."
-    ],
-    [
-     "⚡ Breaking Convention",
-     "The software sell-off may be closer to exhaustion than the AI-hardware rally: despite Salesforce's soft guide [[n1881]], MSFT and ORCL rose 0.28% and 1.64% while NVDA fell 5.46% in the prior session (Yahoo Finance, prior close 2026-02-26). Positioning, not fundamentals, is now the bigger driver, which favours selective software longs over chasing AI hardware."
-    ]
-   ]
-  },
-  {
-   "key": "XLC",
-   "stance": "Bullish",
-   "parts": [
-    [
-     "Narrative",
-     "Communication services held up while chips fell: XLC rose 0.19%, META 0.51% and NFLX 2.29%, the latter up 9.86% over five sessions (Yahoo Finance, prior close 2026-02-26). Meta signed a multi-billion-dollar deal to rent Google AI chips [[n2787]] — Alphabet is becoming an AI-compute supplier, not just a spender."
-    ],
-    [
-     "Reported",
-     "Paramount topped its profit outlook amid a bidding war for Warner Bros. [[n1822]], keeping an M&A premium in media. GOOGL fell 1.76% in the prior session and is down 8.52% over 20 sessions (Yahoo Finance, prior close 2026-02-26), leaving the chip-rental upside unpriced."
-    ],
-    [
-     "EPS Upside Watch",
-     "Alphabet: external rentals of its AI chips such as Meta's [[n2787]] add a high-margin cloud revenue line that consensus has not modelled. Netflix's five-session run shows the market is already paying for streaming scale."
-    ],
-    [
-     "⚡ Breaking Convention",
-     "The sector's AI spender is turning into an AI seller: renting chips to a rival platform [[n2787]] converts capex into revenue, the opposite of the capex-fatigue narrative hitting Nvidia's customers. A bidding war for Warner Bros. [[n1822]] shows legacy media assets still carry strategic value."
-    ]
-   ]
-  },
-  {
-   "key": "XLF",
-   "stance": "Mixed",
-   "parts": [
-    [
-     "Narrative",
-     "Banks rallied while private credit wobbled: XLF rose 1.21%, JPM 0.93% and BAC 1.18% in the prior session (Yahoo Finance, prior close 2026-02-26). An Apollo private-credit fund marked down its portfolio on soured loans [[n5673]], so the stress sits in non-bank lending rather than deposit-funded banks."
-    ],
-    [
-     "Reported",
-     "RBC and other big Canadian banks beat profit estimates as the economy resisted the tariff impact [[n1936]], driven by broad business lines. GS closed at 929.00, up 0.83% in the prior session (Yahoo Finance, prior close 2026-02-26)."
-    ],
-    [
-     "EPS Upside Watch",
-     "Banks with markets and wealth franchises: the Canadian beats [[n1936]] show capital-markets and wealth revenue carrying earnings, and US money-centre peers with the same mix should see upward revisions while volatility stays elevated."
-    ],
-    [
-     "⚡ Breaking Convention",
-     "Private credit is becoming a bank opportunity, not just a risk: as funds mark down loans [[n5673]], regulated banks with spare capital can take share in direct lending on better terms. Own large banks; avoid listed BDCs and alternative managers until marks settle."
-    ]
-   ]
-  },
-  {
-   "key": "XLE",
-   "stance": "Bullish",
-   "parts": [
-    [
-     "Narrative",
-     "Energy is pricing Geneva: XLE is up 9.99% over 20 sessions, but Brent slipped to 70.75 and WTI to 65.21 in the prior session (Yahoo Finance, prior close 2026-02-26) as oil settled lower after a choppy session while traders followed the US-Iran talks [[n5636]]."
-    ],
-    [
-     "Reported",
-     "EOG reported fourth-quarter results and detailed a $6.5 billion 2026 capital plan [[n1798]] — disciplined spending that protects free cash flow at current prices. XOM closed at 148.54, up 7.97% over 20 sessions (Yahoo Finance, prior close 2026-02-26)."
-    ],
-    [
-     "EPS Upside Watch",
-     "Integrated majors and oil-weighted producers carry estimate upside if Brent holds near 70.75 (Yahoo Finance, prior close 2026-02-26), because consensus was built on lower prices. Natural gas at 2.83, down 62.1% over 20 sessions (Yahoo Finance, prior close 2026-02-26), argues against gas-weighted names."
-    ],
-    [
-     "⚡ Breaking Convention",
-     "Supply is the overlooked risk: geopolitical turmoil gives OPEC+ cover for only a cautious output hike [[n5641]], so if Iran talks succeed the market loses its premium while OPEC+ keeps adding barrels. Hold energy equities, but hedge with Brent puts."
-    ]
-   ]
-  },
-  {
-   "key": "XLI",
-   "stance": "Bullish",
-   "parts": [
-    [
-     "Narrative",
-     "Industrials keep winning the rotation: XLI rose 0.63% in the prior session and is up 7.65% over 20 sessions, with GE up 16.53% and CAT 17.05% (Yahoo Finance, prior close 2026-02-26). The drivers are electrification, data-centre build-outs and aerospace aftermarket demand."
-    ],
-    [
-     "Reported",
-     "Rolls-Royce shares popped as profits jumped nearly 40% [[n1979]], and Schneider Electric rose after earnings as AI data-centre growth drove its outlook [[n1978]]. Both are physical beneficiaries of AI and air travel."
-    ],
-    [
-     "EPS Upside Watch",
-     "Electrical equipment and power management: Schneider's AI data-centre outlook [[n1978]] reads across to US peers in switchgear, cooling and grid equipment, which should see upward revisions as hyperscaler capex shifts toward power."
-    ],
-    [
-     "⚡ Breaking Convention",
-     "Europe's industrials are reporting the AI windfall more cleanly than US chipmakers: Rolls-Royce [[n1979]] and Schneider [[n1978]] rose while NVDA fell 5.46% (Yahoo Finance, prior close 2026-02-26). The physical AI supply chain is now the safer way to own the theme."
-    ]
-   ]
-  },
-  {
-   "key": "XLY",
-   "stance": "Bearish",
-   "parts": [
-    [
-     "Narrative",
-     "Discretionary stays the weak cyclical: XLY is down 3.88% over 20 sessions, AMZN 14.44% and TSLA 5.3% (Yahoo Finance, prior close 2026-02-26). Mortgage rates dipped below 6%, but economists do not expect a housing boom [[n7366]], so rate relief is not yet translating into big-ticket spending."
-    ],
-    [
-     "Reported",
-     "Coupang swung to a loss as a data breach dented its fourth quarter, and it sees muted near-term growth [[n1951]]. HD slipped 0.13% to 375.09 (Yahoo Finance, prior close 2026-02-26)."
-    ],
-    [
-     "EPS Upside Watch",
-     "Few clean candidates: with economists sceptical of a housing boom [[n7366]], home-related retailers lack a catalyst, and the upside sits with value-oriented chains and restaurants with traffic momentum rather than big-ticket retail."
-    ],
-    [
-     "⚡ Breaking Convention",
-     "TSLA fell 2.11% while NKE rose 0.87% in the prior session (Yahoo Finance, prior close 2026-02-26) — the sector's old growth leaders are now the laggards, and the market is willing to pay for turnaround value rather than growth multiples."
-    ]
-   ]
-  },
-  {
-   "key": "XLP",
-   "stance": "Bearish",
-   "parts": [
-    [
-     "Narrative",
-     "Staples are expensive defence: XLP is up 7.94% over 20 sessions (Yahoo Finance, prior close 2026-02-26), and Barron's says it is time to sell staples and buy healthcare [[n5814]]. WMT fell 1.06% and COST 0.81% in the prior session (Yahoo Finance, prior close 2026-02-26)."
-    ],
-    [
-     "Reported",
-     "Hormel missed quarterly sales estimates on weak retail demand [[n6723]] — volume weakness in packaged food persists even as the group's multiple has expanded."
-    ],
-    [
-     "EPS Upside Watch",
-     "Limited: estimate risk is skewed down for branded food, as Hormel shows [[n6723]]; only scale retailers with share gains have a clean path, and their valuations already reflect it."
-    ],
-    [
-     "⚡ Breaking Convention",
-     "Staples are no longer a cheap hiding place: rotating into healthcare [[n5814]] buys defensiveness without the valuation premium, and that shift would accelerate if AI leaders stabilise and the safety bid unwinds."
-    ]
-   ]
-  },
-  {
-   "key": "XLV",
-   "stance": "Bullish",
-   "parts": [
-    [
-     "Narrative",
-     "Healthcare is the under-loved defensive: XLV is up just 2.02% over 20 sessions versus 7.94% for XLP (Yahoo Finance, prior close 2026-02-26), and Barron's argues for selling staples to buy healthcare [[n5814]]. UNH rose 0.87% to 286.66 in the prior session (Yahoo Finance, prior close 2026-02-26)."
-    ],
-    [
-     "Reported",
-     "Hikma's gloomy outlook knocked its shares to a more-than-three-year low [[n5818]] — generics pricing remains the weak corner. LLY closed at 1,022.02, down 0.66% (Yahoo Finance, prior close 2026-02-26)."
-    ],
-    [
-     "EPS Upside Watch",
-     "Managed care and large-cap pharma: payers benefit if drug list prices fall, and Merck's jump drew retail attention [[n4297]]. These are the names where estimates are stable and valuations have not been bid up by the defensive rotation."
-    ],
-    [
-     "⚡ Breaking Convention",
-     "Policy risk looks priced: XLV still rose 2.02% over 20 sessions (Yahoo Finance, prior close 2026-02-26) despite drug-pricing headlines, while generics makers such as Hikma [[n5818]] took the hit. Branded pharma and managed care are where the defensive re-rating can run next."
-    ]
-   ]
-  },
-  {
-   "key": "XLB",
-   "stance": "Bullish",
-   "parts": [
-    [
-     "Narrative",
-     "Materials paused: XLB slipped 0.11%, gold fell 0.61% to 5,194.20 and silver 4.33% to 87.00 (Yahoo Finance, prior close 2026-02-26), but JPMorgan still sees gold at $6,300 by year-end [[n5865]]. Copper closed at 5.95, up 0.92% over 20 sessions (Yahoo Finance, prior close 2026-02-26)."
-    ],
-    [
-     "Reported",
-     "Lynas's profit jumped as geopolitics reshaped the rare-earths market [[n0978]] — critical-minerals producers are converting policy support into earnings. NEM rose 2.1% to 127.47 (Yahoo Finance, prior close 2026-02-26)."
-    ],
-    [
-     "EPS Upside Watch",
-     "Gold miners: bullion at 5,194.20 (Yahoo Finance, prior close 2026-02-26) against a $6,300 year-end call [[n5865]] leaves margin upside that miners' 20-session returns do not reflect. Copper producers stay supported as owners of the AI data-centre and grid metal."
-    ],
-    [
-     "⚡ Breaking Convention",
-     "Silver's 4.33% drop after a 13.29% five-session SLV rally (Yahoo Finance, prior close 2026-02-26) shows how fast speculative metal flows reverse; rare earths [[n0978]] and gold miners offer policy and price support without the froth."
-    ]
-   ]
-  },
-  {
-   "key": "XLRE",
-   "stance": "Bullish",
-   "parts": [
-    [
-     "Narrative",
-     "Real estate is the rate winner: XLRE rose 0.44% in the prior session and is up 6.81% over 20 sessions (Yahoo Finance, prior close 2026-02-26), as mortgage rates fell below 6% for the first time since 2022 [[n6735]]."
-    ],
-    [
-     "Reported",
-     "REIT reporting in the feed window was light; the sector trades on the 10Y, which fell 24 bps over 20 observations to 4.02% (US Treasury, prior close 2026-02-26)."
-    ],
-    [
-     "EPS Upside Watch",
-     "Residential and housing-adjacent REITs: sub-6% mortgages [[n6735]] should lift transaction volumes and ease refinancing for leveraged owners, feeding funds-from-operations estimates with a lag."
-    ],
-    [
-     "⚡ Breaking Convention",
-     "Even without a housing boom [[n7366]], falling yields lift REIT valuations through the discount rate — the sector does not need volumes to work, only a 10Y that stays near 4%."
-    ]
-   ]
-  },
-  {
-   "key": "XLU",
-   "stance": "Bullish",
-   "parts": [
-    [
-     "Narrative",
-     "Utilities remain the AI-power trade: XLU is up 8.89% over 20 sessions and CEG 12.37% (Yahoo Finance, prior close 2026-02-26). The White House will host Big Tech after a pledge to rein in power costs [[n5779]], formalising the 'bring your own power' model."
-    ],
-    [
-     "Reported",
-     "Vistra reported fourth-quarter and full-year 2025 results [[n1992]]; VST rose 0.83% to 176.82 while NEE fell 3.28% to 91.99 (Yahoo Finance, prior close 2026-02-26)."
-    ],
-    [
-     "EPS Upside Watch",
-     "Generators with dispatchable capacity: data centres' share of US electricity is seen doubling by 2030 [[n5781]], which supports capacity prices and long-term contracts for Constellation and Vistra."
-    ],
-    [
-     "⚡ Breaking Convention",
-     "If tech firms self-supply under the White House pledge [[n5779]], regulated utilities lose load growth — the trade is generators over wires, and NEE's 3.28% drop (Yahoo Finance, prior close 2026-02-26) is an early sign of that split."
-    ]
-   ]
-  },
-  {
-   "key": "SXAP",
-   "stance": "Bearish",
-   "parts": [
-    [
-     "Narrative",
-     "European autos bounced but the problem remains: the STOXX autos tracker rose 0.54% to 46.40 and VOW3 1.61% (Yahoo Finance, prior close 2026-02-26). Stellantis reported a €22bn loss and warned of higher US tariff costs [[n5740]]."
-    ],
-    [
-     "Reported",
-     "Stellantis's loss was driven by EV write-downs, and it flagged rising US tariff costs [[n5740]]; even so, STLA rose 4.41% to 8.05 (Yahoo Finance, prior close 2026-02-26) as investors looked through to the reset."
-    ],
-    [
-     "EPS Upside Watch",
-     "Upside is limited to self-help: Stellantis's reset lowers the base for 2026 estimates, while BMW at 88.84 and Mercedes at 59.00 are up 1.97% and 2.97% over 20 sessions (Yahoo Finance, prior close 2026-02-26) with no volume catalyst."
-    ],
-    [
-     "⚡ Breaking Convention",
-     "China's carmakers are ceding ground in Europe after surging in 2025 [[n5684]] — the competitive threat that drove the de-rating may be peaking, which is the one reason to cover shorts in the weakest names."
-    ]
-   ]
-  },
-  {
-   "key": "SOXX",
-   "stance": "Mixed",
-   "parts": [
-    [
-     "Narrative",
-     "Semis sold the news: SOXX fell 3.04%, NVDA 5.46%, ASML 4.11% and AMD 3.41% in the prior session (Yahoo Finance, prior close 2026-02-26). Nvidia's results beat estimates, but Wall Street wants more cash return [[n5576]] — the debate has moved from demand to capital allocation."
-    ],
-    [
-     "Reported",
-     "Nvidia's results beat estimates, yet investors asked for more cash return [[n5576]]; TSM fell 2.82% to 376.81 and MU 3.13% to 415.56 (Yahoo Finance, prior close 2026-02-26) in sympathy."
-    ],
-    [
-     "EPS Upside Watch",
-     "Memory pricing remains the upside lever, but IDC now sees the smartphone market shrinking 13% because of the memory chip crisis [[n5624]] — revisions turn positive for memory makers and negative for handset-chip suppliers."
-    ],
-    [
-     "⚡ Breaking Convention",
-     "A clean beat produced a 5.46% drop in the sector leader (Yahoo Finance, prior close 2026-02-26): when strong results cannot lift a stock, positioning is saturated. Buy memory and equipment on weakness and wait for NVDA to rebuild a base."
-    ]
-   ]
-  }
- ],
- "earnings_pattern": {
-  "title": "Even strong prints are sold; cash return and physical AI get paid",
-  "parts": [
-   [
-    "Rewarded",
-    "IonQ jumped 22% after its beat and a 2026 revenue outlook above forecasts [[n1935]]; Rolls-Royce popped on a near-40% profit jump [[n1979]]; Engie rose 7% on its UK grid deal [[n2470]]; and Stellantis rose 4.41% (Yahoo Finance, prior close 2026-02-26) despite its €22bn loss [[n5740]]. The common thread is a raised outlook, a capital-return story or a strategic asset."
-   ],
-   [
-    "Punished",
-    "Nvidia fell 5.46% (Yahoo Finance, prior close 2026-02-26) even though its results beat, because Wall Street wanted more cash return [[n5576]]; Duolingo tumbled 22% on weak guidance and slowing user growth [[n1971]]; CoreWeave slid as surging capex and backlog risks overshadowed a small revenue beat [[n1931]]; Salesforce's outlook disappointed [[n1881]]."
-   ],
-   [
-    "Pattern",
-    "The market is rationing reward to companies that turn AI spending into cash: capex-heavy names and those without buybacks are sold, while physical-AI suppliers and companies returning capital are bought. Guidance remains the decisive line — beats with soft guides are punished in every sector."
-   ],
-   [
-    "Attention into EPS",
-    "Dell's call that AI server revenue will double in fiscal 2027 [[n5633]] is the next test of whether hardware guidance can outweigh memory-cost worries, and the PPI release highlighted for Friday [[n6761]] sets the rate backdrop for the reaction."
-   ],
-   [
-    "Playbook",
-    "Buy raised guides that come with capital return; fade beats with heavy capex and no buyback. Use sell-the-news drops in quality AI suppliers as entry points only after two sessions of stabilisation. Change the call if Nvidia reclaims its pre-results level quickly — that would show the dip-buyers, not the sellers, control the tape."
-   ]
+  "anticipatory": [
+    {"title": "US–China: a steady tariff into the Trump–Xi meeting", "parts": [
+      ["What Is Priced", "The US is keeping China tariffs steady ahead of a key Trump–Xi meeting, according to Greer [[n0969]], and China has received a major reprieve on tariffs without a reversal being expected [[n0968]]. The yuan is near a multi-year high [[n0917]] while Beijing tries to slow it [[n0915]]. Pending: the Trump–Xi meeting itself, with the tariff level held in place until then."],
+      ["Conditional Expression", "If the meeting delivers, the trade is long A-share exposure through ASHR, up 1.52% over 20 sessions at 34.17, and long the yuan. If it stalls, buy protection on KWEB, which is down 12.83% over 20 sessions at 31.46, and unwind the currency carry. The rule is that the summit outcome sets the direction, not the tariff headline."],
+      ["Risk", "Beijing's export controls are coming of age as Trump reins in tech curbs [[n0961]], and Nvidia has still not sold its US-approved China AI chips [[n0944]]. A summit can freeze chip sales even as tariffs hold, so the tariff settlement is not the same as a tech settlement."]
+    ]},
+    {"title": "The Fed's path under a Warsh-led chair", "parts": [
+      ["What Is Priced", "The odds of early cuts under a Warsh-led Fed have slid [[n7333]], Goolsbee sees several more cuts this year but not soon [[n7335]], and Miran still sees four quarter-point cuts [[n7336]]. Pending: the Fed's challenge to Justice Department subpoenas [[n7334]], which adds a governance question to the rate path."],
+      ["Conditional Expression", "If early cuts stay off the table, the 10Y stays near 4.02% and the curve keeps bull-flattening, so trade the front end at 3.42% for carry. If a dovish chair brings a 2026 cut back into focus, own duration through TLT, up 3.05% over 20 sessions, and the rate-sensitive housing names, where XLRE is up 6.81%."],
+      ["Risk", "Fiscal supply is the offset. The CBO sees the deficit reaching 5.9% of GDP by 2030 [[n6729]], and the IMF says the US should shift gears on economic policy [[n7371]]. Heavier issuance could steepen the curve despite a Fed that cuts."]
+    ]},
+    {"title": "A BOJ spring hike and the yen", "parts": [
+      ["What Is Priced", "The BOJ has left the door open to near-term hikes [[n7346]] and signalled data-driven hikes [[n3446]], while the government picked reflationists for the board [[n3450]]. USD/JPY closed at 156.2000, up 2.03% over 20 sessions, and the finance minister is vigilant on yen weakness [[n3457]]."],
+      ["Conditional Expression", "If the BOJ hikes in the spring as signalled, the trade is long yen against the dollar, with a stop above the 156.2000 close. If it holds with a dovish board majority, buy USD/JPY calls and hedge with Nikkei exposure, since the index is at a record high [[n3467]]."],
+      ["Risk", "Core inflation in Tokyo is slowing below the BOJ's 2% target [[n6719]], which gives the doves an argument. A hike that is not followed by more hikes would leave the yen to the politics rather than the policy."]
+    ]},
+    {"title": "US–Iran talks and Venezuelan barrels: the oil premium", "parts": [
+      ["What Is Priced", "Oil settled down after a choppy session as traders followed the US–Iran talks [[n5636]], and gold is steady as markets await the nuclear talks outcome [[n5866]]. The Middle East is bracing for another conflict, but uncertainty remains over Trump's final decision [[n3107]], and the top US commander briefed Trump on Iran options [[n3108]]. Pending: US–Venezuela oil sales expected to reach $2 billion by the end of February [[n3114]]."],
+      ["Conditional Expression", "If talks produce a deal, the premium leaves Brent, which is at 70.75 and down 1.27% over five sessions, and XLE, up 9.99% over 20 sessions, gives back first. If strikes follow, the trade is long oil through USO at 79.77 with gold (5,194.20) as the hedge."],
+      ["Risk", "Venezuelan barrels are a supply offset: Eni can now receive oil from Venezuela as payment for gas [[n3115]], and a Forbes analysis says the US takeover of Venezuelan oil will not move the global market [[n3113]]. A glut can outweigh a geopolitical premium even if the talks fail."]
+    ]}
+  ],
+  "catalysts": [
+    {"title": "$NVDA — the beat was priced, the return was not", "stance": "Mixed", "parts": [
+      ["Catalyst & Thesis", "Nvidia's record quarter produced $43 billion of quarterly profit [[n5585]], and the company expects its gaming-chip shortage to last until year-end [[n5579]]. The stock sank 5% anyway, because investors fretted over returns and wanted more cash return [[n5582]]. Thesis: the fundamental run continues, but the stock needs a capital-return answer before the multiple re-rates."],
+      ["Price Hurdle & Risk", "NVDA closed at 184.89 (Yahoo Finance, prior close 2026-02-26), down 5.46% in the prior session and 3.46% over 20 sessions. Risk: Congress is taking on Nvidia and the White House as it pushes for chip export limits [[n5577]], which would be a direct hit to the China-linked upside."],
+      ["Trade Expression", "Buy shares or a three-month call spread into the next capital-return headline, sized for further pressure. Invalidation: a cash-return announcement that does not come, or export limits that pass into law."]
+    ]},
+    {"title": "$MU — the memory cycle is a cost for customers", "stance": "Mixed", "parts": [
+      ["Catalyst & Thesis", "The smartphone market is set to shrink 13% in 2026 on the memory chip crisis, IDC says [[n5624]], and the decline is the biggest ever, on a memory price surge [[n5625]]. Micron is up 326% in a year [[n5632]]. Thesis: memory pricing is the margin driver for the supplier, while the device makers' volume loss is the warning."],
+      ["Price Hurdle & Risk", "MU closed at 415.56 (Yahoo Finance, prior close 2026-02-26), down 3.13% in the prior session and 4.53% over 20 sessions. Risk: device demand falls faster than memory prices rise, which would turn the supplier's pricing power into a volume problem."],
+      ["Trade Expression", "Long shares on weakness, sized for a sharp move in either direction. Invalidation: device shipments falling faster than the memory price rise, or a contract price roll-over, both of which would show before Micron's guidance does."]
+    ]},
+    {"title": "$ASML — EUV tools move to production", "stance": "Bullish", "parts": [
+      ["Catalyst & Thesis", "ASML says its next-generation EUV tools are ready to mass-produce chips [[n5608]], and a headline says its latest EUV breakthrough puts would-be rivals further behind [[n5609]]. Thesis: the tool is the capacity constraint for the AI chip cycle, so a ready product lifts the multiple even when the day's tape is weak."],
+      ["Price Hurdle & Risk", "ASML closed at 1,463.80 (Yahoo Finance, prior close 2026-02-26), down 4.11% in the prior session and up 2.87% over 20 sessions. The day's sell-off is the hurdle: a headline says ASML was down on the day [[n5607]]. Risk: US export limits on chips, which Congress is pushing [[n5577]]."],
+      ["Trade Expression", "Buy the shares on weakness, or the semiconductor ETF SOXX at 356.80, down 1.02% over 20 sessions. Invalidation: export controls tightened on lithography, or a capex cut from the largest cloud buyers."]
+    ]},
+    {"title": "$CEG — the power pledge needs terms", "stance": "Mixed", "parts": [
+      ["Catalyst & Thesis", "The White House is hosting Big Tech after a pledge to rein in power costs [[n5779]], and Texas approved a data-centre behemoth's gas power play [[n5796]]. Thesis: generators are the paid party in the data-centre power pledge, but the pledge is still unclear on what it commits [[n5782]]."],
+      ["Price Hurdle & Risk", "CEG closed at 323.56 (Yahoo Finance, prior close 2026-02-26), down 0.70% in the prior session, up 12.37% over 20 sessions and 10.94% over five sessions. The price already prices much of the pledge. Risk: Georgia's Senate blocked a vote on a data-centre energy bill [[n5798]], a sign that state rules may be slower than the federal headline."],
+      ["Trade Expression", "Hold the position and do not add above the card close. Protect the gain with a put spread. Invalidation: a bring-your-own-power contract that carries no price terms, or a state-level block that spreads."]
+    ]},
+    {"title": "$STLA — the turnaround has to show profit", "stance": "Bearish", "parts": [
+      ["Catalyst & Thesis", "Stellantis posted its first annual loss in company history after EV write-downs [[n5704]], and a €22 billion loss [[n5740]] came with higher US tariff costs. The US closed its probe into 7.4 million vehicles without seeking a recall [[n5710]], but the company is weighing Chinese EV technology for Europe [[n5716]]. Thesis: the profit-rebound promise [[n5701]] has a cost that is still being set."],
+      ["Price Hurdle & Risk", "STLA closed at 8.05 (Yahoo Finance, prior close 2026-02-26), up 4.41% in the prior session but down 17.01% over 20 sessions. The stock rose despite the loss [[n5728]], which means the bear case has to be on earnings revisions rather than the tape."],
+      ["Trade Expression", "Underweight the name against the European auto tracker, or a put spread into the next earnings print. Invalidation: a clean profit-rebound plan with no China tech deal, or a sales beat that the market rewards."]
+    ]},
+    {"title": "$META — compute from rivals, capex from cash", "stance": "Bullish", "parts": [
+      ["Catalyst & Thesis", "Meta signed a multi-billion-dollar deal to rent Google's AI chips [[n2787]]. Thesis: the compute shortage is real, so platform companies with cash will keep buying capacity, even from rivals, and the rental deal confirms the demand line."],
+      ["Price Hurdle & Risk", "META closed at 657.01 (Yahoo Finance, prior close 2026-02-26), up 0.51% in the prior session and down 1.75% over 20 sessions. Risk: the capex bill grows faster than the revenue line, and the market responds to capex with a lower multiple."],
+      ["Trade Expression", "Buy the shares on a pullback toward the 20-session level, or a call spread into the next capex update. Invalidation: a capex cut from the platform's own plan, or a rental deal that is not extended."]
+    ]}
+  ],
+  "retail": [
+    {"title": "Reddit / RDDT — down 35%, with the cold feet", "parts": [
+      ["Observed Attention", "The Motley Fool asks whether Reddit is a buy after a 35% fall this year [[n4296]], and a headline says Reddit traders are getting cold feet even as Merck's stock jumps [[n4297]]. The card has no Reddit price, so there is no hurdle to test."],
+      ["Motivation & Bias", "Retail is treating a 35% drawdown as a buying opportunity, and the forum bias is to read the cold feet as a contrarian sign. Reddit's own traders are the audience, so the signal is more about the crowd than the stock."],
+      ["Instrument & Risk", "Shares only, sized for a gap. Any entry needs its own reference point, because the card gives no RDDT close."]
+    ]},
+    {"title": "Nvidia / NVDA — small investors buy the drop", "parts": [
+      ["Observed Attention", "A CNBC headline says small investors bought Nvidia in record numbers after Thursday's open [[n5587]], after the stock sank 5% on the results [[n7380]]. The card has NVDA at 184.89, down 5.46% in the prior session (Yahoo Finance, prior close 2026-02-26)."],
+      ["Motivation & Bias", "Small investors are buying the dip on the earnings beat, and the bias is to read the sell-off as an entry. The Breakingviews commentary that Nvidia is dogged by memories of cycles past [[n5591]] is the counterweight."],
+      ["Instrument & Risk", "Shares or short-dated calls. The risk is a second leg down if export limits pass [[n5577]], which would hit the buy-the-dip crowd first."]
+    ]},
+    {"title": "Circle / CRCL — nearly 50% in two sessions", "parts": [
+      ["Observed Attention", "Circle is nearly 50% higher in two sessions since its earnings [[n4314]], a CoinDesk headline says. Its earnings had already lifted the shares, and the retail chase has followed the stablecoin story rather than the fundamentals."],
+      ["Motivation & Bias", "Retail is buying the stablecoin narrative after a sharp move, which is a recency bias. The stablecoin-model caution in the GENIUS coverage [[n1341]] is the bear case that the momentum crowd tends to ignore."],
+      ["Instrument & Risk", "Shares only. The card has no CRCL close, so the risk is a reversal of the two-session move, which can be sharp."]
+    ]},
+    {"title": "Silver ETF / SLV — the COMEX tightness story", "parts": [
+      ["Observed Attention", "A FXEmpire headline says COMEX tightness supports a bullish silver outlook [[n0317]]. The card has SLV at 80.45, up 13.29% over five sessions and down 23.82% over 20 sessions, and silver futures at 87.00, down 23.09% over 20 sessions (Yahoo Finance, prior close 2026-02-26)."],
+      ["Motivation & Bias", "Retail is chasing the five-session bounce after a 20-session crash. The bias is recency: the rebound is the thing being bought, not the drawdown that preceded it."],
+      ["Instrument & Risk", "SLV or silver futures. The moves are violent in both directions, and the 20-session fall means a reversal of the bounce can erase it quickly."]
+    ]}
   ]
- },
- "underowned": [
-  {
-   "title": "Gold miners — operating leverage the market is ignoring",
-   "parts": [
-    [
-     "Attention Gap",
-     "Mining.com calls gold stocks under-owned and undervalued with room to run [[n5877]]: bullion closed at 5,194.20 while NEM is down 3.4% over 20 sessions despite a 2.1% gain in the prior session (Yahoo Finance, prior close 2026-02-26). JPMorgan's $6,300 year-end target [[n5865]] implies margin expansion that miners have not priced."
-    ],
-    [
-     "Exposure & Risk",
-     "Express through NEM, a senior-miner ETF such as GDX or royalty companies rather than GLD, which already tracks the metal and closed at 477.48 (Yahoo Finance, prior close 2026-02-26). Risks: a US-Iran deal that drains safe-haven demand, cost inflation at the mines and a stronger dollar."
-    ]
-   ]
-  },
-  {
-   "title": "Healthcare over staples — the next defensive rotation",
-   "parts": [
-    [
-     "Attention Gap",
-     "Barron's argues it is time to sell staples and buy healthcare [[n5814]]; XLV is up 2.02% over 20 sessions against 7.94% for XLP (Yahoo Finance, prior close 2026-02-26). Defensive money crowded into staples during the AI scare, leaving healthcare's relative discount intact."
-    ],
-    [
-     "Exposure & Risk",
-     "Express via XLV or a managed-care plus large-cap pharma basket — UNH at 286.66 and LLY at 1,022.02 (Yahoo Finance, prior close 2026-02-26). Risks: codified drug-pricing rules, generics pressure such as Hikma's [[n5818]], and a sharp AI rebound that pulls money out of defensives altogether."
-    ]
-   ]
-  }
- ],
- "crypto": {
-  "title": "One-day bounce; stablecoin rules are the swing factor",
-  "parts": [
-   [
-    "Market Context",
-    "Bitcoin closed at 67,453.77, down 0.75% on the prior completed daily close and 4.4% over 20 days; ether fell 1.35% to 2,026.79 and solana 2.28% to 85.91 (Yahoo Finance, prior close 2026-02-26). IBIT dropped 2.47% to 38.26 and is down 24.25% over 20 sessions, with COIN down 1.57% and MSTR 1.66% (Yahoo Finance, prior close 2026-02-26)."
-   ],
-   [
-    "New / Most Important",
-    "Bitcoin rode the Nvidia wave above $70,000 before pulling back [[n1289]], confirming that crypto trades as a high-beta tech proxy. The bigger structural news is regulatory: CoinDesk says the OCC's GENIUS Act pitch casts a dark cloud over the crypto sector's stablecoin model [[n1341]], a direct risk to issuers' and exchanges' stablecoin revenue."
-   ],
-   [
-    "Playbook",
-    "Stay underweight spot until bitcoin holds above $70,000 on a closing basis rather than in an intraday spike [[n1289]]. Trim stablecoin-equity winners after Circle's two-session surge [[n4314]] until the OCC rules are clearer [[n1341]]. What changes the call: sustained ETF inflows plus a risk-on resolution in Iran."
-   ]
-  ]
- },
- "flows": {
-  "title": "Credit spreads widen as the AI premium deflates",
-  "parts": [
-   [
-    "Rates & Dollar",
-    "The DXY closed at 97.79, up 1.39% over 20 sessions (Yahoo Finance, prior close 2026-02-26); the 10Y at 4.02% is down 24 bps over 20 observations in a bull flattening (US Treasury, prior close 2026-02-26). TLT is up 3.05% and IEF 1.77% over 20 sessions (Yahoo Finance, prior close 2026-02-26) — duration has been the best hedge against the AI sell-off."
-   ],
-   [
-    "Credit Check",
-    "Global credit spreads widened the most in months as strains mount [[n2744]]; HYG closed at 80.85, down 0.23% over 20 sessions, while LQD at 111.72 is up 0.97% (Yahoo Finance, prior close 2026-02-26). Investment grade holding while high yield softens is the classic early phase of a credit repricing, led here by private-credit markdowns [[n5673]]."
-   ],
-   [
-    "Portfolio Implication",
-    "Upgrade quality: prefer LQD over HYG, keep IEF/TLT as the core hedge and avoid private-credit vehicles. In equities, keep rotating from US mega-cap tech into Europe, small caps and defensives with pricing power. Change the call if high-yield spreads tighten back while the 2Y rises toward 3.56% (US Treasury, prior close 2026-02-26) — that would signal growth rather than stress and favour cyclicals."
-   ]
-  ]
- },
- "anticipatory": [
-  {
-   "title": "US–Iran talks in Geneva: the oil premium on trial",
-   "parts": [
-    [
-     "What Is Priced",
-     "Oil prices tumbled as crucial US-Iran talks began [[n5637]], and gold held steady as markets await the outcome [[n5866]]. Brent at 70.75 is still up 3.44% over 20 sessions and gold closed at 5,194.20 (Yahoo Finance, prior close 2026-02-26), so part of the premium remains, while the VIX at 18.63 (Yahoo Finance, prior close 2026-02-26) prices only modest stress."
-    ],
-    [
-     "Conditional Expression",
-     "Deal or framework: sell Brent upside, trim XLE and gold, and buy airlines and European cyclicals. Breakdown or strikes: own Brent call spreads, XLE and gold miners, and underweight airlines, oil-importing emerging markets and high-beta tech."
-    ],
-    [
-     "Risk",
-     "The binary is not clean: OPEC+ has cover for only a cautious output hike [[n5641]], so a deal could push oil below pre-tension levels quickly, while a limited strike might spike prices only briefly. Size for a gap, not a trend, and prefer options to outright futures."
-    ]
-   ]
-  },
-  {
-   "title": "PPI and the Fed's cut debate",
-   "parts": [
-    [
-     "What Is Priced",
-     "The PPI release highlighted for Friday [[n6761]] lands on a split Fed: Miran says four quarter-point cuts are still warranted this year [[n7336]]. The 2Y at 3.42% is 14 bps lower over 20 observations (US Treasury, prior close 2026-02-26), pricing some easing but not an imminent cut."
-    ],
-    [
-     "Conditional Expression",
-     "Soft PPI: buy 2Y notes and small caps — IWM closed at 265.99, up 1.02% over 20 sessions (Yahoo Finance, prior close 2026-02-26) — and add rate-sensitive REITs. Hot PPI: expect the 2Y back toward 3.56% (US Treasury, prior close 2026-02-26), favour banks over duration and trim REITs."
-    ],
-    [
-     "Risk",
-     "Inflation is not cooperating: fourth-quarter inflation firmed to 3% [[n6805]], and claims at 212,000 [[n6717]] give the Fed no labour-market reason to hurry. A hot print alongside AI weakness would be the worst mix for equities."
-    ]
-   ]
-  }
- ],
- "catalysts": [
-  {
-   "title": "$DELL — AI server revenue set to double",
-   "stance": "Bullish",
-   "parts": [
-    [
-     "Catalyst & Thesis",
-     "Dell said it expects AI server revenue to double in fiscal 2027 on the data-centre boom [[n5633]]. With AI capex driving a third of US growth [[n6728]] and hyperscalers diversifying suppliers, server integrators with allocation capture the volume; memory costs are the main margin risk."
-    ],
-    [
-     "Price Hurdle & Risk",
-     "DELL is not on our market card, so no level is quoted. Risk: IDC's forecast of a 13% smartphone-market contraction on the memory crisis [[n5624]] shows how memory prices can crush hardware margins; the call fails if Dell's margin outlook falls while AI revenue rises."
-    ]
-   ]
-  },
-  {
-   "title": "$STLA — the reset is in the price",
-   "stance": "Bullish",
-   "parts": [
-    [
-     "Catalyst & Thesis",
-     "Stellantis reported a €22bn loss and warned of higher US tariff costs [[n5740]], yet the stock rose 4.41% to 8.05 (Yahoo Finance, prior close 2026-02-26) — the kitchen-sink quarter is done. The thesis is self-help from a low base: the write-downs reset the asset base, and any US sales recovery would meet very low expectations."
-    ],
-    [
-     "Price Hurdle & Risk",
-     "STLA at 8.05 is still down 17.01% over 20 sessions (Yahoo Finance, prior close 2026-02-26); hold while it stays above the post-results level and add on evidence of a US sales recovery. Risks: tariff costs and Chinese competition in Europe, although Chinese carmakers have recently ceded ground there [[n5684]]."
-    ]
-   ]
-  },
-  {
-   "title": "$CRWV — capex outruns the backlog",
-   "stance": "Bearish",
-   "parts": [
-    [
-     "Catalyst & Thesis",
-     "CoreWeave slid as surging capex and backlog risks overshadowed a small revenue beat [[n1931]]. Our thesis: funding costs and capex intensity, not demand, drive the stock, and wider credit spreads raise the cost of financing GPU fleets."
-    ],
-    [
-     "Price Hurdle & Risk",
-     "CRWV is not on our market card, so no level is quoted. Risk to the short: a reversal in global credit spreads, which just widened the most in months [[n2744]], would lower funding costs and squeeze shorts; cover on evidence of cheaper financing or faster backlog conversion."
-    ]
-   ]
-  }
- ],
- "retail": [
-  {
-   "title": "Nvidia / NVDA — retail buys the dip in record numbers",
-   "parts": [
-    [
-     "Observed Attention",
-     "CNBC reports small investors bought Nvidia in record numbers after Thursday's open [[n5587]], as NVDA fell 5.46% to 184.89 (Yahoo Finance, prior close 2026-02-26)."
-    ],
-    [
-     "Motivation & Bias",
-     "Classic dip-buying anchored to the beat: retail sees a stellar quarter at a lower price, while institutions want more cash return [[n5576]]. The bias is anchoring to results in a market that is trading positioning and capital allocation."
-    ],
-    [
-     "Instrument & Risk",
-     "Prefer shares or long-dated calls over short-dated options, and stage entries over several sessions. Risk: NVDA is down 3.46% over 20 sessions (Yahoo Finance, prior close 2026-02-26), and a broader AI de-rating would trap late dip-buyers."
-    ]
-   ]
-  },
-  {
-   "title": "Circle / CRCL — stablecoin momentum meets regulation",
-   "parts": [
-    [
-     "Observed Attention",
-     "Circle is nearly 50% higher in two sessions since its earnings results [[n4314]], making it the stand-out crypto-equity trade of the week."
-    ],
-    [
-     "Motivation & Bias",
-     "Momentum and narrative: stablecoins are the one growth story in a crypto bear market, and retail extrapolates two-day gains. The OCC's GENIUS Act pitch [[n1341]] is the regulatory overhang the momentum ignores."
-    ],
-    [
-     "Instrument & Risk",
-     "Take profits into strength or collar existing positions; avoid chasing with short-dated calls. Risk: stablecoin rules that squeeze issuer economics would hit the revenue model behind the rally."
-    ]
-   ]
-  },
-  {
-   "title": "IonQ / IONQ — quantum hype gets a real beat",
-   "parts": [
-    [
-     "Observed Attention",
-     "IonQ jumped 22% after an earnings beat and a 2026 revenue outlook above forecasts [[n1935]], putting quantum names back on retail screens."
-    ],
-    [
-     "Motivation & Bias",
-     "Thematic enthusiasm: a credible beat validates the quantum story, but the bias is to extend one company's result to the whole theme, including names with no revenue."
-    ],
-    [
-     "Instrument & Risk",
-     "Trade it with small, defined-risk positions; a 22% one-day move [[n1935]] invites mean reversion. Risk: dilution through equity raises, common in pre-profit technology companies."
-    ]
-   ]
-  },
-  {
-   "title": "Merck / MRK — Reddit gets cold feet after the jump",
-   "parts": [
-    [
-     "Observed Attention",
-     "Merck stock jumped, but Reddit traders are getting cold feet [[n4297]]."
-    ],
-    [
-     "Motivation & Bias",
-     "Retail is wary of chasing a defensive pharma name after a sharp move and prefers high-beta themes; that hesitancy can leave quality healthcare under-owned by retail even as institutions rotate into the sector."
-    ],
-    [
-     "Instrument & Risk",
-     "Own MRK through shares or XLV rather than options; it fits the staples-to-healthcare rotation. Risk: drug-pricing policy caps the multiple."
-    ]
-   ]
-  }
- ]
 }
