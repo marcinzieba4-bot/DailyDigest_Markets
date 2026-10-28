@@ -1,0 +1,319 @@
+{
+  "scope": "Critical-claims sample, not exhaustive fact verification. Compared selected Reported, Catalyst & Thesis, The Social Signal and flow assertions with exact cited headline text, using only each date's spec/feed/card. The original 18 completed dates were reviewed in ascending order. Oct01/02/03/06/08 had the broader requested section sample. Remaining dates used the root-authorized reduced sample: financials/energy/semis Reported, first two catalysts, lead retail Social Signal, and Credit Check/Equity & Fund Flows. The five finishing dates were read one at a time after root cleared them for review. Root separately reviewed macro release boundaries. Mechanical numeric/citation validation is separate; only authorized repairs were verified/rendered here.",
+  "reviews": [
+    {
+      "date": "2025-10-01",
+      "status": "no_material_findings_in_sample",
+      "findings": []
+    },
+    {
+      "date": "2025-10-02",
+      "status": "no_material_findings_in_sample",
+      "findings": []
+    },
+    {
+      "date": "2025-10-03",
+      "status": "findings_repaired",
+      "findings": [
+        {
+          "path": "specs/2025-10-03.json",
+          "paragraph": "sectors[6].parts[1] Reported (XLP)",
+          "source_ids": [
+            "n8650",
+            "n0404"
+          ],
+          "claim": "Tesco Christmas outlook and Costco beat go beyond the paragraph's cited headlines.",
+          "minimal_fix": "Add own-date n2463 for Tesco Christmas/profit outlook; add an eligible Costco beat headline or remove the beat reference.",
+          "severity": "minor_source_mismatch",
+          "repair_status": "Authorized by root; n2463 added and unsupported Costco beat wording removed."
+        }
+      ],
+      "spec_sha256_after_repair": "5d6e9ecd406a31f5368a42d5bf0cc8a3152ad475ab0bf18a9622db2d1180e9bc",
+      "repair_validation": {
+        "verify": "PASS",
+        "sources": 116,
+        "words": 9361,
+        "failures": 0,
+        "warnings": 0,
+        "render": "success",
+        "note": "No warnings."
+      },
+      "relevant_exact_headlines": {
+        "n8650": "FTSE 100 retreats after record high; Tesco gains - Reuters",
+        "n0404": "Costco stock sinks after US same-store sales miss forecasts as consumers weigh value push, tariff pressures - Yahoo Finance",
+        "n2463": "Britain's Tesco raises profit outlook and bets on strong Christmas - Reuters"
+      }
+    },
+    {
+      "date": "2025-10-06",
+      "status": "no_material_findings_in_sample",
+      "findings": []
+    },
+    {
+      "date": "2025-10-07",
+      "status": "no_material_findings_in_sample",
+      "findings": []
+    },
+    {
+      "date": "2025-10-08",
+      "status": "no_material_findings_in_sample",
+      "findings": []
+    },
+    {
+      "date": "2025-10-09",
+      "status": "no_material_findings_in_sample",
+      "findings": []
+    },
+    {
+      "date": "2025-10-10",
+      "status": "no_material_findings_in_sample",
+      "findings": []
+    },
+    {
+      "date": "2025-10-13",
+      "status": "no_material_findings_in_sample",
+      "findings": []
+    },
+    {
+      "date": "2025-10-14",
+      "status": "no_material_findings_in_sample",
+      "findings": []
+    },
+    {
+      "date": "2025-10-15",
+      "status": "no_material_findings_in_sample",
+      "findings": []
+    },
+    {
+      "date": "2025-10-16",
+      "status": "no_material_findings_in_sample",
+      "findings": []
+    },
+    {
+      "date": "2025-10-17",
+      "status": "findings_repaired",
+      "findings": [
+        {
+          "path": "specs/2025-10-17.json",
+          "paragraph": "catalysts[0].parts[0] Catalyst & Thesis (TSM)",
+          "source_ids": [
+            "n2609",
+            "n1309"
+          ],
+          "claim": "TSMC reported a record profit increase.",
+          "minimal_fix": "Replace reported a record profit increase with reported record profit; headline establishes a record profit level, not a record growth rate.",
+          "severity": "minor_wording_ambiguity",
+          "repair_status": "Authorized by root; wording now distinguishes record profit level from growth rate."
+        }
+      ],
+      "spec_sha256_after_repair": "4de1c498cc9c496722e7d3d38676fae2a15c09c264d200abf5e432d119a4d900",
+      "repair_validation": {
+        "verify": "PASS",
+        "sources": 91,
+        "words": 8715,
+        "failures": 0,
+        "warnings": 0,
+        "render": "success",
+        "note": "No warnings."
+      },
+      "relevant_exact_headlines": {
+        "n2609": "TSMC profit surges 39% to beat estimates and hit yet another record on AI chip demand - CNBC",
+        "n1309": "TSMC raises revenue forecast on bullish outlook for AI megatrend - Reuters"
+      }
+    },
+    {
+      "date": "2025-10-20",
+      "status": "no_material_findings_in_sample",
+      "findings": []
+    },
+    {
+      "date": "2025-10-21",
+      "status": "no_material_findings_in_sample",
+      "findings": []
+    },
+    {
+      "date": "2025-10-22",
+      "status": "no_material_findings_in_sample",
+      "findings": []
+    },
+    {
+      "date": "2025-10-23",
+      "status": "findings_repaired",
+      "findings": [
+        {
+          "path": "specs/2025-10-23.json",
+          "paragraph": "sectors[12].parts[1] Reported (SOXX)",
+          "source_ids": [
+            "n2399"
+          ],
+          "claim": "TI after its disappointing forecast; analog demand weakness.",
+          "minimal_fix": "Add own-date n2351 Reuters TI gives dour quarterly forecast as tariffs prolong analog chip recovery after TI sentence.",
+          "severity": "minor_source_mismatch",
+          "repair_status": "Authorized by root; own-date n2351 appended to the TI sentence."
+        }
+      ],
+      "spec_sha256_after_repair": "38d41b0db745b1d09f0ff447077a6b4af169fa7c7fea8f051ed07087c44639f3",
+      "repair_validation": {
+        "verify": "PASS",
+        "sources": 93,
+        "words": 9561,
+        "failures": 0,
+        "warnings": 1,
+        "render": "success",
+        "note": "Any calendar warning was reported to root for its separate boundary review."
+      },
+      "relevant_exact_headlines": {
+        "n2399": "Intel results to show if barrage of investments in chipmaker paying off - Reuters",
+        "n2351": "TI gives dour quarterly forecast as tariffs prolong analog chip recovery - Reuters"
+      }
+    },
+    {
+      "date": "2025-10-24",
+      "status": "no_material_findings_in_sample",
+      "findings": []
+    },
+    {
+      "date": "2025-10-27",
+      "status": "findings_repaired",
+      "findings": [
+        {
+          "path": "specs/2025-10-27.json",
+          "paragraph": "sectors[12].parts[1] Reported and catalysts[0].parts[0] Catalyst & Thesis (AMD)",
+          "source_ids": [
+            "n6886"
+          ],
+          "claim": "Reuters reported IBM running a quantum error-correction algorithm on conventional AMD chips.",
+          "minimal_fix": "Change to Reuters reported IBM saying conventional AMD chips can run a quantum error-correction algorithm.",
+          "severity": "minor_capability_event_overreach",
+          "repair_status": "Authorized by root; precise capability wording or exact own-date citations added."
+        }
+      ],
+      "spec_sha256_after_repair": "c56efc77d604b04bdf603115b888f59b489223f70a0ca2d2b8d370a2ab5ad214",
+      "repair_validation": {
+        "verify": "PASS",
+        "sources": 102,
+        "words": 9789,
+        "failures": 0,
+        "warnings": 0,
+        "render": "success",
+        "note": "No warnings."
+      },
+      "relevant_exact_headlines": {
+        "n6886": "IBM says conventional AMD chips can run quantum computing error correction algorithm - Reuters"
+      }
+    },
+    {
+      "date": "2025-10-28",
+      "status": "no_material_findings_in_sample",
+      "findings": []
+    },
+    {
+      "date": "2025-10-29",
+      "status": "findings_repaired",
+      "findings": [
+        {
+          "path": "specs/2025-10-29.json",
+          "paragraph": "sectors[2].parts[1] Reported (XLF)",
+          "source_ids": [
+            "n2658"
+          ],
+          "claim": "NatWest upgraded guidance.",
+          "minimal_fix": "Append own-date n2471 Bloomberg NatWest Lifts Guidance After Third-Quarter Profit Beats Estimate.",
+          "severity": "minor_source_mismatch",
+          "repair_status": "Authorized by root; precise capability wording or exact own-date citations added."
+        },
+        {
+          "path": "specs/2025-10-29.json",
+          "paragraph": "sectors[12].parts[1] Reported (SOXX)",
+          "source_ids": [
+            "n0403"
+          ],
+          "claim": "Market response to TSMC earnings.",
+          "minimal_fix": "Append own-date n1960 Barron's Why Nvidia Stock Is Getting a Boost From TSMC Earnings, or remove TSMC comparison.",
+          "severity": "minor_source_mismatch",
+          "repair_status": "Authorized by root; precise capability wording or exact own-date citations added."
+        }
+      ],
+      "spec_sha256_after_repair": "43786eab57f7a77bea931a2ac99de893d909a2f982401d525c2ca119bc523f84",
+      "repair_validation": {
+        "verify": "PASS",
+        "sources": 109,
+        "words": 11551,
+        "failures": 0,
+        "warnings": 1,
+        "render": "success",
+        "note": "Any calendar warning was reported to root for its separate boundary review."
+      },
+      "relevant_exact_headlines": {
+        "n2658": "HSBC's third-quarter profit drops 14%, but beats expectations as net interest income rises - CNBC",
+        "n2471": "NatWest Lifts Guidance After Third-Quarter Profit Beats Estimate - Bloomberg.com",
+        "n0403": "Intel Surges as First Earnings Report Since U.S. Investment Shows Momentum - WSJ",
+        "n1960": "Why Nvidia Stock Is Getting a Boost From TSMC Earnings - Barron's"
+      }
+    },
+    {
+      "date": "2025-10-30",
+      "status": "findings_repaired",
+      "findings": [
+        {
+          "path": "specs/2025-10-30.json",
+          "paragraph": "sectors[2].parts[1] Reported (XLF)",
+          "source_ids": [
+            "n2696"
+          ],
+          "claim": "NatWest upgraded guidance.",
+          "minimal_fix": "Append own-date n2509 Bloomberg NatWest Lifts Guidance After Third-Quarter Profit Beats Estimate.",
+          "severity": "minor_source_mismatch",
+          "repair_status": "Authorized by root; exact own-date n2509 added."
+        }
+      ],
+      "spec_sha256_after_repair": "7a5bf1c50901ca5f6b43dfc746294ed056c1147c8719ae36994d120eb6cecee8",
+      "repair_validation": {
+        "verify": "PASS",
+        "sources": 107,
+        "words": 11710,
+        "failures": 0,
+        "warnings": 1,
+        "render": "success",
+        "note": "Any calendar warning was reported to root for its separate boundary review."
+      },
+      "relevant_exact_headlines": {
+        "n2696": "HSBC's third-quarter profit drops 14%, but beats expectations as net interest income rises - CNBC",
+        "n2509": "NatWest Lifts Guidance After Third-Quarter Profit Beats Estimate - Bloomberg.com"
+      }
+    },
+    {
+      "date": "2025-10-31",
+      "status": "findings_repaired",
+      "findings": [
+        {
+          "path": "specs/2025-10-31.json",
+          "paragraph": "sectors[2].parts[1] Reported (XLF)",
+          "source_ids": [
+            "n2800"
+          ],
+          "claim": "NatWest upgraded guidance.",
+          "minimal_fix": "Append own-date n2613 Bloomberg NatWest Lifts Guidance After Third-Quarter Profit Beats Estimate.",
+          "severity": "minor_source_mismatch",
+          "repair_status": "Authorized by root; exact own-date n2613 added."
+        }
+      ],
+      "spec_sha256_after_repair": "2fb6b075512fcb01763a358470ba55361219f2fba75bc3232eaf46ff7bfc08b4",
+      "repair_validation": {
+        "verify": "PASS",
+        "sources": 99,
+        "words": 11668,
+        "failures": 0,
+        "warnings": 0,
+        "render": "success",
+        "note": "No warnings."
+      },
+      "relevant_exact_headlines": {
+        "n2800": "HSBC's third-quarter profit drops 14%, but beats expectations as net interest income rises - CNBC",
+        "n2613": "NatWest Lifts Guidance After Third-Quarter Profit Beats Estimate - Bloomberg.com"
+      }
+    }
+  ],
+  "reviewed_dates_count": 23,
+  "summary": "All 23 weekday dates sampled. No major factual invention or company-role confusion detected in sampled claims. Seven dates received authorized source/wording precision repairs, all verified and rendered. Findings are limited to the sampled paragraphs and headline evidence; this does not certify every paragraph or full article facts."
+}

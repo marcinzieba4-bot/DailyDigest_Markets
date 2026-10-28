@@ -1,0 +1,40 @@
+{
+  "purpose": "Independent primary-source verification of high-risk historical release boundaries. Later outcome values are not supplied to writers.",
+  "checks": [
+    {
+      "event": "September US CPI",
+      "release_date": "2025-10-24",
+      "release_time": "08:30 ET /12:30 UTC",
+      "first_eligible_weekday_report": "2025-10-27",
+      "source_url": "https://www.bls.gov/news.release/archives/cpi_10242025.htm"
+    },
+    {
+      "event": "October FOMC statement",
+      "release_date": "2025-10-29",
+      "release_time": "14:00 EDT /18:00 UTC",
+      "first_eligible_weekday_report": "2025-10-30",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm"
+    },
+    {
+      "event": "ASML Q3 results",
+      "release_date": "2025-10-15",
+      "release_time": "07:00 Central European Time /05:00 UTC",
+      "first_eligible_weekday_report": "2025-10-16",
+      "source_url": "https://investor.asml.com/news-releases/news-release-details/q3-2025-financial-results"
+    },
+    {
+      "event": "October ECB decision",
+      "release_date": "2025-10-30",
+      "first_eligible_weekday_report": "2025-10-31",
+      "source_url": "https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp251030~cf0540b5c0.en.html"
+    },
+    {
+      "event": "Poland September industrial production",
+      "release_date": "2025-10-20",
+      "first_eligible_weekday_report": "2025-10-21",
+      "source_url": "https://stat.gov.pl/obszary-tematyczne/przemysl-budownictwo-srodki-trwale/przemysl/dynamika-produkcji-sprzedanej-przemyslu-we-wrzesniu-2025-r-%2C13%2C81.html",
+      "original_press_timestamp_support": "https://www.bankier.pl/wiadomosc/Polski-przemysl-obudzil-sie-z-letargu-W-koncu-dobre-dane-z-produkcji-9027122.html",
+      "note": "Original Bankier article is timestamped October20 at10:25 local; eligible for21, not20. Outcome values were not added to reports from this audit."
+    }
+  ]
+}

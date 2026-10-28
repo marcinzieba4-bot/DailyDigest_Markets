@@ -1,0 +1,78 @@
+{
+  "completed_at_utc": "2026-10-28T15:14:22.990833+00:00",
+  "access": {
+    "yahoo": "HTTP 200;294 symbols fetched;0 failures",
+    "treasury": "HTTP 200;209 daily curves through2025-10-31"
+  },
+  "historical_selection": {
+    "start": "2025-08-01",
+    "last_retained": "2025-10-31",
+    "cards": "23 October weekdays",
+    "cutoff": "report date 00:00 UTC",
+    "sessions": "exchangeTimezoneName with ZoneInfo; latest exchange-local date strictly earlier than report date; crypto prior UTC day"
+  },
+  "price_units": {
+    "problem": "Yahoo quote.close is retrospectively split-adjusted, so displayed historical prices were scaled by later actions in prior pipeline",
+    "fix": "request events=div,splits; multiply each historical quote by split factors effective after that session for displayed as-traded levels; retain split-adjusted closes for comparable percentage changes",
+    "symbols_with_adjustments": [
+      "8035.T",
+      "9984.T",
+      "BYND",
+      "CMCSA",
+      "CRWD",
+      "CVNA",
+      "ETHA",
+      "KLAC",
+      "LCID",
+      "NFLX",
+      "NOW",
+      "SCCO",
+      "TQQQ",
+      "XLB",
+      "XLE",
+      "XLK",
+      "XLU",
+      "XLY"
+    ],
+    "cmcsa": "suppress levels because the corporate-action event includes spin-off scaling; comparable pre-event percentage changes remain usable",
+    "future_metadata_rule": "separate future query only retains split events in audit; no later price rows retained; writers use only cards and date evidence"
+  },
+  "treasury": {
+    "source": "US Treasury daily par yield curve",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2025/all?type=daily_treasury_yield_curve&field_tdr_date_value=2025&page&_format=csv",
+    "instruments": "actual2Yr/10Yr par yields;noIRXproxy",
+    "unit": "yields percent;changes/spreads basis points",
+    "holiday_regression": "Oct14 uses Oct10 Treasury but Oct13 equities"
+  },
+  "limits": [
+    "Yahoo current-vintage historical quotes are used; later corrections to original observations cannot be ruled out without contemporaneous vendor snapshots.",
+    "Yahoo commodity futures are continuous/front-month series and may reflect contract rolls; percentage changes are price changes, not total returns.",
+    "ETF and stock percentage changes exclude cash dividends; WIG20TR tracker has index total-return exposure."
+  ],
+  "validation_file": "audit/market_validation.json",
+  "sha256": {
+    "cards/2025-10-01.json": "f7527369e6003bf2a544976c32aa3cdac2458a4811d488bd8659eef8fab32c39",
+    "cards/2025-10-02.json": "34874a27db6ff2b0894a0f6d9feab12dbea9eabc5aea086cf8d995fbae04fec3",
+    "cards/2025-10-03.json": "11e83cdc61adf7d1d3d2f2017442270764b52e8ac585c23d62692d133e6f6e98",
+    "cards/2025-10-06.json": "e1fe041a717c5e00db60641880bc42523aadf9baf74960d9bbf14927b4709014",
+    "cards/2025-10-07.json": "2fbc929aaea28c192dea2cb11dafb85575761aa8038e8b98d076538d47cbe2de",
+    "cards/2025-10-08.json": "45a1390ad4944dfc1b0b0217199e842ccc285cdd2eca9d0f4d93a401f74be7ad",
+    "cards/2025-10-09.json": "0ac103dfb5e1a5651adabcdb889762161c6b044186c1674bf5a7bc6f37c01129",
+    "cards/2025-10-10.json": "8da68cc0b059774345cc69b098ee70c855b614a08aee2671f3f010feb6e1dcc4",
+    "cards/2025-10-13.json": "c0470a50adfe97ef7b5e7c38c0829b3839ab40b024711ade895f1f186af3e821",
+    "cards/2025-10-14.json": "33c2dbf2e566b3b7f0cce98209da59d46d5a4ccac268d7ff650a5c4e23626033",
+    "cards/2025-10-15.json": "c9a79b38c0d1f36095623bda8ed6b28f9087d3ae7312e0df3896ec8910fd76ec",
+    "cards/2025-10-16.json": "708798adc9fd9b8b86dfe9571a907c828bcf5f0fbdfa999267fc72de391dc3b0",
+    "cards/2025-10-17.json": "93ae475979364b6140c6ed9896cf589b2c81b28f7cd81ee3768bf9bfc5153a35",
+    "cards/2025-10-20.json": "a45cfefb2b95d4586b9f627651f137a4c1095c9940be853a4169030964462771",
+    "cards/2025-10-21.json": "8de1201dad31e2cf2d1a0fd22c386afb6c32080a05f81373abab3423c9506278",
+    "cards/2025-10-22.json": "d4335d7b7d3ad2648331aa740de22f072b014959478c11f8cbcea71fb0b0f100",
+    "cards/2025-10-23.json": "ff429376cd31c80030f65a8eeb081ef779a657501c7c3c454658f6d63b200019",
+    "cards/2025-10-24.json": "487499ae4d710ce62b022807899d723a84260a499104b8c25df818a1cf23f064",
+    "cards/2025-10-27.json": "24cced984e0333a488741ce0836f1dfcea6a1598058b6d4e1bd2e2cdf87d3dd6",
+    "cards/2025-10-28.json": "1ee723a35e8d4d2475f97cdc699a41e6c63ea8326955e398f6e4f90f139d1102",
+    "cards/2025-10-29.json": "cb80898106774699ff7615b65bbc158b2e678c97816bc4c76da4cd1014b7d5b9",
+    "cards/2025-10-30.json": "1706193a55c86871461fda50730ef7862e758a6992e5441b0ca5b2faab6e480d",
+    "cards/2025-10-31.json": "f069100ff39cec9d095b03c3f0ca5d6feeeb468b6aaff2b61fb1f68e05142539"
+  }
+}

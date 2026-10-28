@@ -1,0 +1,77 @@
+{
+  "selected_base": {
+    "committer_date": "2026-10-28 12:19:53 +0000",
+    "sha": "1c7b3594e68e7252634a32793634007a79f889d7",
+    "ref": "origin/claude/funny-noether-co1zem",
+    "subject": "November 2025 retrospective: two briefings written (2025-11-04, 2025-11-06), handoff README"
+  },
+  "remote_heads": [
+    {
+      "committer_date": "2026-10-28 12:19:53 +0000",
+      "sha": "1c7b3594e68e7252634a32793634007a79f889d7",
+      "ref": "origin/claude/funny-noether-co1zem",
+      "subject": "November 2025 retrospective: two briefings written (2025-11-04, 2025-11-06), handoff README"
+    },
+    {
+      "committer_date": "2026-10-27 17:19:08 +0000",
+      "sha": "05a4ed22b319c9a5e5c36994a7af682a19ac5c9c",
+      "ref": "origin/claude/optimistic-dirac-yodc39",
+      "subject": "December 2025 retrospective: upload script for the December archive"
+    },
+    {
+      "committer_date": "2026-10-26 22:00:53 +0000",
+      "sha": "72f9d82293bea831024b1eebbb842239166d5f64",
+      "ref": "origin/claude/pensive-hopper-f12dmo",
+      "subject": "February 2026 retrospective briefings: all 20 weekdays final and published to the archive"
+    },
+    {
+      "committer_date": "2026-10-23 08:46:10 +0000",
+      "sha": "36a183fc12a79baa84b1d549a60d8827a23430b0",
+      "ref": "origin/claude/report-scope-retrospective-15k35r",
+      "subject": "corrections/china: October 17-20 sectors and Earnings Pattern live \u2014 archive complete 06-24 \u2026 10-20"
+    },
+    {
+      "committer_date": "2026-10-20 13:16:27 +0000",
+      "sha": "e2470d2155ce5f81a9cbf1db288959ffefad7539",
+      "ref": "origin/claude/relaxed-feynman-18o2ac",
+      "subject": "Refresh JSON copies after Poland widening (live on S3 2026-10-20)"
+    },
+    {
+      "committer_date": "2026-09-28 15:04:34 +0000",
+      "sha": "eff06f243a3f0c7d6bf4dba266cf9095eb41921d",
+      "ref": "origin/claude/underowned-themes-description-h138ku",
+      "subject": "Deepen China coverage in Geographic Macro Overview"
+    },
+    {
+      "committer_date": "2026-06-26 10:06:36 +0000",
+      "sha": "54035083053fa5e0fe08ae42e1f401c8e83ddad5",
+      "ref": "origin/claude/laughing-knuth-pjnc17",
+      "subject": "Auto-invalidate CloudFront cache for /reports/* after each report publish"
+    },
+    {
+      "committer_date": "2026-06-23 08:57:43 +0000",
+      "sha": "d3fb3da24456bfba4cd9a8f425a9bbb1d7e9b1ad",
+      "ref": "origin/claude/generate-report-G5jEK",
+      "subject": "Remove Quantitative Regime Models and Fintwit Theories sections"
+    },
+    {
+      "committer_date": "2026-03-07 09:50:51 +0000",
+      "sha": "9296550090987d01408fb1c58107c74d5c5186b4",
+      "ref": "origin/master",
+      "subject": "Initial commit: Lambda function for DailyDigest Markets"
+    },
+    {
+      "committer_date": "2026-03-07 10:37:33 +0100",
+      "sha": "43842a8f58dc8d1b5fe06ca5265ae39f4ba61d73",
+      "ref": "origin/main",
+      "subject": "Initial commit"
+    }
+  ],
+  "live_lambda_metadata": {
+    "function_name": "daily-trends-digest",
+    "last_modified": "2026-10-23T07:45:33.000+0000",
+    "runtime": "python3.12",
+    "code_sha256": "IP7GVukS9rD1NT2+KLVXmG9GyxQS2xGJkDuPzgz7ijY="
+  },
+  "note": "Live handler is current-time and sends delivery messages; only local historical pipeline used. Code-package download host is outside the current network policy; newer repository source is available and used."
+}

@@ -1,0 +1,70 @@
+{
+  "status": "blocked_transport",
+  "recorded_at_utc": "2026-10-28T16:07:39.893323+00:00",
+  "evidence_origin": "Primary agent observed the original publication failure and subsequent cross-service HTTPS probes; this recovery task performed no remote calls.",
+  "observations": [
+    {
+      "service": "S3",
+      "operation": "HeadObject/upload verification",
+      "http_status": 503,
+      "aws_request_id": null,
+      "origin": "Envoy"
+    },
+    {
+      "services": [
+        "S3",
+        "CloudFront",
+        "GitHub"
+      ],
+      "failure": "immediate connect error: Invalid argument",
+      "remote_address": "envoy://cloudflare_https_tunnel/"
+    }
+  ],
+  "root_cause_assessment": "The managed outbound HTTPS tunnel is unavailable. Cross-service transport failures and the absent AWS request ID support an upstream transport fault rather than an established IAM denial; no credential values were inspected or changed.",
+  "publication_state": {
+    "run": "20261028T155535Z",
+    "stage": "upload",
+    "backup_phase_completed": true,
+    "partial_uploads_possible": true,
+    "confirmed_uploads_in_original_receipt": "Not recorded; remote objects must be inspected by resume before making a completion claim.",
+    "archive_index_merge_completed": false,
+    "invalidation_completed": false,
+    "latest_write_performed": false
+  },
+  "recovery": {
+    "script": "tools/publish.py",
+    "dry_run_command": "/workspace/.report-tools/bin/python -I tools/publish.py --resume",
+    "offline_test_command": "/workspace/.report-tools/bin/python -I tools/publish.py --resume --self-test",
+    "recovery_command": "/workspace/.report-tools/bin/python -I tools/publish.py --resume --go",
+    "concurrency": 1,
+    "retry_attempts_per_operation": 3,
+    "sdk_attempts": 1,
+    "behavior": [
+      "Retain original run, backup prefix, protected snapshot, original backups and exact target hashes.",
+      "Verify original backups before resuming, and never copy partially uploaded replacements over them.",
+      "Read and hash existing target bytes; skip exact matches and persist each confirmation atomically.",
+      "Use conditional writes; refuse intervening foreign changes.",
+      "Verify the entire target set before merging the archive index and invalidating its exact paths."
+    ],
+    "offline_validation": "PASS: original identity preserved; changed target hashes rejected; matching targets skipped; missing targets conditionally uploaded; foreign changes blocked; interrupted run retains earlier confirmations; corrupted bytes rejected; 503 retries bounded;403 not retried.",
+    "remote_recovery_attempted": false
+  },
+  "preserved_publication_fields_sha256": "dd68109e8424728770d568623d499bd16d05205dab0c1b975371e9ffa34eee11",
+  "network_policy_bypass_attempted": false,
+  "proxy_restart_attempted": false,
+  "resolution": {
+    "status": "recovered_and_published",
+    "checked_at_utc": "2026-10-28T16:20:09.701928+00:00",
+    "evidence": "All72stored artifacts verified; archive index merged; CloudFront invalidation completed. Public verification is recorded separately.",
+    "client_recovery": [
+      "original backup/run retained",
+      "sequential requests with bounded backoff",
+      "atomic GET SHA checks",
+      "unchanged versions reuse previous SHA proofs with ETag/size revalidation",
+      "incremental confirmation persistence"
+    ],
+    "credential_changes": false,
+    "network_policy_changes": false,
+    "environment_restart_performed": false
+  }
+}

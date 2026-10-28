@@ -1,0 +1,48 @@
+October 2025 retrospective briefings — methodology
+
+Scope: all 23 Monday–Friday dates, October 1–31, 2025.
+Per-report news cutoff: 00:00 UTC on its report date, strictly exclusive.
+Eligible source ages: news/policy/previews 7 days, earnings results 14 days,
+monthly releases 35 days. Writers use only their report date's frozen feed and
+market card. Same-day Asian releases and rolling/live headlines are excluded
+when their release timing conflicts with the nominal index timestamp.
+
+News: 440 query topics, shared weekly Google News historical RSS windows.
+2,924 windows, zero failed requests. 228 windows returned the index limit of
+100 items: coverage is broad and is not asserted to be exhaustive. Reports use
+headline facts, not facts inferred from unread article bodies. All cited items
+retain outlet, title, indexed timestamp and URL. Index timestamps cannot prove
+original article vintage. Obvious date mismatches are editorially rejected.
+
+Markets: Yahoo Finance daily historical chart data, completed sessions before
+the report date, exchangeTimezoneName interpreted with ZoneInfo. Crypto uses
+completed UTC days. 292 instruments per date. Percentage changes compare
+split-adjusted closes over 1, 5 and 20 observations and exclude dividends.
+Displayed price levels reverse later split factors to restore historical share
+units. CMCSA levels are suppressed because its adjustment includes a spin-off.
+Later corporate-action metadata is used only for unit conversion; later price
+rows are excluded from writers' inputs. Current-vintage prices may contain later
+vendor revisions; no original contemporaneous vendor snapshots were found.
+Futures series may be affected by contract rolls.
+
+Rates: US Treasury daily par yield curve, actual 2Y and 10Y instruments.
+Yield changes and curve spreads are basis points, not percentage-of-yield
+changes. Bond holidays differ from equity sessions: October 14 uses October 10
+Treasury yields and October 13 US equity closes.
+
+Style: August 2026 nine-section structure, geographic and sector cards,
+expanded desktop width, responsive navigation and linked evidence ledger.
+Each HTML edition has a PDF and machine-readable JSON with its source evidence.
+
+Code base: newest remote branch as of task discovery, commit
+1c7b3594e68e7252634a32793634007a79f889d7 (October 28, 2026 12:19:53 UTC).
+Live Lambda metadata dated October 23, 2026. Historical execution is local;
+the live handler uses current data and delivery channels and is not invoked.
+
+Data access: authenticated S3, Lambda metadata, public CloudFront archive,
+Yahoo Finance, US Treasury and Google News were accessible. Anonymous S3 origin
+returns 403 because the origin is private; authenticated S3 and CloudFront work.
+AWS_KEY/AWS_SECRET runtime bindings are used by the configured boto3 session;
+the default proxy-placeholder credential variables are not used for these calls.
+The starting checkout was README-only; all remote branches were fetched and the
+latest was checked out in an isolated worktree.

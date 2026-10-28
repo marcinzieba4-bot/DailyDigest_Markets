@@ -1,0 +1,14 @@
+{
+  "distribution_id": "E15IJW4438D21G",
+  "domain": "d7g7nkeytae81.cloudfront.net",
+  "report_behavior": {
+    "path": "reports/*",
+    "origin": "daily-digest-s3",
+    "origin_path": ""
+  },
+  "default_behavior": {
+    "origin": "veerock-s3",
+    "origin_path": "/veerock-site/static"
+  },
+  "format_delivery": "The public ZIP contains all HTML/PDF/JSON files; direct Strategies CDN paths use the unrelated default website origin."
+}
