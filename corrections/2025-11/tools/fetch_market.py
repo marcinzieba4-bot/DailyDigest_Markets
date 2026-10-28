@@ -1,5 +1,6 @@
 """fetch_market.py [TICKER ...] — download daily closes (Yahoo Finance chart API) and the US Treasury daily par yield
-curve into ../data/. Without arguments it fetches the default universe. Each Yahoo row is stamped with the
+curve into ../data/. Yahoo serves split-adjusted history (Netflix 10-for-1, ServiceNow 5-for-1, ETF splits, reverse splits ...),
+so every close is multiplied back by the splits dated after it: the stored levels are what traded on that day. Without arguments it fetches the default universe. Each Yahoo row is stamped with the
 exchange-local session date; crypto rows are UTC days (the candle dated X closes at X+1 00:00 UTC).
 
 November 2025 set: data stop at the 2025-11-28 close (period2 = 2025-12-01), so nothing dated after the last report
@@ -9,7 +10,7 @@ import urllib.request, urllib.parse, json, os, sys, time, csv, io, datetime as d
 D = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
 H = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'}
 LAST = '2025-11-28'                                              # last report date in the set; nothing later is kept
-P1, P2 = int(dt.datetime(2025, 8, 20).timestamp()), int(dt.datetime(2025, 12, 1).timestamp())
+P1, P2 = int(dt.datetime(2025, 8, 20).timestamp()), int(time.time())      # window runs to today so every later split is returned
 UNIVERSE = [
     # indices, volatility, dollar, rates proxies
     '^GSPC', '^NDX', '^RUT', '^DJI', '^VIX', '^SOX', 'DX-Y.NYB', '^TNX', '^IRX',
@@ -58,7 +59,7 @@ UNIVERSE = [
 
 
 def yahoo(t):
-    url = f'https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(t)}?period1={P1}&period2={P2}&interval=1d'
+    url = f'https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(t)}?period1={P1}&period2={P2}&interval=1d&events=split'
     err = None
     for a in range(4):
         try:
@@ -66,12 +67,18 @@ def yahoo(t):
             r = j['chart']['result'][0]
             off = r['meta'].get('gmtoffset', 0)
             q = r['indicators']['quote'][0]
+            splits = [(int(v['date']), v['numerator'] / v['denominator'])
+                      for v in ((r.get('events') or {}).get('splits') or {}).values() if v.get('denominator')]
             rows = []
             for ts, c in zip(r.get('timestamp', []), q['close']):
                 if c is None: continue
                 day = dt.datetime.fromtimestamp(ts + off, dt.timezone.utc).date().isoformat()
                 if day > LAST: continue
-                rows.append((day, round(c, 6)))
+                f = 1.0
+                for sd, ratio in splits:
+                    if ts < sd: f *= ratio                          # the bar is older than the split: restore the as-traded level
+                rows.append((day, round(c * f, 6)))
+            if splits: print('  splits', t, [(dt.datetime.fromtimestamp(sd, dt.timezone.utc).date().isoformat(), round(ra, 4)) for sd, ra in splits])
             dd = {}
             for day, c in rows: dd[day] = c                       # last row per local day wins
             return sorted(dd.items()), r['meta'].get('exchangeTimezoneName', ''), r['meta'].get('currency', '')

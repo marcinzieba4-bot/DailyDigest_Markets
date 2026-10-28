@@ -12,10 +12,10 @@ Work only inside that folder. Do not run git, do not browse the web, do not inst
 You know a lot about late 2025 and 2026 from training — including what happened *after* each report date. **None of it may
 enter the report.** The only admissible facts are:
 
-1. **The date's feed** — `feeds/<date>.json.gz`, read through `tools/digest.py`. Google News headlines whose publication
+1. **The date's feed** — `feeds/<date>.json.gz`, read through your dossier (and `tools/digest.py --grep`). Google News headlines whose publication
    time is strictly before the cutoff (news ≤ 7 days old, monthly data releases ≤ 35 days, earnings reactions ≤ 14
    days). You only have the **headline**, not the article: claim nothing the headline does not say.
-2. **The date's market card** — `cards/<date>.json`, read through `tools/showcard.py`. Completed closes before the cutoff
+2. **The date's market card** — `cards/<date>.json`, printed at the top of your dossier (`tools/showcard.py`). Completed closes before the cutoff
    (Yahoo Finance, exchange-local session dates; crypto UTC days) and the official US Treasury par curve at the prior
    close, with 1-, 5- and 20-session changes.
 
@@ -244,23 +244,26 @@ without quotes (the page prints it in quotes). Examples of the shape: "Palantir 
 believes, what the crowd reads into a headline, how a narrative can break) is expected, in the plain voice above, with no
 disclaimers about its status — but never invent social evidence (no made-up posts, replies, counts or flows).
 
-## Procedure per date
+## Procedure per date — keep it cheap: about 15 tool calls in total
+Everything you need for your date is prepared in **`work/dossier_<date>.md`** (market card as a table + about 900 selected,
+de-duplicated headlines by topic + a retail-attention pack + an earnings-reactions pack; line format `id|MM-DD HH:MM|outlet|headline`,
+the id is what you cite as `[[nXXXX]]`). Read it once, completely (the Read tool with `allow_large: true` if it asks), and read the
+two files in `reference/` once. Do **not** re-read the dossier, do not read the full digest, do not dump feeds. Use
+`python3 -I tools/digest.py <date> --grep "regex" --max 30` only to fill a specific gap (at most six searches: an earnings
+reaction, a Polish item, a pending event).
 ```
 cd /home/user/DailyDigest_Markets/corrections/2025-11
-python3 -I tools/showcard.py <date>                       # market card as a table (--grep REGEX to filter)
-python3 -I tools/digest.py <date>                          # prioritised headlines per topic
-python3 -I tools/digest.py <date> --topic retail --max 200 # attention headlines for the retail section
-python3 -I tools/digest.py <date> --grep "regex" --max 80  # search every item
-python3 -I tools/verify.py <date>                          # fix every FAIL; review every WARN
-python3 -I tools/render.py <date>                          # must render without error
+python3 -I tools/verify.py <date>      # fix every FAIL; review every WARN
+python3 -I tools/render.py <date>      # must render without error
 ```
-1. Read the card and the digest (all topics; then `--grep` for what you need: earnings reactions, Polish items, Stocktwits,
-   pending events). Decide the stances, the lead retail trade and the main stories **before** writing.
-2. Write `specs/<date>.json` (valid JSON; escape quotes).
-3. `verify.py` → fix every FAIL, review every WARN (fix it or be sure it is right). Re-read the retail section against the
-   voice rules. `render.py`.
+1. Read the dossier. Decide the stances, the lead retail trade and the main stories **before** writing.
+2. Write `specs/<date>.json` (valid JSON, escape quotes) with one or two Write calls (for example `work/w<date>/a.json` for geo +
+   sectors and `work/w<date>/b.json` for the rest, merged by a six-line Python snippet), or in one call.
+3. `verify.py` → fix every FAIL and review every WARN with targeted edits (a small Python patch script per round is cheaper than
+   rewriting the file). Then `render.py`. Do not re-read the whole spec; re-read only the retail section once against the
+   voice rules.
 4. Before you finish, check: no narration about inputs; no fact without a headline or card number; no event after the cutoff; the
    retail lead is chosen on that day's evidence and every part is concrete; the Playbooks agree with each other; the whole
-   report is ≈ 9,500–11,000 words.
+   report is about 9,500–11,000 words.
 5. Reply with a 3–5 line note: overall tone, the stances you chose, the lead retail trade and why, anything you deliberately
    excluded.
