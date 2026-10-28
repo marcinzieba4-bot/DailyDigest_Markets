@@ -62,9 +62,11 @@ means for positioning, in plain, vivid, specific sentences. The reader never see
   market ("the move rests on one print", "positioning can unwind fast"), not about your data.
 - **Attribute like a strategist**, inline, by outlet: "Reuters reported…", "per Bloomberg…", "Stocktwits flagged …", "CNBC's
   piece asks…". The page carries no source list; the `[[nXXXX]]` markers are stripped when it is rendered.
-- **Interpretation is welcome and expected**: what the crowd believes, what institutions are likely doing, how a narrative
-  can break. Say it plainly ("retail reads this as…", "desks are likely trimming…", "the risk is…"). No disclaimer on every
-  claim; one honest caveat where it matters.
+- **Interpretation is welcome and expected; invention is not.** Say what retail believes in general terms ("retail reads the
+  pivot as redemption"), what institutions are likely doing ("desks are likely trimming…"), how a narrative can break ("the
+  risk is…"), plainly and without a disclaimer on every claim. But a **concrete event** — a reply, a post, a mention count, a
+  fund inflow, a broker statistic, who bought what — needs a headline behind it; without one, phrase it as a tendency
+  ("dip-buyers typically …"), never as something that happened. One honest caveat where it matters.
 - **Specific beats general**: name the print, the level, the company, the move, the action. No filler openers ("It is
   important to note…"), no repeated sentences across sections, no boilerplate.
 - Open `reference/retail_voice_A_stock_lead.txt` and `reference/retail_voice_B_macro_lead.txt` once: they are the **voice and
@@ -240,7 +242,7 @@ Title format for every item: **"Name / TICKER — the hook"**; the hook is what 
 without quotes (the page prints it in quotes). Examples of the shape: "Palantir / PLTR — the AI operating system",
 "Silver / SLV — is silver the new gold?". Only facts from the item's headlines and the card; interpretation (what retail
 believes, what the crowd reads into a headline, how a narrative can break) is expected, in the plain voice above, with no
-disclaimers about its status.
+disclaimers about its status — but never invent social evidence (no made-up posts, replies, counts or flows).
 
 ## Procedure per date
 ```

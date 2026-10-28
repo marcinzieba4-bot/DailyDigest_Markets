@@ -28,6 +28,8 @@ date's files, not `data/`. No git, no web.
      report date with the mechanical similarity (first wave → second wave); *Smart Money View* an honest split; *When the
      Narrative Breaks* with card levels and pending events;
    - small trades: a vivid *Why Retail Is Here* and a concrete *Where It Breaks*;
+   - **no invented social evidence**: a concrete reaction (a reply, a post, a mention count, a fund inflow, who bought what) must
+     have a headline behind it; otherwise rewrite it as a general tendency or drop it;
    - voice: confident strategist, no narration about inputs, no disclaimers about what is "the crowd's view" versus "reported
      fact", no hedging that reads as filler. Compare it paragraph by paragraph with the August voice references.
 4. **Voice across the page.** Remove narration about inputs anywhere ("the feed", "the card", "the writer", "carries no…",
