@@ -69,9 +69,14 @@ def fl(s):
 def nums_in(s):
     out = set()
     for m in NUM.finditer(s):
-        v = fl(m.group(0).rstrip('.,'))
+        raw = m.group(0).rstrip('.,')
+        v = fl(raw)
         if v is not None:
             out.add(v)
+        if re.fullmatch(r'\d+,\d{1,2}', raw):                  # Polish headlines write decimals with a comma: "4,00", "2,8"
+            v2 = fl(raw.replace(',', '.'))
+            if v2 is not None:
+                out.add(v2)
     return out
 
 
