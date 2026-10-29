@@ -1,7 +1,62 @@
 {
   "purpose": "Reviewer only; heuristic candidates requiring disposition. Do not supply later calendar knowledge to writers.",
   "spec_dir": "/workspace/work/oct2025/code/corrections/2025-09/specs",
-  "reports_checked": 6,
+  "reports_checked": 22,
   "method": "Compare report dates to first eligible weekday release boundaries, then search outcome wording. Exact release times may be schedule-derived.",
-  "flags": []
+  "flags": [
+    {
+      "date": "2025-09-03",
+      "rule": "us_aug_cpi",
+      "event": "US August Consumer Price Index",
+      "first_eligible_report": "2025-09-12",
+      "where": "$.geo[5].parts[0][1]",
+      "text": "The Polish monetary debate is moving from whether easing is plausible towards the size of a possible move. Bankier's preview argued that the RPP would cut and that the question was by how much. That remains a forecast. Notes from Poland reported August inflation slowing to 2.8%, while Business Insider Polska described the economy accelerating in the latest GDP data. The mix supports real purchasing power and a more constructive financing discussion. Yet Business Insider Polska also reported July unemployment at 5.4% and employers behaving cautiously. Consumption-led growth can continue while hiring becomes more defensive, so the quality of household income matters alongside the headline expansion. Watch whether better inflation and financing reach company demand without encouraging investors to ignore employment risk.",
+      "disposition": "False positive: Polish August flash CPI2.8%, not US CPI; own-date supporting source eligible."
+    },
+    {
+      "date": "2025-09-12",
+      "rule": "fed_sep",
+      "event": "FOMC September decision / Summary of Economic Projections",
+      "first_eligible_report": "2025-09-18",
+      "where": "$.geo[0].parts[0][1]",
+      "text": "The market has decided that labor weakness matters more for the next Fed decision than the latest inflation increase. Reuters described the Fed remaining on track for cuts as job worries eclipsed inflation fears; its poll treated a September reduction as the central expectation. That is supportive for equities, but the investable opportunity is broadening beyond the largest AI beneficiaries. A lower cost of capital helps smaller companies and property, provided credit stays available and demand does not deteriorate too quickly. Keep a constructive stance with a preference for balance-sheet strength. A rate cut can relieve financing pressure; it cannot make every business model profitable or remove the cost of higher import prices.",
+      "disposition": "False positive: explicit Reuters Fed poll/expectation, not September decision outcome."
+    },
+    {
+      "date": "2025-09-19",
+      "rule": "nvidia_openai",
+      "event": "Nvidia/OpenAI strategic partnership and potential investment",
+      "first_eligible_report": "2025-09-23",
+      "where": "$.sectors[12].parts[3][1]",
+      "text": "Morningstar described the Intel Nvidia collaboration as worth watching but not a death blow to AMD. Avoid turning a strategic partnership into a zero sum certainty. Add diversified semis after orderly consolidation; reduce if customer investment weakens or a new policy restriction damages access more than expected.",
+      "disposition": "False positive: Intel/Nvidia collaboration, not Nvidia/OpenAI announcement."
+    }
+  ],
+  "reviewed_by": "root",
+  "unresolved_candidates": 0,
+  "passed": true,
+  "spec_sha256": {
+    "2025-09-01": "94cc6578e1e61a95530db7f14f2b5d6aa0ce44629c167c210f758f9eb548f7f2",
+    "2025-09-02": "84d63efa9ac9ebd972f315f304d914481011d218035fc343735a512cbd8166ef",
+    "2025-09-03": "e184fa3c8a72add0e9a3fbbff5b4144aff12f18495b0d169446259aca52d4dbf",
+    "2025-09-04": "7efce21c911e77d6bec2e261f99c20cf618e63f4944971515ded94f43e405a1c",
+    "2025-09-05": "2cb86a111406c6de37c6091e38160e0907422863ad5f425bc733b3083119e374",
+    "2025-09-08": "ecb29740cf840ffba0e4d6814d0069311123bc5067ec84b1c547d7ce3b2ddca2",
+    "2025-09-09": "b33e70deac7a024317511156fe1f4e55a47da456ec7e9a8e79e49df1efe13f79",
+    "2025-09-10": "8e52eafd609f0fd3c8738432d3bbd616b36ecf9fc9b4114015274a186e6ce6e9",
+    "2025-09-11": "6bc019c2ea1ff265165d6c23b58e2770bbbf4f02285eb13eb16d0cf9c2f4265e",
+    "2025-09-12": "a9d67a41e40bb62950f32b179baec7065d96d921df884a853acb50533fbe18e2",
+    "2025-09-15": "5537917dd82f75c12ac23df68bc172e264421be16150cb5d0af581e3aafd7eb3",
+    "2025-09-16": "79cf7357546c4a9adbfa0c8ba6cfa380665db86b7e884133a0324c034250d7fc",
+    "2025-09-17": "9f2453470e32f8a13c54fe1be2f8e86d31fc4e66ff42463f1be680509ed4a6ea",
+    "2025-09-18": "c462aa1736dd4eacb8f0577461a614d11ee405868f7bba3460d9a4e341e77bfa",
+    "2025-09-19": "39cbbb70fdd358d0f607f5c556e0e5f3f6dc6c52b66d10da9fd7e7c8f2da56fb",
+    "2025-09-22": "bded750353c9de6beb7630320d31eb2dc5562b4a891c06a352ab4b3735ee9dba",
+    "2025-09-23": "ce855c806c74ee62a28a5320cdae08e993758e2d89ecf33bfd8ee97c321301bc",
+    "2025-09-24": "c31c100fe4096c1a77a741ad2b4c0379927d62a2a12243960492c8740c33effb",
+    "2025-09-25": "ad5356c5b9668eb63bd5d726a20f6c1fe92c2d3437b91105652d04a980e4c636",
+    "2025-09-26": "4b50d433b8e3c938d2fb1ffbb0c7384df315ef39d004bb92782bee2bd4ed814f",
+    "2025-09-29": "87d1f6f28dd24981f87f2933789d338772c448751964d296188dc3669b4f0855",
+    "2025-09-30": "639295c2a57db734eace46d64973a49997002ea350635802a6b15ad8e8e00c2e"
+  }
 }

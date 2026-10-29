@@ -1,0 +1,633 @@
+{
+  "reviewer": "sep_writer_a / consistency reviewer",
+  "updated_at_utc": "2026-10-29T11:09:56.301483+00:00",
+  "status": "complete",
+  "scope": [
+    "Manual comparison of every available US Rates & Curve paragraph and flows Rates & Dollar paragraph with own Treasury card levels, 20-observation moves, five-observation qualifiers and curve labels.",
+    "Manual Poland Macro Stance period/vintage review, including August flash versus September 15 final CPI wording; targeted own-date digest checks for the revision.",
+    "Manual Japan Playbook and explicit JPY hedging/scenario review; holiday sampling of US Labor Day and Tokyo holiday instrument/session labels.",
+    "Manual catalyst stance and Trade Expression review together with sector stances, flows Portfolio Implication and retail-lead invalidations; conditional actions sampled for direction.",
+    "Full-spec automated text scan for source-validation/writing narration and cross-split reference-price triggers using own-card reference_share_units_differ flags.",
+    "Reviewer chronology consulted for monthly release eligibility and early-Japan UTC conventions; no duplicate canonical-URL/source-body audit."
+  ],
+  "sampled_count": 22,
+  "expected_count": 22,
+  "pending_dates": [],
+  "findings": [
+    {
+      "id": "JPY_2025_09_05",
+      "date": "2025-09-05",
+      "field": "geo[JP].parts[Playbook ✓]",
+      "severity": "medium",
+      "quote": "Retain exporter exposure only with a yen hedge or room for currency appreciation.",
+      "reason": "A standard foreign-investor JPY hedge offsets yen depreciation; it does not protect exporter earnings from yen appreciation. The original phrasing treated the two risk controls as alternatives without specifying direction.",
+      "recommended_action": "Use currency hedges explicitly for depreciation risk and trim exporter beta if sharp appreciation hurts earnings.",
+      "status": "resolved",
+      "resolution": "Root replaced the sentence with measured exporter sizing, trimming on sharp yen appreciation and explicit depreciation-risk hedging; reread and confirmed.",
+      "resolved_spec_sha256": "2cb86a111406c6de37c6091e38160e0907422863ad5f425bc733b3083119e374"
+    },
+    {
+      "id": "JPY_2025_09_23",
+      "date": "2025-09-23",
+      "field": "anticipatory[3].parts[Conditional Expression]",
+      "severity": "medium",
+      "quote": "A stronger yen and a firmer monetary stance would favour hedged exporter exposure and careful selection of domestic financials.",
+      "reason": "Yen appreciation can hurt exporter earnings, while hedging a foreign-holder JPY position removes the positive FX offset. The prescribed currency-hedged exporter exposure had the wrong directional rationale.",
+      "recommended_action": "Favour domestic quality/selected financials or lower exporter beta in that scenario; reserve JPY hedging for depreciation risk.",
+      "status": "resolved",
+      "resolution": "Root now favours domestic quality, selected financials and lower exporter beta when yen strengthens; reread and confirmed.",
+      "resolved_spec_sha256": "84c485ee06970f29fa38385137df45a6fef71989899906aff4e5a910342ff2b7"
+    },
+    {
+      "id": "VOICE_2025_09_23",
+      "date": "2025-09-23",
+      "field": "sectors[XLK].parts[Reported]",
+      "severity": "medium",
+      "quote": "Do not infer a uniform share reaction from conflicting earnings coverage.",
+      "reason": "This imports the source-handling instruction into investor prose instead of giving the investment implication.",
+      "recommended_action": "Replace with a neutral demand/valuation implication while retaining supported facts.",
+      "status": "resolved",
+      "resolution": "Root replaced the sentence with design-software demand and valuation analysis; reread and confirmed.",
+      "resolved_spec_sha256": "84c485ee06970f29fa38385137df45a6fef71989899906aff4e5a910342ff2b7"
+    },
+    {
+      "id": "CPI_FLASH_FINAL_2025_09_23",
+      "date": "2025-09-23",
+      "field": "geo[PL].parts[Macro Stance]",
+      "severity": "low",
+      "quote": "Bankier's August inflation account said the reading fell below 3% and beat forecasts slightly; Business Insider Polska's later account put inflation closer to the NBP target while expressing disappointment.",
+      "reason": "The paragraph combines the August 29 flash account and the September 15 final-revision account without naming the vintage. Both are below 3%, but the forecast-surprise descriptions refer to different releases. Own-date feeds after September 15 contain the final 2.9% outcome and a headline stating GUS revised the reading.",
+      "recommended_action": "Identify the first account as the flash estimate and the later account as the final revision; use an eligible own-date revision headline if adding the final numeric rate.",
+      "status": "resolved",
+      "resolution": "Root explicitly distinguishes the August flash estimate from the later final 2.9% reading, with own-date n5055; reread and confirmed.",
+      "resolved_spec_sha256": "ce855c806c74ee62a28a5320cdae08e993758e2d89ecf33bfd8ee97c321301bc"
+    }
+  ],
+  "samples": [
+    {
+      "date": "2025-09-01",
+      "spec_sha256": "94cc6578e1e61a95530db7f14f2b5d6aa0ce44629c167c210f758f9eb548f7f2",
+      "card_sha256": "ca1c0d8afda4a16cf19882ae0a4e4fdbe10b2696a997e6a1d83718ed0da9891f",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-08-29",
+      "us_equity_session": "2025-08-29",
+      "nikkei_session": "2025-08-29",
+      "fx_usdjpy_session": "2025-08-29",
+      "flagged_split_references": {
+        "SCCO": "91.66"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-02",
+      "spec_sha256": "84d63efa9ac9ebd972f315f304d914481011d218035fc343735a512cbd8166ef",
+      "card_sha256": "4633a85fe509f515af43117d01931ba99e1ede20944caf94a57e87d72eba32e9",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-08-29",
+      "us_equity_session": "2025-08-29",
+      "nikkei_session": "2025-09-01",
+      "fx_usdjpy_session": "2025-09-01",
+      "flagged_split_references": {
+        "SCCO": "91.66"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-03",
+      "spec_sha256": "e184fa3c8a72add0e9a3fbbff5b4144aff12f18495b0d169446259aca52d4dbf",
+      "card_sha256": "53e4e0a3096d1bfa8af2e1f2f92f2bbeb5bfa42c49111f3a8deef75e93e467c2",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-02",
+      "us_equity_session": "2025-09-02",
+      "nikkei_session": "2025-09-02",
+      "fx_usdjpy_session": "2025-09-02",
+      "flagged_split_references": {
+        "LCID": "2.41",
+        "SCCO": "93.05"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-04",
+      "spec_sha256": "7efce21c911e77d6bec2e261f99c20cf618e63f4944971515ded94f43e405a1c",
+      "card_sha256": "ae4ea9a27bc59312a332cc705829cdde1db0d5f8099132ae125a9889678ae7a2",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-03",
+      "us_equity_session": "2025-09-03",
+      "nikkei_session": "2025-09-03",
+      "fx_usdjpy_session": "2025-09-03",
+      "flagged_split_references": {
+        "LCID": "2.42",
+        "SCCO": "94.53"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-05",
+      "spec_sha256": "2cb86a111406c6de37c6091e38160e0907422863ad5f425bc733b3083119e374",
+      "card_sha256": "de352710535542f416d2a30942fdd8423fc121b00d173d80efc91f278cc42809",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-04",
+      "us_equity_session": "2025-09-04",
+      "nikkei_session": "2025-09-04",
+      "fx_usdjpy_session": "2025-09-04",
+      "flagged_split_references": {
+        "LCID": "2.19",
+        "SCCO": "95.07"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-08",
+      "spec_sha256": "ecb29740cf840ffba0e4d6814d0069311123bc5067ec84b1c547d7ce3b2ddca2",
+      "card_sha256": "a9a53cb2daa6c21d0bd04f454dde7f0a9e8640397c2a6d51fdd8cbf8bdc8cf16",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-05",
+      "us_equity_session": "2025-09-05",
+      "nikkei_session": "2025-09-05",
+      "fx_usdjpy_session": "2025-09-05",
+      "flagged_split_references": {
+        "LCID": "2.17",
+        "SCCO": "97.51"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-09",
+      "spec_sha256": "b33e70deac7a024317511156fe1f4e55a47da456ec7e9a8e79e49df1efe13f79",
+      "card_sha256": "8c8fd1468125389ec27b8ab6a1cd45aa3597eeb37d8dbf897424c342aa9b70de",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-08",
+      "us_equity_session": "2025-09-08",
+      "nikkei_session": "2025-09-08",
+      "fx_usdjpy_session": "2025-09-08",
+      "flagged_split_references": {
+        "LCID": "2.13",
+        "SCCO": "100.10"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-10",
+      "spec_sha256": "8e52eafd609f0fd3c8738432d3bbd616b36ecf9fc9b4114015274a186e6ce6e9",
+      "card_sha256": "8512427bc44151caab1baffffd51724cd6bdd366058062821f72a1ad249d76ae",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-09",
+      "us_equity_session": "2025-09-09",
+      "nikkei_session": "2025-09-09",
+      "fx_usdjpy_session": "2025-09-09",
+      "flagged_split_references": {
+        "LCID": "2.19",
+        "SCCO": "96.12"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-11",
+      "spec_sha256": "6bc019c2ea1ff265165d6c23b58e2770bbbf4f02285eb13eb16d0cf9c2f4265e",
+      "card_sha256": "d0bd7281539a3884adf53cd3c99c722b6394a382dbf45f11fbb080305691ad81",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-10",
+      "us_equity_session": "2025-09-10",
+      "nikkei_session": "2025-09-10",
+      "fx_usdjpy_session": "2025-09-10",
+      "flagged_split_references": {
+        "LCID": "2.27",
+        "SCCO": "98.25"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-12",
+      "spec_sha256": "a9d67a41e40bb62950f32b179baec7065d96d921df884a853acb50533fbe18e2",
+      "card_sha256": "7ecc17d7fc9eedeea88a6f87a5c19a74766ecbf5dc2601db59f2f482722fce96",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-11",
+      "us_equity_session": "2025-09-11",
+      "nikkei_session": "2025-09-11",
+      "fx_usdjpy_session": "2025-09-11",
+      "flagged_split_references": {
+        "LCID": "2.34",
+        "SCCO": "99.50"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-15",
+      "spec_sha256": "5537917dd82f75c12ac23df68bc172e264421be16150cb5d0af581e3aafd7eb3",
+      "card_sha256": "ede85628b5a5f087a1f0485dc08a7ceefef320bd60826b92c033f3f47f5f3c55",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-12",
+      "us_equity_session": "2025-09-12",
+      "nikkei_session": "2025-09-12",
+      "fx_usdjpy_session": "2025-09-12",
+      "flagged_split_references": {
+        "LCID": "2.25",
+        "SCCO": "97.62"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-16",
+      "spec_sha256": "79cf7357546c4a9adbfa0c8ba6cfa380665db86b7e884133a0324c034250d7fc",
+      "card_sha256": "4913b11733811566cd2be16ce2d886f3756498bd3ea92207aa385f8d293a279d",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-15",
+      "us_equity_session": "2025-09-15",
+      "nikkei_session": "2025-09-12",
+      "fx_usdjpy_session": "2025-09-15",
+      "flagged_split_references": {
+        "LCID": "2.18"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-17",
+      "spec_sha256": "9f2453470e32f8a13c54fe1be2f8e86d31fc4e66ff42463f1be680509ed4a6ea",
+      "card_sha256": "f105a6740fc276ef4218110c90ec6c6e2a61b4d03d83dd5c419b58605d4a05b3",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-16",
+      "us_equity_session": "2025-09-16",
+      "nikkei_session": "2025-09-16",
+      "fx_usdjpy_session": "2025-09-16",
+      "flagged_split_references": {
+        "LCID": "2.18"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-18",
+      "spec_sha256": "c462aa1736dd4eacb8f0577461a614d11ee405868f7bba3460d9a4e341e77bfa",
+      "card_sha256": "15d9467e3bb85a73a3457e9739349cf43e7da43e7ebb76a5928405213d98d865",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-17",
+      "us_equity_session": "2025-09-17",
+      "nikkei_session": "2025-09-17",
+      "fx_usdjpy_session": "2025-09-17",
+      "flagged_split_references": {
+        "LCID": "2.13"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-19",
+      "spec_sha256": "39cbbb70fdd358d0f607f5c556e0e5f3f6dc6c52b66d10da9fd7e7c8f2da56fb",
+      "card_sha256": "7c3c02afaaf453ecb5a18cff047bf56b8d93d5c6819070e9e9166f037d35ea3f",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-18",
+      "us_equity_session": "2025-09-18",
+      "nikkei_session": "2025-09-18",
+      "fx_usdjpy_session": "2025-09-18",
+      "flagged_split_references": {
+        "LCID": "2.09"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-22",
+      "spec_sha256": "bded750353c9de6beb7630320d31eb2dc5562b4a891c06a352ab4b3735ee9dba",
+      "card_sha256": "8592c283dcaaaa3d2fbd08a9c34993aecd269f5dbbe55ec89b78b720e6dd0725",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-19",
+      "us_equity_session": "2025-09-19",
+      "nikkei_session": "2025-09-19",
+      "fx_usdjpy_session": "2025-09-19",
+      "flagged_split_references": {
+        "LCID": "2.09"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-23",
+      "spec_sha256": "ce855c806c74ee62a28a5320cdae08e993758e2d89ecf33bfd8ee97c321301bc",
+      "card_sha256": "d84410f48ada0d9df984b189062717b3f2df0febadfffe04047f38f87579d4b0",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-22",
+      "us_equity_session": "2025-09-22",
+      "nikkei_session": "2025-09-22",
+      "fx_usdjpy_session": "2025-09-22",
+      "flagged_split_references": {
+        "LCID": "2.03"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-24",
+      "spec_sha256": "c31c100fe4096c1a77a741ad2b4c0379927d62a2a12243960492c8740c33effb",
+      "card_sha256": "a16fd21eec24bd8dd7ef10fb97c4bcd8184d1e8fd9ea1b7b3a89c8d5e27f8ec7",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-23",
+      "us_equity_session": "2025-09-23",
+      "nikkei_session": "2025-09-22",
+      "fx_usdjpy_session": "2025-09-23",
+      "flagged_split_references": {
+        "LCID": "2.08"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-25",
+      "spec_sha256": "ad5356c5b9668eb63bd5d726a20f6c1fe92c2d3437b91105652d04a980e4c636",
+      "card_sha256": "1a7b964394d0e958fc951da755e150c1f6aeee73e46d7866b81177c57b2b6b81",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-24",
+      "us_equity_session": "2025-09-24",
+      "nikkei_session": "2025-09-24",
+      "fx_usdjpy_session": "2025-09-24",
+      "flagged_split_references": {
+        "LCID": "2.11"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-26",
+      "spec_sha256": "4b50d433b8e3c938d2fb1ffbb0c7384df315ef39d004bb92782bee2bd4ed814f",
+      "card_sha256": "37b34503b5aaf5fcd6bc55e29c52654c85dd9791058f79ce2ddbce701aff9e98",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-25",
+      "us_equity_session": "2025-09-25",
+      "nikkei_session": "2025-09-25",
+      "fx_usdjpy_session": "2025-09-25",
+      "flagged_split_references": {
+        "LCID": "2.08"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    },
+    {
+      "date": "2025-09-29",
+      "spec_sha256": "87d1f6f28dd24981f87f2933789d338772c448751964d296188dc3669b4f0855",
+      "card_sha256": "eeb8c5e6d53e90d2612142544035d38cf6740230b0696362e500527ebeb9f3b8",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-26",
+      "us_equity_session": "2025-09-26",
+      "nikkei_session": "2025-09-26",
+      "fx_usdjpy_session": "2025-09-26",
+      "flagged_split_references": {
+        "LCID": "2.07"
+      },
+      "result": "no unresolved material inconsistency in sampled fields",
+      "post_repair_recheck": "Core rates, Poland CPI wording, Japan playbook, catalyst trades and retail-lead invalidation reread after root edit; consistent."
+    },
+    {
+      "date": "2025-09-30",
+      "spec_sha256": "639295c2a57db734eace46d64973a49997002ea350635802a6b15ad8e8e00c2e",
+      "card_sha256": "805c7293aed84ed1c646dcd53607ed172c484e0951f9d3cf57c463d146d72337",
+      "sampled_fields": [
+        "geo[US].Rates & Curve",
+        "geo[PL].Macro Stance",
+        "geo[JP].Playbook and currency scenarios",
+        "flows.Rates & Dollar",
+        "flows.Portfolio Implication",
+        "all catalysts.stance and Trade Expression",
+        "sector stance labels",
+        "retail lead When the Narrative Breaks",
+        "all prose narration/split-reference scan"
+      ],
+      "treasury_session": "2025-09-29",
+      "us_equity_session": "2025-09-29",
+      "nikkei_session": "2025-09-29",
+      "fx_usdjpy_session": "2025-09-29",
+      "flagged_split_references": {
+        "LCID": "1.98"
+      },
+      "result": "no unresolved material inconsistency in sampled fields"
+    }
+  ],
+  "summary": "Curve levels/change signs match cards in sampled reports. US and Tokyo holiday labels sampled correctly. No flagged LCID/SCCO old-unit reference used as a direct post-split trigger. All 22 reports sampled. Three notified material issues and one minor CPI-vintage clarification repaired and rechecked. September 10/16/22/30 final samples found no new material inconsistency. Root accepted shortened curve parentheticals as nonmaterial without text churn.",
+  "nonmaterial_observations": [
+    {
+      "id": "SHORT_CURVE_PARENTHETICALS",
+      "dates": [
+        "2025-09-05",
+        "2025-09-08",
+        "2025-09-09",
+        "2025-09-10",
+        "2025-09-17",
+        "2025-09-18",
+        "2025-09-19",
+        "2025-09-22",
+        "2025-09-26",
+        "2025-09-29",
+        "2025-09-30"
+      ],
+      "fields": [
+        "geo[US].Rates & Curve",
+        "flows.Rates & Dollar"
+      ],
+      "quote": "positively sloped but still flat by historical standards",
+      "reason": "Some reports omit the explanatory card parenthetical (long-run average about +90 to +100 bps); September17/18/19/22 also abbreviate bull flattening/steepening without the explanatory parenthetical. Core market meaning, rates, change signs and spread direction are correct.",
+      "disposition": "accepted_nonmaterial",
+      "parent_direction": "Record missing long-run curve parentheticals as nonmaterial, no text churn."
+    }
+  ]
+}

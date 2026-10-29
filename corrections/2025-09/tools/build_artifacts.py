@@ -45,13 +45,21 @@ market card. Same-day Asian releases and rolling/live headlines are excluded
 when their release timing conflicts with the nominal index timestamp.
 
 News: broad dated Google News historical RSS harvest, using shared query
-windows. Eligibility is checked again after deduplication. Search-index result
+windows: 440 queries, 2,924 shared windows and 200,238 own-date headline
+records across the 22 frozen feeds. There were no failed source windows;
+180 windows were possibly capped. Eligibility is checked again after
+deduplication. 1,862 per-report priority Reuters date checks conservatively
+excluded 147 candidates. Search-index result
 limits mean coverage is broad, not exhaustive. Reports use headline facts,
 not facts inferred from unread article bodies. Cited items retain outlet, title,
 indexed timestamp and URL. Original article vintages are not independently
 archived. Canonical publisher dates of cited direct Reuters stories are checked
 through Google News metadata; date conflicts receive explicit UTC timing review
 or conservative exclusion. URL metadata is not full article-body vintage proof.
+The frozen feeds and readiness audits are available separately at:
+https://d7g7nkeytae81.cloudfront.net/reports/2025-09/September_2025_Frozen_News_Feeds.zip
+SHA256: 8631cfac48d01d83b47858d9541b0302ac4fbf173996ed3651be3aefe1f0f507
+The report bundle contains the cited evidence ledgers, not all raw feed rows.
 
 Markets: Yahoo Finance daily historical chart data, completed sessions before
 the report date, exchangeTimezoneName interpreted with ZoneInfo. Crypto uses
@@ -81,7 +89,12 @@ was rechecked; September uses the validated November pipeline and the requested
 wide August layout without opening price widgets or sector leadership chart.
 Historical execution is local and does not invoke the live current-time Lambda.
 
-Access: runtime AWS_KEY/AWS_SECRET bindings explicitly select the ordinary boto3
+Access: intermittent managed HTTP transport failures were resolved for source
+collection using an isolated, read-only GitHub Actions public-source job. Its
+artifact digests, own-date feed hashes and per-date eligibility audits were
+verified on ingestion. The temporary recovery PR was closed without merging.
+The approved proxy remained in use; no network policy or credentials changed.
+Runtime AWS_KEY/AWS_SECRET bindings explicitly select the ordinary boto3
 session through the managed HTTPS proxy. No credentials are saved here. Only
 report/archive objects are published; email and Telegram are not invoked.
 

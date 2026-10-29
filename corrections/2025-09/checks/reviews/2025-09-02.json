@@ -1,0 +1,60 @@
+{
+  "date": "2025-09-02",
+  "reviewer": "sep_writer_e",
+  "spec_sha256": "84d63efa9ac9ebd972f315f304d914481011d218035fc343735a512cbd8166ef",
+  "scope": "Selected-sample factual review, not exhaustive: US macro; China activity/credit/property; Poland macro and selected corporate/fiscal statements; XLK/XLY/SOXX Reported; retail lead Drivers and Social Signal. Canonical publisher URL audit is separate.",
+  "status": "no_blocking_issues_in_sample",
+  "issues": [],
+  "checks": [
+    {
+      "location": "US macro",
+      "result": "Jobs remain pending; July PCE and tariff/legal statements match sampled headline direction. No report-date actual used in selected sample.",
+      "ids": [
+        "n0544",
+        "n8791",
+        "n9199",
+        "n3265"
+      ]
+    },
+    {
+      "location": "China macro",
+      "result": "Private August PMI, July activity/credit/property references, and chip access headlines support sampled claims. Private survey is from September 1 before September 2 cutoff despite approximate Sunday RSS.",
+      "ids": [
+        "n1583",
+        "n0897",
+        "n0884",
+        "n0886",
+        "n1038",
+        "n0899",
+        "n1667"
+      ]
+    },
+    {
+      "location": "Poland/earnings",
+      "result": "RPP remains pending; sampled GDP and inflation direction plus MongoDB/Dell/Marvell/BYD/Tesla claims match headlines.",
+      "ids": [
+        "n4968",
+        "n4825",
+        "n4924",
+        "n5115",
+        "n2849",
+        "n2863",
+        "n2940",
+        "n7225"
+      ]
+    },
+    {
+      "location": "Retail and market sample",
+      "result": "Alibaba local September 1 and US August 29 closes/periods correctly distinguished. KWEB, Hang Seng and selected Polish values match own card; social uses actual stocks-to-watch/PDD framing without invented statistics.",
+      "ids": [
+        "n1524",
+        "n5259",
+        "n4995"
+      ]
+    }
+  ],
+  "limitations": [
+    "Selected sample only; other text and individual citations are outside this review.",
+    "Publisher canonical timestamps were not fetched; parent conducts that audit."
+  ]
+}
