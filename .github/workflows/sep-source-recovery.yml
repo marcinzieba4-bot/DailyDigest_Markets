@@ -1,0 +1,259 @@
+name: September 2025 public data recovery
+on:
+  pull_request:
+    branches: [codex/october-2025-retrospective]
+    types: [opened, synchronize, reopened]
+    paths:
+      - .github/workflows/sep-source-recovery.yml
+      - recovery/sep2025/**
+permissions:
+  contents: read
+concurrency:
+  group: sep-2025-public-data-recovery
+  cancel-in-progress: true
+jobs:
+  public-news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: recovery/sep2025
+      - name: Harvest dated public RSS sources
+        run: python recovery/sep2025/tools/fetch_news.py --workers 6
+      - name: Screen 2025-09-05 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-05 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-05
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-05.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-05.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-11 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-11 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-11
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-11.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-11.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-17 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-17 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-17
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-17.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-17.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-23 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-23 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-23
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-23.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-23.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-26 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-26 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-26
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-26.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-26.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-02 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-02 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-02
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-02.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-02.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-03 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-03 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-03
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-03.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-03.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-04 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-04 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-04
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-04.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-04.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-08 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-08 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-08
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-08.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-08.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-09 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-09 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-09
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-09.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-09.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-10 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-10 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-10
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-10.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-10.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-12 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-12 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-12
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-12.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-12.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-15 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-15 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-15
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-15.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-15.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-16 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-16 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-16
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-16.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-16.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-18 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-18 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-18
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-18.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-18.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-19 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-19 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-19
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-19.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-19.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-22 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-22 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-22
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-22.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-22.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-24 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-24 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-24
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-24.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-24.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-25 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-25 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-25
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-25.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-25.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-29 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-29 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-29
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-29.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-29.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - name: Screen 2025-09-30 original publisher dates
+        run: python recovery/sep2025/tools/ready_feeds.py 2025-09-30 --from-unreviewed --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-inputs-2025-09-30
+          retention-days: 2
+          compression-level: 0
+          path: |
+            recovery/sep2025/feeds/2025-09-30.json.gz
+            recovery/sep2025/audit/news_ready_2025-09-30.json
+            recovery/sep2025/audit/canonical_reuters_urls.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sep2025-harvest-audit
+          retention-days: 2
+          path: recovery/sep2025/audit/news_fetch_audit.json
