@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-29T09:51:46.022620+00:00",
+  "checked_at_utc": "2026-10-29T14:14:41.512280+00:00",
   "passed": true,
   "dates": [
     "2025-11-03",
@@ -23,38 +23,51 @@
     "2025-11-27",
     "2025-11-28"
   ],
-  "words": 187681,
-  "pdf_pages": 471,
-  "all20_structural_numeric_window_checks": true,
-  "all20_desktop_mobile_and_removed_widgets_checks": true,
-  "critical_review_new_reports": 18,
-  "inherited_review_dates": [
-    "2025-11-04",
-    "2025-11-06"
-  ],
-  "review_scope": "Critical-claim samples, not exhaustive factual/article-body verification. Canonical Reuters date audit covers currently cited direct Reuters links.",
-  "canonical_reuters_links": 507,
-  "unresolved_canonical_candidates": 0,
-  "documented_pre_midnight_exceptions": 2,
-  "known_tripwire_hits": 5,
-  "tripwire_disposition": "Conditional previews only; reviewed manually.",
-  "market_assertions": 30156,
-  "source_records": 163721,
-  "artifact_manifest_sha256": "1002522065f4b217ea9c8363d24b98b8ebde3635ac5d5f3fe708ce417e574505",
-  "independent_review_sha256": "ab35c8ea6f45e0d84365f126dfc7c0a0d98b8d2f624a679e44a69b0881fb4993",
-  "canonical_audit_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
-  "source_repair_receipts": {
-    "reuters_repairs_late.json": "c6166944c847f81e0e80137c09cb5e051e6c24e595fb8b3182703a816c22dab6",
-    "reuters_repairs_root.json": "ef43b86d7a4f5d66ea043005e7b64a0d7580990718b3f82f7c202663b59b4875",
-    "reuters_repairs_middle.json": "0d7a38a26dbe9ebd31720cfc04092b9fd6e7e893f0e18bcc57f3a02c640d1eb8",
-    "reuters_repairs_seventeen.json": "8cdbfe20c3da4fc6aa98d366798381d651d27dcc26d7fb3bce16a82a5230073f",
-    "reuters_repairs_early.json": "ee3a6e645791ac9de5e9bc11cd089a6c7f5b7d8d1f76cc631363a807fd475089"
+  "scope": "Current retail revisions, structural/source windows and exact scope invariants; earlier nonretail review retained for unchanged text. Three explicit December source-timing paragraphs independently repaired. Selected factual reviews do not prove original article-body vintages.",
+  "prior_validation": "final_validation_before_retail_revision.json",
+  "current_spec_sha256": {
+    "2025-11-03": "7732c1fd175e9df549408f9ed1f00894741d1134aaf862d34b2b08a36389effc",
+    "2025-11-04": "ceeba5868783e93d8f33a6a498734f122726b65f369b025bb5d89169728e0900",
+    "2025-11-05": "65a84b942cd6b438e1535c84657a40be4261d0717cf44a28a63dc108ef7183da",
+    "2025-11-06": "ef4fd806051a1642552380dfc81ebde183415fda58eaf90b7da3153ffdd6fdf1",
+    "2025-11-07": "d0cde3ce7572c104ed69c1efc29276fdd811dc8c88974ea1fbe30619bac1697a",
+    "2025-11-10": "d32aa301ef0d10df95d0cf1e9f49005d396f7fcd7d4a45dac363f20d3326d3f3",
+    "2025-11-11": "698b523bc0c6ce04e9281f02bffec15782297ee3ec2aee313409bfb48f444b13",
+    "2025-11-12": "8b01ce4d17dc3a62120f5ab842940cd113a2193aea0487732f0a708cef036cb0",
+    "2025-11-13": "d91475e4329057d345e93c7340837bb2efaafd8ddde9c6cfbfd2d9ccc313949e",
+    "2025-11-14": "0b2878a2ae6e447247a2a5e031ccb9f5e5c25f53e5c47353f68107be9e1de98a",
+    "2025-11-17": "e1c620efe1640827c5d704937dbf605300f2f5d0ee130fbc42bebbcbb961e9cc",
+    "2025-11-18": "47f0094b6594a8a5b644b43da26429a781c5fc073cd742a4b762f41ad394b809",
+    "2025-11-19": "e5f1df44b90311f19168833fde939882149dfc42338cffe3e97490c518b6215a",
+    "2025-11-20": "f2878f52a9f2fa530a717b20da92a01b70a07f7a160cc380e253ce42d921a742",
+    "2025-11-21": "3f0654415dc2d6661810c7d22ec45ddddd60b9aa7eacfff9b81fb92eb84004fb",
+    "2025-11-24": "3c220704f4f67eed4b14c7e7f4d846d120bf0735431c807da61589669b899897",
+    "2025-11-25": "7862485a640a75b8757afaf7b753670e5b9908efec2078a53af459c7fab2820f",
+    "2025-11-26": "5bcbe1240841878f4886da0e18a3f2ba331b7386b43cb5ea3ad309533fdf1bc4",
+    "2025-11-27": "be0c0029f3d0efef24d5cfa74c98b650864bf4de36ab10e2f5126d5c8138fcd6",
+    "2025-11-28": "03ad21ad0b61313b067dbd5f95b6bd7fa8d6270b959878db3ef8e5905bb9fe8b"
+  },
+  "retail_independent_review_sha256": "09a4cfd9d4e2b790d86987742b7ca7170eecd71618de47dfd6cf719e4b626033",
+  "retail_quality_sha256": "9caa4d420fbe7321b476dced4771ea97872bc95a9b2b38cc00698e3926a545e4",
+  "global_final_validation_sha256": "dca910383046df4d8c6cd6ced88d88bbe3f6df6af06cae131287517dbb3c2826",
+  "words": 189696,
+  "pdf_pages": 473,
+  "accepted_warnings": {
+    "2025-11-07": [
+      "retail[3]: 113 words, brief minimum 150"
+    ],
+    "2025-11-18": [
+      "retail[1]: 116 words, brief minimum 150"
+    ]
   },
   "publication_status": "published",
-  "stored_artifacts_verified": 63,
-  "public_artifacts_verified": 23,
-  "public_verification_passed": true,
-  "invalidation_status": "Completed",
+  "stored_daily_artifacts_verified": 60,
+  "all_live_variants_excluded_from_publication": true,
+  "live_html_sha_verified": 145,
+  "native_live_variants_verified": 3,
+  "native_live_variants_pending": 432,
   "latest_unchanged": true,
-  "weekends_unchanged": true
+  "archive_index_unchanged": true,
+  "public_verification_passed": true,
+  "invalidation_status": "Completed"
 }

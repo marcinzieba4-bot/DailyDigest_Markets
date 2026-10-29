@@ -1,0 +1,60 @@
+{
+  "run": "20261029T131343Z",
+  "snapshot_sha256": "3dc05c0937352ef89ff4c6e415883a9827b4607a1c080ab5ae6a5613ef812bc3",
+  "records": {
+    "reports/archive/2026-04-03.html": {
+      "key": "reports/archive/2026-04-03.html",
+      "passed": true,
+      "baseline_sha256": "63174f8b2288adc5815807a0c9fc8be843256a39b19f566e9244734c8c327089",
+      "proof": "unchanged ETag/size tied to original full SHA256 snapshot",
+      "verified_at_utc": "2026-10-29T14:08:17.681122+00:00"
+    },
+    "reports/archive/2026-04-02.html": {
+      "key": "reports/archive/2026-04-02.html",
+      "passed": true,
+      "baseline_sha256": "a0aee2d5564ab6b596a9681ab8937df99f9f69eeb70a89239e729e6819dea141",
+      "proof": "unchanged ETag/size tied to original full SHA256 snapshot",
+      "verified_at_utc": "2026-10-29T14:08:17.692305+00:00"
+    },
+    "reports/archive/2026-04-06.html": {
+      "key": "reports/archive/2026-04-06.html",
+      "passed": true,
+      "baseline_sha256": "368b4c58ea6ff82309e78d6bf908192423b01a3133c8e00a9f2c6b1791745b1f",
+      "proof": "unchanged ETag/size tied to original full SHA256 snapshot",
+      "verified_at_utc": "2026-10-29T14:10:27.936015+00:00"
+    }
+  },
+  "passed": false,
+  "verified_count": 3,
+  "errors": [
+    {
+      "key": "reports/archive/2026-04-01.html",
+      "error_type": "ClientError"
+    },
+    {
+      "key": "Strategies/json/2026-04-03_Market_Intelligence.json",
+      "error_type": "ClientError"
+    },
+    {
+      "key": "Strategies/json/2026-04-01_Market_Intelligence.json",
+      "error_type": "ClientError"
+    },
+    {
+      "key": "Strategies/json/2026-04-02_Market_Intelligence.json",
+      "error_type": "ClientError"
+    },
+    {
+      "key": "Strategies/json/2026-04-06_Market_Intelligence.json",
+      "error_type": "ClientError"
+    },
+    {
+      "key": "Strategies/json/2026-04-07_Market_Intelligence.json",
+      "error_type": "ClientError"
+    },
+    {
+      "key": "reports/archive/2026-04-07.html",
+      "error_type": "ClientError"
+    }
+  ],
+  "finished_at_utc": "2026-10-29T14:12:22.194250+00:00"
+}

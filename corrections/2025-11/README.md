@@ -1,4 +1,4 @@
-> Retail revision: the reconstructed retail sections have been reviewed and revised. The new exports are prepared; public archive replacement is pending managed-network recovery. Live editions, including August2026, are unchanged. See [revision status](../retail-quality/README.md) and the shared final validation record.
+> Retail revision published and verified: 20 reconstructed editions were exported with reviewed dated catalysts and continuation decisions. Live editions, including August 2026, are unchanged. Current proof: [final validation](checks/final_validation.json); shared publication and backups: [revision audit](../retail-quality/audit/final_validation.json).
 
 # November 2025 weekday retrospective briefings
 

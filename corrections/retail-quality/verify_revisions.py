@@ -3,17 +3,22 @@ from pathlib import Path
 import concurrent.futures as cf
 import datetime as dt
 import hashlib
+import importlib.util
 import json
 import os
 import time
+import threading
 import urllib.request
 import urllib.error
 import boto3
 from botocore.config import Config
-from publish_revisions import request, read
 
 ROOT=Path(__file__).resolve().parent
 BASE='https://d7g7nkeytae81.cloudfront.net/'
+_spec=importlib.util.spec_from_file_location('retail_publisher_for_verification',ROOT/'publish_revisions.py')
+_publisher=importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_publisher)
+request,read=_publisher.request,_publisher.read
 
 
 def public(item):
@@ -38,32 +43,89 @@ def main():
     receipt_path=ROOT/'audit/publication.json'
     receipt=json.loads(receipt_path.read_text())
     if receipt['stage']!='published':raise ValueError('Publication incomplete')
+    expected={item['key']:item for item in receipt['targets']}
+    if len(expected)!=len(receipt['targets']) or set(receipt['objects'])!=set(expected) or receipt.get('verified_count')!=len(expected):
+        raise ValueError('Complete stored-artifact receipt is required')
+    for key,item in expected.items():
+        state=receipt['objects'][key];proof=state.get('current',{})
+        if not state.get('verified') or proof.get('sha256')!=item['sha256'] or proof.get('bytes')!=item['bytes'] or not proof.get('etag'):
+            raise ValueError('Stored-artifact proof mismatch: '+key)
     session=boto3.Session(aws_access_key_id=os.environ['AWS_KEY'],aws_secret_access_key=os.environ['AWS_SECRET'],region_name='eu-north-1')
     config=Config(connect_timeout=8,read_timeout=25,retries={'total_max_attempts':1},max_pool_connections=6)
     s3=session.client('s3',config=config);cdn=session.client('cloudfront',config=config)
-    status=request(lambda:cdn.get_invalidation(DistributionId='E15IJW4438D21G',Id=receipt['invalidation_id']))['Invalidation']['Status']
+    # Completed is monotonic. Reuse a previously observed completion instead of
+    # making every retry depend on a healthy CloudFront control-plane tunnel.
+    status=receipt.get('invalidation_status')
+    if status!='Completed':
+        status=request(lambda:cdn.get_invalidation(DistributionId='E15IJW4438D21G',Id=receipt['invalidation_id']))['Invalidation']['Status']
     if status!='Completed':raise ValueError('CDN invalidation still '+status+'; retry verification shortly')
     receipt['invalidation_status']=status;receipt_path.write_text(json.dumps(receipt,indent=2))
     targets=[x for x in receipt['targets'] if x['key'].startswith('reports/')]
     result={'started_at_utc':dt.datetime.now(dt.timezone.utc).isoformat(),'public_artifacts':[]}
+    checkpoint_path=ROOT/'audit/live_verification_checkpoint.json'
+    fingerprint=hashlib.sha256(json.dumps(receipt['targets'],sort_keys=True).encode()).hexdigest()
+    checkpoint=json.loads(checkpoint_path.read_text()) if checkpoint_path.exists() else {}
+    if checkpoint.get('run')!=receipt['run'] or checkpoint.get('targets_sha256')!=fingerprint:
+        checkpoint={'run':receipt['run'],'targets_sha256':fingerprint,'public':{},'protected':{}}
+    lock=threading.RLock()
+    def save_checkpoint():
+        with lock:
+            temporary=checkpoint_path.with_suffix('.tmp')
+            temporary.write_text(json.dumps(checkpoint,indent=2));temporary.replace(checkpoint_path)
+    missing=[item for item in targets if not (checkpoint['public'].get(item['key'],{}).get('passed') and
+        checkpoint['public'][item['key']]['sha256']==item['sha256'] and checkpoint['public'][item['key']]['bytes']==item['bytes'])]
+    public_failures=[]
+    def public_one(item):
+        with lock:
+            if len(public_failures)>=3:return {'key':item['key'],'passed':False}
+        try:
+            row=public(item)
+            row['verified_at_utc']=dt.datetime.now(dt.timezone.utc).isoformat()
+            with lock:checkpoint['public'][row['key']]=row;save_checkpoint()
+            return row
+        except Exception as error:
+            row={'key':item['key'],'passed':False,'error_type':type(error).__name__}
+            with lock:public_failures.append(row)
+            return row
     with cf.ThreadPoolExecutor(max_workers=3) as ex:
-        for i,row in enumerate(ex.map(public,targets),1):
-            result['public_artifacts'].append(row)
-            if i%25==0:print('Public SHA verified',i,'of',len(targets),flush=True)
+        rows=list(ex.map(public_one,missing))
+    pending_public=[row['key'] for row in rows if not row['passed']]
+    if pending_public:raise ValueError('Public checks pending for '+str(len(pending_public))+' keys; successes retained in checkpoint')
+    print('Public SHA verified',len(targets),'of',len(targets),flush=True)
+    result['public_artifacts']=[checkpoint['public'][item['key']] for item in targets]
     scope=json.loads((ROOT/'audit/retrospective_scope.json').read_text())
     snapshots=json.loads((ROOT/'audit/published_snapshots.json').read_text())
     snapshots+=json.loads((ROOT/'audit/published_pdf_snapshots.json').read_text())
     protected=[x for x in snapshots if x.get('date') in scope['protected_live_dates']]
     if len(protected)!=3*scope['protected_count']:raise ValueError('Protected live variant inventory incomplete')
+    snapshot_fingerprint=hashlib.sha256(json.dumps(protected,sort_keys=True).encode()).hexdigest()
+    if checkpoint.get('protected_snapshot_sha256')!=snapshot_fingerprint:
+        checkpoint['protected']={};checkpoint['protected_snapshot_sha256']=snapshot_fingerprint
+    failures=[]
     def preserve(item):
-        h=request(lambda:s3.head_object(Bucket='s3bucketmz',Key=item['key']))
-        if h['ETag']==item['etag'] and h['ContentLength']==item['bytes']:
-            return {'key':item['key'],'passed':True,'proof':'unchanged ETag/size tied to original full SHA256 snapshot'}
-        actual,_=read(s3,item['key'])
-        if actual['sha256']!=item['sha256']:raise ValueError('Protected live artifact changed: '+item['key'])
-        return {'key':item['key'],'passed':True,'proof':'fresh atomic GET SHA256 equals original snapshot'}
+        with lock:
+            cached=checkpoint['protected'].get(item['key'],{})
+            if cached.get('passed') and cached.get('baseline_sha256')==item['sha256']:return cached
+            if len(failures)>=3:return {'key':item['key'],'passed':False,'reason':'transport circuit opened; retry required'}
+        try:
+            h=request(lambda:s3.head_object(Bucket='s3bucketmz',Key=item['key']))
+            if h['ETag']==item['etag'] and h['ContentLength']==item['bytes']:
+                row={'key':item['key'],'passed':True,'proof':'unchanged ETag/size tied to original full SHA256 snapshot'}
+            else:
+                actual,_=read(s3,item['key'])
+                if actual['sha256']!=item['sha256']:raise ValueError('Protected live artifact changed: '+item['key'])
+                row={'key':item['key'],'passed':True,'proof':'fresh atomic GET SHA256 equals original snapshot'}
+            row.update(baseline_sha256=item['sha256'],verified_at_utc=dt.datetime.now(dt.timezone.utc).isoformat())
+            with lock:checkpoint['protected'][item['key']]=row;save_checkpoint()
+            return row
+        except Exception as error:
+            row={'key':item['key'],'passed':False,'error_type':type(error).__name__}
+            with lock:failures.append(row)
+            return row
     with cf.ThreadPoolExecutor(max_workers=5) as ex:
         result['protected_live_variants']=list(ex.map(preserve,protected))
+    pending=[row['key'] for row in result['protected_live_variants'] if not row['passed']]
+    if pending:raise ValueError('Live preservation checks pending for '+str(len(pending))+' keys; successes retained in checkpoint: '+str(pending[:3]))
     specials=json.loads((ROOT/'audit/protected_specials.json').read_text())
     for key,expected in specials.items():
         actual,blob=read(s3,key)

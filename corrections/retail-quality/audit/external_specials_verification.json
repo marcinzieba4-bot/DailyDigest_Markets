@@ -1,0 +1,53 @@
+{
+  "purpose": "Independent public full-body SHA preservation proof for the exact latest and archive-index objects; no AWS credentials or writes.",
+  "source_commit": "ea8b0413835962ba682fde292fa71375d1b85747",
+  "source_specials_sha256": "9f6f90c600ae0971e7f52220c0a8c97cde35458e3db949029ca7c0f4f54e00a8",
+  "started_at_utc": "2026-10-29T14:11:19.827495+00:00",
+  "finished_at_utc": "2026-10-29T14:11:20.594462+00:00",
+  "expected_count": 2,
+  "checked_count": 2,
+  "passed_count": 2,
+  "failed_count": 0,
+  "passed": true,
+  "aws_credentials_used": false,
+  "aws_writes": false,
+  "rows": [
+    {
+      "key": "reports/index.html",
+      "expected_sha256": "5f492efe69207d3e4df8614cc082bf0a6fff00e4fa3b23bd50c51210c6a607a2",
+      "expected_bytes": 17898,
+      "passed": true,
+      "status": 200,
+      "sha256": "5f492efe69207d3e4df8614cc082bf0a6fff00e4fa3b23bd50c51210c6a607a2",
+      "bytes": 17898,
+      "actual_sha256": "5f492efe69207d3e4df8614cc082bf0a6fff00e4fa3b23bd50c51210c6a607a2",
+      "actual_bytes": 17898,
+      "attempts": 1,
+      "observed_at_utc": "2026-10-29T14:11:20.367920+00:00"
+    },
+    {
+      "key": "reports/latest.html",
+      "expected_sha256": "d813cab2ae0e42cf379ccb5362d8b330ff7235d67463453fa5d3b8a02ce2f8f2",
+      "expected_bytes": 93314,
+      "passed": true,
+      "status": 200,
+      "sha256": "d813cab2ae0e42cf379ccb5362d8b330ff7235d67463453fa5d3b8a02ce2f8f2",
+      "bytes": 93314,
+      "actual_sha256": "d813cab2ae0e42cf379ccb5362d8b330ff7235d67463453fa5d3b8a02ce2f8f2",
+      "actual_bytes": 93314,
+      "attempts": 1,
+      "observed_at_utc": "2026-10-29T14:11:20.594106+00:00"
+    }
+  ],
+  "snapshots_sha256": "9f6f90c600ae0971e7f52220c0a8c97cde35458e3db949029ca7c0f4f54e00a8",
+  "ci": {
+    "workflow_run_id": 40888979461,
+    "workflow_commit": "446d38bfc667d76053ba02480e33ce498b693319",
+    "artifact_id": 12904471033,
+    "artifact_zip_sha256": "75a7ae0948aaef5f63c8a479a608ad0d35601429e421b22c2b1a984b5e1425f4",
+    "artifact_zip_sha256_verified": true,
+    "temporary_pull_request": "https://github.com/marcinzieba4-bot/DailyDigest_Markets/pull/1",
+    "pull_request_closed": true
+  },
+  "ingested_at_utc": "2026-10-29T14:12:26.164175+00:00"
+}

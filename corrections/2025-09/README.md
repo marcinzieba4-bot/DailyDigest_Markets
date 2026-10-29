@@ -1,8 +1,8 @@
-> Retail revision: the reconstructed retail sections have been reviewed and revised. The new exports are prepared; public archive replacement is pending managed-network recovery. Live editions, including August2026, are unchanged. See [revision status](../retail-quality/README.md) and the shared final validation record.
+> Retail revision published and verified: 22 reconstructed editions were exported with reviewed dated catalysts and continuation decisions. Live editions, including August 2026, are unchanged. Current proof: [final validation](checks/final_validation.json); shared publication and backups: [revision audit](../retail-quality/audit/final_validation.json).
 
 # September 2025 weekday retrospective briefings
 
-Published: 22 dated Market Intelligence Briefings, September 1–30, 2025, in the wide August 2026 nine-section format. The opening price dashboard and sector leadership chart are omitted. The complete set contains 208,836 words and 526 PDF pages.
+Published: 22 dated Market Intelligence Briefings, September 1–30, 2025, in the wide August 2026 nine-section format. The opening price dashboard and sector leadership chart are omitted. The complete set contains 209,459 words and 524 PDF pages.
 
 [Read September 2025](https://d7g7nkeytae81.cloudfront.net/reports/2025-09.html) · [Download HTML, PDF and JSON](https://d7g7nkeytae81.cloudfront.net/reports/2025-09/September_2025_Weekday_Reports.zip) · [Methodology](https://d7g7nkeytae81.cloudfront.net/reports/2025-09/methodology.txt)
 

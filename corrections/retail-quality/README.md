@@ -4,15 +4,20 @@ The reviewed revision covers 158 reconstructed editions: 118 have editorial
 changes and 40 retain their supported selections. All 145 live editions,
 including August 2026, and the live Lambda are protected. The export contains
 121 reports because three unchanged editions remain in the month bundles.
-The 372 planned origin artifacts passed the local final gate; publication is
-currently pending recovery of the managed HTTPS transport. The public CDN is
-healthy from a separate read-only runner, while this environment returns Envoy
-503 before reaching AWS. No report objects have been changed by this revision.
+All 372 origin artifacts and 130 public artifacts passed verification. All 145
+protected live HTML editions, the latest report and archive index passed
+independent full-body SHA checks. Every live HTML/JSON/PDF key was excluded from
+publication. Native rechecks completed for 3 of 435 untouched live variants; the
+remaining 432 checks are explicitly pending because the managed gateway
+intermittently fails before reaching AWS. Ordinary configured AWS access
+completed the revised publication without changing credentials or network
+policy. Source metadata and public delivery recovery used read-only public CI
+jobs.
 
 [Open the local review index](review.html). `Retrospective_Retail_Revisions.zip`
 is an ignored local review bundle with all 121 HTML/PDF/JSON exports. The exact
-current status is in `audit/final_validation.json`; prepared files do not imply
-that the public archive has been updated.
+publication status and its verification scope are recorded in
+`audit/final_validation.json` and `audit/delivery_verification.json`.
 
 The recurring problem was selection without editorial memory. The generator
 favoured rising assets, repeatedly offered metals/AI/Tesla as examples, called
@@ -184,7 +189,14 @@ origin SHA256 proofs, backs up each replaced object, and uses conditional
 writes. `--resume --go` retains the original receipt and backups. It updates
 existing retrospective objects and three existing month collections only;
 the archive index, latest report and live editions are never write targets.
-The public verification also rechecks all 435 protected live format versions.
+The strict verifier also rechecks all 435 protected live format versions. Its
+resumable checkpoint binds successful observations to the publication run,
+target manifest and original snapshots. `import_verified_proofs.py` can ingest
+independently verified public checks or complete native preservation checks;
+it does not create observations. When the managed gateway blocks optional native
+checks, `record_delivery_proof.py` records completed origin/public delivery and
+independent live-HTML/latest/index preservation separately, with the exact native
+pending count. It never declares the full preservation verifier passed.
 Generated PDFs/ZIPs and original snapshots stay out of Git. Original snapshots
-can be restored from the eventual per-run S3 backups recorded in the receipt;
+can be restored from the per-run S3 backups recorded in the receipt;
 selected newly introduced legacy evidence is embedded in patch JSON and exports.

@@ -49,8 +49,13 @@ readiness does not mean the public archive has been updated.
         for date in manifest['dates']:
             for fmt in ['html','json','pdf']:
                 p=ROOT/fmt/(date+'.'+fmt);bundle.write(p,fmt+'/'+p.name)
-        for name in ['final_validation.json','retail_canonical_dates.json','legacy_independent_review.json','retrospective_scope.json']:
-            bundle.write(ROOT/'audit'/name,'audit/'+name)
+        for name in ['final_validation.json','retail_canonical_dates.json','legacy_independent_review.json',
+                     'retrospective_scope.json','publication.json','live_verification.json',
+                     'delivery_verification.json','external_revised_public_verification.json',
+                     'external_live_html_verification.json','external_specials_verification.json']:
+            path_in_audit = ROOT/'audit'/name
+            if path_in_audit.exists():
+                bundle.write(path_in_audit,'audit/'+name)
     receipt={'path':str(path),'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
              'reports':len(manifest['dates']),'entries':len(zipfile.ZipFile(path).namelist()),'remote_calls':False}
     (ROOT/'audit/review_package.json').write_text(json.dumps(receipt,indent=2))
