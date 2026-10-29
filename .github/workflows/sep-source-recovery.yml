@@ -1,4 +1,4 @@
-name: September 2025 cited source date verification
+name: Retrospective retail cited source date verification
 on:
   pull_request:
     branches: [codex/october-2025-retrospective]
@@ -22,6 +22,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: sep2025-cited-url-audit
+          name: retail-cited-url-audit
           retention-days: 2
           path: recovery/sep2025/cited_url_results.json
