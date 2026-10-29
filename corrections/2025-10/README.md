@@ -1,6 +1,6 @@
 # October 2025 weekday retrospective briefings
 
-23 dated Market Intelligence Briefings, October 1–31, 2025, in a wider version of the August 2026 nine-section layout. Each has HTML, PDF, JSON, a prior-session market dashboard, a sector leadership chart, and linked dated evidence.
+23 dated Market Intelligence Briefings, October 1–31, 2025, in a wider version of the August 2026 nine-section layout. Each has HTML, PDF, JSON and linked dated evidence. The top price dashboard and sector leadership chart were removed at the user’s request; the nine report sections and their dated analysis are unchanged.
 
 [Open the month collection](https://d7g7nkeytae81.cloudfront.net/reports/2025-10.html) · [Download HTML/PDF/JSON](https://d7g7nkeytae81.cloudfront.net/reports/2025-10/October_2025_Weekday_Reports.zip) · [Historical method and limits](https://d7g7nkeytae81.cloudfront.net/reports/2025-10/methodology.txt)
 
@@ -16,7 +16,7 @@ Original article vintages are not independently archived, current-vintage histor
 
 ## Files and checks
 
-`specs/` is authoritative prose; scratch authoring scripts must not regenerate final specs. `feeds/` contains frozen own-date evidence, `cards/` the dated market observations, and `html/`/`json/` the rendered copies. PDFs, chart exports and the ZIP are reproducible generated artifacts and are not committed.
+`specs/` is authoritative prose; scratch authoring scripts must not regenerate final specs. `feeds/` contains frozen own-date evidence, `cards/` the dated market observations, and `html/`/`json/` the rendered copies. PDFs and the ZIP are reproducible generated artifacts and are not committed.
 
 `checks/artifact_manifest.json` binds final specs, inputs and rendered files by SHA256. `checks/independent_factual_review.json` records all 23 critical-claim samples and seven authorized precision repairs; this was not exhaustive fact verification. `checks/editorial_root_notes.json` records release-boundary review. `audit/market_validation.json` records 34,539 passing market checks. Publication status and backup keys are in `checks/publication.json` after upload.
 
@@ -38,7 +38,7 @@ The dry run makes no remote changes. The publisher requires the full validated 2
 
 The stale README-only checkout was resolved by fetching all remote branches into an isolated worktree. Authenticated S3, Lambda metadata, CloudFront, Yahoo Finance, US Treasury and Google News were verified. Anonymous S3 origin access is private by design; authenticated S3 and the public CloudFront route work.
 
-Final set: 226,433 verified words, 582 PDF pages, and 2,673 per-report distinct cited-headline entries. All 23 reports pass structural, numerical and cutoff checks.
+Final set: 226,433 verified words and 2,673 per-report distinct cited-headline entries. PDF totals are recorded in the artifact manifest. All 23 reports pass structural, numerical and cutoff checks.
 
 ## Recovered publication
 

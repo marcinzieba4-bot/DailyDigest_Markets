@@ -2,9 +2,9 @@
 ../json/<date>_Market_Intelligence.json, in the inline-styled layout of the August 2026 archive briefings (no stylesheet,
 one accent colour per section, the same block and rule styling).
 
-Citation markers ([[nXXXX]]) in the spec are dropped: the published pages carry no citations, links or source list.
+Citation markers ([[nXXXX]]) in the spec become source links and a dated evidence ledger.
 Spec format: see BRIEF.md."""
-import json, os, re, sys, html, datetime as dt, gzip, base64, io
+import json, os, re, sys, html, datetime as dt, gzip
 
 T = os.path.dirname(os.path.abspath(__file__)); C = os.path.dirname(T)
 CITE = re.compile(r'\s*\[\[n\d{4,6}\]\]')
@@ -22,10 +22,10 @@ h3{font-size:21px;line-height:1.4}h4{font-size:18px}p{margin:12px 0}a{color:#185
 .data-note{font-size:12px;color:#68758d;padding:12px 16px;border:1px solid #d9e2f1;border-radius:8px;background:white}
 .ledger{background:white;border:1px solid #dce4ef;border-radius:10px;padding:18px 24px;margin:30px 0;font-size:13px;overflow-wrap:anywhere}
 .ledger li{padding:6px 0}.ledger summary{font-size:16px;font-weight:bold;cursor:pointer}
-.snapshot{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:24px 0}.metric{padding:18px;background:white;border:1px solid #dce4f1;border-radius:9px}.metric small{display:block;font-size:11px;color:#758198}.metric strong{display:block;font-size:26px;letter-spacing:-.7px;margin:5px 0}.metric span{font-size:12px;color:#42638c}.momentum{background:white;border-radius:10px;padding:18px;border:1px solid #dde5f1;margin:24px 0}.momentum img{max-width:100%;display:block}.momentum figcaption{font-size:11px;color:#768198;padding:0 14px 10px}
+
 @media(min-width:1000px){body{padding:44px 48px}body>div:not(.topline){box-shadow:0 3px 12px #19345c07}p{max-width:114ch}}
-@media(max-width:700px){body{padding:20px!important;font-size:15px}body>h1{font-size:31px}h2{font-size:22px}.toc{position:static;gap:10px}h3{font-size:19px}.snapshot{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.metric{padding:13px}.metric strong{font-size:22px}.momentum{padding:4px;margin:20px 0}}
-@media print{body{max-width:none;padding:0!important;background:white!important;font-size:10pt;line-height:1.45}.toc{display:none}h1{font-size:27pt!important}h2{font-size:17pt;break-after:avoid}h3,h4{break-after:avoid}p{orphans:3;widows:3}.ledger{font-size:8pt}.snapshot,.momentum{break-inside:avoid}.source-cite{font-size:7pt}a{color:#245380}body>div{box-shadow:none!important}}
+@media(max-width:700px){body{padding:20px!important;font-size:15px}body>h1{font-size:31px}h2{font-size:22px}.toc{position:static;gap:10px}h3{font-size:19px}}
+@media print{body{max-width:none;padding:0!important;background:white!important;font-size:10pt;line-height:1.45}.toc{display:none}h1{font-size:27pt!important}h2{font-size:17pt;break-after:avoid}h3,h4{break-after:avoid}p{orphans:3;widows:3}.ledger{font-size:8pt}.source-cite{font-size:7pt}a{color:#245380}body>div{box-shadow:none!important}}
 '''
 PILL = 'font-size:12px;background:#e8f0fe;padding:2px 8px;border-radius:10px;color:#1a73e8'
 TICKER = 'background:#ffe0b2;padding:2px 6px;border-radius:3px'
@@ -55,46 +55,9 @@ FOOTER = ('Market data: Yahoo Finance, prior completed sessions; Treasury curve:
 esc = lambda s: html.escape(s, quote=False)
 attr = lambda s: html.escape(s, quote=True)
 
-def snapshot(date):
-    """A source-labelled visual made solely from this report's own market card."""
-    card=json.load(open(os.path.join(C,'cards',f'{date}.json')))
-    m=card['markets'];t=card['treasury'];sp=m['^GSPC'];btc=m['BTC-USD']
-    metrics=[('S&P 500',sp['close'],f"{sp['chg_20s_pct']:+.1f}% / 20 sessions",sp['session']),
-             ('US 10Y par yield',t['prior_close_pct']['10y'],f"{t['chg_20obs_bps']['10y']:+d} bps / 20 observations",t['prior_close_date']),
-             ('10Y − 2Y spread',f"{t['spread_10y_2y_bps']:+d} bps",'US Treasury par curve',t['prior_close_date']),
-             ('Bitcoin / USD',btc['close'],f"{btc['chg_20s_pct']:+.1f}% / 20 daily observations",btc['session'])]
-    out=['<div class="snapshot">']
-    for name,value,change,session in metrics:
-        out.append('<div class="metric"><small>'+esc(name)+'</small><strong>'+esc(value)+'</strong><span>'+esc(change)+'</span><small>Prior close '+session+'</small></div>')
-    out.append('</div>')
-    import matplotlib
-    matplotlib.use('Agg')
-    import matplotlib.pyplot as plt
-    keys=['XLK','XLC','XLF','XLE','XLI','XLY','XLP','XLV','XLB','XLRE','XLU']
-    labels=['Technology','Communication','Financials','Energy','Industrials','Discretionary','Staples','Healthcare','Materials','Real estate','Utilities']
-    pairs=sorted(zip(keys,labels),key=lambda x:m[x[0]]['chg_20s_pct'])
-    vals=[m[k]['chg_20s_pct'] for k,_ in pairs]
-    fig,ax=plt.subplots(figsize=(11.2,4.1),dpi=160)
-    fig.patch.set_facecolor('white');ax.set_facecolor('white')
-    ax.barh([label+' / '+k for k,label in pairs],vals,color=['#3779ba' if v>=0 else '#c67d81' for v in vals],height=.62)
-    lo=min(vals+[0]);hi=max(vals+[0]);extent=max(hi-lo,1)
-    ax.set_xlim(lo-extent*.13,hi+extent*.16)
-    ax.axvline(0,color='#bdc8d8',linewidth=.8)
-    for n,v in enumerate(vals):ax.text(v+extent*.015 if v>=0 else v-extent*.015,n,f'{v:+.1f}%',ha='left' if v>=0 else 'right',va='center',fontsize=8.5,color='#344961')
-    ax.tick_params(axis='y',length=0,labelsize=8.5);ax.tick_params(axis='x',labelsize=8,colors='#718198')
-    ax.set_xlabel('Price change over 20 completed sessions (%)',fontsize=8.5,color='#718198')
-    for spine in ax.spines.values():spine.set_visible(False)
-    ax.set_title('Sector leadership at the prior close',loc='left',fontsize=13,fontweight='bold',color='#243047',pad=14)
-    fig.tight_layout(pad=1.5)
-    raw=io.BytesIO();fig.savefig(raw,format='png',facecolor='white',metadata={'Software':'DailyDigest historical report'});plt.close(fig)
-    folder=os.path.join(C,'charts');os.makedirs(folder,exist_ok=True)
-    open(os.path.join(folder,date+'_sector_leadership.png'),'wb').write(raw.getvalue())
-    out.append('<figure class="momentum"><img alt="Eleven US sector ETFs ranked by prior 20-session price change" src="data:image/png;base64,'+base64.b64encode(raw.getvalue()).decode()+'"><figcaption>Yahoo Finance · prior completed session '+m['XLK']['session']+' · split-adjusted price changes; dividends excluded. Each ETF uses its own 20-observation comparison.</figcaption></figure>')
-    return ''.join(out)
-
 
 class Doc:
-    """Text without citations: the [[nXXXX]] markers in the spec are dropped, no links or source list are written."""
+    """Render cited prose and retain each source for the dated evidence ledger."""
 
     def __init__(self, evidence):
         self.evidence = evidence
@@ -169,7 +132,6 @@ def render(d):
     a('<hr style="border:none;border-top:3px solid #1a73e8;margin:16px 0 24px">')
     a('<p class="data-note">Information available before '+d+' 00:00 UTC. Prices use completed prior sessions. Prepared retrospectively; later outcomes are excluded.</p>')
     a('<nav class="toc">'+''.join('<a href="#'+k+'">'+v+'</a>' for k,v in [('geo','Macro'),('sectors','Sectors'),('earnings','Earnings'),('underowned','Themes'),('crypto','Crypto'),('flows','Liquidity'),('anticipatory','Scenarios'),('catalysts','Stocks'),('retail','Retail')])+'</nav>')
-    a(snapshot(d))
 
     a(heading('geo', '🌍 Geographic Macro Overview'))
     for g in spec['geo']:

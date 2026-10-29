@@ -114,6 +114,7 @@ def main():
             hp=ROOT/'html'/f'{d}.html';jp=ROOT/'json'/f'{d}_Market_Intelligence.json'
             pp=ROOT/'pdf'/f'{d}_Market_Intelligence.pdf'
             page.set_content(hp.read_text(),wait_until='load')
+            if page.locator('.snapshot, .metric, .momentum').count() or 'Sector leadership at the prior close' in hp.read_text():raise ValueError(d+' removed top dashboard/chart remains')
             layout=page.evaluate('({width:innerWidth,scroll:document.documentElement.scrollWidth,headings:document.querySelectorAll("h2[id]").length,citations:document.querySelectorAll(".source-cite").length})')
             if layout['scroll']>layout['width'] or layout['headings']!=9:raise ValueError(d+' invalid desktop layout')
             if d==dates[0]:page.screenshot(path=str(ROOT/'checks'/'desktop-preview.png'),full_page=False)
@@ -137,8 +138,6 @@ def main():
     with zipfile.ZipFile(zip_path,'w',zipfile.ZIP_DEFLATED) as z:
         for row in manifest['reports']:
             for f in row['files'].values():z.write(ROOT/f['path'],f['path'])
-            chart=ROOT/'charts'/(row['date']+'_sector_leadership.png')
-            z.write(chart,'charts/'+chart.name)
         z.write(ROOT/'collection'/'methodology.txt','methodology.txt')
         offline=collection(dates).replace('href="archive/','href="html/').replace('href="2025-10/methodology.txt"','href="methodology.txt"').replace('href="2025-10/October_2025_Weekday_Reports.zip"','href="https://d7g7nkeytae81.cloudfront.net/reports/2025-10/October_2025_Weekday_Reports.zip"')
         z.writestr('index.html',offline)
