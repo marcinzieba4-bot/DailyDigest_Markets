@@ -1,4 +1,4 @@
-name: Read-only archive access recovery probe
+name: Protected live HTML preservation check
 on:
   pull_request:
     branches: [codex/october-2025-retrospective]
@@ -7,25 +7,66 @@ on:
 permissions:
   contents: read
 jobs:
-  read-only-access:
+  public-preservation:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
-          sparse-checkout: recovery/sep2025
-      - name: Read-only public health and existing deployment-identity presence
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
-          AWS_KEY: ${{ secrets.AWS_KEY }}
-          AWS_SECRET: ${{ secrets.AWS_SECRET }}
-          AWS_PASS: ${{ secrets.AWS_PASS }}
-        run: python recovery/sep2025/access_probe.py
+          ref: ea8b0413835962ba682fde292fa71375d1b85747
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            corrections/retail-quality/audit/retrospective_scope.json
+            corrections/retail-quality/audit/published_snapshots.json
+          persist-credentials: false
+      - name: Compare public live HTML bytes with original snapshots
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import concurrent.futures as cf
+          import datetime as dt
+          import hashlib,json,subprocess,time,urllib.request
+          expected_commit="ea8b0413835962ba682fde292fa71375d1b85747"
+          actual_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip()
+          assert actual_commit==expected_commit
+          root=Path("corrections/retail-quality/audit")
+          scope_path=root/"retrospective_scope.json"
+          snapshots_path=root/"published_snapshots.json"
+          scope=json.loads(scope_path.read_text())
+          snapshots=json.loads(snapshots_path.read_text())
+          dates=set(scope["protected_live_dates"])
+          rows=sorted([x for x in snapshots if x["format"]=="html" and x["date"] in dates],key=lambda x:x["date"])
+          assert len(rows)==len(dates)==scope["protected_count"]==145
+          assert len({x["key"] for x in rows})==145
+          assert {x["date"] for x in rows}==dates
+          started=dt.datetime.now(dt.timezone.utc).isoformat()
+          def verify(item):
+            url="https://d7g7nkeytae81.cloudfront.net/"+item["key"]
+            result={"date":item["date"],"key":item["key"],"expected_sha256":item["sha256"],"expected_bytes":item["bytes"],"passed":False}
+            for attempt in range(1,6):
+              try:
+                req=urllib.request.Request(url,headers={"User-Agent":"DailyDigest-public-preservation/1.0","Accept-Encoding":"identity"})
+                with urllib.request.urlopen(req,timeout=25) as response:
+                  blob=response.read()
+                  status=response.status
+                digest=hashlib.sha256(blob).hexdigest()
+                result.update(status=status,actual_sha256=digest,actual_bytes=len(blob),attempts=attempt,passed=status==200 and digest==item["sha256"] and len(blob)==item["bytes"])
+                return result
+              except Exception as error:
+                result.update(error_type=type(error).__name__,attempts=attempt)
+                if attempt<5:time.sleep(min(2**(attempt-1),8))
+            return result
+          with cf.ThreadPoolExecutor(max_workers=6) as pool:
+            results=list(pool.map(verify,rows))
+          passed=sum(x["passed"] for x in results)
+          output={"purpose":"Independent public CDN full-body SHA preservation proof for protected live HTML only; does not verify private JSON/PDF variants.","source_commit":actual_commit,"scope_sha256":hashlib.sha256(scope_path.read_bytes()).hexdigest(),"snapshots_sha256":hashlib.sha256(snapshots_path.read_bytes()).hexdigest(),"started_at_utc":started,"finished_at_utc":dt.datetime.now(dt.timezone.utc).isoformat(),"expected_count":145,"checked_count":len(results),"passed_count":passed,"failed_count":len(results)-passed,"passed":passed==145,"aws_credentials_used":False,"aws_writes":False,"protected_source_writes":False,"rows":results}
+          Path("protected-live-html.json").write_text(json.dumps(output,indent=2))
+          print(json.dumps({k:v for k,v in output.items() if k!="rows"}))
+          raise SystemExit(0 if passed==145 else 1)
+          PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: retail-access-probe
+          name: protected-live-html-preservation
           retention-days: 2
-          path: recovery/sep2025/access_probe.json
+          path: protected-live-html.json
