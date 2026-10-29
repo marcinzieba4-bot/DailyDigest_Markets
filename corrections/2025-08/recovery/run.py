@@ -40,3 +40,12 @@ receipt={'purpose':'Public Google News canonical publisher URL metadata only. No
          'output_sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'records':len(records),'failures':sum(bool(r.get('error')) for r in records.values()),
          'original_body_vintage_proven':False}
 (OUT/'receipt.json').write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps(receipt),flush=True)
+
+# Hash-bound public payload in connector-readable logs when artifact CDN is unreachable.
+import base64, gzip
+bundle=json.dumps({'canonical_metadata_json':target.read_text(),'receipt_json':(OUT/'receipt.json').read_text()},ensure_ascii=False,separators=(',',':')).encode()
+payload=gzip.compress(bundle,mtime=0)
+print('AUG2025_PAYLOAD_SHA256:'+hashlib.sha256(payload).hexdigest(),flush=True)
+encoded=base64.b64encode(payload).decode()
+for i in range(0,len(encoded),512):print('AUG2025_PAYLOAD_B64:'+encoded[i:i+512],flush=True)
+print('AUG2025_PAYLOAD_END',flush=True)
