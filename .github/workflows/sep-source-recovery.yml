@@ -1,4 +1,4 @@
-name: Revised public artifact SHA verification
+name: Protected latest and index body verification
 on:
   pull_request:
     branches: [codex/october-2025-retrospective]
@@ -7,18 +7,18 @@ on:
 permissions:
   contents: read
 jobs:
-  revised-public-bytes:
+  protected-public-specials:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
         with:
           ref: ea8b0413835962ba682fde292fa71375d1b85747
           sparse-checkout-cone-mode: false
           sparse-checkout: |
-            corrections/retail-quality/audit/revision_artifacts.json
+            corrections/retail-quality/audit/protected_specials.json
           persist-credentials: false
-      - name: Compare every revised public artifact with reviewed bytes
+      - name: Compare latest and index public bytes with original snapshots
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -28,19 +28,17 @@ jobs:
           expected_commit="ea8b0413835962ba682fde292fa71375d1b85747"
           actual_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip()
           assert actual_commit==expected_commit
-          manifest_path=Path("corrections/retail-quality/audit/revision_artifacts.json")
-          manifest=json.loads(manifest_path.read_text())
-          assert manifest["reviewed"] is True and len(manifest["targets"])==372
-          rows=sorted([x for x in manifest["targets"] if x["key"].startswith("reports/")],key=lambda x:x["key"])
-          assert len(rows)==len({x["key"] for x in rows})==130
+          source=Path("corrections/retail-quality/audit/protected_specials.json")
+          expected=json.loads(source.read_text())
+          assert set(expected)=={"reports/latest.html","reports/index.html"}
           started=dt.datetime.now(dt.timezone.utc).isoformat()
-          def verify(item):
-            url="https://d7g7nkeytae81.cloudfront.net/"+item["key"]
-            result={"key":item["key"],"expected_sha256":item["sha256"],"expected_bytes":item["bytes"],"passed":False}
+          def verify(pair):
+            key,item=pair
+            result={"key":key,"expected_sha256":item["sha256"],"expected_bytes":item["bytes"],"passed":False}
             for attempt in range(1,6):
               try:
-                req=urllib.request.Request(url,headers={"User-Agent":"DailyDigest-public-revision-SHA/1.0","Accept-Encoding":"identity"})
-                with urllib.request.urlopen(req,timeout=35) as response:
+                req=urllib.request.Request("https://d7g7nkeytae81.cloudfront.net/"+key,headers={"User-Agent":"DailyDigest-public-special-preservation/1.0","Accept-Encoding":"identity"})
+                with urllib.request.urlopen(req,timeout=25) as response:
                   blob=response.read()
                   status=response.status
                 digest=hashlib.sha256(blob).hexdigest()
@@ -50,17 +48,17 @@ jobs:
                 result.update(error_type=type(error).__name__,status=getattr(error,"code",None),attempts=attempt)
                 if attempt<5:time.sleep(min(2**(attempt-1),8))
             return result
-          with cf.ThreadPoolExecutor(max_workers=6) as pool:
-            results=list(pool.map(verify,rows))
-          passed=sum(x["passed"] for x in results)
-          output={"purpose":"Independent full-body SHA verification of all revised public reports/artifacts; no AWS credentials or object writes.","source_commit":actual_commit,"source_manifest_sha256":hashlib.sha256(manifest_path.read_bytes()).hexdigest(),"started_at_utc":started,"finished_at_utc":dt.datetime.now(dt.timezone.utc).isoformat(),"expected_count":130,"checked_count":len(results),"passed_count":passed,"failed_count":len(results)-passed,"passed":passed==130,"aws_credentials_used":False,"aws_writes":False,"rows":results}
-          Path("revised-public-artifacts.json").write_text(json.dumps(output,indent=2))
+          with cf.ThreadPoolExecutor(max_workers=2) as pool:
+            rows=list(pool.map(verify,sorted(expected.items())))
+          passed=sum(row["passed"] for row in rows)
+          output={"purpose":"Independent public full-body SHA preservation proof for the exact latest and archive-index objects; no AWS credentials or writes.","source_commit":actual_commit,"source_specials_sha256":hashlib.sha256(source.read_bytes()).hexdigest(),"started_at_utc":started,"finished_at_utc":dt.datetime.now(dt.timezone.utc).isoformat(),"expected_count":2,"checked_count":len(rows),"passed_count":passed,"failed_count":len(rows)-passed,"passed":passed==2,"aws_credentials_used":False,"aws_writes":False,"rows":rows}
+          Path("protected-specials.json").write_text(json.dumps(output,indent=2))
           print(json.dumps({k:v for k,v in output.items() if k!="rows"}))
-          raise SystemExit(0 if passed==130 else 1)
+          raise SystemExit(0 if passed==2 else 1)
           PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: revised-public-artifact-sha
+          name: protected-public-specials-sha
           retention-days: 2
-          path: revised-public-artifacts.json
+          path: protected-specials.json
