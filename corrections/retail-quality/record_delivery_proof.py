@@ -80,7 +80,8 @@ def main():
         'native_preservation_complete': native_count == len(protected),
         'all_live_html_unchanged': True, 'all_live_variants_excluded_from_publication': True,
         'latest_unchanged': True, 'index_unchanged': True, 'invalidation_status': 'Completed',
-        'limitation': 'The managed HTTPS gateway intermittently returns Envoy503 before AWS. Optional native checks of every untouched live format are incomplete; absence of a check is not represented as a successful check.',
+        'limitation': (None if native_count == len(protected) else
+            'The managed HTTPS gateway intermittently returns Envoy503 before AWS. Optional native checks of every untouched live format are incomplete; absence of a check is not represented as a successful check.'),
         'proof_sha256': {name: digest(name) for name in ['publication.json',
             'external_revised_public_verification.json','external_live_html_verification.json',
             'external_specials_verification.json','native_preservation_proof.json']},

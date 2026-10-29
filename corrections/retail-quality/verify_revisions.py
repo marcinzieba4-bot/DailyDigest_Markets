@@ -143,6 +143,9 @@ def main():
     final_path=ROOT/'audit/final_validation.json';final=json.loads(final_path.read_text())
     final.update(passed=True,publication_status='published',stored_artifacts_verified=len(receipt['targets']),
         public_artifacts_verified=len(targets),protected_live_variants_verified=len(protected),
+        protected_live_variants_native_pending=0,native_preservation_complete=True,
+        protected_live_html_verified=scope['protected_count'],limitation=None,
+        verification_scope='All revised origin/public artifacts and every original live HTML/JSON/PDF variant; latest and archive index unchanged.',
         all_live_editions_unchanged=True,latest_unchanged=True,index_unchanged=True,
         invalidation_status='Completed',live_verification_sha256=hashlib.sha256((ROOT/'audit/live_verification.json').read_bytes()).hexdigest(),
         publication_receipt_sha256=hashlib.sha256(receipt_path.read_bytes()).hexdigest())

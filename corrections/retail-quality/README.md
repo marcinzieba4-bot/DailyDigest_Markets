@@ -7,8 +7,8 @@ including August 2026, and the live Lambda are protected. The export contains
 All 372 origin artifacts and 130 public artifacts passed verification. All 145
 protected live HTML editions, the latest report and archive index passed
 independent full-body SHA checks. Every live HTML/JSON/PDF key was excluded from
-publication. Native rechecks completed for 3 of 435 untouched live variants; the
-remaining 432 checks are explicitly pending because the managed gateway
+publication. Native rechecks completed for 26 of 435 untouched live variants;
+the remaining 409 checks are explicitly pending because the managed gateway
 intermittently fails before reaching AWS. Ordinary configured AWS access
 completed the revised publication without changing credentials or network
 policy. Source metadata and public delivery recovery used read-only public CI

@@ -232,6 +232,15 @@ class VerificationCheckpointTests(unittest.TestCase):
         self.assertEqual(self.checkpoint(), first)
         self.assertTrue(json.loads((self.root / 'audit/final_validation.json').read_text())['passed'])
 
+    def test_full_verification_clears_a_previous_transport_limitation(self):
+        self.write('final_validation.json', {'protected_live_variants_native_pending': 11,
+            'native_preservation_complete': False, 'limitation': 'native checks pending'})
+        self.v.main()
+        final = json.loads((self.root / 'audit/final_validation.json').read_text())
+        self.assertEqual(final['protected_live_variants_native_pending'], 0)
+        self.assertTrue(final['native_preservation_complete'])
+        self.assertIsNone(final['limitation'])
+
     def test_changed_run_or_target_fingerprint_drops_cached_proofs(self):
         for field in ('run', 'targets_sha256'):
             with self.subTest(field=field):
