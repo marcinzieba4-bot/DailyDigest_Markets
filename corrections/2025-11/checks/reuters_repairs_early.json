@@ -1,0 +1,710 @@
+{
+  "scope": "Complete triage of all canonical Reuters date candidates for November3/4/5/6/7/10. Canonical dates are a candidate signal, not an automatic rejection rule. Report prose/card values retained at full depth; no article-body claims of exhaustive verification.",
+  "reviewed_utc": "2026-10-29T09:45:20.155022+00:00",
+  "spec_sha256_before": {
+    "2025-11-03": "34ed5386fc69e9b40165962d204f3d325237460340e8d9850989aa2bf2e8cfef",
+    "2025-11-04": "74d2772691459ff6849796bcab27b758c7d3a0c1a3d31337788856982111168e",
+    "2025-11-05": "4c75c97ead95c7180924e0c9224c679f5d7fdb04f2d6639c73244690fd86cd56",
+    "2025-11-06": "8b00fd1cefb4bd66ba355d097b8e700cd006ef8e36ac5be63792f7479943b606",
+    "2025-11-07": "941a17123ed8974f2537f2fbe25ed6bfa44ab88c096e8b567d0c66b3a239166a",
+    "2025-11-10": "fdf88d05a0bcb637121f06c3ab811e03f7605c69bd4491064b966eb77fa3e2dd"
+  },
+  "spec_sha256_after": {
+    "2025-11-03": "6ef2a369b927677eeef24c0ba91c92c64733a26d1c85aa6f0c2b5c2d54700fa6",
+    "2025-11-04": "e86b0285950b4ea81dd401fff3d3aaad45c5a2ac9e3b9f7eccc4335842f7e01d",
+    "2025-11-05": "9c64372ad02001d20db83a8224ff040644c8695d72aa15892119f688c5d736e4",
+    "2025-11-06": "de3f6b7819448501329cfdde642264115b40f0d05964b48f716802ada7df5185",
+    "2025-11-07": "f45dddd32746fbc3664ae4f1d2feda7c061303db1412d973ecd4c67781452fe5",
+    "2025-11-10": "57172724d228dcf2ec9c24ad6b800ce76334914882cbccf6d4a8b9230a33775b"
+  },
+  "candidate_count": 23,
+  "candidate_dispositions": [
+    {
+      "report_date": "2025-11-03",
+      "id": "n1124",
+      "title": "Trump says China, other countries can't have Nvidia's top AI chips - Reuters",
+      "indexed_at": "2025-11-02T07:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/world/china/trump-says-nvidias-blackwell-ai-chip-not-other-people-2025-11-03/",
+      "canonical_date": "2025-11-03",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: Trump60Minutes interview aired at2025-11-03 00:00UTC, exactly the exclusive cutoff; no earlier-air publication established. Three occurrences narrowed to older Huang sales hopes and policy uncertainty, supported by n1049 with canonical publication dates independently confirmed in the metadata cache.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "report_date": "2025-11-04",
+      "id": "n1010",
+      "title": "China to support renminbi stocks trading counter to increase access to Hong Kong equities - Reuters",
+      "indexed_at": "2025-11-03T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/world/asia-pacific/china-vp-hopes-hong-kong-can-strengthen-financial-links-with-mainland-2025-11-04/",
+      "canonical_date": "2025-11-04",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: same-day Chinese financial-policy/trading-counter statement; removed policy claim, preserved prior-session own-card data and separately cited ETF inflows.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        4
+      ]
+    },
+    {
+      "report_date": "2025-11-04",
+      "id": "n1042",
+      "title": "China offers tech giants cheap power to boost domestic AI chips, FT reports - Reuters",
+      "indexed_at": "2025-11-03T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/world/asia-pacific/china-offers-tech-giants-cheap-power-boost-domestic-ai-chips-ft-reports-2025-11-04/",
+      "canonical_date": "2025-11-04",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject conservatively: Reuters original is same-day, and earlier FT availability is not independently established. Removed cheap-power subsidy and the recommendation claiming that support was flowing.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        5
+      ]
+    },
+    {
+      "report_date": "2025-11-04",
+      "id": "n3083",
+      "title": "Oil settles lower on stronger dollar, fears of oversupply - Reuters",
+      "indexed_at": "2025-11-03T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/business/energy/oil-steadies-market-digests-opec-output-plans-2025-11-04/",
+      "canonical_date": "2025-11-04",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: same-day oil-settlement outcome and explanation cannot be known at midnight; retained only own-card completed prices and conditional supply/dollar risks.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        7
+      ]
+    },
+    {
+      "report_date": "2025-11-04",
+      "id": "n3665",
+      "title": "Japan yet to achieve durable, wage-driven inflation, PM Takaichi says - Reuters",
+      "indexed_at": "2025-11-03T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/sustainability/sustainable-finance-reporting/japan-yet-achieve-durable-wage-driven-inflation-pm-takaichi-says-2025-11-04/",
+      "canonical_date": "2025-11-04",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: same-day Japanese political statement, not a scheduled08:50JST release shown to precede midnight. Removed durable-wage-inflation quotation.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        8
+      ]
+    },
+    {
+      "report_date": "2025-11-04",
+      "id": "n3669",
+      "title": "Japan PM Takaichi launches economic HQ, gears up public investments - Reuters",
+      "indexed_at": "2025-11-03T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/world/asia-pacific/japan-pm-takaichi-creates-new-economic-growth-panel-gears-up-proactive-2025-11-04/",
+      "canonical_date": "2025-11-04",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: same-day economic-headquarters/panel launch, not a pre-midnight statistical release. Removed completed launch; retained separately sourced older defence-spending pledge.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        8
+      ]
+    },
+    {
+      "report_date": "2025-11-04",
+      "id": "n6549",
+      "title": "COMMENTARY: Asia LNG imports slip on weak China, but Europe gain compensates - Reuters",
+      "indexed_at": "2025-11-03T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/markets/commodities/asia-lng-imports-slip-weak-china-europe-gain-compensates-2025-11-04/",
+      "canonical_date": "2025-11-04",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: same-day LNG commentary and import outcome. Replaced with conditional commodity demand/weather/supply risks, with no claim about actual imports.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        9
+      ]
+    },
+    {
+      "report_date": "2025-11-04",
+      "id": "n6663",
+      "title": "Novo Nordisk CEO faces baptism of fire amid board shakeup, Pfizer fight - Reuters",
+      "indexed_at": "2025-11-03T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/novo-nordisk-ceo-faces-baptism-fire-amid-board-shakeup-pfizer-fight-2025-11-04/",
+      "canonical_date": "2025-11-04",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: same-day profile. Removed CEO baptism-of-fire/board-shakeup detail in both locations; older independently eligible bidding-war evidence n5824 supports only the existing contest.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        10
+      ]
+    },
+    {
+      "report_date": "2025-11-04",
+      "id": "n6673",
+      "title": "Norwegian opposition complicates Musk's path to $1 trillion pay deal - Reuters",
+      "indexed_at": "2025-11-03T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/sustainability/boards-policy-regulation/norway-wealth-fund-vote-against-musks-1-trillion-tesla-pay-package-2025-11-04/",
+      "canonical_date": "2025-11-04",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: same-day Norwegian fund opposition announcement. Removed that stakeholder claim; retained older Calpers opposition with its existing source.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        12
+      ]
+    },
+    {
+      "report_date": "2025-11-04",
+      "id": "n6680",
+      "title": "Airbus needs 235 deliveries to reach year-end goal, sources say - Reuters",
+      "indexed_at": "2025-11-03T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/business/aerospace-defense/airbus-needs-235-deliveries-reach-end-year-goal-sources-say-2025-11-04/",
+      "canonical_date": "2025-11-04",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: same-day Airbus remaining-deliveries figure. Removed235 and also the paired78October-deliveries Bloomberg claim conservatively; retained older A220 production-target cut only.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        13
+      ]
+    },
+    {
+      "report_date": "2025-11-04",
+      "id": "n7490",
+      "title": "Germany faces record trade deficit with China - Reuters",
+      "indexed_at": "2025-11-03T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/world/china/germany-faces-record-trade-deficit-with-china-2025-11-04/",
+      "canonical_date": "2025-11-04",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: same-day German trade-deficit report. Removed specific record; replaced with general distinction between lower input costs and stronger customer demand.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        14
+      ]
+    },
+    {
+      "report_date": "2025-11-05",
+      "id": "n3225",
+      "title": "China eyes $4 billion dollar bond, term sheet shows, orders top $65 billion - Reuters",
+      "indexed_at": "2025-11-04T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/world/asia-pacific/china-eyes-4-billion-dollar-bond-term-sheet-shows-orders-top-65-billion-2025-11-05/",
+      "canonical_date": "2025-11-05",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: same-day sovereign dollar-bond order-book outcome. Removed strong-demand assertion; preserved separately sourced PBOC action and general public/private-credit transmission reasoning.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        16,
+        17
+      ]
+    },
+    {
+      "report_date": "2025-11-05",
+      "id": "n3706",
+      "title": "Unprecedented volume of oil stored on ships due to Western sanctions, Gunvor CEO says - Reuters",
+      "indexed_at": "2025-11-04T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/business/energy/unprecedented-volume-oil-stored-ships-due-western-sanctions-gunvor-ceo-says-2025-11-05/",
+      "canonical_date": "2025-11-05",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: same-day Gunvor statement on unprecedented oil stored afloat. Removed CEO/inventory assertion and retained only conditional shipping/supply-risk reasoning.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        18
+      ]
+    },
+    {
+      "report_date": "2025-11-05",
+      "id": "n3947",
+      "title": "Bank of Japan debated growing case for rate hike, September minutes show - Reuters",
+      "indexed_at": "2025-11-04T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/world/asia-pacific/boj-board-debated-pros-cons-rate-hike-pause-september-minutes-shows-2025-11-05/",
+      "canonical_date": "2025-11-05",
+      "disposition": "retain_pre_cutoff_Japan_0850_JST_release",
+      "reason": "Retain: scheduled BOJ minutes at08:50JST onNov5 are23:50UTC onNov4,10minutes before exclusive cutoff. Independent reviewer corroborates indexed/standard schedule timing; official body was not directly fetched. This is an explicit release-time exception, not approval based on RSS date.",
+      "remaining_citations": 1,
+      "repair_indices": []
+    },
+    {
+      "report_date": "2025-11-05",
+      "id": "n6287",
+      "title": "Five debt hotspots in the AI data centre boom - Reuters",
+      "indexed_at": "2025-11-04T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/business/finance/five-debt-hotspots-ai-data-centre-boom-2025-11-05/",
+      "canonical_date": "2025-11-05",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject as a cited contemporaneous analysis: same-day Reuters debt-hotspots article. Removed Reuters attribution and any reported-hotspot claim; older contracts support the demand discussion, with financing treated as general economic reasoning.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        19
+      ]
+    },
+    {
+      "report_date": "2025-11-06",
+      "id": "n3029",
+      "title": "Major investors call on Britain's Reeves to double fiscal buffer - Reuters",
+      "indexed_at": "2025-11-05T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/sustainability/sustainable-finance-reporting/bond-investors-call-britains-reeves-double-fiscal-buffer-2025-11-06/",
+      "canonical_date": "2025-11-06",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: same-day investor demand for doubled UK fiscal buffer. Removed specific investor demand and doubling; retained general credibility risk plus independently separate FT leverage evidence.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        20
+      ]
+    },
+    {
+      "report_date": "2025-11-06",
+      "id": "n6705",
+      "title": "Saudi Arabia cuts December oil prices for Asia as OPEC+ boosts output - Reuters",
+      "indexed_at": "2025-11-05T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/business/energy/saudi-arabia-cuts-december-oil-prices-asia-opec-boosts-output-2025-11-06/",
+      "canonical_date": "2025-11-06",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: same-day SaudiDecemberofficialselling-price outcome. Removed completed price cut rather than recast a prior forecast as actual; retained earlier OPEC pause and US-output evidence.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        21
+      ]
+    },
+    {
+      "report_date": "2025-11-06",
+      "id": "n6968",
+      "title": "Google in early talks to boost investment in Anthropic, Business Insider reports - Reuters",
+      "indexed_at": "2025-11-05T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/business/google-early-talks-boost-investment-anthropic-business-insider-reports-2025-11-06/",
+      "canonical_date": "2025-11-06",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject conservatively: Reuters same-day Google/Anthropic talks; earlier original BI availability not independently established. Removed talks, preserving separate earlier investment-gain evidence.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        22
+      ]
+    },
+    {
+      "report_date": "2025-11-06",
+      "id": "n7567",
+      "title": "Japan's services sector extends growth in October despite demand slowdown, PMI shows - Reuters",
+      "indexed_at": "2025-11-05T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/world/asia-pacific/japans-services-sector-extends-growth-october-despite-demand-slowdown-pmi-shows-2025-11-06/",
+      "canonical_date": "2025-11-06",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: Japan private-services PMI released09:30JST/00:30UTC on report date, after exclusive cutoff. Removed actual services-growth outcome, preserving earlier factory and Tokyo-inflation evidence.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        23
+      ]
+    },
+    {
+      "report_date": "2025-11-06",
+      "id": "n8177",
+      "title": "A Trump Supreme Court tariff defeat would add to trade uncertainty - Reuters",
+      "indexed_at": "2025-11-05T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/world/us/trump-supreme-court-tariff-defeat-would-add-trade-uncertainty-2025-11-06/",
+      "canonical_date": "2025-11-06",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject same-day Reuters analysis as evidence. Reframed legal-cost/refund/replacement-duty effects conditionally and used older officials statement n7927; no later outcome is retained.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        24
+      ]
+    },
+    {
+      "report_date": "2025-11-07",
+      "id": "n1100",
+      "title": "US to block Nvidia's sale of scaled-down AI chips to China, The Information reports - Reuters",
+      "indexed_at": "2025-11-06T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/world/china/us-block-nvidias-sale-scaled-back-ai-chips-china-information-says-2025-11-07/",
+      "canonical_date": "2025-11-07",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: same-day new scaled-down-chip restriction report. All three claims narrowed to the older most-advanced-chip constraint n0946, with canonical publication dates independently confirmed in the metadata cache; no new scaled-down restriction remains.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        26
+      ]
+    },
+    {
+      "report_date": "2025-11-07",
+      "id": "n6880",
+      "title": "Netherlands ready to drop control of Nexperia if chip supply resumes, Bloomberg News reports - Reuters",
+      "indexed_at": "2025-11-06T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/world/china/netherlands-ready-drop-control-nexperia-if-chip-supply-resumes-bloomberg-news-2025-11-07/",
+      "canonical_date": "2025-11-07",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: same-day proposed Dutch handover terms. All three occurrences reframed around older Chinese pressure and unresolved supply n6130, with canonical publication dates independently confirmed in the metadata cache; no handover or conditional agreement remains.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        32
+      ]
+    },
+    {
+      "report_date": "2025-11-10",
+      "id": "n0971",
+      "title": "Japan rebukes Chinese diplomat as Taiwan furore escalates - Reuters",
+      "indexed_at": "2025-11-09T08:00:00+00:00",
+      "canonical_url": "https://www.reuters.com/world/china/japan-protests-extremely-inappropriate-comments-by-chinese-envoy-2025-11-10/",
+      "canonical_date": "2025-11-10",
+      "disposition": "reject_source_remove_or_reframe_claim",
+      "reason": "Reject: same-day Japanese diplomatic rebuke/escalation. Removed actual dispute description and citation; retained only general cross-border demand and position-sizing reasoning.",
+      "remaining_citations": 0,
+      "repair_indices": [
+        37
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "date": "2025-11-03",
+      "reason": "Reject n1124: 60 Minutes aired at the exclusive midnight boundary; retain only older policy uncertainty supported by n1049.",
+      "before": "Yet Reuters also reported Trump's statement that China and other countries could not have Nvidia's top AI chips.",
+      "after": "The China opportunity remains subject to policy: Reuters reported Huang's hope that Blackwell could be sold there, while the decision remained with Trump.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-03",
+      "reason": "Replace source after narrowing the claim to the older unresolved sales decision.",
+      "before": "[[n1108]] [[n1110]] [[n1124]]",
+      "after": "[[n1108]] [[n1110]] [[n1049]]",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-03",
+      "reason": "Remove repeated post-cutoff n1124 claim from sector; older evidence supports uncertainty only.",
+      "before": "Trump's statement restricting access to Nvidia's best AI chips shows that diplomatic improvement does not eliminate strategic controls. Keep exposure diversified across the supply chain and size any China-sensitive upside as conditional. [[n1124]]",
+      "after": "Huang's stated hope for Blackwell sales to China remains dependent on a US policy decision, according to Reuters. Keep exposure diversified across the supply chain and size any opening as conditional rather than booked demand. A diplomatic improvement alone does not establish an export authorisation or a customer order. [[n1049]]",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-03",
+      "reason": "Remove repeated post-cutoff n1124 claim from catalyst; no claim of a new restriction retained.",
+      "before": "CNBC said Goldman Sachs raised Nvidia's target ahead of its next earnings report, while Reuters carried Trump's restriction on access to its best AI chips. Strong demand and geopolitical limits coexist. [[n2637]] [[n1124]]",
+      "after": "CNBC said Goldman Sachs raised Nvidia's target ahead of its next earnings report, while Huang's hopes for Blackwell sales to China still depended on a US policy decision. Treat that potential market as conditional upside rather than confirmed demand. [[n2637]] [[n1049]]",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-04",
+      "reason": "Reject same-day China policy statement n1010; preserve own-card comparison and separate eligible ETF-flow evidence.",
+      "before": ", and Beijing will back a renminbi trading counter to widen access to Hong Kong equities [[n1010]]",
+      "after": ". A steadier onshore market alongside weaker offshore platforms calls for selecting the earnings exposure rather than treating all China access channels as interchangeable",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-04",
+      "reason": "Reject n1042; cannot establish original FT publication before cutoff from earlier RSS alone. Remove the subsidy claim, not just Reuters attribution.",
+      "before": ", and Beijing is offering its tech giants cheap power to back domestic AI chips [[n1042]]",
+      "after": ". Any investment in China's domestic hardware chain still needs a credible commercial return and funding plan",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-04",
+      "reason": "Remove the subsidy-based recommendation duplicate; retain only a conditional, sized investment stance.",
+      "before": "Hold any China exposure in onshore AI-hardware and grid suppliers, where state support is flowing [[n1042]], sized as a liquidity trade rather than a growth call.",
+      "after": "Keep any onshore AI-hardware and grid exposure small and contingent on commercial execution, rather than assuming a broad domestic recovery.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-04",
+      "reason": "Reject same-day oil settlement and causal attribution n3083; completed own-card prices unchanged.",
+      "before": "; oil settled lower on a stronger dollar and oversupply fears [[n3083]]",
+      "after": ". A firmer dollar and continued supply additions remain risks to the oil thesis, but the trade needs actual demand and production evidence rather than an assumed scarcity premium",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-04",
+      "reason": "Reject n3665 and n3669: same-day Japanese political remarks/panel launch are not a pre-midnight 08:50 statistical release.",
+      "before": "PM Takaichi says Japan has yet to achieve durable, wage-driven inflation [[n3665]], is gearing up public investment through a new economic headquarters [[n3669]] and has vowed to lift defence spending to 2% of GDP by March [[n3519]].",
+      "after": "Takaichi has vowed to lift defence spending to 2% of GDP by March [[n3519]], providing a fiscal direction to examine alongside the BOJ's caution. The equity opportunity depends on whether spending and a weaker currency can reach company profits without creating a destabilising inflation or funding response.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-04",
+      "reason": "Reject same-day LNG commentary n6549 and its specific import outcome; substitute conditional economic risks only.",
+      "before": "Risk: a mild winter, and softer Asian LNG demand — imports slipped on weak China, with Europe compensating [[n6549]].",
+      "after": "Risk: a mild winter, more supply or weaker buying from major customers could undermine realisations. Keep the gas thesis tied to the commodity and contract economics rather than assume data-centre demand removes normal cyclical risks.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-04",
+      "reason": "Remove same-day CEO profile n6663; narrower older bidding-war fact supported by existing eligible n5824.",
+      "before": "How the Novo–Pfizer contest for Metsera ends [[n6663]] and Viking's Nov. 5 catalyst [[n2360]].",
+      "after": "How the already announced Novo–Pfizer contest for Metsera develops [[n5824]] and Viking's Nov. 5 catalyst [[n2360]].",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-04",
+      "reason": "Remove profile/board-shakeup details rather than retain them under a different citation.",
+      "before": "The new CEO faces a 'baptism of fire' amid a board shake-up and the Pfizer fight [[n6663]], after Novo launched a bidding war for Metsera [[n5824]].",
+      "after": "Novo has launched a bidding war with Pfizer for Metsera [[n5824]], placing acquisition discipline beside the performance of its existing commercial franchise.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-04",
+      "reason": "Reject same-day Norwegian fund position n6673; retain independently supported existing Calpers opposition.",
+      "before": "; Calpers opposes the package [[n2201]] and Norwegian opposition complicates its path [[n6673]].",
+      "after": "; Calpers opposes the package [[n2201]], providing a concrete challenge to management's case. Governance uncertainty can affect the risk premium even before any vote result is known.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-04",
+      "reason": "Reject n6680 and remove related n6687 October-delivery number conservatively: the paired latest totals may share the same after-cutoff news cycle. Retain older A220 target cut only.",
+      "before": "In aerospace, supply rather than demand is binding: Airbus delivered 78 aircraft in October amid supply woes [[n6687]], needs 235 deliveries to reach its year-end goal [[n6680]], and cut its A220 production-rate target [[n5466]].",
+      "after": "In aerospace, supply can remain the binding constraint even with healthy demand. Airbus cut its A220 production-rate target [[n5466]], a concrete sign that manufacturing plans need a delivery test. Prefer evidence of reliable output and cash collection to a target whose value depends on flawless execution.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-04",
+      "reason": "Reject same-day Germany/China deficit story n7490; replace specific record claim with conditional operating implication.",
+      "before": "The counterweight is China itself: Germany faces a record trade deficit with it [[n7490]].",
+      "after": "That potential cost relief still needs to reach orders and margins; restored component access and cheaper power do not automatically create stronger customer demand.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-04",
+      "reason": "Consistency review: speculation about a split is not an announced split.",
+      "before": "Palantir / PLTR — beat, raise, then split the stock",
+      "after": "Palantir / PLTR — beat, raise, then stock-split chatter",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-05",
+      "reason": "Reject same-day sovereign dollar-bond order outcome n3225; retain general distinction without asserting demand for a new offering.",
+      "before": "Reuters also reported strong interest in China's proposed dollar-bond issuance. Sovereign demand and private-sector credit demand should remain separate concepts: buyers can like a government obligation while staying cautious about a property developer or consumer company.",
+      "after": "Sovereign financing conditions and private-sector credit demand should remain separate concepts. A government or bank can obtain cheaper funding while a property developer still lacks buyers and a consumer remains unwilling to borrow. That transmission gap is the next test for the policy action.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-05",
+      "reason": "Remove n3225 after its substantive claim is removed.",
+      "before": "[[n1029]] [[n3225]]",
+      "after": "[[n1029]]",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-05",
+      "reason": "Reject same-day Gunvor stored-oil statement n3706; no inventory or CEO claim retained.",
+      "before": "Sanctions can complicate logistics without removing supply permanently. Reuters described unusually large volumes stored on ships. Keep supply-security exposure separate from an assumption that every disruption creates a lasting higher oil price. [[n3706]]",
+      "after": "Sanctions can complicate logistics and redirect buyers without permanently removing production. Keep a supply-security hedge separate from an assumption that every disruption creates a lasting higher oil price. The investment needs a view on deliverable supply and customer access, with room for routes and counterparties to adjust.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-05",
+      "reason": "Reject same-day Reuters debt-hotspots analysis n6287; keep older contracts and independent economic reasoning, no reported five-hotspot details.",
+      "before": "Reuters' discussion of debt hotspots in the data-centre boom points to the less visible side: capacity must be financed before it earns its full return. [[n6189]] [[n4967]] [[n6287]]",
+      "after": "The next investment question is how capacity is financed before it earns its full return. A signed customer agreement can make demand tangible while leaving construction timing, funding costs and the amount of cash needed by shareholders unresolved. [[n6189]] [[n4967]]",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-06",
+      "reason": "Reject same-day investor demand to double fiscal buffer n3029; retain general budget credibility risk and separate FT leverage evidence.",
+      "before": "Risks: a budget that misses the doubled fiscal buffer major investors are demanding [[n3029]], and the leverage the FT says is creeping into the gilts market as insurers chase returns [[n3039]].",
+      "after": "Risks: a budget that fails to restore confidence in fiscal headroom, and the leverage the FT says is creeping into the gilts market as insurers chase returns [[n3039]]. A weaker growth outlook alone is insufficient if investors demand a higher premium to finance the state.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-06",
+      "reason": "Reject same-day Saudi price-setting outcome n6705; retain earlier OPEC pause and independently supported US output risk.",
+      "before": ", Saudi Arabia cut December prices to Asia [[n6705]], and MarketWatch says record US output puts producers' profits at risk [[n6710]].",
+      "after": ", while MarketWatch says record US output puts producers' profits at risk [[n6710]]. Supply discipline still needs to show up in delivered barrels and returns, rather than an expectation that every producer will defend the same price.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-06",
+      "reason": "Reject same-day Google/Anthropic talks n6968; original BI eligibility not independently established, so remove the talks rather than swap citation.",
+      "before": ", Google is in early talks to deepen it [[n6968]], and a completed Siri agreement would add a paying channel.",
+      "after": ", while a completed Siri agreement would add a paying channel. Existing investment gains and prospective commercial revenue should be valued separately.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-06",
+      "reason": "Reject Japan services PMI n7567: 09:30 JST release is 00:30 UTC on report date, after exclusive cutoff.",
+      "before": "Activity is two-speed: factory activity fell at the fastest pace in 19 months [[n7509]] while services extended growth [[n7567]], and Tokyo core prices accelerated [[n3838]].",
+      "after": "Factory activity fell at the fastest pace in 19 months [[n7509]], while Tokyo core prices accelerated [[n3838]]. That combination leaves the BOJ weighing weak manufacturing against persistent price pressure rather than facing an uncomplicated growth recovery.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-06",
+      "reason": "Reject same-day analysis n8177; retain conditional transmission reasoning and older officials statement, no later actuals.",
+      "before": "Striking them would hand importers a margin windfall and, as Reuters notes, add to trade uncertainty [[n8177]].",
+      "after": "Striking them could relieve importers' costs while creating uncertainty over replacement duties and refunds. Officials already say the Court cannot stop every tariff [[n7927]], so a favourable legal signal need not deliver an immediate or complete policy reversal.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-06",
+      "reason": "Consistency review: a possible end to easing should not become a categorical policy label.",
+      "before": "on hold / easing cycle over",
+      "after": "on hold / easing constrained",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-07",
+      "reason": "Reject same-day new scaled-down-chip block n1100; older n0946 supports only the broader most-advanced-chip constraint.",
+      "before": "Reuters carried a report that the US would block sales of scaled-down Nvidia chips to China, with attribution to The Information.",
+      "after": "The White House has said Nvidia cannot sell its most advanced AI chip to China.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-07",
+      "reason": "Narrowed claim now references the older advanced-chip statement.",
+      "before": "[[n1086]] [[n1100]]",
+      "after": "[[n1086]] [[n0946]]",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-07",
+      "reason": "Remove duplicated specific scaled-down-chip claim in semis; older broad statement only.",
+      "before": "Reuters also carried the report of a US block on scaled-down Nvidia chips for China, attributed to The Information.",
+      "after": "The White House statement on Nvidia's most advanced AI chip still limits the China opportunity.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-07",
+      "reason": "Use older evidence for narrower broad export-access limitation.",
+      "before": "[[n2672]] [[n1100]]",
+      "after": "[[n2672]] [[n0946]]",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-07",
+      "reason": "Remove duplicated new scaled-down-chip outcome from catalyst.",
+      "before": "Reuters carried a report of a US block on scaled-down AI-chip sales to China, while Stocktwits covered Huang rejecting a near-term collapse comparison.",
+      "after": "The White House has said Nvidia cannot sell its most advanced AI chip to China, while Stocktwits covered Huang rejecting a near-term collapse comparison.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-07",
+      "reason": "Use older evidence for broad advanced-chip constraint.",
+      "before": "[[n1100]] [[n4972]]",
+      "after": "[[n0946]] [[n4972]]",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-07",
+      "reason": "Reject same-day Dutch handover proposal n6880; older n6130 supports pressure and unresolved supply only.",
+      "before": "Reuters reported the Netherlands ready to relinquish control if chip supply resumed. The conditional wording matters.",
+      "after": "Reuters has described Chinese pressure over Nexperia and a European carmaker criticising its lack of autonomy. The operating test remains reliable supply, rather than the assumption that the dispute has been resolved.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-07",
+      "reason": "Older unresolved-dispute evidence replaces rejected handover story after substantive reframe.",
+      "before": "[[n2736]] [[n6880]]",
+      "after": "[[n2736]] [[n6130]]",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-07",
+      "reason": "Remove repeated Dutch conditional agreement entirely from autos; no claim of negotiation terms remains.",
+      "before": "Reuters reported the Netherlands willing to drop Nexperia control if chip supply resumed. China's pressure around the dispute and the industry's need for reliable deliveries mean the conditional agreement still requires implementation. [[n6880]]",
+      "after": "Reuters described China increasing pressure over Nexperia while a European carmaker criticised its lack of autonomy. That points to a continuing operating and supply-chain problem, not an agreed handover. A recovery in component deliveries would be useful evidence, but it still needs to be observed rather than assumed. [[n6130]]",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-07",
+      "reason": "Remove repeated Dutch handover proposal from anticipatory scenario; keep older unresolved dispute and separate farm purchases.",
+      "before": "Reuters reported the Netherlands ready to drop Nexperia control if chip supply resumed. Limited Chinese purchases of US farm goods suggest some implementation elsewhere, but the channels remain distinct. [[n6880]] [[n1086]]",
+      "after": "The Nexperia dispute remains contentious, with Reuters describing Chinese pressure and a European carmaker criticising its lack of autonomy. Limited Chinese purchases of US farm goods suggest some implementation elsewhere, but those trade channels do not establish reliable chip deliveries or an agreement over the company. [[n6130]] [[n1086]]",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-07",
+      "reason": "Optional consistency voice precision: investor mechanism replaces input-validation language.",
+      "before": "The useful social interpretation is the intensity of the leadership narrative, not an invented measure of platform sentiment.",
+      "after": "The intensity of the leadership narrative can attract fresh attention and make conviction harder to revise when the commercial evidence changes.",
+      "occurrences": 1
+    },
+    {
+      "date": "2025-11-10",
+      "reason": "Reject same-day diplomatic rebuke n0971; no escalated Taiwan-dispute outcome retained, only general cross-border risk management.",
+      "before": "Geopolitical sensitivity also deserves a place in sizing after Reuters described a dispute over Taiwan-related comments. Diversification and liquidity are more reliable than assuming a policy programme will prevent every market setback. [[n0971]]",
+      "after": "Include geopolitical sensitivity in position size because cross-border demand can change faster than a fiscal programme can offset the effect. Diversification and liquidity remain useful even when the domestic policy direction is supportive.",
+      "occurrences": 1
+    }
+  ],
+  "supplemental_repairs": [
+    "Removed Airbus 78-delivery Bloomberg claim along with linked 235-delivery Reuters story pending independent timing.",
+    "Retitled Nov4 Palantir split chatter and softened Nov6 AU easing label.",
+    "Nov10 late-added candidate n0971 was included in the complete triage."
+  ],
+  "validation": {
+    "2025-11-03": {
+      "words": 9489,
+      "distinct_sources": 100,
+      "fail": 0,
+      "warn": 0,
+      "rendered": true
+    },
+    "2025-11-04": {
+      "words": 10103,
+      "distinct_sources": 392,
+      "fail": 0,
+      "warn": 0,
+      "rendered": true
+    },
+    "2025-11-05": {
+      "words": 9140,
+      "distinct_sources": 92,
+      "fail": 0,
+      "warn": 0,
+      "rendered": true
+    },
+    "2025-11-06": {
+      "words": 10519,
+      "distinct_sources": 415,
+      "fail": 0,
+      "warn": 0,
+      "rendered": true
+    },
+    "2025-11-07": {
+      "words": 9195,
+      "distinct_sources": 86,
+      "fail": 0,
+      "warn": 0,
+      "rendered": true
+    },
+    "2025-11-10": {
+      "words": 8950,
+      "distinct_sources": 83,
+      "fail": 0,
+      "warn": 0,
+      "rendered": true
+    }
+  },
+  "semantic_residual_check": "Rejected citation IDs absent from all six specs; targeted scans for duplicate cheap-power, trade-counter, inventory, delivery totals, scaled-down-chip block and Dutch-control terms found no rejected substantive claims. Remaining Nov3 Blackwell mentions describe only older unresolved sales hopes.",
+  "confirmed_alternative_sources": [
+    {
+      "report_date": "2025-11-03",
+      "id": "n1049",
+      "title": "Nvidia CEO hopes Blackwell chips can be sold in China but says decision up to Trump - Reuters",
+      "canonical_url": "https://www.reuters.com/business/autos-transportation/nvidia-ceo-hopes-blackwell-chips-can-be-sold-china-decision-up-trump-2025-10-31/",
+      "canonical_date": "2025-10-31",
+      "observed_utc": "2026-10-29T09:46:40.795771+00:00",
+      "publisher_body_fetched": false
+    },
+    {
+      "report_date": "2025-11-07",
+      "id": "n0946",
+      "title": "Nvidia cannot sell its most advanced AI chip to China, White House says - Reuters",
+      "canonical_url": "https://www.reuters.com/world/china/nvidia-cannot-sell-its-most-advanced-ai-chip-china-white-house-says-2025-11-04/",
+      "canonical_date": "2025-11-04",
+      "observed_utc": "2026-10-29T09:39:29.574155+00:00",
+      "publisher_body_fetched": false
+    },
+    {
+      "report_date": "2025-11-07",
+      "id": "n6130",
+      "title": "China cranks up pressure over Nexperia chips, European carmaker slams 'zero autonomy' - Reuters",
+      "canonical_url": "https://www.reuters.com/world/china/china-blames-netherlands-disrupting-chip-supply-with-nexperia-move-2025-11-04/",
+      "canonical_date": "2025-11-04",
+      "observed_utc": "2026-10-29T09:39:31.638711+00:00",
+      "publisher_body_fetched": false
+    }
+  ],
+  "status": "complete",
+  "retained_scheduled_release_exception": {
+    "report_date": "2025-11-05",
+    "id": "n3947",
+    "release": "BOJ September meeting minutes",
+    "scheduled_jst": "2025-11-05 08:50 Asia/Tokyo",
+    "equivalent_utc": "2025-11-04 23:50 UTC",
+    "cutoff_utc": "2025-11-05 00:00 UTC exclusive",
+    "corroboration": "Independent reviewer november_markets confirms indexed/standard BOJ minutes release timing at08:50JST. Publisher body was not directly fetched under the allowlist; the canonical URL date is a Japanese release-date label and is not itself the intraday timestamp.",
+    "disposition": "Retain: scheduled release precedes cutoff by10minutes. Do not infer that all same-day Japanese releases are eligible; the09:30JST services PMI was rejected."
+  },
+  "counts": {
+    "candidates_triaged": 23,
+    "sources_rejected_with_substantive_repairs": 22,
+    "pre_cutoff_scheduled_release_retained": 1,
+    "precision_change_operations": 38
+  }
+}

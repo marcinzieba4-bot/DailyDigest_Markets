@@ -147,7 +147,7 @@ def rss(q, loc=EN):
 
 def one(d):
     fn = os.path.join(OUT, f'{d}.json')
-    if os.path.exists(fn):
+    if os.path.exists(fn) or os.path.exists(fn + '.gz'):
         return d, 'cached'
     D = dt.date.fromisoformat(d)
     cutoff = dt.datetime(D.year, D.month, D.day, tzinfo=dt.timezone.utc)
@@ -173,6 +173,8 @@ def one(d):
             seen[key] = len(items)
             items.append({**x, 'cat': cat, 'topics': [topic], 'q': q, 'lang': loc[0]})
         time.sleep(0.25 + random.random() * 0.2)
+    # Deduplication can tighten an item's category. Recheck age after all matches.
+    items = [x for x in items if cutoff - dt.timedelta(days=WIN[x['cat']]) <= dt.datetime.fromisoformat(x['published_at']) < cutoff]
     items.sort(key=lambda x: (x['topics'][0], x['published_at']), reverse=False)
     for i, x in enumerate(items, 1):
         x['id'] = f'n{i:04d}'

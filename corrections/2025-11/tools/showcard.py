@@ -43,9 +43,13 @@ def main():
         if rx and not (rx.search(tk) or rx.search(m['name'])):
             continue
         extra = f" | VIX pts: 1s {m['chg_1s_pts']:+.2f}, 20s {m['chg_20s_pts']:+.2f}" if 'chg_1s_pts' in m else ''
+        if m.get('level_restriction'):
+            extra += ' | Level withheld: ' + m['level_restriction']
+        level = m['close'] if m['close'] is not None else 'withheld'
+        reference = m['ref_20s_close'] if m['ref_20s_close'] is not None else 'withheld'
         cur = '' if tk.startswith('^') or tk.endswith('=X') else ' ' + m['currency']
-        print(f"{tk} | {m['name']} | {m['session']} | {m['close']}{cur} | {m['chg_1s_pct']:+.2f} | {m['chg_5s_pct']:+.2f} | "
-              f"{m['chg_20s_pct']:+.2f} | {m['ref_20s_close']} ({m['ref_20s_session']}){extra}")
+        print(f"{tk} | {m['name']} | {m['session']} | {level}{cur} | {m['chg_1s_pct']:+.2f} | {m['chg_5s_pct']:+.2f} | "
+              f"{m['chg_20s_pct']:+.2f} | {reference} ({m['ref_20s_session']}){extra}")
         n += 1
     print(f'-- {n} instruments')
 

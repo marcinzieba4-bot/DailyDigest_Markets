@@ -2,15 +2,31 @@
 ../json/<date>_Market_Intelligence.json, in the inline-styled layout of the August 2026 archive briefings (no stylesheet,
 one accent colour per section, the same block and rule styling).
 
-Citation markers ([[nXXXX]]) in the spec are dropped: the published pages carry no citations, links or source list.
+Citation markers ([[nXXXX]]) in the spec become source links and a dated evidence ledger.
 Spec format: see BRIEF.md."""
-import json, os, re, sys, html, datetime as dt
+import json, os, re, sys, html, datetime as dt, gzip
 
 T = os.path.dirname(os.path.abspath(__file__)); C = os.path.dirname(T)
-CITE = re.compile(r'\s*\[\[n\d{4}\]\]')
+CITE = re.compile(r'\s*\[\[n\d{4,6}\]\]')
 COLORS = {'Bullish': '#2d7a2d', 'Bearish': '#c0392b', 'Mixed': '#b07d00'}
 ARROWS = {'Bullish': '↑', 'Bearish': '↓', 'Mixed': '→'}
-BODY = 'font-family:Arial,sans-serif;max-width:820px;margin:auto;padding:24px;color:#222;line-height:1.6'
+BODY = 'font-family:Arial,sans-serif;max-width:1280px;margin:auto;padding:36px;color:#243047;line-height:1.7;background:#f5f7fc'
+CSS = '''
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-size:16px}
+body>h1{font-size:42px;letter-spacing:-1.5px;line-height:1.15}h2{scroll-margin-top:70px;margin-top:40px;font-size:26px}
+h3{font-size:21px;line-height:1.4}h4{font-size:18px}p{margin:12px 0}a{color:#185eb8;text-decoration:none}a:hover{text-decoration:underline}
+.topline{display:flex;gap:12px;flex-wrap:wrap;align-items:center;color:#65718a;font-size:12px;letter-spacing:.07em;text-transform:uppercase}
+.edition{background:#e3eaf9;padding:5px 10px;border-radius:5px;color:#35568f;font-weight:bold}
+.toc{position:sticky;top:0;z-index:5;display:flex;gap:18px;flex-wrap:wrap;padding:13px 18px;background:#ffffffef;border:1px solid #dde4f2;border-radius:10px;backdrop-filter:blur(14px);font-size:13px;box-shadow:0 5px 18px #1b28520c}
+.source-cite{font-size:11px;white-space:nowrap;color:#59718e;padding-left:3px}
+.data-note{font-size:12px;color:#68758d;padding:12px 16px;border:1px solid #d9e2f1;border-radius:8px;background:white}
+.ledger{background:white;border:1px solid #dce4ef;border-radius:10px;padding:18px 24px;margin:30px 0;font-size:13px;overflow-wrap:anywhere}
+.ledger li{padding:6px 0}.ledger summary{font-size:16px;font-weight:bold;cursor:pointer}
+
+@media(min-width:1000px){body{padding:44px 48px}body>div:not(.topline){box-shadow:0 3px 12px #19345c07}p{max-width:114ch}}
+@media(max-width:700px){body{padding:20px!important;font-size:15px}body>h1{font-size:31px}h2{font-size:22px}.toc{position:static;gap:10px}h3{font-size:19px}}
+@media print{body{max-width:none;padding:0!important;background:white!important;font-size:10pt;line-height:1.45}.toc{display:none}h1{font-size:27pt!important}h2{font-size:17pt;break-after:avoid}h3,h4{break-after:avoid}p{orphans:3;widows:3}.ledger{font-size:8pt}.source-cite{font-size:7pt}a{color:#245380}body>div{box-shadow:none!important}}
+'''
 PILL = 'font-size:12px;background:#e8f0fe;padding:2px 8px;border-radius:10px;color:#1a73e8'
 TICKER = 'background:#ffe0b2;padding:2px 6px;border-radius:3px'
 # Per-section accent: heading underline colour, block background, left border width / colour, block padding and spacing.
@@ -41,10 +57,22 @@ attr = lambda s: html.escape(s, quote=True)
 
 
 class Doc:
-    """Text without citations: the [[nXXXX]] markers in the spec are dropped, no links or source list are written."""
+    """Render cited prose and retain each source for the dated evidence ledger."""
+
+    def __init__(self, evidence):
+        self.evidence = evidence
+        self.used = {}
 
     def text(self, s):
-        return esc(CITE.sub('', s)).strip()
+        chunks=[]; start=0
+        for match in re.finditer(r'\[\[(n\d{4,6})\]\]',s):
+            chunks.append(esc(s[start:match.start()]))
+            key=match.group(1); e=self.evidence[key]
+            self.used.setdefault(key,len(self.used)+1)
+            chunks.append('<a class="source-cite" href="'+attr(e['url'])+'" title="'+attr(e['title'])+'">['+str(self.used[key])+']</a>')
+            start=match.end()
+        chunks.append(esc(s[start:]))
+        return ''.join(chunks).strip()
 
     def parts(self, parts):
         return [f'<p><strong>{esc(lbl)}:</strong> {self.text(txt)}</p>' for lbl, txt in parts]
@@ -57,7 +85,7 @@ def block(key):
 
 
 def heading(key, text):
-    return f'<h2 style="color:#1a1a2e;border-bottom:2px solid {BOX[key]["c"]};padding-bottom:6px">{text}</h2>'
+    return f'<h2 id="{key}" style="color:#1a1a2e;border-bottom:2px solid {BOX[key]["c"]};padding-bottom:6px">{text}</h2>'
 
 
 def rule(color='#eee'):
@@ -83,7 +111,9 @@ def hook(title, size, color):
 def render(d):
     spec = json.load(open(os.path.join(C, 'specs', f'{d}.json')))
     D = dt.date.fromisoformat(d); label = D.strftime('%A, %B %d %Y')
-    doc = Doc(); L = []
+    feed_path=os.path.join(C,'feeds',f'{d}.json')
+    feed=json.load(open(feed_path)) if os.path.exists(feed_path) else json.load(gzip.open(feed_path+'.gz','rt'))
+    doc = Doc({x['id']:x for x in feed['items']}); L = []
     a = L.append
 
     def box(key, title, parts, tag='h4', hstyle='margin:0 0 6px'):
@@ -94,11 +124,14 @@ def render(d):
 
     a('<!DOCTYPE html>')
     a('<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">')
-    a(f'<title>Market Intelligence Briefing — {label}</title></head>')
+    a(f'<title>Market Intelligence Briefing — {label}</title><style>{CSS}</style></head>')
     a(f'<body style="{BODY}">')
+    a('<div class="topline"><span class="edition">DailyDigest Markets</span><span>November 2025 · Historical edition</span></div>')
     a('<h1 style="color:#1a1a2e;margin-bottom:4px">Market Intelligence Briefing</h1>')
     a(f'<p style="color:#888;margin-top:0">{label} &mdash; Macro · Sectors · Flows · Crypto</p>')
     a('<hr style="border:none;border-top:3px solid #1a73e8;margin:16px 0 24px">')
+    a('<p class="data-note">Information available before '+d+' 00:00 UTC. Prices use completed prior sessions. Prepared retrospectively; later outcomes are excluded.</p>')
+    a('<nav class="toc">'+''.join('<a href="#'+k+'">'+v+'</a>' for k,v in [('geo','Macro'),('sectors','Sectors'),('earnings','Earnings'),('underowned','Themes'),('crypto','Crypto'),('flows','Liquidity'),('anticipatory','Scenarios'),('catalysts','Stocks'),('retail','Retail')])+'</nav>')
 
     a(heading('geo', '🌍 Geographic Macro Overview'))
     for g in spec['geo']:
@@ -120,7 +153,7 @@ def render(d):
     box('earnings', esc(ep['title']), ep['parts'])
 
     a(rule())
-    a(heading('underowned', '🔍 Underowned Themes — Active on X, Underweight in Portfolios'))
+    a(heading('underowned', '🔍 Underowned Themes — Attention and Exposure Gaps'))
     for u in spec['underowned']:
         box('underowned', esc(u['title']), u['parts'])
 
@@ -160,12 +193,18 @@ def render(d):
             box('retail_small', hook(x['title'], 12, '#888'), x['parts'])
     a('<hr style="border:none;border-top:1px solid #ddd;margin:24px 0 12px">')
     a(f'<p style="color:#aaa;font-size:11px">{FOOTER}</p>')
+    a('<details class="ledger"><summary>Dated evidence · '+str(len(doc.used))+' sources</summary><p>Publication timestamps are from the historical news index. Claims are limited to the cited headlines; original article vintages are not independently archived.</p><ol>')
+    for key,num in doc.used.items():
+        e=doc.evidence[key]
+        a('<li><a href="'+attr(e['url'])+'">'+esc(e['title'])+'</a> — '+esc(e['src'])+' · '+esc(e['published_at'])+'</li>')
+    a('</ol></details>')
     a('</body></html>')
     page = '\n'.join(L) + '\n'
     os.makedirs(os.path.join(C, 'html'), exist_ok=True)
     open(os.path.join(C, 'html', f'{d}.html'), 'w', encoding='utf-8').write(page)
     payload = {'date': label, 'report_date': d, 'generated_at': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
-               'news_cutoff_utc': f'{d}T00:00:00Z', 'sections': sections(page)}
+               'news_cutoff_utc': f'{d}T00:00:00Z', 'sections': sections(page.split('<details class="ledger">')[0]),
+               'evidence':{k:doc.evidence[k] for k in doc.used}, 'spec':spec}
     os.makedirs(os.path.join(C, 'json'), exist_ok=True)
     json.dump(payload, open(os.path.join(C, 'json', f'{d}_Market_Intelligence.json'), 'w'), ensure_ascii=False, indent=2)
     return page

@@ -1,0 +1,239 @@
+{
+  "scope": [
+    "2025-11-21",
+    "2025-11-24",
+    "2025-11-25",
+    "2025-11-26",
+    "2025-11-27",
+    "2025-11-28"
+  ],
+  "purpose": "Triage canonical Reuters date candidates against actual claims and own-date evidence; date is a rejection candidate, not automatic proof of lateness.",
+  "reports": [
+    {
+      "date": "2025-11-21",
+      "before_sha256": "ca46d8e1844862d5fee6831b52e150c2692fb4b1aad021a693d9b137e1df3844",
+      "after_sha256": "66a7665478a194f4bfab6ec4daf342004e6dbe90994266c4b1c7302722c85f12",
+      "candidates": [
+        {
+          "id": "n2438",
+          "decision": "removed_or_replaced",
+          "reason": "ASOS same-day UK result/outlook reaction replaced with eligible Nov18 Home Depot result; all ASOS wording removed.",
+          "still_cited": false
+        },
+        {
+          "id": "n3717",
+          "decision": "removed_or_replaced",
+          "reason": "BOJ same-day signaling is distinct from pre-midnight Japanese inflation release; removed December signaling claim.",
+          "still_cited": false
+        },
+        {
+          "id": "n3723",
+          "decision": "removed_or_replaced",
+          "reason": "Same-day minister intervention warning removed; retained earlier fiscal warning and currency-card analysis.",
+          "still_cited": false
+        },
+        {
+          "id": "n6842",
+          "decision": "removed_or_replaced",
+          "reason": "Same-day oil settlement replaced by own completed Nov20 WTI and eligible Nov17 supply forecast.",
+          "still_cited": false
+        }
+      ],
+      "retained_exception": "n3724 October national CPI: 08:30 JST Nov21 is 23:30 UTC Nov20, before report midnight."
+    },
+    {
+      "date": "2025-11-24",
+      "before_sha256": "825cbea4986428a5233c8ab50d7789a74f28fe5237aa5328c92301c04ac5a328",
+      "after_sha256": "12e975b9e4f0240bc712ef52a2898e206f60061bd63bdbcd26cfa4626c3ae900",
+      "candidates": [
+        {
+          "id": "n2766",
+          "decision": "removed_or_replaced",
+          "reason": "Germany-specific diplomatic event has canonical report-day date and no established pre-cutoff timing; replaced with own Nov21 NPR rare-earth supply initiative and retained independent Japan-risk analysis.",
+          "still_cited": false
+        }
+      ]
+    },
+    {
+      "date": "2025-11-25",
+      "before_sha256": "b74eb39e7a318b8b773dc431b563e32c59d3d8075e5b558d176380d3053baf00",
+      "after_sha256": "986e822f1fc543e260a731d90362abb250239f0b6108f591733d5422dcaa6895",
+      "candidates": [
+        {
+          "id": "n0835",
+          "decision": "removed_or_replaced",
+          "reason": "Report-day Russia/China export and LNG statement removed in full; replaced by conditional trade-route and company-economics analysis.",
+          "still_cited": false
+        },
+        {
+          "id": "n2342",
+          "decision": "removed_or_replaced",
+          "reason": "Report-day ECB/Deutsche review claim and review-specific caveat removed; retained separately eligible stablecoin deposit warning and its funding implications.",
+          "still_cited": false
+        }
+      ]
+    },
+    {
+      "date": "2025-11-26",
+      "before_sha256": "3d8c6dce816e031bba8fcd8dc982870fd2b44f2e64386a9cca38c8e2a7d01942",
+      "after_sha256": "bd3187c04cea92708c9f4aaa24d838d557533caae02c0f6a75fdcaeef5f43ea8",
+      "candidates": [
+        {
+          "id": "n0239",
+          "decision": "removed_or_replaced",
+          "reason": "Report-day Australian speech attribution removed; retained general transmission reasoning and own prior market observations.",
+          "still_cited": false
+        },
+        {
+          "id": "n0872",
+          "decision": "removed_in_prior_timing_repair",
+          "reason": "All Vanke payment-extension and plunge references had already been removed from CN macro/property/playbook/scenario before this pass; replaced by older housing and loans evidence.",
+          "still_cited": false
+        },
+        {
+          "id": "n0913",
+          "decision": "removed_or_replaced",
+          "reason": "No verified pre-midnight timing for Trump purchase statement; removed fulfilled/intended purchase claim and replaced with eligible Nov24 NPR call report.",
+          "still_cited": false
+        },
+        {
+          "id": "n0915",
+          "decision": "removed_or_replaced",
+          "reason": "Report-day ten-cargo purchase fact removed completely, including interpretation premised on completed purchases.",
+          "still_cited": false
+        },
+        {
+          "id": "n2880",
+          "decision": "removed_or_replaced",
+          "reason": "Report-day UBS/First Brands write-down claim removed from both financial sector and credit theme, replaced by older industry view and conditional credit analysis.",
+          "still_cited": false
+        },
+        {
+          "id": "n3697",
+          "decision": "removed_or_replaced",
+          "reason": "Same-day BOJ preparation/signaling detail removed; Japan stance grounded in admissible service inflation and own market card.",
+          "still_cited": false
+        },
+        {
+          "id": "n3702",
+          "decision": "retained_pre_midnight_Japan_release",
+          "reason": "Standard 08:50 JST Nov26 corporate-services price release is 23:50 UTC Nov25, before midnight; retain October2.7% print, with no later BOJ remarks.",
+          "still_cited": true
+        }
+      ],
+      "other_removed_ids": [
+        "n0892",
+        "n0893"
+      ],
+      "other_notes": "Earlier conservative Vanke correction also removed Bloomberg plunge and new-collateral-sale references; all relevant prose replaced, not just citation markers."
+    },
+    {
+      "date": "2025-11-27",
+      "before_sha256": "ff1614696e5658247e2652d8f0b03a4dbed0b61f0374f1f5e194a6c3c406f98e",
+      "after_sha256": "f17c9f0689757df67f8bdd1fa943bbc62533640e2f08985d37d7872c05f5fb47",
+      "candidates": [
+        {
+          "id": "n1120",
+          "decision": "removed_or_replaced",
+          "reason": "Report-day offshore-training event removed from XLC and China policy; parallel FT citation n1118 and same-event wording also removed. Replaced XLC with own eligible Nov25 Meta/Google talks.",
+          "still_cited": false
+        },
+        {
+          "id": "n6076",
+          "decision": "replaced_by_independently_eligible_same_event",
+          "reason": "Later Reuters memo report replaced in both SOXX and NVDA catalyst by own n5699 CNBC; independent reviewer resolved CNBC canonical URL dated Nov25, before cutoff. Wording restricted to CNBC headline private memo naming Burry and rebutting AI-bubble allegations.",
+          "eligible_alternate_id": "n5699",
+          "eligible_alternate_canonical_url": "https://www.cnbc.com/2025/11/25/nvidia-pushes-back-on-charges-that-ai-investment-is-a-bubble.html",
+          "still_cited": false
+        },
+        {
+          "id": "n7556",
+          "decision": "removed_or_replaced",
+          "reason": "No confirmed pre-midnight time for report-day JPMorgan forecast shift; removed all three occurrences from US, liquidity and scenario, replaced by own older WSJ Williams commentary n7373.",
+          "still_cited": false
+        }
+      ]
+    },
+    {
+      "date": "2025-11-28",
+      "before_sha256": "2be7f37af7e3f940d523670e3df622c49475d4481efa724e0dda77f959efe506",
+      "after_sha256": "c9c8b5b266d755d897c0a27718399e0ffae1596b3bf3c961bc3cb2c8ddb91807",
+      "candidates": [
+        {
+          "id": "n0759",
+          "decision": "removed_or_replaced",
+          "reason": "Report-day Reuters PMI poll lacks pre-midnight timing proof; removed eighth-contraction forecast from China and scenario. Retained older October activity and next-survey conditional analysis.",
+          "still_cited": false
+        },
+        {
+          "id": "n0773",
+          "decision": "removed_or_replaced",
+          "reason": "Report-day Huawei/ZTE Vietnam deal fact removed, replaced with own eligible Nov26 tariff-exclusion relief n0709.",
+          "still_cited": false
+        },
+        {
+          "id": "n5854",
+          "decision": "removed_or_replaced",
+          "reason": "Report-day Saudi January pricing forecast removed entirely, not restated as an earlier known expectation.",
+          "still_cited": false
+        },
+        {
+          "id": "n5855",
+          "decision": "removed_or_replaced",
+          "reason": "Report-day oil settlement and its OPEC-meeting preview removed from energy and scenario; replaced by eligible earlier supply/diplomacy uncertainty n5062. No scheduled OPEC claim remains.",
+          "still_cited": false
+        }
+      ],
+      "retained_exception": "n7075 Tokyo CPI is standard08:30 JST Nov28 =23:30 UTC Nov27, before midnight; retained release-based inflation interpretation."
+    }
+  ],
+  "completed_at_utc": "2026-10-29T09:47:56.962092+00:00",
+  "candidate_count": 21,
+  "all_candidates_triaged": true,
+  "retained_exception_candidates": [
+    {
+      "date": "2025-11-26",
+      "id": "n3702",
+      "reason": "Standard 08:50 JST Nov26 corporate-services price release is 23:50 UTC Nov25, before midnight; retain October2.7% print, with no later BOJ remarks."
+    }
+  ],
+  "all_six_reports_verified_and_rendered": true,
+  "validation": {
+    "2025-11-21": {
+      "words": 8898,
+      "sources": 79,
+      "fails": 0,
+      "warnings": 0
+    },
+    "2025-11-24": {
+      "words": 10132,
+      "sources": 104,
+      "fails": 0,
+      "warnings": 0
+    },
+    "2025-11-25": {
+      "words": 10085,
+      "sources": 86,
+      "fails": 0,
+      "warnings": 0
+    },
+    "2025-11-26": {
+      "words": 8950,
+      "sources": 107,
+      "fails": 0,
+      "warnings": 0
+    },
+    "2025-11-27": {
+      "words": 8900,
+      "sources": 96,
+      "fails": 0,
+      "warnings": 0
+    },
+    "2025-11-28": {
+      "words": 8953,
+      "sources": 84,
+      "fails": 0,
+      "warnings": 0
+    }
+  }
+}

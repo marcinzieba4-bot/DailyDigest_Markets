@@ -1,0 +1,29 @@
+{
+  "scope": "Explicit timezone exceptions to the canonical URL-date candidate check",
+  "exceptions": [
+    {
+      "report_date": "2025-11-05",
+      "id": "n3947",
+      "canonical_url": "https://www.reuters.com/world/asia-pacific/boj-board-debated-pros-cons-rate-hike-pause-september-minutes-shows-2025-11-05/",
+      "event": "BOJ September meeting minutes",
+      "scheduled_release_local": "2025-11-05 08:50 JST",
+      "scheduled_release_utc": "2025-11-04T23:50:00Z",
+      "report_cutoff_utc": "2025-11-05T00:00:00Z",
+      "disposition": "retained_pre_midnight_scheduled_release",
+      "basis": "Scheduled 08:50 JST statistical/minutes release falls ten minutes before the exclusive UTC cutoff. A local-day canonical URL does not establish post-cutoff publication.",
+      "verification_limit": "The standard release schedule and date are used; original primary-body intraday snapshots were not independently fetched or archived. This is not a claim of exhaustive original-vintage verification."
+    },
+    {
+      "report_date": "2025-11-26",
+      "id": "n3702",
+      "canonical_url": "https://www.reuters.com/world/asia-pacific/japans-leading-indicator-service-inflation-hits-27-october-2025-11-26/",
+      "event": "Japan October services producer prices",
+      "scheduled_release_local": "2025-11-26 08:50 JST",
+      "scheduled_release_utc": "2025-11-25T23:50:00Z",
+      "report_cutoff_utc": "2025-11-26T00:00:00Z",
+      "disposition": "retained_pre_midnight_scheduled_release",
+      "basis": "Scheduled 08:50 JST statistical/minutes release falls ten minutes before the exclusive UTC cutoff. A local-day canonical URL does not establish post-cutoff publication.",
+      "verification_limit": "The standard release schedule and date are used; original primary-body intraday snapshots were not independently fetched or archived. This is not a claim of exhaustive original-vintage verification."
+    }
+  ]
+}

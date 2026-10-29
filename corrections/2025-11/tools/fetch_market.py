@@ -2,14 +2,24 @@
 curve into ../data/. Without arguments it fetches the default universe. Each Yahoo row is stamped with the
 exchange-local session date; crypto rows are UTC days (the candle dated X closes at X+1 00:00 UTC).
 
-November 2025 set: data stop at the 2025-11-28 close (period2 = 2025-12-01), so nothing dated after the last report
-date is stored in this folder. The universe is the February / December one plus the names retail and the earnings
-season were trading in October-November 2025 (cards only show tickers that are in the data)."""
+November 2025 set: retained observations stop at the 2025-11-28 close. A separate
+request obtains split-event metadata through the retrieval date to reverse Yahoo's
+retrospective unit scaling; later prices from that response are discarded. Future
+corporate-action metadata is retained only in audit/, outside writers' inputs.
+Returns use split-adjusted closes, while displayed price levels use as-traded units.
+The universe follows the latest November tool (cards show only available tickers)."""
 import urllib.request, urllib.parse, json, os, sys, time, csv, io, datetime as dt
+import concurrent.futures as cf
+from pathlib import Path
+from zoneinfo import ZoneInfo
 D = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
 H = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'}
-LAST = '2025-11-28'                                              # last report date in the set; nothing later is kept
-P1, P2 = int(dt.datetime(2025, 8, 20).timestamp()), int(dt.datetime(2025, 12, 1).timestamp())
+LAST = '2025-11-28'
+P1, P2 = int(dt.datetime(2025, 8, 1, tzinfo=dt.timezone.utc).timestamp()), int(dt.datetime(2025, 12, 1, tzinfo=dt.timezone.utc).timestamp())
+ACTION_P2 = int(dt.datetime(2026, 10, 29, tzinfo=dt.timezone.utc).timestamp())
+AUDIT = Path(D).parent / 'audit'
+# A spin-off cannot safely be undone as though it were an ordinary share split.
+SUPPRESS_LEVEL = {'CMCSA': 'corporate-action/spin-off adjustment; quote percentage changes only'}
 UNIVERSE = [
     # indices, volatility, dollar, rates proxies
     '^GSPC', '^NDX', '^RUT', '^DJI', '^VIX', '^SOX', 'DX-Y.NYB', '^TNX', '^IRX',
@@ -57,24 +67,50 @@ UNIVERSE = [
 ]
 
 
+def get_chart(t, start, end):
+    url = f'https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(t, safe="")}?period1={start}&period2={end}&interval=1d&events=div,splits'
+    return json.loads(urllib.request.urlopen(urllib.request.Request(url, headers=H), timeout=25).read())['chart']['result'][0]
+
 def yahoo(t):
-    url = f'https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(t)}?period1={P1}&period2={P2}&interval=1d'
     err = None
     for a in range(4):
         try:
-            j = json.loads(urllib.request.urlopen(urllib.request.Request(url, headers=H), timeout=25).read())
-            r = j['chart']['result'][0]
-            off = r['meta'].get('gmtoffset', 0)
+            r = get_chart(t, P1, P2)
+            # Yahoo retrospectively scales quote.close for splits after the requested
+            # history window. Only keep future ACTION metadata from this response,
+            # never its price observations. This is mechanical unit reconstruction,
+            # not information used for investment conclusions.
+            after = get_chart(t, P2, ACTION_P2)
+            splits = {**r.get('events', {}).get('splits', {}), **after.get('events', {}).get('splits', {})}
+            tz = r['meta'].get('exchangeTimezoneName', 'UTC')
+            zone = ZoneInfo(tz)
+            split_rows = []
+            for ev in splits.values():
+                day = dt.datetime.fromtimestamp(ev['date'], zone).date().isoformat()
+                ratio = float(ev['numerator']) / float(ev['denominator'])
+                if ratio <= 0: raise ValueError('Invalid split factor')
+                split_rows.append({'date': day, 'factor': ratio, 'ratio': ev.get('splitRatio')})
             q = r['indicators']['quote'][0]
             rows = []
             for ts, c in zip(r.get('timestamp', []), q['close']):
                 if c is None: continue
-                day = dt.datetime.fromtimestamp(ts + off, dt.timezone.utc).date().isoformat()
+                day = dt.datetime.fromtimestamp(ts, zone).date().isoformat()
                 if day > LAST: continue
-                rows.append((day, round(c, 6)))
+                factor = 1.0
+                for event in split_rows:
+                    if event['date'] > day: factor *= event['factor']
+                rows.append((day, float(c), float(c) * factor))
             dd = {}
-            for day, c in rows: dd[day] = c                       # last row per local day wins
-            return sorted(dd.items()), r['meta'].get('exchangeTimezoneName', ''), r['meta'].get('currency', '')
+            for day, c, level in rows: dd[day] = (c, level)
+            AUDIT.mkdir(exist_ok=True)
+            (AUDIT / ('actions_' + t.replace('^', '_').replace('=', '_').replace('.', '_') + '.json')).write_text(json.dumps({'ticker': t, 'source': 'Yahoo Finance split events', 'purpose': 'mechanical reconstruction only; keep away from report writers', 'events': sorted(split_rows, key=lambda x: x['date'])}, indent=1))
+            return {'ticker': t, 'tz': tz, 'currency': r['meta'].get('currency', ''),
+                    'rows': [[day, round(pair[0], 8)] for day, pair in sorted(dd.items())],
+                    'as_traded_rows': [[day, round(pair[1], 8)] for day, pair in sorted(dd.items())],
+                    'level_restriction': SUPPRESS_LEVEL.get(t),
+                    'price_change_basis': 'split-adjusted close, excluding dividends',
+                    'price_level_basis': 'as-traded share units, reconstructed from Yahoo close and split events',
+                    'source': 'Yahoo Finance daily chart API', 'max_kept_date': LAST}
         except Exception as e:
             err = e; time.sleep(2 * (a + 1))
     print('FAIL', t, err); return None
@@ -99,11 +135,16 @@ if __name__ == '__main__':
     os.makedirs(D, exist_ok=True)
     ts = sys.argv[1:] or UNIVERSE
     if not sys.argv[1:]: treasury()
-    for t in ts:
+    def run(t):
         r = yahoo(t)
-        if not r: continue
-        rows, tz, cur = r
-        json.dump({'ticker': t, 'tz': tz, 'currency': cur, 'rows': rows},
+        if not r: return {'ticker': t, 'status': 'failed'}
+        json.dump(r,
                   open(os.path.join(D, 'yf_' + t.replace('^', '_').replace('=', '_').replace('.', '_') + '.json'), 'w'))
-        print(t, len(rows), rows[-1] if rows else None, tz, flush=True)
-        time.sleep(0.3)
+        result = {'ticker': t, 'status': 'ok', 'observations': len(r['rows']), 'last': r['rows'][-1][0] if r['rows'] else None}
+        print(json.dumps(result), flush=True)
+        return result
+    with cf.ThreadPoolExecutor(max_workers=8) as pool:
+        result = list(pool.map(run, ts))
+    AUDIT.mkdir(exist_ok=True)
+    (AUDIT / 'market_fetch.json').write_text(json.dumps(result, indent=1))
+    if any(x['status'] == 'failed' for x in result): raise SystemExit(1)

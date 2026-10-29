@@ -4,7 +4,7 @@ You review ONE finished briefing (`specs/<date>.json`) against the rules in `BRI
 you **repair what is wrong directly in the spec**. You did not write it: read it cold. The owner will judge the page against
 the August 2026 archive pages, "especially What Retail Is Playing".
 
-Work from `/home/user/DailyDigest_Markets/corrections/2025-11`. Read `BRIEF.md` completely first. Inputs for your date only:
+Work from `/workspace/work/oct2025/code/corrections/2025-11`. Read `BRIEF.md` completely first. Inputs for your date only:
 `feeds/<date>.json.gz` (through `tools/digest.py`, `--grep`), `cards/<date>.json` (through `tools/showcard.py`). Open no other
 date's files, not `data/`. No git, no web.
 

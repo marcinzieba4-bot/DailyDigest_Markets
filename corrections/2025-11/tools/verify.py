@@ -12,7 +12,7 @@ headline; a citation reused many times; length outside the usual range."""
 import json, os, re, sys, datetime as dt
 
 C = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CITE = re.compile(r'\[\[(n\d{4})\]\]')
+CITE = re.compile(r'\[\[(n\d{4,6})\]\]')
 NUM = re.compile(r'(?<![A-Za-z])\d[\d,]*(?:\.\d+)?')
 GEO = ['US', 'EU', 'CN', 'JP', 'AU', 'PL']
 SECT = ['XLK', 'XLC', 'XLF', 'XLE', 'XLI', 'XLY', 'XLP', 'XLV', 'XLB', 'XLRE', 'XLU', 'SXAP', 'SOXX']
@@ -62,7 +62,7 @@ def load_feed(d):
 def fl(s):
     try:
         return round(float(s.replace(',', '')), 6)
-    except ValueError:
+    except (ValueError, TypeError, AttributeError):
         return None
 
 
@@ -164,6 +164,21 @@ def verify(d):
     items = {x['id']: x for x in load_feed(d)['items']}
     cardnums, carddates = card_numbers(card)
     fails, warns = [], []
+    cutoff = dt.datetime.fromisoformat(d).replace(tzinfo=dt.timezone.utc)
+    if D.year != 2025 or D.month != 11 or D.weekday() > 4:
+        fails.append('SCOPE: expected a November 2025 weekday')
+    if spec.get('date') != d:
+        fails.append('SCOPE: spec date mismatch')
+    for item in items.values():
+        pub = dt.datetime.fromisoformat(item['published_at'].replace('Z','+00:00'))
+        days = {'news':7,'monthly':35,'result':14}.get(item['cat'])
+        if pub.tzinfo is None or days is None or not cutoff-dt.timedelta(days=days) <= pub < cutoff:
+            fails.append('EVIDENCE cutoff/window violation: '+item['id'])
+    for ticker, market in card['markets'].items():
+        if market['session'] >= d or market['ref_20s_session'] >= d:
+            fails.append('MARKET session violation: '+ticker)
+    if card['treasury']['prior_close_date'] >= d:
+        fails.append('TREASURY session violation')
     paras = list(paragraphs(spec)); fails += [f'STRUCT {e}' for e in paragraphs.errs]
     allcited = {n for _, _, t in paras for n in CITE.findall(t) if n in items}
     report_title_nums = set().union(*[nums_in(items[n]['title']) for n in allcited]) if allcited else set()

@@ -3,14 +3,27 @@
 Each rule: (label, regex for outcome wording, first report date on which the outcome may appear). A hit on an earlier
 report is a candidate leak (or a legitimate preview phrased like an outcome) — review it by hand against that date's feed."""
 import json, re, sys, glob, os
+from pathlib import Path
 
-C = '/home/user/DailyDigest_Markets/corrections/2025-11'
-CITE = re.compile(r'\s*\[\[n\d{4}\]\]')
+C = str(Path(__file__).resolve().parent.parent)
+CITE = re.compile(r'\s*\[\[n\d{4,6}\]\]')
 R = [
+    ('Fresenius Q3 guidance release (Nov5)', r'Fresenius.{0,120}(raised|raises|increased|lifted|higher).{0,80}(outlook|forecast|guidance)', '2025-11-06'),
+    ('Deutsche Telekom Q3 outlook/dividend release (Nov13)', r'Deutsche Telekom.{0,120}(raised|raises|increased|lifts|higher).{0,80}(outlook|forecast|guidance|dividend)', '2025-11-14'),
+    ('Australia Q3 Wage Price Index (Nov19 00:30 UTC)', r'(Australia|Australian|ABC).{0,100}(wage|Wage Price Index).{0,100}(steady|September|3\.4|rose|rise|inflation)', '2025-11-20'),
+    ('RBA November policy outcome (Nov 4 03:30 UTC)', r'(RBA|Reserve Bank of Australia).{0,100}(kept|held|left|retained|maintained).{0,70}(3\.6|cash rate|rates unchanged)', '2025-11-05'),
+    ('China October private manufacturing PMI (Nov 3 Asian release)', r'(RatingDog|Caixin|China.s private).{0,100}(manufacturing|factory|PMI).{0,100}(October|50\.6|fell|eased|expanded)', '2025-11-04'),
+    ('Australia October employment (Nov 13 00:30 UTC)', r'Australia.{0,100}(October).{0,100}(employment|jobs|unemployment).{0,100}(rose|fell|added|gained|dropped|42[,.]2)', '2025-11-14'),
+    ('Australia first full monthly October CPI (Nov 26 00:30 UTC)', r'Australia.{0,100}(October).{0,100}(CPI|inflation|consumer prices).{0,100}(3\.8|rose|accelerat|higher|jump)', '2025-11-27'),
+    ('Poland Q3 flash GDP (Nov 13)', r'(Poland|Polish|GUS).{0,100}(GDP|PKB).{0,100}(3[,.]7|rose|grew|expanded|wzros)', '2025-11-14'),
+    ('Poland October industrial production (Nov 24)', r'(Poland|Polish|GUS).{0,100}(October|pa[źz]dziernik).{0,100}(industrial|industry|produkcj).{0,100}(3[,.]2|grew|rose|wzros)', '2025-11-25'),
+    ('Poland October retail sales (Nov 25)', r'(Poland|Polish|GUS).{0,100}(October|pa[źz]dziernik).{0,100}(retail|sprzeda[żz]).{0,100}(5[,.]4|grew|rose|wzros)', '2025-11-26'),
+    ('China November official PMI (Nov 30, outside this weekday set)', r'China.{0,100}(November).{0,100}(official|manufacturing|factory).{0,100}(PMI|49\.2|improved|rose|contract)', '2025-12-01'),
+    ('OpenAI backstop clarification (Nov 6; initial interview is earlier)', r'(OpenAI|Friar|Altman).{0,120}(walked back|walks back|clarified|clarifies|not seeking|no government bailout|no federal bailout)', '2025-11-07'),
     ('Palantir Q3 results (Nov 3 after close)', r'Palantir.{0,140}(third-quarter|Q3|fiscal third).{0,140}(beat|topped|raised|revenue (rose|jumped|grew)|guidance)', '2025-11-04'),
     ('AMD Q3 results (Nov 4 after close)', r'\bAMD\b.{0,140}(third-quarter|Q3).{0,140}(beat|topped|raised|revenue (rose|jumped|grew)|guidance|forecast)', '2025-11-05'),
     ('Supreme Court tariff hearing (Nov 5)', r'(justices|Supreme Court).{0,120}(skeptic|sceptic|questioned|grilled|appeared)', '2025-11-06'),
-    ('NBP cut to 4.00% (Nov 5)', r'(NBP|RPP|Polish central bank|National Bank of Poland|Council).{0,140}(cut|lower(ed)?|reduc(ed|tion)|trim(med)?)[^.]{0,80}(4[.,]00|4 ?%|4 per ?cent|4 proc)', '2025-11-06'),
+    ('November NBP decision outcome (Nov5; first reportNov6)', r'(NBP|RPP|Polish central bank|National Bank of Poland|Council).{0,140}(cut|lowered|reduced|trimmed).{0,80}(rate|stop|basis point|bps|pkt)', '2025-11-06'),
     ('Musk pay package approved (Nov 6)', r'(Tesla|Musk).{0,140}(shareholders|investors|stockholders).{0,60}(approv)', '2025-11-07'),
     ('BoE 5-4 hold (Nov 6)', r'(Bank of England|BoE).{0,100}(5-4|five to four|narrowly)', '2025-11-07'),
     ('Challenger October layoffs (Nov 6)', r'Challenger.{0,100}(153|highest (October|since))', '2025-11-07'),
@@ -19,7 +32,8 @@ R = [
     ('Pfizer wins Metsera (Nov 7)', r'Pfizer.{0,100}(wins|won|prevail|secur|clinch|beat Novo).{0,80}Metsera', '2025-11-10'),
     ('UMich sentiment prelim Nov (Nov 7)', r'(University of Michigan|Michigan).{0,100}(sentiment).{0,100}(November|Nov\.?).{0,60}(50\.3|near record|record low|second-lowest)', '2025-11-10'),
     ('Senate shutdown vote (Nov 9-10)', r'Senate.{0,100}(advanc|passed|cleared|voted).{0,100}(funding|spending|shutdown|stopgap)', '2025-11-11'),
-    ('Shutdown ended / bill signed (Nov 12)', r'(shutdown (ended|is over|has ended)|signed (the|a) (funding|spending|stopgap)|end(ed|s)? the (longest )?shutdown|government reopen)', '2025-11-13'),
+    ('Shutdown signed US Nov12evening afterNov13UTCcutoff', r'(shutdown (ended|is over|has ended)|signed (the|a) (funding|spending|stopgap)|end(ed|s)? the (longest )?shutdown|government reopen)', '2025-11-14'),
+    ('House shutdown funding passage afterNov13UTCcutoff', r'House.{0,100}(passed|approved|cleared|voted).{0,100}(funding|spending|shutdown|stopgap)', '2025-11-14'),
     ('SoftBank sold Nvidia stake (Nov 11)', r'SoftBank.{0,100}(sold|sale of|sells|dumped).{0,80}Nvidia', '2025-11-12'),
     ('Cisco Q1 FY26 results (Nov 12 after close)', r'Cisco.{0,140}(first-quarter|Q1|fiscal first).{0,140}(beat|topped|raised|record|guidance)', '2025-11-13'),
     ('Burry Scion deregistration (Nov 13)', r'(Scion).{0,100}(deregister|shut|closing|wind)', '2025-11-14'),
@@ -42,7 +56,7 @@ R = [
     ('Japan stimulus approved (Nov 21)', r'(Takaichi|Japan).{0,100}(stimulus|economic package).{0,100}(approv|¥21|21\.3|trillion yen)', '2025-11-24'),
     ('Moodys Poland outlook (Nov 21)', r'Moody.s.{0,120}(Poland|Polish|Polska).{0,100}(outlook|rating)', '2025-11-24'),
     ('Geneva Ukraine talks (Nov 23)', r'Geneva.{0,100}(talks|meeting|delegation)', '2025-11-24'),
-    ('Alphabet TPU / Meta report (Nov 24)', r'(Meta).{0,120}(TPU|Tensor Processing)', '2025-11-25'),
+    ('Alphabet TPU / Meta report (Nov 24)', r'\bMeta\b.{0,120}(TPU|Tensor Processing)', '2025-11-25'),
     ('Burry Substack (Nov 24)', r'Cassandra', '2025-11-25'),
     ('UK Autumn Budget outcome (Nov 26)', r'(Reeves).{0,120}(budget).{0,120}(raised|raising|tax rise|£26|£ ?2\d billion|freez)', '2025-11-27'),
     ('Alibaba results (Nov 25)', r'Alibaba.{0,120}(September.quarter|fiscal second|results).{0,120}(beat|missed|revenue|cloud)', '2025-11-26'),

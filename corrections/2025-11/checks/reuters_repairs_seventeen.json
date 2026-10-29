@@ -1,0 +1,40 @@
+{
+  "date": "2025-11-17",
+  "reason": "Canonical publisher-date audit identified three Reuters stories first published on November 17 despite Sunday RSS timestamps.",
+  "repairs": [
+    {
+      "removed_source_id": "n7565",
+      "location": "US / New / Most Important",
+      "disposition": "Removed the Monday Morning Bid ranking of Nvidia versus delayed data; replaced it with an independently eligible CNBC earnings preview and the existing Bloomberg release notice.",
+      "replacement_source_ids": [
+        "n6321",
+        "n7543",
+        "n7479"
+      ],
+      "old_text": "The next collision is between AI earnings and delayed labour information. Reuters framed Nvidia's report as likely to overshadow the delayed US data, while Bloomberg reported that the September jobs report would be released Nov. 20. The September label matters: investors will be receiving an older economic photograph at a moment when prices are responding to current corporate confidence. A strong old payroll reading could restrain rate-cut enthusiasm without settling the present hiring question. Conversely, weakness need not be a recession verdict if company guidance remains resilient. October's employment report will not include the jobless rate, according to Reuters, so the restoration of statistics will still leave an uneven picture. [[n7565]] [[n7543]] [[n7479]]",
+      "new_text": "AI earnings and delayed labour information demand separate investment decisions. CNBC's Cramer said the market hinged on Nvidia's earnings report, while Bloomberg reported that the September jobs report would be released Nov. 20. The September label matters: investors will be receiving an older economic photograph at a moment when prices are responding to current corporate confidence. A strong old payroll reading could restrain rate-cut enthusiasm without settling the present hiring question. Conversely, weakness need not be a recession verdict if company guidance remains resilient. October's employment report will not include the jobless rate, according to Reuters, so the restoration of statistics will still leave an uneven picture. [[n6321]] [[n7543]] [[n7479]]"
+    },
+    {
+      "removed_source_id": "n2971",
+      "location": "EU / New / Most Important",
+      "disposition": "Removed the minister's Beijing arrival, the account of the visit and its negotiating frame. Replaced the paragraph with independently eligible Nikkei reporting about German exposure in critical-material recycling; the remainder is conditional investment analysis.",
+      "replacement_source_ids": [
+        "n0775"
+      ],
+      "old_text": "The German finance minister's Beijing visit comes as the trade gulf widens and supply chains wobble, Reuters reported. Treat negotiation as an attempt to manage dependence, not proof that dependence has disappeared. A tariff concession can lift sentiment quickly; replacement production, sourcing and customer demand take longer. That timing mismatch favours companies with demonstrated pricing or cost control over those needing an immediate continental investment revival. [[n2971]]",
+      "new_text": "Germany's supply-chain exposure reaches beyond finished products. Nikkei Asia described pressure from China even in the recycling of critical materials. That makes sourcing resilience an operating issue, not simply a diplomatic talking point. Replacing a supplier can require new processes, qualification and investment before it changes costs or revenue. A reassuring policy statement can lift sentiment more quickly than those adjustments improve earnings. Prefer companies demonstrating pricing discipline and secure access to necessary inputs over those requiring an immediate continental investment revival. The bullish trigger is a more dependable supply chain accompanied by better orders and cash conversion. [[n0775]]"
+    },
+    {
+      "removed_source_id": "n0985",
+      "location": "JP / Playbook ✓",
+      "disposition": "Removed Japan's post-cutoff effort to calm the dispute. Retained a conditional tourism-risk action grounded instead in CNN's independently eligible report of China's travel warning; no claim about a Japanese diplomatic response remains.",
+      "replacement_source_ids": [
+        "n2495",
+        "n0952"
+      ],
+      "old_text": "Prefer profitable exporters and selective financial exposure through EWJ over chasing the most volatile AI proxies. Japanese megabanks lifted profit forecasts and stepped up buybacks, Reuters reported, offering a company-level offset to the weak national output reading. Add domestic cyclicals only if stimulus supports actual spending and wage income; reduce exporter beta if a sharp yen appreciation starts removing translation support. Keep tourism risk small while the China dispute is unsettled: Reuters reported Japan seeking to calm the escalation over Taiwan. A diplomatic improvement could help confidence, but it should be followed by company demand before becoming an earnings assumption. [[n2495]] [[n0985]]",
+      "new_text": "Prefer profitable exporters and selective financial exposure through EWJ over chasing the most volatile AI proxies. Japanese megabanks lifted profit forecasts and stepped up buybacks, Reuters reported, offering a company-level offset to the weak national output reading. Add domestic cyclicals only if stimulus supports actual spending and wage income; reduce exporter beta if a sharp yen appreciation starts removing translation support. Keep tourism exposure small after China's warning against travel to Japan, reported by CNN. A restoration of traveller confidence could help demand, but require company evidence before treating that possibility as an earnings improvement. [[n2495]] [[n0952]]"
+    }
+  ],
+  "spec_sha256": "8a3c6e28591044c76641b4bb6f7b922c61dcf0d2cc1fe48e8eec7b0115220430"
+}

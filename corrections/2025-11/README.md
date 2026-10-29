@@ -1,79 +1,46 @@
-# November 2025 — retrospective briefings for the 20 weekdays (2025-11-03 … 2025-11-28) — IN PROGRESS: 2 of 20 written
+# November 2025 weekday retrospective briefings
 
-Same pipeline as `corrections/2025-12` and `corrections/2026-02` (information cutoff 00:00 UTC on each report date, Google News
-feeds bounded by date, Yahoo / US Treasury cards, pages in the August 2026 layout). Stopped by the owner on 2026-10-28 because of
-cost (see "Cost"); nothing from this folder is on S3 yet.
+Twenty dated Market Intelligence Briefings, November 3–28, 2025, using the wide August 2026 nine-section structure. The opening price dashboard and sector leadership chart are omitted. HTML, PDF and machine-readable JSON are built from date-isolated source records and market cards.
 
-## Status
-| Piece | State |
-|---|---|
-| `tools/` (fetch, cards, digest, showcard, verify, render, summary, upload) | done, tested |
-| `BRIEF.md` (writers) and `CRITIC.md` (reviewers) | done; block sizes taken from the 31 August 2026 pages |
-| `data/`, `cards/` (20 cards, 292 instruments) | done — **see Known issues 1 (split-adjusted levels)** |
-| `feeds/*.json.gz` (20 dates, ~8,000 headlines each, 0 failed queries, 0 items at/after a cutoff) | done |
-| `specs/` + `html/` + `json/` | **2025-11-04 and 2025-11-06 written** (verify PASS, 0 fail / 0 warn, hindsight tripwire clean) |
-| the other 18 dates | **not written**: 11-03, 05, 07, 10, 11, 12, 13, 14, 17, 18, 19, 20, 21, 24, 25, 26, 27, 28 |
-| critic pass (`CRITIC.md`) | not run on any date |
-| upload to S3 + CloudFront invalidation | **not done** — see Known issues 2 |
+[Open November 2025](https://d7g7nkeytae81.cloudfront.net/reports/2025-11.html) · [Download HTML PDF and JSON](https://d7g7nkeytae81.cloudfront.net/reports/2025-11/November_2025_Weekday_Reports.zip) · [Historical method](https://d7g7nkeytae81.cloudfront.net/reports/2025-11/methodology.txt)
 
-The two written pages: 11-04 = 9,946 words / 402 cited headlines; 11-06 = 10,407 words / 421 (August median 10,132). Lead retail
-trades: 11-04 bitcoin miners as AI landlords (IREN, CIFR; smaller: Palantir, bitcoin dip-buying, quantum), 11-06 Palantir
-"Burry is wrong, buy the dip" (smaller: IREN / Cipher, Bitcoin / IBIT, IonQ). Neither has had an independent review.
+## Historical boundary
 
-## Resume (cheap path)
+The news cutoff is strictly before each report date at 00:00 UTC. Eligible source ages are 7 days for news/policy/previews, 14 days for earnings results and 35 days for monthly releases. After deduplication, 21 category-window mismatches were removed while preserving surviving IDs. The frozen feeds contain 163,721 own-date headline records, with zero failed source queries and zero remaining timestamp/window violations. Headlines supply headline facts only. Misdated outcomes and rolling pages are excluded editorially. A cached publisher-URL audit resolves cited Reuters links through Google News metadata; same-day date mismatches trigger claim review, with UTC assessment of early-local releases. Candidate dispositions and repairs are retained in checks/reuters_repairs_*.json.
+
+Market observations use completed prior exchange-local sessions with ZoneInfo, and completed UTC days for crypto. Displayed levels reverse later stock splits into historical share units; returns use comparable split-adjusted closes. CMCSA price levels are withheld because of a spin-off adjustment. Official US Treasury 2Y/10Y par yields and basis-point changes handle bond holidays separately from stocks. All 20 cards pass 30,156 market assertions.
+
+Original article vintages are not independently archived and current-vintage historical quotes may contain later vendor revisions. Search-index limits mean coverage is broad rather than exhaustive. Selected release-date checks record their evidence and timing uncertainty explicitly.
+
+## Source code and inputs
+
+The original base was commit 1c7b3594e68e7252634a32793634007a79f889d7. A fresh remote-branch discovery found 75f12ededa072406eb74b841f6b971b2977119fe, which added November split repairs and a compact dossier tool. Its relevant changes are covered by the stronger October market machinery and copied dossier tool; checks/code_discovery.json records the comparison.
+
+Authoritative prose is in specs/. Writers use only their own date’s feeds/ and cards/ files. Full raw feeds are restored from the [frozen source archive](https://d7g7nkeytae81.cloudfront.net/reports/2025-11/November_2025_Frozen_News_Feeds.zip) before rebuilding. The 39.5 MB archive contains all 20 ready feeds and eligibility-repair records; origin and public SHA256 checks passed (checks/source_archive_publication.json). Generated PDF/ZIP files are not committed. Future corporate-action audit metadata stays outside writer inputs.
+
+## Rebuild and publish
+
+Python 3.12, Playwright, pypdf, boto3 and BeautifulSoup are required. Chromium is /usr/bin/chromium. In this workspace use system Python for browser export and /workspace/.report-tools/bin/python for AWS operations.
+
+```sh
+python tools/build_artifacts.py
+/workspace/.report-tools/bin/python -I tools/publish.py
+/workspace/.report-tools/bin/python -I tools/publish.py --go --attempts 6 --backoff-seconds 2 --max-backoff-seconds 15
 ```
-cd /home/user/DailyDigest_Markets/corrections/2025-11
-python3 -I tools/showcard.py <date>                       # market card as a table (~9k tokens)
-python3 -I tools/digest.py <date> --max 40                # smaller digest than the default (default is ~65k tokens)
-python3 -I tools/digest.py <date> --topic retail --max 80
-python3 -I tools/digest.py <date> --grep "regex" --max 60
-python3 -I tools/verify.py <date>                          # 0 FAIL required
-python3 -I tools/render.py <date>                          # writes html/<date>.html and json/<date>_Market_Intelligence.json
-python3 -I tools/summary.py                                # all written dates vs the August medians
-python3 posthoc/tripwire.py                                # hindsight tripwire (keep it away from writers)
-```
-Writer prompt that worked (one date per agent; scratch only in `work/w<YYYYMMDD>/`, which is git-ignored): "Read BRIEF.md
-completely, then write specs/<date>.json from feeds/<date>.json.gz (via tools/digest.py) and cards/<date>.json (via
-tools/showcard.py) only; verify.py 0 FAIL, render.py clean; re-read the retail section against reference/retail_voice_*.txt;
-no git, no web; reply with a 3-5 line note." Critic prompt: "Read CRITIC.md and BRIEF.md, review specs/<date>.json, repair in
-place, re-run verify and render."
 
-## Cost (why it was stopped)
-Each Opus writer took about 40 minutes and 100–116 tool calls and used **690,400 and 758,141 tokens** (the two finished
-writers). Most of it is reading: the default digest is ~1,800 lines (~65k tokens), plus dozens of greps and verify iterations that
-re-read context. Twenty writers plus twenty critics at that rate is on the order of 15–25 million tokens. Ways to make the rest
-much cheaper: a smaller model for writers; `digest.py --max 40` instead of the default caps; two or three dates per session
-instead of a parallel fan-out; critics only where verify or the tripwire shows something (the two finished pages needed none).
+The publisher requires all 20 validated weekday reports and matching input/artifact hashes. It backs up replacements, conditionally merges the archive index, verifies exact bytes, and invalidates the affected CDN paths. It preserves reports/latest.html and weekend reports. Interrupted upload/verification stages can resume with --resume and the original checked artifacts. Runtime AWS_KEY/AWS_SECRET bindings are explicitly selected; no credential values are saved. No Lambda, email or Telegram delivery is invoked.
 
-## Known issues
-1. **Split-adjusted price levels in the cards.** Yahoo returns split-adjusted history, so the card's `close` and `ref_20s_close`
-   are not what traded in November 2025 for: NFLX (card 110.01; traded ~1,100 before its 10-for-1 split), NOW, TQQQ, ETHA, CRWD,
-   KLAC, CVNA, CMCSA, BYND (reverse split, level scaled up) and the XLK / XLY / XLE / XLB / XLU sector ETFs, possibly more.
-   **Percentage changes are unaffected.** Until fixed, write only percentages for those names (the 11-04 writer did) and never
-   quote a level or a 20-session reference level for them. Fix: in `fetch_market.py` request `events=div,splits`, multiply each
-   close by the product of the split ratios dated after it, rebuild the cards (`build_cards.py`); spin-off adjustments (CMCSA)
-   are not in the split events, so drop its level. The December and February cards probably carry the same problem for
-   ETFs/stocks that split after those dates.
-2. **AWS credentials.** In the cloud session `AWS_ACCESS_KEY_ID` / `AWS_SECRET_ACCESS_KEY` are 14-character proxy placeholders
-   that AWS rejects (`InvalidAccessKeyId`); earlier sessions published with the real key stored as `AWS_Key` / `AWS_Pass` in the
-   environment settings (not set in the 2026-10-28 session). `tools/upload.py` maps those two names itself and runs a pre-flight
-   (STS + HeadBucket) that stops before any write. Set them in the environment settings (never paste a key into chat), start
-   a new session, then: `python3 corrections/2025-11/tools/upload.py 2025-11-04 2025-11-06` (dry run), add `--go` to publish.
-   It backs up anything it overwrites to `reports/_retrospective_backup/november-weekdays/<stamp>/`, adds the index rows,
-   leaves `reports/latest.html` alone, and invalidates only the written paths on CloudFront. `--no-aws` builds the HTML, JSON and
-   PDFs in memory without touching AWS (tested).
-3. `CLAUDE.md` on the report-scope branch contains a Telegram bot token in plain text — worth rotating.
+Public reports/* paths route to the report bucket. Canonical Strategies/* PDF/JSON keys are backend storage; public PDF/JSON delivery is inside the verified month ZIP. tools/verify_live.py checks public HTML, collection, method and ZIP hashes, while the publisher verifies all 63 stored artifacts.
 
-## What changed against the December set (and why)
-Measured on the 31 August 2026 pages (median 10,132 words; Retail 1,232): the December pages averaged ~18 mentions of "the feed",
-~19 of "the writer" and ~3 "not a reported fact" disclaimers per report (August: ~3, 0, 0), a thin Social Signal, Poland ~400
-words (August ~1,000, eight parts) and Flows / Geo shorter than August. So: `BRIEF.md` forbids narration about the inputs and
-invented social evidence, gives August block sizes (Poland seven parts ~850–1,050, China ~800–950, Flows 600–750), spells out
-how to choose and write the retail lead, and `verify.py` fails narration, caps "the feed", requires ≥ 8,500 words and the
-Poland structure; the news harvest has 440 queries per date (61 on retail attention) instead of 217; the cards carry ~290
-instruments including the names retail was trading.
+## Review records
 
-## Layout
-`BRIEF.md`, `CRITIC.md` · `reference/` (two August 2026 retail sections as voice references) · `tools/` · `data/` (Yahoo closes and
-the Treasury par curve, stopped at the 2025-11-28 close) · `cards/<date>.json` · `feeds/<date>.json.gz` · `specs/<date>.json` ·
-`html/<date>.html`, `json/<date>_Market_Intelligence.json` · `posthoc/` (not for writers) · `work/` (git-ignored scratch).
+checks/existing_two_review.json records repairs to the two inherited reports. checks/independent_factual_review.json will record critical-claim samples for new reports, not exhaustive verification. checks/primary_release_timestamp_checks.json separates index-backed release dates from independently unverified intraday timing. audit/feed_window_repairs.json preserves rejected records and original/ready hashes. audit/market_access_audit.json records data corrections.
+
+The final rendered set contains 187,681 words and 471 PDF pages across all 20 reports. Every report passes structural, numerical, news-window, desktop/mobile and removed-widget checks. The full ZIP has 62 files and no chart images. Final review covers selected critical claims in all 20 reports; 507 currently cited direct Reuters links pass canonical-date review, with two documented pre-midnight Japanese release exceptions. See checks/final_validation.json.
+
+Publication receipts and public-content verification are recorded in checks/publication.json and checks/live_verification.json after upload. Download and extract the frozen source archive into this directory before rebuilding; the ZIP restores feeds/ and eligibility audit records with the checked hashes.
+
+
+## Published and verified
+
+Published October 29, 2026. All 63 stored artifacts passed exact-content verification; the public collection, 20 HTML reports, methodology and ZIP passed SHA256 checks. All 20 archive links are present and CDN refresh completed. The latest report and November weekend objects were unchanged. The frozen news source archive was separately verified in origin storage and through the public CDN. Receipts are in checks/publication.json, checks/live_verification.json and checks/source_archive_publication.json.

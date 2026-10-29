@@ -1,0 +1,136 @@
+{
+  "reviewed_utc": "2026-10-29T09:45:02.052362+00:00",
+  "review_type": "read-only selected cross-report and internal consistency audit",
+  "status": "selected_review_complete_all_20_weekdays",
+  "limitations": [
+    "No exhaustive source-date or Reuters metadata audit was attempted; parent and november_markets own that work.",
+    "The review sampled prose and stance/action consistency; it is not a claim to have checked every factual sentence.",
+    "No web or git was used. Specs/tools were not edited."
+  ],
+  "reviewed_spec_sha256": {
+    "2025-11-03": "34ed5386fc69e9b40165962d204f3d325237460340e8d9850989aa2bf2e8cfef",
+    "2025-11-04": "74d2772691459ff6849796bcab27b758c7d3a0c1a3d31337788856982111168e",
+    "2025-11-05": "4c75c97ead95c7180924e0c9224c679f5d7fdb04f2d6639c73244690fd86cd56",
+    "2025-11-06": "8b00fd1cefb4bd66ba355d097b8e700cd006ef8e36ac5be63792f7479943b606",
+    "2025-11-07": "941a17123ed8974f2537f2fbe25ed6bfa44ab88c096e8b567d0c66b3a239166a",
+    "2025-11-10": "fdf88d05a0bcb637121f06c3ab811e03f7605c69bd4491064b966eb77fa3e2dd",
+    "2025-11-11": "edad32f2e6760c09379627f3ee1f6d7ba4aeaac675572af050ee58d36dfc2ab7",
+    "2025-11-12": "9c803d0fc102b4b04ea224dcfdf061aae715b1bf80c5e630e48471098dde888f",
+    "2025-11-13": "9fdcb91aaaccade0d022c2893d5e89a6522c05fbe5a8c4466b2934971346bae5",
+    "2025-11-14": "c376ada79acb426621e1a90c9111e17eed96a541d8d9e266b6d03ea3ccb31b3c",
+    "2025-11-18": "99cf10e99598567ff0e46ca5f6f1fc4a9177d9aef021aa9c3ad21194738c6776",
+    "2025-11-19": "21f2716c4a6003b590fbbfb5f3e849b58488888a00b7875503edb605f870611a",
+    "2025-11-20": "d5ece53d1d0c77e97720e6cede576ba443c2c431bb04f9272f744cc919657dc0",
+    "2025-11-21": "ca46d8e1844862d5fee6831b52e150c2692fb4b1aad021a693d9b137e1df3844",
+    "2025-11-24": "825cbea4986428a5233c8ab50d7789a74f28fe5237aa5328c92301c04ac5a328",
+    "2025-11-25": "b74eb39e7a318b8b773dc431b563e32c59d3d8075e5b558d176380d3053baf00",
+    "2025-11-26": "3d8c6dce816e031bba8fcd8dc982870fd2b44f2e64386a9cca38c8e2a7d01942",
+    "2025-11-27": "ff1614696e5658247e2652d8f0b03a4dbed0b61f0374f1f5e194a6c3c406f98e",
+    "2025-11-28": "2be7f37af7e3f940d523670e3df622c49475d4481efa724e0dda77f959efe506",
+    "2025-11-17": "b018e577d8b44c818cd2b8f60375a3f360f2c2c2f29747214303ff53eea2bb2c"
+  },
+  "samples": [
+    {
+      "scope": "All 20 weekday specs: US Rates & Curve",
+      "result": "20-observation direction/curve descriptors and quoted 2Y/10Y/spread compared with own-date cards; no inconsistency found. Five-observation claims inspected where present, including Nov6 and Nov18; no mismatch found."
+    },
+    {
+      "scope": "All 20 weekday specs: China PMIs & Activity / Credit Impulse",
+      "result": "Read monthly-period wording. September loan evidence precedes October credit evidence; later October surveys/activity are not mislabeled as November actuals. Nov28 PMI poll remains a forecast. No period contradiction found in this sample."
+    },
+    {
+      "scope": "Nov3/4/6/11/14/18/25/28: geo stances and Playbook paragraphs",
+      "result": "Selected actions and upgrade/reduction conditions align with respective stance/labels apart from the Nov6 AU certainty issue recorded below. A bearish broad country stance can legitimately coexist with selected longs or onshore-over-offshore relative positions."
+    },
+    {
+      "scope": "Nov4/6/11/14/18/28: anticipatory sections",
+      "result": "Read all four scenarios on each date. Scenario conditions generally remain conditional; no issue was raised merely because a title anticipates a possible outcome or because an economic transmission is conditional."
+    },
+    {
+      "scope": "All 20 weekday specs: split/corporate-action and old-level text search; targeted reads of hits",
+      "result": "No Netflix/NFLX or Comcast/CMCSA absolute-price references found. Explicit Nov6 SMCI/PLTR and FX old-level comparisons were read; no split-crossing old-price problem found in this sample. Announced ServiceNow split wording has no comparative price level attached."
+    },
+    {
+      "scope": "All 20 weekday specs: source-validation/writing-instruction phrase search; targeted reads of hits",
+      "result": "Four optional retail voice edits and one optional holiday wording edit recorded below; normal uncertainty/forecast qualifications retained when they help interpretation."
+    },
+    {
+      "scope": "Nov17: US curve, CN PMI/credit, all geo Playbooks, all anticipatory scenarios, phrase-search hits",
+      "result": "US 3.62%/4.14%, +52bp spread and +21/+15bp bear flattening match card. October/September periods and pending Nvidia/jobs/Walmart/rare-earth scenarios are clear. JP currency-hedge inconsistency was repaired by the writer and rechecked; no further issue in this sample."
+    }
+  ],
+  "findings": [
+    {
+      "id": "nov04_pltr_split_title",
+      "severity": "medium",
+      "date": "2025-11-04",
+      "field": "retail[1].title",
+      "quote": "Palantir / PLTR — beat, raise, then split the stock",
+      "reason": "The title reads as an announced/completed stock split, while the supporting Drivers paragraph describes only stock-split chatter and a speculative question.",
+      "suggested_change": "Retitle to `Palantir / PLTR — beat, raise, then stock-split chatter`.",
+      "status": "sent_to_parent"
+    },
+    {
+      "id": "nov06_au_forecast_label",
+      "severity": "low",
+      "date": "2025-11-06",
+      "field": "geo[AU].label",
+      "quote": "on hold / easing cycle over",
+      "reason": "The label makes the end of easing categorical while its own Macro Stance attributes only `possibly done easing` to Reuters and treats future policy changes conditionally.",
+      "suggested_change": "Use `on hold / easing constrained` or another forecast-aware label.",
+      "status": "sent_to_parent"
+    },
+    {
+      "id": "retail_source_validation_voice",
+      "severity": "minor_editorial_optional",
+      "instances": [
+        {
+          "date": "2025-11-07",
+          "field": "retail[0].parts[2][1] (Social Signal)",
+          "quote": "The useful social interpretation is the intensity of the leadership narrative, not an invented measure of platform sentiment."
+        },
+        {
+          "date": "2025-11-13",
+          "field": "retail[0].parts[2][1] (Social Signal)",
+          "quote": "The nearest useful attention evidence is the breadth of financial coverage and the visible share response, rather than an invented count of posts or retail orders."
+        },
+        {
+          "date": "2025-11-25",
+          "field": "retail[0].parts[2][1] (Social Signal)",
+          "quote": "This is a trade with named public advocates rather than a fabricated measure of message-board enthusiasm."
+        },
+        {
+          "date": "2025-11-28",
+          "field": "retail[0].parts[0][1] (Drivers)",
+          "quote": "That is concrete evidence of enthusiasm rather than an invented online mood."
+        }
+      ],
+      "reason": "These comparisons describe avoidance of fabricated evidence rather than explaining an investor mechanism. The surrounding cited public-advocacy and mainstream-attention analysis is useful and can stand directly.",
+      "suggested_change": "State the observed attention and its investment implication directly; remove the invented/fabricated comparisons.",
+      "status": "sent_to_parent"
+    },
+    {
+      "id": "nov28_holiday_voice",
+      "severity": "minor_editorial_optional",
+      "date": "2025-11-28",
+      "field": "geo[US].parts[1][1] (Rates & Curve)",
+      "quote": "the absence of a Thursday US cash session should not be described as a fresh vote of confidence from those markets",
+      "reason": "The holiday qualification is useful, but `should not be described` reads as an instruction to a writer.",
+      "suggested_change": "State the investment implication directly, for example: `Thursday’s holiday leaves those US readings unchanged; the next cash session will test whether the improvement persists.`",
+      "status": "notified_in_artifact"
+    },
+    {
+      "id": "nov17_jp_currency_hedge",
+      "severity": "medium",
+      "date": "2025-11-17",
+      "field": "geo[JP].parts[3][1] (Playbook ✓)",
+      "quote": "hedge yen exposure if a currency reversal starts removing exporters' translation support",
+      "reason": "A yen appreciation that weakens exporter earnings raises the value of unhedged yen. Adding an FX hedge removes that offset, contrary to the intended exporter risk reduction.",
+      "suggested_change": "Reduce exporter beta if yen appreciation removes translation support.",
+      "status": "repaired_by_writer_and_rechecked",
+      "resolution": "Current spec says `reduce exporter beta if a sharp yen appreciation starts removing translation support`.",
+      "repair_confirmed_utc": "2026-10-29T09:45:02.052467+00:00"
+    }
+  ],
+  "pending_dates": []
+}

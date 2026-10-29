@@ -110,6 +110,8 @@ def curve_shape(s):
 
 def curve_move(c2, c10):
     if abs(c2) < 4 and abs(c10) < 4: return 'little changed'
+    if c2 == c10:
+        return 'parallel rally (both down equally; spread unchanged)' if c2 < 0 else 'parallel selloff (both up equally; spread unchanged)'
     if c10 >= c2 and c10 > 0: return 'bear steepening (both up, 10Y up more)' if c2 > 0 else 'steepening (10Y up, 2Y down/flat)'
     if c10 < c2 and c2 > 0: return 'bear flattening (both up, 2Y up more)' if c10 > 0 else 'flattening (2Y up, 10Y down/flat)'
     if c10 <= c2 and c10 < 0: return 'bull flattening (both down, 10Y down more)' if c2 < 0 else 'flattening (10Y down, 2Y up/flat)'
@@ -147,9 +149,13 @@ def card(d):
         rows = [r for r in j['rows'] if r[0] < d]
         if len(rows) < 22: continue
         (ld, lc), (d1, c1), (d5, c5), (d20, c20) = rows[-1], rows[-2], rows[-6], rows[-21]
-        mk[t] = {'name': NAMES.get(t, t), 'session': ld, 'close': fmt(lc, t), 'currency': j.get('currency', ''),
+        levels = dict(j.get('as_traded_rows', j['rows']))
+        level_ok = not j.get('level_restriction')
+        mk[t] = {'name': NAMES.get(t, t), 'session': ld, 'close': fmt(levels[ld], t) if level_ok else None, 'currency': j.get('currency', ''),
                  'chg_1s_pct': pct(lc, c1), 'chg_5s_pct': pct(lc, c5), 'chg_20s_pct': pct(lc, c20),
-                 'ref_20s_session': d20, 'ref_20s_close': fmt(c20, t), 'tz': j['tz']}
+                 'ref_20s_session': d20, 'ref_20s_close': fmt(levels[d20], t) if level_ok else None, 'tz': j['tz'],
+                 'level_restriction': j.get('level_restriction'),
+                 'price_level_basis': j.get('price_level_basis'), 'price_change_basis': j.get('price_change_basis')}
         if t == '^VIX':
             mk[t]['chg_1s_pts'], mk[t]['chg_20s_pts'] = round(lc - c1, 2), round(lc - c20, 2)
     label = D.strftime('%A, %B %d %Y')

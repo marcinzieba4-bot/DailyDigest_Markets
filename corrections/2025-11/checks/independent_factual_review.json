@@ -1,0 +1,846 @@
+{
+  "scope": "Independent selected critical-claim samples for18 newly written reports, plus a canonical Reuters URL-date check across all20 reports. This is not exhaustive verification of every sentence, original article body, original intraday timestamp, or original-vintage market archive.",
+  "reviewer": "november_markets independent reviewer",
+  "reviews": {
+    "2025-11-03": {
+      "status": "pass_selected_claims",
+      "reviewed_utc": "2026-10-29T09:18:49.747839+00:00",
+      "reviewed_spec_sha256": "6ef2a369b927677eeef24c0ba91c92c64733a26d1c85aa6f0c2b5c2d54700fa6",
+      "sampled_claims": [
+        {
+          "location": "geo:US Macro Stance / Rates & Curve",
+          "finding": "Fed outcome and Logan stance supported by n8605/n8706; prior-session2Y3.60%,10Y4.11%,51bps spread and changes match card."
+        },
+        {
+          "location": "geo:CN PMIs & Activity / Credit Impulse",
+          "finding": "OfficialOctober manufacturing weakness and bank-margin compression match n0828/n0835, released beforeNov3; noNov3privatePMI actual used."
+        },
+        {
+          "location": "geo:PL Macro Stance / New",
+          "finding": "Oct31flashCPI and earlierSeptember production/retail are labelled with correct periods and supported by own-date Polish headlines."
+        },
+        {
+          "location": "earnings Rewarded / Punished / first2catalysts",
+          "finding": "AMZN/GOOGL/LLY strength and MSFT/Meta spending/Linde guidance concerns reflect cited headline wording; no pendingPLTR outcome admitted."
+        },
+        {
+          "location": "retail lead Drivers / Social Signal",
+          "finding": "PLTR200.47,+3.04%1s,+8.58%5s,+15.83%20s and Nasdaq comparison match card. Stocktwits analyst preview, split discussion and Burry warning are real own-date attention evidence; no fabricated flow/post counts."
+        },
+        {
+          "location": "flows Equity & Fund Flows",
+          "finding": "Meta bond sale and credit derivatives supported by n7118/n8753/n8756; avoids asserting quantified institutional flows."
+        }
+      ],
+      "tripwire_hits": 0,
+      "factual_issues": [],
+      "editorial_notes": [
+        "Retail and flow paragraphs now state investor implications; source-validation narration was removed. Repaired paragraphs rechecked against retained citations."
+      ],
+      "initial_reviewed_spec_sha256": "1d49d166cfcea7c3e9f5f50a316a3d5aa283c0397b49af1b5eead85128beadb0",
+      "repair_confirmed_utc": "2026-10-29T09:24:16.116755+00:00",
+      "extended_sample": "EU New / Most Important and XLF/XLV/SXAP Reported paragraphs additionally checked for eligible dates and headline semantics.",
+      "canonical_date_candidates_at_recheck": [],
+      "review_hash_history": [
+        "34ed5386fc69e9b40165962d204f3d325237460340e8d9850989aa2bf2e8cfef"
+      ],
+      "final_recheck_utc": "2026-10-29T09:51:21.467680+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    },
+    "2025-11-12": {
+      "status": "pass_selected_claims",
+      "sampled_claims": [
+        {
+          "location": "geo:US Macro / Rates / New",
+          "finding": "Shutdown funding remains pending. Veterans Day uses Nov10 Treasury and Nov11 equities; market values match the card. Services and ADP interpretation needs direct citations."
+        },
+        {
+          "location": "geo:CN PMI / Credit / New",
+          "finding": "October services weakness, loan-quality concerns and the direction of consumer prices match eligible own-date headlines."
+        },
+        {
+          "location": "geo:PL Macro / New",
+          "finding": "Mortgage relief, NBP projections, the PZU/Pekao fund and POLSTR loan are supported. Prospective cuts remain conditional."
+        },
+        {
+          "location": "earnings / first two catalysts",
+          "finding": "Sony and Vodafone strength versus CoreWeave and Duolingo guidance problems are supported. The SoFi launch is eligible; its outlet attribution needs precision."
+        },
+        {
+          "location": "retail Drivers / Social Signal",
+          "finding": "SOFI close30.95, +1.34%1s, +5.38%5s and +11.05%20s match the card. Business Wire and The Block support product attention; no invented buying counts."
+        }
+      ],
+      "factual_issues": [
+        {
+          "id": "nov12_sofi_attribution",
+          "location": "catalysts[0] Catalyst & Thesis",
+          "status": "repaired_and_rechecked",
+          "repair": "Use Yahoo Finance for cited n1283 unless original Reuters syndication is independently established."
+        },
+        {
+          "id": "nov12_services_adp_cites",
+          "location": "geo:US New / Most Important",
+          "status": "repaired_and_rechecked",
+          "repair": "Add n7552 (ISM) and n7831 (WSJ ADP), or remove the unsupported clause."
+        }
+      ],
+      "tripwire_hits": 1,
+      "tripwire_disposition": "Conditional reopening preview; no completed outcome.",
+      "reviewed_utc": "2026-10-29T09:21:22.730580+00:00",
+      "reviewed_spec_sha256": "fb6450402e4fb2ccf04d9813979946b7d68187040b16e9818b1595fee34e2136",
+      "initial_reviewed_spec_sha256": "59b45ff0f9b46cd40e7c9f6f3b30d2dfb9f3223762ef131706fe41adf8167fc6",
+      "repair_confirmed_utc": "2026-10-29T09:28:19.213799+00:00",
+      "editorial_notes": [
+        "Retail and flow paragraphs now use investor-facing implications. Both new citations and the Yahoo attribution were rechecked."
+      ],
+      "extended_sample": "EU New / Most Important and XLF/XLV/SXAP Reported paragraphs additionally checked for eligible dates and headline semantics.",
+      "canonical_date_candidates_at_recheck": [],
+      "review_hash_history": [
+        "9c803d0fc102b4b04ea224dcfdf061aae715b1bf80c5e630e48471098dde888f"
+      ],
+      "final_recheck_utc": "2026-10-29T09:51:21.467785+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    },
+    "2025-11-19": {
+      "status": "pass_selected_claims",
+      "sampled_claims": [
+        {
+          "location": "geo:US",
+          "finding": "Home Depot outlook and Waller/Barkin remarks are supported. Nvidia earnings, delayed jobs and minutes remain pending. Equal12bps yield increases correctly mean parallel selloff."
+        },
+        {
+          "location": "geo:CN",
+          "finding": "October investment/credit weakness, youth unemployment and Baidu revenue direction match eligible cited headlines."
+        },
+        {
+          "location": "geo:PL",
+          "finding": "Core inflation at3% for the first time since2019, GDP discussion and prospective Kotecki rate comments are supported."
+        },
+        {
+          "location": "earnings / catalysts",
+          "finding": "Cisco, Home Depot and Baidu results are eligible and accurately described. Nvidia results remain pending."
+        },
+        {
+          "location": "retail Drivers / Social Signal",
+          "finding": "NVDA181.36 and rounded20-session changes for NVDA, SOXX, CRWV and IREN match the card. Pro-trader, Burry and Thiel attention is supported; no measured retail buying is asserted."
+        }
+      ],
+      "factual_issues": [
+        {
+          "id": "nov19_au_wages_aftercutoff",
+          "location": "geo:AU Macro Stance",
+          "status": "repaired_and_rechecked",
+          "repair": "Remove n0184 wage actual. The Q3 WPI release was Nov19 at11:30 AEDT, or00:30 UTC, after cutoff; indexed ABS release confirms Nov19 date."
+        }
+      ],
+      "tripwire_hits": 0,
+      "reviewed_utc": "2026-10-29T09:21:22.730718+00:00",
+      "reviewed_spec_sha256": "15596ffb1f42b31bf161a2d9b60c6f351b82dd9d61cf60e882daedeaa1183acd",
+      "initial_reviewed_spec_sha256": "89ed060f4bc260f4394004bcd7eee1d25d38f6b6dc117c0934a7e850e8e3309f",
+      "repair_confirmed_utc": "2026-10-29T09:27:51.359355+00:00",
+      "extended_sample": "EU New / Most Important and XLF/XLV/SXAP Reported paragraphs additionally checked for eligible dates and headline semantics.",
+      "canonical_date_candidates_at_recheck": [],
+      "review_hash_history": [
+        "21f2716c4a6003b590fbbfb5f3e849b58488888a00b7875503edb605f870611a"
+      ],
+      "final_recheck_utc": "2026-10-29T09:51:21.467862+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    },
+    "2025-11-26": {
+      "status": "pass_selected_claims",
+      "sampled_claims": [
+        {
+          "location": "geo:US Macro / Rates / New",
+          "finding": "Nov25 confidence, ADP and September retail release are eligible. Williams/Collins policy disagreement is supported. Yields,58bps spread and changes match the card."
+        },
+        {
+          "location": "geo:CN",
+          "finding": "October PMI, activity and credit weakness use the correct period. Alibaba revenue beat,34% AI-arm growth and72% profit pressure are supported. No November PMI outcome is admitted."
+        },
+        {
+          "location": "geo:PL",
+          "finding": "October production3.2%, released Nov24, is eligible. Orlen, PZU, LPP and Allegro levels and direction match the card; investment and settlement headlines support the interpretation."
+        },
+        {
+          "location": "geo:AU",
+          "finding": "The Nov26 CPI outcome is properly excluded; the next inflation reading remains pending."
+        },
+        {
+          "location": "earnings / first two catalysts",
+          "finding": "Best Buy, Kohls and HP guidance direction is supported. Walmart shopper mix and Meta chip talks need more direct citations available in the own-date feed."
+        },
+        {
+          "location": "retail Drivers / Social Signal",
+          "finding": "GOOGL323.44 and GOOGL/AVGO/NVDA comparison returns match the card. The reported Nvidia X response is cited, and Meta talks are not presented as completed deployment."
+        }
+      ],
+      "factual_issues": [
+        {
+          "id": "nov26_walmart_cite",
+          "location": "earnings Rewarded",
+          "status": "repaired_and_rechecked",
+          "repair": "Add n1959 CNBC for shoppers across incomes; n1990 only gives results and forecasts."
+        },
+        {
+          "id": "nov26_metatalks_cite",
+          "location": "catalysts[0] Catalyst & Thesis",
+          "status": "repaired_and_rechecked",
+          "repair": "Add n6061 Reuters for Meta chip talks; n6058 is a generic Daily Open headline."
+        }
+      ],
+      "tripwire_hits": 0,
+      "reviewed_utc": "2026-10-29T09:21:22.730800+00:00",
+      "reviewed_spec_sha256": "bd3187c04cea92708c9f4aaa24d838d557533caae02c0f6a75fdcaeef5f43ea8",
+      "initial_reviewed_spec_sha256": "6dc7f3ef8618a3f710b6ceb7982bcaf8d02e6f3b627455f7b189e91b0cf1b933",
+      "repair_confirmed_utc": "2026-10-29T09:27:51.359435+00:00",
+      "extended_sample": "EU New / Most Important and XLF/XLV/SXAP Reported paragraphs additionally checked for eligible dates and headline semantics.",
+      "canonical_date_candidates_at_recheck": [
+        "n3702"
+      ],
+      "review_hash_history": [
+        "1b060a899a18a0e944f02fbf47c227ad0391773cfd4d2250efea3b14b83a942d"
+      ],
+      "final_recheck_utc": "2026-10-29T09:51:21.467931+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [
+        {
+          "report_date": "2025-11-26",
+          "id": "n3702",
+          "canonical_url": "https://www.reuters.com/world/asia-pacific/japans-leading-indicator-service-inflation-hits-27-october-2025-11-26/",
+          "event": "Japan October services producer prices",
+          "scheduled_release_local": "2025-11-26 08:50 JST",
+          "scheduled_release_utc": "2025-11-25T23:50:00Z",
+          "report_cutoff_utc": "2025-11-26T00:00:00Z",
+          "disposition": "retained_pre_midnight_scheduled_release",
+          "basis": "Scheduled 08:50 JST statistical/minutes release falls ten minutes before the exclusive UTC cutoff. A local-day canonical URL does not establish post-cutoff publication.",
+          "verification_limit": "The standard release schedule and date are used; original primary-body intraday snapshots were not independently fetched or archived. This is not a claim of exhaustive original-vintage verification."
+        }
+      ],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    },
+    "2025-11-24": {
+      "status": "pass_selected_claims",
+      "reviewed_utc": "2026-10-29T09:23:57.009758+00:00",
+      "reviewed_spec_sha256": "12e975b9e4f0240bc712ef52a2898e206f60061bd63bdbcd26cfa4626c3ae900",
+      "sampled_claims": [
+        {
+          "location": "geo:US Macro / Rates / New",
+          "finding": "September payrolls119k and4.4%, Williams/Collins remarks and October CPI cancellation are eligible and supported. Treasury3.51/4.06%,55bps spread and changes match card."
+        },
+        {
+          "location": "geo:CN PMI / Credit / New",
+          "finding": "October PMI, low new loans and investment weakness use correct periods. Alibaba Qwen and Tencent results are eligible and do not imply a broad recovery."
+        },
+        {
+          "location": "geo:PL Macro / Corporate / New",
+          "finding": "Q3 growth, final October CPI and NBP projection are eligible. PZU positive earnings reaction, Allegro beat-with-decline and KGHM tax-relief-with-decline match cited Polish headlines."
+        },
+        {
+          "location": "geo:JP / AU",
+          "finding": "Nov21 Nikkei close correctly accommodates Tokyo holiday. Prior Australian inflation and employment outcomes are eligible; no Nov26 CPI outcome is used."
+        },
+        {
+          "location": "earnings / first two catalysts",
+          "finding": "Walmart, Gap and Tencent positive delivery versus Home Depot/Target/Lowes outlook cuts match citations. Nvidia results and ensuing reversal are now eligible."
+        },
+        {
+          "location": "retail Drivers / Social / flows",
+          "finding": "NVDA178.88,-0.97%1s,-5.94%5s and SOXX/SOXL returns match card. Actual Huang/Burry reports and retail dip-buying conviction headline support attention/flow interpretation; no invented counts."
+        }
+      ],
+      "tripwire_hits": 0,
+      "factual_issues": [],
+      "extended_sample": "EU New / Most Important and XLF/XLV/SXAP Reported paragraphs additionally checked for eligible dates and headline semantics.",
+      "canonical_date_candidates_at_recheck": [],
+      "review_hash_history": [
+        "825cbea4986428a5233c8ab50d7789a74f28fe5237aa5328c92301c04ac5a328"
+      ],
+      "final_recheck_utc": "2026-10-29T09:51:21.468004+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    },
+    "2025-11-05": {
+      "status": "pass_selected_claims",
+      "reviewed_utc": "2026-10-29T09:25:59.990510+00:00",
+      "reviewed_spec_sha256": "9c64372ad02001d20db83a8224ff040644c8695d72aa15892119f688c5d736e4",
+      "sampled_claims": [
+        {
+          "location": "geo:US Macro / Rates / New",
+          "finding": "Bank-chief warnings, manufacturing weakness, Palantir reaction and AMD Nov4 after-close result are eligible and supported. Treasury3.58/4.10%,52bps spread and bull-flattening labels match the card."
+        },
+        {
+          "location": "geo:CN PMI / Credit / New",
+          "finding": "Private October manufacturing survey is eligible after Nov3 release. September loan weakness and October PBOC bond purchases match own-date headlines. Dollar-bond demand is described as proposed issuance, not a completed transaction."
+        },
+        {
+          "location": "geo:AU / PL",
+          "finding": "Nov4 RBA hold is now eligible. Poland RPP decision remains pending; Oct31 inflation and Nov3 factory optimism are supported."
+        },
+        {
+          "location": "earnings / first two catalysts",
+          "finding": "Ferrari, Fresenius and BP strength versus Palantir/Uber/AMD expectation concerns follow cited headline wording. IREN contract is known while quarterly report remains pending."
+        },
+        {
+          "location": "retail Drivers / Social / flows",
+          "finding": "BTC101590.52 and crypto declines match card. Intraday sub100k report is kept distinct from completed daily close. Bitwise desperation/bottom opinions, retail losses and Burry puts are supported without implying a real-time portfolio map."
+        }
+      ],
+      "tripwire_hits": 0,
+      "factual_issues": [
+        {
+          "id": "nov05_fresenius_aftercutoff",
+          "location": "sector:XLV Reported and earnings Rewarded",
+          "status": "repaired_and_rechecked",
+          "repair": "Replace Fresenius Q3 guidance outcome. Official company release is Nov5 morning, after cutoff, although Reuters n2484 is indexed Nov4.",
+          "resolution": "All three source occurrences removed, including Underowned found by root; eligible Pfizer Nov4 evidence replaces the result."
+        }
+      ],
+      "editorial_notes": [
+        "Social Signal now opens with competing retail distress and rebound expectations; retained citations still support the paragraph."
+      ],
+      "initial_reviewed_spec_sha256": "dafed6d9ec87cf2f2ee9e202469aba21a5c3c8b3a460921909dc55b973ff0c4b",
+      "repair_confirmed_utc": "2026-10-29T09:35:46.125478+00:00",
+      "extended_sample": "EU New / Most Important and XLF/XLV/SXAP Reported paragraphs additionally checked for eligible dates and headline semantics.",
+      "review_hash_history": [
+        "3b1d1b87258034de3ff3e23b376884bb20454c1e7982b0560e054d167d4c5d72",
+        "4c75c97ead95c7180924e0c9224c679f5d7fdb04f2d6639c73244690fd86cd56"
+      ],
+      "canonical_date_candidates_at_recheck": [
+        "n3947"
+      ],
+      "final_recheck_utc": "2026-10-29T09:51:21.468072+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [
+        {
+          "report_date": "2025-11-05",
+          "id": "n3947",
+          "canonical_url": "https://www.reuters.com/world/asia-pacific/boj-board-debated-pros-cons-rate-hike-pause-september-minutes-shows-2025-11-05/",
+          "event": "BOJ September meeting minutes",
+          "scheduled_release_local": "2025-11-05 08:50 JST",
+          "scheduled_release_utc": "2025-11-04T23:50:00Z",
+          "report_cutoff_utc": "2025-11-05T00:00:00Z",
+          "disposition": "retained_pre_midnight_scheduled_release",
+          "basis": "Scheduled 08:50 JST statistical/minutes release falls ten minutes before the exclusive UTC cutoff. A local-day canonical URL does not establish post-cutoff publication.",
+          "verification_limit": "The standard release schedule and date are used; original primary-body intraday snapshots were not independently fetched or archived. This is not a claim of exhaustive original-vintage verification."
+        }
+      ],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    },
+    "2025-11-20": {
+      "status": "pass_selected_claims",
+      "reviewed_utc": "2026-10-29T09:27:51.359439+00:00",
+      "reviewed_spec_sha256": "f2878f52a9f2fa530a717b20da92a01b70a07f7a160cc380e253ce42d921a742",
+      "sampled_claims": [
+        {
+          "location": "geo:US Macro / Rates / New",
+          "finding": "Nov19 after-close Nvidia results and same-day Fed minutes are eligible. Target/Lowes outlook weakness matches headlines. Payroll actual is excluded. Treasury3.58/4.13%,55bps and changes match the card."
+        },
+        {
+          "location": "geo:CN PMI / Credit / New",
+          "finding": "Apple October China share, new-loan weakness, CICC acquisition plans and planned Hong Kong bill sale match eligible headlines; plans remain plans."
+        },
+        {
+          "location": "geo:AU / PL",
+          "finding": "Nov19 wage release is now eligible. Polish core inflation and GDP signals use correct dates; potential rate cuts remain prospective. Fund inflow and POLSTR reports match citations."
+        },
+        {
+          "location": "earnings / catalysts",
+          "finding": "Nvidia favorable forecast and Target/Lowes forward concerns are accurately distinguished. Gemini product launch is eligible; no later stock-session outcome is imported."
+        },
+        {
+          "location": "retail Drivers / Social / flows",
+          "finding": "NVDA186.52 is explicitly a prior regular-session close before earnings are tested in another regular session. Comparison returns match the card. Sonders/Huang attention and reported BlackRock ETF withdrawals are supported."
+        }
+      ],
+      "tripwire_hits": 0,
+      "factual_issues": [],
+      "extended_sample": "EU New / Most Important and XLF/XLV/SXAP Reported paragraphs additionally checked for eligible dates and headline semantics.",
+      "canonical_date_candidates_at_recheck": [],
+      "review_hash_history": [
+        "d5ece53d1d0c77e97720e6cede576ba443c2c431bb04f9272f744cc919657dc0"
+      ],
+      "final_recheck_utc": "2026-10-29T09:51:21.468136+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    },
+    "2025-11-27": {
+      "status": "pass_selected_claims",
+      "reviewed_utc": "2026-10-29T09:27:51.359513+00:00",
+      "reviewed_spec_sha256": "f17c9f0689757df67f8bdd1fa943bbc62533640e2f08985d37d7872c05f5fb47",
+      "sampled_claims": [
+        {
+          "location": "geo:US Macro / Rates / New",
+          "finding": "Nov26 jobless claims, Beige Book and JPMorgan forecast are eligible and not presented as a delivered Fed decision. Treasury3.45/4.00%,55bps and equal13bps five-observation rally match the card."
+        },
+        {
+          "location": "geo:CN PMI / Credit / New",
+          "finding": "October survey/activity and loan weakness are labelled correctly; Alibaba results and commentary are eligible, and no Nov30 PMI actual is used."
+        },
+        {
+          "location": "geo:AU / JP",
+          "finding": "Nov26 CPI3.8% is now eligible despite nominal Nov25 RSS date. Japanese services inflation and government assessment are eligible. Yen, Nikkei and SoftBank directions match cards."
+        },
+        {
+          "location": "geo:PL",
+          "finding": "Production3.2%, unemployment discussion and new company earnings/investment headlines are eligible. Future easing remains a forecast."
+        },
+        {
+          "location": "earnings / first two catalysts",
+          "finding": "Dell and Best Buy positive reaction versus Workday/HP guidance and Novo trial weakness match source headlines."
+        },
+        {
+          "location": "retail Drivers / Social / flows",
+          "finding": "HOOD128.20,+10.93%1s,+8.50%5s,-11.46%20s, BTC90518.37 and COIN+4.27% match cards. WSJ identity story, Ark dip buying and LedgerX deal are cited; product catalyst is not claimed completed earnings delivery."
+        }
+      ],
+      "tripwire_hits": 0,
+      "factual_issues": [],
+      "extended_sample": "EU New / Most Important and XLF/XLV/SXAP Reported paragraphs additionally checked for eligible dates and headline semantics.",
+      "canonical_date_candidates_at_recheck": [],
+      "review_hash_history": [
+        "ff1614696e5658247e2652d8f0b03a4dbed0b61f0374f1f5e194a6c3c406f98e"
+      ],
+      "final_recheck_utc": "2026-10-29T09:51:21.468200+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    },
+    "2025-11-13": {
+      "status": "pass_selected_claims",
+      "reviewed_utc": "2026-10-29T09:30:49.549980+00:00",
+      "reviewed_spec_sha256": "78b2f91d8b9e5d98c15344e4f42c6c8ee28fb4f2c9bba39d1d348e7f6f0c6dd0",
+      "sampled_claims": [
+        {
+          "location": "geo:US Macro / Rates / New",
+          "finding": "House vote, presidential signature and completed reopening remain pending at midnight UTC. Senate passage and Collins/poll disagreement are supported; market values match card."
+        },
+        {
+          "location": "geo:CN PMI / Credit / New",
+          "finding": "October services/exports, cautious consumer lending, muted Singles Day and stalled soybean purchases match eligible own-date headlines."
+        },
+        {
+          "location": "geo:AU / PL / JP",
+          "finding": "Australian jobs actual is excluded. Polish deposit/lending-price transmission and Warsaw valuation commentary are supported. Japanese FX/equity directions match card."
+        },
+        {
+          "location": "earnings / catalysts",
+          "finding": "Cisco Nov12 after-close and On guidance are eligible. Circle/CoreWeave concerns match citations. Deutsche Telekom guidance/dividend example is after cutoff and requires removal."
+        },
+        {
+          "location": "retail Drivers / Social",
+          "finding": "AMD258.89,+9.00%1s,+1.00%5s,+8.50%20s match card. Profit/sales targets remain forecasts; mainstream attention examples directly support the narrative without invented orders."
+        }
+      ],
+      "factual_issues": [
+        {
+          "id": "nov13_telekom_aftercutoff",
+          "location": "geo:EU and earnings Rewarded",
+          "status": "repaired_and_rechecked",
+          "repair": "Remove both Deutsche Telekom outlook/dividend outcomes. Official company release is dated Nov13, after cutoff; Reuters n2370 is nominally indexed Nov12."
+        }
+      ],
+      "tripwire_hits": 0,
+      "editorial_notes": [
+        "Retail source-validation comparison with invented post counts remains an optional voice improvement."
+      ],
+      "canonical_date_candidates_at_recheck": [],
+      "review_hash_history": [
+        "95824c18c6cfa4ba41927694aaf33cfd17a269ab01809cbcf82c729009725400"
+      ],
+      "final_recheck_utc": "2026-10-29T09:51:21.468263+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    },
+    "2025-11-25": {
+      "status": "pass_selected_claims",
+      "reviewed_utc": "2026-10-29T09:33:58.711812+00:00",
+      "reviewed_spec_sha256": "752cb3dc71a5c560eb9bc99e8170eb22f1d5da99a6a794c079804cd1d2eaf953",
+      "sampled_claims": [
+        {
+          "location": "geo:US Macro / Rates / New",
+          "finding": "Waller/Daly/Collins views and September payrolls/CPI cancellation are eligible. Treasury3.46/4.04%,58bps and market comparisons match the card."
+        },
+        {
+          "location": "geo:CN PMI / Credit / New",
+          "finding": "October weakness, Qwen10m downloads and earlier Tencent results are supported. Alibaba quarterly results and Meta TPU talks are excluded."
+        },
+        {
+          "location": "geo:JP / AU / PL",
+          "finding": "Tokyo correctly uses Nov21 holiday-adjusted close. Australian CPI remains pending. Nov24 Polish production/wage signals and Orlen locomotive contract are eligible; legal optimism is not a completed arbitration win."
+        },
+        {
+          "location": "EU / XLF / XLV / SXAP sample",
+          "finding": "ECB warnings, Julius Baer provision, Swiss Re warning, Novo trial failure and Merck result are eligible. SXAP industrial-ties claim needs a relevant citation or demand-based rewrite."
+        },
+        {
+          "location": "earnings / catalysts / retail",
+          "finding": "GOOGL318.58,+6.31%1s,+11.77%5s,+18.31%20s and related returns match card. Benioff/Cramer/WSJ attention is real. AVGO thesis could cite the directly relevant Broadcom rally headline."
+        }
+      ],
+      "factual_issues": [
+        {
+          "id": "nov25_sxap_support",
+          "location": "sector:SXAP Reported",
+          "status": "repaired_and_rechecked",
+          "repair": "Cited n0453 only supports weak Chinese output/retail. Reframe industrial/technology ties claim around that demand evidence or add a directly relevant own-date source."
+        }
+      ],
+      "editorial_notes": [
+        "Suggested attaching n6068 to the AVGO catalyst and replacing its repeated premise with the observed contemporaneous rally."
+      ],
+      "tripwire_hits": 0,
+      "canonical_date_candidates_at_recheck": [],
+      "review_hash_history": [
+        "bfafb3c9e6d2bc96c7550afcea7a04aaa3c16aa0b9e8aa16094ad10bbf2a4587"
+      ],
+      "final_recheck_utc": "2026-10-29T09:51:21.468330+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    },
+    "2025-11-21": {
+      "status": "pass_selected_claims",
+      "reviewed_utc": "2026-10-29T09:35:46.125489+00:00",
+      "reviewed_spec_sha256": "66a7665478a194f4bfab6ec4daf342004e6dbe90994266c4b1c7302722c85f12",
+      "sampled_claims": [
+        {
+          "location": "geo:US Macro / Rates / New",
+          "finding": "Nvidia regular-session reversal, Walmart outlook and delayed September payrolls are now eligible. Reference month and disputed December policy path remain explicit. Treasury and equity values match the card."
+        },
+        {
+          "location": "geo:CN / JP / AU",
+          "finding": "Apple share, private REIT financing and rare-earth developments match cited eligible headlines. Japan currency warnings and Australian APRA constraint are supported; no future activity release is admitted."
+        },
+        {
+          "location": "geo:PL",
+          "finding": "Core inflation, final October CPI and GDP commentary are eligible. KGHM tax relief is not treated as an automatic distribution; Orlen arbitration optimism is not an award."
+        },
+        {
+          "location": "EU / sampled sectors / earnings",
+          "finding": "Trade and peace-plan developments remain prospective. Abbott/Exact Sciences is a planned acquisition. Walmart/Ross strength versus BBW/ASOS weakness matches cited headlines."
+        },
+        {
+          "location": "retail Drivers / Social / flows",
+          "finding": "HOOD106.21 and rounded20-session declines for HOOD/BTC/MSTR/ARKK match cards. Attention is backed by MarketWatch/TradingView/Motley Fool. Ark Bullish trade is from Nov18 rather than a near-cutoff disclosure."
+        }
+      ],
+      "tripwire_hits": 0,
+      "factual_issues": [],
+      "canonical_date_candidates_at_recheck": [],
+      "review_hash_history": [
+        "ca46d8e1844862d5fee6831b52e150c2692fb4b1aad021a693d9b137e1df3844"
+      ],
+      "final_recheck_utc": "2026-10-29T09:51:21.468394+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    },
+    "2025-11-28": {
+      "status": "pass_selected_claims",
+      "reviewed_utc": "2026-10-29T09:35:46.125570+00:00",
+      "reviewed_spec_sha256": "a39f86d8395f4ff29d3162a83e79c66a8f4635d592f55ea1fcf2a9c61f00e896",
+      "sampled_claims": [
+        {
+          "location": "geo:US Macro / Rates / New",
+          "finding": "Thanksgiving correctly retains Nov26 US cash observations; no fictitious Thursday vote is inferred. Claims, retail/Beige Book and JPMorgan forecast are eligible."
+        },
+        {
+          "location": "geo:CN / AU / JP",
+          "finding": "November China PMI is explicitly a forecast, not an actual. October CPI in Australia is now eligible. Japanese share and FX sessions use Nov27 values and match the card."
+        },
+        {
+          "location": "geo:PL",
+          "finding": "Nov27 bank-tax signing is supported by Notes from Poland and Bankier. Warsaw turnover is not mislabelled a net inflow. KGHM price/production/credit distinctions are supported."
+        },
+        {
+          "location": "EU / sampled sectors / earnings",
+          "finding": "ESA spending agreement, UK fiscal commentary and Nevada prediction-market constraint are eligible. Novo trial directions and Dell/Best Buy versus HP/Workday/Alibaba earnings distinctions match headlines."
+        },
+        {
+          "location": "retail Drivers / Social / flows",
+          "finding": "Gold4165.20, GLD383.12 and metals returns match latest completed Nov26 observations. Forbes directly supports Polish gold queues/FOMO; Barrons and Kitco support institutional allocation discussion without invented social counts."
+        }
+      ],
+      "tripwire_hits": 0,
+      "factual_issues": [],
+      "canonical_date_candidates_at_recheck": [],
+      "review_hash_history": [
+        "2be7f37af7e3f940d523670e3df622c49475d4481efa724e0dda77f959efe506"
+      ],
+      "final_recheck_utc": "2026-10-29T09:51:21.468455+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    },
+    "2025-11-07": {
+      "status": "pass_selected_claims",
+      "reviewed_utc": "2026-10-29T09:39:41.433949+00:00",
+      "reviewed_spec_sha256": "518ce9fb6b7b715ebe6c867cc8c4cea2904bb16a515d249d24e7ef201d9b58e0",
+      "sampled_claims": [
+        {
+          "location": "geo:US Macro / Rates / New",
+          "finding": "Challenger layoffs and Goolsbee/Hammack policy caution are eligible. ISM is now correctly an index reading52.4, not52.4%. Treasury values and curve labels match the card."
+        },
+        {
+          "location": "geo:CN / AU / JP",
+          "finding": "October services/credit data and Pony/WeRide listing reactions are eligible. RBA hold is known; China exports and later Takaichi remarks are excluded."
+        },
+        {
+          "location": "geo:PL / EU / sampled sectors",
+          "finding": "Delivered RPP cut and Nov6 Glapinski comments are eligible; no erroneous4.00% absolute rate is asserted. Maersk, Robinhood, weight-loss pricing deals and Nexperia conditionality follow cited headlines."
+        },
+        {
+          "location": "earnings / retail Drivers / Social",
+          "finding": "Qualcomm/Airbnb results are eligible. Tesla approval is supported by original Reuters Nov6 URL; regular-session445.91 close explicitly precedes approval. Later fab/Intel remarks were removed because original Reuters URL is datedNov7."
+        }
+      ],
+      "factual_issues": [
+        {
+          "id": "nov07_pmi_unit",
+          "location": "geo:US New / Most Important",
+          "status": "repaired_and_rechecked",
+          "repair": "Removed percent sign from ISM index reading52.4."
+        },
+        {
+          "id": "nov07_musk_fab_aftercutoff",
+          "location": "retail lead Drivers",
+          "status": "repaired_and_rechecked",
+          "repair": "Removed n6920 and all fab/Intel remarks after canonical Reuters URL exposed Nov7 date, despite nominal Nov6 RSS date."
+        }
+      ],
+      "tripwire_hits": 0,
+      "repair_confirmed_utc": "2026-10-29T09:39:41.434065+00:00",
+      "canonical_date_candidates_at_recheck": [],
+      "review_hash_history": [
+        "941a17123ed8974f2537f2fbe25ed6bfa44ab88c096e8b567d0c66b3a239166a"
+      ],
+      "final_recheck_utc": "2026-10-29T09:51:21.468520+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    },
+    "2025-11-10": {
+      "status": "pass_selected_claims",
+      "reviewed_utc": "2026-10-29T09:46:00.335497+00:00",
+      "reviewed_spec_sha256": "57172724d228dcf2ec9c24ad6b800ce76334914882cbccf6d4a8b9230a33775b",
+      "sampled_claims": [
+        {
+          "location": "geo:US / rates",
+          "finding": "Michigan sentiment, shutdown interruption and Williams funding remarks are eligible; completed reopening and late Sunday procedural vote are excluded. Yields and index comparisons match card."
+        },
+        {
+          "location": "geo:CN / JP / AU",
+          "finding": "Weekend October CPI/PPI and earlier factory/services/loan signals are eligible. Quantum technology interest is not used as a macro recovery proxy. The diplomatic-response source n0971 needs canonical-date repair."
+        },
+        {
+          "location": "geo:PL / sampled sectors",
+          "finding": "S&P outlook relief, NBP projections and XTB outage are supported. Pfizer Metsera outcome, UBS fund issue and Honda/Rightmove earnings are eligible by this date."
+        },
+        {
+          "location": "retail Drivers / Social / earnings",
+          "finding": "IONQ59.27,+3.20%1s,-16.11%20s and Rigetti comparison match card. Actual Bloomberg hate-mail story and WSJ timing discussion support attention without invented counts."
+        }
+      ],
+      "factual_issues": [],
+      "tripwire_hits": 0,
+      "canonical_date_candidates_at_recheck": [],
+      "final_recheck_utc": "2026-10-29T09:51:21.468581+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    },
+    "2025-11-11": {
+      "status": "pass_selected_claims",
+      "reviewed_utc": "2026-10-29T09:46:00.335607+00:00",
+      "reviewed_spec_sha256": "8df697f41590dbf15dfe49c43bc8edb392b662fd0c16cf41fef9602676409cb0",
+      "sampled_claims": [
+        {
+          "location": "geo:US / rates",
+          "finding": "Monday rally, reopening expectations and Fed disagreement are supported; completed reopening is not asserted. ISM52.4 has correct units. Treasury and PLTR/NVDA comparisons match card."
+        },
+        {
+          "location": "geo:CN / JP / AU",
+          "finding": "October car sales, inflation/credit and BOJ summary are eligible. RBA hold is known. The next policy outcome is not invented."
+        },
+        {
+          "location": "geo:PL / earnings / sectors",
+          "finding": "RPP easing, S&P relief and Orlen gas agreement are supported. eToro and CoreWeave results are eligible; operating beat versus weak guidance is distinguished."
+        },
+        {
+          "location": "retail Drivers / Social / flows",
+          "finding": "PLTR193.61,+8.81%1s and negative five-session change match card. Actual Burry/Karp public remarks and reported fund flows support the narrative. Two other cited Reuters stories require canonical-date triage."
+        }
+      ],
+      "factual_issues": [],
+      "tripwire_hits": 3,
+      "canonical_date_candidates_at_recheck": [],
+      "final_recheck_utc": "2026-10-29T09:51:21.468646+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification.",
+      "tripwire_disposition": "Three conditional government-reopening previews/title; no completed reopening claim."
+    },
+    "2025-11-14": {
+      "status": "pass_selected_claims",
+      "reviewed_utc": "2026-10-29T09:46:00.335686+00:00",
+      "reviewed_spec_sha256": "ba8a202d44f360782f3685c672052197ecd5f98b3dce2a97e75378db4d7bd341",
+      "sampled_claims": [
+        {
+          "location": "geo:US / rates",
+          "finding": "Shutdown signing and completion are now eligible. Hammack/Daly disagreement and index decline are supported; no forced credit-crisis inference is made."
+        },
+        {
+          "location": "geo:CN / AU / JP",
+          "finding": "October loan release and Singles Day evidence are eligible, while same-day China activity actual is excluded. Australian jobs are now eligible. FX/equity values match card."
+        },
+        {
+          "location": "geo:PL",
+          "finding": "Q3 GDP3.7% matches the Nov13 BANK headline and precise publication timestamp. NBP projection and earlier inflation discussion remain conditional; KGHM is not used as a macro growth gauge."
+        },
+        {
+          "location": "earnings / retail Drivers / Social",
+          "finding": "Cisco, Disney and Siemens outcomes are eligible. Bitcoin99697.49 and crypto drawdowns match the card. Czech central-bank experiment is not mislabelled broad reserve adoption. Three other Reuters sources require date triage."
+        }
+      ],
+      "factual_issues": [],
+      "tripwire_hits": 0,
+      "canonical_date_candidates_at_recheck": [],
+      "review_hash_history": [
+        "6759f32f1873fad22fa2bd7e77536b205dd5d5298df2e1b88af7ef2feb3c0779"
+      ],
+      "final_recheck_utc": "2026-10-29T09:51:21.468710+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    },
+    "2025-11-18": {
+      "status": "pass_selected_claims",
+      "reviewed_utc": "2026-10-29T09:46:00.335757+00:00",
+      "reviewed_spec_sha256": "ff94a605453c3c38a4423d2eb2aa52ac0136889be15cac0d5bf4cbbc35215824",
+      "sampled_claims": [
+        {
+          "location": "geo:US / rates",
+          "finding": "Nov17 market/Jefferson/Waller and weak retail dip-buying evidence are supported. Thursday payroll release remains pending. Treasury3.60/4.13%,53bps and market directions match card."
+        },
+        {
+          "location": "geo:CN / EU",
+          "finding": "October investment/credit weakness, Singles Day and geopolitical allegation are attributed accurately. EU growth forecast and bank-capital discussion are eligible."
+        },
+        {
+          "location": "geo:PL / earnings / sectors",
+          "finding": "Q3 growth, final CPI and NBP projection are eligible. Polish equity-fund interest is correctly distinguished from Warsaw inflows. Cisco/Loblaw strength versus CoreWeave/Disney concerns follow headlines."
+        },
+        {
+          "location": "retail Drivers / Social",
+          "finding": "BTC92093.88 and ETH/SOL/MSTR/HOOD comparisons match card. CoinDesk holder losses and Tom Lee forecast are correctly separated from observed prices. Five additional Reuters stories require canonical-date repair."
+        }
+      ],
+      "factual_issues": [],
+      "tripwire_hits": 0,
+      "canonical_date_candidates_at_recheck": [],
+      "final_recheck_utc": "2026-10-29T09:51:21.468794+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    },
+    "2025-11-17": {
+      "status": "pass_selected_claims",
+      "reviewed_utc": "2026-10-29T09:48:33.263417+00:00",
+      "reviewed_spec_sha256": "8a3c6e28591044c76641b4bb6f7b922c61dcf0d2cc1fe48e8eec7b0115220430",
+      "sampled_claims": [
+        {
+          "location": "geo:US / rates",
+          "finding": "Fed hawkish disagreement and delayed September jobs date are supported. Regular-session rates/equities match the card. Morning Bid n7565 requires same-day canonical-date replacement."
+        },
+        {
+          "location": "geo:CN / EU / JP",
+          "finding": "October demand/loan weakness and JD revenue-versus-profit distinction match eligible headlines. Diplomatic-response n0985 and German minister arrival n2971 require canonical-date triage; Japanese stimulus remains a proposal."
+        },
+        {
+          "location": "geo:AU / PL",
+          "finding": "Australian October jobs and Polish final CPI/Q3 GDP are eligible. Polish3.7% outcome uses the precise Nov13 BANK report, and consumer-stock divergence matches card."
+        },
+        {
+          "location": "earnings / sampled sectors",
+          "finding": "Cisco/On/Firefly positive guidance versus CoreWeave/Alcon/SwissRe concern follows cited headlines. The future Nvidia outcome remains pending."
+        },
+        {
+          "location": "retail Drivers / Social / flows",
+          "finding": "OPEN8.12,+23.78%5s,+13.41%20s,-5.14%1s and7.16 reference match the card. CEO purchase/short-seller narrative is backed by real headlines; institutional filing stories are not presented as live purchases."
+        }
+      ],
+      "factual_issues": [],
+      "canonical_date_candidates_at_recheck": [],
+      "tripwire_hits": 0,
+      "final_recheck_utc": "2026-10-29T09:51:21.468872+00:00",
+      "canonical_unresolved_candidates": [],
+      "canonical_date_check_passed": true,
+      "canonical_review_receipt_sha256": "32f06df629608e30aedb22698817da8cb9d2f1ebe973b68b5a20b4052dad4791",
+      "documented_timing_exceptions": [],
+      "post_repair_review_basis": "Group disposition receipts, removed-source/duplicate-claim checks, final canonical URL dates, and selected rewritten critical paragraphs were rechecked. This is a critical-claim sample, not exhaustive article-body verification."
+    }
+  },
+  "final_reconciled_utc": "2026-10-29T09:51:21.468874+00:00",
+  "complete_new_report_count": 18,
+  "all_new_reports_pass_selected_claim_review": true,
+  "canonical_month_review": {
+    "dates": 20,
+    "unique_current_reuters_links": 507,
+    "lookup_failures": 0,
+    "documented_timing_exceptions": 2,
+    "unresolved_candidates": 0,
+    "passed": true,
+    "receipt": "checks/canonical_reuters_date_review.json"
+  },
+  "repair_receipts": [
+    "checks/reuters_repairs_early.json",
+    "checks/reuters_repairs_middle.json",
+    "checks/reuters_repairs_late.json",
+    "checks/reuters_repairs_root.json"
+  ],
+  "inherited_reports": "November4 and6 were separately reviewed in checks/existing_two_review.json and additionally corrected in the early canonical repair receipt."
+}
