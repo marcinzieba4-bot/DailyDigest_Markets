@@ -1,3 +1,5 @@
+> Retail revision: the reconstructed retail sections have been reviewed and revised. The new exports are prepared; public archive replacement is pending managed-network recovery. Live editions, including August2026, are unchanged. See [revision status](../retail-quality/README.md) and the shared final validation record.
+
 # February 2026 — retrospective briefings for the 20 weekdays (2026-02-02 … 2026-02-27)
 
 The report Lambda started publishing in March 2026, so February had no briefings. These 20 pages were written as of

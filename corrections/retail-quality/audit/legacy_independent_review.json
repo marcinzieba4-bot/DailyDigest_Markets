@@ -1,0 +1,501 @@
+{
+  "status": "pass_selected_claims_and_source_invariants",
+  "reviewer": "retail_sep_fix (independent)",
+  "reviewed_at_utc": "2026-10-29T12:39:21.263478+00:00",
+  "scope": "All13 proposed legacy retail fragments only: complete visible replacement text, new headline claims against provenance feed_item and original retained facts against exact own-report excerpts. No published HTML/JSON or original snapshot was edited.",
+  "reports_reviewed": 13,
+  "patch_sha256": {
+    "2026-01-20": "1ecc898d1d62f45152a3e078b91c026e90e476158413d77916c74bb7320977ee",
+    "2026-03-03": "c4f12542d64187d332c782f90b8c53fd2bbce640f908baf9301267b3c376cb78",
+    "2026-03-13": "eface3602efc8853106fa99c59c5a370dea87ea579f52c90c8cace2c47a36a5b",
+    "2026-03-17": "c07b288b0fa36f0d1a897d0a91bb9175101efb27398b63968620b9767e7ec2b5",
+    "2026-03-19": "42674a3593bb4c802052555d32af8f47618d61e5f130032618b9aae729bdf4fc",
+    "2026-03-20": "c4ce0fefa84c514cacc299c57648f2e108667c8dd261f5a65b5346a14da9db22",
+    "2026-03-23": "632b42899bd57ad57dd563a71265508c7295582a857464148755678f2a669f9f",
+    "2026-03-25": "09c0979e3ca6130a7ecdacae7dd60054ad6800e24da44b5ea1bc4feaeee40942",
+    "2026-03-26": "c64d7e96aa73c39605f2fde9fb7c02b69c78ba7e75b1ecd6318ed7ba5143b9f6",
+    "2026-03-27": "3aa1974ceb34dd44b64a0a3697d71a8faa713b4b236c654337f6edf2f4b53bbc",
+    "2026-06-17": "a0ae99b72b67a213cf970b495730fe989cca2635aea8315826a53755c1b11083",
+    "2026-06-18": "77cb9292fcf334260bdccbd7a40c75fa3fc6715a377fe8f2856745f7b3f5c6f2",
+    "2026-06-19": "3845d71788433fba77b1bdd38144c4aa5ce4b3f29c77324d881e16b36ec89930"
+  },
+  "new_headline_sources_checked": 26,
+  "original_visible_quote_checks": 13,
+  "all_new_sources_exact_own_feed_matches": true,
+  "all_new_sources_before00UTC_within7days": true,
+  "all_original_html_hashes_match": true,
+  "all_original_generated_at_values_preserved": true,
+  "author_audit_sha256": "ebd2a9ed977524648f8350cd7e79be62b247c127cf27d36607f6255e169598c4",
+  "issues": [],
+  "repairs_confirmed": [
+    {
+      "date": "2026-06-17",
+      "type": "minor_format",
+      "repair": "Changed malformed heading border CSS from solid:# to solid #. Original/published HTML untouched; author bound new patch hash.",
+      "receipt": "audit/legacy_css_precision_repair.json"
+    },
+    {
+      "dates": [
+        "2026-01-20",
+        "2026-03-03",
+        "2026-06-17"
+      ],
+      "type": "editorial_precision",
+      "repair": "Author removed report-editing/retitling narration while preserving market-facing continuation tests; no new facts added."
+    }
+  ],
+  "specific_editorial_findings": [
+    {
+      "date": "2026-03-03",
+      "finding": "RR remains a literal ticker in the reported squeeze story; no Rolls-Royce or other company identity inferred from ticker alone. Reddit discussion is explicitly distinguished from RDDT equity."
+    },
+    {
+      "date": "2026-03-27",
+      "finding": "ASTS/RKLB March25 attention story was already a short side on March26. March27 explicitly identifies the prior watch-list status and expands a company-by-company valuation/substitution test, without calling the source a fresh event. This short promotion does not require forced ticker novelty."
+    },
+    {
+      "date": "2026-03-17",
+      "finding": "Micron result remains pending under March16 week-ahead headline; March19 separately uses March18 post-result reaction, preserving event order."
+    },
+    {
+      "dates": [
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19"
+      ],
+      "finding": "SpaceX continuity progresses from options/allocation choices to first decline and continuing retail interest. Actual reported attention is attributed; no invented net flows, position counts or guaranteed next price move."
+    },
+    {
+      "dates": [
+        "2026-03-25",
+        "2026-03-26",
+        "2026-06-18"
+      ],
+      "finding": "Retained lead text and numerical facts are supported by exact original own-report excerpts; new side facts are separately tied to the strict dated feeds."
+    }
+  ],
+  "method_limits": [
+    "Headline facts and exact original report excerpts are checked; original article bodies and historical article vintages are not independently archived.",
+    "Jan/March original JSON explicitly records midnight news cutoff. June17\u201319 original JSON has no news_cutoff_utc; original generated_at remains preserved, and all NEW June headline claims are independently checked against the strict midnight/7day feed boundary. No assertion is made that retained old June facts received a new full cutoff audit.",
+    "This is an editorial/factual sample, not a measured ranking of retail trading or source-exhaustiveness proof. Continuing themes were retained when evidence warranted; frequency alone did not mandate changes.",
+    "The145 live editions, including August, are outside this patch review and remain protected by the parent publication workflow."
+  ],
+  "rows": [
+    {
+      "date": "2026-01-20",
+      "patch_sha256": "1ecc898d1d62f45152a3e078b91c026e90e476158413d77916c74bb7320977ee",
+      "original_html_sha256": "d249b39e0546d04d02b660e8b22737396292ccdcc7ebe7518c598d90bdc22aa4",
+      "original_generated_at_preserved": "2026-10-27T09:47:38Z",
+      "original_news_cutoff_utc": "2026-01-20T00:00:00Z",
+      "new_headline_cutoff_utc": "2026-01-20T00:00:00+00:00",
+      "own_feed_sha256": "74a34e78159a10446a2326901f39371a81c0ee44f481413f0a5f94a72461debd",
+      "new_source_checks": [
+        {
+          "id": "r0036",
+          "title": "Indian Retail Traders\u2019 Favorite Stocks Are Big Laggards. - Bloomberg.com",
+          "published_at": "2026-01-19T08:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        }
+      ],
+      "original_quote_checks": [
+        {
+          "source_location": "work/published/html/2026-01-20.html:original retail section",
+          "verbatim_quote_in_original_visible_text": true,
+          "excerpt_sha256": "4309c46fbf885d77b108317ec3414ae0627e917e811ee3fa52015ce4207ecefb"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-03",
+      "patch_sha256": "c4f12542d64187d332c782f90b8c53fd2bbce640f908baf9301267b3c376cb78",
+      "original_html_sha256": "6ccc3007f23f01c61922ce9281671ed81f966adb95e90179e87d84f2cddf7d99",
+      "original_generated_at_preserved": "2026-10-26T21:31:48Z",
+      "original_news_cutoff_utc": "2026-03-03T00:00:00Z",
+      "new_headline_cutoff_utc": "2026-03-03T00:00:00+00:00",
+      "own_feed_sha256": "ad7ac730c0a1ad4d1af8d341ebe194d78d3836f8998ce164b4fa996826670042",
+      "new_source_checks": [
+        {
+          "id": "r0032",
+          "title": "Reddit Traders Are Chasing a Squeeze on RR, Not Its Fundamentals - 24/7 Wall St.",
+          "published_at": "2026-02-28T08:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        }
+      ],
+      "original_quote_checks": [
+        {
+          "source_location": "work/published/html/2026-03-03.html:original retail section",
+          "verbatim_quote_in_original_visible_text": true,
+          "excerpt_sha256": "dff34e65d82c7bb536bd1e83831fa254091e7fea630018e0ac50bbeac7495582"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-13",
+      "patch_sha256": "eface3602efc8853106fa99c59c5a370dea87ea579f52c90c8cace2c47a36a5b",
+      "original_html_sha256": "0ebd16e99e81e4b19ed334eff5cabdca8908cbbac683cbb8940b9f10fbf5f108",
+      "original_generated_at_preserved": "2026-10-26T21:32:27Z",
+      "original_news_cutoff_utc": "2026-03-13T00:00:00Z",
+      "new_headline_cutoff_utc": "2026-03-13T00:00:00+00:00",
+      "own_feed_sha256": "aa067aa0d3ef2be84288f102085d7bb9b0d412b2d50e57b5151a2dae883d5701",
+      "new_source_checks": [
+        {
+          "id": "r0040",
+          "title": "SERV Stock Gains 12% Pre-Market: Revenue Explosion, White Castle Partnership Boost Sentiment As Retail Expects Price To Double - Stocktwits",
+          "published_at": "2026-03-11T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        }
+      ],
+      "original_quote_checks": [
+        {
+          "source_location": "work/published/html/2026-03-13.html:original retail section",
+          "verbatim_quote_in_original_visible_text": true,
+          "excerpt_sha256": "aeb75d4c8b56b9c66ea3b70dac8b4c8b3c198be15e1a0cda038defb3d08a0ee0"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-17",
+      "patch_sha256": "c07b288b0fa36f0d1a897d0a91bb9175101efb27398b63968620b9767e7ec2b5",
+      "original_html_sha256": "64a85750f5d27c26303c181c8b329e47efeeb0d3179e504a0ebf7439ee1fd1b0",
+      "original_generated_at_preserved": "2026-10-26T21:32:37Z",
+      "original_news_cutoff_utc": "2026-03-17T00:00:00Z",
+      "new_headline_cutoff_utc": "2026-03-17T00:00:00+00:00",
+      "own_feed_sha256": "d6ac789cabb2f3973a81185dc192c6ad0446cc6b216151df18d93a123a8bf6c2",
+      "new_source_checks": [
+        {
+          "id": "r0055",
+          "title": "Micron Stock Tops Nasdaq 100 Weekly Gainers Amid Memory Chip Rally: Q2 Report This Week Is The Next Test - Stocktwits",
+          "published_at": "2026-03-16T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        },
+        {
+          "id": "r0052",
+          "title": "FedEx Is Up ~22% This Year but Reddit Traders Are Betting Against the Freight Spin-Off - 24/7 Wall St.",
+          "published_at": "2026-03-16T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        }
+      ],
+      "original_quote_checks": [
+        {
+          "source_location": "work/published/html/2026-03-17.html:original retail section",
+          "verbatim_quote_in_original_visible_text": true,
+          "excerpt_sha256": "7e9643b01746cdbe7ab9cfc1b03d95aac985121a65ab0a7f428a366068e4c45a"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-19",
+      "patch_sha256": "42674a3593bb4c802052555d32af8f47618d61e5f130032618b9aae729bdf4fc",
+      "original_html_sha256": "67e93f17f95fe5cb0c5fac7fb514496a053fff409f12c029d6280202755cab9c",
+      "original_generated_at_preserved": "2026-10-26T21:32:47Z",
+      "original_news_cutoff_utc": "2026-03-19T00:00:00Z",
+      "new_headline_cutoff_utc": "2026-03-19T00:00:00+00:00",
+      "own_feed_sha256": "7771772999605a33cf4d5c87b57bf38a87ab0835c158000dc80548e2ce58f296",
+      "new_source_checks": [
+        {
+          "id": "r0044",
+          "title": "Micron Stock Falls Despite Blowout Q2 Results \u2014 Retail Sentiment Dips On Earnings Predictability, Capex Concerns - Stocktwits",
+          "published_at": "2026-03-18T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        },
+        {
+          "id": "r0047",
+          "title": "SLS Stock Jumps Overnight: \u2018Potent\u2019 AML Drug Data Ahead Of Cancer Summit Fuels Fresh Momentum - Stocktwits",
+          "published_at": "2026-03-18T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        }
+      ],
+      "original_quote_checks": [
+        {
+          "source_location": "work/published/html/2026-03-19.html:original retail section",
+          "verbatim_quote_in_original_visible_text": true,
+          "excerpt_sha256": "911bc5c82d732ef1cc41054d42a4ddfcc37537e8dfab1c414d0199c27cece75f"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-20",
+      "patch_sha256": "c4ce0fefa84c514cacc299c57648f2e108667c8dd261f5a65b5346a14da9db22",
+      "original_html_sha256": "7c42ef2844cc7714fdd4b177cde973acc6bf7458de087d9ea865946c7c2a189e",
+      "original_generated_at_preserved": "2026-10-26T21:32:52Z",
+      "original_news_cutoff_utc": "2026-03-20T00:00:00Z",
+      "new_headline_cutoff_utc": "2026-03-20T00:00:00+00:00",
+      "own_feed_sha256": "f0414f3f63843ac44ff8984bd363ea677023e258bd401cd8659766b8201300a5",
+      "new_source_checks": [
+        {
+          "id": "r0038",
+          "title": "Salesforce Stock Slips After-Hours: Rare Insider Buy Fails To Boost Confidence Amid AI Threat And Ongoing Selloff - Stocktwits",
+          "published_at": "2026-03-18T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        },
+        {
+          "id": "r0036",
+          "title": "RDDT Stock Jumps Despite CEO Stake Cut: What\u2019s Driving It Higher? - Stocktwits",
+          "published_at": "2026-03-18T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        }
+      ],
+      "original_quote_checks": [
+        {
+          "source_location": "work/published/html/2026-03-20.html:original retail section",
+          "verbatim_quote_in_original_visible_text": true,
+          "excerpt_sha256": "911bc5c82d732ef1cc41054d42a4ddfcc37537e8dfab1c414d0199c27cece75f"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-23",
+      "patch_sha256": "632b42899bd57ad57dd563a71265508c7295582a857464148755678f2a669f9f",
+      "original_html_sha256": "2cd9a1c7e13d31e2c2f779ccb0d898da58fbddea42bb55bb3077ab2297513494",
+      "original_generated_at_preserved": "2026-10-26T21:32:57Z",
+      "original_news_cutoff_utc": "2026-03-23T00:00:00Z",
+      "new_headline_cutoff_utc": "2026-03-23T00:00:00+00:00",
+      "own_feed_sha256": "332e3aa00d31ba53606a406b70529ff6a36ae3903ad4b9d4058f40808e326a2d",
+      "new_source_checks": [
+        {
+          "id": "r0040",
+          "title": "Planet Labs Jumps 23% After Hours as Its $900M Backlog Finally Gets Wall Street's Attention - 24/7 Wall St.",
+          "published_at": "2026-03-21T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        },
+        {
+          "id": "r0044",
+          "title": "Swarmer's 520% Debut Day Gain Masks a 2,161x Revenue Multiple and No Analyst Coverage - 24/7 Wall St.",
+          "published_at": "2026-03-22T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        }
+      ],
+      "original_quote_checks": [
+        {
+          "source_location": "work/published/html/2026-03-23.html:original retail section",
+          "verbatim_quote_in_original_visible_text": true,
+          "excerpt_sha256": "911bc5c82d732ef1cc41054d42a4ddfcc37537e8dfab1c414d0199c27cece75f"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-25",
+      "patch_sha256": "09c0979e3ca6130a7ecdacae7dd60054ad6800e24da44b5ea1bc4feaeee40942",
+      "original_html_sha256": "4b022484f1047ac7bc51dc0097dfda783e694ff123940224f9fe1f763f8226fd",
+      "original_generated_at_preserved": "2026-10-26T21:33:06Z",
+      "original_news_cutoff_utc": "2026-03-25T00:00:00Z",
+      "new_headline_cutoff_utc": "2026-03-25T00:00:00+00:00",
+      "own_feed_sha256": "ef01a2dadfa9abb2761bae19dd7bf19432174e781b534bdd93e357ea4216308e",
+      "new_source_checks": [
+        {
+          "id": "r0036",
+          "title": "FuboTV Slides as Reverse Stock Split Divides Retail Investors - 24/7 Wall St.",
+          "published_at": "2026-03-24T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        },
+        {
+          "id": "r0044",
+          "title": "Valero\u2019s 98% Capacity Run Rate and California Exit Have Reddit Turning Bullish - 24/7 Wall St.",
+          "published_at": "2026-03-24T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        }
+      ],
+      "original_quote_checks": [
+        {
+          "source_location": "work/published/html/2026-03-25.html:original retail section",
+          "verbatim_quote_in_original_visible_text": true,
+          "excerpt_sha256": "574807a2cccd1d49de1db1e8fd8cf5cabee5454967560e670d86f27332e34429"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-26",
+      "patch_sha256": "c64d7e96aa73c39605f2fde9fb7c02b69c78ba7e75b1ecd6318ed7ba5143b9f6",
+      "original_html_sha256": "b5c53994176d5ca7e0fde4159032907a7ac366d3373a1b451e67227a4bcd4186",
+      "original_generated_at_preserved": "2026-10-26T21:33:11Z",
+      "original_news_cutoff_utc": "2026-03-26T00:00:00Z",
+      "new_headline_cutoff_utc": "2026-03-26T00:00:00+00:00",
+      "own_feed_sha256": "dabc20796158d9f704fef9603782400a3d818a39e72fb9bef1c2514dc771399f",
+      "new_source_checks": [
+        {
+          "id": "r0043",
+          "title": "GameStop CEO Silent on Mega-Deal as It Crushes Earnings, Stockpiles Cash - 24/7 Wall St.",
+          "published_at": "2026-03-25T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        },
+        {
+          "id": "r0036",
+          "title": "AST SpaceMobile and Rocket Lab Climb 12%: SpaceX IPO Hype and BlueBird 7 Put Space Stocks in the Spotlight - 24/7 Wall St.",
+          "published_at": "2026-03-25T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        }
+      ],
+      "original_quote_checks": [
+        {
+          "source_location": "work/published/html/2026-03-26.html:original retail section",
+          "verbatim_quote_in_original_visible_text": true,
+          "excerpt_sha256": "2b5542f5505fc8fe42cc8b88c5770f3b5bde9b9376dde538e83ea4b4b4635501"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-27",
+      "patch_sha256": "3aa1974ceb34dd44b64a0a3697d71a8faa713b4b236c654337f6edf2f4b53bbc",
+      "original_html_sha256": "2ea4685a4037f0d139be2baa8bea11fec4b34baf6d4ceaad1c4b0405c44e47dc",
+      "original_generated_at_preserved": "2026-10-26T21:38:29Z",
+      "original_news_cutoff_utc": "2026-03-27T00:00:00Z",
+      "new_headline_cutoff_utc": "2026-03-27T00:00:00+00:00",
+      "own_feed_sha256": "819dc58b21de617430fced379eded4af5a233cabf9a852c6855398d96da8f20a",
+      "new_source_checks": [
+        {
+          "id": "r0032",
+          "title": "AST SpaceMobile and Rocket Lab Climb 12%: SpaceX IPO Hype and BlueBird 7 Put Space Stocks in the Spotlight - 24/7 Wall St.",
+          "published_at": "2026-03-25T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        },
+        {
+          "id": "r0039",
+          "title": "GameStop CEO Silent on Mega-Deal as It Crushes Earnings, Stockpiles Cash - 24/7 Wall St.",
+          "published_at": "2026-03-25T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        }
+      ],
+      "original_quote_checks": [
+        {
+          "source_location": "work/published/html/2026-03-27.html:original retail section",
+          "verbatim_quote_in_original_visible_text": true,
+          "excerpt_sha256": "3a17181a4d91cb81cedeb9480cc3151d5bb18ee09c6dc25a535678e0fc19a6d8"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-17",
+      "patch_sha256": "a0ae99b72b67a213cf970b495730fe989cca2635aea8315826a53755c1b11083",
+      "original_html_sha256": "79dfa14a6cbccde599a1a4fd8ad693208b975df7adc42dc404ec977dde09f1d8",
+      "original_generated_at_preserved": "2026-10-23T16:02:50.263161Z",
+      "original_news_cutoff_utc": null,
+      "new_headline_cutoff_utc": "2026-06-17T00:00:00+00:00",
+      "own_feed_sha256": "8d3cc192ee6e27e86e8b21087f2378f0a1d51939a4ac38548c4a2cb90c83de0d",
+      "new_source_checks": [
+        {
+          "id": "r0103",
+          "title": "SpaceX options list on Tuesday. Here's what to watch - CNBC",
+          "published_at": "2026-06-16T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        },
+        {
+          "id": "r0083",
+          "title": "SpaceX IPO leaves retail investors with too few shares and a tough hold-or-sell decision - CNBC",
+          "published_at": "2026-06-15T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        },
+        {
+          "id": "r0089",
+          "title": "Coinbase unveils 'System Update' unlocking an AI advisor, global unified liquidity, options trading and more - The Block",
+          "published_at": "2026-06-16T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        }
+      ],
+      "original_quote_checks": [
+        {
+          "source_location": "work/published/html/2026-06-17.html:original retail section",
+          "verbatim_quote_in_original_visible_text": true,
+          "excerpt_sha256": "5c4f6e4fe0779839fe6ca867dbcae0b3ea6cf811d696c6bf005e32ab3680b1df"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-18",
+      "patch_sha256": "77cb9292fcf334260bdccbd7a40c75fa3fc6715a377fe8f2856745f7b3f5c6f2",
+      "original_html_sha256": "5259e68e329729bdbf240a694c2eda6226da3a49363ab527f87e9c6ceb7a5bae",
+      "original_generated_at_preserved": "2026-10-23T16:02:50.367552Z",
+      "original_news_cutoff_utc": null,
+      "new_headline_cutoff_utc": "2026-06-18T00:00:00+00:00",
+      "own_feed_sha256": "4b0d92409ced7d4d4ef37724a7d086407d1d110097be6ddb569fb360b41c3b2e",
+      "new_source_checks": [
+        {
+          "id": "r0112",
+          "title": "SpaceX stock falls for first time, ending 3-day surge - Yahoo Finance",
+          "published_at": "2026-06-17T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        },
+        {
+          "id": "r0097",
+          "title": "Citadel Securities Saw \u2018Astronomical\u2019 Retail Trading in SpaceX - Bloomberg",
+          "published_at": "2026-06-17T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        },
+        {
+          "id": "r0076",
+          "title": "Coinbase unveils 'System Update' unlocking an AI advisor, global unified liquidity, options trading and more - The Block",
+          "published_at": "2026-06-16T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        }
+      ],
+      "original_quote_checks": [
+        {
+          "source_location": "work/published/html/2026-06-18.html:original retail section",
+          "verbatim_quote_in_original_visible_text": true,
+          "excerpt_sha256": "9570131ea88345e28a7f9d7e2f6feef0f4497043b16442e773cf8795c4f4a8e3"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-19",
+      "patch_sha256": "3845d71788433fba77b1bdd38144c4aa5ce4b3f29c77324d881e16b36ec89930",
+      "original_html_sha256": "8c7684a77dc01eef732d24916ae7bc09e12a8e1c82d7f8a227f4bc08410f66a7",
+      "original_generated_at_preserved": "2026-10-23T16:02:52.262284Z",
+      "original_news_cutoff_utc": null,
+      "new_headline_cutoff_utc": "2026-06-19T00:00:00+00:00",
+      "own_feed_sha256": "51cb638474fb6557d1008063210419586c74b8c087db143863dffa00fcd21fe7",
+      "new_source_checks": [
+        {
+          "id": "r0094",
+          "title": "Retail Hype for SpaceX Stock Shows No Sign of Waning Days After the IPO - Business Insider",
+          "published_at": "2026-06-18T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        },
+        {
+          "id": "r0084",
+          "title": "SpaceX stock falls for first time, ending 3-day surge - Yahoo Finance",
+          "published_at": "2026-06-17T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        },
+        {
+          "id": "r0097",
+          "title": "The Small Investors Behind SpaceX\u2019s Stock Rally - The New York Times",
+          "published_at": "2026-06-18T07:00:00+00:00",
+          "own_feed_item_exact_match": true,
+          "strictly_before_midnight_and_within7days": true
+        }
+      ],
+      "original_quote_checks": [
+        {
+          "source_location": "work/published/html/2026-06-19.html:original retail section",
+          "verbatim_quote_in_original_visible_text": true,
+          "excerpt_sha256": "1bb7d7dd2ff9ae2db1ea6820f5969c401bc80c7e50ab8c5b30c0ac242d2108a1"
+        }
+      ]
+    }
+  ]
+}

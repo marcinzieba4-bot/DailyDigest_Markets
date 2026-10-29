@@ -264,3 +264,10 @@ python3 -I tools/render.py <date>                          # must render without
 
 
 October additions: Include inline outlet attribution and [[nXXXX]] tokens on every concrete news fact, including translated Polish facts. The renderer preserves linked citations and provides a dated evidence ledger. Ignore later outcomes you may know. Do not read another report date's inputs. All output must be freshly written for that date. Later splits have been accounted for by the data pipeline; omit price levels if the card flags unreliable levels. Headlines alone do not verify full article details. Avoid any rolling/live article. Check for approximate RSS dates on Asian releases.
+
+
+## Chronological retail selection
+
+For a retrospective report, select from its own eligible dated evidence and earlier editorial history only. A persistent theme may remain when its catalyst, reaction or attention meaningfully changes. A new price or subtitle alone does not justify another full essay. Shorten unchanged carryovers. Do not impose ticker quotas or infer a measured retail ranking from price/news. Compare prior selections chronologically before publication; never use later-month popularity or performance to select an earlier report.
+
+Use the shared corrections/retail-quality preflight and record specific evidence-bound dispositions. Review theme identity, company versus platform sentiment, direct versus indirect exposure and source-supported attention. The guard is diagnostic; an independent editor must verify the changed angle. Preserve live style references, including recurring themes that reflected ongoing live attention.

@@ -1,3 +1,5 @@
+> Retail revision: the reconstructed retail sections have been reviewed and revised. The new exports are prepared; public archive replacement is pending managed-network recovery. Live editions, including August2026, are unchanged. See [revision status](../retail-quality/README.md) and the shared final validation record.
+
 # October 2025 weekday retrospective briefings
 
 23 dated Market Intelligence Briefings, October 1–31, 2025, in a wider version of the August 2026 nine-section layout. Each has HTML, PDF, JSON and linked dated evidence. The top price dashboard and sector leadership chart were removed at the user’s request; the nine report sections and their dated analysis are unchanged.

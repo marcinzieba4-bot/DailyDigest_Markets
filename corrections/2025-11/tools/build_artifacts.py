@@ -97,6 +97,9 @@ latest was checked out in an isolated worktree.
 '''
 
 def main():
+    retail_quality_gate=importlib.util.spec_from_file_location('retail_quality_gate',ROOT.parent/'retail-quality'/'retail_quality.py')
+    retail_quality_module=importlib.util.module_from_spec(retail_quality_gate);retail_quality_gate.loader.exec_module(retail_quality_module)
+    retail_quality_module.require_review(ROOT)
     dates=sys.argv[1:] or DATES
     if any(d not in DATES for d in dates):raise ValueError('Only November weekdays')
     verify=module('verify');render=module('render')

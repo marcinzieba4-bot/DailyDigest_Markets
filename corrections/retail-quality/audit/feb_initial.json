@@ -1,0 +1,32 @@
+{
+  "reviewer": "retail_dec_feb_audit",
+  "scope": "Initial read-only February2026 retail review; selected source checks, not exhaustive.",
+  "dates": 20,
+  "findings": [
+    {
+      "type": "concentration",
+      "detail": "SLV lead6 consecutive dates Feb2\u20139; Tesla lead5 of final6 dates; Feb6/9 identical4-name basket."
+    },
+    {
+      "type": "entity_misattribution",
+      "date": "2026-02-18",
+      "section": "RDDT lead The Social Signal",
+      "ids": [
+        "n3953",
+        "n3967"
+      ],
+      "detail": "Qualcomm Reddit sentiment below30 and SPY Reddit sentiment are platform discussion of other instruments, not sentiment toward Reddit Inc shares. Remove company-level inference."
+    },
+    {
+      "type": "instrument_proxy",
+      "detail": "Review SpaceX pre-IPO access and broad China ETF labels; no public share ownership implied for unlisted issuer."
+    },
+    {
+      "type": "risk_logic",
+      "date": "2026-02-27",
+      "detail": "TSLA lead labels price rebound as thesis break by removing cheapness; distinguish successful rebound/profit-taking from bearish invalidation."
+    }
+  ],
+  "feeds_available": 20,
+  "repair_recommendation": "Review all retail fields, choose changed catalysts and same-date explicit attention evidence chronologically; retain fresh silver-crash and Tesla retail/institution split episodes when warranted, shorten unchanged continuations."
+}

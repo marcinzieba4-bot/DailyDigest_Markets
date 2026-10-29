@@ -15,6 +15,11 @@ import boto3
 
 T = os.path.dirname(os.path.abspath(__file__)); C = os.path.dirname(T)
 B = os.environ.get('S3_BUCKET', 's3bucketmz'); CF = os.environ.get('CLOUDFRONT_DISTRIBUTION_ID', 'E15IJW4438D21G')
+from pathlib import Path
+retail_quality_gate = importlib.util.spec_from_file_location('retail_quality_gate', Path(C).parent/'retail-quality'/'retail_quality.py')
+retail_quality_module = importlib.util.module_from_spec(retail_quality_gate); retail_quality_gate.loader.exec_module(retail_quality_module)
+retail_quality_module.require_review(Path(C))
+
 go = '--go' in sys.argv; dates = [a for a in sys.argv[1:] if not a.startswith('--')]
 stamp = dt.datetime.now(dt.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
 BAK = f'reports/_retrospective_backup/february-weekdays/{stamp}/'

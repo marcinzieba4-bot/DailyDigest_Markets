@@ -1,0 +1,17 @@
+{
+  "observed_at_utc": "2026-10-29T12:58:42.878878+00:00",
+  "status_ready_but_http_unavailable": true,
+  "affected_hosts": [
+    "s3.eu-north-1.amazonaws.com",
+    "d7g7nkeytae81.cloudfront.net",
+    "news.google.com"
+  ],
+  "http_status": 503,
+  "server": "envoy",
+  "aws_request_id_present": false,
+  "response": "upstream connect error or disconnect/reset before headers; immediate connect error: Invalid argument; envoy://cloudflare_https_tunnel/",
+  "credentials_or_policy_changed": false,
+  "proxy_bypass": false,
+  "available_environment_tools": "status and diagnostic reads only; no restart/configuration mutation tool exposed",
+  "source_metadata_recovery": "isolated read-only GitHub Actions, public data only"
+}

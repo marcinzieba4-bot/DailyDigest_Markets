@@ -177,3 +177,10 @@ one lead trade and three smaller ones.
 3. `python3 -I tools/verify.py <date>` — fix every FAIL; review every WARN (fix it or be sure it is right).
 4. `python3 -I tools/render.py <date>` — must render without error.
 5. Keep a 3–5 line note: overall tone, the stances you chose, the main stories, anything you deliberately excluded.
+
+
+## Chronological retail selection
+
+For a retrospective report, select from its own eligible dated evidence and earlier editorial history only. A persistent theme may remain when its catalyst, reaction or attention meaningfully changes. A new price or subtitle alone does not justify another full essay. Shorten unchanged carryovers. Do not impose ticker quotas or infer a measured retail ranking from price/news. Compare prior selections chronologically before publication; never use later-month popularity or performance to select an earlier report.
+
+Use the shared corrections/retail-quality preflight and record specific evidence-bound dispositions. Review theme identity, company versus platform sentiment, direct versus indirect exposure and source-supported attention. The guard is diagnostic; an independent editor must verify the changed angle. Preserve live style references, including recurring themes that reflected ongoing live attention.

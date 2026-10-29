@@ -1,0 +1,47 @@
+{
+  "date": "2025-12-11",
+  "original_html_sha256": "0d8da262e12b2cc62d5ee4c65b724f9032feccb57bc502a187f6d29913353acc",
+  "nonretail_prefix_sha256": "b69826801f538a9c61c8fba84d1a939c0f2c0d30d496bad058540f6654f2cad7",
+  "html_sha256": "c9220cef8e7ad966009bcee43c8abeb073e795708dcdf394c5edeaa98855f5ae",
+  "json_sha256": "9eb92096b50a06b8e36c9fddcdcbd855b1de9736b4b77bafb29e1b90fd665c02",
+  "pdf_sha256": "1ca88f314360a424f76e7ec64b1f738bcbac7e1bb820f030e80367528e38e0c0",
+  "proof": {
+    "kind": "canonical",
+    "before_spec_sha256": "7a610d39e597710b9a9c0da5d449e36ce85a0bbbdadaaa66b8f6f56ce3a693cc",
+    "after_spec_sha256": "743318048ea42341f40fb624ec18c5d4ba0a0360bf177c0ce353e6f3a2474983",
+    "retail_spec_changed": true,
+    "nonretail_spec_unchanged": false,
+    "approved_nonretail_timing_repairs": [
+      {
+        "date": "2025-12-11",
+        "path": [
+          "sectors",
+          8,
+          "parts",
+          1,
+          1
+        ],
+        "before": "Glencore cut its 2026 copper target but still sets up for a long-term surge [[n1160]]. Vale cut its 2026 iron-ore production estimate as supply grows [[n1090]]. Gold climbs to a one-month high after the Fed cut, and silver hit a record [[n5045]].",
+        "after": "Glencore cut its 2026 copper target but still sets up for a long-term surge [[n1160]]. Vale cut its 2026 iron-ore production estimate as supply grows [[n1090]]. Gold gained after the Fed cut and silver reached an all-time peak, CNBC reported. [[n1455]]",
+        "removed_source_ids": [
+          "n5045"
+        ],
+        "added_source_ids": [
+          "n1455"
+        ],
+        "reason": "Removed Reuters canonical December11 outcome beyond midnight cutoff; replaced with eligible December10 CNBC Fed-cut/metals headline without unsupported one-month-high qualifier."
+      }
+    ],
+    "words": 10313,
+    "distinct_sources": 308,
+    "validator_warnings": [],
+    "pdf_pages": 29,
+    "desktop_overflow": false,
+    "mobile_overflow": false
+  },
+  "browser_checks": {
+    "pdf_pages": 29,
+    "desktop_overflow": false,
+    "mobile_overflow": false
+  }
+}

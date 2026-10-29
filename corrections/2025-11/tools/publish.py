@@ -44,6 +44,9 @@ def snapshot(s3,keys):
     return out
 
 def plan():
+    retail_quality_gate=importlib.util.spec_from_file_location('retail_quality_gate',ROOT.parent/'retail-quality'/'retail_quality.py')
+    retail_quality_module=importlib.util.module_from_spec(retail_quality_gate);retail_quality_gate.loader.exec_module(retail_quality_module)
+    retail_quality_module.require_review(ROOT)
     manifest=json.loads((ROOT/'checks'/'artifact_manifest.json').read_text())
     if manifest.get('dates')!=DATES or not manifest.get('complete_month'):raise ValueError('Complete20-date month required')
     if [r['date'] for r in manifest.get('reports',[])]!=DATES:raise ValueError('Missing/duplicate report artifacts')
