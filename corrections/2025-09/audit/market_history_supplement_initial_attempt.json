@@ -1,0 +1,1509 @@
+{
+  "purpose": "Recover only missing pre-August observations; all existing frozen values preserved.",
+  "symbols": {
+    "XTB.WA": {
+      "retrieved_at_utc": "2026-10-29T10:11:19.361170+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 1.0000000000487446,
+      "prior_sha256": "1044c1808a083ff25db935d08a9a25fdc9019afff9181a841d05c4b49cd6a149",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "09afba3dac995ec76a2c82c81d72d4f27423a8f3551736e29215420d650b8899"
+    },
+    "^FTSE": {
+      "retrieved_at_utc": "2026-10-29T10:11:19.345583+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 1.0000000000005513,
+      "prior_sha256": "88ec6fb43524fda1cd2f0bcf593badb1aa374c2bc008564e37240dff0fd06d42",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "362be71b12a90712333a5358626911e208325236f42ea06677d9c555fcfea404"
+    },
+    "^KS11": {
+      "retrieved_at_utc": "2026-10-29T10:11:19.446603+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04",
+        "2025-08-05"
+      ],
+      "normalization_to_frozen_split_units": 1.0000000000002003,
+      "prior_sha256": "8d3f12852a7ac35d4a1851d3ae04a52d89651337d908184f6b8960ef49945547",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "f899a158e8a0f21c8b3288e5d7ca284ff5697127c26cd0c04becd591e42a23d7"
+    },
+    "000660.KS": {
+      "retrieved_at_utc": "2026-10-29T10:11:27.626108+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04",
+        "2025-08-05"
+      ],
+      "normalization_to_frozen_split_units": 1.0,
+      "prior_sha256": "357545c31453e94edc810aa829779838e03b6bdeb180c8c789d864e36e74f50a",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "5ce044f027f01f0346847143a1a9a5ad9d2a268765f7d9161eb343570b151028"
+    },
+    "7203.T": {
+      "retrieved_at_utc": "2026-10-29T10:11:27.690532+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04",
+        "2025-08-05"
+      ],
+      "normalization_to_frozen_split_units": 1.0,
+      "prior_sha256": "6eaa69aad6e8e97f429fc688c0b3ad9d456c2a645f522cffe06759ed3d7f74db",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "f932757de158acd1526beee412ba7afc1c99d75a9e932911190ba272c61743a1"
+    },
+    "9984.T": {
+      "retrieved_at_utc": "2026-10-29T10:11:27.679038+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04",
+        "2025-08-05"
+      ],
+      "normalization_to_frozen_split_units": 1.0,
+      "prior_sha256": "c3fed2f697ef7cbc80ab00c65a9f19af90227560a9ca81ba64ae47c105d86326",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "2851787ff1a8ae93e7b3d965571a80fbb3267742e16426f7a42f20804c075054"
+    },
+    "BP.L": {
+      "retrieved_at_utc": "2026-10-29T10:11:27.774451+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 1.000000000007446,
+      "prior_sha256": "a7b8f39b12d8aae782713069bce01d31d3f2c7af040008b5a8760f4f6b51905c",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "149faaaab6428cbc04705c186fd3dcf8e11cba10a9232a986861c072bfa3b76a"
+    },
+    "CDR.WA": {
+      "retrieved_at_utc": "2026-10-29T10:11:27.758551+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 0.9999999999857725,
+      "prior_sha256": "ec6de983a84df94af353d1a97d8c856243d5d6300a84310229fc3d8f9bb956d3",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "d46fdf512b147372717583d08566f3c180ed281b585b50487e7a49893ea8f9a4"
+    },
+    "ETFBW20TR.WA": {
+      "retrieved_at_utc": "2026-10-29T10:11:27.862509+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 0.9999999999262115,
+      "prior_sha256": "1dc73d4fe17aa044b7e17bbabb2055e9c64125f7bc6ee1375d2b74137fdb60b1",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "bd05c4e82093c277d6e6a4d6e050556bda0aa7834d9019b9ca5ff3199bddccd2"
+    },
+    "PKN.WA": {
+      "retrieved_at_utc": "2026-10-29T10:11:28.015263+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 1.0000000000213198,
+      "prior_sha256": "edd4081b981d70dcad795ad94b93ea1e68cfe04a69dd603edd89257c032e0205",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "3ff5e4baec98e98c47b9d7d0ff416cb6a427c15393e7120bbce9bf0554f083c8"
+    },
+    "TPE.WA": {
+      "retrieved_at_utc": "2026-10-29T10:11:28.066536+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 1.0000000002359293,
+      "prior_sha256": "5f76a3346c9726136755dc955d85b57ddd0ed63cbea20094420a4cb9c039a84e",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "4899975cc583a0046164a8c14f4da9e405b18f5488c16dee4a44d157e82b418c"
+    },
+    "^N225": {
+      "retrieved_at_utc": "2026-10-29T10:11:28.048349+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04",
+        "2025-08-05"
+      ],
+      "normalization_to_frozen_split_units": 1.0,
+      "prior_sha256": "be41e43287e40164b2ff96b2690563745c6b46d0e3d981084c6469167ecc8cd4",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "cc841e94630556ad899f4eaa2b3e477d6ae49e5f47a9eccb64151a86a404398a"
+    },
+    "005930.KS": {
+      "retrieved_at_utc": "2026-10-29T10:11:37.219547+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04",
+        "2025-08-05"
+      ],
+      "normalization_to_frozen_split_units": 1.0,
+      "prior_sha256": "7920cf1d4805c67deb65c274ab2cf747b70bb9372a496cc5fd307e257742e03f",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "bbdda30f0d0deb0f624f67824b1172ed99e3cf8d2e7b42242ef30a2768347150"
+    },
+    "6857.T": {
+      "retrieved_at_utc": "2026-10-29T10:11:37.268921+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04",
+        "2025-08-05"
+      ],
+      "normalization_to_frozen_split_units": 1.0,
+      "prior_sha256": "d2c7c00d3de63b1ffd1abdae6c10551ebfa20daf11f1aa8b6e8ef7dee8ee1d1d",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "bb97fbfee787b54953ea63444f9fb772104da9afa4ffed4054bc77d0d547626d"
+    },
+    "ALE.WA": {
+      "retrieved_at_utc": "2026-10-29T10:11:37.299656+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 1.0000000000922111,
+      "prior_sha256": "48745ff6e0ed2e5b01441acb92aac8ad8c3f238a82babbc794bc1fc14dbe16e5",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "277a627fa9080a176378ba5e2d824385772129e4f843c86acfa978bda0870044"
+    },
+    "DNP.WA": {
+      "retrieved_at_utc": "2026-10-29T10:11:37.318912+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 0.9999999999677288,
+      "prior_sha256": "04870ca8a16e5adbee71637489aa8394e46d69f8bce74333b871d628ee695f9d",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "c23769421cd161a30d3aa372717b651466fd3672fad222d97d270a06252ea1c0"
+    },
+    "KGH.WA": {
+      "retrieved_at_utc": "2026-10-29T10:11:37.412685+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 1.0,
+      "prior_sha256": "2f79d823df32ec6d8465d3cc33ae324ea03e3a2bbde88e50bfaa8583fb17cafb",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "b3719b46871d5734310a37b53da3305584353c3bfc6de7165541b02cb6443907"
+    },
+    "LPP.WA": {
+      "retrieved_at_utc": "2026-10-29T10:11:37.435736+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 1.0,
+      "prior_sha256": "5a0b26dc8419ebfd42eb42204489b939ba40d4056f5221d2075299da3744b3c5",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "6cc32e057465eae14b72352fece5d7cc21ae34fda23fd7ab6480ccf520bb1d72"
+    },
+    "MBK.WA": {
+      "retrieved_at_utc": "2026-10-29T10:11:37.435714+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 1.0,
+      "prior_sha256": "2a6b5717bb10ecc136279fd677ffa69586492249746f0d725f02f5385db1f796",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "a848b4ad1b98dc03098ef91fcbfd62343b4c3cc8bf0682f611220d3af25ce88b"
+    },
+    "NESN.SW": {
+      "retrieved_at_utc": "2026-10-29T10:11:37.498471+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 0.9999999999753463,
+      "prior_sha256": "008a0e14b134773b5337bb341d5174e66bc0a574288006c044cb8d0d8dd5ef79",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "748c1cc9a4d963c0228438d96216a72533b0d322140b9e6aeb947f4b45cd787a"
+    },
+    "OPL.WA": {
+      "retrieved_at_utc": "2026-10-29T10:11:37.565478+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 1.0000000000940512,
+      "prior_sha256": "54a92e2b3129c6f8a61f8a0c21eca7bd6d79640be202c29289e1c21317d8e307",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "eadca25ebc0bdca25709ab7fbc3bfda8de7ef507487aef8ff0a825b3527b1803"
+    },
+    "PEO.WA": {
+      "retrieved_at_utc": "2026-10-29T10:11:37.578356+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 0.999999999991191,
+      "prior_sha256": "74986f60dd1f37cb68b0e833bcb2788e98883158bf2b245d142eb33a4d938d72",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "d8ffbc662ef782e5d559e86a5685bab6766562ffa6dc46357d83560e590c611f"
+    },
+    "PGE.WA": {
+      "retrieved_at_utc": "2026-10-29T10:11:37.593330+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 1.00000000024822,
+      "prior_sha256": "3f5793637f68f42dc057ae25b3bf2d19b3588e24e8d306ab7f646209e14831ed",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "e8bab92097709f4057982a816aec3d0aaf95fb3e4db16d517135529e16cfc5e5"
+    },
+    "PZU.WA": {
+      "retrieved_at_utc": "2026-10-29T10:11:37.667922+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 0.9999999999943624,
+      "prior_sha256": "9836999cc43f50f0116baf9e791278e4a85ecae9e89cdcde3f7468ab8064febf",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "a95e99addb280f5a533299f1cd963d0dadbc19a3873314262eaefc4278b775d3"
+    },
+    "^STOXX50E": {
+      "retrieved_at_utc": "2026-10-29T10:11:37.722192+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 1.0000000000002385,
+      "prior_sha256": "661311c8c39c5405bf1a544d1500f6a21dee8b77c8dca7dac4a04e262fbc20ba",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "f530f1fe4131066b18fdff381ddb21700bd97d94deffb73e1197b1852416a847"
+    },
+    "6758.T": {
+      "retrieved_at_utc": "2026-10-29T10:11:47.888042+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04",
+        "2025-08-05"
+      ],
+      "normalization_to_frozen_split_units": 1.0,
+      "prior_sha256": "e89e530e35d3fcdc92b6284c01536ad35dfd8f9b7aaab77f0f332385253a9d7c",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "9140d0b0bfad41d23dc71e59626614cd0c2ca3d2aa82298f5501ad47fd3540a9"
+    },
+    "ACP.WA": {
+      "retrieved_at_utc": "2026-10-29T10:11:47.891964+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 0.9999999999912893,
+      "prior_sha256": "86d32dabc92e8dd2766149b6d66815904d08ae2b07978e003ae52c17f33be1a0",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "e3f046158144251a5a6592d3f316732ea171ee10f47920e2d7c9978ebfcbd7f3"
+    },
+    "HSBA.L": {
+      "retrieved_at_utc": "2026-10-29T10:11:47.899983+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 0.9999999999955742,
+      "prior_sha256": "4056c5876a23d5faf18680885005b9098e779c458e37a9fdfb950670fa16f721",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "64717c7a01e71c926ed7f93423850d7a623d412af3967a33421925d732ad3e56"
+    },
+    "^STOXX": {
+      "retrieved_at_utc": "2026-10-29T10:11:47.979206+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 1.0000000000075149,
+      "prior_sha256": "0a6139a3a06ed79b2c835063e335c09bebc1ceeff66a959e2310dce6a01b1ab1",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "e4aaca35f1452dbefce85c8fdb79c7d3a8bebb049cf9f005eb71c8edcb72c227"
+    },
+    "JSW.WA": {
+      "retrieved_at_utc": "2026-10-29T10:12:11.287951+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 0.9999999998866949,
+      "prior_sha256": "edc46a5f3a6590507baa3f70303c2b24b6874df6787900eb86616fafdc2680a2",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "bf22657145cb75981c6cc93b5ed70944b012602f4e75c630cea365f74fe265f1"
+    },
+    "PKO.WA": {
+      "retrieved_at_utc": "2026-10-29T10:12:11.280691+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 0.9999999999740097,
+      "prior_sha256": "c66e08b81951cd70d063d76f33e163c93030470ffe8a13c9fad8552255dc0fe8",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "d654a9d538e4e843bf998dcb01698506b9d9a50821543e132f327c467aef000e"
+    },
+    "SHEL.L": {
+      "retrieved_at_utc": "2026-10-29T10:12:11.340022+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 1.0,
+      "prior_sha256": "0b0a41fb59c46a1529c37ea0ae8452a9ed48f7b183857bace3cdb7c52d45a4f5",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "8ddcef1be370118f228949ca8e86cb1e3a00fa5a11c873c10210f79d3639b38f"
+    },
+    "PCO.WA": {
+      "retrieved_at_utc": "2026-10-29T10:12:24.501155+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04"
+      ],
+      "normalization_to_frozen_split_units": 0.9999999998051978,
+      "prior_sha256": "1ff16891e8809400ddc1af457eeaf9a1773537aea1c75878d5b6317326d05168",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "ae124da5b5de36e54ac73079d1ab35a9d3039909e6aa98fc403d9cc6ab03de8f"
+    },
+    "8035.T": {
+      "retrieved_at_utc": "2026-10-29T10:12:38.668471+00:00",
+      "endpoint": "Yahoo Finance daily chart API",
+      "requested_start": "2025-06-20",
+      "requested_end_exclusive": "2025-08-05",
+      "added_dates": [
+        "2025-06-20"
+      ],
+      "overlap_dates": [
+        "2025-08-01",
+        "2025-08-04",
+        "2025-08-05"
+      ],
+      "normalization_to_frozen_split_units": 1.0,
+      "prior_sha256": "fd78b84aa880c2dea52510b9fc85f547b848467f5a69ecdbe06f23badc97c90b",
+      "august_onward_observations_preserved": true,
+      "final_sha256": "1375ec29d295052650a23e7663766a20a8a7bc3d30bb541edb203df5ff420b02"
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "at_utc": "2026-10-29T10:11:05.246077+00:00",
+      "failures": [
+        {
+          "ticker": "000660.KS",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "005930.KS",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "6758.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "6857.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "7203.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "8035.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "9984.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "ACP.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "ALE.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "BP.L",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "CDR.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "DNP.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "ETFBW20TR.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "HSBA.L",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "JSW.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "KGH.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "LPP.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "MBK.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "NESN.SW",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "OPL.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PCO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PEO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PGE.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PKN.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PKO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PZU.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "SHEL.L",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "TPE.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "XTB.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "^FTSE",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "^KS11",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "^N225",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "^STOXX",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "^STOXX50E",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "at_utc": "2026-10-29T10:11:11.734548+00:00",
+      "failures": [
+        {
+          "ticker": "000660.KS",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "005930.KS",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "6758.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "6857.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "7203.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "8035.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "9984.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "ACP.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "ALE.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "BP.L",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "CDR.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "DNP.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "ETFBW20TR.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "HSBA.L",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "JSW.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "KGH.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "LPP.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "MBK.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "NESN.SW",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "OPL.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PCO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PEO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PGE.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PKN.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PKO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PZU.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "SHEL.L",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "TPE.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "XTB.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "^FTSE",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "^KS11",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "^N225",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "^STOXX",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "^STOXX50E",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "at_utc": "2026-10-29T10:11:19.447466+00:00",
+      "failures": [
+        {
+          "ticker": "000660.KS",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "005930.KS",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "6758.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "6857.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "7203.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "8035.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "9984.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "ACP.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "ALE.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "BP.L",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "CDR.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "DNP.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "ETFBW20TR.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "HSBA.L",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "JSW.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "KGH.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "LPP.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "MBK.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "NESN.SW",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "OPL.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PCO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PEO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PGE.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PKN.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PKO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PZU.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "SHEL.L",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "TPE.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "^N225",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "^STOXX",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "^STOXX50E",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "at_utc": "2026-10-29T10:11:28.067147+00:00",
+      "failures": [
+        {
+          "ticker": "005930.KS",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "6758.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "6857.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "8035.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "ACP.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "ALE.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "DNP.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "HSBA.L",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "JSW.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "KGH.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "LPP.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "MBK.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "NESN.SW",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "OPL.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PCO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PEO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PGE.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PKO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PZU.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "SHEL.L",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "^STOXX",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "^STOXX50E",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "at_utc": "2026-10-29T10:11:37.722770+00:00",
+      "failures": [
+        {
+          "ticker": "6758.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "8035.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "ACP.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "HSBA.L",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "JSW.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PCO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PKO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "SHEL.L",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "^STOXX",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "at_utc": "2026-10-29T10:11:47.980766+00:00",
+      "failures": [
+        {
+          "ticker": "8035.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "JSW.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PCO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PKO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "SHEL.L",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "at_utc": "2026-10-29T10:11:59.082561+00:00",
+      "failures": [
+        {
+          "ticker": "8035.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "JSW.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PCO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PKO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "SHEL.L",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "at_utc": "2026-10-29T10:12:11.340709+00:00",
+      "failures": [
+        {
+          "ticker": "8035.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "ticker": "PCO.WA",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "at_utc": "2026-10-29T10:12:24.501526+00:00",
+      "failures": [
+        {
+          "ticker": "8035.T",
+          "type": "HTTPError",
+          "http_code": 503,
+          "message": "HTTP Error 503: Service Unavailable"
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "at_utc": "2026-10-29T10:12:38.668916+00:00",
+      "failures": []
+    }
+  ],
+  "validation_note": "Initial augmentation detected nonconsecutive pre-August coverage before card freeze. Existing August-onward values were unaffected; reset from the verified source and refetch complete prehistory."
+}

@@ -1,0 +1,15 @@
+{
+  "frozen_at_utc": "2026-10-29T10:16:59.544467+00:00",
+  "status": "complete",
+  "prices": "294 source instruments,292 per card,22 weekday cards",
+  "source_cache": "Previously verified November Yahoo and official Treasury data, subset through September30; full original/subset hashes in market_cache_provenance.json",
+  "new_history": "34 symbols supplemented with real pre-August Yahoo observations; all cached August-onward values retained exactly",
+  "transport_failure": "Approved Yahoo/Treasury HTTPS endpoints initially returned Envoy503 remote cloudflare_https_tunnel Invalid argument; configured proxy and credential state were unchanged",
+  "resolution": "Reused verified local official data and retried minimal missing history through the ordinary approved Yahoo endpoint until access recovered; no proxy bypass, credential changes, policy changes or environment restart",
+  "unresolved_fetch_failures": 0,
+  "supplemented_symbols": 34,
+  "supplement_initial_alignment_issue": "A nonconsecutive initial augmentation was detected and corrected before the first card was released; initial attempt preserved in market_history_supplement_initial_attempt.json",
+  "other_dates_unchanged": "September2\u201330 card hashes were unchanged while supplementing September1",
+  "writer_barrier": "No later price rows in cards. Future action metadata isolated in audit, used only for mechanical unit reconstruction.",
+  "units": "As-traded display levels; split-adjusted comparable returns; CMCSA levels suppressed; in-lookback nominal reference-unit changes flagged."
+}

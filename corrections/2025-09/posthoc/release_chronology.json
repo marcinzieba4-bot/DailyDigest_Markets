@@ -1,0 +1,1049 @@
+{
+  "purpose": "REVIEWER ONLY. Contains later-event calendar knowledge and outcome tripwires. Never provide this file or search evidence to report writers.",
+  "cutoff_rule": "Each report uses information strictly before report-date 00:00:00 UTC. First eligible means first weekday report whose cutoff is later than release.",
+  "access_limit": "Official-origin hosts are not on the enforced allowlist. Only approved news.google.com historical RSS/index metadata was fetched. No original-body or original-vintage verification is claimed. Failed searches retained in release_search_evidence.json.",
+  "schedule_limit": "Precise UTC values below are schedule-derived reference times, not fetched original publication timestamps. Calendar candidates without usable index evidence require corroboration; review disputed close-midnight cases manually.",
+  "nominal_index_caution": "07:00/08:00UTC RSS dates are frequently nominal. Several China stories are indexed on previous UTC calendar day despite next-day China release; Japan 08:30/08:50 JST genuinely falls on previous UTC evening.",
+  "asx_premarket_caution": "An ASX company release at 07:00/08:00 AEST is 21:00/22:00 UTC on previous day; do not automatically shift it to next report. No specific September ASX premarket event was corroborated here.",
+  "events": [
+    {
+      "id": "labor_day",
+      "event": "US Labor Day market holiday",
+      "release_date_local": "2025-09-01",
+      "scheduled_release_local": null,
+      "scheduled_release_utc": null,
+      "first_eligible_weekday_report": "2025-09-01",
+      "timing_basis": "date/window only; exact release time not independently established",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "labor_day",
+          "title": "Is the stock market open on Labor Day 2025? - Yahoo Finance",
+          "indexed_timestamp": "Fri, 29 Aug 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE03R1dTeG04d2ZqNDRndXBRaGt5cVZGVGYzNTJaNUQ4aE5zbnc0R1EzZHZTVk41WWpMTDBrRVlnUEtuQkpQOWV1cFBzQ3RwR2NnbXRlblM1Q29IWUFtVGxWQ25Rb1BGeGdCNWUzSm1jZWJCSEVmc2tSeXpMNDFLZw?oc=5",
+          "source": "Yahoo Finance",
+          "source_home": "https://finance.yahoo.com"
+        },
+        {
+          "query_key": "labor_day",
+          "title": "Is the stock market open or closed on Labor Day? See full holiday schedule - USA Today",
+          "indexed_timestamp": "Fri, 29 Aug 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPTmo1RU5qeXpmNWh4S1JGWWRaengxOGpObGdPckFRZWdyRDZSRzZOaFNSa05iUEhLa1lCbm1SQ2tKZnV1bGVVT1kwVW5XaVdTY2kzQW0yR3VUdzhOcU85dkpFYnFldlVJRWU3SHJvTlJZTkFMSmNKdnAwOU02LVNvNlJwTjY3c0h4cEJTbkdQQUJMVXlSUF9IdVNwaEtjY1RwYnREc2EtVDQ3bXpIV1cw?oc=5",
+          "source": "USA Today",
+          "source_home": "https://www.usatoday.com"
+        }
+      ],
+      "timing_uncertainty": "Known calendar in advance. September 1 report must not invent a US September 1 cash close; latest regular close is August 29.",
+      "outcome_regex": null
+    },
+    {
+      "id": "china_aug_official_pmi",
+      "event": "China August official manufacturing/non-manufacturing PMI",
+      "release_date_local": "2025-08-31",
+      "scheduled_release_local": "2025-08-31 09:30 CST",
+      "scheduled_release_utc": "2025-08-31T01:30:00Z",
+      "first_eligible_weekday_report": "2025-09-01",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "calendar candidate requiring corroboration; search returned no usable indexed release",
+      "evidence": [],
+      "timing_uncertainty": "Prior-month weekend release; outcome may already be known at September 1 cutoff. Search corroboration not obtained.",
+      "outcome_regex": null
+    },
+    {
+      "id": "china_aug_private_pmi",
+      "event": "China August private manufacturing PMI (RatingDog/Caixin branding transition)",
+      "release_date_local": "2025-09-01",
+      "scheduled_release_local": "2025-09-01 09:45 CST",
+      "scheduled_release_utc": "2025-09-01T01:45:00Z",
+      "first_eligible_weekday_report": "2025-09-02",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "calendar candidate requiring corroboration; search returned no usable indexed release",
+      "evidence": [],
+      "timing_uncertainty": "Do not conflate with August 31 official PMI.",
+      "outcome_regex": "(China|Chinese|RatingDog|Caixin).{0,120}(August|Aug\\.?|50\\.5).{0,80}(private|manufacturing|factory|PMI).{0,100}(rose|expanded|improved|growth|50\\.5)"
+    },
+    {
+      "id": "australia_q2_bop",
+      "event": "Australia June-quarter balance of payments",
+      "release_date_local": "2025-09-02",
+      "scheduled_release_local": "2025-09-02 11:30 AEST",
+      "scheduled_release_utc": "2025-09-02T01:30:00Z",
+      "first_eligible_weekday_report": "2025-09-03",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "abs",
+          "title": "Australia records ninth straight current account deficit - Australian Bureau of Statistics",
+          "indexed_timestamp": "Tue, 02 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxONE5BZDJCZ3kzZlJGdFNDZEY5QkE2NWdlUmFEbVVMVnlPeHVyd092Qm1qQkh3dUJIVVlkeW9wU01TcEdjZkFRTEE2T1BtSlhlRURNNXh4dVAtSlQwV0EwczBKUWRMdHowMmZRSmdWbGpKSDZGdEZSX21SMEpyeXJneTFtQnVPNndFVkVfQlRqUVhpVjJRSjlUbUNucXZvc0lsTmd2UU1nWVk3N1U?oc=5",
+          "source": "Australian Bureau of Statistics",
+          "source_home": "https://www.abs.gov.au"
+        },
+        {
+          "query_key": "abs",
+          "title": "Balance of Payments and International Investment Position, Australia methodology, June 2025 - Australian Bureau of Statistics",
+          "indexed_timestamp": "Tue, 02 Sep 2025 03:37:35 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNcVVPa0plMjlQdlNidWRwdEdrRUZWYm0ySUNSNWR2M1hwTmFDRjNuSmJieWdRV250ZjFGNnY3S0VibDNrT1ZxTnBtWVZtaXZGTmFNWGtBaVZhYXFZM0dWd1pWcEEycTRIZ0RFNzFaOElhbXlrYjBYeXJubk5VSlloSFZrMUZKc2NQMmJXUGg5dVRWVjNRcHBsVXVGM2dFX1IyNDNnN3JwNjJrMnNnQ3FScVg4SDFucUNHRG1ZWVhwYw?oc=5",
+          "source": "Australian Bureau of Statistics",
+          "source_home": "https://www.abs.gov.au"
+        }
+      ],
+      "timing_uncertainty": "",
+      "outcome_regex": null
+    },
+    {
+      "id": "us_aug_ism",
+      "event": "US August ISM manufacturing",
+      "release_date_local": "2025-09-02",
+      "scheduled_release_local": "2025-09-02 10:00 EDT",
+      "scheduled_release_utc": "2025-09-02T14:00:00Z",
+      "first_eligible_weekday_report": "2025-09-03",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "pl_industry",
+          "title": "Manufacturing PMI® at 48.7%; August 2025 ISM® Manufacturing PMI® Report - PR Newswire",
+          "indexed_timestamp": "Tue, 02 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNYzNQbDIyZVN1QzVUTWVCcE9tR2lYdUUwSkQxX1lRMWhvb296MzFlMEZBb1l0dmVDNy04X3NpanJvVjUzd1NWNGRZSWpBQXJOM1Zsc3o3M19PM2RqWk9NLVFBOWU3c3FIVFdIVzBtblNlVWpjcmJDWW1XbThVbW4wSnpKOER2QUpmX3gxWVNfVEpxQXBqQWFQTGEzOWw3UnNYZ2NVNU5OM0xBWllFVWJINDItYUFpOVRHTlZNU2lObw?oc=5",
+          "source": "PR Newswire",
+          "source_home": "https://www.prnewswire.com"
+        }
+      ],
+      "timing_uncertainty": "",
+      "outcome_regex": "(ISM).{0,100}(August|manufacturing).{0,80}(48\\.7|fell|contract)"
+    },
+    {
+      "id": "australia_q2_gdp",
+      "event": "Australia June-quarter GDP",
+      "release_date_local": "2025-09-03",
+      "scheduled_release_local": "2025-09-03 11:30 AEST",
+      "scheduled_release_utc": "2025-09-03T01:30:00Z",
+      "first_eligible_weekday_report": "2025-09-04",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "abs",
+          "title": "Australian economy grew 0.6 per cent in June quarter - Australian Bureau of Statistics",
+          "indexed_timestamp": "Wed, 03 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObkZNVTRCSzV5MjlVOXA1MjUwWDFwMk1RcUYyYmlFSmVKUzdYaXVHaFd4LXBFRURFc0V4WldqaG02aDV0YnlmdjZsd1RRdXZmRTZlS1FoeG14cDd4U0o2Y1JzdEdvbnEydlRDNW1YRnFvTlFhdnJwOGxIWmRBTHQ0SnhmeThQbGRMMWJkVHlfUzg3NEw0elZZQ3l1NA?oc=5",
+          "source": "Australian Bureau of Statistics",
+          "source_home": "https://www.abs.gov.au"
+        },
+        {
+          "query_key": "abs",
+          "title": "Australian National Accounts: National Income, Expenditure and Product, June 2025 - Australian Bureau of Statistics",
+          "indexed_timestamp": "Wed, 03 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQZVIyc1V1STFMbWdnUmhORTdkcWx4TkN2U1d6Tm9IaDh6YzhHcWl2MzJxTWFiRS11cVRWeVVJU3BqR1hRZkRrTTZfM3ZRMmpEeTFkRjZhOEZfcDVXM3I0LTZDT2lqMUd6ZWxZMU95RjdHTzdoNndMenhya3dNYnJQU2JVU3BTbW85N2h3dnIzU01MWlBJMm5mYTVON0t5TlQ0SHZhN1cyUVdLcGZMbnE3VE9acEpmVmU4d1B1SEE2Tkx6NkpCaXlGSk1NTGxVWS1HR0F3?oc=5",
+          "source": "Australian Bureau of Statistics",
+          "source_home": "https://www.abs.gov.au"
+        }
+      ],
+      "timing_uncertainty": "",
+      "outcome_regex": "Australia.{0,100}(June quarter|Q2|second.quarter).{0,100}(GDP|economy|grew|growth|0\\.6)"
+    },
+    {
+      "id": "china_aug_services",
+      "event": "China August private services PMI",
+      "release_date_local": "2025-09-03",
+      "scheduled_release_local": "2025-09-03 09:45 CST",
+      "scheduled_release_utc": "2025-09-03T01:45:00Z",
+      "first_eligible_weekday_report": "2025-09-04",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "calendar candidate requiring corroboration; search returned no usable indexed release",
+      "evidence": [],
+      "timing_uncertainty": "",
+      "outcome_regex": "(China|Chinese|RatingDog|Caixin).{0,100}(August|Aug\\.?).{0,80}(services PMI|services activity).{0,100}(rose|expanded|54|strong)"
+    },
+    {
+      "id": "nbp_sep",
+      "event": "Poland September NBP/RPP policy decision",
+      "release_date_local": "2025-09-03",
+      "scheduled_release_local": null,
+      "scheduled_release_utc": null,
+      "first_eligible_weekday_report": "2025-09-04",
+      "timing_basis": "date/window only; exact release time not independently established",
+      "verification_level": "calendar candidate requiring corroboration; search returned no usable indexed release",
+      "evidence": [],
+      "timing_uncertainty": "Exact decision time not established; September 3 European afternoon does not affect first eligible report. Treat outcome as unavailable September 3.",
+      "outcome_regex": "(NBP|RPP|Polish central bank|Poland.s central bank).{0,130}(cut|lowered|reduced).{0,80}(4\\.75|25|quarter.point|September)"
+    },
+    {
+      "id": "us_july_jolts",
+      "event": "US July JOLTS",
+      "release_date_local": "2025-09-03",
+      "scheduled_release_local": "2025-09-03 10:00 EDT",
+      "scheduled_release_utc": "2025-09-03T14:00:00Z",
+      "first_eligible_weekday_report": "2025-09-04",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "calendar candidate requiring corroboration; search returned no usable indexed release",
+      "evidence": [],
+      "timing_uncertainty": "",
+      "outcome_regex": "(JOLTS|job openings).{0,100}(July|7\\.18|7\\.2).{0,100}(fell|declined|low|dropped)"
+    },
+    {
+      "id": "us_aug_adp",
+      "event": "US August ADP employment",
+      "release_date_local": "2025-09-04",
+      "scheduled_release_local": "2025-09-04 08:15 EDT",
+      "scheduled_release_utc": "2025-09-04T12:15:00Z",
+      "first_eligible_weekday_report": "2025-09-05",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "calendar candidate requiring corroboration; search returned no usable indexed release",
+      "evidence": [],
+      "timing_uncertainty": "",
+      "outcome_regex": "(ADP).{0,100}(August|54.?000).{0,100}(added|rose|jobs|payroll)"
+    },
+    {
+      "id": "broadcom_q3",
+      "event": "Broadcom fiscal Q3 results",
+      "release_date_local": "2025-09-04",
+      "scheduled_release_local": null,
+      "scheduled_release_utc": null,
+      "first_eligible_weekday_report": "2025-09-05",
+      "timing_basis": "date/window only; exact release time not independently established",
+      "verification_level": "calendar candidate requiring corroboration; search returned no usable indexed release",
+      "evidence": [],
+      "timing_uncertainty": "US after-close release window; precise timestamp not corroborated. No usable indexed release obtained.",
+      "outcome_regex": "Broadcom.{0,120}(Q3|third.quarter|quarterly).{0,100}(reported|beat|revenue|results|forecast|guidance)"
+    },
+    {
+      "id": "japan_july_wages_spending",
+      "event": "Japan July wages / household spending",
+      "release_date_local": "2025-09-05",
+      "scheduled_release_local": "2025-09-05 08:30 JST",
+      "scheduled_release_utc": "2025-09-04T23:30:00Z",
+      "first_eligible_weekday_report": "2025-09-05",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "jpdata",
+          "title": "Japan's real wages, consumer spending climb but inflation challenges persist - Reuters",
+          "indexed_timestamp": "Thu, 04 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQUXBtc1ItaGhHZTNOY25RanpndkFYT3BRejV5UmhSdXlsOWZHOUdFWEgxd2lrUVFyZ1BxQ2xaSUhhbVlUMnJUTkFaZUcwX0l3WERMTjU1NXNsb2RnTkZ4UnIxM3gzRmhuSjVlRDFkZ056ZU00alJEUWlnMlVXUmdCVjRIREhiTmhNaUE0SHJrWVR3X0tERmhZeGdud2FodmtzYUE1ZUtpSEJENUJrTWttRHNXMzdBYUFSbWFTUXpIa3RmT3hXc1FyVA?oc=5",
+          "source": "Reuters",
+          "source_home": "https://www.reuters.com"
+        }
+      ],
+      "timing_uncertainty": "Early-JST release is prior UTC evening. Indexed Reuters date September 4 is consistent but nominal 07:00 does not prove 23:30 publication.",
+      "outcome_regex": "Japan.{0,130}(July|real wages|consumer spending).{0,100}(rose|climb|increase|positive|0\\.5|1\\.4)"
+    },
+    {
+      "id": "us_aug_payrolls",
+      "event": "US August Employment Situation",
+      "release_date_local": "2025-09-05",
+      "scheduled_release_local": "2025-09-05 08:30 EDT",
+      "scheduled_release_utc": "2025-09-05T12:30:00Z",
+      "first_eligible_weekday_report": "2025-09-08",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "us_bls",
+          "title": "Employment Situation News Release - 2025 M08 Results - Bureau of Labor Statistics (.gov)",
+          "indexed_timestamp": "Fri, 05 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE45VGJ5NEs0eXBZUFhKSGJEM2NjMEV4MW9IRzZNRzY5UVJVTDVldXhhQVJ1WGxpNFgxN244Q05Qd3FSd0lmbVQ2X1U5Z3BSTlh0ajVyTm1RRlhBbkoyeTRWS2JkajlLeGtGMWN1TGlB?oc=5",
+          "source": "Bureau of Labor Statistics (.gov)",
+          "source_home": "https://www.bls.gov"
+        }
+      ],
+      "timing_uncertainty": "",
+      "outcome_regex": "(August|Aug\\.?).{0,60}(payrolls|jobs report|employment report|job growth).{0,120}(22.?000|4\\.3|added|slowed|weak)"
+    },
+    {
+      "id": "japan_q2_gdp_revision",
+      "event": "Japan second estimate Q2 GDP",
+      "release_date_local": "2025-09-08",
+      "scheduled_release_local": "2025-09-08 08:50 JST",
+      "scheduled_release_utc": "2025-09-07T23:50:00Z",
+      "first_eligible_weekday_report": "2025-09-08",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "japan_gdp",
+          "title": "Japan revises Q2 GDP higher on upbeat consumer spending - Reuters",
+          "indexed_timestamp": "Sun, 07 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPRXJJYXpsVm5TVUdUNUVJeElUYW4zTWhsVDM1czJ3ZG5CZmh2R2k0dk9LLWFhN1FiZThJSkJraHFUQmxIeXp4TzhmRHVHNWNMa0RuTndtbjBqb0ZZeG5pMU9lZHVPVG8wcEtmTHNSaHVEaU1BZ0hhUEJoZEh6MFM1ZlUzMUFyX1pLZVVlSFA3aC1USWp3ZE1oYlRWR3ZjQQ?oc=5",
+          "source": "Reuters",
+          "source_home": "https://www.reuters.com"
+        }
+      ],
+      "timing_uncertainty": "Midnight-sensitive: same-date September 8 report is eligible under standard release time; only 10-minute margin. Original time/body not fetched; nominal Sunday RSS time is insufficient alone.",
+      "outcome_regex": "Japan.{0,100}(GDP|economy).{0,100}(revised|revision|2\\.2|upgraded)"
+    },
+    {
+      "id": "china_aug_trade",
+      "event": "China August trade",
+      "release_date_local": "2025-09-08",
+      "scheduled_release_local": null,
+      "scheduled_release_utc": null,
+      "first_eligible_weekday_report": "2025-09-09",
+      "timing_basis": "date/window only; exact release time not independently established",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "chtrade",
+          "title": "China's August export growth slowest in 6 months as US tariff risks mount - Reuters",
+          "indexed_timestamp": "Sun, 07 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRXZQVXNVbTBDcm5xQkN5TkNmVGxaNF9SOUpyXzNfeV9JclFpdDZQMmMwMEJSbExya0N5MW5CV1VfbzV4LVI5aktBdEVkSDI1eVo0cElIX3FjREpiOVFKTWVxX0JjQlhqa1dkVGFWN1JlZlpwaXdlNnVuOU1NRURLWmYwbG03aGxQQXkzQ3NKZ3p3M0FoQXFHQUpWeUNQY0dvMUM0WmN1ZG9RV3g4ajRtV0U4Z1M?oc=5",
+          "source": "Reuters",
+          "source_home": "https://www.reuters.com"
+        },
+        {
+          "query_key": "chtrade",
+          "title": "China's exports continue to grow, despite a sharp decline in its trade with the U.S. - Marketplace.org",
+          "indexed_timestamp": "Mon, 08 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNdkx4OWJ6V3RESWVOSHFtcVZ2SmtycXJWR0pJTGo5OU1sNmpMR0lqeGY2Wk04RXdwWDc4NmtOUnhZWk9VSmc1Z2pKU0l4YmstcnlpemlZN3NPNjhKYVVrUzNWdlE1Y1F5WmdhdGhBZmZYYTdleC12em9fOGlRbkNaelNJOERPV1BSYUs5TktETWZSenc4MFNSV0xXamZvN0k?oc=5",
+          "source": "Marketplace.org",
+          "source_home": "https://www.marketplace.org"
+        }
+      ],
+      "timing_uncertainty": "China daytime September 8 release. Reuters nominal RSS timestamp September 7 07:00 predates the actual release day and MUST NOT authorize the September 8 outcome.",
+      "outcome_regex": "(China|Chinese).{0,110}(August|Aug\\.?).{0,80}(exports|imports|trade).{0,100}(4\\.4|slowest|slowed|grew|rose|fell)"
+    },
+    {
+      "id": "us_prelim_benchmark",
+      "event": "US preliminary annual payroll benchmark revision",
+      "release_date_local": "2025-09-09",
+      "scheduled_release_local": "2025-09-09 10:00 EDT",
+      "scheduled_release_utc": "2025-09-09T14:00:00Z",
+      "first_eligible_weekday_report": "2025-09-10",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "us_bls",
+          "title": "2025 Preliminary Benchmark Revision to Establishment Survey Data to be Released on September 9, 2025 - Bureau of Labor Statistics (.gov)",
+          "indexed_timestamp": "Mon, 28 Jul 2025 19:53:34 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdnY4SjJXOURTd19aTHpMaWVBVVV2Y21sMmE0VGhGQzI2ZEM1RG0wN1NoQmR0dUZNdkNEVVNTSk0wZGNJVUJiSGdFLVhYSGRMV1pBWDBmTEJDN0s1MzNnOG80Y0xWNVJNanpobGZ3YUZIRm1RY0lpalpBcENaRjUwaEFGT0xnbVU?oc=5",
+          "source": "Bureau of Labor Statistics (.gov)",
+          "source_home": "https://www.bls.gov"
+        },
+        {
+          "query_key": "us_bls",
+          "title": "Current Employment Statistics Preliminary Benchmark (National) News Release - 2025 A01 Results - Bureau of Labor Statistics (.gov)",
+          "indexed_timestamp": "Tue, 09 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBWOXp1ZTBXSjRySTktWDFKQ3liczBRcVo3TkkyR0xUc3RDTHU4UnZsVFNOcVJVLXF3cmQ5Rm95TnJxamZSWkl5aHZUbndlVFM3UmFqOVJUZjFhUElHSExaMTVjWkg4TXRPUmRPMEpB?oc=5",
+          "source": "Bureau of Labor Statistics (.gov)",
+          "source_home": "https://www.bls.gov"
+        }
+      ],
+      "timing_uncertainty": "Preliminary estimate for year to March 2025; do not conflate with August monthly payroll revisions or the final benchmark published later.",
+      "outcome_regex": "(benchmark|payrolls|jobs|hiring).{0,140}(911.?000|911K|record.{0,30}(revision|downward)|overstat.{0,40}911)"
+    },
+    {
+      "id": "oracle_q1",
+      "event": "Oracle fiscal Q1 results / RPO forecast",
+      "release_date_local": "2025-09-09",
+      "scheduled_release_local": null,
+      "scheduled_release_utc": null,
+      "first_eligible_weekday_report": "2025-09-10",
+      "timing_basis": "date/window only; exact release time not independently established",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "oracle",
+          "title": "Oracle soars 30% on cloud growth projections even as earnings miss estimates - CNBC",
+          "indexed_timestamp": "Tue, 09 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB1eXJ1YUJ6MVd2VjVLTXdpUVBKT0VSa3pfX29NSTJ5YXJTSURpbDVpcG9zVG03RDgyZnV5UWY5Qzl0Y2hwSHRid0tYc09ZTndtS19fWVZBMXNIM3FsN1owbkdpZlZ1WmVUS1g5c0E0Vmd3X1dzd3pBLWQwalLSAYIBQVVfeXFMTnN0UnpheDNYN2xGenFpNFhPd0ZKMVoxcTlKdkJlZHhuY0RGVGI5UzItaVk3dU80bWdscm9yZXFRLU1ndHo0aDgwOVI0Mk1fWFRwQjdvTzhfTWNkMVNGZ3U3Y29lTkd2Ylc4a3dUMXZzYWtWMDFiSXdUd3EtOFQtX2hRQQ?oc=5",
+          "source": "CNBC",
+          "source_home": "https://www.cnbc.com"
+        },
+        {
+          "query_key": "oracle",
+          "title": "Oracle Had a 'Brilliant' Quarter, CEO Says. Its Stock Is Popping on AI Demand - Investopedia",
+          "indexed_timestamp": "Tue, 09 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMG81NE1HSlkyTHFMWktyeGlKdjlYTUF6UVFKQUpRUUhJREhidGdFUDdTcG9GeTVRdVJleS1kYTVGTWtYNHk5NTE1WlJQODdVbVdqRDl1QVJBSFVEM3ZUSUpRYUlpa2VaTWZlUldNTGdreS01U052WWdjTklZTkhIZ0pQQ2dxR1o4Q1pTbzFEOFU1WWtrNnl6MVdoWGJfblc4aFBuWXk5S0Q5elFHZUUwWA?oc=5",
+          "source": "Investopedia",
+          "source_home": "https://www.investopedia.com"
+        }
+      ],
+      "timing_uncertainty": "US after-close release September 9. Distinguish the earnings/RPO news from subsequent attribution of the Oracle-OpenAI contract.",
+      "outcome_regex": "Oracle.{0,140}(Q1|first.quarter|455 billion|cloud growth projections|contract wins|RPO).{0,100}(beat|miss|reported|surge|forecast|revenue|growth)"
+    },
+    {
+      "id": "china_aug_cpi_ppi",
+      "event": "China August CPI/PPI",
+      "release_date_local": "2025-09-10",
+      "scheduled_release_local": "2025-09-10 09:30 CST",
+      "scheduled_release_utc": "2025-09-10T01:30:00Z",
+      "first_eligible_weekday_report": "2025-09-11",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "china_cpi",
+          "title": "China's producer deflation eases, helped by crackdown on price wars - Reuters",
+          "indexed_timestamp": "Tue, 09 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOLWhMMHlrdWowX1p5ZU9rejd4clRqd2lxSnVPNTZVMjJyNkN2bzYtMm1DOWtXbktrTFZmYzVDZktsRWtwSlh5Nklid3dROGlVc1hOUG9VbUlWT2h5bk9kNk94aWEzVmZtbnZjMXdlQkZpNWRYanZNbDFKWEl2UWFOQTR0dW9rUHlHYW14X0FCUGg3VmUzc3A5WVhtLTVqNV9HbW5ldVFPWmdiWVlQLTlR?oc=5",
+          "source": "Reuters",
+          "source_home": "https://www.reuters.com"
+        },
+        {
+          "query_key": "china_cpi",
+          "title": "China's consumer prices fall more than expected in August as deflation woes persist - CNBC",
+          "indexed_timestamp": "Tue, 09 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1WemZveU1BMksxa1JNYlltT2VQMTd5bWYtUlp0c3R2dTVhR0YwMnJqbnlESGl2SlQ1c043NzFVRVNRTnEtS3YzZXdiRFRDOWd1UUgxbi1jVEgzalZmZFJ4cU1DT1lsVmNKdlctajNsNWRDUdIBd0FVX3lxTE1pWGktUFRQMFF3U2JIV0FuQ0tHRE1ZbDdsZnZXSjFQZGZQX1FzOVZXN08wWG9YMDdrSzBLVDJFS09uNDhsOVA3RkdieWJXd1FHcHhyNm5odHBFeVNITFVXOXJ6a0VfdzQxVDBGVUNVNEFjdGR0SVI4?oc=5",
+          "source": "CNBC",
+          "source_home": "https://www.cnbc.com"
+        }
+      ],
+      "timing_uncertainty": "Reuters/CNBC index dates September 9 at nominal 07:00 precede the September 10 China release. September 10 00:00UTC report cannot know the result.",
+      "outcome_regex": "(China|Chinese).{0,100}(August|Aug\\.?).{0,100}(CPI|PPI|consumer prices|producer prices|deflation).{0,100}(fell|drop|eased|0\\.4|2\\.9|wors|deflation)"
+    },
+    {
+      "id": "us_aug_ppi",
+      "event": "US August Producer Price Index",
+      "release_date_local": "2025-09-10",
+      "scheduled_release_local": "2025-09-10 08:30 EDT",
+      "scheduled_release_utc": "2025-09-10T12:30:00Z",
+      "first_eligible_weekday_report": "2025-09-11",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "us_bls",
+          "title": "Producer Price Index News Release - 2025 M08 Results - Bureau of Labor Statistics (.gov)",
+          "indexed_timestamp": "Wed, 10 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5fVkpqbFVDZXhuV0xxNzZUZlgyYmVOTGxIekVCc0JzcGhubV9DalliQ2RBWnd4UmtnbV9lamxuTjRxLWtWZnA4b1k4dVpMUHE0elRHZWdMYTN1SFlUMGVoTnRqVThXaFBWeHc?oc=5",
+          "source": "Bureau of Labor Statistics (.gov)",
+          "source_home": "https://www.bls.gov"
+        }
+      ],
+      "timing_uncertainty": "",
+      "outcome_regex": "(August|Aug\\.?).{0,70}(PPI|producer prices).{0,120}(fell|drop|0\\.1|2\\.6|eased)"
+    },
+    {
+      "id": "oracle_openai_contract",
+      "event": "Oracle-OpenAI $300 billion contract reporting",
+      "release_date_local": "2025-09-10",
+      "scheduled_release_local": null,
+      "scheduled_release_utc": null,
+      "first_eligible_weekday_report": "2025-09-11",
+      "timing_basis": "date/window only; exact release time not independently established",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "ai_deals",
+          "title": "OpenAI and Oracle strike $300B cloud computing deal to power AI - SiliconANGLE",
+          "indexed_timestamp": "Wed, 10 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVkc2RGxudnk0Z2hyZXFTNUs2TnZLeUVDZkJFSVNFTzAwUlc1MGZlQTdaazNjaFliS0FEeXlETUg0UkZ0LTY2Z3drd3EyNGdoUWZUbzR3WmlaUGZyOVk0c2J6R09aZ0cwazZuOU5GWG80MFFQdFQ0eW9NZ2NYOGt4V296LW5wZ3d2bjRiR25aQ3ZLWHlvczBZ?oc=5",
+          "source": "SiliconANGLE",
+          "source_home": "https://siliconangle.com"
+        }
+      ],
+      "timing_uncertainty": "Indexed September 10 reporting corroborates date, not exact first public disclosure. Keep first eligible September 11 unless an earlier verified source explicitly names deal parties and amount.",
+      "outcome_regex": "(Oracle|OpenAI).{0,100}(300.{0,10}billion|\\$300B)"
+    },
+    {
+      "id": "ecb_sep",
+      "event": "ECB September policy decision / staff projections",
+      "release_date_local": "2025-09-11",
+      "scheduled_release_local": "2025-09-11 14:15 CEST",
+      "scheduled_release_utc": "2025-09-11T12:15:00Z",
+      "first_eligible_weekday_report": "2025-09-12",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "ecb",
+          "title": "Monetary policy decisions - European Central Bank",
+          "indexed_timestamp": "Thu, 11 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNcGw0d1Q4X0lpYWthTXBqdTZkVFVRMVpJTTViLWJXZ2NMZVBoVUFPZG8wRWtWYlE4Nk5Ga1hZRjFsNGU5MnA1X0xBU0xMS0xwbkF0NC1EX2VmSWhkZEh4WmEzdEtFSHVSWTdib29QV0dnWmhvRl9xYU5pU042ZFBDZE9rMHd6bmsz?oc=5",
+          "source": "European Central Bank",
+          "source_home": "https://www.ecb.europa.eu"
+        },
+        {
+          "query_key": "ecb",
+          "title": "Combined monetary policy decisions and statement - European Central Bank",
+          "indexed_timestamp": "Thu, 11 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOd2VwdXRUeGJQRDMwTUJydVMxbTBEcmNRVklBOGhscUdPY2tRTHlxRm41WEdmUTN2OTZqNWJCMEc3dlZtUEZXWjltd3hqeUpLc0VaVWtLNHVxT1pVY1Nla0ItRGhhWEtCT052Q2lZcGRseGhTT2F3NjNWRndaQXh0SE0yRkRYaU5QZmxCelllUkhkMGN1S0F6LTRzYk1KcTc1OTJaVTNINGIxNVpFTUVJbTQwSDY4Wlk?oc=5",
+          "source": "European Central Bank",
+          "source_home": "https://www.ecb.europa.eu"
+        }
+      ],
+      "timing_uncertainty": "",
+      "outcome_regex": "(ECB|European Central Bank).{0,130}(held|kept|left|maintained).{0,90}(September|unchanged|2[ .]?percent|2%)"
+    },
+    {
+      "id": "us_aug_cpi",
+      "event": "US August Consumer Price Index",
+      "release_date_local": "2025-09-11",
+      "scheduled_release_local": "2025-09-11 08:30 EDT",
+      "scheduled_release_utc": "2025-09-11T12:30:00Z",
+      "first_eligible_weekday_report": "2025-09-12",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "us_bls",
+          "title": "Consumer Price Index News Release - 2025 M08 Results - Bureau of Labor Statistics (.gov)",
+          "indexed_timestamp": "Thu, 11 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE95SEtCdlRGdWpzbkhPcE5lbGlYVWZUZF9yMlY5XzhaRjJlNDhlRUxwOWcxN3dZaHZOSGRpcDBWdlBPcGg3LUQxeXI5NWdFeXJ0RkQ3Q2d5QWFxeXBSSHNkNGtSRXdLZ0dtcUE?oc=5",
+          "source": "Bureau of Labor Statistics (.gov)",
+          "source_home": "https://www.bls.gov"
+        }
+      ],
+      "timing_uncertainty": "",
+      "outcome_regex": "(August|Aug\\.?).{0,70}(CPI|consumer prices|inflation).{0,100}(2\\.9|3\\.1|0\\.4|rose|accelerat)"
+    },
+    {
+      "id": "adobe_q3",
+      "event": "Adobe fiscal Q3 results",
+      "release_date_local": "2025-09-11",
+      "scheduled_release_local": null,
+      "scheduled_release_utc": null,
+      "first_eligible_weekday_report": "2025-09-12",
+      "timing_basis": "date/window only; exact release time not independently established",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "adobe_results",
+          "title": "Adobe's stock gains on earnings, revenue beat - CNBC",
+          "indexed_timestamp": "Thu, 11 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9TdmlnMFltXzNBSGtBc2JkcUozeWR5OUl1MW5XbDhBZllQZVU1TUU1bUhYb251bUY2ZkZPZEs5d0FDc1VqWTJuV2ZVcGJONERjYmI1Znk1dzh5ajduNWpFS2trQzBsWUxSLUxIQWs3bFZsalRaaGJCUFRKONIBgAFBVV95cUxPa1Z1a0VzRXBvM3k2VEJhdWFmeGd4YXlsT1Jycl9ZTWZDNU1aaVprYlR4Qmx4Zm0wOEpOMHJlYU5fQ3NMWV9DLUkwcDA4N2RFMUxUb3JvVWlpb2d1V0pWSk5NdGFTanQwZEs4NVMtZU9wMHdTclN3OUJCZXRVZXpmVA?oc=5",
+          "source": "CNBC",
+          "source_home": "https://www.cnbc.com"
+        },
+        {
+          "query_key": "adobe_results",
+          "title": "Adobe raises annual revenue and profit forecasts on strong design software demand - Reuters",
+          "indexed_timestamp": "Thu, 11 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNklxX3VIdzA4ZXNkREp5WEZCbXUyVjZRTFZqUTltMUN1WkpLVzJyQUUyekJkcXM4TTN2WTJTZXFwV1o0aFZndWFqU0RNX3BJNFhhTmhLMnhQNTZKM0ZoZmVybG5fbHAtY254dlNpanBnX3VhcXpMWGRpNUtLbDBSVkZhYjRlMTZYb0xLVHQ2TlF4dkRGeDdzSDZ3MHN1b1hpOHg1S0hCQS1ZejA0Y2xWNVN6VlNVYnRlVzBn?oc=5",
+          "source": "Reuters",
+          "source_home": "https://www.reuters.com"
+        }
+      ],
+      "timing_uncertainty": "US after-close release window; exact timestamp not fetched.",
+      "outcome_regex": "Adobe.{0,120}(Q3|third.quarter|annual).{0,100}(reported|beat|raises|raised|results|forecast)"
+    },
+    {
+      "id": "china_aug_activity",
+      "event": "China August industrial output / retail sales / fixed investment",
+      "release_date_local": "2025-09-15",
+      "scheduled_release_local": "2025-09-15 10:00 CST",
+      "scheduled_release_utc": "2025-09-15T02:00:00Z",
+      "first_eligible_weekday_report": "2025-09-16",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "calendar candidate requiring corroboration; search returned no usable indexed release",
+      "evidence": [],
+      "timing_uncertainty": "Search retrieval failed; schedule date requires external corroboration before asserting exact release provenance.",
+      "outcome_regex": "(China|Chinese).{0,100}(August|Aug\\.?).{0,100}(industrial output|retail sales|fixed.asset investment).{0,100}(slowed|fell|grew|weak|missed|5\\.2|3\\.4)"
+    },
+    {
+      "id": "poland_aug_cpi",
+      "event": "Poland August final CPI",
+      "release_date_local": "2025-09-15",
+      "scheduled_release_local": "2025-09-15 10:00 CEST",
+      "scheduled_release_utc": "2025-09-15T08:00:00Z",
+      "first_eligible_weekday_report": "2025-09-16",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "calendar candidate requiring corroboration; search returned no usable indexed release",
+      "evidence": [],
+      "timing_uncertainty": "Separate from August flash CPI already published August 29. Exact final-release indexed corroboration unavailable.",
+      "outcome_regex": "(Poland|Polish|GUS).{0,100}(August).{0,70}(final).{0,80}(CPI|inflation|consumer prices)"
+    },
+    {
+      "id": "us_aug_retail",
+      "event": "US August retail sales",
+      "release_date_local": "2025-09-16",
+      "scheduled_release_local": "2025-09-16 08:30 EDT",
+      "scheduled_release_utc": "2025-09-16T12:30:00Z",
+      "first_eligible_weekday_report": "2025-09-17",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "calendar candidate requiring corroboration; search returned no usable indexed release",
+      "evidence": [],
+      "timing_uncertainty": "",
+      "outcome_regex": "(US|U\\.S\\.|American).{0,70}(August).{0,80}(retail sales).{0,100}(rose|grew|0\\.6|strong)"
+    },
+    {
+      "id": "japan_aug_trade",
+      "event": "Japan August merchandise trade",
+      "release_date_local": "2025-09-17",
+      "scheduled_release_local": "2025-09-17 08:50 JST",
+      "scheduled_release_utc": "2025-09-16T23:50:00Z",
+      "first_eligible_weekday_report": "2025-09-17",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "japan_trade",
+          "title": "Japan's exports down in August as automakers grapple with US tariffs - Reuters",
+          "indexed_timestamp": "Tue, 16 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNS0FBU0J1dmlnNzBoVkJGRWNfSGIxN0RzZHY1RVRfd0tIaVpubEh4c25WQWtuX2NtYmJBN2RYRXZHVnQ3QVdnTzlFNlNma1NXaW1yUHRKUGlfdGktUjIxc1UtcklvM2RGZG5lOWpnQ21nSW5UQnBWVUp3dVlLdHVEYW9pU1pYOGdRVF94UmFiWmpEUlM3TjJIdGpoc1FrTnd2UlVuMTFOQnpVLWRyTWhZ?oc=5",
+          "source": "Reuters",
+          "source_home": "https://www.reuters.com"
+        },
+        {
+          "query_key": "japan_trade",
+          "title": "Japan’s Exports Fall for Fourth Month as US Shipments Tumble - gCaptain",
+          "indexed_timestamp": "Wed, 17 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNZk5fWnhlcXBUdXItSmljX0dseng3N0dydHQ1aUJES1k3SDZGUjJUQTdaamNwOUdQb3hORm1ra0U2dnRGVkpYd2h1aDk5QXhqcURqNllIR1c1RUsxekdlY2FFU3RjNWZUZVh4WFZWWV9vdktLaFM3bE5EaG9xWWpDZ2FuV1R1a1hs?oc=5",
+          "source": "gCaptain",
+          "source_home": "https://gcaptain.com"
+        }
+      ],
+      "timing_uncertainty": "Midnight-sensitive prior-UTC-day release; 10-minute margin. Standard release schedule, original timestamp unverified.",
+      "outcome_regex": "Japan.{0,100}(August|Aug\\.?).{0,100}(exports|trade).{0,100}(fell|down|declined|fourth|US shipments)"
+    },
+    {
+      "id": "fed_sep",
+      "event": "FOMC September decision / Summary of Economic Projections",
+      "release_date_local": "2025-09-17",
+      "scheduled_release_local": "2025-09-17 14:00 EDT",
+      "scheduled_release_utc": "2025-09-17T18:00:00Z",
+      "first_eligible_weekday_report": "2025-09-18",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "fed",
+          "title": "Federal Reserve Board and Federal Open Market Committee release economic projections from the September 16-17 FOMC meeting - Federal Reserve (.gov)",
+          "indexed_timestamp": "Wed, 17 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxONm5yVjdsZXVaQU9RUlJRV2c0R2xPbmlLM1FwbUd3NFg4SkQ3QmlUVTZOVDR0c3ltUzg0b24yc0hxejV3VUtsTEhrRFZqOXFZRFhzRkdmU1dQcmViNkJSbEhFSnM5cDBPTERfM3hLZXB4WlBlWUEtTW1xblAxelNkb3Q3NA?oc=5",
+          "source": "Federal Reserve (.gov)",
+          "source_home": "https://www.federalreserve.gov"
+        },
+        {
+          "query_key": "fed",
+          "title": "Federal Reserve issues FOMC statement - Federal Reserve (.gov)",
+          "indexed_timestamp": "Wed, 17 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNNEdtRDBiSjJRZUZPTW1mblY1NWpwYXJmZXdzYUN6VW9pbTRWcWpyWldiMXViLVNZR0xqNVlDd1JjMXhPVm54dGdKdU94Vk9yN2NLZjdXTm5KdDdVYVBlRms4TFVoS21qSmtFRU9IUDE5bEUteXl5aGo4Q3VfbkxFRnRYMA?oc=5",
+          "source": "Federal Reserve (.gov)",
+          "source_home": "https://www.federalreserve.gov"
+        }
+      ],
+      "timing_uncertainty": "Press conference 18:30UTC. Both decision and dots are unavailable at September 17 cutoff.",
+      "outcome_regex": "(Fed|FOMC|Federal Reserve).{0,120}(cut|lowered|reduced|delivered|dot.plot|dots).{0,100}(September|25 basis|quarter.point|4[.]0|4[.]25|two more|two further)"
+    },
+    {
+      "id": "australia_aug_jobs",
+      "event": "Australia August labour force",
+      "release_date_local": "2025-09-18",
+      "scheduled_release_local": "2025-09-18 11:30 AEST",
+      "scheduled_release_utc": "2025-09-18T01:30:00Z",
+      "first_eligible_weekday_report": "2025-09-19",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "abs",
+          "title": "Labour Force, Australia, August 2025 - Australian Bureau of Statistics",
+          "indexed_timestamp": "Thu, 18 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNZUwxSW1qNTZEY0pHeUdaZTB4eFBCZkFRUU5oRjVVazV0RXR0X1FHaFJrTDlyWTQteGFlVlFEZ21KOU01ak1qY2w5R3pVX3g5cjhJOFpDUTZ4Y09kSkJHaHF4cTcyM3FhOUcwQkF0MmtWdm5mVzdaSXRYdjljRURKUzdITk9sQWtCWjk4RnJZbkJOYnZIZDY5MFZPUC1nM1hZTlE?oc=5",
+          "source": "Australian Bureau of Statistics",
+          "source_home": "https://www.abs.gov.au"
+        },
+        {
+          "query_key": "abs",
+          "title": "Labour Force, Australia methodology, August 2025 - Australian Bureau of Statistics",
+          "indexed_timestamp": "Thu, 18 Sep 2025 03:12:28 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPd1Y3M0RFVE9OLUVYUjlaZ2FrYjVKNlBFQzloY3h2VWFzVGhKY1VWUkg3NXBPTE9uamE5a0liN0ZoVGZqYW5QbkF4STFITERieVhES2hoc202UDBuTFJ0czFMZG5fa3AtNG12SjZQWTMyZTBNZVVMUVhBNnVCeXY2dlFoTkg1c28?oc=5",
+          "source": "Australian Bureau of Statistics",
+          "source_home": "https://www.abs.gov.au"
+        }
+      ],
+      "timing_uncertainty": "",
+      "outcome_regex": "Australia.{0,100}(August|Aug\\.?).{0,100}(employment|jobs|unemployment).{0,100}(fell|rose|lost|added|4\\.2|5.?400)"
+    },
+    {
+      "id": "poland_aug_labor",
+      "event": "Poland August enterprise employment / wages",
+      "release_date_local": "2025-09-18",
+      "scheduled_release_local": "2025-09-18 10:00 CEST",
+      "scheduled_release_utc": "2025-09-18T08:00:00Z",
+      "first_eligible_weekday_report": "2025-09-19",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "pl_polish_retail",
+          "title": "Polski rynek pracy ponownie rozczarował. Płace tracą impet, a zatrudnienie spada - Bankier.pl",
+          "indexed_timestamp": "Thu, 18 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdjc5c1NJVXRfX3NvdHBBWHJNNm5WZFFpdGdFSnprWWtUYk5ZbHF2WXZoYnBuTjRGVF9vcnVzMEp1MEFZMFBBYjVWR013SFNVNV9MV3pxdmYtZlcxQ3g4ek0yeW1IVlpqV0RweGQ3ZTZDZ0RyWjhkaVdIa1A4RGowVzU5ZlZCa2ZTcElLbXcyczRxMGE3Mk85S0pVazhGWEE2UTIzVzd5N0k?oc=5",
+          "source": "Bankier.pl"
+        }
+      ],
+      "timing_uncertainty": "",
+      "outcome_regex": "(Poland|Polish|GUS).{0,100}(August|sierp).{0,100}(wages|employment|płac|zatrudn|wynagrodz).{0,100}(fell|slowed|rose|declin|spad|wzros)"
+    },
+    {
+      "id": "japan_aug_cpi",
+      "event": "Japan August national CPI",
+      "release_date_local": "2025-09-19",
+      "scheduled_release_local": "2025-09-19 08:30 JST",
+      "scheduled_release_utc": "2025-09-18T23:30:00Z",
+      "first_eligible_weekday_report": "2025-09-19",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "calendar candidate requiring corroboration; search returned no usable indexed release",
+      "evidence": [],
+      "timing_uncertainty": "Midnight-sensitive: potentially eligible September 19, 30 minutes before cutoff. No usable indexed original release; schedule corroboration remains outstanding.",
+      "outcome_regex": "Japan.{0,100}(August|Aug\\.?).{0,100}(CPI|core inflation|consumer prices).{0,100}(2\\.7|slowed|eased|rose)"
+    },
+    {
+      "id": "boj_sep",
+      "event": "BOJ September policy decision / ETF and J-REIT disposal plan",
+      "release_date_local": "2025-09-19",
+      "scheduled_release_local": null,
+      "scheduled_release_utc": null,
+      "first_eligible_weekday_report": "2025-09-22",
+      "timing_basis": "date/window only; exact release time not independently established",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "boj",
+          "title": "Bank Of Japan's Statement Of Monetary Policy - 日本銀行ホームページ",
+          "indexed_timestamp": "Fri, 19 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9HSHlKdEw0b2lENGZJcGI4d05LLU9UTGFhak03OFZvOW5FaUFJLVFrNXhjLUVudVJYX2NiV1lQei1LQ1hXN01SUXo1MGF5QmEtaHpRVXFaUml1eVlaOU9MUHlvTkZoVFl1b1FZ?oc=5",
+          "source": "日本銀行ホームページ",
+          "source_home": "https://www.boj.or.jp"
+        },
+        {
+          "query_key": "jpdata",
+          "title": "Bank of Japan hits pause; dissenting votes hint at incoming rate hikes - ING Think",
+          "indexed_timestamp": "Fri, 19 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPX1FKbHRUREhhWEVCTzY3WEJmbTlCTTYyZFhoczlaMkxOU0EzOFVGNGxXbTVuVUpfXzRsc3FicWpMOEVPTG5WckZFSjl0SFgxS2FBVzY3MXJ5Mml6T3FOaGpxUEI1YUpSbF94SHBaWTFrX0dnZ0ROZlFxWm51OVZJY19WUllSbGFZSFlqcHEwa3lORG1TWWotSjBSZk8tbFNBampkU0hwSXdNR28wandvR2NJRGg?oc=5",
+          "source": "ING Think",
+          "source_home": "https://think.ing.com"
+        }
+      ],
+      "timing_uncertainty": "BOJ decisions have no guaranteed exact release minute. Japan daytime decision is after September 19 cutoff; next weekday report September 22.",
+      "outcome_regex": "(BOJ|Bank of Japan).{0,130}(held|kept|left|ETF|J.REIT|dissent|sell|dispos).{0,100}(0\\.5|rates|September|funds|holdings|ETF)"
+    },
+    {
+      "id": "poland_aug_industry",
+      "event": "Poland August industrial output / producer prices",
+      "release_date_local": "2025-09-19",
+      "scheduled_release_local": "2025-09-19 10:00 CEST",
+      "scheduled_release_utc": "2025-09-19T08:00:00Z",
+      "first_eligible_weekday_report": "2025-09-22",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "calendar candidate requiring corroboration; search returned no usable indexed release",
+      "evidence": [],
+      "timing_uncertainty": "Calendar candidate; indexed release not retrieved.",
+      "outcome_regex": "(Poland|Polish|GUS).{0,100}(August|sierp).{0,100}(industrial|industry|produkcj|producer prices).{0,100}(fell|rose|grew|declin|spad|wzros|0\\.7)"
+    },
+    {
+      "id": "poland_aug_retail",
+      "event": "Poland August retail sales",
+      "release_date_local": "2025-09-22",
+      "scheduled_release_local": "2025-09-22 10:00 CEST",
+      "scheduled_release_utc": "2025-09-22T08:00:00Z",
+      "first_eligible_weekday_report": "2025-09-23",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "pl_polish_retail",
+          "title": "Nowe dane ze sklepów - TVN24",
+          "indexed_timestamp": "Mon, 22 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOTURTY084OWROcXUtVXd6dDMyanVFVXJhWlZhSFk5YWNKd2VJNlNZelQ2SDR4Q0ZmeUFCUHRhNWI0R2V3blRvdHFzYjlKNm10THN6aGpQNU42dXByNGdBdGFuRkRva3R2VWJHaXRJV0d6V2twNUFhTXB2bk9XWVBGRXgxbG5hVjMtbW9FZUk4QQ?oc=5",
+          "source": "TVN24"
+        },
+        {
+          "query_key": "pl_polish_retail",
+          "title": "Sprzedaż detaliczna w sierpniu. Wzrost rok do roku, spadek miesiąc do miesiąca - Money.pl",
+          "indexed_timestamp": "Mon, 22 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQUXRteWVrZWRSUlRmc2V4V3FkQk96cFZXRndGYU90XzZiblBNcHY3WEVsN3VYdDZRWWVRcHY1c3YwWm5SRUVBUTFWbHRsdnN2d3otWHZNY05aa1F5UzdMMkpjM0VqYTBCNFVrYWVvd3NHRHpqUGQ5VV90UHo1RFFZaDVxbWM0MWJ5MW50UTNlck9OOXFLWW5Tc2ZhajBaZHhNakp1Ql85M05WOFhGRElYVlhic2ZnQnd5V0R3ZlRUSy0ybm1YTm1WRTJIVQ?oc=5",
+          "source": "Money.pl"
+        }
+      ],
+      "timing_uncertainty": "",
+      "outcome_regex": "(Poland|Polish|GUS).{0,100}(August|sierp).{0,100}(retail|sprzedaż).{0,100}(rose|grew|slowed|3\\.1|wzros|spad)"
+    },
+    {
+      "id": "nvidia_openai",
+      "event": "Nvidia/OpenAI strategic partnership and potential investment",
+      "release_date_local": "2025-09-22",
+      "scheduled_release_local": null,
+      "scheduled_release_utc": null,
+      "first_eligible_weekday_report": "2025-09-23",
+      "timing_basis": "date/window only; exact release time not independently established",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "ai_deals",
+          "title": "OpenAI and NVIDIA announce strategic partnership to deploy 10 gigawatts of NVIDIA systems - OpenAI",
+          "indexed_timestamp": "Mon, 22 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFA4cnE1cFg0NmVZcWNqcEZ2OGZmWWlIZDl6clI4ODdkOWc2c2F1dWVEWEZUaDlZYnZtZkFrZ0txNVR0OHdFRWJSOHVJWDdlT2E2RUpQQ0Y0bnpVVURCV2loVmp3a1JtN2hoVkJV?oc=5",
+          "source": "OpenAI",
+          "source_home": "https://openai.com"
+        },
+        {
+          "query_key": "ai_deals",
+          "title": "Nvidia, OpenAI Make $100 Billion Deal to Build Data Centers - Bloomberg.com",
+          "indexed_timestamp": "Mon, 22 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPSEpvcHF2X2llcDJYUzdzZW1WbDRXWUVTQ2dKeE1vWlQ4RnRJSFIzRHdFNDNtTWY2b3h2bnJDbVZWNWVyY0hKUG5GYzltUjdKTDIyRFVpZVVSWkhmVTVEei00bkJJblRuLS1SX2NqQ3d1dm1VM0RwNG5iVXVwbEI1cXZOeEwtWUpqY0x1ZWR1MkxvRFNDcnZkYnRDczQwUXRWdlMydm1GNGZISmhDVzBmUnRwQmE?oc=5",
+          "source": "Bloomberg.com",
+          "source_home": "https://www.bloomberg.com"
+        }
+      ],
+      "timing_uncertainty": "Announcement in US session September 22. Investment was proposed/up to $100bn, not a completed $100bn cash transfer.",
+      "outcome_regex": "(Nvidia|OpenAI).{0,120}(100.{0,8}billion|10 gigawatts|strategic partnership)"
+    },
+    {
+      "id": "poland_aug_unemployment",
+      "event": "Poland August registered unemployment",
+      "release_date_local": "2025-09-23",
+      "scheduled_release_local": "2025-09-23 10:00 CEST",
+      "scheduled_release_utc": "2025-09-23T08:00:00Z",
+      "first_eligible_weekday_report": "2025-09-24",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "pl_polish_retail",
+          "title": "Bezrobocie w Polsce znowu rośnie. Dane GUS z sierpnia - MyCompanyPolska.pl",
+          "indexed_timestamp": "Tue, 23 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPQ1ByVGxOdTI4THVfSDREVFhrSmhHRl9NMmh6azhsTmpvWlNNSEdHZjZibG93S21wVko1a25kZHpJQ0RHWGgxamgtQkhnZy0yZDN4RFpDMXlFSGFvT2wtdWhGalpMY3ZCRi1jSUhIRWxNaC1HaDl1dkdodFJZVk1XNUJfVmdWLUN5NGhZSWQ3dHlkeVJiTTd3NQ?oc=5",
+          "source": "MyCompanyPolska.pl"
+        }
+      ],
+      "timing_uncertainty": "September 23 indexed report corroborates publication day; no original GUS schedule/body fetched.",
+      "outcome_regex": "(Poland|Polish|GUS).{0,100}(August|sierp).{0,100}(unemployment|jobless|bezrob).{0,100}(5\\.5|rose|increas|wzros)"
+    },
+    {
+      "id": "micron_q4",
+      "event": "Micron fiscal Q4 results",
+      "release_date_local": "2025-09-23",
+      "scheduled_release_local": null,
+      "scheduled_release_utc": null,
+      "first_eligible_weekday_report": "2025-09-24",
+      "timing_basis": "date/window only; exact release time not independently established",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "micron",
+          "title": "Micron beats on earnings as company sales rise 46% on AI boom - CNBC",
+          "indexed_timestamp": "Tue, 23 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1TcnNXYlBuUmM5VnBsa1NISzBTcUpPTmE5bTRISGVJWFNuUFpnLWR6QnpOWEJYaUhveGQzUHowQlFrVG1QQVFsSlg1TFQxanhhdjliQ3NKX0pfTDUzN3hBM3VHMlVibjhTVmFUeGMwZXFIcWlYSkZJcUF30gF_QVVfeXFMTUUzYUpLYkczdU43bl8tcU9ES2ViYlQ1RlVZOFljSVhXeDYzZUg2YkNNSm0zVkRfbGZ1bl9PNERSeFM4Q3RWNzhvMTIxVFlBdnkyUHBvRjgzbUlZQlBuLXdHUnQ1Y1NXRFJlaFdlYjV0YS0za2RyaHRsN2lYbUFkSQ?oc=5",
+          "source": "CNBC",
+          "source_home": "https://www.cnbc.com"
+        },
+        {
+          "query_key": "micron",
+          "title": "Micron forecasts first-quarter revenue above estimates on AI demand - Reuters",
+          "indexed_timestamp": "Tue, 23 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPYXI2ZVVOeVk2ZDFEbHNFS0tqVm5oY2pJVGVlWkFhQS1veklBckJtYlVYTjJGYlZPUURpWkpZb1VzTUw2NHlKcExpWW5Pei1FYURGdFBiN2dOMTA5a2hQNkZsejVVdGd3V0RQbTIxS2M5eVh3ZVFDVUlRWGRQbzlfekJFUFlvTjRDWGxaNE4tU2toVkxiTEtZTUhWUXl2VGtKWUYw?oc=5",
+          "source": "Reuters",
+          "source_home": "https://www.reuters.com"
+        }
+      ],
+      "timing_uncertainty": "US after-close release window. Do not use nominal index 07:00UTC as publication time.",
+      "outcome_regex": "Micron.{0,130}(Q4|fourth.quarter|first.quarter|quarterly).{0,100}(beat|results|forecast|revenue|record)"
+    },
+    {
+      "id": "stargate_sites",
+      "event": "OpenAI/Oracle/SoftBank five new Stargate data-center sites",
+      "release_date_local": "2025-09-23",
+      "scheduled_release_local": null,
+      "scheduled_release_utc": null,
+      "first_eligible_weekday_report": "2025-09-24",
+      "timing_basis": "date/window only; exact release time not independently established",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "ai_deals",
+          "title": "OpenAI, Oracle, and SoftBank expand Stargate with five new AI data center sites - OpenAI",
+          "indexed_timestamp": "Tue, 23 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9xOW5ZN2xtYU5kdkNYV2hRTjhKcGZPS2hFYTdlcUhOR1JyNmhWZU9iMnBrOE4tVXZnWmI2UzBhSzhLbVhKOHNTMlB5eWtkUnU2OS01czdCQ05WaWpGb2c?oc=5",
+          "source": "OpenAI",
+          "source_home": "https://openai.com"
+        }
+      ],
+      "timing_uncertainty": "",
+      "outcome_regex": "(OpenAI|Oracle|SoftBank|Stargate).{0,140}(five new|5 new).{0,80}(sites|data cent)"
+    },
+    {
+      "id": "australia_aug_cpi",
+      "event": "Australia August monthly CPI indicator",
+      "release_date_local": "2025-09-24",
+      "scheduled_release_local": "2025-09-24 11:30 AEST",
+      "scheduled_release_utc": "2025-09-24T01:30:00Z",
+      "first_eligible_weekday_report": "2025-09-25",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "abs",
+          "title": "Monthly Consumer Price Index Indicator, August 2025 - Australian Bureau of Statistics",
+          "indexed_timestamp": "Wed, 24 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQNHQ3VDl5UVp6RlNaR1dUVWhJaTV3c0Z0YVZsUkNmWXpXQmhkSGdsSGVnWTN2SmczUy15Nm9VN19zWC14c1RwTnZRalVXN0NDQlBwNHlrbzhuVVpRNVdoYTBpa1JZcERpQ0xZQmlUZXBSaXlQOW5fRkFxelo4dmVBY09yM1llam1UUkZ6dEs3dEdJSzRUb1F3UlpMOURWYk5ZczF6Qy10U3FwSkhfaW04ZEduSkNkTC1o?oc=5",
+          "source": "Australian Bureau of Statistics",
+          "source_home": "https://www.abs.gov.au"
+        },
+        {
+          "query_key": "abs",
+          "title": "Monthly CPI indicator rose 3.0% annually to August 2025 - Australian Bureau of Statistics",
+          "indexed_timestamp": "Wed, 24 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQa1h2bVA1SGlrLXdCcHNEd0dGbDNKODIxaHM1OGl1dVRrWTNTYjM5SUU5VDFoUnFqV1ZnVlBnOFdSZXdTeE9velQtSlZycnJFTFg0NGJic1ZjMHFBMXQxRjh6QWNaZXgxRmRkX01KUWE3blo2SHQzV3EyeXVHbW15RlBFcjdmUXpNRTZwXzJ3N0VKa3R2Tl8xWWZtWkNIVGdiT0Z3?oc=5",
+          "source": "Australian Bureau of Statistics",
+          "source_home": "https://www.abs.gov.au"
+        }
+      ],
+      "timing_uncertainty": "",
+      "outcome_regex": "Australia.{0,100}(August|Aug\\.?).{0,100}(CPI|inflation|consumer prices).{0,100}(3\\.0|rose|accelerat|higher)"
+    },
+    {
+      "id": "us_q2_gdp_final",
+      "event": "US Q2 third-estimate GDP / annual update",
+      "release_date_local": "2025-09-25",
+      "scheduled_release_local": "2025-09-25 08:30 EDT",
+      "scheduled_release_utc": "2025-09-25T12:30:00Z",
+      "first_eligible_weekday_report": "2025-09-26",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "us_bea",
+          "title": "Gross Domestic Product, 2nd Quarter 2025 (Third Estimate), GDP by Industry, Corporate Profits (Revised), and Annual Update - U.S. Bureau of Economic Analysis (BEA) (.gov)",
+          "indexed_timestamp": "Thu, 25 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNSFlSZjhWYXUyaHUwTlMxUUV5Z1JidzFQNEp2ZFhucVVvT3hLdGkxWGlkVk8tZUlPUXZRTHl1NERVbElSd0lZS3FqY0JCbml1Q1pMcjFOY3BPZU1CVTUzZFY2djdFVm5XWjA3dVM3YmF0YlNaNEdHalRoeWhiUmVibG81N25yYk8xOXY1bEZLZWFnQXlKQzV2Z3VJNDBVZU9nVWRVYjhyQjhkd2hTNERId3c2ekdBZw?oc=5",
+          "source": "U.S. Bureau of Economic Analysis (BEA) (.gov)",
+          "source_home": "https://www.bea.gov"
+        }
+      ],
+      "timing_uncertainty": "",
+      "outcome_regex": "(US|U\\.S\\.|American).{0,100}(Q2|second.quarter).{0,100}(GDP|economy).{0,100}(3\\.8|revised|grew)"
+    },
+    {
+      "id": "tokyo_sep_cpi",
+      "event": "Tokyo September CPI",
+      "release_date_local": "2025-09-26",
+      "scheduled_release_local": "2025-09-26 08:30 JST",
+      "scheduled_release_utc": "2025-09-25T23:30:00Z",
+      "first_eligible_weekday_report": "2025-09-26",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "calendar candidate requiring corroboration; search returned no usable indexed release",
+      "evidence": [],
+      "timing_uncertainty": "Midnight-sensitive: standard release time is 30 minutes before same-date cutoff. Original release not indexed in successful searches.",
+      "outcome_regex": "Tokyo.{0,100}(September|Sep\\.?).{0,100}(CPI|inflation|consumer prices).{0,100}(2\\.5|2\\.8|eased|slowed|rose)"
+    },
+    {
+      "id": "us_aug_pce",
+      "event": "US August Personal Income and Outlays / PCE inflation",
+      "release_date_local": "2025-09-26",
+      "scheduled_release_local": "2025-09-26 08:30 EDT",
+      "scheduled_release_utc": "2025-09-26T12:30:00Z",
+      "first_eligible_weekday_report": "2025-09-29",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "us_bea",
+          "title": "Personal Income and Outlays, August 2025 - U.S. Bureau of Economic Analysis (BEA) (.gov)",
+          "indexed_timestamp": "Fri, 26 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9MYlNxZnl4UkcwMUNvejQxZGU1OW1RbGdHM0IzR2RDYXNGamdwOHdGdWc0UmRUbzFyTmkwakNjaDY0OHVadjlFUXAtVkEzX1JEWUpERUYwd3pWSUU0b1RGUVNNNWFqbnE3dUk4UmNGWkhSb3h6RWJZRg?oc=5",
+          "source": "U.S. Bureau of Economic Analysis (BEA) (.gov)",
+          "source_home": "https://www.bea.gov"
+        }
+      ],
+      "timing_uncertainty": "",
+      "outcome_regex": "(August|Aug\\.?).{0,80}(PCE|personal consumption|personal income).{0,120}(2\\.7|2\\.9|0\\.3|0\\.2|rose|steady)"
+    },
+    {
+      "id": "japan_aug_labor",
+      "event": "Japan August labour-force / unemployment",
+      "release_date_local": "2025-09-30",
+      "scheduled_release_local": "2025-09-30 08:30 JST",
+      "scheduled_release_utc": "2025-09-29T23:30:00Z",
+      "first_eligible_weekday_report": "2025-09-30",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "calendar candidate requiring corroboration; search returned no usable indexed release",
+      "evidence": [],
+      "timing_uncertainty": "Midnight-sensitive prior-UTC-day release. No successful direct/official-indexed corroboration.",
+      "outcome_regex": "Japan.{0,100}(August|Aug\\.?).{0,100}(jobless|unemployment).{0,100}(2\\.6|rose|fell|rate)"
+    },
+    {
+      "id": "japan_aug_output_retail",
+      "event": "Japan August preliminary industrial production / retail sales",
+      "release_date_local": "2025-09-30",
+      "scheduled_release_local": "2025-09-30 08:50 JST",
+      "scheduled_release_utc": "2025-09-29T23:50:00Z",
+      "first_eligible_weekday_report": "2025-09-30",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "jpdata",
+          "title": "Japan's economy shows strain as factory output and retail sales drop - Reuters",
+          "indexed_timestamp": "Mon, 29 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNVVVIN3RXMWt0djFMYjFuSV94V0pVUjJWX3N6U0xOZHVHMXlqb1lsWXBoeGJCZ0xsNEVFR21EVUNzbTZPSU04d0FfQTQ2WENDLThhWXlSWmlkaTR1TzhQTE1KeW8zSEJHaUNOVmVXbVl3cTJfMVJwMjEyeU5adjZHZi1tSGE2aGJ5eHpGS3FINXRyNXdMNVp5OXlkc2E?oc=5",
+          "source": "Reuters",
+          "source_home": "https://www.reuters.com"
+        }
+      ],
+      "timing_uncertainty": "Midnight-sensitive prior UTC evening, 10-minute margin. Reuters nominal September 29 index date alone does not verify actual publication.",
+      "outcome_regex": "Japan.{0,100}(August|Aug\\.?).{0,100}(factory output|industrial output|industrial production|retail sales).{0,100}(fell|drop|declin|0\\.5|1\\.2)"
+    },
+    {
+      "id": "china_sep_pmi",
+      "event": "China September official / private manufacturing PMI",
+      "release_date_local": "2025-09-30",
+      "scheduled_release_local": "2025-09-30 09:30 CST (official); 09:45 CST (private)",
+      "scheduled_release_utc": "2025-09-30T01:30:00Z",
+      "first_eligible_weekday_report": "2025-10-01",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "china_septpmi",
+          "title": "China factory activity shrinks again as firms watch for stimulus, US trade deal - Reuters",
+          "indexed_timestamp": "Mon, 29 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZU1FQnpsY2lSRjhzTjRUOTRkUEVLZk1nLVNpanFucElhUlY2bXdRbWNyTnJ4bVFseHlxYXdPZnUxa2dvdjhxREhtSndCUGV5VWRrT3pVdWNwVFpnZ0ZNNG42bUd0dFVnUVE5OXItOE02cmdVSGFoQTlmZW1zTXdkb2QwMG1oOFRDbkFOYmZSbE5GdlJXSEVIcUw2Mlp5NUdSRXc1OE8wV0FfeVdRb1c4Q19mZw?oc=5",
+          "source": "Reuters",
+          "source_home": "https://www.reuters.com"
+        },
+        {
+          "query_key": "china_septpmi",
+          "title": "China manufacturing activity picks up in September — official PMI still shows contraction - CNBC",
+          "indexed_timestamp": "Mon, 29 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNNFY3X1Q4dDV6d1ZCZm5GOER0WWVVRXItNy00M2Jwd1haLXhMMUIyZ2haZFBYQnp6aGdpaEJVWGV6TG1GUEhQR3JsNEJBQUtlbnRKQWRJN0Iyb0pFRG1vQlF0akUzZ2hiYm44eThlS1U3MnRYNTFHbmtNNDNyNFRid2dTc3lNYkFXSFp6M1BGdnItd9IBlwFBVV95cUxQUWtTSlUxSWhSU0RSbFA1RENCajRJRU0zbnU1Wmg5cGFjakN5THZudnFJTlZ4elpNMFE0ZDloNGF4a2wtcXN3SmlHX2RCOXRfZFBlX2RDVG5idmxkWE9paWRoT2VMcllhS1l4dGNzR1ROdEY1WFVmQjJESVJxUDNZd04tTXR3bVFRR19UUnZBbmIyMFNmVDZN?oc=5",
+          "source": "CNBC",
+          "source_home": "https://www.cnbc.com"
+        }
+      ],
+      "timing_uncertainty": "Outside September report outcomes. Reuters/CNBC nominal September 29 dates do not authorize September 30 00UTC outcomes.",
+      "outcome_regex": "(China|Chinese|RatingDog|Caixin).{0,110}(September|Sept\\.?).{0,100}(PMI|manufacturing|factory).{0,100}(49\\.8|51\\.2|improved|rose|contract|expand)"
+    },
+    {
+      "id": "poland_sep_cpi_flash",
+      "event": "Poland September flash CPI",
+      "release_date_local": "2025-09-30",
+      "scheduled_release_local": "2025-09-30 10:00 CEST",
+      "scheduled_release_utc": "2025-09-30T08:00:00Z",
+      "first_eligible_weekday_report": "2025-10-01",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "calendar candidate requiring corroboration; search returned no usable indexed release",
+      "evidence": [],
+      "timing_uncertainty": "Outside September report outcomes; calendar candidate not directly corroborated.",
+      "outcome_regex": "(Poland|Polish|GUS).{0,100}(September|wrześ).{0,100}(CPI|inflation|consumer prices).{0,100}(2\\.9|rose|fell|eased|slowed)"
+    },
+    {
+      "id": "rba_sep",
+      "event": "RBA September monetary policy decision",
+      "release_date_local": "2025-09-30",
+      "scheduled_release_local": "2025-09-30 14:30 AEST",
+      "scheduled_release_utc": "2025-09-30T04:30:00Z",
+      "first_eligible_weekday_report": "2025-10-01",
+      "timing_basis": "standard issuer schedule converted with September daylight-saving offsets; original release body/time not fetched",
+      "verification_level": "official-indexed release date or contemporaneous indexed report; index timestamp is not release timestamp",
+      "evidence": [
+        {
+          "query_key": "rba",
+          "title": "Statement by the Monetary Policy Board: Monetary Policy Decision | Media Releases - Reserve Bank of Australia",
+          "indexed_timestamp": "Tue, 30 Sep 2025 07:00:00 GMT",
+          "indexed_url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5DZnpaeDdQR2xwQW93Ykk5NkVVektvX2RZM005bGxRbDFneVFBT2pMNVZ3X0E1NlhYellaNmZvWVhUTFAyUG1PS1JBb1N5TDF4M0tQZlNSQXp5b2JOZU5QTndveVlyaUU?oc=5",
+          "source": "Reserve Bank of Australia",
+          "source_home": "https://www.rba.gov.au"
+        }
+      ],
+      "timing_uncertainty": "Australia remains on AEST in September. Outcome unavailable in all September 00UTC reports.",
+      "outcome_regex": "(RBA|Reserve Bank of Australia).{0,130}(held|kept|left|maintained).{0,100}(3\\.6|September|unchanged)"
+    }
+  ]
+}

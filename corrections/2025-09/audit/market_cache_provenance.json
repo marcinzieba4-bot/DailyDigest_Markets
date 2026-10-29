@@ -1,0 +1,2949 @@
+{
+  "reused_at_utc": "2026-10-29T10:09:34.625560+00:00",
+  "reason": "Verified existing Yahoo/Treasury freeze available while managed HTTPS tunnel503 prevents fresh reads. Price rows are subset through September30, not fabricated. Pre-August supplementation requested independently.",
+  "treasury_source": "corrections/2025-11/data/treasury_par.json",
+  "treasury_source_sha256": "61cbe7b8ee83a45c3c5a562d87625642b1ad0f19cc8728d7208cd682725cec12",
+  "cached_symbol_count": 294,
+  "symbols": [
+    {
+      "ticker": "000001.SS",
+      "source_path": "corrections/2025-11/data/yf_000001_SS.json",
+      "source_sha256": "f35491f2895e7a4293c73be76a700b463e71bd30aa649150d188fdd95659616d",
+      "subset_sha256": "a85b20469d2d1e19bdc08af14e35324e314ce42cb3d1406fa467b2072c93b8f5",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "000660.KS",
+      "source_path": "corrections/2025-11/data/yf_000660_KS.json",
+      "source_sha256": "9b5df04f9d5b27c15918cee851cdc78e5c7097a0be8552337be7db067d16eee3",
+      "subset_sha256": "357545c31453e94edc810aa829779838e03b6bdeb180c8c789d864e36e74f50a",
+      "observations": 41,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "005930.KS",
+      "source_path": "corrections/2025-11/data/yf_005930_KS.json",
+      "source_sha256": "1d3c2d255c7f09623335a89f97722b0c2ead50e2d71033a2bf739a9022fd44d2",
+      "subset_sha256": "7920cf1d4805c67deb65c274ab2cf747b70bb9372a496cc5fd307e257742e03f",
+      "observations": 41,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "0700.HK",
+      "source_path": "corrections/2025-11/data/yf_0700_HK.json",
+      "source_sha256": "0a44f144db829c448ddc809ed0eedc3219d651a1ae6b992997bd53297a7e3e6e",
+      "subset_sha256": "17a9d55263a288588736bf1eb06119ed293324bbbc1dde103186b88b8d6b8e41",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "1810.HK",
+      "source_path": "corrections/2025-11/data/yf_1810_HK.json",
+      "source_sha256": "cdf3006c35fadb99f97a54733afe449d3406d9b41ebf6f67b4603eff3b53f46f",
+      "subset_sha256": "334fcd55f4442c2e4aedfc6d890dff82c583da94d61f267643dbc852ebd694fd",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "6758.T",
+      "source_path": "corrections/2025-11/data/yf_6758_T.json",
+      "source_sha256": "7fecc35991cd9cad96a847a81b9af39cf4bb16bfdf82bd074ed3fbaf1217698d",
+      "subset_sha256": "e89e530e35d3fcdc92b6284c01536ad35dfd8f9b7aaab77f0f332385253a9d7c",
+      "observations": 40,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "6857.T",
+      "source_path": "corrections/2025-11/data/yf_6857_T.json",
+      "source_sha256": "49f0b2643dc2782676662ef55ecd2b538614da7a2ae5effcab4b3937da27ebfe",
+      "subset_sha256": "d2c7c00d3de63b1ffd1abdae6c10551ebfa20daf11f1aa8b6e8ef7dee8ee1d1d",
+      "observations": 40,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "7203.T",
+      "source_path": "corrections/2025-11/data/yf_7203_T.json",
+      "source_sha256": "50990cc9cba6544cb7b857fc9c3b6f14dc4bb46528fd05596fded12017c1515f",
+      "subset_sha256": "6eaa69aad6e8e97f429fc688c0b3ad9d456c2a645f522cffe06759ed3d7f74db",
+      "observations": 40,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "8035.T",
+      "source_path": "corrections/2025-11/data/yf_8035_T.json",
+      "source_sha256": "a1c9fdf3dba663cdd2a2f368c29f7dac8258c11506433284d87848e1e0bddaf2",
+      "subset_sha256": "fd78b84aa880c2dea52510b9fc85f547b848467f5a69ecdbe06f23badc97c90b",
+      "observations": 40,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "9984.T",
+      "source_path": "corrections/2025-11/data/yf_9984_T.json",
+      "source_sha256": "abcf0ed2aff7aefcf783eb912122762ac070ecb99b5823541f5ce70bf0006306",
+      "subset_sha256": "c3fed2f697ef7cbc80ab00c65a9f19af90227560a9ca81ba64ae47c105d86326",
+      "observations": 40,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "9988.HK",
+      "source_path": "corrections/2025-11/data/yf_9988_HK.json",
+      "source_sha256": "10f5ad7766cd30640ec3d2c3947051b7701230e5cac0a66d1be8f8310790074a",
+      "subset_sha256": "d8352983c178906b64d5abbc173874941f940f90b367f4f6844b19e54ad47862",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "AA",
+      "source_path": "corrections/2025-11/data/yf_AA.json",
+      "source_sha256": "1aaaabefe5273fa7c9e5567281d3ab507c854c17849f8209cee7ba686f5c204d",
+      "subset_sha256": "b48f41ab5a5f63917a03b44dd5b5245b4fb208ce5dde37a26614e68545952dcd",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "AAPL",
+      "source_path": "corrections/2025-11/data/yf_AAPL.json",
+      "source_sha256": "997e14e5653b0e0396285878a2e914af202cb69bf12940aab967da9b479ef962",
+      "subset_sha256": "5ae6292931ab12802f35736886c97bfc5c8dea2c56f01a0057f8e9f64bd42a5a",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ABBV",
+      "source_path": "corrections/2025-11/data/yf_ABBV.json",
+      "source_sha256": "249e25ad14d0e26798d74914e3f2ab11f9e00f5f4d143f5a53e69cd0e0ca903b",
+      "subset_sha256": "b9fed62f9932fdad4f34f2b1e8bec47f0fc13a412cba8c3b59d9c8bee4863c1e",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ACHR",
+      "source_path": "corrections/2025-11/data/yf_ACHR.json",
+      "source_sha256": "18f7c615d1bbc5e25475bba9ca0ec4a885e42a635e417b2d61872817eea8630f",
+      "subset_sha256": "0f6d19622a0dac744f715c9bc61ef10bf1082f3fb17d77b40715282662688825",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ACP.WA",
+      "source_path": "corrections/2025-11/data/yf_ACP_WA.json",
+      "source_sha256": "a335ef354c824a49214307dd6bec9274581bf67a0ba15fdd6daab2e8bbcdb47b",
+      "subset_sha256": "86d32dabc92e8dd2766149b6d66815904d08ae2b07978e003ae52c17f33be1a0",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ADBE",
+      "source_path": "corrections/2025-11/data/yf_ADBE.json",
+      "source_sha256": "99c8b0b9d6cbd516f7be54519081bc4b08a1139d74217441dec0fbfec05f0915",
+      "subset_sha256": "efe07519462e9e9516299a027870306928efe1e4a5fc848f5c62fd2231b3f670",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "AFRM",
+      "source_path": "corrections/2025-11/data/yf_AFRM.json",
+      "source_sha256": "59e8f2d386285f221617583be4de98cbacd66ae09431f2ef124f67fa452d0cfb",
+      "subset_sha256": "53dd2d3722332ee59e125010a143dcc83a2c8e7b2760767db14a71721a43af36",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "AIR.PA",
+      "source_path": "corrections/2025-11/data/yf_AIR_PA.json",
+      "source_sha256": "846d1357cbb4cf7510673e44d5fa288371628d77a1a4e4348fdecf81505dd551",
+      "subset_sha256": "269560024273d8685d9570a2a89da2e1e9b8b9331037364a4c8ac72721bb4906",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ALAB",
+      "source_path": "corrections/2025-11/data/yf_ALAB.json",
+      "source_sha256": "eca2f3b99d3b36ae8f356df8d87d4881df4c4f0d66ee493401a86bf7d0a3b24e",
+      "subset_sha256": "45b419aba9a544aac3c05da3ca497e165c6862224a62bb0f69004d991dd5f046",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ALE.WA",
+      "source_path": "corrections/2025-11/data/yf_ALE_WA.json",
+      "source_sha256": "e6e1ac0354b745d9ec08a0ceb5248daddbfd44f0f7cf5ab27e32eb8c5ed5629f",
+      "subset_sha256": "48745ff6e0ed2e5b01441acb92aac8ad8c3f238a82babbc794bc1fc14dbe16e5",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "AMAT",
+      "source_path": "corrections/2025-11/data/yf_AMAT.json",
+      "source_sha256": "092250a863370520db53c6d2fa19a5dd6645fa3e2d08c15ee79d517fd047081a",
+      "subset_sha256": "7fccb58f0ee286ac55c42cb754ebbedf84add51681dbffca69ef20d47339762f",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "AMC",
+      "source_path": "corrections/2025-11/data/yf_AMC.json",
+      "source_sha256": "ac0093d0292c8d9c040326b4e036604ff5cb0e5fb98bcabbe48fc846dc61a814",
+      "subset_sha256": "e429e82ec816ee786c8efb0d809b9e3a876151f8d1fd839a20550af466b95d82",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "AMD",
+      "source_path": "corrections/2025-11/data/yf_AMD.json",
+      "source_sha256": "d717a2cf0d59e3bb120f431ca3c10fa21c6b795d11c04e0d3b91717b8c65e897",
+      "subset_sha256": "655e66023f7bbbd8e22e85d9fdf8d595e593b05cfa5a0f345d529c095bc9bcb8",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "AMGN",
+      "source_path": "corrections/2025-11/data/yf_AMGN.json",
+      "source_sha256": "c76220dc218257b0849d111e1b67642ae607563ec4188354830d0fd83fae8948",
+      "subset_sha256": "d5c114ec3f5bd85b6de3c679f2fe9c1d2fb4724d9d154d9800528a35b4e0b096",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "AMZN",
+      "source_path": "corrections/2025-11/data/yf_AMZN.json",
+      "source_sha256": "3cf70b19dc2d8e546b04b491df079eb397d48acb0a2de1019625baea8fe0c4bd",
+      "subset_sha256": "ba9f5faca8de4449ff214546e841b62a0026582ae40e1070c26ad1b1d8b86e66",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ANET",
+      "source_path": "corrections/2025-11/data/yf_ANET.json",
+      "source_sha256": "30ffc5d1e9a2be62ae921c0bd948de8fca48e3ba029e4a450677239c98b97113",
+      "subset_sha256": "201530bf8ac435c08a7232054b88efd1a3de99251f343f432254352fec8c9416",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "APP",
+      "source_path": "corrections/2025-11/data/yf_APP.json",
+      "source_sha256": "86b69b2127082bdfe6e74ca5fef6d029f226a72ff37b5dad974ff1022e5157db",
+      "subset_sha256": "936a164f7d6e82661a0052856d64cb41da828b172f1ca0f53bde20ffb57fb349",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ARKK",
+      "source_path": "corrections/2025-11/data/yf_ARKK.json",
+      "source_sha256": "d903b9fd40a1814fbb7d082054c0d282978a18fcde34981dd5aeb325476ab7ad",
+      "subset_sha256": "9836812c72aea21727a329dc100856e3b75b84a67fa707b52e3fe86978463988",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ARM",
+      "source_path": "corrections/2025-11/data/yf_ARM.json",
+      "source_sha256": "56d4cce4957997950fe331bbb8e11f855df78bc61ce814cb661f66757c444eb8",
+      "subset_sha256": "09cc3ef90fed46ab4c7420e7d5847001c299dd1f9cf6d036225737b650028060",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ASHR",
+      "source_path": "corrections/2025-11/data/yf_ASHR.json",
+      "source_sha256": "d0d2207c09e4e7067923fa422869edf94357d65509edc70d25d4810ecb82acd7",
+      "subset_sha256": "01775e22501fc7580a5e723defb216d5cd3528f141a08ccca1b09902b3552823",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ASML",
+      "source_path": "corrections/2025-11/data/yf_ASML.json",
+      "source_sha256": "417db3786f1564cd1cb360e4ecafcd11646774d416ce6ef00b00f653fa2e1c87",
+      "subset_sha256": "35d3d4f58fcd32ddd249be77551677890ca65919aff95e75c62757e28b43fa96",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ASTS",
+      "source_path": "corrections/2025-11/data/yf_ASTS.json",
+      "source_sha256": "0e5768bee359670292624cc9d7feac0f385e10ed3aaebe858d4ce1b20de4d4c2",
+      "subset_sha256": "c9c93144304e265208073c2275f89e4a5b3dd0db1cc3ed95ae6adcfc5b83b572",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "AUDUSD=X",
+      "source_path": "corrections/2025-11/data/yf_AUDUSD_X.json",
+      "source_sha256": "bd880db1c4d61563d19f9b92bf7288ee07ab95dfbdc180d608e01beebeece73c",
+      "subset_sha256": "d0e7f8e504c75e8214a83177d1ccb0b8cdee419dca8998a79d675cba5a02f5f4",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "AVGO",
+      "source_path": "corrections/2025-11/data/yf_AVGO.json",
+      "source_sha256": "38ea07793bd5e199795376971dcfd0571b58ac7d4615669b16aa06e8ec5eb1c7",
+      "subset_sha256": "7c4f49ff9b57a137716558207e27f3350bfb118acb876b394752fd602aaba77c",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "BA",
+      "source_path": "corrections/2025-11/data/yf_BA.json",
+      "source_sha256": "f03b7bea2080220d4d860c143b42d3471a6dd9ccd77a91f316c8d43b4487dd19",
+      "subset_sha256": "173de971dfa3ca11387ffb42ce6c7aec0af79537e1603725b03b4b9edf12e963",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "BABA",
+      "source_path": "corrections/2025-11/data/yf_BABA.json",
+      "source_sha256": "cca5a332bda3faf2210c25de9bf2b5b301257dc06830c389aafe51e2798cec76",
+      "subset_sha256": "4e275c2575b4a4a54a0e693e49b0547fd26b6d42c174abd0d0060731d817d8b4",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "BAC",
+      "source_path": "corrections/2025-11/data/yf_BAC.json",
+      "source_sha256": "9d333711b6db83059f9b21ea28c5c8d5de4e3fa4933e3850b723fb6bab38d4be",
+      "subset_sha256": "284bb355e54e4259bf45db38def889100559bf99b2a2aa36bf8116881da83cd0",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "BE",
+      "source_path": "corrections/2025-11/data/yf_BE.json",
+      "source_sha256": "1af164e1c6bd51c548084065824def7515217bbb1548533c4125691f67129fe6",
+      "subset_sha256": "4abaca8e1887574901a22dd612f4e60ebed4589bde67c274bf26cb9dba10f57e",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "BHP.AX",
+      "source_path": "corrections/2025-11/data/yf_BHP_AX.json",
+      "source_sha256": "cefadf7504b9c39877276e98b3123652a274aed730ccf1d409d02f4a20746e52",
+      "subset_sha256": "2ecf17f0bdba03c02f7d9b15efbb69a33d2e266440d4fe127afe784d4a992514",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "BIDU",
+      "source_path": "corrections/2025-11/data/yf_BIDU.json",
+      "source_sha256": "145c0b81365778406c8dd21f16e002118b5b32c09cee957142599ccb20035510",
+      "subset_sha256": "66267710e85baa259b8a6947d26848847e98993aaf0819d28dd07e6cad385f26",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "BMNR",
+      "source_path": "corrections/2025-11/data/yf_BMNR.json",
+      "source_sha256": "626e360551231386e59acb5527b220c01538f79bb9acdfae129be947e089e064",
+      "subset_sha256": "f8ce49d241e9dbd2f7039362ab4c6390ccb7ccf614f704d385dbff0cfe63ede2",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "BMW.DE",
+      "source_path": "corrections/2025-11/data/yf_BMW_DE.json",
+      "source_sha256": "f3e59c5bbf9050d2f608216eefa0c7e95207d857557ba68924d699b1c7e11854",
+      "subset_sha256": "f59c66c89ffafe4ba635cc74f58721867125653c4899f3120a9ab3ebdab8f4c2",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "BP.L",
+      "source_path": "corrections/2025-11/data/yf_BP_L.json",
+      "source_sha256": "0d398cb2c956fc63b1b7be586279c43c293c462062904440bf0056e52787ead1",
+      "subset_sha256": "a7b8f39b12d8aae782713069bce01d31d3f2c7af040008b5a8760f4f6b51905c",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "BRK-B",
+      "source_path": "corrections/2025-11/data/yf_BRK-B.json",
+      "source_sha256": "9ae5c5824488bd38fc5083f6f019d86f0fbbb3530778ce82bd0c6ab952f84d88",
+      "subset_sha256": "471ad979397ba857c5eb62e4a758a13a92ea6bde198f772ae26b2f43ff586b2e",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "BTC-USD",
+      "source_path": "corrections/2025-11/data/yf_BTC-USD.json",
+      "source_sha256": "c5c6c18d64be2e234d2d7d861d962906b88e28c3c75b4e054ef7b74d274976dc",
+      "subset_sha256": "68f93b32d24dab2a58fbb3abf8dc89962c5a5f0501e5fb260071fe362d61fe0b",
+      "observations": 61,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "BYND",
+      "source_path": "corrections/2025-11/data/yf_BYND.json",
+      "source_sha256": "5cfa9d2ee20ff7c067489057ab13015a2f6a80bc9d96fe8d594d944d1ee4cba9",
+      "subset_sha256": "de97ce1b90bf28509dc5034233859ea366114d2c99bb2da58074ade6d73bd325",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "BZ=F",
+      "source_path": "corrections/2025-11/data/yf_BZ_F.json",
+      "source_sha256": "d5e75abcf525840b3bc8bb0ad0ff37b5b481ddfbca080a1b1666aea612420ec0",
+      "subset_sha256": "cd737b0a8f488ab8a7f302680d0a1d3538e6c533cceaac24174cd287cfa15414",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "C",
+      "source_path": "corrections/2025-11/data/yf_C.json",
+      "source_sha256": "de44ce1f2765440085d67552526295e6877dd0714781d39ebf463fc54d521248",
+      "subset_sha256": "9309d019133d99159fbbe02a7107136afd9d2b918674d588f0eb0bed8752c089",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CAT",
+      "source_path": "corrections/2025-11/data/yf_CAT.json",
+      "source_sha256": "eed9b2d706c71840cfc7fc7f93dd245c294bc6858f4c2e000a1ad0ea88647406",
+      "subset_sha256": "c1790655a918c2fb5d5446a04e87a7b98c15dbf3bc8b198cc346fd80133e7877",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CBA.AX",
+      "source_path": "corrections/2025-11/data/yf_CBA_AX.json",
+      "source_sha256": "6d0a89de5535ed2d74198874c527b33f0ea207f3acdf8466f8d58706c771acdc",
+      "subset_sha256": "f9cca7dca1e80bf15223c52292257535c926a10fb71f950d8501b0b21e23a5a7",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CCJ",
+      "source_path": "corrections/2025-11/data/yf_CCJ.json",
+      "source_sha256": "bbbf2246c32e667d7a4690bf4f98d097e5b09dcc03702ed43c4ca789d001108e",
+      "subset_sha256": "20a01fa9ac018536fc21848db0dde107b90c9688c937d30bfc2b6d1a43140098",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CDR.WA",
+      "source_path": "corrections/2025-11/data/yf_CDR_WA.json",
+      "source_sha256": "c212b892c2556e123ca2e40589f768c44b6998494fa7ac9a473e8c62c0d7a4e0",
+      "subset_sha256": "ec6de983a84df94af353d1a97d8c856243d5d6300a84310229fc3d8f9bb956d3",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CEG",
+      "source_path": "corrections/2025-11/data/yf_CEG.json",
+      "source_sha256": "3f2e4ae6156c75cd87fd8240f1d7f14c04f6b9aea47d750aaefb27a01fa3711c",
+      "subset_sha256": "66572ae017e38f6c0580f77859f92f9f06dd2c3ee3c973a880f5194b8b7b6604",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CIFR",
+      "source_path": "corrections/2025-11/data/yf_CIFR.json",
+      "source_sha256": "55517fafb2bb0c7abdfbd4d400b7fefef1e4e92cfd57100c480565719d608655",
+      "subset_sha256": "e38ef5c79ce4aa207404c93a2fa9cb28d806b0df63b442393b3316429dd33938",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CL=F",
+      "source_path": "corrections/2025-11/data/yf_CL_F.json",
+      "source_sha256": "ecf69d230dec20f76d90615dc8081b46036cbe24199aee52d1a8284b467d57eb",
+      "subset_sha256": "634dc7ae27e8a4e52889855797e4806aef5c3d97cf4d935f57274dfec6796fc8",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CMCSA",
+      "source_path": "corrections/2025-11/data/yf_CMCSA.json",
+      "source_sha256": "bd23bf47c7136677ac6da6f6ec807e35873501613e2ada25fc95ddb111c5434e",
+      "subset_sha256": "47465d72c834b7fc481d8fa62cf081195faf265ffd25e6f2962ced165ea0250a",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CMG",
+      "source_path": "corrections/2025-11/data/yf_CMG.json",
+      "source_sha256": "9ab1c0a08f14c28761b908a9b6643a434baa7db44a7431c06feebdd518924885",
+      "subset_sha256": "f8de3cb8b5dc4df7561f5bb990e478dc9d6147c88c01d9404be18107318a9779",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CNY=X",
+      "source_path": "corrections/2025-11/data/yf_CNY_X.json",
+      "source_sha256": "3c39584f70e558d2510db38aa25b2d466bbaaa51975e50712bb576e7431253c2",
+      "subset_sha256": "e68b02d0dc89d87e05755ee2fe67c8d6f2a069ce102a6bd09b55a4deba9d3b95",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "COHR",
+      "source_path": "corrections/2025-11/data/yf_COHR.json",
+      "source_sha256": "d744b5d5265a42bc0a8a7fce4df61af2fdb12e223b05ccb136cbd7802e5e189b",
+      "subset_sha256": "d8a5314b89fe7b55ddeb5094820c7b263c6d8dc73522a4bc5363db4ce3ea0412",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "COIN",
+      "source_path": "corrections/2025-11/data/yf_COIN.json",
+      "source_sha256": "eb0ab1d03f10b946128ec3a00e5d5034c73db653467da33b1b64dbbd97494396",
+      "subset_sha256": "39450fb2152da9c0bfc16d69ebbe2f9800a1d86e789432cb6531ef9f8e00bf38",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "COP",
+      "source_path": "corrections/2025-11/data/yf_COP.json",
+      "source_sha256": "bebb075163a421d0ed1dc8eefd016cb47c1247a470d3c26d5aa113f31cee36f2",
+      "subset_sha256": "13fa9ffda1ace46f3383bf3082e7c6169369b6862b6471ea3ed3cc802552e22e",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "COPX",
+      "source_path": "corrections/2025-11/data/yf_COPX.json",
+      "source_sha256": "e6f7ea354851ee3af7d8cec67bd95d3e380e2305828d84622255b013f0b0ec8f",
+      "subset_sha256": "831f5a225fb7d128882f97350a67d65d763583b9b131b48bc3b17c05c7326202",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "COST",
+      "source_path": "corrections/2025-11/data/yf_COST.json",
+      "source_sha256": "c513d8f7eaeb38c080f8e77a83acc67c69c29f743086b182fffa730caec18fca",
+      "subset_sha256": "b17a4fed46ca1ed450d324f6dff20c6adb0794e00945d9bd98e80bba2fc7eb71",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CRCL",
+      "source_path": "corrections/2025-11/data/yf_CRCL.json",
+      "source_sha256": "e12f01f19106a7b46e8491053d2d981d974c7ec2b3ce0170e9029e25680ea88c",
+      "subset_sha256": "9b8aeda919930ba4957f298e26f2afdc15d852bddf8a8a7ce3e29e770dbf1688",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CRDO",
+      "source_path": "corrections/2025-11/data/yf_CRDO.json",
+      "source_sha256": "933a28f6c3a1710e0b03ecd8358d25a0eb30adfa0388dff7dc5eba0c6a70998c",
+      "subset_sha256": "a0d1eb0ce1b2c1b82e8e4a655e3b7ffbe50fb28568dc8026e384454e63bd7f1f",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CRM",
+      "source_path": "corrections/2025-11/data/yf_CRM.json",
+      "source_sha256": "a7954963232b55ea4b77f263ee9160cdb2bc7ab8d1fbbc5aa6eef8a3de9570dd",
+      "subset_sha256": "412b7280f206926d5e4b65b1400348b2946c8c6bf4306efaa755fb7ccfe25129",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CRWD",
+      "source_path": "corrections/2025-11/data/yf_CRWD.json",
+      "source_sha256": "d9318e9d64f25cc4cba2f97167a60aea5ca39fc9cd1880c66b550264c3c3a4ed",
+      "subset_sha256": "9e296ba30ab918c9849e7aace5c2909a64f6199696df41065baa6d30218af60d",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CRWV",
+      "source_path": "corrections/2025-11/data/yf_CRWV.json",
+      "source_sha256": "95694296cdaef5514eb3d19b6eb20ca779e4a2b8920bba1f36f859887499d2e3",
+      "subset_sha256": "157d8e8d10bb613b85d653fbcd398b47478d05ae26b90a7d96a16b22f10554f3",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CSCO",
+      "source_path": "corrections/2025-11/data/yf_CSCO.json",
+      "source_sha256": "900305596dbadc194e2b16cc53f6a17d8ebe07d8f9a74f647a9332d46a379ede",
+      "subset_sha256": "1d4ca7c139c7036a0e4a77dae4f74ca923345924f7cece2feb1269884956def6",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CSL.AX",
+      "source_path": "corrections/2025-11/data/yf_CSL_AX.json",
+      "source_sha256": "8c0e36eebf59094164437bbe955a0f73fd8e3fd5e0a4dbca83e5b5e9873cdbd3",
+      "subset_sha256": "432e70d423a4b1ea33aa541a1f56fb9785be6a80c09a4f5e4d6b0af0aa68e8e1",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CVNA",
+      "source_path": "corrections/2025-11/data/yf_CVNA.json",
+      "source_sha256": "a7d881e80d073bbee038b0b43777e7b12b16b28d57652ea22f0ff74c60366c54",
+      "subset_sha256": "4dc8d49604de889ff3dcb6e06a75eeb466f17dc215d801603dcdafcf31e4dde1",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CVS",
+      "source_path": "corrections/2025-11/data/yf_CVS.json",
+      "source_sha256": "7dbdbfcf78fa4c001e97e4c7319a328991d45ed4888dd468c15e9f5b2137b2d5",
+      "subset_sha256": "9d9fc6bbaef32dd5b390d4f0d0c8bfc07f9b35a01e88e8b29cceb49976d08da9",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "CVX",
+      "source_path": "corrections/2025-11/data/yf_CVX.json",
+      "source_sha256": "1785f43e4ce8ae9c6b6a153580df01138fb19951f7fe10bcd9d3cd2483e0689b",
+      "subset_sha256": "e6742d8114ed0cc248ea7d1868bded579e415a622e1bc2fa6c95cdc872550451",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "DDOG",
+      "source_path": "corrections/2025-11/data/yf_DDOG.json",
+      "source_sha256": "3828692682fbed77a2cacafdd57bbbb0d47867e291a35cfdbd11531923bac9d4",
+      "subset_sha256": "9c31c6f1d3737bea4cac73506f98ea20e867310ce87740112693b21f00d12d2a",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "DE",
+      "source_path": "corrections/2025-11/data/yf_DE.json",
+      "source_sha256": "89ced1b1067cdb73dab274d33308363c3664a86d25d28109c14d007172d5a2a1",
+      "subset_sha256": "f7cb1d22dc87aa38768a5df040c81a75843e0856ed868fdd0230fcdbe8808c5c",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "DELL",
+      "source_path": "corrections/2025-11/data/yf_DELL.json",
+      "source_sha256": "1712b93b7fb9d10e4b8f5dc5df6e65e97c0e3e7bde58ead123608c2d82d0cd21",
+      "subset_sha256": "9f4a40749067d894b95dbd0dd84308116b918df15ef93503caf35e275d196d9f",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "DIS",
+      "source_path": "corrections/2025-11/data/yf_DIS.json",
+      "source_sha256": "bc76c272e162f3190aaee68cc6832eb725f9cf8a0d4e169634c110a62a57bbd4",
+      "subset_sha256": "400249eb4ffe2c3f7ca8911fbd4f44a2b824b1b54d43f18a17fb516e3486d67d",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "DKNG",
+      "source_path": "corrections/2025-11/data/yf_DKNG.json",
+      "source_sha256": "0e539fea4c16e833ed387f48f52c064033a3a43ae4905473ea8f8ea4a221c777",
+      "subset_sha256": "6330186e1b9edcf7c6d48d471404ce28b9960540ebcaf83ca81ab0c7c5e06bca",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "DNP.WA",
+      "source_path": "corrections/2025-11/data/yf_DNP_WA.json",
+      "source_sha256": "0fe50c271225797aa5052baf25c7cfde51a3a1c904e2b035134ee373d5097e3e",
+      "subset_sha256": "04870ca8a16e5adbee71637489aa8394e46d69f8bce74333b871d628ee695f9d",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "DOGE-USD",
+      "source_path": "corrections/2025-11/data/yf_DOGE-USD.json",
+      "source_sha256": "89460c6fc37dcd395b9aeea5ef395e2ffb9600a1989d9030e2785e1c24e13f04",
+      "subset_sha256": "9fc56e02f63247caf1e024d13fc5d7720192d66b266e40952e68df038a0835b6",
+      "observations": 61,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "DUK",
+      "source_path": "corrections/2025-11/data/yf_DUK.json",
+      "source_sha256": "5f87f2aa1a9f35a2dc67056a0628cfba203cf41f1269e60de725c36c98768dae",
+      "subset_sha256": "8ebdf1a83f13ec6cf2fc17add82eec7eb8309d5ec58a4a3fc2e7edd58fedf5ae",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "DX-Y.NYB",
+      "source_path": "corrections/2025-11/data/yf_DX-Y_NYB.json",
+      "source_sha256": "e333bc2d36e6016126ce4220a3fcd15203e439e73e9d687a6e3e6318c2fdcd14",
+      "subset_sha256": "6b0009107c614254dcf200e8bdbc7d7436fca1440b077fd36d7a7d0d8432671c",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "EMB",
+      "source_path": "corrections/2025-11/data/yf_EMB.json",
+      "source_sha256": "223e301c25b357bd1e1b4e3bc15009adc9846b15d306b960a79e13b7c6277ec9",
+      "subset_sha256": "53ec0b4a7d0a08a9809add9df06d71a67017f319d89dbe67760b69b87aa4889a",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "EPOL",
+      "source_path": "corrections/2025-11/data/yf_EPOL.json",
+      "source_sha256": "98f31f95e93b37dc2de04509cc47f0a65e21396d596a6e47b5a9c95c701e7c81",
+      "subset_sha256": "a686289f4a7e7680c7f12c8347eb242cf0f08aee9cd4bedcbf81581f4d9c2c53",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ETFBW20TR.WA",
+      "source_path": "corrections/2025-11/data/yf_ETFBW20TR_WA.json",
+      "source_sha256": "10ce7f2dcf930cb0b8761c468b90160a6e802ac2a7243bfcdd79c803dbcb0f9e",
+      "subset_sha256": "1dc73d4fe17aa044b7e17bbabb2055e9c64125f7bc6ee1375d2b74137fdb60b1",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ETH-USD",
+      "source_path": "corrections/2025-11/data/yf_ETH-USD.json",
+      "source_sha256": "bbad2a78a990b2c8a8d4fe6b02e1c8c8ad93de6d0ae173c90d0c2a613593cb0d",
+      "subset_sha256": "6007121f79f933eba7684cf1c18cf90cb3e6e84b8e9488c966bac54aa28c8d4d",
+      "observations": 61,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ETHA",
+      "source_path": "corrections/2025-11/data/yf_ETHA.json",
+      "source_sha256": "aeaec5ca1bdf5fa56f91c9e43c394f20b11b2ce573f572cf0fb9383746a8462c",
+      "subset_sha256": "12b74b4922df41fbad227bea271f87bea49a6c2fff530149aa40adaa3176b611",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ETN",
+      "source_path": "corrections/2025-11/data/yf_ETN.json",
+      "source_sha256": "ca7d06c676e18cd0b9f84b8238be0cce6d68afcbeff8d859e9653cf8d56e9268",
+      "subset_sha256": "ce5affef0d3cc4568d226d708f39dcb1c336722ec891bc5dcebf0d3acfe86fb5",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "EURPLN=X",
+      "source_path": "corrections/2025-11/data/yf_EURPLN_X.json",
+      "source_sha256": "17058139678c72765e505a784d5342809188435b018e6fe3d738477924079beb",
+      "subset_sha256": "1a6cfb344d74e33cb4a4d9011ab0781e6a1c0b6c0cf272216cf73418b9a22f6f",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "EURUSD=X",
+      "source_path": "corrections/2025-11/data/yf_EURUSD_X.json",
+      "source_sha256": "2493f8f1ffd4fcafaed72b6a4b4e06c1f3e0908796b7e8b998075b94df24f7de",
+      "subset_sha256": "438f0a72517c19de22dfd9729e3f5bd02a46701bd8e5d9d0bedbbb5f5e82128d",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "EWA",
+      "source_path": "corrections/2025-11/data/yf_EWA.json",
+      "source_sha256": "0bd565174160e2144a7740f0fd5e9fae2234728cf1cb506157713e6be653080c",
+      "subset_sha256": "3167ac3cdd92ceef3659afbab5521b7222a2c6ddcc5f6d2fd5987075bc304624",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "EWJ",
+      "source_path": "corrections/2025-11/data/yf_EWJ.json",
+      "source_sha256": "7dceb2fabc23d7ade5e0f420810ee229eb675894d7f2f3acb85cefc7893ab061",
+      "subset_sha256": "897be1edeb9df4f6349ffb646f1d1eda82c96a5996c02db4b911ab96ebce850a",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "EXV5.DE",
+      "source_path": "corrections/2025-11/data/yf_EXV5_DE.json",
+      "source_sha256": "bc8bc522e825cb6e862206f307a22d0d83cb34ceba81267e14240d018486c883",
+      "subset_sha256": "4485927e5f84e47b21d02d1b01febda90f0178e413735350c4583a8c31cc9634",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "FCX",
+      "source_path": "corrections/2025-11/data/yf_FCX.json",
+      "source_sha256": "27938482c0a97e760f73e601d04516be91c8653b17b49e63bf76b8157e7914b8",
+      "subset_sha256": "e681422ab37b7b62ec39ef3b918401f41ea843b4b45b2fb0990a17941f5e39ae",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "FEZ",
+      "source_path": "corrections/2025-11/data/yf_FEZ.json",
+      "source_sha256": "29b40db80b68961670e3862deaefb04a34221b7f9dfceafaea52e87a42bb673f",
+      "subset_sha256": "2e569fdcf527780a7b00c5f997eebc86fb80eebf60f68bb4eee83edc636e7ee9",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "FMG.AX",
+      "source_path": "corrections/2025-11/data/yf_FMG_AX.json",
+      "source_sha256": "fe2fd98b20e51433e2b23caa139bd590a44cc7a2aa80f45479178a1b39156738",
+      "subset_sha256": "d9c9519e991105acb5467db04d2136c1aa6633a06926b539d3ed8f4b04b2687e",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "FXI",
+      "source_path": "corrections/2025-11/data/yf_FXI.json",
+      "source_sha256": "4bdd5cd8d5fee002e2208eb74da3ab280dc086b5799e7dfb0d44cbdf255c202e",
+      "subset_sha256": "59623dc27d9b244175d8df679bf4f10c0e2b42a138fe2b3ee6a6e0c02b50aa36",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "GBPUSD=X",
+      "source_path": "corrections/2025-11/data/yf_GBPUSD_X.json",
+      "source_sha256": "070047634621f0d14f5fba9e68592c2f624b68a7e0d618ecdf981eeda2eb7b00",
+      "subset_sha256": "f3b0a172689b8029f606cbaeb0a9125d0097f186ba7da7feef18053923804be6",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "GC=F",
+      "source_path": "corrections/2025-11/data/yf_GC_F.json",
+      "source_sha256": "487f873e16413d581f36760568465602276581ed1a676739d5f8c7585ebb8e40",
+      "subset_sha256": "d717638b555a09bb9412daf9f55952703f16acf93e50f3eb1af503aa568b63e1",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "GDX",
+      "source_path": "corrections/2025-11/data/yf_GDX.json",
+      "source_sha256": "db4938b7968b39655fe383d01f83e010f9bbe8b5a6ba951b781335a1d3368554",
+      "subset_sha256": "ced30d3210bad1fca258cb65f07f54391356daa32c1f21229d4975f9a7a01e1b",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "GE",
+      "source_path": "corrections/2025-11/data/yf_GE.json",
+      "source_sha256": "8f1bdd2b64bf20db2ec34aabeefd445852ed568ba87977af8c3d45a14ff9c1d0",
+      "subset_sha256": "4b18d79b2dd2eccd0d1a43cc9a85a078d75f816ace19097c2454825111e1b921",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "GEV",
+      "source_path": "corrections/2025-11/data/yf_GEV.json",
+      "source_sha256": "93074a4af2b45552bc021d334e2362a24c3c9ee6ef8ad5021fdbe260db255e78",
+      "subset_sha256": "39a4153a88a40e730fb4f33c22c90727ca6de9553d3c48bbea107b4425787a75",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "GLD",
+      "source_path": "corrections/2025-11/data/yf_GLD.json",
+      "source_sha256": "1e6926f10d902ec350b39efa5953ac36b9c6e1e5dad7c3d653a641e3cfd7de15",
+      "subset_sha256": "98bfd9db91c579bb57c465d7318635cbe5f671897ef0e575b6b3ab5265b58c62",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "GME",
+      "source_path": "corrections/2025-11/data/yf_GME.json",
+      "source_sha256": "a8aeddd57df201ea539f9c250e0d6ff71d53968f8eb5d19984b1e0069c14b723",
+      "subset_sha256": "023d47abb1e0ed11f1fe7ba0c645297f86fdf735f2eb63d9b1d034a1fcb65c19",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "GOOGL",
+      "source_path": "corrections/2025-11/data/yf_GOOGL.json",
+      "source_sha256": "6c37d50cbe6bd7b49e2abd45a22362f4592aeeedc22eab014b5aa4956a1690f8",
+      "subset_sha256": "9a77c3144c5e5e2895cbd31b127ef29c3f0123bda0f4f194a7e4124d8e15db1a",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "GS",
+      "source_path": "corrections/2025-11/data/yf_GS.json",
+      "source_sha256": "44ab4c8a80c0687da129fc9700766c5a0983397c9d939c11fbc179acb329dd2f",
+      "subset_sha256": "5125440eae7a09193a66cc3c1dc7908ba7af24f84ffdd5a82e10cf281a950813",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "HD",
+      "source_path": "corrections/2025-11/data/yf_HD.json",
+      "source_sha256": "651bb77dcfec3e36e40917f57ddfd575e06c57e7a15c89ee501f9a35a72a7cc8",
+      "subset_sha256": "e8aa44d207cf157f26197a63df61a12249af7f6f317753cd2b78b02e1ade2a8e",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "HG=F",
+      "source_path": "corrections/2025-11/data/yf_HG_F.json",
+      "source_sha256": "a87ecbe15db855c12cd5081635c795fc363c458ac2fe83980e204774a312edef",
+      "subset_sha256": "3d62ee8f6d80df4bef96062e173eb80a328249046c005a83f3462822a8229962",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "HIMS",
+      "source_path": "corrections/2025-11/data/yf_HIMS.json",
+      "source_sha256": "1aa9a3589df82d2b7b17ad61f267675b4e91d093532c54a08e99d67270dab5c9",
+      "subset_sha256": "a66c7ee36834aca30e8cd037053ab2d39de2dbb8f696c1ee23b65a3834d5ff7f",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "HOOD",
+      "source_path": "corrections/2025-11/data/yf_HOOD.json",
+      "source_sha256": "a0ca34c46882c33e034af738220244c033b84d694c4c5663127c3ffdf05e792d",
+      "subset_sha256": "e6c9916fcd22f6370ba07b6f80bb127c8a1ab0f5f67919763031531a007a8cd0",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "HSBA.L",
+      "source_path": "corrections/2025-11/data/yf_HSBA_L.json",
+      "source_sha256": "e24848198fa7d2b11479d0fc5d91e8a664d8e27dae147c3da0264965dbd83b79",
+      "subset_sha256": "4056c5876a23d5faf18680885005b9098e779c458e37a9fdfb950670fa16f721",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "HYG",
+      "source_path": "corrections/2025-11/data/yf_HYG.json",
+      "source_sha256": "7643b12f73b619440fcc23638b1f25aee0f835569986a6fc88b573d05b3e497a",
+      "subset_sha256": "4a6faf8c94b61a8706256e252e5a2e88947431bfb3c8bac3c16197ed8ef328ba",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "IBIT",
+      "source_path": "corrections/2025-11/data/yf_IBIT.json",
+      "source_sha256": "e1efb962783bb4b13febc7e22be43d4c9bb956bbd4d5f158d758c4a638093267",
+      "subset_sha256": "37bbc954ca93f3ac9cc349ecf0a1ca66218bac39bfcc4bf53af5b18261648ba4",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "IBM",
+      "source_path": "corrections/2025-11/data/yf_IBM.json",
+      "source_sha256": "3f6d21843442f8fd7c27fe0b65c41268ef4866b77ba610840ea1df8ff73d69e6",
+      "subset_sha256": "18c620d815e11237a95f731ff3da244f7e564d295918611a00bf901985558ac4",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "IEF",
+      "source_path": "corrections/2025-11/data/yf_IEF.json",
+      "source_sha256": "5589484862dedec011f6f59703da438509cbcdec3c14c4a5c1d8ef55bfebc52d",
+      "subset_sha256": "a50bfd838a2bd382e6fe934dbb4c9b26887de19a995bcd56b51e1ffa97ddd382",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "INTC",
+      "source_path": "corrections/2025-11/data/yf_INTC.json",
+      "source_sha256": "38a2c6cd43168a27300ee5b8b1d3897fd1be9455caa1c5a0be787a15c72b9922",
+      "subset_sha256": "d73d13f15430715df5d126710a596591ea1cee097daaf1bdba7062f7bdb835df",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "IONQ",
+      "source_path": "corrections/2025-11/data/yf_IONQ.json",
+      "source_sha256": "ea3c577efddd4b599b3b513ba0df57bd4717fb89199642fd413deb5d79e383d7",
+      "subset_sha256": "fdaffb6446c37936ebaede6bc6e78a406a4c9df96a031ced4ba711d33927c35c",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "IREN",
+      "source_path": "corrections/2025-11/data/yf_IREN.json",
+      "source_sha256": "92dd1665c6359630ca975627ebe51940d220e989e5b192c287a8a83cf93e7736",
+      "subset_sha256": "91a3b2b09f30672aa49fd4c1977d70193f25ebc8fbb3ae012c93e070700bd0f2",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ISRG",
+      "source_path": "corrections/2025-11/data/yf_ISRG.json",
+      "source_sha256": "2c033fd39a6943edf71e56bb437aa28b9f89b72b49a1c9d704b4c5122b8bebfc",
+      "subset_sha256": "fc71628f479edfce9ae9a1fcf7e01eda21a68ab42545381af6b37a5c644f4654",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ITA",
+      "source_path": "corrections/2025-11/data/yf_ITA.json",
+      "source_sha256": "6813c763344f0d370c1b7ae1c12c96a6a05e980fe0aabc1c01c06f1462e51487",
+      "subset_sha256": "0c91103dc4804878d1c3308d3e106abeef3c60b571374e0cca38f6aa37a17cf5",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "IWM",
+      "source_path": "corrections/2025-11/data/yf_IWM.json",
+      "source_sha256": "bcf5cbc0cd8bc87c85f7eb9494e860c71b890109a819b970661afcb0eecc41a9",
+      "subset_sha256": "fd3c58b6b0c1aaf34ff3b56fe01315d2cde0f624ba1f89dc6fd6dd72ab54a64e",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "JD",
+      "source_path": "corrections/2025-11/data/yf_JD.json",
+      "source_sha256": "1516ba998f125aa17c79de67a83d3d4cde2d7436d17224a83773d8a6fd28d47c",
+      "subset_sha256": "956b851a1920db7f583c34e317a10d36a44be85fdb88ac217319d4dffcbf8d00",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "JNJ",
+      "source_path": "corrections/2025-11/data/yf_JNJ.json",
+      "source_sha256": "7d33bf1f342f5244490420b958a3e2a4ad3f83bfcce8757b7232c79d8d325d40",
+      "subset_sha256": "d14821966afba5b95854966ad9a79a6c59e79ee078d013b99f441f3e0beb4e18",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "JOBY",
+      "source_path": "corrections/2025-11/data/yf_JOBY.json",
+      "source_sha256": "39ebca68e00969a51cdae848587a8881ca39766cf76ccca7e420af173db82a99",
+      "subset_sha256": "e34fb1f45b197fa931205230b1dbc330a7944b83c71d0f6ddcd99610b1355924",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "JPM",
+      "source_path": "corrections/2025-11/data/yf_JPM.json",
+      "source_sha256": "8368b087f02fe53ab298d6cb524092ca3574c419bc02ecc52daffd7639c07d2c",
+      "subset_sha256": "3b5bffdea20e202900ce5dce4db1fb8f817ee22005fd1b71a332981f36434b59",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "JPY=X",
+      "source_path": "corrections/2025-11/data/yf_JPY_X.json",
+      "source_sha256": "47370fc701ed469cfe65a073019571dbe36d5fb078f25edd4ef91a5a1681a0e6",
+      "subset_sha256": "cf981fdd9b51f3bd4344dc90fba6aec9b9063a14cb74d9ff656e5a13c051eec8",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "JSW.WA",
+      "source_path": "corrections/2025-11/data/yf_JSW_WA.json",
+      "source_sha256": "ff1f640b26324aed38c4fdadb56e52fe5d5ab069fccc4f3b1c6a82778798fd60",
+      "subset_sha256": "edc46a5f3a6590507baa3f70303c2b24b6874df6787900eb86616fafdc2680a2",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "KGH.WA",
+      "source_path": "corrections/2025-11/data/yf_KGH_WA.json",
+      "source_sha256": "7f346d879debb9e0868e1e4c0c607947bdf0841e4f6210f10a0c04e52f07b656",
+      "subset_sha256": "2f79d823df32ec6d8465d3cc33ae324ea03e3a2bbde88e50bfaa8583fb17cafb",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "KLAC",
+      "source_path": "corrections/2025-11/data/yf_KLAC.json",
+      "source_sha256": "bde71fb0b26cec20c8778e98801bbc6d8afe56a24ae56b9f2f590781ea217849",
+      "subset_sha256": "52cb6f963086b3617832bb5fa70aa4870d76e125f1716aa03dcd55ba53a1ef0f",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "KO",
+      "source_path": "corrections/2025-11/data/yf_KO.json",
+      "source_sha256": "6aab53d66e52113b711ddc2e063d0a455eeb7e026dd7f6f974287b149795b1c0",
+      "subset_sha256": "950af571b09f7ba504546528f1a5bb4b2123443da843a50010248aba049a231e",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "KRE",
+      "source_path": "corrections/2025-11/data/yf_KRE.json",
+      "source_sha256": "060633b910bba5177819f53ac0052d1af6ea3ab4ceb6ac9a841c16c0221f7e2c",
+      "subset_sha256": "804c8c9d5e72f9aa0176465d35eacd1f13e2e8d10d6e3a0cae902d6cd536199b",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "KWEB",
+      "source_path": "corrections/2025-11/data/yf_KWEB.json",
+      "source_sha256": "2d75a3e3ecc80d324c837c026b082530212322484f0006de61fbc19c82d8b15d",
+      "subset_sha256": "9780cda94db25122616cd77072aefd0039b26ccc64033b060c3a1f0e054730fe",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "LCID",
+      "source_path": "corrections/2025-11/data/yf_LCID.json",
+      "source_sha256": "1a4aee900b0fc8e9aacc7fee81b8faa8093b68fdd17140dd311180d1f7902e31",
+      "subset_sha256": "a13e09ff01a4a532218cf1d3add34382e6da0568aae4ccaadd258697517d2e7f",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "LEU",
+      "source_path": "corrections/2025-11/data/yf_LEU.json",
+      "source_sha256": "8fdd33174c4c81b898f3b58b03009762c7628d5cd007a16cefcbfb85cf36c39b",
+      "subset_sha256": "f4514db4eaf8fc8480ad22d569581052272814c5d87ac4f52c7449bda6726fef",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "LITE",
+      "source_path": "corrections/2025-11/data/yf_LITE.json",
+      "source_sha256": "0dfc6781bedc99a12d6c12a58c8919ea2c9609ae0df95fb914c9cc3ee8b86d5c",
+      "subset_sha256": "d92e8ad5e4404f81809db346a870ccae5ed262d94825a3e269c0d473f0b347e1",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "LLY",
+      "source_path": "corrections/2025-11/data/yf_LLY.json",
+      "source_sha256": "514ae9b88e9f0b2a4c1e3a28b2e1d28a34f940f423c947df800863d91089bffb",
+      "subset_sha256": "c83c8b2b8a14bb62890d41a0ab4b9d0a7818119f996cc73a00e53a1acc8a2391",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "LMT",
+      "source_path": "corrections/2025-11/data/yf_LMT.json",
+      "source_sha256": "a8310355dabf98cbdbd0aace5b458cedcf5436ce6fa0719edabfb4c6ba40d894",
+      "subset_sha256": "d97b5d7d590ccc62a329f928b73dcbee9fea046437c8e4608b7cd5dcf686fe0f",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "LOW",
+      "source_path": "corrections/2025-11/data/yf_LOW.json",
+      "source_sha256": "00fd943bd6c018022abd07002f4429d90b3cfe4698cee682d6d51a9ac8f3d513",
+      "subset_sha256": "6fd9028d8c1e75b4b736bdd8b6a7580427f2139085ddb3a795a2be1ae2f4027a",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "LPP.WA",
+      "source_path": "corrections/2025-11/data/yf_LPP_WA.json",
+      "source_sha256": "6d237a87ac08405caa0b327a9d38f5b3c22d3b4830fb7b6fecddbe92b8b7f137",
+      "subset_sha256": "5a0b26dc8419ebfd42eb42204489b939ba40d4056f5221d2075299da3744b3c5",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "LQD",
+      "source_path": "corrections/2025-11/data/yf_LQD.json",
+      "source_sha256": "211660741280b79836ec5ae8acb8f02d73981523474e24cfcf3a654d69501f18",
+      "subset_sha256": "b3e06aa6489c948053b6aea4a937dfab6808337622b207a80969ffe67c95d115",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "LRCX",
+      "source_path": "corrections/2025-11/data/yf_LRCX.json",
+      "source_sha256": "c8732418a5615070128d8d39bca2bb4f708044825c512ed17187a4dcb138c1b0",
+      "subset_sha256": "1532953c55ab4685a88cce8ec9ef3a50a9ced2c89fd13cee16c52698a0dbeed2",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "LULU",
+      "source_path": "corrections/2025-11/data/yf_LULU.json",
+      "source_sha256": "e12c6f5453c415ffb9853dcef803f6e450e427e26e89d7b3ce90d7695bfb56a7",
+      "subset_sha256": "89d91d796d4064bc0e0fb0d9dad6c037d2494be12abe05259f7548f25e4c4012",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "LYC.AX",
+      "source_path": "corrections/2025-11/data/yf_LYC_AX.json",
+      "source_sha256": "1a6d45a31d289ef01fcf91acc5d1600483f1e1b7a3f61f5da2a50dd35692afa1",
+      "subset_sha256": "bfce583778056330001e9dae3b51d9e881757b10a46c230fb70744f95b5bf6f6",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "MA",
+      "source_path": "corrections/2025-11/data/yf_MA.json",
+      "source_sha256": "280d26bb728eeea2a8e4491694d782ccb25227a2301bb7cd75ec35c281199995",
+      "subset_sha256": "32d5f602dc8be7083f7db31048579dcc9214f871583b3f461ca5eed5676b640f",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "MARA",
+      "source_path": "corrections/2025-11/data/yf_MARA.json",
+      "source_sha256": "dc8e9ae3f3e4c8b4a0d7c4e43cf1b43856ba91db49710a575e73717e092b3001",
+      "subset_sha256": "82dece2d0f8d7fc681c8e325dbc86730beb3315fc61f2b38f9faa3d9d3621007",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "MBG.DE",
+      "source_path": "corrections/2025-11/data/yf_MBG_DE.json",
+      "source_sha256": "afcde7875eab393fd0a72aa6daeefeef612c04570ce798b2c236218416517f6b",
+      "subset_sha256": "6e78176c04a153117f6c19ef93eb8a260dc81bef9cbe978ca2a4763a254125d0",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "MBK.WA",
+      "source_path": "corrections/2025-11/data/yf_MBK_WA.json",
+      "source_sha256": "99adcbcf9c724d677f657b72a3ed4347b12b1e00c8bae10a03228a09422d8693",
+      "subset_sha256": "2a6b5717bb10ecc136279fd677ffa69586492249746f0d725f02f5385db1f796",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "MCD",
+      "source_path": "corrections/2025-11/data/yf_MCD.json",
+      "source_sha256": "471505cffbec03ceb8cc83ab1b02efbd542c0c5c395d18a399dc094d52221d94",
+      "subset_sha256": "b664e89d0e65db11e305306d8ef5135796813d5273a926eabd6444c6874ba430",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "MC.PA",
+      "source_path": "corrections/2025-11/data/yf_MC_PA.json",
+      "source_sha256": "3bb9f483fb081f4408b610386279872e3cf2eee12c79ca178c58aeef44e6736f",
+      "subset_sha256": "2d05e61d78433b66e0237de039dbfbc870c1adb8b9be658a1d4179e4792ab209",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "MDB",
+      "source_path": "corrections/2025-11/data/yf_MDB.json",
+      "source_sha256": "b23e955d7ee316ca86125d91619445590753f7d376dd7e4b56b78c040635a94c",
+      "subset_sha256": "148ceb45bbff719513ebb105bb33e1f41322f68de066a99edfdca2621339f616",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "META",
+      "source_path": "corrections/2025-11/data/yf_META.json",
+      "source_sha256": "75ff553b4ff1153372667d383aa3db3af4cc0f0f2ee8daa5a38def70fb7cd19a",
+      "subset_sha256": "2be40cc1e8e3232bc29073dbeccfe0474c7c5cef754b8de3b39f53e1b5786817",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "MP",
+      "source_path": "corrections/2025-11/data/yf_MP.json",
+      "source_sha256": "1359fb828f48e1600eda279cd2e93c13f2f8dd843844e824ddffa30a2a1ad996",
+      "subset_sha256": "82110f9d2cb0027173230f658eba2fd2fdfbf87b0fcb809aeb69f712c95c70bc",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "MRK",
+      "source_path": "corrections/2025-11/data/yf_MRK.json",
+      "source_sha256": "22939cd98cd2e62d4adccb0f7809fbc81168add2425667c9fa7b11a8cdae5c8b",
+      "subset_sha256": "b206a836b708ddc93e50d12f2594fcba1d67e4269f1e8a29ef51f94c8d055449",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "MRNA",
+      "source_path": "corrections/2025-11/data/yf_MRNA.json",
+      "source_sha256": "573bac78f465fe7f6095b15ffa172072960cac9d4625ff8809b277dcf819ac79",
+      "subset_sha256": "f776eb29fa0be8a88b063ec38fc1a474ddd90ee60abf03e889a54cbcc95a6e5b",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "MRVL",
+      "source_path": "corrections/2025-11/data/yf_MRVL.json",
+      "source_sha256": "9f3a1516999c01a95fb390bfcd34ae9d19eef8b03e4d4aff5c3eaa14922e813d",
+      "subset_sha256": "eb739c4e69ce6b819d65fa4da6110430fb80681b26da87372b3a1ecee81519ba",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "MS",
+      "source_path": "corrections/2025-11/data/yf_MS.json",
+      "source_sha256": "e9fa92c89b149c936f0ee67d6f62a9c105fc285143fc9ed0cc146dfc6d29a6ff",
+      "subset_sha256": "71c29ed8c85ca83ade69e2f635feafbdd517349f6e9109db3f646598d281b161",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "MSFT",
+      "source_path": "corrections/2025-11/data/yf_MSFT.json",
+      "source_sha256": "58401ea06adc8b210cebadb27c72e7acd7276309e015c47c419ec6be9f25e10a",
+      "subset_sha256": "891a28df89c52dd365ddb74256a6a208920390034a3928e2cacf5158cb9db487",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "MSTR",
+      "source_path": "corrections/2025-11/data/yf_MSTR.json",
+      "source_sha256": "980d6d52d76d454ab9058455c9efabe46e05fcd6c22d9f9ef606205c5ed0193e",
+      "subset_sha256": "0b0ea9cb191b39b8147311cb0fe9ca072000ad705079deac5680fba1c60e435e",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "MU",
+      "source_path": "corrections/2025-11/data/yf_MU.json",
+      "source_sha256": "eaa17220990faa84f7f4054069bc2bb43405deaad1c97f47c4e6a1eaa25c8a00",
+      "subset_sha256": "6c1fcad06de60b6a189fd5c2c53817240a3f4a9bcc51d7c797c41a23192e3b61",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "NBIS",
+      "source_path": "corrections/2025-11/data/yf_NBIS.json",
+      "source_sha256": "1dba050aa330fa452f858da31d5fcd91e4edbbd53509f28607de02e5eec7ca1e",
+      "subset_sha256": "ba6475c4382ffe79e30ce43bb08f7bf99222d4b8c1c9d08ef333ff10c1438c38",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "NEE",
+      "source_path": "corrections/2025-11/data/yf_NEE.json",
+      "source_sha256": "3737f64b87d4cd42663fc5e4bb0c1331c831f5d6f98fee1a4ecf87b97bcc3797",
+      "subset_sha256": "377e76569beac28942e05c1371630c78626434812b33377ab437c1f2c54ced62",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "NEM",
+      "source_path": "corrections/2025-11/data/yf_NEM.json",
+      "source_sha256": "d1a044bb4b688188eb6392e8e0de4c8582bfcb33534f97032bbf5f14ae3bfa48",
+      "subset_sha256": "118fbaf13502e82ae6c81cb80f4629133f52fb1f0871c466839357f17fc0bc69",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "NESN.SW",
+      "source_path": "corrections/2025-11/data/yf_NESN_SW.json",
+      "source_sha256": "aa6ffaf164afbe858231f231f5ccda031e8922ec4a4064f097b85205eee95dfe",
+      "subset_sha256": "008a0e14b134773b5337bb341d5174e66bc0a574288006c044cb8d0d8dd5ef79",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "NET",
+      "source_path": "corrections/2025-11/data/yf_NET.json",
+      "source_sha256": "ed11e5f1210cbecb55fdba0d43c4d7377159a564fc1ce6327bd87daf9cae5889",
+      "subset_sha256": "6d1b384992c62f87415b0d87a4067c6e80be29d9bcee2ee4cb9378f7f371fc4b",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "NFLX",
+      "source_path": "corrections/2025-11/data/yf_NFLX.json",
+      "source_sha256": "a2b76ac6010b904a38252166bf0c45c7946f6d26563e03e9a7974c47c80dffce",
+      "subset_sha256": "576972916d6d212441d2464fc27425cc60d82db4679d4216fcaba60956a561e1",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "NG=F",
+      "source_path": "corrections/2025-11/data/yf_NG_F.json",
+      "source_sha256": "14c41d669578c8cd5804a6e0aef5b9dda2fe8d48040c40b56c200427ef4cf839",
+      "subset_sha256": "86546e7d43a4de77f97a8f22c7ca857ee10b92dd906ee0d8655ff4c6b9fa2782",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "NIO",
+      "source_path": "corrections/2025-11/data/yf_NIO.json",
+      "source_sha256": "78bee791f9e8254206566728932ebaefd1c2e23da9abdbe1cd26bb2120b684cd",
+      "subset_sha256": "ebecaf9b366d5bd8a3cc4970ed2ab297a1544c099f1d617fe5c4df23138b148e",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "NKE",
+      "source_path": "corrections/2025-11/data/yf_NKE.json",
+      "source_sha256": "e06b7d3f0cfc2d1e678622c0dd1ef9fc5434824dc393239c4bbf09adb1ee1cc0",
+      "subset_sha256": "ddbc4d1ef5d27e3dcba7ccd94e55f49ddda8adb73ed13c0cacc5d589e5aa4e4e",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "NNE",
+      "source_path": "corrections/2025-11/data/yf_NNE.json",
+      "source_sha256": "6e75797d3d1c5711d499580f8deab9f57b19c74f6eba92e278672ba9eab54d81",
+      "subset_sha256": "b0dc7abed366293dcbfe6824763cdc7ad0aaabb4044011de1be6fbecd8a3d29d",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "NOVO-B.CO",
+      "source_path": "corrections/2025-11/data/yf_NOVO-B_CO.json",
+      "source_sha256": "2ff514014bedb3c27382ad17e63841ddb713cd52fe4ef633fdc86a4f61ae3bd0",
+      "subset_sha256": "cc48a9a936c5a2c374d87971e554df77f0e4ea35e8bdfe8f18a6f475decd9cf5",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "NOW",
+      "source_path": "corrections/2025-11/data/yf_NOW.json",
+      "source_sha256": "c3910e998c53cb7d1031cb1bdaeddabaad80395fb96396421387122f52b824f5",
+      "subset_sha256": "2fe4d1a6bf3fad60375d6c10032377470180464feff0ab1a30fe9358aa1356c0",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "NVDA",
+      "source_path": "corrections/2025-11/data/yf_NVDA.json",
+      "source_sha256": "dfe4315e0c333d582f9036518a4a21561c9858ed23ebec2369a33659778af332",
+      "subset_sha256": "17e9b7647238e5210e60ebf54b63c4ab7c6747da526cff424554ce21ab9b61c3",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "NVO",
+      "source_path": "corrections/2025-11/data/yf_NVO.json",
+      "source_sha256": "509139298c563b6eee6a7e5caf2174cbd1fae4d271627ab58f857123f6a8182c",
+      "subset_sha256": "ed2e2c87e9dc63e1d30237d332e8e7a340d2939c8b82a5331055e13b14ac1109",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "OKLO",
+      "source_path": "corrections/2025-11/data/yf_OKLO.json",
+      "source_sha256": "37c0d2ce5c9d434636a7d1ba39f25647eb9249c24348537655332af9217c69ca",
+      "subset_sha256": "8e9312f7604b5f721f48ebed8e70929b11188bff3578d418ed72920cfa4890e2",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "OPEN",
+      "source_path": "corrections/2025-11/data/yf_OPEN.json",
+      "source_sha256": "c51b5d1acddac11fe17869c3873eb48df19bbd95d452f8c65955e3bc1a1f41ad",
+      "subset_sha256": "5081c0df35be5179036825a20d23e12974d7f0a149f17fe22a0608105cd795ee",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "OPL.WA",
+      "source_path": "corrections/2025-11/data/yf_OPL_WA.json",
+      "source_sha256": "2546711be706df9483a6fb52098fcfeecc3c3e538d4680f7cba1f95254797d42",
+      "subset_sha256": "54a92e2b3129c6f8a61f8a0c21eca7bd6d79640be202c29289e1c21317d8e307",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ORCL",
+      "source_path": "corrections/2025-11/data/yf_ORCL.json",
+      "source_sha256": "95a80ee806f0b4dca4f84968f864db36297f7b7be1c636224344f8eda942e6e9",
+      "subset_sha256": "6ad97ab9c949fd18d4b4b79a57e36b2961dcf84e3b54817d5c71a96fac24b7c5",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "OXY",
+      "source_path": "corrections/2025-11/data/yf_OXY.json",
+      "source_sha256": "7ffd05f90f81e5909adcac1373d92f6b8f17dac54ee4bc7295d20147e4a928d4",
+      "subset_sha256": "d6b8caafab731e11056cdc1a04cf2f2818842f7c6df53e3377d4c804aa4ec95c",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "PANW",
+      "source_path": "corrections/2025-11/data/yf_PANW.json",
+      "source_sha256": "4ff674cf2d2165f0c08e5cc159112291033adc197308ca74a81623a271862cdf",
+      "subset_sha256": "08d2cf82df02e0d82afa8f11f5b3568af993dedc1c95f4175e900b28d2b89ef2",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "PCO.WA",
+      "source_path": "corrections/2025-11/data/yf_PCO_WA.json",
+      "source_sha256": "fe8020278f8c063191aa5566a0f6ddd8f499c1655475b2294ae990e4b222bb97",
+      "subset_sha256": "1ff16891e8809400ddc1af457eeaf9a1773537aea1c75878d5b6317326d05168",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "PDD",
+      "source_path": "corrections/2025-11/data/yf_PDD.json",
+      "source_sha256": "a4d8e19ffaa7254984f4f574e6edde5748f19b93e837e08460271921935991c5",
+      "subset_sha256": "24540efeac7daf2847ea2c50dd32ad317c11596e7cffa60762dc07c1e0f953c1",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "PEO.WA",
+      "source_path": "corrections/2025-11/data/yf_PEO_WA.json",
+      "source_sha256": "60daf12b53eb617ae1090e927884230a4f3dfd38ff2c0e2af27fe75f1302e0bd",
+      "subset_sha256": "74986f60dd1f37cb68b0e833bcb2788e98883158bf2b245d142eb33a4d938d72",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "PEP",
+      "source_path": "corrections/2025-11/data/yf_PEP.json",
+      "source_sha256": "cc95a96857e6d0a101d3458dcd044529ffbe94ce8cdd43ece3fff54dc1cfb249",
+      "subset_sha256": "0feb4fb76f2d5c5609832a547744ba5b4bc87984537f2ce9d1f896c836e27e4b",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "PFE",
+      "source_path": "corrections/2025-11/data/yf_PFE.json",
+      "source_sha256": "6883402bacca6d551a247d3861b31cac6539f462016c4c3394eb2ae670692512",
+      "subset_sha256": "59a59587e5869bfcadbe7a99451f5177840f225424bab9711a4625b53cb2c912",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "PG",
+      "source_path": "corrections/2025-11/data/yf_PG.json",
+      "source_sha256": "780e0e35b1e457d44848afc1b54a6cfd87fafae5f438b1ca66e24149823ba767",
+      "subset_sha256": "c0c73bf239174c44cba07e9401653368121eb6c260e5e8881958518ad8d2c6a5",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "PGE.WA",
+      "source_path": "corrections/2025-11/data/yf_PGE_WA.json",
+      "source_sha256": "0ec51aace89fa9b2c737fa851032f70ceba812da804e68288b45f06032b0fb03",
+      "subset_sha256": "3f5793637f68f42dc057ae25b3bf2d19b3588e24e8d306ab7f646209e14831ed",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "PKN.WA",
+      "source_path": "corrections/2025-11/data/yf_PKN_WA.json",
+      "source_sha256": "d63d161341d388c8dadff2039547481847755a5ae3336f33363c3019c100d9cd",
+      "subset_sha256": "edd4081b981d70dcad795ad94b93ea1e68cfe04a69dd603edd89257c032e0205",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "PKO.WA",
+      "source_path": "corrections/2025-11/data/yf_PKO_WA.json",
+      "source_sha256": "a9dae03195e02041c9b9b7b801c65eb509ad413dd962bdbb3449cbf5a5a10ff4",
+      "subset_sha256": "c66e08b81951cd70d063d76f33e163c93030470ffe8a13c9fad8552255dc0fe8",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "PLN=X",
+      "source_path": "corrections/2025-11/data/yf_PLN_X.json",
+      "source_sha256": "dec1cbf168d5ba93bcdf6e4adf5274b1d8dc51a514c6d4a020d20c49267538f9",
+      "subset_sha256": "ffabdbdf95df308bca1874c0bf95f25ba594691dc3d95b3be98af0ebd38c41dd",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "PLTR",
+      "source_path": "corrections/2025-11/data/yf_PLTR.json",
+      "source_sha256": "da4e544c0e4529746d010f98860cf33f006a60d22d18fd537e9ab25bfda2b13c",
+      "subset_sha256": "7af6ecf76ad6881c4f50e3d8c2074e9975767488c7288b0ff4627cbe51074654",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "PL=F",
+      "source_path": "corrections/2025-11/data/yf_PL_F.json",
+      "source_sha256": "33fbc03a7e56a17057b1a2c072a7b0e91ecf1e675038e57b0b7433fb363bd050",
+      "subset_sha256": "851e18ba02ef41e4db548576c3e41c2bb46303d27345dc4f83086547a090ad14",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "PWR",
+      "source_path": "corrections/2025-11/data/yf_PWR.json",
+      "source_sha256": "128134550e962ab2c7d2c7b001902d7c434c9c754049303f77877f70b283e7fc",
+      "subset_sha256": "ff68a7a8fe9e161eb377ed12ab1159b443ecb2821bd7853a855de45642727f82",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "PYPL",
+      "source_path": "corrections/2025-11/data/yf_PYPL.json",
+      "source_sha256": "dfdfacbdaee789ddc210ff7aaccf2c05f78c84991f713e7d80e5ff24f7162cab",
+      "subset_sha256": "90fdfe17e2cc7b56f0d38a450ec18d170521fb956700f2c9de660cf8117fed0a",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "PZU.WA",
+      "source_path": "corrections/2025-11/data/yf_PZU_WA.json",
+      "source_sha256": "57caffb1afca9a4c0c525a53820c860a4f985aa20f7011562b30c0fa17fdce86",
+      "subset_sha256": "9836999cc43f50f0116baf9e791278e4a85ecae9e89cdcde3f7468ab8064febf",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "QBTS",
+      "source_path": "corrections/2025-11/data/yf_QBTS.json",
+      "source_sha256": "309ff2f32befee0d95c5ad460567e494312aebe8268cde84c408263037172870",
+      "subset_sha256": "4f095cb0a98046dcea94cbde2cf4996986728681ecf4fa1ac2b8e78cb7f02fb7",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "QCOM",
+      "source_path": "corrections/2025-11/data/yf_QCOM.json",
+      "source_sha256": "5fb71239ff60e46c14b9046898b476c490b95849a4c7239652333a08dc615f9c",
+      "subset_sha256": "56e8ab54b6122a6b94f35e3921aec666d0f601e698fde0c575b815f3df231278",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "QQQ",
+      "source_path": "corrections/2025-11/data/yf_QQQ.json",
+      "source_sha256": "1069370bda7dd6a7ae09fd36d5fe6f23af094ce3a094df42a63e2055231b97d7",
+      "subset_sha256": "a59993e6f07939f6cb04852f5614f0211c6b99fe9ee1de837364bcbce678fda3",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "RDDT",
+      "source_path": "corrections/2025-11/data/yf_RDDT.json",
+      "source_sha256": "46c74d36c96f0694e4d74e214880f1abff3db703bf7e0c0d1aae40a45cf5b339",
+      "subset_sha256": "9ee99a3deae2aa7856e7006386b34448d6e3b1edb80a66c8a8e4647004448c34",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "RGTI",
+      "source_path": "corrections/2025-11/data/yf_RGTI.json",
+      "source_sha256": "2e9d53c2a240cc2f3fe57a0487681bd7e9f4e340c7c94b1c1669da236d770066",
+      "subset_sha256": "fd86940ee8547b049c1a811908516cdfccd2608711608d3dceefd35df46ba02c",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "RHM.DE",
+      "source_path": "corrections/2025-11/data/yf_RHM_DE.json",
+      "source_sha256": "aa22b713d88564ab8bef2d98a8d23a4c1b57fa79cbeee50df75dd3055ed427ca",
+      "subset_sha256": "b7bf560ebfbec5806efc9b89ea690cb14b68d18e03a2aba9ace3a2d3b06d1a03",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "RIOT",
+      "source_path": "corrections/2025-11/data/yf_RIOT.json",
+      "source_sha256": "421106391421ef9b194a4ce256c75865ee5cf3c74599b09a4a6372693119b740",
+      "subset_sha256": "24b00cb7f74e846d00946f98d6bf77d55f973f12928656836950793f5a0d69c6",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "RIO.AX",
+      "source_path": "corrections/2025-11/data/yf_RIO_AX.json",
+      "source_sha256": "da23070ce337925f9d8f51b799c2b9e27899d486540c43ffed5ac93352e9b83e",
+      "subset_sha256": "2e4939881d5dc2c6cfeb1aa55e2c99fdf5f0e6bebaffad9c72d659124fe49ead",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "RIVN",
+      "source_path": "corrections/2025-11/data/yf_RIVN.json",
+      "source_sha256": "dd6d8fc66ef8bb915c8c6adb00ce7f43c6d860d1ad066053b3b26d6c82a4b966",
+      "subset_sha256": "cd28981d6cc48633924ec6e8da7c93cd9e337d6fdafe6eafcaee264a52e971de",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "RKLB",
+      "source_path": "corrections/2025-11/data/yf_RKLB.json",
+      "source_sha256": "c40eb4ca16e3f68b4eb6e429387f025b9b0a22c02126f08427ea40a630099a81",
+      "subset_sha256": "b81fbef4b394cff6defaf0215fbc1f4eecba8e1258ee10a615ae51fae36779b1",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "RNO.PA",
+      "source_path": "corrections/2025-11/data/yf_RNO_PA.json",
+      "source_sha256": "b0f8550056da5559c576b22be39477071058580682bb09e7ab57b88806223868",
+      "subset_sha256": "367d2fe7b0e03ce5f6b7af81984d175fb83bfb48030e55daed3f773d90001a05",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ROST",
+      "source_path": "corrections/2025-11/data/yf_ROST.json",
+      "source_sha256": "816b10f8e1db1df9b89253b77deb67a5d830682675b8ecbfe0dcaea1f550b7bf",
+      "subset_sha256": "6572c7515dab69c8fccda906c4994db475a99761df24f19c5093c6d61679cfab",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "RTX",
+      "source_path": "corrections/2025-11/data/yf_RTX.json",
+      "source_sha256": "704d9f7dc041ae1b09d7c67ed378baf6bc95ae142d5c87d347630316502261b1",
+      "subset_sha256": "9ff34fef5d2d59ea2869e30825ba15a5683e6deacf56208856363ccacf41e0bc",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SAP.DE",
+      "source_path": "corrections/2025-11/data/yf_SAP_DE.json",
+      "source_sha256": "b53639015896b8d17d24744de90b840c5a5fe39caf587ad9f1ac9f61cb577b25",
+      "subset_sha256": "e3f7eb3fe60926bfd87cd6095644739a42bc3387f01a0e33fa8eb6bc868b2f53",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SBUX",
+      "source_path": "corrections/2025-11/data/yf_SBUX.json",
+      "source_sha256": "cc791eab55ab2b7b4b173489eaa8afa22aba3d3ca2dfd7a8ba9cab329c4f50c3",
+      "subset_sha256": "3776724f770801c6d30a21e929ac477a70cc29c563100a736465f057b5072522",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SCCO",
+      "source_path": "corrections/2025-11/data/yf_SCCO.json",
+      "source_sha256": "86a2c11f5b2760007a49a15482439b1462f08ab79160928fe38a24d7f7a1b5a7",
+      "subset_sha256": "7f1020bc0b33ecd0527ca2aaee262edeb6ce15b43e37d601516f517157fe4e0b",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SCHW",
+      "source_path": "corrections/2025-11/data/yf_SCHW.json",
+      "source_sha256": "4e400eaac39cc3d88777d66f40b248948a060ded58b5691e394ade1ca293a33e",
+      "subset_sha256": "f4407eaac5d9c83332a8e21164be4c75e35bebdfbcfe9f1fed411cbee096983d",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SHEL.L",
+      "source_path": "corrections/2025-11/data/yf_SHEL_L.json",
+      "source_sha256": "460f1dc5570e92e0c5fa0c6610a67cec6b04cf592324914aa4986aaf2e74fe46",
+      "subset_sha256": "0b0a41fb59c46a1529c37ea0ae8452a9ed48f7b183857bace3cdb7c52d45a4f5",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SHOP",
+      "source_path": "corrections/2025-11/data/yf_SHOP.json",
+      "source_sha256": "36346e416fd91324f6e24488dc05b970913504b4a3a312dc1c4722eae4642a8e",
+      "subset_sha256": "4806ccb5c4c696ab24f138a1d0a134fb480491d63e7c81a8be144aa4cad9ced7",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SHY",
+      "source_path": "corrections/2025-11/data/yf_SHY.json",
+      "source_sha256": "f71b48f496019d0d0133220b3d4e36aa6a7c201d69824ef9d489999fe3483f1c",
+      "subset_sha256": "77958f2fe77561d3d3a06e1ab07676d3a92595e35c075d8ce40f5aa110bbc861",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SIE.DE",
+      "source_path": "corrections/2025-11/data/yf_SIE_DE.json",
+      "source_sha256": "021807b8f59606267431358ecbd141e2f589dcd176546e689083b77b682726a6",
+      "subset_sha256": "e1a8d6b34c07c9252ffa9b743125a8c2fd4fb8de08de529cf0ec02041eb3c659",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SI=F",
+      "source_path": "corrections/2025-11/data/yf_SI_F.json",
+      "source_sha256": "81347dfb81bbad36ee73a8c2681aef1e5eff7a48be5b406e3c0c6e36a1a73160",
+      "subset_sha256": "9d93ebcd1069e94d7401224380675f4431d731e4582d8c143017b47bfd14a0d3",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SLB",
+      "source_path": "corrections/2025-11/data/yf_SLB.json",
+      "source_sha256": "876cd9b760c496988bdfb4db93322c08425b4749c5dcbec6c6a7ee313add24b4",
+      "subset_sha256": "84bf5a586586e4a1d8965755f1856601bb5382aba754c11b9f80c17648cca358",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SLV",
+      "source_path": "corrections/2025-11/data/yf_SLV.json",
+      "source_sha256": "5b1b8aa54e0e0b9b9b8b35aef96bec25118119e999deb989d4fccca0942e6ebd",
+      "subset_sha256": "d0b6c36ca60f3c11624b34b79758e8209d54d3dce756c0938714d43b85d124d9",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SMCI",
+      "source_path": "corrections/2025-11/data/yf_SMCI.json",
+      "source_sha256": "a6c558ea5a569f533cb7e8388e7c0799172e991b942f3daafb91aa579f3f3052",
+      "subset_sha256": "2a62fda49229aed35ca275be539782b01e8869c00d4b95aeb7f0e9a09dc66461",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SMH",
+      "source_path": "corrections/2025-11/data/yf_SMH.json",
+      "source_sha256": "fec45e67d1e6db1a14f0750e36a83d65192e133550546fafe5478edfa9b6212c",
+      "subset_sha256": "13a16e3f2cbb3a8733e42d5cf66c8a3008bdf6821c479f8892c6383e9089d6c8",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SMR",
+      "source_path": "corrections/2025-11/data/yf_SMR.json",
+      "source_sha256": "d37963e2ae9b69f9a57a7b2256dffeadad40d12e88bae09a05acc778146852ba",
+      "subset_sha256": "8bd9db0445df94831f91ea7eecc4f9192d9168ff2690249a7a808b89242ade1d",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SNDK",
+      "source_path": "corrections/2025-11/data/yf_SNDK.json",
+      "source_sha256": "fae1b445385b59ed1ae1897eca3e6567b1c27a101ca80ab45435c1eb12f284f7",
+      "subset_sha256": "056a23c485ed54fe85feceb3391682a4c733b10d2a55a64dc49c9f253ea92c35",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SNOW",
+      "source_path": "corrections/2025-11/data/yf_SNOW.json",
+      "source_sha256": "a497c160e16bf4e3dae9299f5c1836c46af4096aa38660eedc5b7271f9771ad3",
+      "subset_sha256": "88aec51458dff7c7b8626dadd34a84395bb9ba8537277d8f9f8e13e7cd3a6330",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SO",
+      "source_path": "corrections/2025-11/data/yf_SO.json",
+      "source_sha256": "daff8355d12ddc1f4fbac81204e64d0b7d99045e89bffc144bc60003df80ded7",
+      "subset_sha256": "0950266d9b70278486b7cf240fc58c4d2c401ea22801838c26ad6b25559b6d27",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SOFI",
+      "source_path": "corrections/2025-11/data/yf_SOFI.json",
+      "source_sha256": "ea50a8f79d9fb1710fa909fc60f1df8801a327b87c210006704d98300724b013",
+      "subset_sha256": "7a8504ead3fc01e4c47f0881d2766041a062bb58dee8adc3f5ec9f5da07b7f99",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SOL-USD",
+      "source_path": "corrections/2025-11/data/yf_SOL-USD.json",
+      "source_sha256": "9b4a482ed613e39edbe1fa116c18dbe99745e3828978ad3679170eb4c181ef19",
+      "subset_sha256": "3f9b253e98b89f6bf41c4f5f4742f3409ee21c2c66d65e16e6569cd71e9bd25a",
+      "observations": 61,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SOUN",
+      "source_path": "corrections/2025-11/data/yf_SOUN.json",
+      "source_sha256": "b7d32db076cdec0e24a6ec7dd8814820431289510fb62a70a0ca26bff24c2000",
+      "subset_sha256": "e215773f5f09c008c17a3a807947f51b5fb7372643f791f949f54f000937eb1e",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SOXL",
+      "source_path": "corrections/2025-11/data/yf_SOXL.json",
+      "source_sha256": "df3afabe24723ccb3bc8652b7c07434fd47b3372dd115c0ad09ea76b76e0fac7",
+      "subset_sha256": "6868e303be846c423f8b354e44fbb78ad222f794330d05e18fc656b2031c324c",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SOXX",
+      "source_path": "corrections/2025-11/data/yf_SOXX.json",
+      "source_sha256": "e6b72e15f1a8a6b0b1b1ffb75dbe2f1bf2bf6cb41aef126d021d954d44ccce7f",
+      "subset_sha256": "2487437aefd3894e45c5d7ff0951c299e3c4cdd237f95918aaf8a8c90d5005e3",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SPOT",
+      "source_path": "corrections/2025-11/data/yf_SPOT.json",
+      "source_sha256": "a235231cbd0ba85fb3c88567f44426b50858de0b0c2c83b2e00840edb0c8a8f4",
+      "subset_sha256": "9e67b595e96828785248e18a64a7b66f327d383cb054d19049b48dc0bd6cf101",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "SPY",
+      "source_path": "corrections/2025-11/data/yf_SPY.json",
+      "source_sha256": "ca2119bd5e208a50705fba78c7ecc286b8c247e98b759c640bfbb2bce0390e1c",
+      "subset_sha256": "25b00e936f923afb6578b9f44344e93bc2e180187f3614d8460ee2e7b99bce43",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "STLA",
+      "source_path": "corrections/2025-11/data/yf_STLA.json",
+      "source_sha256": "d7d6da76b4476d63e25930f0ab6390a16d2cd39f715184481d3535ccc79c4e07",
+      "subset_sha256": "82eed34b6000204bb302b033a321dfe3ad09ac101e429d69b9e1421dbe77e5b6",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "STX",
+      "source_path": "corrections/2025-11/data/yf_STX.json",
+      "source_sha256": "f4be627b8431fb9a2aee7823fa6d73692766753c6feed4db306adc1ae25d1f9c",
+      "subset_sha256": "ecb477b25ca312a9d09c8dc0998753af836bfc681fde342b6d680b29296919a8",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "T",
+      "source_path": "corrections/2025-11/data/yf_T.json",
+      "source_sha256": "3a85deaa3bd5284619ba3737e45613fe81a670c53fcb1f2d83918b1e59d9fd2e",
+      "subset_sha256": "d699def2403218fbdda2548dc3fc1a2ef0b1c4d13d211038ac073840c13f68d5",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "TGT",
+      "source_path": "corrections/2025-11/data/yf_TGT.json",
+      "source_sha256": "0c0e065d3e6d21469601c130b2cb19505decad705e1f3beaa6e2023a8f8a3431",
+      "subset_sha256": "560eaac81817927ad9a5ea66db65a807743ebb89820fe125eea8343649df2645",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "TJX",
+      "source_path": "corrections/2025-11/data/yf_TJX.json",
+      "source_sha256": "b792a719b4b5af6b6987d2c410dc319fffbc80d93e1dd9739d0fdc1eb8071c73",
+      "subset_sha256": "8b8947ddeb25515edf78995a18fe6f1679c680c8b787edefea3b612848d1aff5",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "TLT",
+      "source_path": "corrections/2025-11/data/yf_TLT.json",
+      "source_sha256": "482bfd0dbaa074a2324c706a6ad7743f2537e82a1cae80e872f497a2820bb952",
+      "subset_sha256": "3f7c045bbf0666403ffd0655fadce1d32378c3e70e682f492eb48c297ae2d788",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "TPE.WA",
+      "source_path": "corrections/2025-11/data/yf_TPE_WA.json",
+      "source_sha256": "78f737f6b9f7f9a74cf638a4a42189af4bc10cab27d2a20cfec8e91be0955514",
+      "subset_sha256": "5f76a3346c9726136755dc955d85b57ddd0ed63cbea20094420a4cb9c039a84e",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "TQQQ",
+      "source_path": "corrections/2025-11/data/yf_TQQQ.json",
+      "source_sha256": "bcc7ddc24ae344729bb4e64b4cdd675b4c31b38182587fb2289e70bad08ebc1e",
+      "subset_sha256": "25eba6426f031810554ff1b97712c8202e7c2893d3ffae2036a7acc058e6141a",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "TSLA",
+      "source_path": "corrections/2025-11/data/yf_TSLA.json",
+      "source_sha256": "e5aab648b086ba79eaaaed0ab63e453ab61de9e6c9272c3315dba8fcd79cf63e",
+      "subset_sha256": "ff933ede60ec96310296e899159a53d19e5db27870095f0f8a3d2550deccf292",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "TSM",
+      "source_path": "corrections/2025-11/data/yf_TSM.json",
+      "source_sha256": "214131ed7c6f0db58a9ea9f80ea6c1a55066367834740b255962dc2448da775b",
+      "subset_sha256": "f13a03f70a2d28427bf2c97c924c5656b4d4edd9c8646bd4e797699d5e03eed4",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "TXN",
+      "source_path": "corrections/2025-11/data/yf_TXN.json",
+      "source_sha256": "57c2c8d0d0db6121c89018a523e0f79bacc611c9acd4bc4c667d6f2503b9c085",
+      "subset_sha256": "1e460a7e98fa95a2207c368392b393085db643a1658e11fdec565fcc78d9fd30",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "UBER",
+      "source_path": "corrections/2025-11/data/yf_UBER.json",
+      "source_sha256": "d8580e0290084b6fe0bccc344ed45d4eab4ae51691df0ab54da8e20f331e1de7",
+      "subset_sha256": "e7b6628c7411000734ca7a8a3d8e800317e9f2b972f87f553fc8c5ef6d468377",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "UNH",
+      "source_path": "corrections/2025-11/data/yf_UNH.json",
+      "source_sha256": "8fffddec776ff8607553c9d86d06564f07d064e4c9f83d15f0e5233e89636934",
+      "subset_sha256": "722c51655226ee8b6b6ee48fc60e99bbbd262c555403076ad3b46a0c66674745",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "UPST",
+      "source_path": "corrections/2025-11/data/yf_UPST.json",
+      "source_sha256": "51824bce32980716206eab29ff57b936a37147eb0a09ae870e7728c9db33c08f",
+      "subset_sha256": "3861b1ef7ceb59220d0a007a88fa0ca8d5b98b52ef6aab72618cb01705dd16cf",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "URA",
+      "source_path": "corrections/2025-11/data/yf_URA.json",
+      "source_sha256": "67a06f7ab49df0a78b5a4c793d988764a2a522d1d251c4c03458198d6256d116",
+      "subset_sha256": "7ecbec39dfdb42d08876a88013de1cdafcb7c7acc00a3ecf51c915273ab80ff0",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "USO",
+      "source_path": "corrections/2025-11/data/yf_USO.json",
+      "source_sha256": "a1a180a79553e481dd8ebc439b7ac320bcfcabd3c88dda5968a4b0d5da9d960a",
+      "subset_sha256": "9fafea9d937698db4a62731ef3793cf90b5434bfb746f94bbc6b074a2ec4fdb1",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "V",
+      "source_path": "corrections/2025-11/data/yf_V.json",
+      "source_sha256": "7ace3539c0f4767c534ea5d0d8457275ab742cda56d64c7b0eb9b708390f1f63",
+      "subset_sha256": "b061679e85147756bab1e2bf83945cfd4681ec2f6475ce3df0978d0df8447d22",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "VGK",
+      "source_path": "corrections/2025-11/data/yf_VGK.json",
+      "source_sha256": "cbb4beb8687a475af9b2626141f60cfeadb218305656c1ad9452bd4f580847f4",
+      "subset_sha256": "168016e53dad0917a723c22e85e62dcf5c0c1d9f7c1f003826ff50acff9db068",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "VOW3.DE",
+      "source_path": "corrections/2025-11/data/yf_VOW3_DE.json",
+      "source_sha256": "7da02b980a2d161376ecdd3da87678334c2cbbcf991b5b863b53589806f79815",
+      "subset_sha256": "8a36e3bac44b9de55629fa9f59073c8d1884b93fa74e3e626664f3a7e7ddda44",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "VRT",
+      "source_path": "corrections/2025-11/data/yf_VRT.json",
+      "source_sha256": "cb14377d8df8b03fe6f88864cedde8c78d5cfe8fe244c265d42261a429c66c1a",
+      "subset_sha256": "af35721cfa3158f33c297cdf963536e690a3606e687026aec251012fd05f65d4",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "VRTX",
+      "source_path": "corrections/2025-11/data/yf_VRTX.json",
+      "source_sha256": "4f52af937205d58a9ab887b63a177c99f4c0a5eb1dff3505102ccad004cec7f6",
+      "subset_sha256": "942e4abb7489559f0e1c0a2b86c6ba5caa47073d6ab4af41d0295ea35cc4d0f3",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "VST",
+      "source_path": "corrections/2025-11/data/yf_VST.json",
+      "source_sha256": "8533f868c5d2d6b565aa86b9d6babfb83b2131aaea374a1ee9771513d7fa594a",
+      "subset_sha256": "17e8cbc3dc9ed7487b4b3a4ddd3bf6cec8bc664e5b3935b060db62d52ac28c48",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "VWAGY",
+      "source_path": "corrections/2025-11/data/yf_VWAGY.json",
+      "source_sha256": "5fa2999c481e488780b86c4eb560707e9afd38a369ab779b63cb670bf2d0b236",
+      "subset_sha256": "c61054decefcb4c658109da840421bfc4f18da62a32bcb56436872f6ebb74a07",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "VZ",
+      "source_path": "corrections/2025-11/data/yf_VZ.json",
+      "source_sha256": "567724bc647edcbdd19c3dfe76b05ced68b9b9e4e5cb452dbd35ba93beea52af",
+      "subset_sha256": "64b2000312e40f8ad9a64cc0bc3689ae2e4a4b6277d2d2f8044547b4356fb78a",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "WDC",
+      "source_path": "corrections/2025-11/data/yf_WDC.json",
+      "source_sha256": "629c520dce2f9c528e03d85967364dec904b0b704f8c3f0281cc20b324b68171",
+      "subset_sha256": "20e7098b5b0e7c6632a4052155e3783d48f5708398fb6086903a8ad34a4c4978",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "WFC",
+      "source_path": "corrections/2025-11/data/yf_WFC.json",
+      "source_sha256": "818b0f6f2836827a9313eb3dd4294e786b3fa410db5ddb860ce490d4a76aabf2",
+      "subset_sha256": "36db9fabad27ee683c358074aeb56a20e22f6dc668a347ad7d7d63cf00a9ba44",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "WMT",
+      "source_path": "corrections/2025-11/data/yf_WMT.json",
+      "source_sha256": "7655174525a97f620172994fb2be6a656116f565f3f2157d86759011101e7362",
+      "subset_sha256": "aaadbb11c385cda814e9856dea1cf3a81857a5431ce2fd57f08c939b12997160",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "XBI",
+      "source_path": "corrections/2025-11/data/yf_XBI.json",
+      "source_sha256": "120bb7332c435b43d8a4e071b50af11bec1f683ec9d3ed36201c71f97ec150ef",
+      "subset_sha256": "27573f33f49a7c16a3f331c3026d21043c948233299d4934e176f86ed5af7bb5",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "XLB",
+      "source_path": "corrections/2025-11/data/yf_XLB.json",
+      "source_sha256": "cf3697077f397a2217fbc864a0495fa6c2d20a6736c94c49bb5668941f1a0ef3",
+      "subset_sha256": "9b654fe76899963e846298bc70b0493be8b12768a5a24d664ffde87e9ec28476",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "XLC",
+      "source_path": "corrections/2025-11/data/yf_XLC.json",
+      "source_sha256": "950d013502aeae4bbe9af0b7080f069c17b195e8252e62e21074358f1fea8b6a",
+      "subset_sha256": "256ebfd2260418c8ae05bc94b3f96c68d0bf4b25d74dfbf67b5a3b1b5c4e19f0",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "XLE",
+      "source_path": "corrections/2025-11/data/yf_XLE.json",
+      "source_sha256": "2d2caa4f04d4f3503d92325820023af54dec87707ab3136f3409b50c073a64be",
+      "subset_sha256": "bff8127a33e24aef73b2df78b981df69720f2b8ba848bce3a2e441afad315631",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "XLF",
+      "source_path": "corrections/2025-11/data/yf_XLF.json",
+      "source_sha256": "bd790bfc74003934157ed83e4329d23ec4951f5f592ff6fa3799181b15b2e43f",
+      "subset_sha256": "b52d6fd70cc5a4c59e5131ec1e3be487f5e91cde1baa6f6874ee798a8f495b00",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "XLI",
+      "source_path": "corrections/2025-11/data/yf_XLI.json",
+      "source_sha256": "6943f462b16ecdd1e8115e1ed1ef930c29e8ea708435ca1561b6505fddaab573",
+      "subset_sha256": "cf9428f3631cdbe280f545e51c4eef0a73c5867bc4a339e95167e409f4a903d5",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "XLK",
+      "source_path": "corrections/2025-11/data/yf_XLK.json",
+      "source_sha256": "5a834f331b9d95390ae0cf71bbff0cd5d33b37a69138ff742d361080f75d0481",
+      "subset_sha256": "efed4ea5f3b73f590d4f2d8f09d5725eb646b3cef90ba818016a5f483198217a",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "XLP",
+      "source_path": "corrections/2025-11/data/yf_XLP.json",
+      "source_sha256": "a277e1a41b5beaf895d6c10ff612f8dc6c52e05492bd0c0036794de1b4c8fe73",
+      "subset_sha256": "2135da36c5b6773ecd95a5926f90d757bee6d6d0a5b0ba6c414dfdcbc0f291e9",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "XLRE",
+      "source_path": "corrections/2025-11/data/yf_XLRE.json",
+      "source_sha256": "980b4c012ef75331537a4a9f356dbcdb1d2c2c7895e9a57f0732a2806daf6363",
+      "subset_sha256": "8763135f28f76e58ea9b84c9b9e4a73e2c0414a74cd65c5e102e4e0874b2b4cb",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "XLU",
+      "source_path": "corrections/2025-11/data/yf_XLU.json",
+      "source_sha256": "4cffbc6bc2531e174be892d8cce3bccf39d23089bf7db3f986e02f6c94b0fd7c",
+      "subset_sha256": "d1407e6ccf44caef44ecb01aed18d1fff1ce8abeb803f2cf8fe7446b28fe9e4e",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "XLV",
+      "source_path": "corrections/2025-11/data/yf_XLV.json",
+      "source_sha256": "7a501ed0017a9c7194f4fc344fa436b090886b6eba380b5fa6df0c5558da1859",
+      "subset_sha256": "33c7bb61cd8c45af56764bf52e11467e3ab9ea6e42badbf670b0e9986beb6bd5",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "XLY",
+      "source_path": "corrections/2025-11/data/yf_XLY.json",
+      "source_sha256": "865d9b40432291a701e9c14822ff742ffcdb19570a2fa8f40ba712aee2e88dfb",
+      "subset_sha256": "b8450fdec24ab006627e418b8f175bd3d8d4e148f1ff9401d7d5a3471401753d",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "XOM",
+      "source_path": "corrections/2025-11/data/yf_XOM.json",
+      "source_sha256": "2f07a50fe9bd8376c06bc19f0be37bce6bd5dec0469d3c25223cea2b75577a01",
+      "subset_sha256": "e740e5ca751ef9b5213ec08a41231a760c849aecfc30a7ad35fc138cf06c939d",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "XRP-USD",
+      "source_path": "corrections/2025-11/data/yf_XRP-USD.json",
+      "source_sha256": "205b1b824425d20fcf05a4249b9f9955b847eac1766be134faf4817751ecfaa4",
+      "subset_sha256": "efbebb090ac9f93f8434842185225e8c2e9221b99991abe2b165e5add38d0128",
+      "observations": 61,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "XTB.WA",
+      "source_path": "corrections/2025-11/data/yf_XTB_WA.json",
+      "source_sha256": "d873846bc32b451e040020c464751dcaaf4becff66f0719c6bd2887b3f340e9e",
+      "subset_sha256": "1044c1808a083ff25db935d08a9a25fdc9019afff9181a841d05c4b49cd6a149",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ZS",
+      "source_path": "corrections/2025-11/data/yf_ZS.json",
+      "source_sha256": "8f27327187829be9a707adaf055ad6264bce0bef0f2291804e4c725160ad6243",
+      "subset_sha256": "1c612d2bdcb23658f86a0cc795e2f1592602985fcc736727a0a6c2acd4d6e7c2",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "ZS=F",
+      "source_path": "corrections/2025-11/data/yf_ZS_F.json",
+      "source_sha256": "7b8c08b87ebc35c86488e3a11416452d3c77f31f3aa4bb82ddef8d0c4c5af222",
+      "subset_sha256": "352218eb934794c5247cc7454c654ac2a46ae5be4b8a420ab32a2b274201bb89",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^AXJO",
+      "source_path": "corrections/2025-11/data/yf__AXJO.json",
+      "source_sha256": "8be9e5127da2dd557f77361f2d0c6e86e5bcdcd9712993444a63da82967d3363",
+      "subset_sha256": "6e2203a3cfa12f553bac71709a11dfadaa7f66051d20eccf91ea7655b7d7a0c5",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^DJI",
+      "source_path": "corrections/2025-11/data/yf__DJI.json",
+      "source_sha256": "cc33dd70d5a2bab66147f01cee71b9853dcd8299cefba53b3310cacfbac0d80d",
+      "subset_sha256": "6cf54a3a50a21e8f568936fe3e2fdc8b260c680090b050f828dcf7cd1ab930aa",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^FCHI",
+      "source_path": "corrections/2025-11/data/yf__FCHI.json",
+      "source_sha256": "a863cf0333cbd6ce1c4085f83bf7be6070fd8c402080602c22f76fdafe343b00",
+      "subset_sha256": "de57ba04f1ad8e68c916489b7afae9e56b09afcadae1e90c3c3522bfe22d890b",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^FTSE",
+      "source_path": "corrections/2025-11/data/yf__FTSE.json",
+      "source_sha256": "92f228e66828f3a8fbc938c4dcaa5a509720f2d79152805836c0d53ad435f1d4",
+      "subset_sha256": "88ec6fb43524fda1cd2f0bcf593badb1aa374c2bc008564e37240dff0fd06d42",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^GDAXI",
+      "source_path": "corrections/2025-11/data/yf__GDAXI.json",
+      "source_sha256": "24f46cf08fafa52ba2e5ef92ff0f03a62c39e209ce09c49702ead35f129ee0d9",
+      "subset_sha256": "d5a4b033125274244cae5124aec83f530ad81190b815f2e4414e893d2951f56b",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^GSPC",
+      "source_path": "corrections/2025-11/data/yf__GSPC.json",
+      "source_sha256": "9344cd3ab4541a6ce6fccaec4ffdfc9f6e64f197a4d7a1676c06d02b146de57c",
+      "subset_sha256": "235c85d1d5f8b6cfbcc9d6ad96967f8e82d86186ac8c69b5e65986e119e8fe5c",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^HSI",
+      "source_path": "corrections/2025-11/data/yf__HSI.json",
+      "source_sha256": "23a21757d2aea2e248ab7920cdb3b6afde47918a37e2b6b7904b46f76cfd637e",
+      "subset_sha256": "9eb857d29439651cd2af67b33bf9b4e13c2349dd725f40d5610d87d691ed2f01",
+      "observations": 43,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^IRX",
+      "source_path": "corrections/2025-11/data/yf__IRX.json",
+      "source_sha256": "2fc0c0b693c0bab562e819305f4505d5d84612a126fc4615e9c9d83a3789cf27",
+      "subset_sha256": "90d01d8f58b996443433099c83b37a503f12d1f7dde34c38686ac0979ab7a1ad",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^KS11",
+      "source_path": "corrections/2025-11/data/yf__KS11.json",
+      "source_sha256": "083960844ae77037ff36f3adac69073e1b46f5735b0c0e6ff5f4c933ab1490da",
+      "subset_sha256": "8d3f12852a7ac35d4a1851d3ae04a52d89651337d908184f6b8960ef49945547",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^N225",
+      "source_path": "corrections/2025-11/data/yf__N225.json",
+      "source_sha256": "b35a9859c2eb9174439c999b8d0e6ab8d02b750c2f0ebadd6859c275d3bdb695",
+      "subset_sha256": "be41e43287e40164b2ff96b2690563745c6b46d0e3d981084c6469167ecc8cd4",
+      "observations": 40,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^NDX",
+      "source_path": "corrections/2025-11/data/yf__NDX.json",
+      "source_sha256": "cf069dcc67ab86a1c9038ace5dac04a1ee16c9687d8cdc1a1f5e25c641250742",
+      "subset_sha256": "359f735a3b125fbcd61cdcd28ae1e7ccbf3c0cae0ce87fc8ce80a1662d8aa78c",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^RUT",
+      "source_path": "corrections/2025-11/data/yf__RUT.json",
+      "source_sha256": "98a79943a7c827ff8051f635b407ac589b9624787fafd28a89daa0f293a0e95c",
+      "subset_sha256": "770eaab6adefca358d003ee48824cebc352030e003d25b406e62520b6643a003",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^SOX",
+      "source_path": "corrections/2025-11/data/yf__SOX.json",
+      "source_sha256": "c9e2124a085158c49f6e226206127328e35efb970961b6f717589bd2081d8177",
+      "subset_sha256": "4d0345b8d757a0f4fe0126c34285961fdf9f1ece90bf263292b61c76f2559334",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^STOXX",
+      "source_path": "corrections/2025-11/data/yf__STOXX.json",
+      "source_sha256": "3bde6d7c4723945de65a0fdb67c3443f6ac65db7a106527d43fc13d02d345ac3",
+      "subset_sha256": "0a6139a3a06ed79b2c835063e335c09bebc1ceeff66a959e2310dce6a01b1ab1",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^STOXX50E",
+      "source_path": "corrections/2025-11/data/yf__STOXX50E.json",
+      "source_sha256": "9f4fa57e8ef90841f1d58f4725f368bcdeb3a6b3638ae87bb6608d56f9c2ba99",
+      "subset_sha256": "661311c8c39c5405bf1a544d1500f6a21dee8b77c8dca7dac4a04e262fbc20ba",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^TNX",
+      "source_path": "corrections/2025-11/data/yf__TNX.json",
+      "source_sha256": "019b99d329108859d33bd7cc13a0f28a65bfc55938545f42ce136342d5697622",
+      "subset_sha256": "ff6b365e3f1eabd91ec4b735210f2e32fe5807804f40dbd4767f712f168b644e",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^TWII",
+      "source_path": "corrections/2025-11/data/yf__TWII.json",
+      "source_sha256": "fe807ca4e0318aba334069fec6a71ab4ebcf05048caea7c674eefdb4ca767937",
+      "subset_sha256": "063c0ef2d0e8f47e18bbd5e2ec252a6b354c45743e32ae70324c871377fc5723",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    },
+    {
+      "ticker": "^VIX",
+      "source_path": "corrections/2025-11/data/yf__VIX.json",
+      "source_sha256": "69e6846c3f0669ccfd54e0373bb7d2ffefa41500f1be8319dc3c178be17e3257",
+      "subset_sha256": "5e1542940b0cd7f5a4e7d9f24fb4614fdc0c52e3983bf0ed255d5577eb4d6427",
+      "observations": 42,
+      "last": "2025-09-30",
+      "status": "ok",
+      "provenance": "previously verified frozen Yahoo Finance source, subset only; no extra later rows"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "failure_class": "managed upstream tunnel remote connection failure",
+  "observed_proxy_error": "Envoy503 immediate connect error Invalid argument remote address envoy://cloudflare_https_tunnel/",
+  "approved_hosts_affected": [
+    "news.google.com",
+    "query1.finance.yahoo.com"
+  ],
+  "credentials_or_destination_denial": false,
+  "proxy_retained": true,
+  "network_policy_changes": false,
+  "credential_changes": false,
+  "cache_preserved": true,
+  "mitigation": "Reduced worker concurrency10to4; bounded exponential retry6 attempts; cached successes skipped on restart; same approved endpoints retained.",
+  "successful_cached_windows_before_outage": 326,
+  "status": "data_access_recovered_for_task_via_isolated_CI",
+  "recovery_workflow_run": 40857224791,
+  "local_transport_status": "intermittent; no administrative reset or proxy/policy bypass claimed",
+  "all22_feeds_validated": true
+}

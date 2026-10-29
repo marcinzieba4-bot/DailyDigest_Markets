@@ -1,0 +1,75 @@
+{
+  "date": "2025-09-01",
+  "reviewer": "sep_writer_e",
+  "spec_sha256": "94cc6578e1e61a95530db7f14f2b5d6aa0ce44629c167c210f758f9eb548f7f2",
+  "scope": "Selected-sample critical-claim review, not exhaustive. US macro and curve; China macro/activity/credit/property; Poland macro, markets, fiscal, corporate and security; XLK/XLC/XLF/XLE Reported; retail lead Drivers and Social Signal. Canonical publisher-URL date audit is separate.",
+  "status": "no_blocking_issues_in_sample",
+  "issues": [],
+  "checks": [
+    {
+      "location": "geo:US",
+      "ids": [
+        "n8904",
+        "n8922",
+        "n1493",
+        "n9265",
+        "n9215"
+      ],
+      "result": "Core inflation/PCE and legal-event prose stays within headline claims. Friday completed events precede Monday cutoff; Treasury levels, 20-observation changes, spread and regime wording match own card."
+    },
+    {
+      "location": "geo:CN",
+      "ids": [
+        "n1522",
+        "n0771",
+        "n0757",
+        "n0758",
+        "n0773"
+      ],
+      "result": "Official August manufacturing contraction is Sunday news before Monday cutoff; no report-day private PMI actual imported. July activity, lending and property references are older monthly observations and preceded cutoff. Markets match own card and periods."
+    },
+    {
+      "location": "geo:PL",
+      "ids": [
+        "n4962",
+        "n5074",
+        "n4708",
+        "n4561",
+        "n4630",
+        "n4936",
+        "n4927",
+        "n4931",
+        "n4932",
+        "n4898",
+        "n4398",
+        "n4891",
+        "n4400"
+      ],
+      "result": "RPP is treated as pending, inflation below 3% and budget deficit match cited titles; corporate and defence claims are bounded by their titles. Price/return sample matches own card, including Dino current share units."
+    },
+    {
+      "location": "sectors:XLK/XLC/XLF/XLE Reported",
+      "ids": [
+        "n5271",
+        "n2899",
+        "n5173",
+        "n7079",
+        "n7337"
+      ],
+      "result": "MongoDB and Dell reaction, spectrum transaction, capital-regulation remark and Rosneft income direction match headlines. No unsupported numerical earnings detail or same-day outcome in sample."
+    },
+    {
+      "location": "retail[0] Drivers/Social Signal",
+      "ids": [
+        "n8946",
+        "n5253",
+        "n5421"
+      ],
+      "result": "OPEN close, 1s/5s changes, prior reference, Russell return and Treasury observations match card. Social paragraph uses actual meme-stock framing; no invented posts, flow quantities or platform counts."
+    }
+  ],
+  "limitations": [
+    "Selected sample only; other sections and individual citations remain outside this review.",
+    "Canonical publisher publication timestamps were not independently fetched; parent handles that audit."
+  ]
+}
