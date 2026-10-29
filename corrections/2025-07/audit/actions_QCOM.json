@@ -1,0 +1,18 @@
+{
+ "ticker": "QCOM",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/QCOM?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "ce167a10bdf8ff138d181cf7a6441a56a7ba2f3d51aae357a0f53748e85764d3",
+   "fetched_at_utc": "2026-10-29T21:29:09.811795+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/QCOM?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "d377a39ababf603c9598f09fc823bc2c0f1ff8e4382d997b6f1431202a2c5d74",
+   "fetched_at_utc": "2026-10-29T21:29:10.235193+00:00"
+  }
+ ]
+}

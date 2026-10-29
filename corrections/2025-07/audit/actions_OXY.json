@@ -1,0 +1,18 @@
+{
+ "ticker": "OXY",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/OXY?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "ebba5faeddd3554263b7a7253886ad2d5440f21a765ba2c9363431f801412209",
+   "fetched_at_utc": "2026-10-29T21:29:18.257454+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/OXY?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "902b9e1b1b767313adc92f746f9447c816de1cf9f14594e8f17e875a051f944e",
+   "fetched_at_utc": "2026-10-29T21:29:18.710251+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "VGK",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VGK?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "a26e5704325744b39e728614fce4a2c1cfc4a7cd660d44df1cbddbe9b1d95a24",
+   "fetched_at_utc": "2026-10-29T21:28:59.189031+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VGK?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "3fd13508ea779ad785ea27e728a3e7b99bf8aded9a7a527c1e4ab6ac576db691",
+   "fetched_at_utc": "2026-10-29T21:28:59.673691+00:00"
+  }
+ ]
+}

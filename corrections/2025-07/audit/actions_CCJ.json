@@ -1,0 +1,18 @@
+{
+ "ticker": "CCJ",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CCJ?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "2b3aab2798957bb210facc13c7ad72c85ea2535ff56cc07bd9ae0550e212ca87",
+   "fetched_at_utc": "2026-10-29T21:29:15.479374+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CCJ?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "5c838b904babbb4300f86421e7666821229e856a3fc821eccaf3c923c98ff9b4",
+   "fetched_at_utc": "2026-10-29T21:29:15.943999+00:00"
+  }
+ ]
+}

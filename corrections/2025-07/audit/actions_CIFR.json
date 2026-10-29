@@ -1,0 +1,18 @@
+{
+ "ticker": "CIFR",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CIFR?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "f931aa74a7133d2174c476614956524490836eab067edfcafae5dc59fa8592ab",
+   "fetched_at_utc": "2026-10-29T21:28:55.775981+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CIFR?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "859bad1ce83733fcf131ca081fba06f8d6fecc688e5f3632b07eef5123bedd62",
+   "fetched_at_utc": "2026-10-29T21:28:56.213510+00:00"
+  }
+ ]
+}

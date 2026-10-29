@@ -1,0 +1,18 @@
+{
+ "ticker": "LPP.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LPP.WA?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "36cdbb89e374c236ce56592bad8c9f5c6edf26e5cfe7aa31a2ebedbbc9292428",
+   "fetched_at_utc": "2026-10-29T21:28:57.596453+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LPP.WA?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "ffbcb3bacf11dbf3b2a5cb3102d692dd73197f876864f1942dce4d54b8cb157a",
+   "fetched_at_utc": "2026-10-29T21:28:57.934430+00:00"
+  }
+ ]
+}

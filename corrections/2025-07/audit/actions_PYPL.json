@@ -1,0 +1,18 @@
+{
+ "ticker": "PYPL",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PYPL?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "2c6a985f15e26513197cb93e001d06cce0f0a30a57fdeb61e1534cf2d4a88520",
+   "fetched_at_utc": "2026-10-29T21:29:13.839673+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PYPL?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "e738a11ae2465fdbdd51a0905fb19ae988e0aaac4a74dbe98bfd299a977892a1",
+   "fetched_at_utc": "2026-10-29T21:29:14.226931+00:00"
+  }
+ ]
+}

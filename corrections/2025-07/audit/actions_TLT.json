@@ -1,0 +1,18 @@
+{
+ "ticker": "TLT",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TLT?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "6e20f195b89e62595975488d203e7b2bbebcd70e1c7d89ba004d2fe921de8bd1",
+   "fetched_at_utc": "2026-10-29T21:29:06.466903+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TLT?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "3649092defbb59c4446498b3b92a42e71cf7f9a1a456403f01c157b1e812db66",
+   "fetched_at_utc": "2026-10-29T21:29:06.921073+00:00"
+  }
+ ]
+}

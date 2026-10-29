@@ -1,0 +1,87 @@
+{
+  "observed_at_utc": "2026-10-29T22:06:54.818557+00:00",
+  "question": "Was Nvidia public H20 export-resumption announcement demonstrably available before July 15, 2025 00:00 UTC?",
+  "cutoff_utc": "2025-07-15T00:00:00+00:00",
+  "conclusion": "pre_cutoff_availability_not_verified; actual initial announcement time remains unknown",
+  "pre_cutoff_public_announcement_verified": false,
+  "timing_exception_supported": false,
+  "earliest_explicit_timestamp_found_utc": "2025-07-15T01:41:00+00:00",
+  "earliest_explicit_timestamp_minutes_after_cutoff": 101,
+  "primary_evidence": {
+    "publisher": "NVIDIA Newsroom",
+    "url": "https://blogs.nvidia.com/blog/nvidia-ceo-promotes-ai-in-dc-and-china/",
+    "tool_reference": "turn371813view0",
+    "displayed_publication_date": "July 14, 2025",
+    "visible_time_of_day": null,
+    "visible_timezone": null,
+    "date_line": 5,
+    "relevant_statement_line": 15,
+    "publication_time_in_utc": null,
+    "interpretation": "The primary page establishes a company announcement dated July 14 in an unspecified publication clock, but a date alone cannot establish availability before UTC midnight."
+  },
+  "contemporaneous_timestamp_evidence": [
+    {
+      "publisher": "StreetInsider",
+      "url": "https://www.streetinsider.com/Trader%2BTalk/NVIDIA%2B%28NVDA%29%2Bto%2BResume%2BH20%2BSales%2C%2BAnnounces%2BNew%2BGPU%2Bfor%2BChina/25049528.html",
+      "displayed_local_datetime": "2025-07-14T21:41:00-04:00",
+      "displayed_zone": "EDT",
+      "known_at_utc": "2025-07-15T01:41:00+00:00",
+      "minutes_after_cutoff": 101,
+      "timestamp_role": "Company-statement reproduction with displayed EDT timestamp",
+      "tool_reference": "turn397863search0"
+    },
+    {
+      "publisher": "Reuters via StreetInsider",
+      "url": "https://www.streetinsider.com/Reuters/Nvidia%2Bto%2Bresume%2BH20%2BGPU%2Bchip%2Bsales%2Bto%2BChina%2C%2Blaunches%2Bmainland-compliant%2Bmodel/25049532.html",
+      "displayed_local_datetime": "2025-07-14T21:50:00-04:00",
+      "displayed_zone": "EDT",
+      "known_at_utc": "2025-07-15T01:50:00+00:00",
+      "minutes_after_cutoff": 110,
+      "timestamp_role": "Initial displayed timestamp; current article body is later updated and is not used as original-version evidence",
+      "tool_reference": "turn403240search1"
+    },
+    {
+      "publisher": "Reuters via MarketScreener",
+      "url": "https://www.marketscreener.com/quote/stock/NVIDIA-CORPORATION-57355629/news/Nvidia-s-resumption-of-AI-chips-to-China-is-part-of-rare-earths-talks-says-US-50506143/",
+      "displayed_local_datetime": "2025-07-14T21:51:00-04:00",
+      "displayed_zone": "EDT",
+      "known_at_utc": "2025-07-15T01:51:00+00:00",
+      "minutes_after_cutoff": 111,
+      "timestamp_role": "Explicit Published timestamp distinguished from later Modified timestamp",
+      "tool_reference": "turn403240view0"
+    },
+    {
+      "publisher": "TechCrunch",
+      "url": "https://techcrunch.com/2025/07/14/nvidia-is-set-to-resume-china-chip-sales-after-months-of-regulatory-whiplash/",
+      "displayed_local_datetime": "2025-07-14T21:36:00-07:00",
+      "displayed_zone": "PDT",
+      "known_at_utc": "2025-07-15T04:36:00+00:00",
+      "minutes_after_cutoff": 276,
+      "timestamp_role": "Displayed PDT timestamp",
+      "tool_reference": "turn403240search0"
+    }
+  ],
+  "announcement_scope_from_primary_source_only": [
+    "Nvidia said it was applying to sell H20 GPUs again.",
+    "The company reported US government assurances that licenses would be granted and expressed hope of deliveries soon.",
+    "The statement did not establish that licenses had already been issued or shipments had already restarted."
+  ],
+  "excluded_inference": "Later Beijing remarks, actual licensing decisions, deliveries, market moves and current article updates do not establish earlier availability and were not used.",
+  "attempted_primary_structured_timestamp": {
+    "url": "https://blogs.nvidia.com/wp-json/wp/v2/posts?slug=nvidia-ceo-promotes-ai-in-dc-and-china",
+    "tool_reference": "turn371813view1",
+    "result": "Not accessible via approved web tool; no exact primary structured timestamp obtained."
+  },
+  "uncertainty": [
+    "The earliest explicitly timed report found is after cutoff; this proves availability by that later time, not that no earlier public announcement existed.",
+    "Current primary and republished articles are not immutable captures of their original versions.",
+    "No source retrieved demonstrates an exact pre-cutoff announcement timestamp."
+  ],
+  "recommendation": "Do not create a July 15 cutoff exception on this evidence. Retain conservative omission unless an exact original pre-midnight UTC timestamp is independently recovered.",
+  "changes": {
+    "specs": false,
+    "feeds": false,
+    "canonical_cache": false
+  },
+  "access": "Approved web connector only for public lookups; filesystem used only to save this audit."
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "ACP.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ACP.WA?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "377a214de70df19bc419cb49e920d54c8024c4b9ed308fd0fe66a56a680c5ce6",
+   "fetched_at_utc": "2026-10-29T21:28:57.677934+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ACP.WA?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "c442e858abc0bca79a07a108e16f3c7e2ff23db914fe5a9cb141e38f81733bf2",
+   "fetched_at_utc": "2026-10-29T21:28:58.157742+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "PG",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PG?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "ee79a2c262b019fb98a56145cca318563af13410edb4a934869347f187a7564f",
+   "fetched_at_utc": "2026-10-29T21:29:22.432445+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PG?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "6b9a5d6143e49a63df2369116599d98b9d2adf51aa5cf2f5f0b620ae8a55ec7d",
+   "fetched_at_utc": "2026-10-29T21:29:22.881536+00:00"
+  }
+ ]
+}

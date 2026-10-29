@@ -1,0 +1,18 @@
+{
+ "ticker": "MCD",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MCD?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "5ba2b27381c7797609e9602f53345daf10241cc0e265629945a0e8f12f32619e",
+   "fetched_at_utc": "2026-10-29T21:29:22.244273+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MCD?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "a74e08a67a7c47d63eff09477168b06bd9765f0127e02c130563b0f0f7bbb983",
+   "fetched_at_utc": "2026-10-29T21:29:22.830864+00:00"
+  }
+ ]
+}

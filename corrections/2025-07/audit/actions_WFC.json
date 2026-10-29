@@ -1,0 +1,18 @@
+{
+ "ticker": "WFC",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/WFC?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "27580638dd169732cb39287176180cd84f9013e68ea54bf91ac708cf7349594e",
+   "fetched_at_utc": "2026-10-29T21:29:17.408892+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/WFC?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "e16f77f8d7156c17a23d59e6bd2324cfe8518549383a748f366c69e1d0824926",
+   "fetched_at_utc": "2026-10-29T21:29:17.841157+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "CRWV",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CRWV?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "e7619b6c294668aa380687ba7dbd5ca87a83a1d124bf4c880f0474c3940eb989",
+   "fetched_at_utc": "2026-10-29T21:29:14.179551+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CRWV?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "509280afc92044e5daec54729f0ee353ba65de7a8fe56d519ff1ac5d99a2cbc0",
+   "fetched_at_utc": "2026-10-29T21:29:14.633802+00:00"
+  }
+ ]
+}

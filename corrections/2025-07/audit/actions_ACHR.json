@@ -1,0 +1,18 @@
+{
+ "ticker": "ACHR",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ACHR?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "aff43135c6b9a399fd0d61990e76eabf427da9ffaaa86a58f9a57f68eaae2faf",
+   "fetched_at_utc": "2026-10-29T21:29:16.316054+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ACHR?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "91be5b9174f003e92a61e70c30338c687798c574a6b7a8220d689eab5af36ce6",
+   "fetched_at_utc": "2026-10-29T21:29:16.722735+00:00"
+  }
+ ]
+}

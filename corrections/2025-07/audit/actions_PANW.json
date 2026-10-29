@@ -1,0 +1,18 @@
+{
+ "ticker": "PANW",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PANW?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "aa75164ecdaf3ab348962d3c8070cd46628d711763fa8f136bf5ccbdc73dd448",
+   "fetched_at_utc": "2026-10-29T21:29:12.285955+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PANW?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "a66cea361d78c26296af19b78a73ae448a47c49fab5d2071b2f3ae84e18cc154",
+   "fetched_at_utc": "2026-10-29T21:29:12.686148+00:00"
+  }
+ ]
+}

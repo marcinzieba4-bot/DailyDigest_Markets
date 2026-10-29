@@ -1,0 +1,27 @@
+{
+  "scope": "Explicit source-specific UTC availability; no original article-body vintage is asserted.",
+  "exceptions": [
+    {
+      "date": "2025-07-16",
+      "id": "n0381",
+      "canonical_url": "https://www.theguardian.com/australia-news/2025/jul/16/architectural-home-designs-for-1-nsw-releases-housing-pattern-book-aimed-at-boosting-construction",
+      "known_before_utc": "2025-07-15T15:01:00Z",
+      "evidence_url": "https://www.theguardian.com/australia-news/2025/jul/16/architectural-home-designs-for-1-nsw-releases-housing-pattern-book-aimed-at-boosting-construction",
+      "reason": "The original Guardian publication and its recorded update preceded the UTC cutoff despite the Australian calendar date in its URL.",
+      "timing_proof_file": "audit/guardian_july16_publication_time.json",
+      "timing_proof_sha256": "5cfb128882a82bba7dcd853041de6b0f7fa54fc4f4fc18d13ea104861e26f384",
+      "reviewer": "root-with-independent-timestamp-review"
+    },
+    {
+      "date": "2025-07-23",
+      "id": "n3999",
+      "canonical_url": "https://www.cnbc.com/2025/07/23/trump-announces-massive-trade-deal-with-japan-with-15percent-tariffs.html",
+      "known_before_utc": "2025-07-22T23:13:00Z",
+      "evidence_url": "https://www.trumpstruth.org/statuses/32157",
+      "reason": "Only the initial public Japan-framework announcement and stated 15% reciprocal tariff are admitted; later article details, market reactions and implementation are excluded.",
+      "timing_proof_file": "audit/japan_trade_july23_cutoff.json",
+      "timing_proof_sha256": "97945a06f70b739db7a27eaae46f73e1ce785db179d099e733c8db2abf94215b",
+      "reviewer": "root-with-independent-timestamp-review"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "RIOT",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RIOT?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "54f089279fda9558a07c08eb3640b486e4ccdf6c0fc6d49a1df13efc2ee2d39e",
+   "fetched_at_utc": "2026-10-29T21:28:55.349692+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RIOT?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "5c3318a6c9f8dbb1f9cecc31cc3945cbe13031062fc8b27e04327ab95c5fb645",
+   "fetched_at_utc": "2026-10-29T21:28:55.758144+00:00"
+  }
+ ]
+}

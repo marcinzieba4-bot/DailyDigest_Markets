@@ -1,0 +1,18 @@
+{
+ "ticker": "BRK-B",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BRK-B?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "b18d3068a0f4489bc6e432099bfffe552fb27703cba19ba8a7ea60935280452e",
+   "fetched_at_utc": "2026-10-29T21:29:17.939525+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BRK-B?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "75df41bc15db57d34eb69056f2a902fc5554f60e79eb91567e8b6fa0b81568a5",
+   "fetched_at_utc": "2026-10-29T21:29:18.402184+00:00"
+  }
+ ]
+}

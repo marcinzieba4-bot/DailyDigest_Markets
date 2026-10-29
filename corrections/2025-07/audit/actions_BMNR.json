@@ -1,0 +1,18 @@
+{
+ "ticker": "BMNR",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BMNR?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "2b755f75f445335a8865515f22c3008d47ea35a192ab59678c96bde7156b74a7",
+   "fetched_at_utc": "2026-10-29T21:28:55.154679+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BMNR?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "3f0d5b435d96bbfde25f35634a4573254255a0bc3f280e172b42c41462569c82",
+   "fetched_at_utc": "2026-10-29T21:28:55.663456+00:00"
+  }
+ ]
+}

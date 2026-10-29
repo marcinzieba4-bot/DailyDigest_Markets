@@ -1,0 +1,18 @@
+{
+ "ticker": "MP",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MP?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "090c3ca760ea3cf2f1caa82c2701ed1df80b497d8194618fc94f2ff65a0f3aaa",
+   "fetched_at_utc": "2026-10-29T21:29:16.299050+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MP?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "a9457e0c39dc95aa511d8f5951ad41307155314a142c5e72d3d8678331316573",
+   "fetched_at_utc": "2026-10-29T21:29:16.675838+00:00"
+  }
+ ]
+}

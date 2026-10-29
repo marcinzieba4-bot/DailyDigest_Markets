@@ -1,0 +1,18 @@
+{
+ "ticker": "BTC-USD",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "9cb3b834472773aaed62ead40da7b251a6ad47e1ae5a354ad7c85a342aec492a",
+   "fetched_at_utc": "2026-10-29T21:28:54.286497+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "2b149fd9312c0c557ab9df6cf5230fa6e979bb2e35191197058e57ac28be9592",
+   "fetched_at_utc": "2026-10-29T21:28:54.632611+00:00"
+  }
+ ]
+}

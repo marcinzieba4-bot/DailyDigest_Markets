@@ -1,0 +1,18 @@
+{
+ "ticker": "LYC.AX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LYC.AX?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "92d304069a554b0a408257d956910687311c3fa8a560dce4e457f806b903c79c",
+   "fetched_at_utc": "2026-10-29T21:29:04.003817+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LYC.AX?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "972caeb1f6786b97abcb59c23f111db97ac5feacbe9cb8b0a2c3e192c434adac",
+   "fetched_at_utc": "2026-10-29T21:29:04.472737+00:00"
+  }
+ ]
+}

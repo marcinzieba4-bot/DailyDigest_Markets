@@ -1,0 +1,18 @@
+{
+ "ticker": "APP",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/APP?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "5a82528c95f8377cce9db5a5d331891ad05b1c2f85b927a411caa1f8b82493a0",
+   "fetched_at_utc": "2026-10-29T21:29:12.929836+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/APP?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "55e4b9b50b8f2e131b11bca8aca5f2e1d0781d27801da76cbbd6fafd86efe8b8",
+   "fetched_at_utc": "2026-10-29T21:29:13.392605+00:00"
+  }
+ ]
+}

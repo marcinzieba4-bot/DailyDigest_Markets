@@ -1,0 +1,18 @@
+{
+ "ticker": "MS",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MS?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "4e5a352f2d54dfa0bd65eceef145daa430e53d30b28d9d9a055826c9148dcae2",
+   "fetched_at_utc": "2026-10-29T21:29:17.920268+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MS?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "9580bff44fa40ece9a0c48585c6d75b4a4d0ca91bc8c9e2c207a79315676021f",
+   "fetched_at_utc": "2026-10-29T21:29:18.365774+00:00"
+  }
+ ]
+}

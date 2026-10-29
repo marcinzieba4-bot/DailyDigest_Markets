@@ -1,0 +1,130 @@
+{
+  "observed_at_utc": "2026-10-29T21:37:40.720406+00:00",
+  "status": "approved_web_connector_independently_available",
+  "scope": "Small targeted public-source metadata probe; no native network calls, CI jobs, proxy changes, credentials, cache edits, spec edits or feed edits.",
+  "tool": "mcp__codex_apps__search_service_web_run",
+  "search_batches": 2,
+  "search_queries": 8,
+  "web_open_tests": [
+    {
+      "url": "https://finance.yahoo.com/news/opendoor-stock-records-180-weekly-gain-as-retail-frenzy-cements-meme-status-200527311.html",
+      "status": "HTTP429 Too Many Requests",
+      "search_result_available": true
+    },
+    {
+      "url": "https://www.businesswire.com/news/home/20250722525052/en/Oklo-Liberty-Energy-Launch-Next-Generation-Integrated-Power",
+      "status": "success",
+      "redirected_public_url": "https://www.businesswire.com/news/home/20250722525052/en/Oklo-and-Liberty-Energy-Launch-Next-Generation-Integrated-Power-Solution"
+    }
+  ],
+  "mappings": [
+    {
+      "report_date": "2025-07-01",
+      "item_id": "n4802",
+      "indexed_at_utc": "2025-06-30T07:00:00+00:00",
+      "original_source": "Reuters",
+      "original_title": "Robinhood launches tokens allowing EU users to trade in US stocks - Reuters",
+      "original_google_news_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbmtobkNOWjhBR3FkcE5rVE56OW0wM3hyMWJmbzIzYzRQVWU4VWhsQ2stVjVyM2h0Zm05Ym1XMzRUSzNBTGR1SDBBYW1iTktrclhxQzZoZXQ1ZnR5R1ZTTnkzNW1WZ01JdzRBTGx3c01qc1NYd3I5SUpJUVltVV9IMlhadXEwa0JBN1liVl9ac3Z3R1JoQW01d2VjZ1Q3cmxFcWdjYWZMWQ?oc=5",
+      "resolved_public_url": "https://www.reuters.com/business/robinhood-launches-tokens-allowing-eu-users-trade-us-stocks-2025-06-30/",
+      "relationship": "exact_headline_same_publisher",
+      "publication_date": "2025-06-30",
+      "publication_timestamp_utc": "2025-06-30T16:21:43Z",
+      "date_evidence": "Reuters search result supplies June 30, 2025 16:21:43 UTC; URL date matches frozen canonical metadata.",
+      "before_report_midnight_utc": true,
+      "lookup_method": "approved search_service_web_run exact-headline search",
+      "alternate_corroboration": []
+    },
+    {
+      "report_date": "2025-07-21",
+      "item_id": "n5375",
+      "indexed_at_utc": "2025-07-18T07:00:00+00:00",
+      "original_source": "Yahoo Finance",
+      "original_title": "Opendoor stock records 180% weekly gain as retail frenzy cements meme status - Yahoo Finance",
+      "original_google_news_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPN1pHM29RQ1VlMkFjTVlsZElYUXI4d0t3WnZFdW1hcG12b3FLQ0d6Umw2dVhWcktjbWZMSHQ5djI0TE8yTXlMN3VOQnptMFFOOFQyWW8zblg5Z2RpNHVLaG5MQ2JoVWFoQnlSVGd5UEhqU085NkNacURCSzB4d1dReWVQSEZhRHY3UXBEZHdSVk1VOVNGUmZHWnpNY2pIMGxhTHBfWEJoLTdDWXBqM21jRnhOV2xMS09FWm5TYzh3?oc=5",
+      "resolved_public_url": "https://finance.yahoo.com/news/opendoor-stock-records-180-weekly-gain-as-retail-frenzy-cements-meme-status-200527311.html",
+      "relationship": "exact_headline_same_publisher",
+      "publication_date": "2025-07-18",
+      "publication_timestamp_utc": null,
+      "date_evidence": "Yahoo indexed result title exactly matches original; date shown July 18, 2025. Direct open subsequently returned HTTP429; no exact publication time verified.",
+      "before_report_midnight_utc": true,
+      "lookup_method": "approved search_service_web_run exact-headline search",
+      "alternate_corroboration": []
+    },
+    {
+      "report_date": "2025-07-28",
+      "item_id": "n4405",
+      "indexed_at_utc": "2025-07-23T07:00:00+00:00",
+      "original_source": "Business Wire",
+      "original_title": "Oklo and Liberty Energy Launch Next-Generation Integrated Power Solution - Business Wire",
+      "original_google_news_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOeFUyWUlNR2JJM0RWWjFnZkUxNDBVZ3ZybnFSV0tTd0I0aC1OaTZZdVBGY3NqZENKdWlQY011WTJQRVJOa0FFVVd3SGxsekpEdENsR1BST2RCQkJRRF9VMkJBak9FYXJWeE9obWwyWjJkcUJiM3I3a2kwUVVSWFFYMEQzWXFzdExNWXdmQ3NqSDk5Q0tEQmdMejdRdTNNVkNzYnNPU1RJNzJxaWZFMDNzRlZoaDNMdW11NTgxZTVBWlNBWkRHMS1hYw?oc=5",
+      "resolved_public_url": "https://www.businesswire.com/news/home/20250722525052/en/Oklo-and-Liberty-Energy-Launch-Next-Generation-Integrated-Power-Solution",
+      "relationship": "exact_headline_same_publisher",
+      "publication_date": "2025-07-23",
+      "publication_timestamp_utc": null,
+      "date_evidence": "Exact Business Wire headline recovered; connector open followed normal slug redirect successfully. Publication date corroborated by both issuer primary release pages, not inferred from Business Wire numeric URL.",
+      "before_report_midnight_utc": true,
+      "lookup_method": "approved search_service_web_run exact-headline search",
+      "alternate_corroboration": [
+        {
+          "url": "https://oklo.com/newsroom/oklo-and-liberty-energy-launch-next-generation-integrated-power-solution",
+          "displayed_date": "2025-07-23"
+        },
+        {
+          "url": "https://libertyenergy.com/oklo-liberty-launch-next-generation-integrated-power-solution/",
+          "displayed_date": "2025-07-23"
+        }
+      ]
+    },
+    {
+      "report_date": "2025-07-28",
+      "item_id": "n4332",
+      "indexed_at_utc": "2025-07-22T07:00:00+00:00",
+      "original_source": "Business Wire",
+      "original_title": "Oklo and Vertiv Announce Collaboration to Advance Power and Cooling Solutions for Hyperscale and Colocation Data Centers in the United States - Business Wire",
+      "original_google_news_url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQRXc1S1kxZndiWG9PcG5GVXlxeUJKemJGZmh3dDBCNGxSMS1iNkV5aHlwWk1jMGxzRktQcHdyU184c2FqX0dkQmo5Qlh3dkxSN1JVX016TFZMSk9kNGxJS3hCTU5yd1BRWjBmVWkySjlxb1dkZ0N2bHJXYU5BN0x4b3Q0WkN5OWxaMUlUWjkwV1NXZHpkcUpRNldvLWRMVDcxc2tDYmlZTTRobnJfWDd3M0M1NHFLVXNJbk92cDRVRWNVRlZGdVMxNGNuOFdlUFZUMldkTC1wTUREc01yWUNxWFNDMWJzcFMzSWxvU00zdXd6V0c1OUpZeWNnc2dwWkN6WVFIX21DOFVCVzBOMm9jTU43NkZsTHQ0ODVmWTRhRG9CejZy?oc=5",
+      "resolved_public_url": "https://oklo.com/newsroom/news-details/2025/Oklo-and-Vertiv-Announce-Collaboration-to-Advance-Power-and-Cooling-Solutions-for-Hyperscale-and-Colocation-Data-Centers-in-the-United-States/",
+      "relationship": "primary_issuer_mirror_of_same_press_release",
+      "publication_date": "2025-07-22",
+      "publication_timestamp_utc": null,
+      "date_evidence": "Exact press-release headline found on issuer primary newsroom. Matching Vertiv primary release also dated July 22. Original Business Wire canonical URL not recovered in this probe.",
+      "before_report_midnight_utc": true,
+      "lookup_method": "approved search_service_web_run exact-headline search",
+      "alternate_corroboration": [
+        {
+          "url": "https://www.vertiv.com/en-in/about/news-and-events/news-releases/oklo-and-vertiv-announce-collaboration-to-advance-power-and-cooling-solutions-for-hyperscale-and-colocation-data-centers-in-the-united-states/",
+          "displayed_date": "2025-07-22"
+        }
+      ]
+    },
+    {
+      "report_date": "2025-07-01",
+      "item_id": "n4794",
+      "indexed_at_utc": "2025-06-30T07:00:00+00:00",
+      "original_source": "Bloomberg",
+      "original_title": "Robinhood Tokenizes US Company Shares for European Traders - Bloomberg",
+      "original_google_news_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbFdsVFNOVnVUT09HREdRWS1lSUY1ZnRLRFFkVVBVeUZiTFkxMm16WWRlSDZydkNGN1prYUp2RWRlTzUyM1JJeTdlM3ZJVlctWkVJZE5JWTRuTFVxR3VYeGM1TnM1Ul9Fcy1JVUZJeVVYNXFEYlpPVG1wSklPdk1BNFN5YXNHNzZITG5pcU5YYkdOZk1HZlk2ODlQbFRlOERfZlR6TUdxdVpJUG9qQ25DWjdWX0s?oc=5",
+      "resolved_public_url": "https://news.bloomberglaw.com/securities-law/robinhood-adds-us-shares-on-the-blockchain-for-european-traders",
+      "relationship": "same_publisher_news_service_republication",
+      "publication_date": "2025-06-30",
+      "publication_timestamp_utc": "2025-06-30T20:27:00Z",
+      "date_evidence": "Bloomberg News republication has same headline with edition suffix and exact June 30 20:27 UTC display. Original Bloomberg.com URL not recovered; relationship recorded as republication.",
+      "before_report_midnight_utc": true,
+      "lookup_method": "approved search_service_web_run exact-headline search",
+      "alternate_corroboration": []
+    }
+  ],
+  "unresolved": [
+    {
+      "report_date": "2025-07-21",
+      "item_id": "n5390",
+      "source": "CNBC",
+      "reason": "Exact headline found through secondary copies, but original CNBC canonical URL/date not recovered; secondary reproductions are insufficient for exact publisher mapping."
+    }
+  ],
+  "provenance_notes": [
+    "Search results were retrieved on the audit observation date and can reflect current page versions. Dates establish publication-date consistency, not immutable original article bodies.",
+    "No novel facts from these current lookups were written into historical reports.",
+    "Later related-story/footer material is excluded from historical evidence."
+  ],
+  "recommendation": "Use exact-title web queries and primary/own-publisher date evidence for targeted cited-source audits while native HTTPS tunnel is unavailable. Keep mirror/republication mappings distinct from confirmed original canonical URLs. The connector does not restore AWS transport or guarantee every publisher open succeeds."
+}

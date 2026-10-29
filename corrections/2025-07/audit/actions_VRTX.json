@@ -1,0 +1,18 @@
+{
+ "ticker": "VRTX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VRTX?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "fe5ae5a5316960e2ca56f59fa2bf6fa4f0d0e167931d1723e5df259a36c25324",
+   "fetched_at_utc": "2026-10-29T21:29:20.741563+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VRTX?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "1cfbec4e785836f636da02af171ecdfe98c3e94f8b4640a7cf5a812ac9e53ae9",
+   "fetched_at_utc": "2026-10-29T21:29:21.135122+00:00"
+  }
+ ]
+}

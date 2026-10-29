@@ -1,0 +1,24 @@
+{
+ "ticker": "BYND",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2026-08-14",
+   "factor": 0.03333333333333333,
+   "ratio": "1:30"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BYND?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "a9bd4021f60d8daf5c545c3918bde6d72626b74a4ebbdc7251411e582a6e8406",
+   "fetched_at_utc": "2026-10-29T21:29:16.398960+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BYND?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "50d9e1ed0d37a3cb404ece6629c144cbcfa0addd681d6d6db3c55e1c005b31bc",
+   "fetched_at_utc": "2026-10-29T21:29:16.916600+00:00"
+  }
+ ]
+}

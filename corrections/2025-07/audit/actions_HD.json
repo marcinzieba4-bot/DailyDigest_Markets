@@ -1,0 +1,18 @@
+{
+ "ticker": "HD",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HD?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "59921be5f2aaa494d8c6ddb1e2e20a3424965d54f8fc9dec8909647118701893",
+   "fetched_at_utc": "2026-10-29T21:29:21.418890+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HD?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "a37d1bcd03b48c392c16e39ccb59d3119df95eefa013339cd3cbb834be0daf79",
+   "fetched_at_utc": "2026-10-29T21:29:21.842544+00:00"
+  }
+ ]
+}

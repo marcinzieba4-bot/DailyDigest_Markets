@@ -1,0 +1,18 @@
+{
+ "ticker": "LOW",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LOW?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "9600efbedd2e63013ce4da39738c60ffb132fe8ff82a94a5879627379b9ad183",
+   "fetched_at_utc": "2026-10-29T21:29:21.423531+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LOW?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "17daaf6e2291b6772a2ccfcf5fbcf2dd6e50c0a0abe7436ccb8efb449e167582",
+   "fetched_at_utc": "2026-10-29T21:29:21.903345+00:00"
+  }
+ ]
+}

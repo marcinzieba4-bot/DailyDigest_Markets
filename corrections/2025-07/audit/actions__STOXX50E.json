@@ -1,0 +1,18 @@
+{
+ "ticker": "^STOXX50E",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESTOXX50E?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "d32f118dde66e8dcd74f295b947f4cb5d3e5380ecf04315ca7573d0be14a5c6f",
+   "fetched_at_utc": "2026-10-29T21:28:58.507270+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESTOXX50E?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "a6bc1325198c8470fe7ccd711176c516ea3ea725d5217b828236e762b1d341e4",
+   "fetched_at_utc": "2026-10-29T21:28:58.921117+00:00"
+  }
+ ]
+}

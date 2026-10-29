@@ -1,0 +1,60 @@
+July 2025 retrospective briefings — methodology
+
+Scope: 23 Monday–Friday report dates, 2025-07-01 through 2025-07-31.
+Per-report news cutoff: 00:00 UTC on its report date, strictly exclusive.
+Source-query lookbacks: fresh news and previews 7 days, company results 14 days,
+macro releases and policy baselines 35 days. Categories originate in the query
+catalogue; older background is time-qualified and is not presented as a fresh
+event. Each writer uses only the own-date frozen feed and market card.
+Actual releases at or after the UTC cutoff are excluded until a later edition.
+
+News: dated Google News historical RSS, 181,595 own-date headline records
+across these 23 feeds (per-date range 7,290–8,619).
+Category totals count the same headline again when eligible on multiple dates:
+{'monthly': 57291, 'news': 106357, 'result': 17947}.
+Acquisition audit: queries: 440; shared query windows: 2924; possibly capped windows: 154; failed windows: 0.
+Search-index result limits mean coverage is broad, not exhaustive. Publication
+timestamps can be approximate. Reports use cited headline facts, not details
+inferred from unread article bodies. Original article vintages are not
+independently archived. Readiness and chronology audit receipts, where present,
+record conservative exclusions and source-date checks; metadata does not prove
+an original article-body vintage. Later outcomes are excluded from writer inputs.
+
+Some publisher URLs use a later local calendar date. Explicit source-ledger timing
+notes identify original publications or underlying releases independently proved
+available before the report cutoff; they do not admit later article details.
+
+Frozen feeds and included audit receipts:
+https://d7g7nkeytae81.cloudfront.net/reports/2025-07/July_2025_Frozen_News_Feeds.zip
+SHA256: fafa3ae8172ec54df7417da32b88c602a4135e03d25d513417559e99b9a9a121
+The report bundle contains cited evidence ledgers, not all raw feed rows.
+
+Markets: Yahoo Finance historical daily charts, completed sessions before each
+report date, exchange-local session dates; crypto uses completed UTC days.
+Instruments per card: 292.
+Returns compare split-adjusted closes over 1, 5 and 20 observations and exclude
+dividends. Displayed price levels restore historical share units by reversing
+later split factors. CMCSA levels are suppressed because its adjustment includes
+a spin-off. Corporate-action metadata is used only for unit conversion; later
+price rows are excluded from writer inputs. Current-vintage prices may include
+later vendor revisions; original contemporaneous vendor snapshots were not found.
+Futures series may be affected by contract rolls.
+Instrument-specific gaps and split/restoration limits are recorded in this month's
+market provenance and validation audits. US Independence Day carries July 3 US
+closes into July 4 and July 7 editions; Japan's Marine Day carries its previous
+local close into the July 22 edition. Crypto has completed UTC daily candles.
+Returns compare 20 valid observations, rather than calendar days, and exclude
+dividends. Treasury uses actual two- and ten-year par yields; yield changes and
+curve spreads are basis points.
+
+Style: August 2026 nine-section structure, geographic and sector cards,
+1280px desktop width, responsive navigation and linked evidence ledger.
+Each HTML edition has a PDF and machine-readable JSON with its source evidence.
+Prepared retrospectively in October 2026; these are historical reconstructions.
+
+Code provenance:
+base_branch: codex/aug-2025-retrospective-20261029
+base_commit: 634f1465a0ec398104df659f0b3ee2351b9aea10
+working_branch: codex/jul-2025-retrospective-20261029
+Each edition uses its own frozen historical inputs. Source acquisition, exclusions,
+chronology checks and retrieval limits are recorded in the included audit receipts.

@@ -1,0 +1,18 @@
+{
+ "ticker": "BZ=F",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "a95c2b49331927cdb2fbcc9b6d640fc854368ce2706acb1e4097015c7ddb3851",
+   "fetched_at_utc": "2026-10-29T21:28:53.396264+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "5c9c7a9ad2e32b31c255f2dcbfc4c85bbe1cc247cfd4e602137b1dd17519931e",
+   "fetched_at_utc": "2026-10-29T21:28:53.903822+00:00"
+  }
+ ]
+}

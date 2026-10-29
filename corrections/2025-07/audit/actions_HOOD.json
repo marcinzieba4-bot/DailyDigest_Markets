@@ -1,0 +1,18 @@
+{
+ "ticker": "HOOD",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HOOD?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "52b891dafdd7042a3ca1c2c24705f694f5666e400996c5c3b64586f9fb2c721f",
+   "fetched_at_utc": "2026-10-29T21:28:55.098105+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HOOD?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "fcac7052c4022d075223f422835843764ceb5d4b47993db72ceffca37d848bf4",
+   "fetched_at_utc": "2026-10-29T21:28:55.473926+00:00"
+  }
+ ]
+}

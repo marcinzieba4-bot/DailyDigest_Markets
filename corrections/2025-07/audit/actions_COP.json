@@ -1,0 +1,18 @@
+{
+ "ticker": "COP",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/COP?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "031e6e655fa8ab2dc61dbd1a61e97b8ab185064871a1800bc6a48b9acc085421",
+   "fetched_at_utc": "2026-10-29T21:29:18.237766+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/COP?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "cdf1b504dc41472b60f5b3a77411513e9570d2cb44dff974ba2b0536eb79f79e",
+   "fetched_at_utc": "2026-10-29T21:29:18.612607+00:00"
+  }
+ ]
+}

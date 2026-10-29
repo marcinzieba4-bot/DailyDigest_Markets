@@ -1,0 +1,18 @@
+{
+ "ticker": "MRNA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MRNA?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "a83d83436fb04ad6088556c9d73b3e93d46a01f54fc57d2043a78d59d5ce3610",
+   "fetched_at_utc": "2026-10-29T21:29:20.550707+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MRNA?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "0abdfc3268ed5ded7c889ce9dd0d79a018a470730c46b6529f1377fe23846c10",
+   "fetched_at_utc": "2026-10-29T21:29:20.939434+00:00"
+  }
+ ]
+}

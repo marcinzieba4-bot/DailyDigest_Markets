@@ -1,0 +1,18 @@
+{
+ "ticker": "ETH-USD",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "b48150a92f1121bf4ffb28960a05aed796deac599033a64cf246a1d515c0f12a",
+   "fetched_at_utc": "2026-10-29T21:28:54.228069+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "edc05be67ff0719f6258b714174edb403719f9b0f12864f766960024690d2bad",
+   "fetched_at_utc": "2026-10-29T21:28:54.703772+00:00"
+  }
+ ]
+}

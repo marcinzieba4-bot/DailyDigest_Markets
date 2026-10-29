@@ -1,0 +1,18 @@
+{
+ "ticker": "STLA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/STLA?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "02a59fa6c045f0896f802080b9ebc648a9c617d9aded476c9c31c493692afe13",
+   "fetched_at_utc": "2026-10-29T21:28:59.394562+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/STLA?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "4fe0c6b64ed897f7bd95e78eb0d0b72dd7da60a538cb90c27193bdb08e3dd772",
+   "fetched_at_utc": "2026-10-29T21:28:59.828714+00:00"
+  }
+ ]
+}

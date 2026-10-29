@@ -1,0 +1,18 @@
+{
+ "ticker": "GBPUSD=X",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GBPUSD%3DX?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "12dae4e5e1a768771968e67a9f09fb6650e04d8a8cab0f2ae442d888f39d1286",
+   "fetched_at_utc": "2026-10-29T21:28:56.071788+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GBPUSD%3DX?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "c58b63a3980fa657188f899da3260cb0aa533b3129f4972544d38b381ebf06f4",
+   "fetched_at_utc": "2026-10-29T21:28:56.446579+00:00"
+  }
+ ]
+}

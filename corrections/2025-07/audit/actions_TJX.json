@@ -1,0 +1,18 @@
+{
+ "ticker": "TJX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TJX?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "3d0a60822c32d22396715d4e833787096466961fbfa7ab08aab3f0c9325e56cb",
+   "fetched_at_utc": "2026-10-29T21:29:21.542599+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TJX?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "3564bee0a4c9da02ab91c7052ba8ab42b5e8f6b14a9a3db91af9454326a2f35e",
+   "fetched_at_utc": "2026-10-29T21:29:21.957543+00:00"
+  }
+ ]
+}

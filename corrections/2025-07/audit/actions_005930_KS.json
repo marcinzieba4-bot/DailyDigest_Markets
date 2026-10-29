@@ -1,0 +1,18 @@
+{
+ "ticker": "005930.KS",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/005930.KS?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "03d51ca47f769cd96c0c69593220ca193d50f741162733e60ee5f1546fc51052",
+   "fetched_at_utc": "2026-10-29T21:29:01.740975+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/005930.KS?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "ce716c94ef2d7397ebabf36d581a44d665232329e0be57679b4d5b45ed38b1c1",
+   "fetched_at_utc": "2026-10-29T21:29:02.235204+00:00"
+  }
+ ]
+}

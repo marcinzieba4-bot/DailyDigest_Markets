@@ -1,0 +1,44 @@
+{
+ "ticker": "SCCO",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2025-08-15",
+   "factor": 1.01,
+   "ratio": "101:100"
+  },
+  {
+   "date": "2025-11-12",
+   "factor": 1.008,
+   "ratio": "1008:1000"
+  },
+  {
+   "date": "2026-02-10",
+   "factor": 1.008,
+   "ratio": "1008:1000"
+  },
+  {
+   "date": "2026-05-13",
+   "factor": 1.01,
+   "ratio": "101:100"
+  },
+  {
+   "date": "2026-08-11",
+   "factor": 1.012,
+   "ratio": "1012:1000"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SCCO?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "ecf526aa490a1e3faa09350292d5f4566a75a5c9a427ac815e405a46eed42604",
+   "fetched_at_utc": "2026-10-29T21:29:19.054353+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SCCO?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "f7bc48bbb1ed405576961674d4ec5878ee13fafd2e6ba685544cf388c6c5a916",
+   "fetched_at_utc": "2026-10-29T21:29:19.410084+00:00"
+  }
+ ]
+}

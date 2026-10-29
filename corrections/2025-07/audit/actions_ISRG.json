@@ -1,0 +1,18 @@
+{
+ "ticker": "ISRG",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ISRG?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "a0d1d531c1f7624b3bd1bef589c948bea32c556512482df3c7d306b259373b5d",
+   "fetched_at_utc": "2026-10-29T21:29:20.680621+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ISRG?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "6595f510e1ee33124872128c72bd4590535acf48d4cdfb7ff949ce474d666b5e",
+   "fetched_at_utc": "2026-10-29T21:29:21.136392+00:00"
+  }
+ ]
+}

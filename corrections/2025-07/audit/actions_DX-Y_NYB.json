@@ -1,0 +1,18 @@
+{
+ "ticker": "DX-Y.NYB",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "1ecfa1306b863244673cfb136af37d24d8c788e93fa407fd866ebb446785cc80",
+   "fetched_at_utc": "2026-10-29T21:28:52.551969+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "3c60c89d3517e31f40d6fb1e93c7a98d318c3036c1d7ff9d0b243be8bc0bf867",
+   "fetched_at_utc": "2026-10-29T21:28:53.091026+00:00"
+  }
+ ]
+}

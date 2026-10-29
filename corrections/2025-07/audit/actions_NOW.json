@@ -1,0 +1,24 @@
+{
+ "ticker": "NOW",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2025-12-18",
+   "factor": 5.0,
+   "ratio": "5:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NOW?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "94965c528d08c065664ebe838e1e4bb7b913ca76f10e5d3d4dbddc422f76fb46",
+   "fetched_at_utc": "2026-10-29T21:29:11.730353+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NOW?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "a5ae79b2b335e54de117a3b48d24631dc2600abfeef9a890536f976c9c3ae3a5",
+   "fetched_at_utc": "2026-10-29T21:29:12.115562+00:00"
+  }
+ ]
+}

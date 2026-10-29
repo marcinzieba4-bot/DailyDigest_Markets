@@ -1,0 +1,18 @@
+{
+ "ticker": "SNOW",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SNOW?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "678799b64b79bbc01e4f1842f506626f18a83a45f4b7740351c9d4661483645a",
+   "fetched_at_utc": "2026-10-29T21:29:12.052187+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SNOW?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "57cc315dd650e5fc9ef84f2e30bf27e849f70af58ab549bc6bc7aebb31ff6486",
+   "fetched_at_utc": "2026-10-29T21:29:12.496631+00:00"
+  }
+ ]
+}

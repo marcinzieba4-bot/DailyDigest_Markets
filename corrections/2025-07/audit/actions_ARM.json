@@ -1,0 +1,18 @@
+{
+ "ticker": "ARM",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ARM?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "4434d423172eba046e54d8764298079b139e281247152b12c125853b76edce42",
+   "fetched_at_utc": "2026-10-29T21:29:09.882025+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ARM?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "bf8cc1dbf63148d3c55ea725372dde1b04900bb18436cf5de70112a93afec53b",
+   "fetched_at_utc": "2026-10-29T21:29:10.260193+00:00"
+  }
+ ]
+}

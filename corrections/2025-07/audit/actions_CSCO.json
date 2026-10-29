@@ -1,0 +1,18 @@
+{
+ "ticker": "CSCO",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CSCO?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "77fa66af65fab593c9f802f2a569e6009ff0cb3cf60787a231ead8900e99c605",
+   "fetched_at_utc": "2026-10-29T21:29:12.957107+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CSCO?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "4eaf5cc0cb24192553bad7e0ff454d162f3ceade1e010348a78f7f5dd17b78cd",
+   "fetched_at_utc": "2026-10-29T21:29:13.473041+00:00"
+  }
+ ]
+}

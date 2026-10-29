@@ -1,0 +1,103 @@
+{
+  "observed_at_utc": "2026-10-29T22:07:02.197992+00:00",
+  "event": "Initial public US-Japan trade-framework announcement",
+  "report_date": "2025-07-23",
+  "report_cutoff_utc": "2025-07-23T00:00:00+00:00",
+  "verdict": "pre_cutoff_public_announcement_supported",
+  "original_social_post_url": "https://truthsocial.com/@realDonaldTrump/114899417740854572",
+  "original_social_status_id": "114899417740854572",
+  "displayed_original_post_datetime": "July 22, 2025, 7:12 PM EDT",
+  "time_precision": "minute; seconds not supplied by inspected display",
+  "conversion": {
+    "zone": "America/New_York",
+    "utc_offset": "-04:00",
+    "local_iso": "2025-07-22T19:12:00-04:00",
+    "utc_minute_start": "2025-07-22T23:12:00+00:00",
+    "conservative_known_before_utc": "2025-07-22T23:13:00+00:00",
+    "minutes_before_cutoff_at_displayed_minute": 48
+  },
+  "evidence": [
+    {
+      "source_url": "https://www.trumpstruth.org/statuses/32157",
+      "source_type": "independent archive of original public Trump post",
+      "tool": "mcp__codex_apps__search_service_web_run",
+      "tool_reference": "turn410294view0",
+      "relevant_lines": [
+        22,
+        25,
+        26,
+        29,
+        31,
+        32
+      ],
+      "evidence_description": "Identifies exact original status ID and explicitly labels original post date July22 7:12PM EDT; separates later archive capture date."
+    },
+    {
+      "source_url": "https://truthsocial.com/@realDonaldTrump/114899417740854572",
+      "source_type": "primary original public post permalink",
+      "tool_reference": "turn410294view1",
+      "access_result": "Original URL resolves but body requires JavaScript; no timestamp/body extracted directly."
+    },
+    {
+      "source_url": "https://efile.fara.gov/docs/3327-Informational-Materials-20250731-812.pdf",
+      "source_type": "US Department of Justice FARA archive of contemporaneous informational material containing facsimile of original public post",
+      "tool_reference": "turn252829view0",
+      "screenshot_reference": "turn611496view0",
+      "page_zero_based": 1,
+      "relevant_lines": [
+        39,
+        40,
+        52,
+        53,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77
+      ],
+      "evidence_description": "Facsimile visibly shows original account, announcement text and July22 7:12PM post timestamp; DOJ received the document July31. Only the embedded post timestamp/content is used, not subsequent analysis."
+    }
+  ],
+  "publicly_announced_by_then": [
+    {
+      "fact": "Trump publicly said a trade deal with Japan had been completed.",
+      "status": "announcement claim; not proof of legal implementation"
+    },
+    {
+      "fact": "He stated a 15% reciprocal tariff on Japan.",
+      "status": "announced headline term; no separate auto-sector rate inferred"
+    },
+    {
+      "fact": "He described prospective Japanese investment of $550 billion into the United States.",
+      "status": "announced commitment, not funds already invested"
+    },
+    {
+      "fact": "He claimed the United States would receive 90% of profits.",
+      "status": "attributed presidential claim, not independently settled economic/legal detail"
+    },
+    {
+      "fact": "He described Japanese market opening for US cars, trucks, rice and other agricultural goods.",
+      "status": "announced broad scope, not detailed implementation"
+    }
+  ],
+  "do_not_infer": [
+    "Japanese market reactions during July23 sessions.",
+    "Separate tariff treatment for autos or other sectors beyond the initial post.",
+    "Implemented tariff effective dates, later negotiated details, actual investment deployment or final legal documentation."
+  ],
+  "uncertainty": [
+    "The original site requires JavaScript in the approved connector. Timestamp/content are supported by an exact-status archive and independently viewed post facsimile filed July31, rather than a before-cutoff immutable capture.",
+    "Timestamp has minute precision, so use conservative known-before23:13UTC rather than inventing seconds.",
+    "No source-audit exception is created here; root/reviewer must bind any correction to eligible evidence and retain attribution."
+  ],
+  "specs_changed": false,
+  "feeds_changed": false,
+  "canonical_cache_changed": false
+}

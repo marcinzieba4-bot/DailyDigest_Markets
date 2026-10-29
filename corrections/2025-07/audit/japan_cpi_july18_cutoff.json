@@ -1,0 +1,107 @@
+{
+  "observed_at_utc": "2026-10-29T22:22:27.360118+00:00",
+  "report_date": "2025-07-18",
+  "item_id": "n4173",
+  "event": "Japan national CPI June2025 release (2020-base)",
+  "verdict": "official_release_before_cutoff_verified",
+  "official_published_local": "2025-07-18T08:30:00+09:00",
+  "official_known_at_utc": "2025-07-17T23:30:00+00:00",
+  "report_cutoff_utc": "2025-07-18T00:00:00+00:00",
+  "minutes_before_cutoff": 30,
+  "proof_type": "Exact government dataset metadata published date and time, corroborated by release PDF and monthly CPI standard publication-time schedule. Not merely a date or a release-time assumption.",
+  "official_evidence": [
+    {
+      "publisher": "Government of Japan e-Stat / Ministry of Internal Affairs and Communications Statistics Bureau",
+      "url": "https://www.e-stat.go.jp/stat-search/files?layout=dataset&stat_infid=000040293364&toukei=00200573",
+      "dataset_id": "000040293364",
+      "title": "National CPI results overview, June2025",
+      "timestamp_field_japanese": "公開年月日時分",
+      "timestamp_field_english": "Public release year-month-day-hour-minute",
+      "timestamp_value": "2025-07-18 08:30",
+      "tool_reference": "turn263838view1",
+      "line": 548
+    },
+    {
+      "url": "https://www.e-stat.go.jp/stat-search/files?stat_infid=000040293366",
+      "dataset_id": "000040293366",
+      "role": "National monthly index table independently has identical exact publication timestamp",
+      "tool_reference": "turn263838view2",
+      "line": 548
+    },
+    {
+      "url": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040293364",
+      "role": "Official archived June2025 national CPI PDF, dated July18,2025, downloaded from exact dated dataset",
+      "tool_reference": "turn541791view0",
+      "screenshot_reference": "turn518832view0",
+      "page_zero_based": 0,
+      "verified_data_lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        36,
+        44,
+        45
+      ]
+    },
+    {
+      "url": "https://www.stat.go.jp/data/guide/3.htm",
+      "role": "Statistics Bureau publication-time guide, dated Jan17,2025; national CPI 08:30 local. General schedule alone would be insufficient; exact dataset metadata above supplies actual release timestamp.",
+      "tool_reference": "turn569069view1",
+      "relevant_lines": [
+        90,
+        103,
+        104,
+        111
+      ]
+    }
+  ],
+  "available_official_factual_scope": [
+    {
+      "measure": "Headline national CPI June2025",
+      "year_over_year_percent": 3.3,
+      "index_2020_equals_100": 111.7,
+      "prior_month_year_over_year_percent": 3.5
+    },
+    {
+      "measure": "National CPI excluding fresh food (Japanese core CPI), June2025",
+      "year_over_year_percent": 3.3,
+      "index_2020_equals_100": 111.4,
+      "prior_month_year_over_year_percent": 3.7
+    },
+    {
+      "measure": "National CPI excluding fresh food and energy, June2025",
+      "year_over_year_percent": 3.4,
+      "index_2020_equals_100": 110.3,
+      "prior_month_year_over_year_percent": 3.3
+    }
+  ],
+  "not_verified_by_official_CPI_release": [
+    "Interest-rate market expectations, FX/equity reactions or central-bank comments after the release.",
+    "Publication/update timestamp and immutable original body of the Reuters story itself.",
+    "A realized BOJ rate decision; the CPI release supplies data, not policy action."
+  ],
+  "reuters_original_url": "https://www.reuters.com/markets/asia/japans-core-inflation-slows-stays-above-boj-target-keeps-hike-bets-alive-2025-07-17/",
+  "limits": [
+    "Exact official metadata is current government record; no HTTP capture from July17 UTC retained.",
+    "This supports availability of the underlying official CPI data before cutoff. It does not automatically approve a Reuters article-version exception or add new numerical claims to the spec.",
+    "Statistics use original 2020-base release PDF, avoiding later 2025-base backcast revisions."
+  ],
+  "changes": {
+    "specs": false,
+    "feeds": false,
+    "canonical_cache": false
+  }
+}

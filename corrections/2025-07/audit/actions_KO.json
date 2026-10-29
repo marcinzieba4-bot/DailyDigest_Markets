@@ -1,0 +1,18 @@
+{
+ "ticker": "KO",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KO?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "49eaeb983024c469f569d49df9caca0908ad0ba756fb0a76cfc782844a83a599",
+   "fetched_at_utc": "2026-10-29T21:29:22.382454+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KO?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "be681dcb2a4262060cb32ecdfad7bee2601ddfeded0f7eff9f7104faa87f3cae",
+   "fetched_at_utc": "2026-10-29T21:29:22.885735+00:00"
+  }
+ ]
+}

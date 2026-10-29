@@ -1,0 +1,18 @@
+{
+  "observed_at_utc": "2026-10-29T21:33:51.529491+00:00",
+  "metadata_cache_records": 1127,
+  "error_classification": {
+    "HTTP503_service_unavailable": 22,
+    "Google_anti_automation_challenge_redirect": 6,
+    "Inherited_non_news_google_redirect_guard_rejection": 27
+  },
+  "http_429_seen": false,
+  "destination_policy_403_seen": false,
+  "aws_credentials_involved": false,
+  "root_causes": [
+    "Inherited resolver rejected any redirect away from news.google.com without retaining its target. Older errors therefore do not establish whether the target was a publisher or an anti-automation page. Resolver now captures redirect metadata without fetching the target.",
+    "Google News metadata endpoint began redirecting to google.com/sorry anti-automation challenge after more than 1,000 metadata lookups; some requests returned HTTP503."
+  ],
+  "resolution": "Stopped repeated network retries; finalized remaining date from available metadata with every unresolved priority Reuters record conservatively excluded. All broad RSS query windows had already succeeded. Frozen feeds preserved.",
+  "limits": "Cached HTTP503 errors do not retain response bodies, so origin-vs-proxy cause of those individual 503s is not established. Google anti-automation redirect is directly observed."
+}

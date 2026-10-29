@@ -1,0 +1,18 @@
+{
+ "ticker": "PEP",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PEP?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "c43c41347c59c39c4ff0720f1e2859f0a5772acc25c25e74c70c143f0176fbf6",
+   "fetched_at_utc": "2026-10-29T21:29:22.366971+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PEP?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "ad99f5623eef311c1c4662dd848de0f24827cc9e960652dc4d161fa612e6f040",
+   "fetched_at_utc": "2026-10-29T21:29:22.879058+00:00"
+  }
+ ]
+}

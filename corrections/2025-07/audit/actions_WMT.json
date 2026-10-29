@@ -1,0 +1,18 @@
+{
+ "ticker": "WMT",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/WMT?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "26dd327f948da4bcfe5722de1af45037d091e0d7739fa48075a0564cffcccc93",
+   "fetched_at_utc": "2026-10-29T21:29:20.918791+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/WMT?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "b7d568fcfb4aef3a608d24d54d76ba47c00a42bc586cf0e9e68e6b6218a2d2e5",
+   "fetched_at_utc": "2026-10-29T21:29:21.410580+00:00"
+  }
+ ]
+}

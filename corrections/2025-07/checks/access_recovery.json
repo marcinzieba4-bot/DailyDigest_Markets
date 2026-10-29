@@ -1,0 +1,105 @@
+{
+  "checked_at_utc": "2026-10-29T21:35:15.458446+00:00",
+  "source_code": {
+    "initial_checkout": "README-only initial main commit43842a8",
+    "resolved_branch": "codex/aug-2025-retrospective-20261029",
+    "resolved_commit": "634f1465a0ec398104df659f0b3ee2351b9aea10",
+    "remedy": "Fetched current remote source and created isolated July worktree."
+  },
+  "aws": {
+    "runtime_bindings_ready": true,
+    "s3_inventory_objects": 21838,
+    "inventory_and_reference_reads_succeeded": true,
+    "credential_values_saved": false,
+    "lambda_metadata_read_succeeded": true,
+    "optional_lambda_signed_download": "HTTP CONNECT403 observed; blocked destination policy is plausible but exact signed host was not retained. Newer current repository source was used instead."
+  },
+  "news": {
+    "rss_query_windows": 2924,
+    "failed_windows": 0,
+    "frozen_own_date_records": 181595,
+    "metadata_diagnosis_file": "audit/news_metadata_access_diagnosis.json",
+    "remedy": "Capture Google redirect metadata without fetching target bodies; omit unresolved priority records; preserve frozen feeds."
+  },
+  "scope": "No credential, IAM, network policy, live Lambda, email or Telegram changes.",
+  "transport_recheck": {
+    "at_utc": "2026-10-29T21:36:10.898357+00:00",
+    "observed_bindings_ready": true,
+    "checks": [
+      {
+        "service": "public_reports",
+        "success": false,
+        "exception": "HTTPError",
+        "error": "HTTP Error 503: Service Unavailable"
+      },
+      {
+        "service": "news_rss",
+        "success": false,
+        "exception": "HTTPError",
+        "error": "HTTP Error 503: Service Unavailable"
+      },
+      {
+        "service": "s3_report_get",
+        "success": false,
+        "exception": "ClientError",
+        "http_status": 503,
+        "aws_request_id": "",
+        "error": "An error occurred (503) when calling the GetObject operation (reached max retries: 0): Service Unavailable"
+      }
+    ]
+  },
+  "runtime_gateway_failure": {
+    "observed": "Lambda API503 with envoy cloudflare_https_tunnel Invalid argument remote address; publicCDN, GoogleNewsRSS and S3 subsequently allHTTP503; S3 AWSrequestID empty.",
+    "assessment": "Failure occurs before an identifiable AWS authorization response and affects unrelated hosts. Ready binding observations do not establish transport health.",
+    "configuration_changes": false,
+    "data_status": "All historical data needed for writing frozen locally before this failure."
+  },
+  "bounded_rechecks": [
+    {
+      "at_utc": "2026-10-29T21:49:00.377042+00:00",
+      "service": "public_reports",
+      "success": false,
+      "exception": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "at_utc": "2026-10-29T22:14:19.134364+00:00",
+      "service": "public_reports",
+      "success": false,
+      "exception": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "at_utc": "2026-10-29T22:31:28.920851+00:00",
+      "service": "public_reports",
+      "success": true,
+      "status": 200
+    },
+    {
+      "at_utc": "2026-10-29T22:31:45.458873+00:00",
+      "service": "s3_readiness",
+      "success": true,
+      "status": 200,
+      "bytes": 19875,
+      "aws_response_identified": true
+    }
+  ],
+  "transport_recovery": {
+    "environment_observed_connected": true,
+    "observations_current": true,
+    "network_policy_state": "enforced",
+    "aws_bindings": [
+      {
+        "name": "AWS_KEY",
+        "state": "ready"
+      },
+      {
+        "name": "AWS_SECRET",
+        "state": "ready"
+      }
+    ],
+    "diagnostic_records_available": false,
+    "assessment": "Ordinary native public CDN and signed S3 read operations recovered without credential, IAM, network-policy or proxy changes. Earlier unrelated-host 503 responses with empty AWS request IDs indicate an intermittent managed transport failure; exact provider internal cause remains unproven.",
+    "observed_at_utc": "2026-10-29T22:33:50.753032+00:00"
+  }
+}

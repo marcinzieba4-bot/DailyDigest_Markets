@@ -1,0 +1,18 @@
+{
+ "ticker": "MBG.DE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MBG.DE?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "2871e44bcfeeb5b2e75c9c5db3ba055b058c49882f64493ef670e96921af4e6a",
+   "fetched_at_utc": "2026-10-29T21:28:59.329095+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MBG.DE?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "81be9a5381fa2c70ce08c001aa5e284a28b53f5054ac703561ee1567c26cab08",
+   "fetched_at_utc": "2026-10-29T21:28:59.804523+00:00"
+  }
+ ]
+}

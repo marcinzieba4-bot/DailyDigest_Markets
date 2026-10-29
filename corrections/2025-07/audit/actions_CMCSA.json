@@ -1,0 +1,24 @@
+{
+ "ticker": "CMCSA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2026-01-05",
+   "factor": 1.067,
+   "ratio": "1067:1000"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CMCSA?period1=1747267200&period2=1754006400&interval=1d&events=div,splits",
+   "sha256": "9226e97d2a11e8a09cb153b115ea27e7a8bcbecc11d631c60ef7d79939476d48",
+   "fetched_at_utc": "2026-10-29T21:29:22.521696+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CMCSA?period1=1754006400&period2=1793309331&interval=1d&events=div,splits",
+   "sha256": "378c21de084d5a63ae7739c92b81947b813e24d1b10667daf54c47256e6cc9c1",
+   "fetched_at_utc": "2026-10-29T21:29:23.046920+00:00"
+  }
+ ]
+}

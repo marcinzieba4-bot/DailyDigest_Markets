@@ -1,0 +1,46 @@
+{
+  "observed_at_utc": "2026-10-29T22:04:25.038569+00:00",
+  "report_date": "2025-07-29",
+  "item_id": "n0276",
+  "source": "ABC News",
+  "canonical_url": "https://www.abc.net.au/news/2025-07-29/commonwealth-bank-says-ai-behind-dozens-of-job-cuts/105586312",
+  "original_headline": "CBA replaces dozens of call centre jobs with AI chatbot",
+  "verdict": "after_cutoff_no_exception_supported",
+  "publisher_timestamp_label": "Posted",
+  "publisher_displayed_timestamp": "Tue 29 Jul 2025 at 4:44pm",
+  "updated_timestamp_used": false,
+  "evidence": {
+    "tool": "mcp__codex_apps__search_service_web_run",
+    "command": "open",
+    "tool_reference": "turn699841view0",
+    "line": 135,
+    "short_exact_timestamp_excerpt": "Posted Tue 29 Jul 2025 at 4:44pm",
+    "source_url": "https://www.abc.net.au/news/2025-07-29/commonwealth-bank-says-ai-behind-dozens-of-job-cuts/105586312"
+  },
+  "utc_conversion": {
+    "assumed_publisher_zone": "Australia/Sydney",
+    "zone_abbreviation": "AEST",
+    "utc_offset": "+10:00",
+    "local_iso": "2025-07-29T16:44:00+10:00",
+    "utc_iso": "2025-07-29T06:44:00+00:00",
+    "minutes_after_cutoff": 404,
+    "basis": "IANA Australia/Sydney offset on July 29, 2025. The rendered publisher timestamp does not explicitly print a timezone, so this precise zone assignment is an interpretation, not extracted structured publication metadata."
+  },
+  "timezone_robustness": {
+    "maximum_real_world_positive_offset": "+14:00",
+    "earliest_possible_utc_for_displayed_datetime": "2025-07-29T02:44:00+00:00",
+    "earliest_possible_is_after_cutoff": true,
+    "implication": "The displayed afternoon publication cannot fall before July 29 UTC midnight under any ordinary civil timezone, even without assigning the publisher timezone."
+  },
+  "report_cutoff_utc": "2025-07-29T00:00:00+00:00",
+  "pre_cutoff_original_availability_verified": false,
+  "recommendation": "Retain conservative removal. The source does not justify a pre-cutoff timing exception.",
+  "limits": [
+    "The current publisher page provides a Posted timestamp, not an immutable archived original body.",
+    "No later article claims, sidebar content or later outcomes were used.",
+    "Additional exact-ID/time searches did not reveal an earlier publisher timestamp."
+  ],
+  "specs_changed": false,
+  "feeds_changed": false,
+  "canonical_cache_changed": false
+}

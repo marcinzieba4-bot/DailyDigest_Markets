@@ -1,0 +1,20 @@
+{
+  "reviewer": "writer_july18 independent read-only code review followed by root and reviewer fixes",
+  "findings_fixed": [
+    "Backup-stage transport failures can resume while preserving original versions.",
+    "Finalization compares exact origin/public target hashes and sizes to the current manifest.",
+    "Artifact input hashes include timing exceptions and source auditor binds exception proof hashes.",
+    "Review gate rechecks both approved proof-file hashes at every build/publish/finalize gate; current proof files are unchanged."
+  ],
+  "offline_publisher_selftest_passed": true,
+  "selftest_log_sha256": "5c1df56fcc093871195824462dacde03d0b9695404c0e0472798cff082183066",
+  "manifest_summary": {
+    "reports": 23,
+    "words": 224262,
+    "pdf_pages": 558,
+    "formats": 69,
+    "all_mobile_no_overflow": true,
+    "all_desktop_nine_sections": true
+  },
+  "frozen_archive_tool_version_note": "The already-published immutable source ZIP retains the tools used at build time. Final source branch adds proof-file invalidation checks after that freeze; no report, exception, proof, renderer or artifact changed."
+}
