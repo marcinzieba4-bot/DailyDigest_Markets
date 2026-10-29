@@ -1,0 +1,22 @@
+{
+  "observed_at_utc": "2026-10-29T14:53:28.057858+00:00",
+  "configured_bindings": "AWS_KEY/AWS_SECRET readiness ready; no values inspected or stored",
+  "startup_issue": {
+    "cause": "Local main checkout contained README only; newest complete task code on remote codex/retail-editorial-quality",
+    "resolution": "Retrieved latest source commit76f537b5a42c168c4d9b6777c23ed67427a628a8 and adaptedSeptember pipeline forAugust"
+  },
+  "transport_issue": {
+    "evidence": "Approved managed HTTPS tunnel returned503 fromGoogleNews,S3,CloudFront despiteconnected/enforcedruntime status. Earlierdetailedresponse:immediateconnecterror Invalidargument remoteaddressenvoy://cloudflare_https_tunnel/",
+    "scope": "ProviderHTTPtransportfailure acrossunrelatedallowedhosts;notmissingAWScredentials",
+    "runtime_restart_tool_available": false,
+    "runtime_fixed": false
+  },
+  "source_recovery": {
+    "resolution": "IsolatedGitHubconnector publicmetadatajob,contents-read,nocredentialsorpublisherbodies;verifiedhashbounddecodedpayload",
+    "records": 468,
+    "failures": 0,
+    "frozen_feeds_changed": false,
+    "receipt": "audit/canonical_metadata_ci_ingestion.json"
+  },
+  "remaining_issue": "NativeAWSpublication/publicdelivery probescurrently503;nooriginreportwritesattempted. Analysisandlocalartifactscancompletewithoutthistransport."
+}

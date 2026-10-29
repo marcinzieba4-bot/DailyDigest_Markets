@@ -1,0 +1,758 @@
+{
+  "schema_version": 1,
+  "purpose": "Point-in-time evidence for August2025 retrospective daily reports",
+  "retrieved_at": "2026-10-29",
+  "methodology": [
+    "available_at is earliest explicitly verified public release time where known; date-only items use23:59:59Z conservatively.",
+    "A report must select only facts with available_at strictly before its cutoff.",
+    "Source data vintages are preserved; later revisions are explicitly excluded.",
+    "analytical_implication is a conditional editorial inference, not an observed outcome or claimed positioning.",
+    "Primary sources are preferred. Search or archive dates alone do not establish economic reference-period availability."
+  ],
+  "facts": [
+    {
+      "id": "nbp-july-cut",
+      "available_at": "2025-07-02T23:59:59Z",
+      "region": "Poland",
+      "category": "policy",
+      "headline": "NBP reference rate cut to 5.00%",
+      "facts": {
+        "reference_rate_pct": 5.0,
+        "cut_bp": 25,
+        "effective_date": "2025-07-03"
+      },
+      "source_url": "https://nbp.pl/wp-content/uploads/2025/07/Raport-o-inflacji-lipiec-2025-ANG-1.pdf",
+      "source": "NBP July Inflation Report",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "",
+      "analytical_implication": "Domestic easing supports rate-sensitive demand; bank net interest income faces a separate margin headwind."
+    },
+    {
+      "id": "ecb-july-hold",
+      "available_at": "2025-07-24T23:59:59Z",
+      "region": "Europe",
+      "category": "policy",
+      "headline": "ECB holds deposit facility at 2.00%",
+      "facts": {
+        "deposit_rate_pct": 2.0,
+        "refinancing_rate_pct": 2.15,
+        "marginal_lending_rate_pct": 2.4
+      },
+      "source_url": "https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp250724~50bc70e13f.en.html",
+      "source": "ECB",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "",
+      "analytical_implication": "Trade uncertainty remains relevant despite inflation near target; rate cuts are not precommitted."
+    },
+    {
+      "id": "us-q2-gdp-advance",
+      "available_at": "2025-07-30T12:30:00Z",
+      "region": "United States",
+      "category": "growth",
+      "headline": "US Q2 GDP advance estimate rebounds to 3.0% annualized",
+      "facts": {
+        "q2_real_gdp_saar_pct": 3.0,
+        "q1_real_gdp_saar_pct": -0.5,
+        "real_final_sales_private_domestic_saar_pct": 1.2
+      },
+      "source_url": "https://www.bea.gov/news/2025/gross-domestic-product-2nd-quarter-2025-advance-estimate",
+      "source": "BEA",
+      "availability_precision": "exact",
+      "vintage_note": "Use 3.0% until Aug28 12:30Z. Later estimates must not overwrite this vintage.",
+      "analytical_implication": "Import reversal explains part of headline strength; domestic final sales give a softer underlying-demand signal."
+    },
+    {
+      "id": "us-july-fomc",
+      "available_at": "2025-07-30T18:00:00Z",
+      "region": "United States",
+      "category": "policy",
+      "headline": "Fed holds 4.25–4.50%; Bowman and Waller favor a cut",
+      "facts": {
+        "fed_funds_lower_pct": 4.25,
+        "fed_funds_upper_pct": 4.5,
+        "dissenting_cut_preference_bp": 25,
+        "dissenters": [
+          "Michelle Bowman",
+          "Christopher Waller"
+        ]
+      },
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250730a.htm",
+      "source": "Federal Reserve",
+      "availability_precision": "exact",
+      "vintage_note": "",
+      "analytical_implication": "The policy debate is open, but a September reduction has not been promised."
+    },
+    {
+      "id": "treasury-refunding-calendar",
+      "available_at": "2025-07-30T23:59:59Z",
+      "region": "United States",
+      "category": "liquidity",
+      "headline": "Treasury announces $125bn quarterly refunding",
+      "facts": {
+        "total_bn": 125,
+        "new_cash_bn": 35.2,
+        "three_year_bn": 58,
+        "ten_year_bn": 42,
+        "thirty_year_bn": 25,
+        "auction_dates": [
+          "2025-08-05",
+          "2025-08-06",
+          "2025-08-07"
+        ],
+        "settlement_date": "2025-08-15"
+      },
+      "source_url": "https://home.treasury.gov/news/press-releases/sb0212",
+      "source": "US Treasury",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "",
+      "analytical_implication": "Supply and settlement are identifiable liquidity events; this does not establish dealer positioning or realized fund flows."
+    },
+    {
+      "id": "us-june-pce",
+      "available_at": "2025-07-31T12:30:00Z",
+      "region": "United States",
+      "category": "inflation",
+      "headline": "June PCE inflation 2.6%, core 2.8%",
+      "facts": {
+        "headline_yoy_pct": 2.6,
+        "core_yoy_pct": 2.8,
+        "headline_mom_pct": 0.3,
+        "core_mom_pct": 0.3,
+        "real_consumption_mom_pct": 0.1
+      },
+      "source_url": "https://www.bea.gov/news/2025/personal-income-and-outlays-june-2025",
+      "source": "BEA",
+      "availability_precision": "exact",
+      "vintage_note": "Original July31 release. July PCE not an official observation until Aug29.",
+      "analytical_implication": "Inflation remains above target while real spending growth is modest."
+    },
+    {
+      "id": "poland-july-cpi-flash",
+      "available_at": "2025-07-31T23:59:59Z",
+      "region": "Poland",
+      "category": "inflation",
+      "headline": "Poland July CPI flash falls to 3.1%",
+      "facts": {
+        "headline_yoy_pct": 3.1,
+        "headline_mom_pct": 0.3
+      },
+      "source_url": "https://stat.gov.pl/en/topics/prices-trade/price-indices/flash-estimate-of-the-consumer-price-index-in-july-2025,21,33.html",
+      "source": "Statistics Poland",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "",
+      "analytical_implication": "Disinflation strengthens the easing case, subject to fiscal and administered-price risks."
+    },
+    {
+      "id": "boj-july-hold",
+      "available_at": "2025-07-31T23:59:59Z",
+      "region": "Japan",
+      "category": "policy",
+      "headline": "Bank of Japan holds policy rate near 0.5%",
+      "facts": {
+        "policy_rate_pct": 0.5
+      },
+      "source_url": "https://www.boj.or.jp/en/mopo/outlook/",
+      "source": "Bank of Japan July31 Outlook index",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "Use July31 Bank view only. Meeting summary of opinions was not public until Aug8; minutes not until Sep25.",
+      "analytical_implication": "Japan remains in a different policy phase from easing central banks; yen carry exposure remains sensitive to normalization expectations."
+    },
+    {
+      "id": "tariff-order-july31",
+      "available_at": "2025-07-31T23:59:59Z",
+      "region": "Global",
+      "category": "trade",
+      "headline": "New reciprocal tariff rates announced for August7 implementation",
+      "facts": {
+        "effective_at": "2025-08-07T04:01:00Z",
+        "eu_combined_floor_pct": 15,
+        "japan_reciprocal_pct": 15,
+        "switzerland_reciprocal_pct": 39,
+        "india_reciprocal_pct": 25
+      },
+      "source_url": "https://www.whitehouse.gov/presidential-actions/2025/07/further-modifying-the-reciprocal-tariff-rates/",
+      "source": "White House",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "Country schedules have product exemptions and special regimes. Do not describe 10% China reciprocal component as total China tariff.",
+      "analytical_implication": "Different exposure to imported inputs and US exports creates country and sector dispersion."
+    },
+    {
+      "id": "apple-june-results",
+      "available_at": "2025-07-31T23:59:59Z",
+      "region": "United States",
+      "category": "earnings",
+      "headline": "Apple June-quarter revenue rises 10%",
+      "facts": {
+        "revenue_bn_usd": 94.0,
+        "revenue_yoy_pct": 10,
+        "diluted_eps_usd": 1.57
+      },
+      "source_url": "https://www.apple.com/ie/newsroom/2025/07/apple-reports-third-quarter-results/",
+      "source": "Apple",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "",
+      "analytical_implication": "Hardware demand remains a useful contrast to a software-only AI thesis; tariff costs and shipment timing remain risks."
+    },
+    {
+      "id": "amazon-q2-results",
+      "available_at": "2025-07-31T23:59:59Z",
+      "region": "United States",
+      "category": "earnings",
+      "headline": "Amazon AWS revenue grows 17.5%; AWS margin falls sequentially",
+      "facts": {
+        "revenue_bn_usd": 167.7,
+        "aws_revenue_bn_usd": 30.9,
+        "aws_revenue_yoy_pct": 17.5,
+        "aws_operating_margin_pct": 32.9,
+        "prior_quarter_aws_operating_margin_pct": 39.5,
+        "q3_operating_income_guidance_low_bn": 15.5,
+        "q3_operating_income_guidance_high_bn": 20.5
+      },
+      "source_url": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Second-Quarter-Results/",
+      "source": "Amazon",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "",
+      "analytical_implication": "Cloud demand and AI spending do not automatically translate into near-term margin expansion."
+    },
+    {
+      "id": "us-july-employment",
+      "available_at": "2025-08-01T12:30:00Z",
+      "region": "United States",
+      "category": "employment",
+      "headline": "July payrolls +73k; May and June revised down by 258k combined",
+      "facts": {
+        "payroll_change_thousands": 73,
+        "unemployment_pct": 4.2,
+        "may_payroll_change_thousands": 19,
+        "june_payroll_change_thousands": 14,
+        "combined_revision_thousands": -258,
+        "average_hourly_earnings_yoy_pct": 3.9
+      },
+      "source_url": "https://www.bls.gov/news.release/archives/empsit_08012025.htm",
+      "source": "BLS",
+      "availability_precision": "exact",
+      "vintage_note": "Initial July employment release; do not substitute September or annual benchmark revisions.",
+      "analytical_implication": "Labor demand looks weaker than the pre-release picture; lower yields may help duration while economically sensitive earnings face risk."
+    },
+    {
+      "id": "ism-july-manufacturing",
+      "available_at": "2025-08-01T14:00:00Z",
+      "region": "United States",
+      "category": "survey",
+      "headline": "ISM manufacturing contracts at 48.0",
+      "facts": {
+        "pmi": 48.0,
+        "employment_index": 43.4,
+        "prices_index": 64.8,
+        "new_orders": 47.1
+      },
+      "source_url": "https://www.prnewswire.com/news-releases/manufacturing-pmi-at-48-july-2025-manufacturing-ism-report-on-business-302519014.html",
+      "source": "ISM release via PRNewswire",
+      "availability_precision": "exact",
+      "vintage_note": "",
+      "analytical_implication": "Manufacturing activity and employment are weak even while input prices continue to rise."
+    },
+    {
+      "id": "euro-july-inflation-flash",
+      "available_at": "2025-08-01T23:59:59Z",
+      "region": "Europe",
+      "category": "inflation",
+      "headline": "Euro area July HICP flash 2.0%",
+      "facts": {
+        "headline_yoy_pct": 2.0,
+        "core_ex_energy_food_alcohol_tobacco_yoy_pct": 2.3,
+        "services_yoy_pct": 3.1
+      },
+      "source_url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-01082025-ap",
+      "source": "Eurostat",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "Services flash3.1; Aug20 final services3.2. Headline stayed2.0.",
+      "analytical_implication": "Headline target convergence is compatible with persistent services inflation and uneven activity."
+    },
+    {
+      "id": "tariff-cbp-guidance",
+      "available_at": "2025-08-04T22:13:00Z",
+      "region": "Global",
+      "category": "trade",
+      "headline": "CBP confirms reciprocal-tariff implementation mechanics",
+      "facts": {
+        "effective_at": "2025-08-07T04:01:00Z",
+        "eu_combined_floor_pct": 15,
+        "china_reciprocal_component_pct": 10
+      },
+      "source_url": "https://content.govdelivery.com/accounts/USDHSCBP/bulletins/3ec7b5e",
+      "source": "US Customs and Border Protection",
+      "availability_precision": "exact",
+      "vintage_note": "",
+      "analytical_implication": "Implementation certainty reduces one source of ambiguity but the earnings impact depends on pass-through and exemptions."
+    },
+    {
+      "id": "palantir-q2-results",
+      "available_at": "2025-08-04T23:59:59Z",
+      "region": "United States",
+      "category": "earnings",
+      "headline": "Palantir revenue passes $1bn with 48% growth",
+      "facts": {
+        "revenue_yoy_pct": 48,
+        "us_commercial_revenue_yoy_pct": 93,
+        "us_commercial_revenue_mn_usd": 306,
+        "full_year_revenue_growth_guidance_pct": 45
+      },
+      "source_url": "https://investors.palantir.com/news-details/2025/Palantir-Reports-Q2-2025-U-S--Comm-Revenue-Growth-of-93-Y",
+      "source": "Palantir",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "After-close earnings: safe for Aug5 morning report. Avoid using before Aug4 close.",
+      "analytical_implication": "Evidence of AI software monetization is company-specific and must be weighed against valuation sensitivity."
+    },
+    {
+      "id": "ism-july-services",
+      "available_at": "2025-08-05T14:00:00Z",
+      "region": "United States",
+      "category": "survey",
+      "headline": "ISM services barely expands at 50.1 with elevated prices",
+      "facts": {
+        "pmi": 50.1,
+        "employment_index": 46.4,
+        "prices_index": 69.9,
+        "new_orders": 50.3
+      },
+      "source_url": "https://www.ismworld.org/supply-management-news-and-reports/news-publications/inside-supply-management-magazine/blog/2025/2025-08/report-on-business-roundup-july-2025-services-pmi/",
+      "source": "ISM",
+      "availability_precision": "exact",
+      "vintage_note": "",
+      "analytical_implication": "A combination of soft employment and firm input prices complicates a simple disinflation-and-growth narrative."
+    },
+    {
+      "id": "boj-summary-opinions",
+      "available_at": "2025-08-07T23:50:00Z",
+      "region": "Japan",
+      "category": "policy",
+      "headline": "BOJ July-meeting opinions become public",
+      "facts": {
+        "release_local": "2025-08-08T08:50:00+09:00",
+        "assessment": "Tariff agreement reduces uncertainty; growth likely moderates initially."
+      },
+      "source_url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2025/opi250731.pdf",
+      "source": "Bank of Japan",
+      "availability_precision": "exact",
+      "vintage_note": "Not known at July31 meeting decision; publication Aug8 JST.",
+      "analytical_implication": "Reduced trade uncertainty can keep future normalization under consideration; it does not establish a promised hike date."
+    },
+    {
+      "id": "boe-august-cut",
+      "available_at": "2025-08-07T23:59:59Z",
+      "region": "United Kingdom",
+      "category": "policy",
+      "headline": "Bank of England reduces Bank Rate to 4%",
+      "facts": {
+        "bank_rate_pct": 4.0,
+        "cut_bp": 25,
+        "final_vote_for_cut": 5,
+        "final_vote_hold": 4
+      },
+      "source_url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2025/august-2025",
+      "source": "Bank of England",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "Final vote5–4 followed a second vote; one member initially preferred50bp.",
+      "analytical_implication": "The narrow decision supports gradual easing, with limited assurance about the next meeting."
+    },
+    {
+      "id": "china-july-cpi",
+      "available_at": "2025-08-10T01:30:00Z",
+      "region": "China",
+      "category": "inflation",
+      "headline": "China July CPI flat year-on-year",
+      "facts": {
+        "headline_yoy_pct": 0.0,
+        "headline_mom_pct": 0.4,
+        "core_yoy_pct": 0.8
+      },
+      "source_url": "https://www.stats.gov.cn/english/PressRelease/202508/t20250814_1960665.html",
+      "source": "National Bureau of Statistics of China",
+      "availability_precision": "exact",
+      "vintage_note": "Page heading explicitly dates release2025-08-10 09:30 despite URL containingAug14.",
+      "analytical_implication": "Weak headline pricing power remains a constraint on nominal earnings growth."
+    },
+    {
+      "id": "china-truce-extension",
+      "available_at": "2025-08-11T21:42:47Z",
+      "region": "Global",
+      "category": "trade",
+      "headline": "US–China tariff truce extended for 90 days",
+      "facts": {
+        "extension_days": 90,
+        "extension_starts": "2025-08-12",
+        "heightened_tariff_suspension_until": "2025-11-10",
+        "retained_reciprocal_component_pct": 10
+      },
+      "source_url": "https://www.whitehouse.gov/briefings-statements/2025/08/joint-statement-on-u-s-china-economic-and-trade-meeting-in-stockholm/",
+      "source": "White House joint statement; timestamp corroborated by contemporaneous Reuters",
+      "availability_precision": "exact",
+      "vintage_note": "Reuters report at21:42:47Z establishes public availability by then; higher fentanyl and other tariffs remain separate.",
+      "analytical_implication": "Near-term escalation risk falls, while unresolved structural trade issues remain."
+    },
+    {
+      "id": "us-july-cpi",
+      "available_at": "2025-08-12T12:30:00Z",
+      "region": "United States",
+      "category": "inflation",
+      "headline": "July CPI headline 2.7%, core 3.1%",
+      "facts": {
+        "headline_yoy_pct": 2.7,
+        "core_yoy_pct": 3.1,
+        "headline_mom_pct": 0.2,
+        "core_mom_pct": 0.3,
+        "shelter_mom_pct": 0.2
+      },
+      "source_url": "https://www.bls.gov/news.release/archives/cpi_08122025.htm",
+      "source": "BLS",
+      "availability_precision": "exact",
+      "vintage_note": "Initial release; do not use later seasonal-factor revisions.",
+      "analytical_implication": "Benign headline inflation is partly energy-driven; core inflation still limits the scope for unconditional easing."
+    },
+    {
+      "id": "rba-august-cut",
+      "available_at": "2025-08-12T23:59:59Z",
+      "region": "Australia",
+      "category": "policy",
+      "headline": "RBA cuts cash target to 3.60%",
+      "facts": {
+        "cash_rate_target_pct": 3.6,
+        "cut_bp": 25,
+        "vote": "unanimous",
+        "effective_date": "2025-08-13"
+      },
+      "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-22.html",
+      "source": "Reserve Bank of Australia",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "",
+      "analytical_implication": "Lower underlying inflation permits easing; trade uncertainty and weak productivity still constrain the outlook."
+    },
+    {
+      "id": "poland-q2-gdp-flash",
+      "available_at": "2025-08-13T23:59:59Z",
+      "region": "Poland",
+      "category": "growth",
+      "headline": "Poland Q2 GDP flash grows 3.4% year-on-year",
+      "facts": {
+        "nonseasonally_adjusted_yoy_pct": 3.4,
+        "seasonally_adjusted_qoq_pct": 0.8
+      },
+      "source_url": "https://stat.gov.pl/en/release-calendar/13-08-2025.html",
+      "source": "Statistics Poland",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "Flash release supplies no expenditure-component breakdown; avoid asserting consumption/investment drivers as observed facts.",
+      "analytical_implication": "Domestic growth resilience contrasts with weak external manufacturing conditions."
+    },
+    {
+      "id": "us-july-ppi",
+      "available_at": "2025-08-14T12:30:00Z",
+      "region": "United States",
+      "category": "inflation",
+      "headline": "July PPI rises 0.9% month-on-month",
+      "facts": {
+        "headline_mom_pct": 0.9,
+        "headline_yoy_pct": 3.3,
+        "less_food_energy_trade_mom_pct": 0.6,
+        "final_demand_services_mom_pct": 1.1
+      },
+      "source_url": "https://www.bls.gov/news.release/archives/ppi_08142025.htm",
+      "source": "BLS",
+      "availability_precision": "exact",
+      "vintage_note": "Initial release. PPI is not a one-for-one forecast of CPI or PCE.",
+      "analytical_implication": "Producer pricing creates an inflation risk counterweight to weakening labor data."
+    },
+    {
+      "id": "japan-q2-gdp-first",
+      "available_at": "2025-08-14T23:50:00Z",
+      "region": "Japan",
+      "category": "growth",
+      "headline": "Japan Q2 GDP first preliminary +1.0% annualized",
+      "facts": {
+        "real_gdp_qoq_pct": 0.3,
+        "real_gdp_saar_pct": 1.0,
+        "private_consumption_qoq_pct": 0.2,
+        "business_spending_qoq_pct": 1.3
+      },
+      "source_url": "https://www.esri.cao.go.jp/en/sna/data/sokuhou/files/2025/toukei_2025.html",
+      "source": "Japan Cabinet Office release archive",
+      "availability_precision": "exact",
+      "vintage_note": "Aug15 08:50JST first estimate. September revision must not leak intoAug reports.",
+      "analytical_implication": "Domestic spending resilience keeps normalization possible even with export uncertainty."
+    },
+    {
+      "id": "euro-q2-gdp-flash",
+      "available_at": "2025-08-14T23:59:59Z",
+      "region": "Europe",
+      "category": "growth",
+      "headline": "Euro area Q2 GDP flash +0.1% quarter-on-quarter",
+      "facts": {
+        "euro_area_qoq_pct": 0.1,
+        "euro_area_yoy_pct": 1.4,
+        "eu_qoq_pct": 0.2
+      },
+      "source_url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-14082025-ap",
+      "source": "Eurostat",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "UseAug14 growth vintage; laterSep5 year-on-year revision excluded.",
+      "analytical_implication": "Small positive growth gives limited cushion against a trade shock."
+    },
+    {
+      "id": "poland-july-cpi-final",
+      "available_at": "2025-08-14T23:59:59Z",
+      "region": "Poland",
+      "category": "inflation",
+      "headline": "Poland final July inflation confirms 3.1%",
+      "facts": {
+        "headline_yoy_pct": 3.1,
+        "services_yoy_pct": 6.2,
+        "goods_yoy_pct": 1.9
+      },
+      "source_url": "https://stat.gov.pl/files/gfx/portalinformacyjny/en/defaultaktualnosci/3283/2/165/1/consumer_price_indices_in_july_2025.pdf",
+      "source": "Statistics Poland",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "",
+      "analytical_implication": "Services inflation remains higher than headline, tempering the case for rapid rate cuts."
+    },
+    {
+      "id": "china-july-activity",
+      "available_at": "2025-08-15T02:00:00Z",
+      "region": "China",
+      "category": "growth",
+      "headline": "China July output +5.7%, retail sales +3.7%",
+      "facts": {
+        "industrial_output_yoy_pct": 5.7,
+        "june_industrial_output_yoy_pct": 6.8,
+        "retail_sales_yoy_pct": 3.7,
+        "june_retail_sales_yoy_pct": 4.8,
+        "jan_july_fixed_asset_investment_yoy_pct": 1.6
+      },
+      "source_url": "https://www.stats.gov.cn/english/PressRelease/202508/t20250815_1960785.html",
+      "source": "National Bureau of Statistics of China",
+      "availability_precision": "exact",
+      "vintage_note": "10:00Beijing briefing verified by SCIO; do not use August activity released inSeptember.",
+      "analytical_implication": "Slower demand favors selective exposure rather than a broad commodity-demand recovery assumption."
+    },
+    {
+      "id": "us-july-retail",
+      "available_at": "2025-08-15T12:30:00Z",
+      "region": "United States",
+      "category": "consumption",
+      "headline": "US July retail sales rise 0.5%",
+      "facts": {
+        "nominal_sales_mom_pct": 0.5,
+        "nominal_sales_yoy_pct": 3.9,
+        "june_sales_mom_revised_pct": 0.9
+      },
+      "source_url": "https://www2.census.gov/retail/releases/historical/marts/adv2507.pdf",
+      "source": "US Census Bureau",
+      "availability_precision": "exact",
+      "vintage_note": "Advance report as releasedAug15. Sales are nominal, not inflation-adjusted.",
+      "analytical_implication": "Consumer spending remains resilient, but front-loading and price changes can overstate real demand."
+    },
+    {
+      "id": "fomc-july-minutes",
+      "available_at": "2025-08-20T18:00:00Z",
+      "region": "United States",
+      "category": "policy",
+      "headline": "July FOMC minutes published",
+      "facts": {
+        "policy_range_pct": [
+          4.25,
+          4.5
+        ],
+        "dissenters_favored_cut_bp": 25,
+        "next_meeting_dates": [
+          "2025-09-16",
+          "2025-09-17"
+        ]
+      },
+      "source_url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20250730.htm",
+      "source": "Federal Reserve",
+      "availability_precision": "exact",
+      "vintage_note": "Meeting took placeJul29–30; minutes only availableAug20. Do not backfill their detail into earlier reports.",
+      "analytical_implication": "The minutes describe the pre-jobs-revision discussion and should not substitute for newer data."
+    },
+    {
+      "id": "euro-july-inflation-final",
+      "available_at": "2025-08-20T23:59:59Z",
+      "region": "Europe",
+      "category": "inflation",
+      "headline": "Euro area final July HICP remains 2.0%",
+      "facts": {
+        "headline_yoy_pct": 2.0,
+        "services_yoy_pct": 3.2,
+        "core_yoy_pct": 2.3
+      },
+      "source_url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-20082025-ap",
+      "source": "Eurostat",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "July services component revised from flash3.1 to final3.2; August HICP was not released untilSep2.",
+      "analytical_implication": "Headline stability coexists with sticky services pricing."
+    },
+    {
+      "id": "walmart-q2-results",
+      "available_at": "2025-08-21T12:00:00Z",
+      "region": "United States",
+      "category": "earnings",
+      "headline": "Walmart raises full-year sales and EPS outlook",
+      "facts": {
+        "revenue_bn_usd": 177.4,
+        "revenue_yoy_pct": 4.8,
+        "ecommerce_yoy_pct": 25,
+        "us_comp_sales_pct": 4.6,
+        "adjusted_eps_usd": 0.68,
+        "full_year_adjusted_eps_guidance": [
+          2.52,
+          2.62
+        ]
+      },
+      "source_url": "https://stock.walmart.com/sec-filings/all-sec-filings/content/0000104169-25-000120/earningsreleasefy26q2.htm",
+      "source": "Walmart",
+      "availability_precision": "exact",
+      "vintage_note": "7amUS/Central event schedule corroborates12:00Z availability.",
+      "analytical_implication": "Value-led retail can gain share while higher operating costs complicate profit conversion."
+    },
+    {
+      "id": "us-eu-trade-framework",
+      "available_at": "2025-08-21T23:59:59Z",
+      "region": "Global",
+      "category": "trade",
+      "headline": "US–EU framework sets 15% tariff structure and conditional auto relief",
+      "facts": {
+        "eu_goods_tariff_general_rule": "higher of MFN or15%",
+        "specified_mfn_only_products_effective_date": "2025-09-01",
+        "auto_reduction_condition": "EU formally introduces legislative proposal to reduce tariffs"
+      },
+      "source_url": "https://www.whitehouse.gov/briefings-statements/2025/08/joint-statement-on-a-united-states-european-union-framework-on-an-agreement-on-reciprocal-fair-and-balanced-trade/",
+      "source": "US–EU joint statement",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "Framework and conditions, not proof that all promised purchases or legislation occurred.",
+      "analytical_implication": "More predictable trade rules help planning, but the tariff floor still pressures exporters and import-intensive margins."
+    },
+    {
+      "id": "powell-jackson-hole",
+      "available_at": "2025-08-22T23:59:59Z",
+      "region": "United States",
+      "category": "policy",
+      "headline": "Powell signals shifting risks may warrant a policy adjustment",
+      "facts": {
+        "labor_market": "downside employment risks rising",
+        "inflation": "upside tariff-related risks",
+        "policy": "data-dependent; no preset course",
+        "public_fed_estimate_july_pce_yoy_pct": 2.6,
+        "public_fed_estimate_july_core_pce_yoy_pct": 2.9
+      },
+      "source_url": "https://www.federalreserve.gov/newsevents/speech/powell20250822a.htm",
+      "source": "Federal Reserve",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "PCE figures in speech are Fed estimates, not the officialAug29 BEA release. A September cut is not a commitment.",
+      "analytical_implication": "Easing-sensitive equities and bonds gain a plausible catalyst, but the inflation constraint persists."
+    },
+    {
+      "id": "nvidia-q2-results",
+      "available_at": "2025-08-27T20:20:00Z",
+      "region": "United States",
+      "category": "earnings",
+      "headline": "Nvidia Q2 FY26 revenue $46.7bn with no H20 sales to China",
+      "facts": {
+        "revenue_bn_usd": 46.7,
+        "revenue_yoy_pct": 56,
+        "data_center_revenue_bn_usd": 41.1,
+        "data_center_revenue_yoy_pct": 56,
+        "blackwell_data_center_revenue_qoq_pct": 17,
+        "china_h20_sales_in_quarter": 0,
+        "non_gaap_eps_usd": 1.05
+      },
+      "source_url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2026/default.aspx",
+      "source": "Nvidia; GlobeNewswire16:20ET release time",
+      "availability_precision": "exact",
+      "vintage_note": "Aug27 after cash close; eligible forAug28 morning. Do not report as FY2025Q2.",
+      "analytical_implication": "AI infrastructure demand remains large, while China restrictions keep geographic revenue and policy risk material."
+    },
+    {
+      "id": "us-q2-gdp-second",
+      "available_at": "2025-08-28T12:30:00Z",
+      "region": "United States",
+      "category": "growth",
+      "headline": "US Q2 GDP second estimate revised to 3.3%",
+      "facts": {
+        "real_gdp_saar_pct": 3.3,
+        "prior_advance_real_gdp_saar_pct": 3.0,
+        "real_final_sales_private_domestic_saar_pct": 1.9
+      },
+      "source_url": "https://www.bea.gov/news/2025/gross-domestic-product-2nd-quarter-2025-second-estimate-and-corporate-profits-preliminary",
+      "source": "BEA",
+      "availability_precision": "exact",
+      "vintage_note": "Do not use third estimate3.8 releasedSeptember25 or later annual updates.",
+      "analytical_implication": "The upgrade improves the domestic-demand signal but headline growth still reflects the import reversal."
+    },
+    {
+      "id": "us-july-pce-official",
+      "available_at": "2025-08-29T12:30:00Z",
+      "region": "United States",
+      "category": "inflation",
+      "headline": "Official July PCE inflation 2.6%, core 2.9%",
+      "facts": {
+        "headline_yoy_pct": 2.6,
+        "core_yoy_pct": 2.9,
+        "headline_mom_pct": 0.2,
+        "core_mom_pct": 0.3,
+        "nominal_spending_mom_pct": 0.5,
+        "real_spending_mom_pct": 0.3,
+        "saving_rate_pct": 4.4
+      },
+      "source_url": "https://www.bea.gov/news/2025/personal-income-and-outlays-july-2025",
+      "source": "BEA",
+      "availability_precision": "exact",
+      "vintage_note": "Original release values; subsequentSeptember annual update excluded.",
+      "analytical_implication": "Spending remains firm while core inflation sits above target, keeping a soft-landing thesis conditional."
+    },
+    {
+      "id": "poland-august-cpi-flash",
+      "available_at": "2025-08-29T23:59:59Z",
+      "region": "Poland",
+      "category": "inflation",
+      "headline": "Poland August CPI flash 2.8%",
+      "facts": {
+        "headline_yoy_pct": 2.8,
+        "headline_mom_pct": -0.1
+      },
+      "source_url": "https://stat.gov.pl/en/topics/prices-trade/price-indices/flash-estimate-of-the-consumer-price-index-in-august-2025,21,34.html",
+      "source": "Statistics Poland",
+      "availability_precision": "date-only conservative",
+      "vintage_note": "Flash2.8 only. Final2.9 publishedSeptember15 is not available inAugust.",
+      "analytical_implication": "Inflation within the tolerance band supports an easing case; the pace remains uncertain."
+    }
+  ],
+  "excluded_future_information": [
+    {
+      "item": "August2025 US employment report",
+      "available_date": "2025-09-05"
+    },
+    {
+      "item": "August2025 US CPI",
+      "available_date": "2025-09-11"
+    },
+    {
+      "item": "August2025 euro area HICP flash",
+      "available_date": "2025-09-02"
+    },
+    {
+      "item": "August2025 China CPI and activity",
+      "available_date": "2025-09-10 or later"
+    },
+    {
+      "item": "Final PolandAugust CPI2.9%",
+      "available_date": "2025-09-15"
+    },
+    {
+      "item": "JapanQ2 GDP second estimate",
+      "available_date": "2025-09-08"
+    },
+    {
+      "item": "USQ2 GDP third estimate3.8%",
+      "available_date": "2025-09-25"
+    }
+  ]
+}

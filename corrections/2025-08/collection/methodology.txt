@@ -1,0 +1,65 @@
+August 2025 retrospective briefings — methodology
+
+Scope: 21 Monday–Friday report dates, 2025-08-01 through 2025-08-29.
+Per-report news cutoff: 00:00 UTC on its report date, strictly exclusive.
+Source-query lookbacks: fresh news and previews 7 days, company results 14 days,
+macro releases and policy baselines 35 days. Categories originate in the query
+catalogue; older background is time-qualified and is not presented as a fresh
+event. Each writer uses only the own-date frozen feed and market card.
+Actual releases at or after the UTC cutoff are excluded until a later edition.
+
+News: dated Google News historical RSS, 178,160 own-date headline records
+across these 21 feeds (per-date range 8,283–8,865).
+Category totals count the same headline again when eligible on multiple dates:
+{'monthly': 55409, 'news': 103886, 'result': 18865}.
+Acquisition audit: queries: 440; shared query windows: 2484; possibly capped windows: 178; failed windows: 0.
+Search-index result limits mean coverage is broad, not exhaustive. Publication
+timestamps can be approximate. Reports use cited headline facts, not details
+inferred from unread article bodies. Original article vintages are not
+independently archived. Readiness and chronology audit receipts, where present,
+record conservative exclusions and source-date checks; metadata does not prove
+an original article-body vintage. Later outcomes are excluded from writer inputs.
+
+Frozen feeds and included audit receipts:
+https://d7g7nkeytae81.cloudfront.net/reports/2025-08/August_2025_Frozen_News_Feeds.zip
+SHA256: ead06c2a14dcc10028a4c7978d411ef2b4dbe6853b7c60df09af91ad0873b8ee
+The report bundle contains cited evidence ledgers, not all raw feed rows.
+
+Markets: Yahoo Finance historical daily charts, completed sessions before each
+report date, exchange-local session dates; crypto uses completed UTC days.
+Instruments per card: 292.
+Returns compare split-adjusted closes over 1, 5 and 20 observations and exclude
+dividends. Displayed price levels restore historical share units by reversing
+later split factors. CMCSA levels are suppressed because its adjustment includes
+a spin-off. Corporate-action metadata is used only for unit conversion; later
+price rows are excluded from writer inputs. Current-vintage prices may include
+later vendor revisions; original contemporaneous vendor snapshots were not found.
+Futures series may be affected by contract rolls.
+Yahoo's STOXX Europe 600 and Euro Stoxx 50 histories omit August 1; the August 4
+edition uses correctly dated DAX and European ETF observations for fresh context.
+All 219 US-market series have every August weekday observation.
+Market validation: passed=True;
+assertions=63077;
+missing 20-session metrics=0;
+future price rows retained=0.
+
+Rates: actual US Treasury daily par yields for 2Y and 10Y instruments.
+Yield changes and curve spreads are basis points. Japan's August 11 holiday and
+Poland's August 15 holiday retain the last available local closes in following
+reports. Crypto trades every day. Use each instrument's recorded session date.
+
+Style: August 2026 nine-section structure, geographic and sector cards,
+1280px desktop width, responsive navigation and linked evidence ledger.
+Each HTML edition has a PDF and machine-readable JSON with its source evidence.
+Prepared retrospectively in October 2026; these are historical reconstructions.
+
+Code discovery:
+latest_source_branch: codex/retail-editorial-quality
+latest_source_commit: 76f537b5a42c168c4d9b6777c23ed67427a628a8
+task_branch: codex/aug-2025-retrospective-20261029
+Historical execution is local and does not invoke the live current-time Lambda.
+
+Access: configured runtime AWS bindings select the ordinary boto3 session through
+the managed HTTPS proxy. Source acquisition and any access recovery are described
+by this run's audit receipts. No credentials are included in report artifacts.
+Report publication does not invoke email or Telegram delivery.

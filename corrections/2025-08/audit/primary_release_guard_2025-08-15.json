@@ -1,0 +1,45 @@
+{
+  "date": "2025-08-15",
+  "cutoff_utc": "2025-08-15T00:00:00+00:00",
+  "items_checked": 8600,
+  "flagged": [
+    {
+      "id": "n2369",
+      "title": "COST Stock Price Prediction: Where Costco Could Be by 2025, 2026, and 2030 - Yahoo Finance",
+      "exclude": [],
+      "review": [
+        {
+          "event_id": "price-forecast-page",
+          "reason": "Check whether this is a dated static forecast or a rolling instrument page; never treat target as observed price"
+        }
+      ]
+    },
+    {
+      "id": "n5038",
+      "title": "Darkiris Inc (DKI) sentiment score, message volume, participation score and buzz level - Stocktwits",
+      "exclude": [
+        {
+          "event_id": "rolling-page",
+          "reason": "Rolling instrument/market/sentiment page cannot establish original headline vintage",
+          "matched": "sentiment score"
+        }
+      ],
+      "review": []
+    },
+    {
+      "id": "n6386",
+      "title": "Visaka Industries Share Price Today - Visaka Industries Ltd. Stock Price Live NSE/BSE - HDFC Sky",
+      "exclude": [
+        {
+          "event_id": "rolling-page",
+          "reason": "Rolling instrument/market/sentiment page cannot establish original headline vintage",
+          "matched": "Share Price Today"
+        }
+      ],
+      "review": []
+    }
+  ],
+  "exclude_count": 2,
+  "review_count": 1,
+  "audited_at": "2026-10-29T14:31:38.001971+00:00"
+}

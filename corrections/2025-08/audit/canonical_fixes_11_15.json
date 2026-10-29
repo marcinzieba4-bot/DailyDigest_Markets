@@ -1,0 +1,479 @@
+{
+  "reviewer": "independent-archive-editor",
+  "checked_at_utc": "2026-10-29T15:40:26.617426+00:00",
+  "policy": "If canonical URL path is on the report date and pre-midnight availability is not documented, remove the citation and every dependent factual claim. Frozen feeds remain unchanged.",
+  "reports": [
+    {
+      "date": "2025-08-11",
+      "before_spec_sha256": "2a4d529dfca691d794a760739bae3be8a0203ef7d23ef7bae3287290dc92f7c9",
+      "after_spec_sha256": "0a17db4604357860bd0c76232c6261b1897dd49410efcbcd7ca0af4b82ec21b3",
+      "removed_ids": [
+        "n1314",
+        "n6983"
+      ],
+      "changes": [
+        {
+          "label": "Macro Stance",
+          "before": "South China Morning Post reported: “China’s consumer prices flat in July, while producer deflation persists.” [[n1292]] CNBC reported: “Beijing's anti-involution push won't be too drastic as it could lead to higher unemployment.” [[n1314]] Flat consumer prices and persistent producer deflation are a warning about pricing power, while restraint in the anti-involution campaign reflects the employment cost of abruptly reducing competition. The attractive Chinese equity thesis is therefore selective improvement in business economics, not an assumption that tighter supply automatically restores strong household demand. A company can benefit from reduced destructive discounting while the economy remains uneven. Investors should pay for the operating improvement that can be demonstrated, rather than capitalizing the full ambition of a policy slogan. Distinguish stabilizing supply from rebuilding private demand; both may help earnings, but they operate through different channels and can require very different time horizons.",
+          "after": "South China Morning Post reported: “China’s consumer prices flat in July, while producer deflation persists.” [[n1292]] Flat July consumer prices and persistent producer deflation keep the focus on companies' ability to earn an adequate margin. The equity opportunity is selective improvement in business economics, rather than an assumption that a policy slogan has already restored household demand. Reduced discounting could help an individual franchise, but it remains a condition to monitor, not an established outcome across the economy. Prefer businesses able to demonstrate customer demand and cash conversion without relying on an immediate, uniform reflation. A stock-market recovery can begin before that broader confirmation arrives, which raises the importance of choosing the actual earnings claim rather than buying every exposure carrying the same national label.",
+          "removed_unsafe_ids": [
+            "n1314"
+          ],
+          "replacement_ids": [
+            "n1292"
+          ],
+          "reason": "Removed the same-day CNBC anti-involution assessment and the dependent claim that policy restraint reflects a documented employment trade-off. Retained only the eligible July price-release baseline."
+        },
+        {
+          "label": "Reported",
+          "before": "Bloomberg.com reported: “Germany Property Crash Leaves Pension Funds Reeling From Private Credit Losses.” [[n6983]] Yahoo Finance Singapore reported: “CapitaLand Ascendas REIT completes acquisition of 9 Tai Seng Drive data centre for $275.5 mil.” [[n6970]] The operating result should establish whether rental growth reaches cash after maintenance and financing costs. Specialized property can benefit from secular demand while still requiring substantial new investment. Lease duration, tenant quality and the ability to fund expansion determine whether investors receive the benefit.",
+          "after": "Yahoo Finance Singapore reported: “CapitaLand Ascendas REIT completes acquisition of 9 Tai Seng Drive data centre for $275.5 mil.” [[n6970]] The acquisition is a specific property investment, not evidence of reported losses elsewhere in private credit. Its shareholder return will depend on lease income, tenant quality and the cost of funding and maintaining the asset. A data-centre property can participate in growing demand while still requiring a disciplined acquisition price and a credible financing plan. Assess that return on its own terms rather than attaching an unrelated claim about distress to the transaction.",
+          "removed_unsafe_ids": [
+            "n6983"
+          ],
+          "replacement_ids": [
+            "n6970"
+          ],
+          "reason": "Removed the German pension/private-credit loss report and any implication that this acquisition demonstrates that later loss event."
+        },
+        {
+          "label": "Credit Check",
+          "before": "Bloomberg.com reported: “Germany Property Crash Leaves Pension Funds Reeling From Private Credit Losses.” [[n6983]] Losses associated with German property and private credit are a reminder that apparent calm in public markets does not eliminate problems in less liquid assets. A valuation can adjust slowly where transactions are infrequent. For an investor, the important distinction is between assets that can be marked at a comfortable value and assets that can be sold near that value under pressure. Prefer transparent balance sheets and financing terms. Avoid reaching for a little additional yield by accepting a large deterioration in liquidity, particularly if other portfolio holdings already rely on the same benign financing conditions.",
+          "after": "HYG closed at 80.22, up 0.24% over 20 sessions (Yahoo Finance, prior close 2025-08-08). LQD closed at 109.41, up 1.23% over 20 sessions (Yahoo Finance, prior close 2025-08-08). Public bond-fund prices describe traded instruments; they do not establish the price at which a privately held asset could be sold under pressure. Keep that liquidity distinction in the credit allocation without assuming an unverified loss event. Prefer borrowers with cash flow sufficient to service their obligations and financing terms that remain workable when the next refinancing window is less generous. Avoid accepting a large loss of transparency or liquidity for a modest increase in quoted income, especially if other holdings depend on the same benign funding conditions. A comfortable valuation mark and a reliable exit are different protections.",
+          "removed_unsafe_ids": [
+            "n6983"
+          ],
+          "replacement_ids": [],
+          "reason": "Removed the unsafe German property-loss assertion. Rebuilt the paragraph from completed own-date bond-fund observations and general liquidity/credit reasoning; no replacement news event asserted."
+        }
+      ],
+      "retail_unchanged": true,
+      "retail_sha256": "8420811ead1cd3d0e1dbc94e4f7622bba5147a073875c51517f98024001bcb7b",
+      "replacement_metadata": {
+        "n1292": {
+          "canonical_date": null,
+          "canonical_url": "https://www.scmp.com/economy/economic-indicators/article/3321299/chinas-consumer-prices-flat-july-while-producer-deflation-persists",
+          "observed_utc": "2026-10-29T15:30:59.499238+00:00",
+          "publisher_body_fetched": false,
+          "transport": "isolated_github_hosted_public_metadata_recovery"
+        },
+        "n6970": {
+          "canonical_date": null,
+          "canonical_url": "https://sg.finance.yahoo.com/news/capitaland-ascendas-reit-completes-acquisition-021223948.html",
+          "observed_utc": "2026-10-29T15:30:41.445398+00:00",
+          "publisher_body_fetched": false,
+          "transport": "isolated_github_hosted_public_metadata_recovery"
+        }
+      },
+      "validation": {
+        "passed": true,
+        "failures": [],
+        "warnings": [
+          "retail[2]: 148 words, brief minimum 150"
+        ],
+        "sources": 107,
+        "words": 11118
+      }
+    },
+    {
+      "date": "2025-08-12",
+      "before_spec_sha256": "f6479397c5f30aa96de21f1234bc206b6a3be72a8f216c51e015166ecec3f12b",
+      "after_spec_sha256": "13184ab8407639e3baceba14cb06a003b7c20ba9b43519cbdae525f4092a996d",
+      "removed_ids": [
+        "n1424"
+      ],
+      "changes": [
+        {
+          "label": "Macro Stance",
+          "before": "Bloomberg.com reported: “Trump Extends China Truce for 90 Days, Averting Tariff Hike.” [[n1424]] South China Morning Post reported: “China’s consumer prices flat in July, while producer deflation persists.” [[n1271]] The tariff extension and flat July consumer prices capture the competing forces in China: external escalation has been postponed while domestic pricing power remains weak. This supports a selective policy-relief allocation rather than a declaration that the whole economy has turned. The best candidates can use greater trading visibility to plan production or investment without depending on a rapid rebound in household confidence. A policy headline should be translated into an earnings channel before it changes the portfolio. For exporters, the channel is access and order timing. For domestic firms, transactions and sustainable pricing are more useful evidence. Keep both channels under review rather than allowing relief in one to obscure continued pressure in the other.",
+          "after": "CNBC reported: “Trump extends China tariff deadline by 90 days.” [[n1433]] South China Morning Post reported: “China’s consumer prices flat in July, while producer deflation persists.” [[n1271]] The tariff extension and flat July consumer prices capture the competing forces in China: external escalation has been postponed while domestic pricing power remains weak. This supports a selective policy-relief allocation rather than a declaration that the whole economy has turned. The best candidates can use greater trading visibility to plan production or investment without depending on a rapid rebound in household confidence. A policy headline should be translated into an earnings channel before it changes the portfolio. For exporters, the channel is access and order timing. For domestic firms, transactions and sustainable pricing are more useful evidence. Keep both channels under review rather than allowing relief in one to obscure continued pressure in the other.",
+          "removed_unsafe_ids": [
+            "n1424"
+          ],
+          "replacement_ids": [
+            "n1433"
+          ],
+          "reason": "Replaced the later Bloomberg newsletter with CNBC reporting the same completed extension; canonical CNBC path is August 11, strictly before the August 12 report boundary."
+        },
+        {
+          "label": "Fiscal, Policy & Trade",
+          "before": "Bloomberg.com reported: “Trump Extends China Truce for 90 Days, Averting Tariff Hike.” [[n1424]] BBC reported: “Nvidia and AMD to pay 15% of China chip sales to US government.” [[n1384]] The tariff truce has moved from expectation to an announced extension, whereas technology access remains tied to the economics of a revenue-sharing arrangement. That reduces one source of near-term uncertainty without resolving the full commercial relationship. A license, a payment obligation and the customer's willingness to use the product remain distinct constraints. The investment case should identify which one is improving and how much profit survives the conditions. Broad Chinese equities can benefit from avoiding renewed escalation, but domestic pricing pressure and competitive spending still determine operating returns. Keep trade relief separate from a stronger household-demand forecast, and require evidence that a better political setting reaches customer orders and cash receipts.",
+          "after": "CNBC reported: “Trump extends China tariff deadline by 90 days.” [[n1433]] BBC reported: “Nvidia and AMD to pay 15% of China chip sales to US government.” [[n1384]] The tariff truce has moved from expectation to an announced extension, whereas technology access remains tied to the economics of a revenue-sharing arrangement. That reduces one source of near-term uncertainty without resolving the full commercial relationship. A license, a payment obligation and the customer's willingness to use the product remain distinct constraints. The investment case should identify which one is improving and how much profit survives the conditions. Broad Chinese equities can benefit from avoiding renewed escalation, but domestic pricing pressure and competitive spending still determine operating returns. Keep trade relief separate from a stronger household-demand forecast, and require evidence that a better political setting reaches customer orders and cash receipts.",
+          "removed_unsafe_ids": [
+            "n1424"
+          ],
+          "replacement_ids": [
+            "n1433"
+          ],
+          "reason": "Replaced the later Bloomberg newsletter with CNBC reporting the same completed extension; canonical CNBC path is August 11, strictly before the August 12 report boundary."
+        }
+      ],
+      "retail_unchanged": true,
+      "retail_sha256": "7c3cdc336c2e4ac579f8f53ff822a172d504945cdc3cea2263620a1593b33806",
+      "replacement_metadata": {
+        "n1433": {
+          "canonical_date": null,
+          "canonical_url": "https://www.cnbc.com/2025/08/11/trump-china-tariffs-deadline-extended.html",
+          "observed_utc": "2026-10-29T15:30:34.526355+00:00",
+          "publisher_body_fetched": false,
+          "transport": "isolated_github_hosted_public_metadata_recovery"
+        }
+      },
+      "validation": {
+        "passed": true,
+        "failures": [],
+        "warnings": [],
+        "sources": 90,
+        "words": 10320
+      }
+    },
+    {
+      "date": "2025-08-13",
+      "before_spec_sha256": "787bcfecb374a9023212b9982d66b136bf3112198f842ca2487ff4ba7bb29a92",
+      "after_spec_sha256": "8aab07999940f700552cf6b8745784dd56409575b42fb692868891e817a68f79",
+      "removed_ids": [
+        "n1444",
+        "n1447",
+        "n3169"
+      ],
+      "changes": [
+        {
+          "label": "Macro Stance",
+          "before": "Bloomberg.com reported: “China’s $11 Trillion Stock Market Stages Steady Resurgence.” [[n1443]] Bloomberg.com reported: “China’s Property Crisis Hits New Low With Evergrande Delisting.” [[n1444]] A recovering equity market alongside the deepening property-crisis symbolism of Evergrande's delisting is not an inconsistency to explain away. Securities tied to technology, policy relief or an improving competitive position can rise while an impaired developer capital structure loses its remaining relevance. The investor should identify which cash flows are recovering and which claims remain exposed to restructuring. Avoid buying a broad domestic-recovery story merely because a headline market value has increased. A selective allocation is more defensible when the underlying business can operate without another rescue, has access to willing customers and can fund the investment required to serve them.",
+          "after": "Bloomberg.com reported: “China’s $11 Trillion Stock Market Stages Steady Resurgence.” [[n1443]] The reported recovery in equity value concerns securities and investor expectations, rather than proving that every household or corporate balance sheet has recovered. Technology, policy relief and competitive position can give selected companies an earnings opportunity even while a broader domestic rebound remains uncertain. Identify the customer demand and financing required for the return being purchased. Prefer businesses able to operate without another rescue and whose investment needs are consistent with available cash. A higher market value can improve access to capital, but the shareholder still needs to judge what that capital earns. Keep the allocation selective until operating evidence supports a wider recovery case.",
+          "removed_unsafe_ids": [
+            "n1444"
+          ],
+          "replacement_ids": [
+            "n1443"
+          ],
+          "reason": "Removed the unsafe Evergrande delisting report and all claims that a completed delisting supplied a new property-crisis signal. Retained only the earlier-canonical equity resurgence report."
+        },
+        {
+          "label": "Reported",
+          "before": "Bloomberg.com reported: “Chinese Thermal Coal Hits 5-Month High on Heat and Disruptions.” [[n1447]] Yahoo Finance reported: “Civitas Q2 Earnings and Revenues Miss Estimates, Both Fall Y/Y.” [[n3165]] A temporary weather or supply constraint can raise a fuel price without improving every producer's long-term cash outlook. The relevant business still needs a favorable realized price after extraction, transport and investment costs. Diversified energy exposure can dilute rather than clarify the intended trade.",
+          "after": "Yahoo Finance reported: “Civitas Q2 Earnings and Revenues Miss Estimates, Both Fall Y/Y.” [[n3165]] The miss and year-on-year decline are company earnings evidence, rather than a reason to assume a particular move in Chinese thermal coal. The producer still needs a satisfactory realised price after extraction, transport, financing and investment costs. Assess whether a weaker result reflects a temporary operating issue or a less attractive return through the commodity cycle. A diversified energy holding can contain quite different product economics, so choose the exposure that matches the earnings mechanism rather than importing a fuel-price story from another market.",
+          "removed_unsafe_ids": [
+            "n1447"
+          ],
+          "replacement_ids": [
+            "n3165"
+          ],
+          "reason": "Removed the same-day thermal-coal milestone and every weather/disruption or five-month-high inference. Rebuilt around the already-cited Civitas financial result."
+        },
+        {
+          "label": "Credit Check",
+          "before": "Bloomberg.com reported: “Credit Spreads Aren't Hiding a Market Timebomb.” [[n3169]] Bloomberg reported: “AT1 Bonds Are So Popular That Spreads Are the Tightest Ever.” [[n3702]] Bloomberg's argument against reading a timebomb into credit spreads and its account of exceptionally popular AT1 debt are compatible only if the security terms are kept in view. Tight spreads can reflect strong demand and still leave a buyer with little compensation for subordination, loss absorption or a change in issuance conditions. A corporate-bond ETF price is not a full spread series, and an attractive quoted yield is not a complete description of the claim. Prefer credit whose underlying borrower can service it without a permanently favorable refinancing market. Reduce where the combination of complexity and illiquidity is being treated as a harmless source of extra income.",
+          "after": "Bloomberg reported: “AT1 Bonds Are So Popular That Spreads Are the Tightest Ever.” [[n3702]] Popularity and tight spreads do not eliminate the importance of security terms. Strong demand can leave a new buyer with little compensation for subordination, loss absorption or a change in funding conditions. The result is a valuation question, not an automatic prediction of a credit crisis or proof that no risk exists. A corporate-bond ETF price is not a complete spread series, and a quoted yield does not describe every condition attached to the claim. Prefer borrowers able to service debt without permanently favourable refinancing. Reduce exposure where complexity and illiquidity are treated as a harmless route to extra income.",
+          "removed_unsafe_ids": [
+            "n3169"
+          ],
+          "replacement_ids": [
+            "n3702"
+          ],
+          "reason": "Removed the later credit-timebomb opinion and all attribution to its argument. Retained the earlier-canonical AT1 popularity/spread report and independent reasoning about terms."
+        },
+        {
+          "label": "Property",
+          "before": "WSJ reported: “Bankrupt Property Developer China Evergrande to Delist From Hong Kong Exchange.” [[n1418]] Reuters reported: “State-backed developer China South City gets liquidation order.” [[n1357]] WSJ reported: “Beijing Removes Suburban Home-Purchase Limit.” [[n1275]] Delisting, liquidation and easing purchase restrictions describe different stages and different claims on the property economy. A household receiving more freedom to buy does not restore value to every security issued by a failed developer. Debt seniority, remaining assets and the cost of completing homes remain decisive. Prefer transaction-linked or service exposures that do not require a distressed balance sheet to regain its former valuation. A policy change becomes more useful when collections and completion improve, rather than when it simply creates another reason to assume the worst losses are over. Market recovery and security recovery must be evaluated separately.",
+          "after": "WSJ reported: “Bankrupt Property Developer China Evergrande to Delist From Hong Kong Exchange.” [[n1418]] Reuters reported: “State-backed developer China South City gets liquidation order.” [[n1357]] WSJ reported: “Beijing Removes Suburban Home-Purchase Limit.” [[n1275]] A planned delisting, an ordered liquidation and easing purchase restrictions describe different stages and different claims on the property economy. A household receiving more freedom to buy does not restore value to every security issued by a failed developer. Debt seniority, remaining assets and the cost of completing homes remain decisive. Prefer transaction-linked or service exposures that do not require a distressed balance sheet to regain its former valuation. A policy change becomes more useful when collections and completion improve, rather than when it simply creates another reason to assume the worst losses are over. Market recovery and security recovery must be evaluated separately.",
+          "removed_unsafe_ids": [],
+          "replacement_ids": [],
+          "reason": "A broader dependent-claim review found an eligible earlier WSJ planned-delisting headline. Preserved its future status rather than describing a completed delisting."
+        },
+        {
+          "label": "Narrative",
+          "before": "XLRE exposure closed at 41.08 and fell 0.56% over 20 sessions (Yahoo Finance, prior close 2025-08-12). Quantum computing as a possible property tailwind is an early demand concept, whereas Evergrande's delisting is a completed capital-structure consequence. Neither should be applied to an ordinary landlord without examining tenants, funding and the relevant market.",
+          "after": "XLRE exposure closed at 41.08 and fell 0.56% over 20 sessions (Yahoo Finance, prior close 2025-08-12). Quantum computing as a possible property tailwind is an early demand concept, whereas the reported plan to delist Evergrande concerns an impaired developer's capital structure. Neither should be applied to an ordinary landlord without examining tenants, funding and the relevant market.",
+          "removed_unsafe_ids": [],
+          "replacement_ids": [],
+          "reason": "Removed a completed-event implication that could otherwise survive outside the unsafe citation paragraph. The earlier WSJ source says to delist, not already delisted."
+        },
+        {
+          "label": "Reported",
+          "before": "Yahoo Finance reported: “Civitas Q2 Earnings and Revenues Miss Estimates, Both Fall Y/Y.” [[n3165]] The miss and year-on-year decline are company earnings evidence, rather than a reason to assume a particular move in Chinese thermal coal. The producer still needs a satisfactory realised price after extraction, transport, financing and investment costs. Assess whether a weaker result reflects a temporary operating issue or a less attractive return through the commodity cycle. A diversified energy holding can contain quite different product economics, so choose the exposure that matches the earnings mechanism rather than importing a fuel-price story from another market.",
+          "after": "Yahoo Finance reported: “Civitas Q2 Earnings and Revenues Miss Estimates, Both Fall Y/Y.” [[n3165]] The miss and year-on-year decline are company earnings evidence. The producer still needs a satisfactory realised price after extraction, transport, financing and investment costs. Assess whether a weaker result reflects a temporary operating issue or a less attractive return through the commodity cycle. A diversified energy holding can contain quite different product economics, so choose the exposure that matches the earnings mechanism rather than importing a fuel-price story from another market.",
+          "removed_unsafe_ids": [],
+          "replacement_ids": [],
+          "reason": "Removed even the unnecessary residual reference to the discarded coal-price story."
+        },
+        {
+          "label": "Property",
+          "before": "WSJ reported: “Bankrupt Property Developer China Evergrande to Delist From Hong Kong Exchange.” [[n1418]] Reuters reported: “State-backed developer China South City gets liquidation order.” [[n1357]] WSJ reported: “Beijing Removes Suburban Home-Purchase Limit.” [[n1275]] A planned delisting, an ordered liquidation and easing purchase restrictions describe different stages and different claims on the property economy. A household receiving more freedom to buy does not restore value to every security issued by a failed developer. Debt seniority, remaining assets and the cost of completing homes remain decisive. Prefer transaction-linked or service exposures that do not require a distressed balance sheet to regain its former valuation. A policy change becomes more useful when collections and completion improve, rather than when it simply creates another reason to assume the worst losses are over. Market recovery and security recovery must be evaluated separately.",
+          "after": "Reuters reported: “State-backed developer China South City gets liquidation order.” [[n1357]] WSJ reported: “Beijing Removes Suburban Home-Purchase Limit.” [[n1275]] A liquidation order and easing purchase restrictions concern different claims on the property economy. More freedom for a household to buy does not restore value to every security issued by a distressed developer. Debt seniority, remaining assets and the cost of completing homes remain decisive. Prefer transaction-linked or service exposures that do not require an impaired balance sheet to regain its former valuation. A policy change becomes more useful when collections and completion improve, rather than when it simply creates another reason to assume the worst losses are over. Market recovery and security recovery must be evaluated separately.",
+          "removed_unsafe_ids": [],
+          "additional_removed_ids": [
+            "n1418"
+          ],
+          "replacement_ids": [],
+          "reason": "Removed the separate WSJ future-delisting item as an additional conservative choice, leaving a Reuters liquidation order with verified August 11 canonical date as the specific developer-distress event. No Evergrande event assertion remains."
+        },
+        {
+          "label": "Narrative",
+          "before": "XLRE exposure closed at 41.08 and fell 0.56% over 20 sessions (Yahoo Finance, prior close 2025-08-12). Quantum computing as a possible property tailwind is an early demand concept, whereas the reported plan to delist Evergrande concerns an impaired developer's capital structure. Neither should be applied to an ordinary landlord without examining tenants, funding and the relevant market.",
+          "after": "XLRE exposure closed at 41.08 and fell 0.56% over 20 sessions (Yahoo Finance, prior close 2025-08-12). Quantum computing as a possible property tailwind remains an early demand concept, not established rent or a completed leasing cycle. Assess the tenant, specialised building requirements and funding before applying the theme to an ordinary landlord. The asset must earn an adequate return after development and financing costs.",
+          "removed_unsafe_ids": [],
+          "additional_removed_ids": [],
+          "replacement_ids": [],
+          "reason": "Removed the residual Evergrande comparison entirely; the own-date card and eligible CNBC August 12 prospective-property-demand report support this sector context."
+        },
+        {
+          "label": "Reported",
+          "before": "CNBC reported: “Quantum computing could be commercial real estate’s next big tailwind.” [[n5507]] WSJ reported: “Bankrupt Property Developer China Evergrande to Delist From Hong Kong Exchange.” [[n1418]] Technology-related demand can require specialized buildings and costly development before rent is collected. A failed developer illustrates the downside of commitments financed on assumptions that do not survive. Location, lease economics and funding maturity matter more than an appealing thematic association.",
+          "after": "CNBC reported: “Quantum computing could be commercial real estate’s next big tailwind.” [[n5507]] Technology-related demand can require specialised buildings and costly development before rent is collected. A potential source of tenants is not yet a profitable lease or proof of an attractive acquisition price. Location, lease terms and funding maturity determine whether the owner captures the benefit. Keep the thematic opportunity conditional until the customer and cash-return bridge are credible.",
+          "removed_unsafe_ids": [],
+          "additional_removed_ids": [
+            "n1418"
+          ],
+          "replacement_ids": [],
+          "reason": "Removed the separate future-delisting quote and developer-failure comparison; rebuilt the paragraph solely around the prospective property-demand source with canonical August 12 date."
+        }
+      ],
+      "retail_unchanged": true,
+      "retail_sha256": "5a285a04d29fea7e677d931c57d85db358971e71080e373757583b3dd4f84613",
+      "replacement_metadata": {
+        "n1443": {
+          "canonical_date": null,
+          "canonical_url": "https://www.bloomberg.com/news/articles/2025-08-12/china-s-11-trillion-stock-market-is-staging-a-quiet-resurgence",
+          "observed_utc": "2026-10-29T15:30:50.437218+00:00",
+          "publisher_body_fetched": false,
+          "transport": "isolated_github_hosted_public_metadata_recovery"
+        },
+        "n3165": {
+          "canonical_date": null,
+          "canonical_url": "https://finance.yahoo.com/news/civitas-q2-earnings-revenues-miss-134600283.html",
+          "observed_utc": "2026-10-29T15:30:37.060679+00:00",
+          "publisher_body_fetched": false,
+          "transport": "isolated_github_hosted_public_metadata_recovery"
+        },
+        "n3702": {
+          "canonical_date": null,
+          "canonical_url": "https://www.bloomberg.com/news/articles/2025-08-12/banks-additional-tier-1-bond-spreads-hit-record-tight-level",
+          "observed_utc": "2026-10-29T15:30:47.804651+00:00",
+          "publisher_body_fetched": false,
+          "transport": "isolated_github_hosted_public_metadata_recovery"
+        },
+        "n1418": {
+          "canonical_date": null,
+          "canonical_url": "https://www.wsj.com/business/bankrupt-property-developer-china-evergrande-to-delist-from-hong-kong-exchange-c6c78070",
+          "observed_utc": "2026-10-29T15:30:53.657276+00:00",
+          "publisher_body_fetched": false,
+          "transport": "isolated_github_hosted_public_metadata_recovery"
+        }
+      },
+      "planned_event_note": "All Evergrande references removed as an additional conservative repair. Developer distress instead rests on Reuters China South City liquidation-order coverage with verified August 11 canonical date.",
+      "additional_removed_ids": [
+        "n1418"
+      ],
+      "validation": {
+        "passed": true,
+        "failures": [],
+        "warnings": [],
+        "sources": 79,
+        "words": 10150
+      }
+    },
+    {
+      "date": "2025-08-14",
+      "before_spec_sha256": "c4f86c81020d6c3c39aa9d828ca7d4612b659030582540c2739a22df4644a569",
+      "after_spec_sha256": "3b192d388a632d21fc9947c5309418ae2a20dd5a5944361a773a107ed094a2a9",
+      "removed_ids": [
+        "n1477",
+        "n1521",
+        "n4371"
+      ],
+      "changes": [
+        {
+          "label": "Markets & Flows",
+          "before": "The Hang Seng closed at 25,613.67 and rose 2.58% in the prior session (Yahoo Finance, prior close 2025-08-13). Shanghai Composite closed at 3,683.47 and rose 5.13% over 20 sessions (Yahoo Finance, prior close 2025-08-13). ASHR closed at 29.56 and rose 5.20% over 20 sessions (Yahoo Finance, prior close 2025-08-13). KWEB closed at 37.63 and rose 3.61% in the prior session (Yahoo Finance, prior close 2025-08-13). USD/CNY closed at 7.1785 and rose 0.08% over 20 sessions (Yahoo Finance, prior close 2025-08-13). Bloomberg.com reported: “China Stocks Turnover Tops 2 Trillion Yuan as Bulls Take Charge.” [[n1477]] Higher turnover establishes more trading activity; it does not by itself identify a permanent investor base. The platform rally has a company result to examine, while the weak loan figure limits how far that result should be extended into a macro call. Keep the onshore and internet exposures separate, and decide whether the intended return comes from earnings growth, a lower risk premium or a policy expectation. A more active market can reprice both good and weak businesses quickly, which makes the original operating distinction more valuable rather than less.",
+          "after": "The Hang Seng closed at 25,613.67 and rose 2.58% in the prior session (Yahoo Finance, prior close 2025-08-13). Shanghai Composite closed at 3,683.47 and rose 5.13% over 20 sessions (Yahoo Finance, prior close 2025-08-13). ASHR closed at 29.56 and rose 5.20% over 20 sessions (Yahoo Finance, prior close 2025-08-13). KWEB closed at 37.63 and rose 3.61% in the prior session (Yahoo Finance, prior close 2025-08-13). USD/CNY closed at 7.1785 and rose 0.08% over 20 sessions (Yahoo Finance, prior close 2025-08-13). These price observations show the direction and breadth of the listed exposures; they do not identify who traded them or establish a permanent source of new demand. The platform result supplies a company earnings question, while weaker loan demand limits how far that result should be extended into a macro call. Keep mainland and offshore internet exposures separate, and decide whether the intended return comes from operating growth, a lower risk premium or a policy expectation. A price advance raises the valuation hurdle for the next buyer, making the underlying cash-flow distinction more important rather than less.",
+          "removed_unsafe_ids": [
+            "n1477"
+          ],
+          "replacement_ids": [],
+          "reason": "Removed the unsafe turnover milestone, the numerical activity claim and every inference from higher turnover. Retained only completed own-date instrument observations."
+        },
+        {
+          "label": "New / Most Important",
+          "before": "Bloomberg.com reported: “Tencent’s AI Restraint Shows Risk of Alibaba, JD Food War.” [[n1521]] Tencent's more restrained approach to AI spending supplies a useful contrast with the cash consumed by the delivery battle at other platforms. Restraint should not be interpreted as a rejection of the technology; it can reflect a different assessment of how much spending is needed to earn a customer return. The shareholder benefits when the company can capture demand without matching every competitor's budget. The key question is whether disciplined spending preserves product relevance and monetization. Prefer a measured, profitable deployment over an arms race whose economics depend on competitors eventually becoming less aggressive. Strong revenue growth becomes a more useful investment signal when it is accompanied by evidence that the cost of obtaining it remains under control.",
+          "after": "CNBC reported: “Chinese tech giant Tencent's quarterly revenue jumps 15% on AI investments, gaming unit boost.” [[n1494]] The reported revenue expansion connects AI investment and gaming to an actual company result. It should not be interpreted as proof that all of the growth comes from AI or that the return on every increment of spending is already established. The investment question is how demand and monetisation translate into cash after the costs of serving customers and defending the franchise. Prefer a company able to demonstrate that bridge, rather than assuming that either the largest budget or the smallest budget wins automatically. More spending can be justified when it earns an adequate return; a higher revenue figure alone does not settle that capital-allocation decision.",
+          "removed_unsafe_ids": [
+            "n1521"
+          ],
+          "replacement_ids": [
+            "n1494"
+          ],
+          "reason": "Replaced the later Tencent-restraint article with the earlier-canonical CNBC quarterly revenue result; removed every assertion that Tencent had demonstrated a particular spending-restraint strategy."
+        },
+        {
+          "label": "Macro Stance",
+          "before": "Reuters reported: “Japan's Nikkei races to record high, SoftBank leads tech surge.” [[n4377]] Bloomberg.com reported: “Bessent Says BOJ Is Falling Behind the Curve, Expects Hike.” [[n4371]] The Nikkei's record and SoftBank's leadership are an equity event, while Bessent's view that the BOJ is behind the curve concerns a potential policy adjustment. A foreign official's expectation is not a completed Japanese decision. The useful equity allocation needs an operating or asset-value case that can survive a less accommodating domestic rate path, rather than relying on every central bank moving toward easier policy together.",
+          "after": "Reuters reported: “Japan's Nikkei races to record high, SoftBank leads tech surge.” [[n4377]] Reuters reported: “BOJ turns less gloomy on economy, keeps rate-hike chance alive.” [[n4260]] The equity record and SoftBank leadership are observed market developments, while the BOJ's July communication keeps a future policy adjustment possible. They should not be read as a guarantee that all financing conditions will become easier together. The equity allocation needs an operating or asset-value case that can survive a range of domestic rates and currency outcomes. Prefer companies whose customer demand and balance sheets can support the return, and keep concentrated investment vehicles sized to the uncertainty in their underlying assets rather than the excitement of a record index.",
+          "removed_unsafe_ids": [
+            "n4371"
+          ],
+          "replacement_ids": [
+            "n4377",
+            "n4260"
+          ],
+          "reason": "Removed Bessent’s later statement and any inference about his expected hike. Replaced it with the current, explicitly dated official BOJ July 31 baseline, canonical Reuters July 31."
+        },
+        {
+          "label": "Pattern",
+          "before": "Bloomberg.com reported: “Tencent’s AI Restraint Shows Risk of Alibaba, JD Food War.” [[n1521]] Tencent's restraint offers a useful counterpoint to the idea that every growth company must maximize spending immediately. The return on the chosen opportunity matters more than matching a rival's budget. A company that can retain demand while spending selectively may create a more durable profit stream than a company forced to fund an ever-larger commitment merely to remain in contention.",
+          "after": "CNBC reported: “Chinese tech giant Tencent's quarterly revenue jumps 15% on AI investments, gaming unit boost.” [[n1494]] The company result identifies growth connected to more than one operating driver, which is more useful than treating AI as a single universal earnings factor. Shareholder value still depends on how much cash remains after the investment and competitive spending needed to sustain the franchise. Do not infer a completed capital-discipline outcome from revenue growth alone. Prefer the business able to convert its customer opportunity into repeatable returns, and reassess when a larger commitment fails to produce the cash earnings required by the valuation.",
+          "removed_unsafe_ids": [
+            "n1521"
+          ],
+          "replacement_ids": [
+            "n1494"
+          ],
+          "reason": "Removed the unsupported claim that Tencent’s observed restraint demonstrated an alternative spending model. Rebuilt the pattern around the eligible revenue result and conditional return-on-spending analysis."
+        },
+        {
+          "label": "Attention Gap",
+          "before": "Bloomberg.com reported: “Tencent’s AI Restraint Shows Risk of Alibaba, JD Food War.” [[n1521]] The discussion of restraint is an alternative to treating AI as a contest won solely by the largest budget. A company can create value by choosing a narrower profitable deployment while rivals pay more heavily to compete.",
+          "after": "CNBC reported: “Chinese tech giant Tencent's quarterly revenue jumps 15% on AI investments, gaming unit boost.” [[n1494]] The operating result offers a specific growth claim to assess alongside the broad AI narrative. The analytical opportunity is to distinguish demand, monetisation and the spending required to retain customers, rather than assuming that a larger market automatically creates a better shareholder return.",
+          "removed_unsafe_ids": [
+            "n1521"
+          ],
+          "replacement_ids": [
+            "n1494"
+          ],
+          "reason": "Removed every dependence on the unsafe restraint article; the theme now concerns cash conversion after an eligible reported revenue result."
+        },
+        {
+          "label": "Exposure & Risk",
+          "before": "Tencent's Hong Kong shares offer direct company exposure, while KWEB mixes it with platforms whose subsidy strategies and monetization differ. Evaluate revenue quality and retained margins alongside spending. A disciplined budget is attractive only if the business remains relevant to customers.",
+          "after": "Tencent's Hong Kong shares provide direct company exposure, while KWEB mixes that claim with other platform businesses. Compare the revenue drivers, competitive costs and funding needs of the instrument actually owned. A diversified vehicle can reduce company concentration while diluting the particular operating opportunity being targeted.",
+          "removed_unsafe_ids": [],
+          "replacement_ids": [],
+          "reason": "Removed implications that an already-observed restrained budget defines the company’s exposure."
+        },
+        {
+          "label": "Trigger to Watch",
+          "before": "Add when product demand and monetization remain strong without a disproportionate cash commitment. Reduce if restraint becomes underinvestment that weakens the franchise, or if a larger competitive response is required at a return below the valuation's assumption.",
+          "after": "Add when customer demand and monetisation support cash generation after the necessary investment. Reduce if revenue growth requires commitments whose return no longer supports the valuation. The trigger is a demonstrated improvement in shareholder economics, rather than a presumed victory for either a restrained budget or an aggressive spending plan.",
+          "removed_unsafe_ids": [],
+          "replacement_ids": [],
+          "reason": "Removed the premise that restraint is an established management policy and replaced it with a symmetric conditional spending/return test."
+        },
+        {
+          "label": "What Is Priced",
+          "before": "Bloomberg.com reported: “Bessent Says BOJ Is Falling Behind the Curve, Expects Hike.” [[n4371]] Bloomberg.com reported: “Japan Likely Eked Out Growth Last Quarter Even as Tariffs Hit.” [[n4374]] A foreign official's rate-hike expectation and a forecast of modest past-quarter growth leave both policy and activity subject to a future decision or release. The record stock index cannot settle them in advance.",
+          "after": "Reuters reported: “BOJ turns less gloomy on economy, keeps rate-hike chance alive.” [[n4260]] Bloomberg.com reported: “Japan Likely Eked Out Growth Last Quarter Even as Tariffs Hit.” [[n4374]] The BOJ's published policy stance keeps a future hike possible, while the GDP preview remains a forecast rather than a released result. Neither the activity outcome nor the next policy step can be settled by the stock index reaching a record. The position should be sized for that uncertainty.",
+          "removed_unsafe_ids": [
+            "n4371"
+          ],
+          "replacement_ids": [
+            "n4260",
+            "n4374"
+          ],
+          "reason": "Removed the unsafe foreign-official forecast and its dependent characterization. Current BOJ baseline and eligible GDP preview support the scenario without a same-day policy claim."
+        },
+        {
+          "label": "Playbook ✓",
+          "before": "Favor selective platform earnings, keeping weak credit transmission and property completion as constraints on a broader domestic allocation. Add to a lender or consumption-sensitive business only when policy support becomes sustainable customer demand. Add to a platform when monetization and cost discipline reinforce each other. Reduce if the market prices a broad recovery while the necessary credit and cash evidence remains weak. Maintain smaller risk limits for restructuring claims and for firms whose investment plan depends on favorable future funding. ⚠ Divergence: strong platform revenue, equity turnover and a tariff pause coexist with unexpectedly weak lending and continuing property completion problems, which supports selectivity rather than a universal China re-rating.",
+          "after": "Favor selective platform earnings, keeping weak credit transmission and property completion as constraints on a broader domestic allocation. Add to a lender or consumption-sensitive business only when policy support becomes sustainable customer demand. Add to a platform when monetization and cost discipline reinforce each other. Reduce if the market prices a broad recovery while the necessary credit and cash evidence remains weak. Maintain smaller risk limits for restructuring claims and for firms whose investment plan depends on favorable future funding. ⚠ Divergence: strong platform revenue, equity-price gains and a tariff pause coexist with unexpectedly weak lending and continuing property completion problems, which supports selectivity rather than a universal China re-rating.",
+          "removed_unsafe_ids": [],
+          "replacement_ids": [],
+          "reason": "Removed a dependent turnover assertion outside the cited paragraph; own-date price observations support the replacement."
+        }
+      ],
+      "retail_unchanged": true,
+      "retail_sha256": "73cdd2918df9f411e9934688c3d1a0fb457366965733b2c82ac7bf636d5e2b7d",
+      "replacement_metadata": {
+        "n1494": {
+          "canonical_date": null,
+          "canonical_url": "https://www.cnbc.com/2025/08/13/tencent-q2-earnings-report.html",
+          "observed_utc": "2026-10-29T15:30:32.746653+00:00",
+          "publisher_body_fetched": false,
+          "transport": "isolated_github_hosted_public_metadata_recovery"
+        },
+        "n4377": {
+          "canonical_url": "https://www.reuters.com/markets/europe/japans-nikkei-races-record-high-softbank-leads-tech-surge-2025-08-12/",
+          "canonical_date": "2025-08-12",
+          "observed_utc": "2026-10-29T14:27:53.074542+00:00",
+          "publisher_body_fetched": false
+        },
+        "n4260": {
+          "canonical_url": "https://www.reuters.com/business/boj-turns-less-gloomy-economy-keeps-rate-hike-chance-alive-2025-07-31/",
+          "canonical_date": "2025-07-31",
+          "observed_utc": "2026-10-29T14:26:15.500677+00:00",
+          "publisher_body_fetched": false
+        },
+        "n4374": {
+          "canonical_date": null,
+          "canonical_url": "https://www.bloomberg.com/news/articles/2025-08-13/japan-likely-eked-out-growth-last-quarter-even-as-tariffs-hit",
+          "observed_utc": "2026-10-29T15:30:49.064977+00:00",
+          "publisher_body_fetched": false,
+          "transport": "isolated_github_hosted_public_metadata_recovery"
+        }
+      },
+      "validation": {
+        "passed": true,
+        "failures": [],
+        "warnings": [
+          "citation n1494 used 7 times"
+        ],
+        "sources": 83,
+        "words": 10486
+      }
+    },
+    {
+      "date": "2025-08-15",
+      "before_spec_sha256": "a6837672633415612a6c63ca3d625008f8cc248af2e151e55edccfaeab609827",
+      "after_spec_sha256": "9c4b622e3acab7f6b8cd213ec0e47d5896d3e947b44fa38f2cd0f6c80d9ec142",
+      "removed_ids": [
+        "n1587"
+      ],
+      "changes": [
+        {
+          "label": "Fiscal, Policy & Trade",
+          "before": "The US and China extended their tariff truce by 90 days, Reuters reported, staving off a surge in duties. [[n1389]] That reduces an immediate discontinuity in trade and improves planning time; it does not erase the incentive to diversify production. The South China Morning Post described shipping routes continuing to change despite the truce. [[n1314]] Technology access remains similarly conditional. Bloomberg reported Beijing resisting the opening for a key Nvidia chip, while the Financial Times described DeepSeek's next model being delayed by an attempt to use Chinese chips. [[n1587]] [[n1436]] A licensing concession therefore cannot be booked automatically as end-customer revenue. Own technology franchises with identifiable domestic monetization, and apply a policy discount where hardware approval, customer acceptance and export permissions all sit between an order and a sale.",
+          "after": "The US and China extended their tariff truce by 90 days, Reuters reported, staving off a surge in duties. [[n1389]] That reduces an immediate discontinuity in trade and improves planning time; it does not erase the incentive to diversify production. The South China Morning Post described shipping routes continuing to change despite the truce. [[n1314]] Technology access remains similarly conditional. Reuters reported China cautioning technology firms over Nvidia H20 purchases, citing sources, while the Financial Times described DeepSeek's next model being delayed by an attempt to use Chinese chips. [[n1293]] [[n1436]] A licensing concession therefore cannot be booked automatically as end-customer revenue. Own technology franchises with identifiable domestic monetization, and apply a policy discount where hardware approval, customer acceptance and export permissions all sit between an order and a sale.",
+          "removed_unsafe_ids": [
+            "n1587"
+          ],
+          "replacement_ids": [
+            "n1293",
+            "n1436"
+          ],
+          "reason": "Replaced the later Bloomberg newsletter and its Beijing-resistance formulation with Reuters’ already-eligible August 12 source-based caution over H20 purchases. Preserved the separate FT model-delay report and conditional revenue-access analysis."
+        }
+      ],
+      "retail_unchanged": true,
+      "retail_sha256": "999e40a7f6e6ecb1af3ebfc96448c248cff0687e68932d2550e412f0f48748b8",
+      "replacement_metadata": {
+        "n1293": {
+          "canonical_date": "2025-08-12",
+          "canonical_url": "https://www.reuters.com/world/china/china-cautions-tech-firms-over-nvidia-h20-ai-chip-purchases-sources-say-2025-08-12/",
+          "observed_utc": "2026-10-29T14:38:54.906923+00:00",
+          "publisher_body_fetched": false,
+          "transport": "isolated_github_hosted_public_metadata_recovery"
+        },
+        "n1436": {
+          "canonical_date": null,
+          "canonical_url": "https://www.ft.com/content/eb984646-6320-4bfe-a78d-a1da2274b092?syn-25a6b1a6=1",
+          "observed_utc": "2026-10-29T15:30:36.263071+00:00",
+          "publisher_body_fetched": false,
+          "transport": "isolated_github_hosted_public_metadata_recovery"
+        }
+      },
+      "validation": {
+        "passed": true,
+        "failures": [],
+        "warnings": [],
+        "sources": 153,
+        "words": 10066
+      }
+    }
+  ],
+  "all_unsafe_ids_removed": true,
+  "retail_unchanged_all_dates": true,
+  "preserved_verified_exception": {
+    "date": "2025-08-15",
+    "id": "n4260",
+    "basis": "Root-verified Japanese GDP release at 23:50 UTC before report cutoff; paragraph was not edited."
+  }
+}

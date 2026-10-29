@@ -1,0 +1,131 @@
+{
+  "date": "2025-08-12",
+  "cutoff_utc": "2025-08-12T00:00:00+00:00",
+  "items_checked": 8794,
+  "flagged": [
+    {
+      "id": "n0333",
+      "title": "RBA set to cut rates 25 bps to 3.60% on August 12, one more cut likely this year: Reuters poll - Reuters",
+      "exclude": [],
+      "review": [
+        {
+          "event_id": "rba-august-cut",
+          "reason": "August RBA decision precedes verified release; explicit preview/forecast language requires editorial treatment",
+          "release_at": "2025-08-12T23:59:59Z",
+          "primary_source": "https://www.rba.gov.au/media-releases/2025/mr-25-22.html"
+        }
+      ]
+    },
+    {
+      "id": "n0508",
+      "title": "Palantir Stock Rises Premarket As Nvidia Tie-Up Boosts Retail Cheer Ahead Of Q3 Earnings Next Week - Stocktwits",
+      "exclude": [
+        {
+          "event_id": "inconsistent-reporting-quarter",
+          "reason": "Near-term PalantirQ3 earnings claim conflicts with AugustQ2 reporting cycle; original publication date unverified"
+        }
+      ],
+      "review": []
+    },
+    {
+      "id": "n1112",
+      "title": "US leads global PMI selling price inflation to 26-month high in July - S&P Global",
+      "exclude": [],
+      "review": [
+        {
+          "event_id": "us-july-cpi",
+          "reason": "July US CPI realized claim precedes verified release",
+          "release_at": "2025-08-12T12:30:00Z",
+          "primary_source": "https://www.bls.gov/news.release/archives/cpi_08122025.htm"
+        }
+      ]
+    },
+    {
+      "id": "n2633",
+      "title": "COST Stock Price Prediction: Where Costco Could Be by 2025, 2026, and 2030 - Yahoo Finance",
+      "exclude": [],
+      "review": [
+        {
+          "event_id": "price-forecast-page",
+          "reason": "Check whether this is a dated static forecast or a rolling instrument page; never treat target as observed price"
+        }
+      ]
+    },
+    {
+      "id": "n5046",
+      "title": "JP 3E Holdings Inc. (JPTE) sentiment score, message volume, participation score and buzz level - Stocktwits",
+      "exclude": [
+        {
+          "event_id": "rolling-page",
+          "reason": "Rolling instrument/market/sentiment page cannot establish original headline vintage",
+          "matched": "sentiment score"
+        }
+      ],
+      "review": []
+    },
+    {
+      "id": "n5223",
+      "title": "DEFSEC Technologies Inc. (DFSC) sentiment score, message volume, participation score and buzz level - Stocktwits",
+      "exclude": [
+        {
+          "event_id": "rolling-page",
+          "reason": "Rolling instrument/market/sentiment page cannot establish original headline vintage",
+          "matched": "sentiment score"
+        }
+      ],
+      "review": []
+    },
+    {
+      "id": "n5306",
+      "title": "J-Star Holding Co., Ltd. Ordinary Shares (YMAT) sentiment score, message volume, participation score and buzz level - Stocktwits",
+      "exclude": [
+        {
+          "event_id": "rolling-page",
+          "reason": "Rolling instrument/market/sentiment page cannot establish original headline vintage",
+          "matched": "sentiment score"
+        }
+      ],
+      "review": []
+    },
+    {
+      "id": "n5308",
+      "title": "Cerebras Systems Inc (CBRS) sentiment score, message volume, participation score and buzz level - Stocktwits",
+      "exclude": [
+        {
+          "event_id": "rolling-page",
+          "reason": "Rolling instrument/market/sentiment page cannot establish original headline vintage",
+          "matched": "sentiment score"
+        }
+      ],
+      "review": []
+    },
+    {
+      "id": "n5486",
+      "title": "Darkiris Inc (DKI) sentiment score, message volume, participation score and buzz level - Stocktwits",
+      "exclude": [
+        {
+          "event_id": "rolling-page",
+          "reason": "Rolling instrument/market/sentiment page cannot establish original headline vintage",
+          "matched": "sentiment score"
+        }
+      ],
+      "review": []
+    },
+    {
+      "id": "n7826",
+      "title": "July 2025 US Labor Market Update: Wage Growth Is Outpacing Inflation, but Not for Everyone - Indeed Hiring Lab",
+      "exclude": [],
+      "review": [
+        {
+          "event_id": "us-july-cpi",
+          "reason": "July US CPI realized claim precedes verified release",
+          "release_at": "2025-08-12T12:30:00Z",
+          "primary_source": "https://www.bls.gov/news.release/archives/cpi_08122025.htm"
+        }
+      ]
+    }
+  ],
+  "exclude_count": 6,
+  "review_count": 4,
+  "audited_at": "2026-10-29T14:31:37.620152+00:00"
+}
