@@ -1,0 +1,18 @@
+{
+ "ticker": "XBI",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XBI?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "133d0c17cca34f8beb85925de944a3b7fbbcff7928400d201bfc547172559a70",
+   "fetched_at_utc": "2026-10-30T12:35:12.371043+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XBI?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "cb802ef311a6a8a161b7cf7257c553bee242dff3eee13f3e34c01fc094998aa3",
+   "fetched_at_utc": "2026-10-30T12:35:12.602825+00:00"
+  }
+ ]
+}

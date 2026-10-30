@@ -1,0 +1,46 @@
+{
+  "purpose": "Hash-verified public Google News canonical metadata recovery for selected priority Reuters source-date screening; no publisher body or report prose fetches.",
+  "ingested_at_utc": "2026-10-30T12:45:02.174151+00:00",
+  "workflow_run_id": 41057559763,
+  "workflow_job_id": 124068812259,
+  "commit_sha": "9ba52abd47492ae52bf99b23ab15146a29a05622",
+  "temporary_pr": "https://github.com/marcinzieba4-bot/DailyDigest_Markets/pull/5",
+  "input_sha256": "b0132bde595ff12595c500e1d41c235f9443942e5b5c6be03b661d798bbd48f4",
+  "runner_sha256": "70072f203b10da4331db7140aadb97a683f72724e88c60ea161cb5bb0af448f9",
+  "resolver_sha256": "777a8e7b34cebbd95890cf49506299cadb8642a1e676baf32e5063d6620c2768",
+  "workflow_sha256": "1b138854e433e1bd61a2f7a6691b2b162557ecf9178f014ae02e30e039ebe2a3",
+  "output_sha256": "f80fa4b536265c1735e116424b34cedf4aabff676fc73bad66075a6ac98b8c33",
+  "payload_sha256": "581365103be67003f5d656bcea332a9f3504f2fab52a03bdc0db7f60c22a8a7b",
+  "job_log_sha256": "99f041c070c76f74629ce785eecdefbea7f93d0ecfd8d1a945463c420d2eb533",
+  "records": 10,
+  "failures": 0,
+  "all_hash_checks_passed": true,
+  "requested_url_set_exact": true,
+  "imports": {
+    "canonical_reuters_urls.json": {
+      "successful_mappings_imported": 10,
+      "cache_records_after": 1007,
+      "before_sha256": "c1bb5cb7b6a5bf11664d3257a29b22c6a360beb0dbdb3a67e4ecfd0c34fc96c8",
+      "after_sha256": "b50f2e7fd90deee47bea6f4383d2871964d261b4378dc1c2f550755c2cf77475"
+    },
+    "canonical_all_cited_urls.json": {
+      "successful_mappings_imported": 10,
+      "cache_records_after": 10,
+      "before_sha256": null,
+      "after_sha256": "f80fa4b536265c1735e116424b34cedf4aabff676fc73bad66075a6ac98b8c33"
+    }
+  },
+  "original_body_vintage_proven": false,
+  "frozen_feeds_changed": false,
+  "specs_changed": false,
+  "source_change_verification": "Exact-head remote files matched all four expected SHA256 hashes; compare from initial main showed exactly four reviewed workflow/recovery files. Job checkout exact head appears in captured log.",
+  "run_completion": {
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "9ba52abd47492ae52bf99b23ab15146a29a05622"
+  },
+  "files": "work/recovery_batch1/",
+  "transport_note": "Initial997priorityURLsresolvednatively; last10Googlechallengepersistedononecontrolledretry; isolatedread-onlypublicmetadatajobrecoveredall10withoutcredentialorpolicychanges.",
+  "post_rescreen_priority_cache_sha256": "1afe1c94729f8922ff2eed7c5c18f57ac3c15af8b25c1522da804f766139037c",
+  "rescreen_cache_note": "Priority cache serialized in compact form by ready_feeds freeze; mappings semantically unchanged from verified import. May30 pre-author feed rescreen is a separately bound operation in audit/news_priority_recovery_rescreen.json."
+}

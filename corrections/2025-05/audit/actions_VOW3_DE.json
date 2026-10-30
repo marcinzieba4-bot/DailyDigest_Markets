@@ -1,0 +1,18 @@
+{
+ "ticker": "VOW3.DE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VOW3.DE?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "394249d8776f560e35db21f7131f252451dbbf830331d980d2ebf4e9d324f5c2",
+   "fetched_at_utc": "2026-10-30T12:35:06.905303+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VOW3.DE?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "a32b0d278b01ca6a56ec998f151725131d632a53f94e7ecaea24573f8759e6b6",
+   "fetched_at_utc": "2026-10-30T12:35:07.288006+00:00"
+  }
+ ]
+}

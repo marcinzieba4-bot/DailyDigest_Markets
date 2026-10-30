@@ -1,0 +1,118 @@
+{
+  "reviewer": "root",
+  "scope": "Exact conservative changes after all-cited canonical-date checks; own-date facts and interpretations only.",
+  "changes": [
+    {
+      "batch": 1,
+      "date": "2025-05-01",
+      "path": [
+        "geo",
+        4,
+        "parts",
+        1,
+        1
+      ],
+      "removed": "ASX 200 closed at 8,126.20, up 3.96% over five sessions and 1.81% over 20 sessions; AUD/USD was 0.6387, up 1.66% over 20 sessions (Yahoo Finance, prior close 2025-04-30). Bloomberg reported record house prices ahead of the vote, while ABC described growth in house values outpacing units. [[n0330]] [[n0347]] Higher collateral values can support confidence and bank asset quality, but they also deepen affordability pressure. A housing rally is therefore a mixed signal for domestic demand, especially when prospective buyers must save more before entering the market.",
+      "replacement": "ASX 200 closed at 8,126.20, up 3.96% over five sessions and 1.81% over 20 sessions; AUD/USD was 0.6387, up 1.66% over 20 sessions (Yahoo Finance, prior close 2025-04-30). Bloomberg reported record house prices ahead of the vote. [[n0330]] Higher collateral values can support confidence and bank asset quality, but they also deepen affordability pressure. A housing rally is therefore a mixed signal for domestic demand, especially when prospective buyers must save more before entering the market.",
+      "reason": "ABC n0347 canonical path datedMay1 conflicts with midnightUTC cutoff. Current publisher page shows May1 original+later update but no independently established offset/original headline vintage. Conservatively remove units-versus-houses actual; retain own eligible Bloomberg n0330 record-price statement.",
+      "canonical_url": "https://www.abc.net.au/news/2025-05-01/house-prices-rise-nationally-in-april-ahead-of-federal-election/105232994",
+      "publication_metadata_observed": "Posted Thu1May2025 12:48am; updated10:44am; offset not independently verified.",
+      "before_sha256": "31dfe529c2c8bbb076c393597c7962b037e108b5217cfa89d55e2ac563e8f5b5",
+      "after_sha256": "3211ddf78b608ed41c2395a0b09d2d584d3b54c8fbad84e2c694e481fdefb4b6",
+      "edited_at_utc": "2026-10-30T12:52:16.449617+00:00"
+    },
+    {
+      "batch": 2,
+      "date": "2025-05-09",
+      "path": [
+        "geo",
+        3,
+        "parts",
+        1,
+        1
+      ],
+      "removed": "USD/JPY was 143.8480, up 0.57% in the prior session and down 2.67% over 20 sessions. Nikkei 225 closed at 36,928.63, up 0.41% in the prior session and 18.60% over 20 sessions. Toyota was 2,671.50, down 1.27% in the prior session, while Tokyo Electron reached 22,355.00, up 2.05%. The market is separating end markets and company outlooks even within an advancing index. Reuters reported NTT planning to take NTT Data private, adding a concrete corporate-structure catalyst outside the exporter debate. [[n3043]] CNBC said Takeda's chief executive expected less tariff and yen pressure than other Japanese drugmakers. [[n3051]] Company-specific resilience is more actionable than a generic currency rule. (Yahoo Finance, prior close 2025-05-08)",
+      "replacement": "USD/JPY was 143.8480, up 0.57% in the prior session and down 2.67% over 20 sessions. Nikkei 225 closed at 36,928.63, up 0.41% in the prior session and 18.60% over 20 sessions. Toyota was 2,671.50, down 1.27% in the prior session, while Tokyo Electron reached 22,355.00, up 2.05%. The market is separating end markets and company outlooks even within an advancing index. Reuters reported NTT planning to take NTT Data private, adding a concrete corporate-structure catalyst outside the exporter debate. [[n3043]] Company-specific resilience is more actionable than a generic currency rule. (Yahoo Finance, prior close 2025-05-08)",
+      "reason": "Remove CNBC May9 CEO video claim: canonical date equals report date, pre-midnight availability unverified; retain eligible own NTT transaction and card context.",
+      "before_sha256": "6b591aaecda8d28ea616efb9c1fa5d0079632e2b534eb92323d8ea4cdb63ff8e",
+      "after_sha256": "178e86833a09169975a13e6dcb54c447ab10459b644889373e8c3afa7641fb58",
+      "edited_at_utc": "2026-10-30T13:00:20.607484+00:00"
+    },
+    {
+      "batch": 2,
+      "date": "2025-05-29",
+      "path": [
+        "geo",
+        2,
+        "parts",
+        4,
+        1
+      ],
+      "removed": "The trade truce has reduced an immediate source of stress, but industrial policy and export restrictions remain live constraints. Reuters reported that China might relax rare-earth export curbs for some chip companies; the conditional language matters because selective relief would not amount to a general reopening of supply. Reuters also reported that magnet restrictions risked halting Indian auto production, showing the reach of a specialised upstream bottleneck. At the same time CNBC described Xi's push to strengthen advanced manufacturing. The policy mix therefore supports strategic capacity while the economy still needs stronger consumption. Investors should not confuse success in technological self-reliance with an immediate improvement in returns on every factory investment. Concentrate on firms that can demonstrate orders and pricing rather than simply alignment with a national priority. [[n1256]] [[n1259]] [[n1318]]",
+      "replacement": "The trade truce has reduced an immediate source of stress, but industrial policy and export restrictions remain live constraints. Reuters reported that China might relax rare-earth export curbs for some chip companies; the conditional language matters because selective relief would not amount to a general reopening of supply. Reuters also reported that magnet restrictions risked halting Indian auto production, showing the reach of a specialised upstream bottleneck. Strategic supply and consumer demand deserve separate tests. An upstream bottleneck does not establish attractive returns on every factory investment. Concentrate on firms that can demonstrate orders and pricing rather than simply alignment with a national priority. [[n1256]] [[n1259]]",
+      "reason": "Remove CNBC May29 advanced-manufacturing story actual; canonical same-day availability unverified. Preserve own eligible Reuters conditional export-curb and Indian-auto risk facts.",
+      "before_sha256": "773e95c83a1c82c81b7eb54e76bbf80a8a1b9e722ade0e80710db7c37e2fe688",
+      "after_sha256": "a5447f1593ef3cac0715ae7e5c89ec99f8548b444cb6dfa1181db8ac83437aca",
+      "edited_at_utc": "2026-10-30T13:00:20.607484+00:00"
+    },
+    {
+      "batch": 2,
+      "date": "2025-05-29",
+      "path": [
+        "sectors",
+        3,
+        "parts",
+        3,
+        1
+      ],
+      "removed": "Bloomberg reported Goldman's recommendation to buy gold and oil as long-term hedges. That supports a distinct hedge allocation, not an unconditional bullish call on energy equities. Keep producer exposure underweight until supply decisions and payout coverage reinforce each other; retain flexibility to add if the commodity stabilises without rising financial strain. [[n6114]]",
+      "replacement": "Energy equities and commodity hedges solve different portfolio problems. A small supply-risk hedge can remain useful when producers face pressure on cash generation. Keep producer exposure underweight until supply decisions and payout coverage reinforce each other; retain flexibility to add if the commodity stabilises without rising financial strain.",
+      "reason": "Remove same-day Bloomberg Goldman recommendation. Replace with general conditional portfolio mechanics, no measured allocation or bank recommendation.",
+      "before_sha256": "a5447f1593ef3cac0715ae7e5c89ec99f8548b444cb6dfa1181db8ac83437aca",
+      "after_sha256": "345876b47de8bf99d4836fb2b88606dd757c9eb3c3fa0a2f791566e62a9628f8",
+      "edited_at_utc": "2026-10-30T13:00:20.607484+00:00"
+    },
+    {
+      "batch": 2,
+      "date": "2025-05-29",
+      "path": [
+        "flows",
+        "parts",
+        2,
+        1
+      ],
+      "removed": "CNBC reported renewed interest in credit-default swaps while questioning whether the panic was overblown. That is useful evidence of hedging demand, but protection activity alone cannot establish a systemic event. The more practical portfolio check is whether borrower stress is appearing in company accounts. Scotiabank's tariff-related increase in loan-loss reserves provides such an operating signal. It warrants close attention to vulnerable borrowers without implying that every lender or corporate issuer faces the same problem. [[n3210]] [[n2504]] Private credit also deserves underwriting rather than a search for headline yield: AFR described risky real-estate deals damaging its credibility, while the FT discussed disagreements among rating agencies. Illiquidity and differing valuation approaches can delay recognition of a problem; they do not eliminate it. Maintain liquidity sufficient to avoid selling a strong public asset simply because a private holding cannot be realised. [[n5877]] [[n5867]]",
+      "replacement": "Demand for credit protection can grow as investors hedge a policy shock, but buying protection does not by itself establish a systemic event. The more practical portfolio check is whether borrower stress is appearing in company accounts. Scotiabank's tariff-related increase in loan-loss reserves provides such an operating signal. It warrants close attention to vulnerable borrowers without implying that every lender or corporate issuer faces the same problem. [[n2504]] Private credit also deserves underwriting rather than a search for headline yield: AFR described risky real-estate deals damaging its credibility, while the FT discussed disagreements among rating agencies. Illiquidity and differing valuation approaches can delay recognition of a problem; they do not eliminate it. Maintain liquidity sufficient to avoid selling a strong public asset simply because a private holding cannot be realised. [[n5877]] [[n5867]]",
+      "reason": "Remove same-day CNBC observed CDS-demand claim. Retain general hedge mechanics and separately cited own Scotia/private-credit facts.",
+      "before_sha256": "345876b47de8bf99d4836fb2b88606dd757c9eb3c3fa0a2f791566e62a9628f8",
+      "after_sha256": "2d621796b43500985b1564d42a55e9953e8614663b0bbfad94d35bb7bb1ea5df",
+      "edited_at_utc": "2026-10-30T13:00:20.607484+00:00"
+    },
+    {
+      "batch": 2,
+      "date": "2025-05-29",
+      "path": [
+        "retail",
+        3,
+        "parts",
+        0,
+        1
+      ],
+      "removed": "Gold offers the crowd a simpler response to a complicated policy environment: hold something outside the corporate earnings debate. CNBC reported gold holding steady as Fed minutes highlighted inflation and recession risks, while Bloomberg described Goldman's recommendation to own gold and oil as long-term hedges. The attraction is less about predicting a single disaster than refusing to choose between the risks of weaker growth and persistent inflation. CNBC's report of wealthy investors storing more gold in Singapore adds an identifiable custody angle to that desire for resilience. [[n4618]] [[n6114]] [[n4511]]",
+      "replacement": "Gold offers the crowd a simpler response to a complicated policy environment: hold something outside the corporate earnings debate. CNBC reported gold holding steady as Fed minutes highlighted inflation and recession risks. The attraction is less about predicting a single disaster than refusing to choose between the risks of weaker growth and persistent inflation. CNBC's report of wealthy investors storing more gold in Singapore adds an identifiable custody angle to that desire for resilience. [[n4618]] [[n4511]]",
+      "reason": "Remove same-day Bloomberg Goldman recommendation from gold side item; retain eligible own CNBC Fed-minutes and Singapore-custody headlines.",
+      "before_sha256": "2d621796b43500985b1564d42a55e9953e8614663b0bbfad94d35bb7bb1ea5df",
+      "after_sha256": "60d2820577e7a9bdf0631049bd7d54fc6afae8043c93bb6152626ebbc5dd56f3",
+      "edited_at_utc": "2026-10-30T13:00:20.607484+00:00"
+    }
+  ],
+  "timing_exceptions_added": [
+    {
+      "batch": 2,
+      "date": "2025-05-29",
+      "id": "n1268",
+      "timing_proof_sha256": "c89a933aaa79d961f1ef82e2c4af7e019777680747625f2444a03d78063455f9",
+      "admission": "Initial ruling only; no original CNBC publication/body claim."
+    }
+  ]
+}

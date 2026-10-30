@@ -1,0 +1,18 @@
+{
+ "ticker": "AIR.PA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AIR.PA?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "6bc8dab6c944044f7a75f222ad521c9806ca89b15e38eb4a523b338f6dca2d9f",
+   "fetched_at_utc": "2026-10-30T12:35:07.397557+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AIR.PA?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "978bcdb599bf08a638afec782a19790d73c6185c13d7c5576b737ea47280d382",
+   "fetched_at_utc": "2026-10-30T12:35:07.765452+00:00"
+  }
+ ]
+}

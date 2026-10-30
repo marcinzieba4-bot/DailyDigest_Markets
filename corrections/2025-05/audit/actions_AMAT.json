@@ -1,0 +1,18 @@
+{
+ "ticker": "AMAT",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMAT?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "a395c20e44d441130384f0317206605b93fcc96ed42a4268f0d8071d6c78f0a8",
+   "fetched_at_utc": "2026-10-30T12:35:14.108562+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMAT?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "75e6ea8b9c4f75b20cb6d6890f4e4b43dda1d4bbcf7825907e8b78af553cc010",
+   "fetched_at_utc": "2026-10-30T12:35:14.610428+00:00"
+  }
+ ]
+}

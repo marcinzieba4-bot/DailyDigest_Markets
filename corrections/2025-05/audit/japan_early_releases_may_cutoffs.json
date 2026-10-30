@@ -1,0 +1,114 @@
+{
+  "reviewer": "/root/may_review",
+  "reviewed_at_utc": "2026-10-30T12:39:09.623435+00:00",
+  "purpose": "Reviewer-only historical availability checks. A proof can validate an eligible own-date frozen headline; it cannot add absent facts or later article text.",
+  "historical_vintage_limit": "Current retrieval of dated official releases or publication metadata is evidence of the recorded release schedule/event, not an archived original server response or complete contemporary article-body vintage.",
+  "timezone_conversion": "Asia/Tokyo is UTC+09:00. An 08:30/08:50 JST release occurs at 23:30/23:50 UTC on the previous day. An announcement at or after 09:00 JST is outside that local day’s 00:00 UTC report cutoff.",
+  "admission_scope": "These underlying official-release proofs do not establish that a current publisher article body existed before the cutoff. Admit only facts already present in an eligible own-date frozen headline. Do not add numbers from these proofs without that headline.",
+  "events": [
+    {
+      "event": "Japan Q1 GDP, first preliminary estimate",
+      "first_weekday_report": "2025-05-16",
+      "release_local": "2025-05-16T08:50:00+09:00",
+      "release_utc": "2025-05-15T23:50:00+00:00",
+      "evidence": [
+        {
+          "url": "https://www.e-stat.go.jp/en/stat-search/files?cycle=2&layout=datalist&month=11010300&stat_infid=000040279363&tclass1=000001014473&tclass2=000001014474&tclass3val=0&toukei=00100409&tstat=000001014470&year=20250",
+          "access": "Direct official metadata for the archived first preliminary dataset",
+          "scope": "The metadata records May 16 at 08:50 JST for the first preliminary vintage, preceding the June 9 revision."
+        },
+        {
+          "url": "https://www.esri.cao.go.jp/en/sna/data/sokuhou/files/2025/qe251/pdf/gaiyou2511_e.pdf",
+          "access": "Official dated release, search indexed",
+          "scope": "First preliminary release; later revisions cannot replace facts in the own-date headline."
+        }
+      ]
+    },
+    {
+      "event": "Japan April trade, provisional release",
+      "first_weekday_report": "2025-05-21",
+      "release_local": "2025-05-21T08:50:00+09:00",
+      "release_utc": "2025-05-20T23:50:00+00:00",
+      "evidence": [
+        {
+          "url": "https://www.customs.go.jp/toukei/shinbun/trade-st_e/2025/2025044e.pdf",
+          "access": "Direct original official dated release",
+          "scope": "April provisional statistics released May 21, preceding the May 29 revision."
+        },
+        {
+          "url": "https://www.jcga-page.or.jp/struct/wp-content/uploads/250207yoteihyou-1.pdf",
+          "access": "Direct PDF reproducing a February 7 official calendar, hosted by an industry association.",
+          "scope": "The calendar places April monthly provisional statistics at May 21, 08:50 JST. Its association host is not an official historical server log."
+        },
+        {
+          "url": "https://www.customs.go.jp/toukei/calendar/calend_e.htm",
+          "access": "Official current protocol, search metadata",
+          "scope": "The current provisional-release protocol also states 08:50 JST. The current calendar alone does not prove the 2025 clock."
+        }
+      ],
+      "provenance_limit": "Mixed provenance: an official dated release, a dated calendar reproduction and the current official protocol. No historical e-Stat publication clock or server log was located."
+    },
+    {
+      "event": "Japan April national CPI",
+      "first_weekday_report": "2025-05-23",
+      "release_local": "2025-05-23T08:30:00+09:00",
+      "release_utc": "2025-05-22T23:30:00+00:00",
+      "evidence": [
+        {
+          "url": "https://www.e-stat.go.jp/en/stat-search/files?cycle=1&layout=datalist&month=12040604&page=1&result_back=1&stat_infid=000040276968&tclass1=000001150149&tclass2val=0&toukei=00200573&tstat=000001150147&year=20250",
+          "access": "Direct official dataset metadata",
+          "scope": "Japan April monthly CPI was published May 23 at 08:30 JST."
+        }
+      ]
+    },
+    {
+      "event": "Tokyo May CPI, preliminary release",
+      "first_weekday_report": "2025-05-30",
+      "release_local": "2025-05-30T08:30:00+09:00",
+      "release_utc": "2025-05-29T23:30:00+00:00",
+      "evidence": [
+        {
+          "url": "https://www.e-stat.go.jp/index.php/stat-search/files?cycle=1&layout=dataset&month=12040604&stat_infid=000040276967&tclass1=000001150149&toukei=00200573&tstat=000001150147&year=20250",
+          "access": "Direct official metadata",
+          "scope": "The Tokyo preliminary summary was published May 30 at 08:30 JST. The portal files it under the April monthly report; the linked original PDF explicitly identifies May preliminary statistics."
+        },
+        {
+          "url": "https://www.e-stat.go.jp/stat-search/file-download?fileKind=2&statInfId=000040276967",
+          "access": "Direct official 12-page PDF",
+          "scope": "The May 30 date and Tokyo May 2025 preliminary title confirm the survey period and vintage."
+        }
+      ]
+    },
+    {
+      "event": "Japan April industrial production, preliminary release",
+      "first_weekday_report": "2025-05-30",
+      "release_local": "2025-05-30T08:50:00+09:00",
+      "release_utc": "2025-05-29T23:50:00+00:00",
+      "evidence": [
+        {
+          "url": "https://www.e-stat.go.jp/index.php/stat-search/files?kikan=00550&layout=dataset&page=1&stat_infid=000040281927&toukei=00550300",
+          "access": "Direct official dataset metadata",
+          "scope": "April 2025 preliminary industrial production was published May 30 at 08:50 JST."
+        },
+        {
+          "url": "https://www.meti.go.jp/statistics/tyo/iip/result/b2020_202504sj.html",
+          "access": "Official May 30 result-page search metadata",
+          "scope": "Dated April preliminary release; later final revisions are excluded."
+        }
+      ]
+    },
+    {
+      "event": "BOJ April 30–May 1 meeting, Summary of Opinions",
+      "first_weekday_report": "2025-05-13",
+      "release_local": "2025-05-13T08:50:00+09:00",
+      "release_utc": "2025-05-12T23:50:00+00:00",
+      "evidence": [
+        {
+          "url": "https://www.boj.or.jp/en/mopo/mpmdeci/state_2025/k250501a.htm",
+          "access": "Direct official release table",
+          "scope": "The Summary was released May 13 at 08:50 JST. The minutes were released separately on June 20."
+        }
+      ]
+    }
+  ]
+}

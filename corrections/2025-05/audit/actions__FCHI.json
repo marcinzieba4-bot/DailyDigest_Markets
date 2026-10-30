@@ -1,0 +1,18 @@
+{
+ "ticker": "^FCHI",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EFCHI?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "312d58ee5c1694441c765f3b5679e468a6dbdb35df2e1bf8eb01ad7950cf0adf",
+   "fetched_at_utc": "2026-10-30T12:35:06.339729+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EFCHI?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "2cd81eb93d331e8b36664e8e4e6709c3203a45e8bc9a6deea56ba7aea8791c2e",
+   "fetched_at_utc": "2026-10-30T12:35:06.608315+00:00"
+  }
+ ]
+}

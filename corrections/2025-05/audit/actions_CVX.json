@@ -1,0 +1,18 @@
+{
+ "ticker": "CVX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CVX?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "c4ddfebed9370edd4787ed08e4a5c5d36ee5614c6e02f0989546758e8e2f2f58",
+   "fetched_at_utc": "2026-10-30T12:35:22.488446+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CVX?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "6465d22bab90d37fb140c7afc6fb7c120ae0369c80463978f89fee0b369151f9",
+   "fetched_at_utc": "2026-10-30T12:35:23.518623+00:00"
+  }
+ ]
+}

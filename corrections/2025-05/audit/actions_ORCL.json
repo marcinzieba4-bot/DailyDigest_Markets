@@ -1,0 +1,18 @@
+{
+ "ticker": "ORCL",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ORCL?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "a07d717ff79a963063a40ded6bcd43d9b4f799673e19c5aa3add01901126c1c3",
+   "fetched_at_utc": "2026-10-30T12:35:13.486955+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ORCL?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "c3ae8c394944582fecca8353e34bcc18b71572dcd470ae6b08b2afe58d57f9dd",
+   "fetched_at_utc": "2026-10-30T12:35:13.761068+00:00"
+  }
+ ]
+}

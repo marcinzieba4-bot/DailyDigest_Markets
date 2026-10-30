@@ -1,0 +1,18 @@
+{
+ "ticker": "AUDUSD=X",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AUDUSD%3DX?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "44be2c72d463e1e7a36b15596aa0ca4b7220222a2d7bac4e9aa8caa0803e95c6",
+   "fetched_at_utc": "2026-10-30T12:35:03.895664+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AUDUSD%3DX?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "e02a2b50fc6956ab4199084846ce0f71cf6495a60b80cb82235bb746a2abbd17",
+   "fetched_at_utc": "2026-10-30T12:35:04.285582+00:00"
+  }
+ ]
+}

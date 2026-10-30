@@ -1,0 +1,18 @@
+{
+ "ticker": "JPM",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/JPM?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "74488c28fd9d1d4962b8622bbe98c2add5952c0a26e2ce46a77102e6c19667ce",
+   "fetched_at_utc": "2026-10-30T12:35:20.365950+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/JPM?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "2666804151e83a45e799bdb61150e39c15f15677efc57f000b86b76d508ba52e",
+   "fetched_at_utc": "2026-10-30T12:35:21.468081+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "DIS",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DIS?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "db0d2cd9bba40c538d2cdba3bce5e5257e63b429a92f006347b22061fbe828f5",
+   "fetched_at_utc": "2026-10-30T12:35:29.485398+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DIS?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "c9ebb7024ab93fab9aa361ed88e0d528e4a7c6fde315d64fcb99616c6b246981",
+   "fetched_at_utc": "2026-10-30T12:35:30.017031+00:00"
+  }
+ ]
+}

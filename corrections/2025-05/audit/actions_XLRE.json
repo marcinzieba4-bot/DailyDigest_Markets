@@ -1,0 +1,18 @@
+{
+ "ticker": "XLRE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLRE?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "e5b374fae1a6e42b1e388f13926ee76f886f42c4f383188d6b8bb25693b9fd50",
+   "fetched_at_utc": "2026-10-30T12:35:10.865426+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLRE?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "756e116270fe59dc696972c30025c505807e502a5f253948734f8ac6e283026f",
+   "fetched_at_utc": "2026-10-30T12:35:11.177008+00:00"
+  }
+ ]
+}

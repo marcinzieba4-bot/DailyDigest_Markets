@@ -1,0 +1,18 @@
+{
+ "ticker": "EWJ",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EWJ?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "439bdb00c8e0a586d87f966acd91873d3644042491debe612a317ab3ed7a0f0c",
+   "fetched_at_utc": "2026-10-30T12:35:08.002201+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EWJ?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "ccea82b009b406b3103ca2c31fcde57bf0a208aa1028f3c6f4738358918b5b15",
+   "fetched_at_utc": "2026-10-30T12:35:08.254735+00:00"
+  }
+ ]
+}

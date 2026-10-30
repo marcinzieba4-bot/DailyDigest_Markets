@@ -1,0 +1,205 @@
+{
+  "passed": true,
+  "assertions": 73381,
+  "errors": [],
+  "cards": 22,
+  "instruments_per_card": [
+    290
+  ],
+  "raw_symbols": 292,
+  "fetch_failures": 0,
+  "unavailable_short_history_metrics": [],
+  "absent_before_first_source_observation": [],
+  "information_cutoff": "00:00 UTC per report; crypto prior UTC candle completes at that boundary",
+  "retained_price_last_date": "2025-05-30",
+  "future_price_rows_retained": 0,
+  "level_suppression": {
+    "CMCSA": "corporate-action/spin-off adjustment; quote percentage changes only"
+  },
+  "vintage_limit": "Current-vintage historical data may contain vendor revisions; original contemporaneous vendor snapshots are not asserted.",
+  "sources": [
+    "Yahoo Finance daily chart API",
+    "US Treasury daily par yield curve"
+  ],
+  "excluded_no_May_source_history": {
+    "CRCL": {
+      "status": "excluded_from_May_universe",
+      "reason": "Yahoo Finance provides no daily source observations in or before May 2025 for this ticker. No prices or returns are estimated."
+    },
+    "BMNR": {
+      "status": "excluded_from_May_universe",
+      "reason": "Yahoo Finance provides no daily source observations in or before May 2025 for this ticker. No prices or returns are estimated."
+    }
+  },
+  "calendar_cases": [
+    {
+      "report_date": "2025-05-02",
+      "ticker": "000001.SS",
+      "expected_session": "2025-04-30"
+    },
+    {
+      "report_date": "2025-05-05",
+      "ticker": "000001.SS",
+      "expected_session": "2025-04-30"
+    },
+    {
+      "report_date": "2025-05-06",
+      "ticker": "000001.SS",
+      "expected_session": "2025-04-30"
+    },
+    {
+      "report_date": "2025-05-07",
+      "ticker": "000001.SS",
+      "expected_session": "2025-05-06"
+    },
+    {
+      "report_date": "2025-05-02",
+      "ticker": "^HSI",
+      "expected_session": "2025-04-30"
+    },
+    {
+      "report_date": "2025-05-06",
+      "ticker": "^HSI",
+      "expected_session": "2025-05-02"
+    },
+    {
+      "report_date": "2025-05-07",
+      "ticker": "^HSI",
+      "expected_session": "2025-05-06"
+    },
+    {
+      "report_date": "2025-05-02",
+      "ticker": "^N225",
+      "expected_session": "2025-05-01"
+    },
+    {
+      "report_date": "2025-05-05",
+      "ticker": "^N225",
+      "expected_session": "2025-05-02"
+    },
+    {
+      "report_date": "2025-05-06",
+      "ticker": "^N225",
+      "expected_session": "2025-05-02"
+    },
+    {
+      "report_date": "2025-05-07",
+      "ticker": "^N225",
+      "expected_session": "2025-05-02"
+    },
+    {
+      "report_date": "2025-05-08",
+      "ticker": "^N225",
+      "expected_session": "2025-05-07"
+    },
+    {
+      "report_date": "2025-05-02",
+      "ticker": "^KS11",
+      "expected_session": "2025-04-30"
+    },
+    {
+      "report_date": "2025-05-06",
+      "ticker": "^KS11",
+      "expected_session": "2025-05-02"
+    },
+    {
+      "report_date": "2025-05-07",
+      "ticker": "^KS11",
+      "expected_session": "2025-05-02"
+    },
+    {
+      "report_date": "2025-05-08",
+      "ticker": "^KS11",
+      "expected_session": "2025-05-07"
+    },
+    {
+      "report_date": "2025-05-02",
+      "ticker": "PKO.WA",
+      "expected_session": "2025-04-30"
+    },
+    {
+      "report_date": "2025-05-05",
+      "ticker": "PKO.WA",
+      "expected_session": "2025-05-02"
+    },
+    {
+      "report_date": "2025-05-26",
+      "ticker": "^GSPC",
+      "expected_session": "2025-05-23"
+    },
+    {
+      "report_date": "2025-05-27",
+      "ticker": "^GSPC",
+      "expected_session": "2025-05-23"
+    },
+    {
+      "report_date": "2025-05-28",
+      "ticker": "^GSPC",
+      "expected_session": "2025-05-27"
+    },
+    {
+      "report_date": "2025-05-06",
+      "ticker": "^FTSE",
+      "expected_session": "2025-05-02"
+    },
+    {
+      "report_date": "2025-05-27",
+      "ticker": "^FTSE",
+      "expected_session": "2025-05-23"
+    },
+    {
+      "report_date": "2025-05-02",
+      "ticker": "^GDAXI",
+      "expected_session": "2025-04-30"
+    },
+    {
+      "report_date": "2025-05-02",
+      "ticker": "^FCHI",
+      "expected_session": "2025-04-30"
+    },
+    {
+      "report_date": "2025-05-02",
+      "ticker": "^AXJO",
+      "expected_session": "2025-05-01"
+    },
+    {
+      "report_date": "2025-05-30",
+      "ticker": "NOVO-B.CO",
+      "expected_session": "2025-05-28"
+    },
+    {
+      "report_date": "2025-05-02",
+      "ticker": "^TWII",
+      "expected_session": "2025-04-30"
+    },
+    {
+      "report_date": "2025-05-30",
+      "ticker": "^TWII",
+      "expected_session": "2025-05-29"
+    }
+  ],
+  "card_sha256": {
+    "2025-05-01": "2c6626876a870f296f938a3bd4b56cc0e4f7df4d030ffb48ea9d82f37e23b376",
+    "2025-05-02": "d496552c8cee552cb4a9bda16ac622ce200433bf8a25e37e564c1b8e61db636e",
+    "2025-05-05": "71bb7fb685fa9b98601b25ca099fe78cff5d10fa211795a27545b345576fe64e",
+    "2025-05-06": "a8805cce1d78f2caa7b7f4128957512f8cd5ad8b8c6a8dd8cb0d113b8286632c",
+    "2025-05-07": "4c3fc1dad8a1f8025a458d552a20c7e5cf6d74482d314be2fa536b778b1f9e36",
+    "2025-05-08": "5ec4d1dc0983302ef1b895232399f9a15d8b9703333fa20eba3e3d270f3e4fad",
+    "2025-05-09": "13a89ea6c8b89224c28c5f04ec4a83aa86ca6fe345cb5c6759c2c4fb8e8eda7d",
+    "2025-05-12": "9c11ac292f0bacf21314187a017738e9d53dfcf70afcef5ef9381015a24759a2",
+    "2025-05-13": "e6c2a172141562e1d333577651a6ac88a97fee0bb430039620128d65786a1ac6",
+    "2025-05-14": "a62b48e9398ca125affa73ec7aef107f9d9916ec75962ba64c7afe49ac1c616e",
+    "2025-05-15": "3f5f2a4adb1b27fb3655fb7241e1b202643dfe6f7716915a6a7c045d456e5a19",
+    "2025-05-16": "79308cabe2c6340ccb8dac1533ed8cb8b074bad6516c68978d32170120d865e0",
+    "2025-05-19": "56779f0cb0dd4bc1414a2dca93cf518a30ed7eb9a9f99156fb848b5b25f6e210",
+    "2025-05-20": "ca1436883a7d83bb1538832e703f945423ac68b82ce2bedb2108a054e2b74907",
+    "2025-05-21": "f549a2004508c3a1ced5e1c592959ac8e98f6fb17e2e45facceec2612cb4e75e",
+    "2025-05-22": "f37324c553c800dac00a32991bd65f803566783ddf524ae93754f2725652108e",
+    "2025-05-23": "6da73ece44cd3f2d0779eba255a8d7d4c5e3e9841b71878e706c875ebd028cfc",
+    "2025-05-26": "4bf8749c859e0fa227ae158a30b0e966a6d0a7a0d5405a42ca49a6726dc64d7c",
+    "2025-05-27": "825264b1c308c03d8e54d6db40fa651d3c17e751e966a514707b4821f7537bbe",
+    "2025-05-28": "046408a55d86b3fba588961b58f5a7077dabf164230921912ed05a91a4c5865d",
+    "2025-05-29": "f09f697e4244398d0da9cf9eaf3efb736e1b0f2b525e24624aa481ed91c752f4",
+    "2025-05-30": "905882bb552125034aff6820759eb21cbacb190bffbdba07d6814e751ad3a5ce"
+  }
+}

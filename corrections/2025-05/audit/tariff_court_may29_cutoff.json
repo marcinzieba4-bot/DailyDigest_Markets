@@ -1,0 +1,50 @@
+{
+  "reviewer": "/root/may_review",
+  "reviewed_at_utc": "2026-10-30T12:39:09.623435+00:00",
+  "purpose": "Reviewer-only historical availability checks. A proof can validate an eligible own-date frozen headline; it cannot add absent facts or later article text.",
+  "historical_vintage_limit": "Current retrieval of dated official releases or publication metadata is evidence of the recorded release schedule/event, not an archived original server response or complete contemporary article-body vintage.",
+  "report_date": "2025-05-29",
+  "cutoff_exclusive_utc": "2025-05-29T00:00:00+00:00",
+  "underlying_event": "CIT decision against IEEPA tariff orders",
+  "pre_cutoff_underlying_availability_verified": true,
+  "known_before_utc": "2025-05-28T23:10:00+00:00",
+  "evidence": [
+    {
+      "url": "https://www.cit.uscourts.gov/sites/cit/files/25-66.pdf",
+      "access": "Direct official 49-page opinion",
+      "scope": "Slip Opinion 25-66 is dated May 28. It proves the ruling and its IEEPA scope, while its date alone does not prove an exact publication clock."
+    },
+    {
+      "url": "https://www.streetinsider.com/Reuters/US%2Bcourt%2Bblocks%2BTrumps%2BLiberation%2BDay%2Btariffs/24863917.html",
+      "access": "Direct Reuters syndication",
+      "publication_local": "2025-05-28T19:10:00-04:00",
+      "publication_utc": "2025-05-28T23:10:00+00:00",
+      "scope": "The page explicitly shows 7:10 PM EDT. It confirms the initial ruling was public. Its current body includes later Asian reactions, which are not established as available before the cutoff."
+    },
+    {
+      "url": "https://www.mlex.com/mlex/trade/articles/2346280/us-international-trade-court-blocks-liberation-day-tariffs",
+      "access": "Search-index metadata with explicit GMT timestamp; direct fetch returned 403.",
+      "publication_utc": "2025-05-28T23:39:00+00:00",
+      "scope": "Independent contemporary legal news confirms the ruling was public before midnight UTC."
+    }
+  ],
+  "admission_scope": "Admit only facts in an eligible own-date headline: the CIT blocked IEEPA tariffs and challenged presidential authority, with legal uncertainty remaining. Exclude the May 29 appeal stay, later Asian or cash-session reactions, subsequent court outcomes and claims that all tariffs were abolished. The completed May 28 US cash session ended before this ruling.",
+  "appeal_stay": {
+    "first_weekday_report": "2025-05-30",
+    "event_local_date": "2025-05-29",
+    "evidence": [
+      {
+        "url": "https://www.cafc.uscourts.gov/opinions-orders/25-1812.ORDER.5-29-2025_2522636.pdf",
+        "access": "Direct official order",
+        "scope": "The May 29 order grants a temporary administrative stay while the motion is considered. It does not decide the merits."
+      },
+      {
+        "url": "https://www.cbsnews.com/news/federal-appeals-court-temporarily-reinstates-trump-tariffs/",
+        "access": "Dated search metadata",
+        "known_before_utc": "2025-05-29T21:26:00+00:00",
+        "scope": "The May 29 update at 5:26 PM EDT confirms the stay before the May 30 cutoff. No exact court filing clock is claimed."
+      }
+    ],
+    "exclude": "Exclude the administrative stay from the May 29 report."
+  }
+}

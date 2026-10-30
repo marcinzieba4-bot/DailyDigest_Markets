@@ -1,0 +1,18 @@
+{
+ "ticker": "OPL.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/OPL.WA?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "467cf40a9b4d684291ae3260fcf8a992916ff835e27241982fee7ff6c2af9071",
+   "fetched_at_utc": "2026-10-30T12:35:06.017492+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/OPL.WA?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "e3b7964438fad3d47eb84c20c82d3bb00395c05fc70028127aec7b4ae99deb76",
+   "fetched_at_utc": "2026-10-30T12:35:06.514514+00:00"
+  }
+ ]
+}

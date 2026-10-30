@@ -1,0 +1,18 @@
+{
+ "ticker": "PLN=X",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PLN%3DX?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "17aea84b8da5c1bac8aefe8f65e8ae91f3d1e5541444fce0b6063e0864878ffe",
+   "fetched_at_utc": "2026-10-30T12:35:03.959423+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PLN%3DX?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "2cdaa53a17b9f85f076f2e4a33d9d7737f57e6399f6a2d4a288d312c6905048d",
+   "fetched_at_utc": "2026-10-30T12:35:04.523545+00:00"
+  }
+ ]
+}

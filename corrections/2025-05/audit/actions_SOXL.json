@@ -1,0 +1,18 @@
+{
+ "ticker": "SOXL",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SOXL?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "d8ab30ba4bdca72a2f0c9ec0facc9cbe8a9f42cd6f20bc950f9fcb83c3e3c3d8",
+   "fetched_at_utc": "2026-10-30T12:35:12.515005+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SOXL?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "eec6c85a6f42f538d2d299edac65a902c74af5a60c1ffde4828abe39a4027a46",
+   "fetched_at_utc": "2026-10-30T12:35:12.758163+00:00"
+  }
+ ]
+}

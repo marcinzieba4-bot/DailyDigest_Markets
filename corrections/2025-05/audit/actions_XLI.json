@@ -1,0 +1,18 @@
+{
+ "ticker": "XLI",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLI?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "b10d73d66219bbc2b2aae6faacb52c3e6b9ce6d469efb000d1b4810c63e1384d",
+   "fetched_at_utc": "2026-10-30T12:35:10.511119+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLI?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "00f3699438d723ff1b504ed5df1ab4126b33b2bd0fb4557be88f354c3379a787",
+   "fetched_at_utc": "2026-10-30T12:35:10.847868+00:00"
+  }
+ ]
+}

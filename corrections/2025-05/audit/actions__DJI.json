@@ -1,0 +1,18 @@
+{
+ "ticker": "^DJI",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "c807225c9a8616583d8f3813f5a98b7f1df69f0e1d563567f66b4cc71a39bdea",
+   "fetched_at_utc": "2026-10-30T12:34:59.881063+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EDJI?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "c92fdda1e34b35d7e373a97eb61b0292338031af384898f14f224c502e909842",
+   "fetched_at_utc": "2026-10-30T12:35:00.761447+00:00"
+  }
+ ]
+}

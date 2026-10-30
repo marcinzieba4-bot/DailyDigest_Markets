@@ -1,0 +1,18 @@
+{
+ "ticker": "MRK",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MRK?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "7652b5c72cf584fdd0169207cf5cf0ecc6ea8ec4f5e1017f383775e88b529870",
+   "fetched_at_utc": "2026-10-30T12:35:25.815820+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MRK?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "0ff8926272ce85e94386d59646e8cede85ee0d5578d738451331feb8facf1eae",
+   "fetched_at_utc": "2026-10-30T12:35:26.526446+00:00"
+  }
+ ]
+}

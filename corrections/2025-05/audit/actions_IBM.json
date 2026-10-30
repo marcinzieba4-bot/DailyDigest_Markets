@@ -1,0 +1,18 @@
+{
+ "ticker": "IBM",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/IBM?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "ea09aa9b2f66f6e2f36da2c5f7bb7db11a51a65adbaacb7667376a4aebb9089b",
+   "fetched_at_utc": "2026-10-30T12:35:16.179779+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/IBM?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "16edf3e78a99cd96a6f8f0d2167732d5a44662c0196e2428fb301ff90d1992a8",
+   "fetched_at_utc": "2026-10-30T12:35:16.632869+00:00"
+  }
+ ]
+}

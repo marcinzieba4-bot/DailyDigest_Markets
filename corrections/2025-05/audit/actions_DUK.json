@@ -1,0 +1,18 @@
+{
+ "ticker": "DUK",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DUK?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "cbf5029e71472869fef8b1841e426bc99150a6f36ce6ee086bd92ba30da206b5",
+   "fetched_at_utc": "2026-10-30T12:35:25.224145+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DUK?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "4968dbdd19a2c6f9a7dee402cef51e850ce0f1a97b87d769a1df7baef6b14322",
+   "fetched_at_utc": "2026-10-30T12:35:25.867242+00:00"
+  }
+ ]
+}

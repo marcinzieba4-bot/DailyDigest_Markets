@@ -1,0 +1,18 @@
+{
+ "ticker": "PKN.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PKN.WA?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "503e8b0814bf13987fe41e6ee5f51914fdf465171b24c253dd8c9e080ab73319",
+   "fetched_at_utc": "2026-10-30T12:35:04.717637+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PKN.WA?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "6450a99e399d5b5d285489e6275466b8482a9a56d9a4facbd38a7e4ba9e29dd6",
+   "fetched_at_utc": "2026-10-30T12:35:05.077253+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "USO",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/USO?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "98c7a2e01346e26822eb8a8a30b075b0627cf7f8290ce6ea4d7963d138e0c571",
+   "fetched_at_utc": "2026-10-30T12:35:11.866537+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/USO?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "ebc3622e9ebac32a1a063b142e68501fbfc089437f06c04836470e8f83b512f5",
+   "fetched_at_utc": "2026-10-30T12:35:12.160531+00:00"
+  }
+ ]
+}

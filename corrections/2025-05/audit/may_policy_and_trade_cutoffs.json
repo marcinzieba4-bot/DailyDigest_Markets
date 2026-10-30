@@ -1,0 +1,121 @@
+{
+  "reviewer": "/root/may_review",
+  "reviewed_at_utc": "2026-10-30T12:39:09.623435+00:00",
+  "purpose": "Reviewer-only historical availability checks. A proof can validate an eligible own-date frozen headline; it cannot add absent facts or later article text.",
+  "historical_vintage_limit": "Current retrieval of dated official releases or publication metadata is evidence of the recorded release schedule/event, not an archived original server response or complete contemporary article-body vintage.",
+  "events": [
+    {
+      "event": "BOJ May 1 monetary policy statement and Bank view",
+      "release_local": "2025-05-01T12:02:00+09:00",
+      "release_utc": "2025-05-01T03:02:00+00:00",
+      "first_weekday_report": "2025-05-02",
+      "evidence": [
+        {
+          "url": "https://www.boj.or.jp/en/mopo/mpmdeci/state_2025/k250501a.htm",
+          "access": "direct official HTML",
+          "scope": "The official table records the statement and Bank view at 12:02 JST on May 1; the full Outlook text was released separately on May 2 at 14:00 JST."
+        }
+      ],
+      "exclude": "Exclude actual May 1 decision and projections from the May 1 report. The full report text also falls after the May 2 report cutoff."
+    },
+    {
+      "event": "FOMC May 7 decision",
+      "release_local": "2025-05-07T14:00:00-04:00",
+      "release_utc": "2025-05-07T18:00:00+00:00",
+      "first_weekday_report": "2025-05-08",
+      "evidence": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250507a.htm",
+          "access": "direct official release",
+          "scope": "The official May 7 release states 14:00 EDT."
+        }
+      ],
+      "exclude": "Exclude the actual decision or press-conference outcome from May 7."
+    },
+    {
+      "event": "NBP May 7 decision",
+      "known_before_utc": "2025-05-07T17:45:53+00:00",
+      "first_weekday_report": "2025-05-08",
+      "evidence": [
+        {
+          "url": "https://nbp.pl/wp-content/uploads/2025/05/Komunikat-RPP-maj-2025-ANG.pdf",
+          "access": "Official PDF search-index metadata; direct fetch returned 403.",
+          "scope": "The official decision is dated May 7. No exact original publication clock is claimed."
+        },
+        {
+          "url": "https://www.ft.com/content/f68a575d-abb1-44ec-8463-9f5672c793ce",
+          "access": "Dated FT report search metadata",
+          "publication_utc": "2025-05-07T17:45:53+00:00",
+          "scope": "A contemporary report confirms the decision was public before the May 8 cutoff."
+        }
+      ],
+      "exclude": "Exclude the actual cut from May 7. Distinguish its May 7 announcement from its May 8 effective date."
+    },
+    {
+      "event": "US–UK Economic Prosperity Deal general terms",
+      "event_local_date": "2025-05-08",
+      "first_weekday_report": "2025-05-09",
+      "evidence": [
+        {
+          "url": "https://www.gov.uk/government/speeches/pm-remarks-on-the-uks-landmark-economic-deal-with-the-us-thursday-8-may",
+          "access": "Direct official dated speech",
+          "scope": "The May 8 speech announces the general basis of an agreement; implementation remains pending."
+        }
+      ],
+      "exclude": "Exclude the completed agreement from the May 8 report and exclude later June implementation details from all May reports."
+    },
+    {
+      "event": "Geneva US–China progress announcement",
+      "event_utc_date": "2025-05-11",
+      "known_before_utc": "2025-05-11T16:15:21+00:00",
+      "first_weekday_report": "2025-05-12",
+      "evidence": [
+        {
+          "url": "https://www.whitehouse.gov/releases/2025/05/u-s-announces-china-trade-deal-in-geneva/",
+          "access": "Direct official May 11 statement",
+          "scope": "Officials announce progress and agreement, with details promised the next day; no numerical tariff cuts are published here."
+        },
+        {
+          "url": "https://www.reuters.com/world/us-bessent-hails-substantial-progress-trade-talks-with-china-2025-05-11/",
+          "access": "Reuters search metadata",
+          "publication_utc": "2025-05-11T16:15:21+00:00",
+          "scope": "Public progress remarks before the May 12 cutoff."
+        }
+      ],
+      "exclude": "Exclude the 90-day terms, 30%/10% tariff rates and implementation claims from the May 12 report."
+    },
+    {
+      "event": "Geneva joint tariff statement",
+      "official_publication_local": "2025-05-12T15:18:00+08:00",
+      "official_publication_utc": "2025-05-12T07:18:00+00:00",
+      "first_weekday_report": "2025-05-13",
+      "evidence": [
+        {
+          "url": "https://english.www.gov.cn/news/202505/12/content_WS6821a0bbc6d0868f4e8f2792.html",
+          "access": "Direct State Council/Xinhua official reproduction",
+          "scope": "The release is dated May 12 at 15:18 China time. Formal terms specify actions by May 14."
+        },
+        {
+          "url": "https://www.whitehouse.gov/briefings-statements/2025/05/joint-statement-on-u-s-china-economic-and-trade-meeting-in-geneva/",
+          "access": "Direct official May 12 release",
+          "scope": "The US page contains the formal joint terms and date, but no exact publication clock."
+        }
+      ],
+      "exclude": "Exclude actual tariff terms from May 12. Do not attribute an earlier completed cash session to the later Monday announcement."
+    },
+    {
+      "event": "US April PCE release",
+      "release_local": "2025-05-30T08:30:00-04:00",
+      "release_utc": "2025-05-30T12:30:00+00:00",
+      "first_weekday_report": "2025-06-02",
+      "evidence": [
+        {
+          "url": "https://www.bea.gov/news/2025/personal-income-and-outlays-april-2025",
+          "access": "Direct official dated release",
+          "scope": "The embargo ends May 30 at 08:30 EDT."
+        }
+      ],
+      "exclude": "Exclude actual April PCE, spending and income results from May 30, regardless of misdated RSS. An eligible preview may remain."
+    }
+  ]
+}

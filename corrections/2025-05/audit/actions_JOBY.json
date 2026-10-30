@@ -1,0 +1,18 @@
+{
+ "ticker": "JOBY",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/JOBY?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "dbd7f73a1572c90028ae089625308afffa5c88e9f5f246f8babe0ae3a54e52ca",
+   "fetched_at_utc": "2026-10-30T12:35:18.571553+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/JOBY?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "c4b35000e61877bc25a3c47c017a7912f89dacdf2d9a069db0e64873c880e8d6",
+   "fetched_at_utc": "2026-10-30T12:35:18.880572+00:00"
+  }
+ ]
+}

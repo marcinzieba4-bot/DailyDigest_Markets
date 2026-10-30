@@ -34,6 +34,7 @@ ALIASES = {
     "microstrategy": "MSTR", "strategy": "MSTR", "nike": "NKE", "costco": "COST",
     "quantumscape": "QS",
     "pop mart": "9992.HK", "9992.hk": "9992.HK",
+    "brk.b": "BRK-B", "brk-b": "BRK-B",
     "micron": "MU", "reddit": "RDDT", "nasdaq": "QQQ", "mega-cap tech": "QQQ",
 }
 FAMILIES = {

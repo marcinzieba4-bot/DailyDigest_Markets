@@ -1,0 +1,18 @@
+{
+ "ticker": "SBUX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SBUX?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "25311490348f9ba5dcabad628ee5c12bcadd229b5554c2340e51c61bed793d30",
+   "fetched_at_utc": "2026-10-30T12:35:28.559539+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SBUX?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "f987b5457bc3ba13bdfa0b0a871c7efe9dc570f8e5b806dce52e2c85a8a4c9cc",
+   "fetched_at_utc": "2026-10-30T12:35:29.164216+00:00"
+  }
+ ]
+}

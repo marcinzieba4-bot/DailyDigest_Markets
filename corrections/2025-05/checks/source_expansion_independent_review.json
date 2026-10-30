@@ -1,0 +1,295 @@
+{
+  "passed": true,
+  "reviewer": "/root/may_expansion_review",
+  "reviewed_at_utc": "2026-10-30T13:41:52.005924+00:00",
+  "scope": "Independent code and actual-data checks for the versioned append-only May news coverage repair; not a complete semantic or publisher-body-vintage review.",
+  "report_count": 22,
+  "final_feed_sha256": {
+    "2025-05-01": "5d1a24eb1bf78b0aa92197ba3eb64ae0fe93ac98db698ce7bef2879d4b60afa9",
+    "2025-05-02": "3917a6a69de09a592156d7d7fa3e1385d7d2f6d8d9c137e2b1a154dc0b8f0897",
+    "2025-05-05": "39cdecb4732aa14504b99f69a4fb3cd7a1c585f5ad302cb8d7c68850cd88194f",
+    "2025-05-06": "7b7bebf377547931e25b9a10584a54b00b1973d8a01c5832ea17ba174a88d42f",
+    "2025-05-07": "43f2ea2e9e5c99fbf73d33c686b18b8fa53b033d22e5a0c5a6974389935a0178",
+    "2025-05-08": "fbc6ad999c81106af253e3215e673df45703e27e2e87b78c29ce0cb156d7134f",
+    "2025-05-09": "9e34392ab453df66517cf1fa4dd3b6bd74df07758b8e06aff45bf8ec3f2294d2",
+    "2025-05-12": "03b2a64310fc112d05f5962e94dee0c91949872235ad0f116c50baeaea66b1ad",
+    "2025-05-13": "8ded08f5cc1386a9bbb6a8b74e96992fb1042b9b6be15b95ac643387913a7770",
+    "2025-05-14": "6d4cbc853a6b419345c8a1f812ba6b7fc6aeb8096fcba330c91874cbb5a36c11",
+    "2025-05-15": "218b1949a85fa92c224d7f5ece7b8813862d697562eb48e8c01997dc10f0fbda",
+    "2025-05-16": "c20793037abfcd2335cd8cf839935a560107bbc70d7054a5158b4211a783bb77",
+    "2025-05-19": "9e10d162aacb26f56aeb0def30017bad37e119d5b1e29a0ec160487fe7325363",
+    "2025-05-20": "0542af454c0440d96c6de9dabe5ae31670a28af3a3a747192b9f8d228fefbe6e",
+    "2025-05-21": "3ccf7062d32985bbd0336a712b19b73b5998429e4790fb6834d5f7b07a6b574e",
+    "2025-05-22": "47a0559e70b8c2428af8f45fb6a6ca57ce97bfb2f5c2d7d898ebe00ba77d5c8e",
+    "2025-05-23": "63052b05646bf97ac161a4aaf6db3d390fbcf833ce4016e4e3835103b3501269",
+    "2025-05-26": "fc01eb622cdaf07a3dff1f8bb2503ccedbe567a607f6d6cd3aa7210e072ea8ad",
+    "2025-05-27": "9f2ce1e0d97662d16415457d03b407a6e780b23e6adf353761e03ed11a6b50b5",
+    "2025-05-28": "fddf92d1be48764cfd97ff58a407b0e6776a5f7811be140d1a74593ba19da6d8",
+    "2025-05-29": "c17c693c4b0a467324cb0b43a8d27c5cfc92382b22c239affcfafe4f4391ceca",
+    "2025-05-30": "1423b918e9d5169269ff694ae0bab095b3dd762b4fe08c1af75ab7ee014f2daf"
+  },
+  "initial_feed_sha256": {
+    "2025-05-01": "d1a3f418ba9a819b3fe74c9ad2c46bb026de20160268b7a0d87092b52487de65",
+    "2025-05-02": "494129ff40163b7fe8a451d206cfcfd95d98450c6a895a4adcc72c3b3d35a667",
+    "2025-05-05": "7b57d2fb5d5df55d10e34f785bbfb94ed58dfba5782b002d49f38c6be44f8671",
+    "2025-05-06": "8786cbf5af6e58d30e00bec2d84a40ca91b56c4d8446cd15620349955b400da4",
+    "2025-05-07": "6ce46340e598707b17575d41173f3b73d6649712ed7f24240f1f089815743bfc",
+    "2025-05-08": "ff5b8c60bc9439977da1aff87a0624be0d20b6f8091116aa72e662a36e7ba26f",
+    "2025-05-09": "b2d811d11ddec58d7b922e25e3e31599e5a6d855ebe4e9b9535c3598f7c960a6",
+    "2025-05-12": "9f75a674572448f55dfc3eaf8a77742858019acaa5180e972e9e5933e81e93c6",
+    "2025-05-13": "1af7a45e52f15b373b2e7adf0c17ab746db83826e92eecdd520f4312bf4e9114",
+    "2025-05-14": "0b191befb64edf62134774c5c943af24c3a5aa8f78811985471bbf6bdec7df49",
+    "2025-05-15": "f72629407a95b20619eb4fd76bb36f82a4f7eaeed1379c97c4e486f5e2cc1e4b",
+    "2025-05-16": "a0ce76be3440ba96e3759850917c934cf56d0645cec1a05366d132a96213b3e4",
+    "2025-05-19": "ce56067e52fcbd52150e9023203656b7345a51ef95ac7be29d1a6dc3242bb6ed",
+    "2025-05-20": "6984b26575fed06aa6b23dfb05dbab877fbfc9103e35c7b9cb7b381190bff4d0",
+    "2025-05-21": "27d1f7524fce5bde1e87cb22ae6313f3f938be74df5db8c154fba6cab315d3ce",
+    "2025-05-22": "3aa4c4edeba200ad981d2691cba761572208fce1ada86d207e143c6923fac374",
+    "2025-05-23": "c768f1811d860c5c38e8d3f88dcddb18b78d110103483172e8b8f7d7318262c0",
+    "2025-05-26": "a8c7ad39b211124fd031e0e3ab090780a098a4255d2fb32f8edbe25e7ecf2777",
+    "2025-05-27": "72c0394c152ce50f93c998ab5a413e2efe90c74274d0f5b5fc2a66e8624d593c",
+    "2025-05-28": "007c516a4df766a229c5c7e530e1ace67f86b13de43994aebc5625cbfb89d034",
+    "2025-05-29": "6c531e67a29dbab57404521bdd93ae9aeece814c885849eeedda95df255ff208",
+    "2025-05-30": "90ab21d334c0fd8cbb6f1450f0bce0b5677a27283093de306862f9fd435e1fed"
+  },
+  "tool_sha256": {
+    "tools/fetch_news.py": "ed2a1e1217a511779412b8613bc5a0432dc2eda70d8edfead3817bca42a1a200",
+    "tools/ready_feeds.py": "b8c5f57ae1cd1ee0ab4a6d7cd5f9debd962df39555e5a9faf387cee51156960a",
+    "tools/expand_capped_news.py": "5825eee29eadd97cfdb2f7e97c710cd464fae115eeaa29819fe589622c24a2aa"
+  },
+  "expansion_receipt_sha256": "815c9fa5827f8dbef728f943258a9e472b4559b60727a746f80e3bcf79ca2723",
+  "original_items_unchanged": true,
+  "original_snapshot_files_sha256_verified": 82,
+  "all_original_raw_keys_absent_from_additions": true,
+  "original_exclusions_not_resurrected": true,
+  "new_unique_ids_above_initial_raw_max": true,
+  "daily_and_prefix_seed_ids_preserved": true,
+  "exclusive_cutoff_and_category_age_checks_passed": true,
+  "new_record_query_upper_not_after_own_cutoff": true,
+  "all_15_topics_each_date": true,
+  "query_contexts_checked": 8352,
+  "distinct_cached_request_responses_checked": 8172,
+  "cache_inventory_digest_sha256": "81868093ed16a357db28c3a3ca15f64eba449db4abeae10d6fef5737ad121eea",
+  "manual_catalog_entries": 440,
+  "manual_weekly_parent_contexts": 2924,
+  "manual_expected_prefix_contexts": 7040,
+  "missing_prefix_contexts": 0,
+  "capped_multiday_contexts_have_daily_children": true,
+  "candidate_occurrences_checked": 79027,
+  "provenance_edges_checked": 111822,
+  "initial_records": 165575,
+  "added_records": 79000,
+  "final_records": 244575,
+  "new_excluded_occurrences": 27,
+  "unresolved_priority_occurrences": 0,
+  "new_priority_accepted_occurrences_checked": 951,
+  "resolved_but_unproved_date_excluded_occurrences": 12,
+  "resolved_but_unproved_date_excluded_urls": 4,
+  "remaining_distinct_daily_caps": 109,
+  "query_window_and_timestamp_boundary_fixtures_passed": 8,
+  "may26_gap_witnesses": {
+    "n9493": {
+      "title": "Trump agrees to extend EU trade talks after 50% tariff threat - BBC",
+      "published_at": "2025-05-25T07:00:00+00:00",
+      "source": "BBC"
+    },
+    "n9494": {
+      "title": "Trump delays 50% tariffs on EU to July 9 - CNBC",
+      "published_at": "2025-05-25T07:00:00+00:00",
+      "source": "CNBC"
+    }
+  },
+  "may7_known_quarantined_ids_uncited": true,
+  "date_rows": [
+    {
+      "date": "2025-05-01",
+      "initial_records": 7046,
+      "added_records": 803,
+      "final_records": 7849,
+      "candidate_records": 805,
+      "excluded_records": 2
+    },
+    {
+      "date": "2025-05-02",
+      "initial_records": 6956,
+      "added_records": 1048,
+      "final_records": 8004,
+      "candidate_records": 1049,
+      "excluded_records": 1
+    },
+    {
+      "date": "2025-05-05",
+      "initial_records": 6818,
+      "added_records": 1918,
+      "final_records": 8736,
+      "candidate_records": 1920,
+      "excluded_records": 2
+    },
+    {
+      "date": "2025-05-06",
+      "initial_records": 6719,
+      "added_records": 2741,
+      "final_records": 9460,
+      "candidate_records": 2743,
+      "excluded_records": 2
+    },
+    {
+      "date": "2025-05-07",
+      "initial_records": 6574,
+      "added_records": 3278,
+      "final_records": 9852,
+      "candidate_records": 3281,
+      "excluded_records": 3
+    },
+    {
+      "date": "2025-05-08",
+      "initial_records": 6417,
+      "added_records": 3300,
+      "final_records": 9717,
+      "candidate_records": 3301,
+      "excluded_records": 1
+    },
+    {
+      "date": "2025-05-09",
+      "initial_records": 6658,
+      "added_records": 3357,
+      "final_records": 10015,
+      "candidate_records": 3358,
+      "excluded_records": 1
+    },
+    {
+      "date": "2025-05-12",
+      "initial_records": 6951,
+      "added_records": 3488,
+      "final_records": 10439,
+      "candidate_records": 3488,
+      "excluded_records": 0
+    },
+    {
+      "date": "2025-05-13",
+      "initial_records": 7224,
+      "added_records": 3868,
+      "final_records": 11092,
+      "candidate_records": 3869,
+      "excluded_records": 1
+    },
+    {
+      "date": "2025-05-14",
+      "initial_records": 7535,
+      "added_records": 4283,
+      "final_records": 11818,
+      "candidate_records": 4284,
+      "excluded_records": 1
+    },
+    {
+      "date": "2025-05-15",
+      "initial_records": 7755,
+      "added_records": 4406,
+      "final_records": 12161,
+      "candidate_records": 4406,
+      "excluded_records": 0
+    },
+    {
+      "date": "2025-05-16",
+      "initial_records": 7872,
+      "added_records": 4035,
+      "final_records": 11907,
+      "candidate_records": 4038,
+      "excluded_records": 3
+    },
+    {
+      "date": "2025-05-19",
+      "initial_records": 8133,
+      "added_records": 4075,
+      "final_records": 12208,
+      "candidate_records": 4076,
+      "excluded_records": 1
+    },
+    {
+      "date": "2025-05-20",
+      "initial_records": 8241,
+      "added_records": 4177,
+      "final_records": 12418,
+      "candidate_records": 4179,
+      "excluded_records": 2
+    },
+    {
+      "date": "2025-05-21",
+      "initial_records": 8218,
+      "added_records": 4471,
+      "final_records": 12689,
+      "candidate_records": 4473,
+      "excluded_records": 2
+    },
+    {
+      "date": "2025-05-22",
+      "initial_records": 8347,
+      "added_records": 4507,
+      "final_records": 12854,
+      "candidate_records": 4508,
+      "excluded_records": 1
+    },
+    {
+      "date": "2025-05-23",
+      "initial_records": 8393,
+      "added_records": 4255,
+      "final_records": 12648,
+      "candidate_records": 4257,
+      "excluded_records": 2
+    },
+    {
+      "date": "2025-05-26",
+      "initial_records": 8254,
+      "added_records": 4162,
+      "final_records": 12416,
+      "candidate_records": 4163,
+      "excluded_records": 1
+    },
+    {
+      "date": "2025-05-27",
+      "initial_records": 7885,
+      "added_records": 4341,
+      "final_records": 12226,
+      "candidate_records": 4342,
+      "excluded_records": 1
+    },
+    {
+      "date": "2025-05-28",
+      "initial_records": 7720,
+      "added_records": 4443,
+      "final_records": 12163,
+      "candidate_records": 4443,
+      "excluded_records": 0
+    },
+    {
+      "date": "2025-05-29",
+      "initial_records": 7815,
+      "added_records": 4448,
+      "final_records": 12263,
+      "candidate_records": 4448,
+      "excluded_records": 0
+    },
+    {
+      "date": "2025-05-30",
+      "initial_records": 8044,
+      "added_records": 3596,
+      "final_records": 11640,
+      "candidate_records": 3596,
+      "excluded_records": 0
+    }
+  ],
+  "limits": [
+    "These checks establish the recorded query-window, indexed-timestamp, identifier and provenance boundaries; they do not independently establish original publisher article bodies or every event-release time.",
+    "Release guards are targeted heuristics. Exact claims in reports still require the separate all-cited chronology and selected-claim editorial checks.",
+    "Daily query ceilings and Google indexing/ranking prevent exhaustive coverage claims; 109 distinct daily-capped requests remain disclosed.",
+    "The initial v1 build_feed/main path remains for archival replay. The final expansion path uses as-of-cutoff query windows.",
+    "All22 versions are prepared and checked before recoverable per-file atomic swaps; this is not a filesystem multi-file transaction."
+  ],
+  "snapshot_manifest_files_verified": 130,
+  "snapshot_manifest_sha256": "dbd9acbee3ee3d41475b6dabf42185f706c32692c0eb41a823719c7ed0cce8f3",
+  "receipt_stability_files_verified": 24,
+  "receipt_stability_sha256": "1a948007be4d73feb4a65eedbdf0bae5e815feaad5f5d9182bc30d39d3513c50",
+  "news_ready_audit_sha256": "a43d28fd5acc07b0b5a270ee757bc223001d443564011de819500c55e6fc776d",
+  "news_expansion_tool_checks_sha256": "67ab080de0c5c14a5f3be6ab6c7894ed11a77560739d1b1fcea84dee560825dd",
+  "all_expected_topic_names_each_date": true
+}

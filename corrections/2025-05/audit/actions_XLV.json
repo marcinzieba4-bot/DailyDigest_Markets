@@ -1,0 +1,18 @@
+{
+ "ticker": "XLV",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLV?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "7efaf97de110dbdfa04bb966a3164d943686f5cdc6cfb5437aad56bdc91d7395",
+   "fetched_at_utc": "2026-10-30T12:35:10.714290+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLV?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "0a117999597f5216b0083b16317866aa95aca20841b68e705201a545369f1f3b",
+   "fetched_at_utc": "2026-10-30T12:35:10.985105+00:00"
+  }
+ ]
+}

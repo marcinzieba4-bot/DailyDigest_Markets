@@ -1,0 +1,18 @@
+{
+ "ticker": "7203.T",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/7203.T?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "b9635ffda54fc95072a5be2404d322b4e7f037ab27658b37864a521eb0a5a98e",
+   "fetched_at_utc": "2026-10-30T12:35:08.048470+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/7203.T?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "22e5df3cd61d4ce2397da0e9633dbbf9befdedf24cbeaef2b63619f91222575b",
+   "fetched_at_utc": "2026-10-30T12:35:08.486332+00:00"
+  }
+ ]
+}

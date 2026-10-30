@@ -1,0 +1,18 @@
+{
+ "ticker": "^TNX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "841da340430dd70b275e95b99394d0e03757f877dbc2e963437678060a78317f",
+   "fetched_at_utc": "2026-10-30T12:34:59.653791+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "e7943a6a205f73f2caabb64fbd2b0dd2a0a201cfaa88e10f5b924d22b60a4a6f",
+   "fetched_at_utc": "2026-10-30T12:35:00.571114+00:00"
+  }
+ ]
+}

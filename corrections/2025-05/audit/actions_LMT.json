@@ -1,0 +1,18 @@
+{
+ "ticker": "LMT",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LMT?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "74f9e82c4d87be1389d3ed45022f496af585bf8a0182bcfe7e1c11c148e82666",
+   "fetched_at_utc": "2026-10-30T12:35:30.832700+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LMT?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "b800c174e16a0aa3f5dcd8792da29521c6f5a947a31457fe1aee6e1f48fdfe05",
+   "fetched_at_utc": "2026-10-30T12:35:31.422189+00:00"
+  }
+ ]
+}

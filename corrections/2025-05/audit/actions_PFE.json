@@ -1,0 +1,18 @@
+{
+ "ticker": "PFE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PFE?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "77a334ab17ca18c3b3c806fbf71974013d808a2ac039302e18ec4ce5d9ffc1a9",
+   "fetched_at_utc": "2026-10-30T12:35:25.655377+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PFE?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "86c43a2f7bde3d795357f74d01abdeeba158ce74860695fdaa2333e0ba6e5870",
+   "fetched_at_utc": "2026-10-30T12:35:26.258104+00:00"
+  }
+ ]
+}

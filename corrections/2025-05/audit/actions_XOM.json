@@ -1,0 +1,18 @@
+{
+ "ticker": "XOM",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XOM?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "d33ac825b38e949612e24984ec6cdd8ed8e5f8cdbed8ba095237af285466ab3e",
+   "fetched_at_utc": "2026-10-30T12:35:22.378366+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XOM?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "efb82354f3e2a65eb821660b1e53d8db1bb51bc049f6b47073e2b99df68869ab",
+   "fetched_at_utc": "2026-10-30T12:35:23.239836+00:00"
+  }
+ ]
+}

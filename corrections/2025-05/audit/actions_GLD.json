@@ -1,0 +1,18 @@
+{
+ "ticker": "GLD",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "b922a534a29eb8fa4e2b0686510eba07f92557d7c86c5b1ea2dc519199df4515",
+   "fetched_at_utc": "2026-10-30T12:35:11.831517+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "523703566cdb91aaa5575bdd96360121c30082f4180741f64058ea036dd2a0f6",
+   "fetched_at_utc": "2026-10-30T12:35:12.077357+00:00"
+  }
+ ]
+}

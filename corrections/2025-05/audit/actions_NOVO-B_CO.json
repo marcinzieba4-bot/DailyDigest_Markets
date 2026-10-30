@@ -1,0 +1,18 @@
+{
+ "ticker": "NOVO-B.CO",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NOVO-B.CO?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "12da8092812a9e773df38514ae79c34e24bd19a32ca4331d05ae57626ca7d428",
+   "fetched_at_utc": "2026-10-30T12:35:07.485837+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NOVO-B.CO?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "251d75c0586bb1cf2451aa936bfbfb6bc4ba5650fe2fcb60ab51bdfb5427760a",
+   "fetched_at_utc": "2026-10-30T12:35:07.768807+00:00"
+  }
+ ]
+}

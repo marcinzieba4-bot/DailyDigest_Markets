@@ -1,0 +1,18 @@
+{
+ "ticker": "SMR",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SMR?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "5f42592a75247640b6d5d88557ba43603905b739fe3236221c3e089f02d6d30f",
+   "fetched_at_utc": "2026-10-30T12:35:17.654177+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SMR?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "259b37669fd8374487b43014be460a43fa742bd0ec3f2d353d78d1037f28e59e",
+   "fetched_at_utc": "2026-10-30T12:35:17.924265+00:00"
+  }
+ ]
+}

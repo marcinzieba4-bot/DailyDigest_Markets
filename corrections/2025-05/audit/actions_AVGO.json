@@ -1,0 +1,18 @@
+{
+ "ticker": "AVGO",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AVGO?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "04b6e2db633b44624d5c0bcdc782ed1708b486685bc36c35d2bbe9406423bf54",
+   "fetched_at_utc": "2026-10-30T12:35:12.817308+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AVGO?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "9a9bd8561f522838910289148762df8e3a122e9895c63398878d5b91986c8ec9",
+   "fetched_at_utc": "2026-10-30T12:35:13.143903+00:00"
+  }
+ ]
+}

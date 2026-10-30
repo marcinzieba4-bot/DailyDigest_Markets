@@ -1,0 +1,18 @@
+{
+ "ticker": "SPOT",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPOT?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "3c9a6140b5ac9dfaf2a18b15ab16ad40c183e9a085e96ded7da443a7b7c366cd",
+   "fetched_at_utc": "2026-10-30T12:35:16.534493+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPOT?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "e03a2ece9cd9ee6e1cab638cef06fdc1e5405e29b91c68445a899fa2c55aab50",
+   "fetched_at_utc": "2026-10-30T12:35:16.794166+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "VRT",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VRT?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "6d6622e8ebfee3cc9fa8c385f8d92b7c75b1bde02ac3b7e9b229c752d3001ce4",
+   "fetched_at_utc": "2026-10-30T12:35:17.400482+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VRT?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "419f43425ed466e69db2daa3f5b65fbe83c7e8e5e5398b4ed4dafe079049c920",
+   "fetched_at_utc": "2026-10-30T12:35:17.730871+00:00"
+  }
+ ]
+}

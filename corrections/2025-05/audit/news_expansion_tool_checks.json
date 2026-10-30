@@ -1,0 +1,51 @@
+{
+  "checked_at_utc": "2026-10-30T13:39:46.012122+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "name": "initial_snapshot_hashes",
+      "files": 82,
+      "passed": true
+    },
+    {
+      "name": "legacy_raw_replay_exact",
+      "dates": [
+        "2025-05-01",
+        "2025-05-26",
+        "2025-05-30"
+      ],
+      "passed": true
+    },
+    {
+      "name": "all_catalog_cutoff_prefix_intervals",
+      "pairs": 7040,
+      "passed": true
+    },
+    {
+      "name": "reject_future_query_days_and_accept_own_cutoff",
+      "passed": true
+    },
+    {
+      "name": "high_risk_actual_boundaries",
+      "cases": 4,
+      "passed": true
+    },
+    {
+      "name": "new_candidate_key_id_age_and_query_provenance_invariants",
+      "candidate_occurrences": 79027,
+      "passed": true
+    },
+    {
+      "name": "known_May26_gap_recovered_with_stable_ID",
+      "id": "n9494",
+      "passed": true,
+      "limit": "Final cited canonical date/time review is separate."
+    }
+  ],
+  "tool_sha256": {
+    "tools/fetch_news.py": "ed2a1e1217a511779412b8613bc5a0432dc2eda70d8edfead3817bca42a1a200",
+    "tools/ready_feeds.py": "b8c5f57ae1cd1ee0ab4a6d7cd5f9debd962df39555e5a9faf387cee51156960a",
+    "tools/expand_capped_news.py": "5825eee29eadd97cfdb2f7e97c710cd464fae115eeaa29819fe589622c24a2aa"
+  },
+  "check_script_sha256": "ec38db4e5e36a43ae86a93dfc9a57b678d0ce974fb087ae22472088188f25f65"
+}

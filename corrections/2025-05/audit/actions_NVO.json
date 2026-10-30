@@ -1,0 +1,18 @@
+{
+ "ticker": "NVO",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVO?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "93deeefa54fb6b1ebc815a82b44ff800860e4727121594386ca7eb2612068af1",
+   "fetched_at_utc": "2026-10-30T12:35:25.477354+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVO?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "9dfc39245c1326764d73fab1631e22e4d31e2972a274070778e82a2aa8d5d4ce",
+   "fetched_at_utc": "2026-10-30T12:35:26.096397+00:00"
+  }
+ ]
+}

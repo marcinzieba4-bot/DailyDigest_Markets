@@ -1,0 +1,18 @@
+{
+ "ticker": "KRE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KRE?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "0fd99be9f051123b0559f768e9a35c96c7e5fdbe6eb741a44ab54799271ebd04",
+   "fetched_at_utc": "2026-10-30T12:35:12.135434+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KRE?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "7342a69b93f2aeab523ac9b043c8f71ab17f17a56e1d5c1c598cf40a1c7218ad",
+   "fetched_at_utc": "2026-10-30T12:35:12.583404+00:00"
+  }
+ ]
+}

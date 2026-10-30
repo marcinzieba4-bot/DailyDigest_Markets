@@ -1,0 +1,90 @@
+{
+  "checked_at_utc": "2026-10-30T12:36:56.687202+00:00",
+  "scope": "Reviewer-only exchange holiday validation. Actual session stamps always come from the own-date market card. Current web retrieval is not an assertion of an archived original website snapshot.",
+  "sources": [
+    {
+      "market": "mainland China",
+      "source_type": "dated exchange notice",
+      "url": "https://www.sse.com.cn/disclosure/dealinstruc/closed/c/c_20241223_10767110.shtml",
+      "published_date": "2024-12-23",
+      "verified": "Closed May 1–5; trading resumes May 6, 2025."
+    },
+    {
+      "market": "Hong Kong",
+      "source_type": "exchange 2025 index calendar PDF",
+      "url": "https://www.hkex.com.hk/chi/prod/dataprod_cn/Documents/Index%20Feed%20Calendar%202025%20(English%20&%20Chinese).pdf",
+      "verified": "May 1 Labour Day and May 5 Birthday of Buddha appear as Hong Kong holidays."
+    },
+    {
+      "market": "Japan",
+      "source_type": "dated exchange holiday notice and broker cash-equity confirmation",
+      "urls": [
+        "https://www.jpx.co.jp/english/news/2040/20250502-01.html",
+        "https://www.rakuten-sec.co.jp/web/info/info20250425-02.html"
+      ],
+      "verified": "May 5–6 are Japanese holidays. JPX notice applies specifically to derivatives holiday trading; broker cash-equity notice confirms cash market closure May 3–6. Do not describe derivatives as closed."
+    },
+    {
+      "market": "Korea",
+      "source_type": "exchange rules plus dated broker holiday schedule",
+      "urls": [
+        "https://global.krx.co.kr/contents/GLB/06/0602/0602020204/GLB0602020204T1.jsp",
+        "https://www.samsungpop.com/ux/kor/customer/notice/notice/noticeViewContent.do?MenuSeqNo=22347",
+        "https://www.yuantafutures.com.hk/en/Uploads/file/20250428/1745829542468156.pdf"
+      ],
+      "verified": "May 1, May 5 and May 6 closures. Not based only on a generic national holiday list."
+    },
+    {
+      "market": "Poland",
+      "source_type": "exchange board resolution",
+      "url": "https://www.gpw.pl/pub/GPW/uchwaly/2024/701_2024.pdf",
+      "secondary_link_source": "https://www.sii.org.pl/17545/analizy/newsroom/dni-bez-sesji-na-gpw-i-wall-street-w-2025-r.html",
+      "verified": "May 1 closure. May 2 is an ordinary trading day; May 3 falls on Saturday."
+    },
+    {
+      "market": "United States",
+      "source_type": "dated Nasdaq holiday reminder and NYSE issuer calendar",
+      "urls": [
+        "https://www.nasdaqtrader.com/TraderNews.aspx?id=ETA2025-31",
+        "https://ir.theice.com/press/news-details/2024/NYSE-Group-Announces-2025-2026-and-2027-Holiday-and-Early-Closings-Calendar/default.aspx"
+      ],
+      "verified": "May 26 Memorial Day equity closure. Treasury raw data independently lacks a May 26 observation."
+    },
+    {
+      "market": "Taiwan",
+      "source_type": "exchange dated document index",
+      "url": "https://wwwc.twse.com.tw/en/announcement/announcement/list.html",
+      "verified": "Document1140202067 dated April17 says May1 Labor Day closure; document1140202695 datedMay16 says May30 Dragon Boat Festival closure. Raw daily history also has no May1 orMay30 rows."
+    },
+    {
+      "market": "Copenhagen",
+      "source_type": "exchange 2025 holiday schedule",
+      "url": "https://www.nasdaq.com/sv/european-market-activity/trading-hours",
+      "verified": "April17,18,21 Easter closures explain April16→22 gap; May29–30 closures explain last retained Novo Nordisk local sessionMay28. May1 is open in Copenhagen."
+    },
+    {
+      "market": "United Kingdom",
+      "source_type": "dated broker calendar with exchange general business-day page",
+      "urls": [
+        "https://www.londonstockexchange.com/equities-trading/business-days",
+        "https://www.yuantafutures.com.hk/en/Uploads/file/20250428/1745829542468156.pdf"
+      ],
+      "verified": "May5 Early May Bank Holiday and May26 Spring Bank Holiday closures. Dated 2025 broker calendar used because current exchange page no longer presents 2025."
+    }
+  ],
+  "allowed_long_gaps": [
+    {
+      "ticker": "NOVO-B.CO",
+      "from": "2025-04-16",
+      "to": "2025-04-22",
+      "reason": "Copenhagen Easter exchange closures"
+    },
+    {
+      "ticker": "000001.SS",
+      "last_session": "2025-04-30",
+      "report_date": "2025-05-06",
+      "reason": "Mainland Labour Day closure May1–5"
+    }
+  ],
+  "guard": "No later-session value is substituted; no forward fill is fabricated."
+}

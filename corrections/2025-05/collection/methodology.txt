@@ -1,0 +1,78 @@
+May 2025 retrospective briefings — methodology
+
+Scope: 22 Monday–Friday report dates, 2025-05-01 through 2025-05-30.
+Per-report news cutoff: 00:00 UTC on its report date, strictly exclusive.
+Source-query lookbacks: fresh news and previews 7 days, company results 14 days,
+macro releases and policy baselines 35 days. Categories originate in the query
+catalogue; older background is time-qualified and is not presented as a fresh
+event. Drafting and final editing use only the matching own-date feed and market card.
+The initial drafting snapshots are preserved in feeds_initial/. A versioned coverage
+repair adds query prefixes ending at each straddled report cutoff and splits
+capped windows into daily queries. It appends eligible own-date headlines without
+changing original records or citation IDs. The initial fetch_news.py/build_feed
+path preserves v1 acquisition and replay; final exports require the completed
+expand_capped_news.py repair and its independently reviewed feed hashes.
+Final editorial checks and exports bind the expanded frozen feeds in feeds/.
+The expansion audit records original/final hashes, queries, exclusions and limits.
+Actual releases at or after the UTC cutoff are excluded until a later edition.
+
+News: dated Google News historical RSS, 244,575 own-date headline records
+across these 22 feeds (per-date range 7,849–12,854).
+Category totals count the same headline again when eligible on multiple dates:
+{'monthly': 65078, 'news': 157340, 'result': 22157}.
+Acquisition audit: queries: 440; shared query windows: 2924; possibly capped windows: 150; failed windows: 0.
+Versioned coverage repair: As-of-cutoff prefix requests: 7,040; additional unique query URLs: 8,172; total unique query URLs: 11,096; appended eligible records: 79,000; remaining distinct daily-capped requests: 109.
+Search-index result limits mean coverage is broad, not exhaustive. Publication
+timestamps can be approximate. Reports use cited headline facts, not details
+inferred from unread article bodies. Original article vintages are not
+independently archived. Readiness and chronology audit receipts, where present,
+record conservative exclusions and source-date checks; metadata does not prove
+an original article-body vintage. Later outcomes are excluded from writer inputs.
+
+Some publisher URLs use a later local calendar date. Explicit source-ledger timing
+notes identify original publications or underlying releases independently proved
+available before the report cutoff; they do not admit later article details.
+
+Frozen feeds and included audit receipts:
+https://d7g7nkeytae81.cloudfront.net/reports/2025-05/May_2025_Frozen_News_Feeds.zip
+SHA256: 552d978f42590b5c8639d4fcd32aff9e92e33c4bf60b1ee645953a5c2bc508d2
+The report bundle contains cited evidence ledgers, not all raw feed rows.
+
+Markets: Yahoo Finance historical daily charts, completed sessions before each
+report date, exchange-local session dates; crypto uses completed UTC days.
+Instruments per card: 290.
+Returns compare split-adjusted closes over 1, 5 and 20 observations and exclude
+dividends. Displayed price levels restore historical share units by reversing
+later split factors. CMCSA levels are suppressed because its adjustment includes
+a spin-off. Corporate-action metadata is used only for unit conversion; later
+price rows are excluded from writer inputs. Current-vintage prices may include
+later vendor revisions; original contemporaneous vendor snapshots were not found.
+Futures series may be affected by contract rolls.
+Instrument-specific gaps and split/restoration limits are recorded in this month's
+market provenance and validation audits. Local closures use the last completed
+session, without inventing a holiday-session quote. Selected observations derived
+from the final cards:
+Mainland China Labour Day: 2025-05-02 edition uses the 2025-04-30 completed local close.
+Hong Kong Labour Day: 2025-05-02 edition uses the 2025-04-30 completed local close.
+Polish equities Labour Day: 2025-05-02 edition uses the 2025-04-30 completed local close.
+Japan Golden Week: 2025-05-07 edition uses the 2025-05-02 completed local close.
+Korean May holidays: 2025-05-07 edition uses the 2025-05-02 completed local close.
+US equities Memorial Day: 2025-05-27 edition uses the 2025-05-23 completed local close.
+US Treasury: 2025-05-27 edition uses the 2025-05-23 observation.
+Crypto has completed UTC daily candles.
+Returns compare 20 valid observations, rather than calendar days, and exclude
+dividends. Treasury uses actual two- and ten-year par yields; yield changes and
+curve spreads are basis points.
+
+Style: August 2026 nine-section structure, geographic and sector cards,
+1280px desktop width, responsive navigation and linked evidence ledger.
+Each HTML edition has a PDF and machine-readable JSON with its source evidence.
+Prepared retrospectively in October 2026; these are historical reconstructions.
+
+Code provenance:
+base_branch: codex/jun-2025-retrospective-20261030
+base_commit: 47823bbed891b32edacbc12523eff4f72fc48f55
+working_branch: codex/may-2025-retrospective-20261030
+newer_remote_application_branch_found: False
+Each edition uses its own dated historical inputs. Source acquisition, exclusions,
+chronology checks and retrieval limits are recorded in the included audit receipts.

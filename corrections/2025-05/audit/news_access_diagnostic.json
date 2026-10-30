@@ -1,0 +1,27 @@
+{
+  "observed_at_utc": "2026-10-30T12:38:27.485570+00:00",
+  "runtime_observations_current": true,
+  "network_policy_state": "enforced",
+  "proxy_and_tls": "Inherited ordinary proxy and CA trust retained; TLS verification enabled.",
+  "native_RSS_probe": {
+    "status": 200,
+    "bytes": 14148,
+    "rss_parsed": true,
+    "request_domain": "news.google.com"
+  },
+  "native_canonical_metadata": "997 of 1007 distinct priority URLs resolved natively; last10 returned Google /sorry challenge redirects after successful earlier requests.",
+  "access_recovery_required": true,
+  "github_actions_job_used": true,
+  "credentials_or_policy_changed": false,
+  "scope": "Runtime readiness and successful allowed-host requests; no assertion of exhaustive archival article availability.",
+  "updated_at_utc": "2026-10-30T12:45:59.866865+00:00",
+  "observed_root_cause": "Google News metadata anti-abuse challenge on normal batchexecute requests; successful native RSS and997canonical resolutions distinguish source-specific rate challenge from missing credentials or denied hostname.",
+  "safe_response": "Earlier21feedsunchanged; May30rescreenedbeforeauthorhandoff,restoring7precutoffcanonicalstoriesandconservativelyexcluding3same-or-latercanonicaldates.",
+  "recovery_request_urls": "work/priority_metadata_recovery_urls.json",
+  "access_recovery_completed": true,
+  "recovery_method": "Isolatedcontents-readpublic-URL-onlyGitHubActionsjob; exactfourreviewedfiles,input/resolver/workflow/runner/output/payloadhashesandURLsetverifiedbeforeimport.",
+  "recovered_priority_metadata": 10,
+  "remaining_priority_metadata_failures": 0,
+  "recovery_receipt": "audit/metadata_ci_ingestion_batch1.json",
+  "rescreen_receipt": "audit/news_priority_recovery_rescreen.json"
+}

@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-10-30T13:54:28.418521+00:00",
+  "actual_expansion_gate_passes": true,
+  "proof_keys": {
+    "news_expansion_sha256": "815c9fa5827f8dbef728f943258a9e472b4559b60727a746f80e3bcf79ca2723",
+    "news_expansion_independent_review_sha256": "436f06e10fabd378e0eacc906aafe017a750c90d7e582ef65aa94dacb6e888f4"
+  },
+  "in_memory_negative_cases": [
+    {
+      "case": "changed_final_feed",
+      "rejected": true,
+      "reason": "2025-05-01 feeds changed after expansion review"
+    },
+    {
+      "case": "changed_acquisition_tool",
+      "rejected": true,
+      "reason": "News acquisition tool changed after independent expansion review"
+    },
+    {
+      "case": "changed_archived_snapshot",
+      "rejected": true,
+      "reason": "Archived expansion input changed: work/news_expansion/unreviewed_initial/2025-05-01.json.gz"
+    },
+    {
+      "case": "false_independent_QA_flag",
+      "rejected": true,
+      "reason": "Complete passing independent news expansion review required"
+    },
+    {
+      "case": "stale_manifest_review_proof",
+      "rejected": true,
+      "reason": "Artifact manifest does not bind the current review receipts"
+    }
+  ],
+  "real_input_files_unchanged": true,
+  "protected_input_files": 160,
+  "methodology_derived_counters_verified": true,
+  "snapshot_check_script_in_archive_inventory_source": true,
+  "separate_selected_review_partitions_in_archive_inventory": true,
+  "changed_file_sha256": {
+    "tools/review_gate.py": "8b1a3bdf334c6bc67afd0bc841df054f134315f24e2067555f426fa3573fcbc3",
+    "tools/build_artifacts.py": "d1fac2274c11c2d35fc33f134e029f488554753de0aa0ac4b28793d579f1ca75",
+    "README.md": "ffbe158a32b2ae9aef6deea44300d8142ca0d433e128b6edb527ea488c0731a9"
+  },
+  "manifest_bound_proof_match_passes": true,
+  "manifest_finalizer_binding": "Builder stores review_receipts; require_review defaults to comparing current proof with an existing manifest. Builder validates current inputs with check_manifest=False before replacing the manifest."
+}

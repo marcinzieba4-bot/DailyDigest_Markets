@@ -1,0 +1,49 @@
+{
+  "scope": "May 2025 cited sources: exceptions require exact URL, earlier UTC availability, independent reviewer and hashed timing proof.",
+  "exceptions": [
+    {
+      "date": "2025-05-29",
+      "id": "n1268",
+      "canonical_url": "https://www.cnbc.com/2025/05/29/court-strikes-down-trump-reciprocal-tariffs.html",
+      "known_before_utc": "2025-05-28T23:10:00+00:00",
+      "evidence_url": "https://www.streetinsider.com/Reuters/US%2Bcourt%2Bblocks%2BTrumps%2BLiberation%2BDay%2Btariffs/24863917.html",
+      "timing_proof_file": "audit/tariff_court_may29_cutoff.json",
+      "timing_proof_sha256": "c89a933aaa79d961f1ef82e2c4af7e019777680747625f2444a03d78063455f9",
+      "reviewer": "root after /root/may_review underlying-event timing proof",
+      "reason": "Initial CIT reciprocal/IEEPA tariff ruling was public by May28 23:10UTC, independently supported by dated Reuters syndication and official opinion. Only the matching own frozen CNBC headline initial-ruling fact is admitted; CNBC original publication time/body vintage, later appeal/stay and later market reactions are not established or imported."
+    },
+    {
+      "date": "2025-05-23",
+      "id": "n4185",
+      "canonical_url": "https://www.cnbc.com/2025/05/23/japans-core-inflation-climbs-to-3point5percent-highest-in-more-than-2-years-.html",
+      "known_before_utc": "2025-05-22T23:30:00+00:00",
+      "evidence_url": "https://www.e-stat.go.jp/en/stat-search/files?cycle=1&layout=datalist&month=12040604&page=1&result_back=1&stat_infid=000040276968&tclass1=000001150149&tclass2val=0&toukei=00200573&tstat=000001150147&year=20250",
+      "timing_proof_file": "audit/japan_early_releases_may_cutoffs.json",
+      "timing_proof_sha256": "7951a63ca4c4b467bb2df8d0b423f1aa567295792f25258bdb4cdc69f5ed4e95",
+      "reviewer": "root after /root/may_review official early-local release verification",
+      "reason": "Underlying Japan April national CPI was officially published May23 08:30JST, May22 23:30UTC, before the report cutoff. Admit only matching facts already in own frozen CNBC headline, including core3.5%; no original CNBC publication clock/body vintage or later market reaction is established."
+    },
+    {
+      "date": "2025-05-12",
+      "id": "n0251",
+      "canonical_url": "https://www.theguardian.com/australia-news/2025/may/12/australias-rental-crisis-is-not-what-you-think-it-is",
+      "known_before_utc": "2025-05-11T15:00:00+00:00",
+      "evidence_url": "https://www.theguardian.com/australia-news/2025/may/12/australias-rental-crisis-is-not-what-you-think-it-is",
+      "timing_proof_file": "audit/guardian_rental_may12_publication_time.json",
+      "timing_proof_sha256": "a3089b10dd2f68d8a0c71511de3355f9f1924ae3e154d6713aceed346c81f08f",
+      "reviewer": "Root accepted after /root/may_review original-publication verification",
+      "reason": "Original publisher explicitly dates publication May 11 at 11:00 EDT, 15:00 UTC, before the May 12 cutoff despite its May 12 URL path. Only the broad own frozen headline topic is admitted; no current body facts or original headline/body vintage are asserted. Current last modification is June 26, 2026."
+    },
+    {
+      "date": "2025-05-20",
+      "id": "n0365",
+      "canonical_url": "https://www.theguardian.com/australia-news/2025/may/20/reserve-bank-tipped-to-cut-cash-rate-amid-growing-confidence-australias-inflation-is-being-tamed",
+      "known_before_utc": "2025-05-19T15:00:00+00:00",
+      "evidence_url": "https://www.theguardian.com/australia-news/2025/may/20/reserve-bank-tipped-to-cut-cash-rate-amid-growing-confidence-australias-inflation-is-being-tamed",
+      "timing_proof_file": "audit/guardian_rba_may20_publication_time.json",
+      "timing_proof_sha256": "32b346a46fd25d59390196401971a3dc13381736e24a70b0f0b29ce0b385e4a2",
+      "reviewer": "Root accepted after /root/may_review_b original-publication verification",
+      "reason": "Publisher explicitly identifies original publication May19 at16:00BST, equivalent to15:00UTC, before the May20 cutoff. Only the matching frozen RBA-cut preview is admitted. July4 modification and original article-body vintage are not established as pre-cutoff; no actual RBA decision or later body facts are used."
+    }
+  ]
+}

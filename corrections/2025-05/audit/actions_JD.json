@@ -1,0 +1,18 @@
+{
+ "ticker": "JD",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/JD?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "3b34ee595380f3cd72d8dac3b967b33c1311fb6ae16963f76734b24f1d4fe89a",
+   "fetched_at_utc": "2026-10-30T12:35:09.213451+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/JD?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "f9d641110ed3fbc6d60aae129eb4f5a64cc8ae1b60b9a6830339cd6616576a99",
+   "fetched_at_utc": "2026-10-30T12:35:09.522409+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "LRCX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LRCX?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "f350acff58c6bdc1ecd7578027b8bbb6780b6dd9f0265d440f8251109a173571",
+   "fetched_at_utc": "2026-10-30T12:35:14.093125+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LRCX?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "442581b0f38c68f9e95c45a87070cea8584fc515e1fd1e819b40555c7a560721",
+   "fetched_at_utc": "2026-10-30T12:35:14.482036+00:00"
+  }
+ ]
+}

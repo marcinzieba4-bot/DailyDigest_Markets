@@ -1,0 +1,18 @@
+{
+ "ticker": "XLF",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLF?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "6632dcc2b67082e4d067028a3ded31255c03a61f597c849904facd8cd232b801",
+   "fetched_at_utc": "2026-10-30T12:35:10.471366+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLF?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "4bfe107e30d2f5716651bb5ace0f6a64f66b0e810792a73437b2b9214c7cc077",
+   "fetched_at_utc": "2026-10-30T12:35:10.718810+00:00"
+  }
+ ]
+}

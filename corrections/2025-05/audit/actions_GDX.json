@@ -1,0 +1,18 @@
+{
+ "ticker": "GDX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GDX?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "a9fedabc0bc7263a2389ac06f06fd218df4aa27c76bde1a03f956e40a8dfb44e",
+   "fetched_at_utc": "2026-10-30T12:35:12.084832+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GDX?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "46a43d40bf30231f71d9a5fa80d9f296a22328b3189358ab31d9aaf900447494",
+   "fetched_at_utc": "2026-10-30T12:35:12.450372+00:00"
+  }
+ ]
+}

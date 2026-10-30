@@ -1,0 +1,18 @@
+{
+ "ticker": "KGH.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KGH.WA?period1=1740787200&period2=1748649600&interval=1d&events=div,splits",
+   "sha256": "4bbb10c5b619c44ef0bdca9af88cad9c33f460550fcce6be2493cc6cc0786882",
+   "fetched_at_utc": "2026-10-30T12:35:04.738179+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KGH.WA?period1=1748649600&period2=1793363698&interval=1d&events=div,splits",
+   "sha256": "bb89b43eeb00d0d5fbdf1bc9242668dfcf48489b022dba1118aa2a5309baac01",
+   "fetched_at_utc": "2026-10-30T12:35:05.098443+00:00"
+  }
+ ]
+}
