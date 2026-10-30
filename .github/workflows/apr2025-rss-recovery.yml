@@ -1,0 +1,37 @@
+name: April 2025 public RSS recovery
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/apr2025-rss-recovery.yml'
+      - 'corrections/2025-04/rss_recovery/**'
+permissions:
+  contents: read
+jobs:
+  public-rss:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        part: [0]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          sparse-checkout: |
+            .github/workflows/apr2025-rss-recovery.yml
+            corrections/2025-04/rss_recovery/input.json
+            corrections/2025-04/rss_recovery/fetch_news.py
+            corrections/2025-04/rss_recovery/run.py
+          sparse-checkout-cone-mode: false
+      - name: Fetch public Google News RSS
+        run: python corrections/2025-04/rss_recovery/run.py --part ${{ matrix.part }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: apr2025-public-rss-${{ matrix.part }}
+          path: corrections/2025-04/rss_recovery/output/
+          retention-days: 3
+          if-no-files-found: error
