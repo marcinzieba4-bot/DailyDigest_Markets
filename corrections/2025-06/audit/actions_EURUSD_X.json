@@ -1,0 +1,18 @@
+{
+ "ticker": "EURUSD=X",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EURUSD%3DX?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "d9a6c8f47d4fa515add3f3c3a48f3e6169d7a56c68b129f0a57f2c719120e307",
+   "fetched_at_utc": "2026-10-30T08:53:08.075687+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EURUSD%3DX?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "76247204029607cf710c3903ad3fb764557b5135d38e56ce42f749fe511da91a",
+   "fetched_at_utc": "2026-10-30T08:53:08.329540+00:00"
+  }
+ ]
+}

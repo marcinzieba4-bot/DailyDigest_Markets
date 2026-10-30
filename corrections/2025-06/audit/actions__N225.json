@@ -1,0 +1,18 @@
+{
+ "ticker": "^N225",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "6ec0ca1fce5b377f009cfd12fc09cbf01094e1ebdb2b90512d87d3ecb493b4e0",
+   "fetched_at_utc": "2026-10-30T08:53:25.056014+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "1c7aa17a33d032bd2cdec0ace6f327c40dce7a21f3cbc45a0b9596f7c8120b2c",
+   "fetched_at_utc": "2026-10-30T08:53:25.810694+00:00"
+  }
+ ]
+}

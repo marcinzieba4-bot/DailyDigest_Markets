@@ -1,0 +1,18 @@
+{
+ "ticker": "SMH",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SMH?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "46f7b1bf176d9dea3faad2fa94a8929bc576721207f035d6987742ad1637cf54",
+   "fetched_at_utc": "2026-10-30T08:53:28.331289+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SMH?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "fa4693c631d91cd9ac072998c412c6d09fa1079566d5d4645a3d2f65648e7815",
+   "fetched_at_utc": "2026-10-30T08:53:28.565657+00:00"
+  }
+ ]
+}

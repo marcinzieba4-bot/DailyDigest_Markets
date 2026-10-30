@@ -1,0 +1,18 @@
+{
+ "ticker": "VZ",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VZ?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "6a4bf4c599565db81def03f1ce4e6cc6dd886684c122bcd49adc1dece62ad87b",
+   "fetched_at_utc": "2026-10-30T08:53:39.353591+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VZ?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "5682f98b93309665d9b7e8c2333886a3887a0f179b49e8d5a2285ed54ecb1b99",
+   "fetched_at_utc": "2026-10-30T08:53:39.582024+00:00"
+  }
+ ]
+}

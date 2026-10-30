@@ -1,0 +1,18 @@
+{
+ "ticker": "PEO.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PEO.WA?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "9eecdd5ed11ef52657839e74aa3a19f44366b8b3f2cd8f02baf17963ffa29c82",
+   "fetched_at_utc": "2026-10-30T08:53:11.773811+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PEO.WA?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "7a36b0ce2eb2b23c0771463cd084b2ea062ea762c4eecd5db8e715116a0d38c5",
+   "fetched_at_utc": "2026-10-30T08:53:14.754058+00:00"
+  }
+ ]
+}

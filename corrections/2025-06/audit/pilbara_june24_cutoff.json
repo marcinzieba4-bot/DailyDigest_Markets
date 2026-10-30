@@ -1,0 +1,37 @@
+{
+  "reviewer": "/root/jun_review",
+  "reviewed_at_utc": "2026-10-30T09:50:31.814382+00:00",
+  "report_date": "2025-06-24",
+  "cutoff_exclusive_utc": "2025-06-24T00:00:00+00:00",
+  "claim": "Hope Downs2 Rio/Hancock combined State and Federal approvals and announced development investment",
+  "pre_cutoff_public_availability_verified": false,
+  "decision": "Do not approve a June24 cutoff exception for ABC n0372 approval actuals. Preserve only independently eligible own-headline planned-development facts and conditional analysis.",
+  "evidence": [
+    {
+      "url": "https://www.abc.net.au/news/2025-06-24/multi-billion-dollar-pilbara-mine-expansion-receives-approval/105453646",
+      "access": "directly opened with web connector",
+      "displayed_publication": "Tue24Jun2025 at4:16pm",
+      "timezone": "not specified in extracted display; no conversion assumed",
+      "scope": "ABC date is June24, not a before-cutoff publication proof."
+    },
+    {
+      "url": "https://www.businesswire.com/news/home/20250623938934/en/",
+      "access": "directly opened primary issuer wire",
+      "scope": "Issuer text confirms combined approvals; extracted primary page does not display intraday release time. Numeric20250623 in wire identifier is not treated as timestamp proof."
+    },
+    {
+      "url": "https://markets.financialcontent.com/pennwell.hydroworld/article/bizwire-2025-6-24-rio-tinto-and-hancock-prospecting-to-invest-16-billion-to-develop-the-hope-downs-2-project-in-western-australias-pilbara",
+      "access": "directly opened issuer-release syndication linking exact BusinessWire primary",
+      "displayed_publication": "June23,2025 at21:18PM EDT",
+      "publication_utc": "2025-06-24T01:18:00+00:00",
+      "scope": "Explicit release syndication time is after the cutoff; text identifies both State and Federal approvals."
+    },
+    {
+      "url": "https://www.epa.wa.gov.au/proposals/hope-downs-2",
+      "access": "search-index text; direct open403",
+      "displayed_approval_date": "Wednesday11June2025",
+      "scope": "State ministerial decision date only. Exact original public-posting time and combined federal approval availability remain unverified. A currently accessible historical decision date is not used as proof of original body vintage."
+    }
+  ],
+  "limitations": "Earliest located explicit release evidence is after cutoff. This does not prove no earlier unlocated public record existed. The conservative exclusion follows lack of verified pre-cutoff availability, not an inferred event time. No future facts supplied to report writers."
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "BMW.DE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BMW.DE?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "bb18eaa55770e3b9399917db70deb2cfcf7be36e6eba6398edb1b2500bac8b9e",
+   "fetched_at_utc": "2026-10-30T08:53:19.953767+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BMW.DE?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "e98e16034cdb487fbfaa10055b31f9c7f2f3fb2ee86f00535c3d11bdb9e7d052",
+   "fetched_at_utc": "2026-10-30T08:53:20.501060+00:00"
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+June 2025 retrospective briefings — methodology
+
+Scope: 21 Monday–Friday report dates, 2025-06-02 through 2025-06-30.
+Per-report news cutoff: 00:00 UTC on its report date, strictly exclusive.
+Source-query lookbacks: fresh news and previews 7 days, company results 14 days,
+macro releases and policy baselines 35 days. Categories originate in the query
+catalogue; older background is time-qualified and is not presented as a fresh
+event. Each writer uses only the own-date frozen feed and market card.
+Actual releases at or after the UTC cutoff are excluded until a later edition.
+
+News: dated Google News historical RSS, 163,657 own-date headline records
+across these 21 feeds (per-date range 7,234–8,280).
+Category totals count the same headline again when eligible on multiple dates:
+{'monthly': 51057, 'news': 99508, 'result': 13092}.
+Acquisition audit: queries: 440; shared query windows: 2484; possibly capped windows: 124; failed windows: 0.
+Search-index result limits mean coverage is broad, not exhaustive. Publication
+timestamps can be approximate. Reports use cited headline facts, not details
+inferred from unread article bodies. Original article vintages are not
+independently archived. Readiness and chronology audit receipts, where present,
+record conservative exclusions and source-date checks; metadata does not prove
+an original article-body vintage. Later outcomes are excluded from writer inputs.
+
+Some publisher URLs use a later local calendar date. Explicit source-ledger timing
+notes identify original publications or underlying releases independently proved
+available before the report cutoff; they do not admit later article details.
+
+Frozen feeds and included audit receipts:
+https://d7g7nkeytae81.cloudfront.net/reports/2025-06/June_2025_Frozen_News_Feeds.zip
+SHA256: b63b33feaf176088c24f70b3b3d4175ec5f423fa0d9d5209e52a9f62edb21a59
+The report bundle contains cited evidence ledgers, not all raw feed rows.
+
+Markets: Yahoo Finance historical daily charts, completed sessions before each
+report date, exchange-local session dates; crypto uses completed UTC days.
+Instruments per card: 290, 292.
+Returns compare split-adjusted closes over 1, 5 and 20 observations and exclude
+dividends. Displayed price levels restore historical share units by reversing
+later split factors. CMCSA levels are suppressed because its adjustment includes
+a spin-off. Corporate-action metadata is used only for unit conversion; later
+price rows are excluded from writer inputs. Current-vintage prices may include
+later vendor revisions; original contemporaneous vendor snapshots were not found.
+Futures series may be affected by contract rolls.
+Instrument-specific gaps and split/restoration limits are recorded in this month's
+market provenance and validation audits. Local closures use the last completed
+session, without inventing a holiday-session quote. Selected observations derived
+from the final cards:
+Mainland China: 2025-06-03 edition uses the 2025-05-30 completed local close.
+Hong Kong: 2025-06-03 edition uses the 2025-06-02 completed local close.
+Australia: 2025-06-10 edition uses the 2025-06-06 completed local close.
+US equities: 2025-06-20 edition uses the 2025-06-18 completed local close.
+Polish equities: 2025-06-20 edition uses the 2025-06-18 completed local close.
+US Treasury: 2025-06-20 edition uses the 2025-06-18 observation.
+Crypto has completed UTC daily candles.
+Returns compare 20 valid observations, rather than calendar days, and exclude
+dividends. Treasury uses actual two- and ten-year par yields; yield changes and
+curve spreads are basis points.
+
+Style: August 2026 nine-section structure, geographic and sector cards,
+1280px desktop width, responsive navigation and linked evidence ledger.
+Each HTML edition has a PDF and machine-readable JSON with its source evidence.
+Prepared retrospectively in October 2026; these are historical reconstructions.
+
+Code provenance:
+base_branch: codex/jul-2025-retrospective-20261029
+base_commit: e797fb84c8c7614b3cc625aeddc59f017f4074c4
+working_branch: codex/jun-2025-retrospective-20261030
+Each edition uses its own frozen historical inputs. Source acquisition, exclusions,
+chronology checks and retrieval limits are recorded in the included audit receipts.

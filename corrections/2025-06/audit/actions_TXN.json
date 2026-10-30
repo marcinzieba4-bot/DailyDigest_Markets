@@ -1,0 +1,18 @@
+{
+ "ticker": "TXN",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TXN?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "8d9e24b8e5699a817b01668fbe2989f644e38c6e73f323eeb9f6e7c895737e2f",
+   "fetched_at_utc": "2026-10-30T08:53:30.859404+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TXN?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "8895fb5b25b4fc803e38dbe82920883745e6d410f752d495d72bb09163653147",
+   "fetched_at_utc": "2026-10-30T08:53:31.154445+00:00"
+  }
+ ]
+}

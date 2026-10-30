@@ -1,0 +1,18 @@
+{
+ "ticker": "ITA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ITA?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "b8805de56cdb4a71d4609cc5e6ad837e850a98cb0c2c38ad44e371930c5673d7",
+   "fetched_at_utc": "2026-10-30T08:53:29.517527+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ITA?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "aa54780bad16486486ac5ac33c60409006b689e065d23fb1b566aae6e5ee058c",
+   "fetched_at_utc": "2026-10-30T08:53:29.805405+00:00"
+  }
+ ]
+}

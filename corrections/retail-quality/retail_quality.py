@@ -33,6 +33,7 @@ ALIASES = {
     "xrp": "XRP", "gc": "GLD", "si": "SLV", "apple": "AAPL",
     "microstrategy": "MSTR", "strategy": "MSTR", "nike": "NKE", "costco": "COST",
     "quantumscape": "QS",
+    "pop mart": "9992.HK", "9992.hk": "9992.HK",
     "micron": "MU", "reddit": "RDDT", "nasdaq": "QQQ", "mega-cap tech": "QQQ",
 }
 FAMILIES = {
@@ -411,7 +412,20 @@ def require_review(root: Path) -> dict:
     result = audit_month(root, root / 'checks/retail_editorial_decisions.json')
     output = root / 'checks/retail_quality.json'
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(json.dumps(result, indent=2))
+    existing = None
+    if output.exists():
+        try:
+            existing = json.loads(output.read_text())
+        except json.JSONDecodeError:
+            pass
+    # Recompute every check, but keep an identical receipt stable across build,
+    # publication and finalization. A fresh wall-clock timestamp alone must not
+    # invalidate the recorded SHA of a previously checked result.
+    semantic = lambda record: {k: v for k, v in record.items() if k != 'checked_at_utc'}
+    if isinstance(existing, dict) and semantic(existing) == semantic(result):
+        result = existing
+    else:
+        output.write_text(json.dumps(result, indent=2))
     if not result['review_gate_passed']:
         raise ValueError('Retail evidence or cross-edition review remains unresolved: '+str(root))
     return result

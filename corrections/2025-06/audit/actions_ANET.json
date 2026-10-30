@@ -1,0 +1,18 @@
+{
+ "ticker": "ANET",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "eea6c3552c7258265469ce1fda0fb18ce379de41484d86d63ef3cd114ba5a420",
+   "fetched_at_utc": "2026-10-30T08:53:31.080125+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "4aa43eef3f835574b3f0ed44222ce0cf8b60faba66317265d354515296559125",
+   "fetched_at_utc": "2026-10-30T08:53:31.358689+00:00"
+  }
+ ]
+}

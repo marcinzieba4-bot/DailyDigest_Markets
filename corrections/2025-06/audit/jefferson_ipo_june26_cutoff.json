@@ -1,0 +1,32 @@
+{
+  "reviewer": "/root/jun_review",
+  "reviewed_at_utc": "2026-10-30T10:39:49.321725+00:00",
+  "report_date": "2025-06-26",
+  "cutoff_exclusive_utc": "2025-06-26T00:00:00+00:00",
+  "own_feed_id": "n3170",
+  "underlying_event": "JeffersonCapital IPO pricing/150million offering",
+  "pre_cutoff_public_availability_verified": false,
+  "decision": "Exclude actual IPO pricing/150million outcome from June26 report; do not infer UTC from June25 US-local issuer date.",
+  "evidence": [
+    {
+      "url": "https://www.globenewswire.com/news-release/2025/6/26/3105525/0/en/Jefferson-Capital-Announces-Pricing-of-Initial-Public-Offering.html",
+      "access": "directly opened original primary issuer wire",
+      "publication_display": "June25,2025 21:56ET",
+      "publication_utc": "2025-06-26T01:56:00+00:00",
+      "scope": "Original public issuer-wire pricing announcement is after cutoff."
+    },
+    {
+      "url": "https://investors.jcap.com/news-releases/news-release-details/jefferson-capital-announces-pricing-initial-public-offering",
+      "access": "directly opened issuer copy",
+      "date_display": "June25,2025",
+      "scope": "Local date only; not a before00UTC proof."
+    },
+    {
+      "url": "https://www.reuters.com/business/jefferson-capital-existing-shareholders-raise-150-million-us-ipo-2025-06-26/",
+      "access": "search-index original Reuters timestamp",
+      "publication_utc": "2025-06-26T02:28:26+00:00",
+      "scope": "Corroborating report also after cutoff."
+    }
+  ],
+  "scope_limit": "This is earliest located explicit primary release evidence, not proof of the private pricing decision time or absence of all possible earlier unlocated public reports. No pre-cutoff exception supported."
+}

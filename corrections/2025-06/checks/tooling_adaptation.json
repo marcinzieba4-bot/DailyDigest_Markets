@@ -1,0 +1,88 @@
+{
+  "status": "adapted_offline_checks_passed",
+  "checked_at_utc": "2026-10-30T09:02:03.864086+00:00",
+  "report_dates": [
+    "2025-06-02",
+    "2025-06-03",
+    "2025-06-04",
+    "2025-06-05",
+    "2025-06-06",
+    "2025-06-09",
+    "2025-06-10",
+    "2025-06-11",
+    "2025-06-12",
+    "2025-06-13",
+    "2025-06-16",
+    "2025-06-17",
+    "2025-06-18",
+    "2025-06-19",
+    "2025-06-20",
+    "2025-06-23",
+    "2025-06-24",
+    "2025-06-25",
+    "2025-06-26",
+    "2025-06-27",
+    "2025-06-30"
+  ],
+  "report_count": 21,
+  "weekday_artifact_count": 63,
+  "origin_artifact_count": 66,
+  "public_report_collection_count": 24,
+  "separate_public_source_archive_count": 1,
+  "offline_report_zip_member_count": 65,
+  "weekend_date_count": 9,
+  "protected_key_count": 28,
+  "checks": [
+    "June calendar contains 21 weekdays, June 2\u201330, and nine weekend dates.",
+    "Date parser recognizes June and future July dates without the copied regex corruption.",
+    "Renderer accepts June weekdays and rejects June weekends and July dates.",
+    "All nine sections and timing annotations remain present in rendered HTML and JSON.",
+    "Temporary report and collection layouts pass at desktop 1440px and mobile 390px.",
+    "Frozen source ZIP contains all 21 own-date feeds and an explicitly referenced proof outside filename patterns.",
+    "A missing optional metadata retry diagnosis does not block the source ZIP.",
+    "Methodology derives feed counts and selected market-session carryovers from fixture cards.",
+    "Publisher plans 66 unique June origin files, including 24 public report and collection files.",
+    "All 27 weekend variants and latest.html are protected, with no overlap with publication targets.",
+    "June archive merge preserves existing August, July and custom links and adds each June date once.",
+    "Offline publisher self-test passes interrupted backup resume, ambiguous copies, foreign changes, version-bound SHA and retry cases.",
+    "Source publisher validates a 21-date June archive in dry-run without creating remote or real receipts.",
+    "Finalizer requires exact 66-origin and 24-public hashes and rejects four stale-receipt cases.",
+    "Public verifier rejects an incomplete month before any network call.",
+    "Review gate rechecks approved proof bytes and rejects a timing proof changed after the source audit."
+  ],
+  "limits": [
+    "These are temporary offline fixture and code-contract checks, not approval of unfinished June prose or historical data.",
+    "Root must run the full report gates, artifact builder, publisher dry-run/self-test, and origin/public verification after all 21 reports are complete."
+  ],
+  "network_calls": 0,
+  "real_publication_receipts_changed": false,
+  "offline_publisher_selftest_passed": true,
+  "offline_finalizer_regressions_passed": true,
+  "changes": [
+    "Corrected renderer and validator month checks from July to June.",
+    "Restored the general July-date regex damaged by naive month-name replacement.",
+    "Replaced hardcoded 23-edition collection and review text with the actual date count.",
+    "Removed copied Independence Day and Marine Day claims; session examples now come from final June cards.",
+    "Removed hardcoded July-only proof filenames and optional diagnosis requirements from the source archive.",
+    "Source archive includes actual exception proof paths with verified hashes and current tool files.",
+    "Finalization validates the June collection names and frozen-source key, date count, byte size and hash.",
+    "Public verification requires the complete 21-date June origin inventory before downloads."
+  ],
+  "publication_pending": true,
+  "tool_sha256": {
+    "render.py": "46bdd8e18ec55e1ae8f387aa37938a7e0b6d21bf51e511e78f118d00cdc9e200",
+    "verify.py": "d7008cb8b4d7c5f9426c578322ee2e9ff0f09989734ab1fbc84c67e60e051147",
+    "build_artifacts.py": "3d5cb008b1b58dbcb2bffd65ea059f7473f51c91318232ee6cf0987d60f344a7",
+    "publish.py": "b813b1f27dd083289aff85d9ea6094f670ebb6828ba51e2be287e228e4e85c6b",
+    "publish_sources.py": "e81529949a33c4786f6b226d5aff690e3ada7214483b9962c489f945a748a7a0",
+    "verify_live.py": "399cf4a883d1285f9bd5375e6a6ea3df9f424eccd0449cc9b8a169dfa4116a82",
+    "finalize.py": "b2f15132bf47ace71c748fd2740ef621e6b843b0289283c8a11f273fde9b621b",
+    "review_gate.py": "399ab3811c7a34cf6ca1f444ff8fb2961ecf06fda691fdf6c5c82d281024f326"
+  },
+  "root_followups": [
+    {
+      "file": "tools/build_artifacts.py",
+      "change": "Added finalcanonicalmetadata and release-guard receipt patterns to frozen archive; original tool QA hashes remain records of reviewed version. Full artifact build/ZIP integrity gate will validate final inputs."
+    }
+  ]
+}

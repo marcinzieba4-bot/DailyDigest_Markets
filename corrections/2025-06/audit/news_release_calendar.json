@@ -1,0 +1,256 @@
+{
+  "scope": "Reviewer-only conservative June2025 release chronology. Guard patterns are heuristic and not exhaustive article-body or original-vintage verification. These dated sources are not additional factual input for report writers.",
+  "checked_at_utc": "2026-10-30T09:05:08.587188+00:00",
+  "guard_count": 29,
+  "guard_tool_sha256": "4207126c3c64e22548933746a468225bbd8aaf319efd1da7429ba346eb0caecc",
+  "verified_critical_calendar_sources": [
+    {
+      "label": "China May Caixin manufacturing PMI",
+      "release_utc": "2025-06-03T01:45:00Z",
+      "first_eligible_weekday_report": "2025-06-04",
+      "evidence_url": "https://www.pmi.spglobal.com/Public/Home/PressRelease/56042e5fa0a541ff9d2504a398bf6e53",
+      "observation": "Original May2025 PDF explicitly embargoed until0145UTC3June2025. MondayJune2wasnot the release day."
+    },
+    {
+      "label": "US May payrolls",
+      "release_utc": "2025-06-06T12:30:00Z",
+      "first_eligible_weekday_report": "2025-06-09",
+      "evidence_url": "https://www.bls.gov/news.release/archives/empsit_06062025.pdf",
+      "observation": "Original release header states8:30a.m.ETFridayJune6."
+    },
+    {
+      "label": "US May CPI",
+      "release_utc": "2025-06-11T12:30:00Z",
+      "first_eligible_weekday_report": "2025-06-12",
+      "evidence_url": "https://www.bls.gov/news.release/archives/cpi_06112025.htm",
+      "observation": "Original release header states8:30a.m.ETWednesdayJune11."
+    },
+    {
+      "label": "US May PPI",
+      "release_utc": "2025-06-12T12:30:00Z",
+      "first_eligible_weekday_report": "2025-06-13",
+      "evidence_url": "https://www.bls.gov/news.release/archives/ppi_06122025.htm",
+      "observation": "Original release header states8:30a.m.ETThursdayJune12."
+    },
+    {
+      "label": "FOMC June rate decision",
+      "release_utc": "2025-06-18T18:00:00Z",
+      "first_eligible_weekday_report": "2025-06-19",
+      "evidence_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250618a.htm",
+      "observation": "Original release header statesJune18 and2:00p.m.; FOMCmeetingpage separately identifiesreleaseat2p.m."
+    },
+    {
+      "label": "US May PCE",
+      "release_utc": "2025-06-27T12:30:00Z",
+      "first_eligible_weekday_report": "2025-06-30",
+      "evidence_url": "https://www.bea.gov/sites/default/files/2025-06/pi0525.pdf",
+      "observation": "Original PDF release embargo states8:30a.m.EDTFridayJune27."
+    },
+    {
+      "label": "ECB June rate decision",
+      "release_date": "2025-06-05",
+      "first_eligible_weekday_report": "2025-06-06",
+      "evidence_url": "https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp250605~3b5f67d007.en.html",
+      "observation": "Original policy decision is dated5June2025; later effectiveness on11June is distinctfromannouncement."
+    },
+    {
+      "label": "NBP June rate decision",
+      "release_date": "2025-06-04",
+      "first_eligible_weekday_report": "2025-06-05",
+      "evidence_url": "https://nbp.pl/wp-content/uploads/2025/06/Komunikat-RPP-czerwiec-2025-ANG.pdf",
+      "observation": "Original MPC statement is datedWarsaw4June2025."
+    },
+    {
+      "label": "China May inflation",
+      "release_date": "2025-06-09",
+      "first_eligible_weekday_report": "2025-06-10",
+      "evidence_url": "https://english.www.gov.cn/archive/statistics/202506/09/content_WS684642b5c6d0868f4e8f328f.html",
+      "observation": "Contemporaneous officialgovernment report is timestampedJune9 10:11ChinaStandardTime."
+    },
+    {
+      "label": "China May activity",
+      "release_date": "2025-06-16",
+      "first_eligible_weekday_report": "2025-06-17",
+      "evidence_url": "https://www.stats.gov.cn/english/PressRelease/202506/t20250616_1960165.html",
+      "observation": "Original NBS release states16June2025."
+    }
+  ],
+  "guards": [
+    {
+      "label": "China May Caixin manufacturing PMI",
+      "earliest_guarded_index_date": "2025-05-28",
+      "first_eligible_weekday_report": "2025-06-04",
+      "headline_pattern": "(?=.*(?:Caixin|private.sector|private survey))(?=.*(?:China|Chinese|Caixin))(?=.*(?:manufactur|factory))"
+    },
+    {
+      "label": "US May ISM manufacturing",
+      "earliest_guarded_index_date": "2025-05-28",
+      "first_eligible_weekday_report": "2025-06-03",
+      "headline_pattern": "(?=.*(?:ISM|Institute for Supply Management))(?=.*(?:manufactur|factory))"
+    },
+    {
+      "label": "US April JOLTS",
+      "earliest_guarded_index_date": "2025-05-28",
+      "first_eligible_weekday_report": "2025-06-04",
+      "headline_pattern": "(?=.*(?:JOLTS|U\\.?S\\.? job openings))(?=.*(?:April|Apr\\b|job openings))"
+    },
+    {
+      "label": "Eurozone May flash inflation",
+      "earliest_guarded_index_date": "2025-05-29",
+      "first_eligible_weekday_report": "2025-06-04",
+      "headline_pattern": "(?=.*(?:euro\\s?zone|euro area))(?=.*(?:inflation|CPI|consumer prices))(?=.*(?:May|flash))"
+    },
+    {
+      "label": "US May ADP employment",
+      "earliest_guarded_index_date": "2025-05-30",
+      "first_eligible_weekday_report": "2025-06-05",
+      "headline_pattern": "(?=.*ADP)(?=.*(?:jobs|employment|payroll|hiring))"
+    },
+    {
+      "label": "US May ISM services",
+      "earliest_guarded_index_date": "2025-05-30",
+      "first_eligible_weekday_report": "2025-06-05",
+      "headline_pattern": "(?=.*(?:ISM|Institute for Supply Management))(?=.*(?:services|non.manufactur))"
+    },
+    {
+      "label": "NBP June rate decision",
+      "earliest_guarded_index_date": "2025-05-30",
+      "first_eligible_weekday_report": "2025-06-05",
+      "headline_pattern": "(?=.*(?:NBP|RPP|Poland|Polish|Glapiński))(?=.*(?:holds?|cuts? rates|rate cut|cuts? interest|unchanged|stóp|stopy procentowe|rate decision|interest rates))(?=.*(?:June|czerwc|holds?|unchanged|utrzym|bez zmian))"
+    },
+    {
+      "label": "ECB June rate decision",
+      "earliest_guarded_index_date": "2025-05-31",
+      "first_eligible_weekday_report": "2025-06-06",
+      "headline_pattern": "(?=.*(?:ECB|European Central Bank))(?=.*(?:cuts?|holds?|keeps?|leaves?|decision|rates))"
+    },
+    {
+      "label": "China May Caixin services PMI",
+      "earliest_guarded_index_date": "2025-05-31",
+      "first_eligible_weekday_report": "2025-06-06",
+      "headline_pattern": "(?=.*(?:Caixin|private.sector|private survey))(?=.*(?:China|Chinese|Caixin))(?=.*services)"
+    },
+    {
+      "label": "US May payrolls",
+      "earliest_guarded_index_date": "2025-06-01",
+      "first_eligible_weekday_report": "2025-06-09",
+      "headline_pattern": "(?=.*(?:U\\.?S\\.?|American|nonfarm|payroll|jobs report))(?=.*(?:jobs|payroll|unemployment|hiring))(?=.*(?:May|139,000|139000))"
+    },
+    {
+      "label": "China May inflation",
+      "earliest_guarded_index_date": "2025-06-04",
+      "first_eligible_weekday_report": "2025-06-10",
+      "headline_pattern": "(?=.*China)(?=.*(?:CPI|PPI|inflation|deflation|consumer prices|producer prices))(?=.*(?:May|consumer|producer))"
+    },
+    {
+      "label": "China May trade",
+      "earliest_guarded_index_date": "2025-06-04",
+      "first_eligible_weekday_report": "2025-06-10",
+      "headline_pattern": "(?=.*China)(?=.*(?:exports|imports|trade surplus|trade data))(?=.*(?:May|exports|imports))"
+    },
+    {
+      "label": "US May CPI",
+      "earliest_guarded_index_date": "2025-06-06",
+      "first_eligible_weekday_report": "2025-06-12",
+      "headline_pattern": "(?=.*(?:U\\.?S\\.?|American|Fed))(?=.*(?:CPI|inflation|consumer prices))(?=.*(?:May|consumer|CPI))"
+    },
+    {
+      "label": "US May PPI",
+      "earliest_guarded_index_date": "2025-06-07",
+      "first_eligible_weekday_report": "2025-06-13",
+      "headline_pattern": "(?=.*(?:U\\.?S\\.?|American|PPI))(?=.*(?:PPI|producer prices|wholesale prices))(?=.*(?:May|PPI|producer))"
+    },
+    {
+      "label": "China May activity",
+      "earliest_guarded_index_date": "2025-06-11",
+      "first_eligible_weekday_report": "2025-06-17",
+      "headline_pattern": "(?=.*China)(?=.*(?:retail sales|industrial (?:output|production)|fixed.asset|home prices))(?=.*(?:May|retail|industrial))"
+    },
+    {
+      "label": "US May retail sales",
+      "earliest_guarded_index_date": "2025-06-12",
+      "first_eligible_weekday_report": "2025-06-18",
+      "headline_pattern": "(?=.*(?:U\\.?S\\.?|American))(?=.*retail sales)(?=.*(?:May|retail sales))"
+    },
+    {
+      "label": "BOJ June rate decision",
+      "earliest_guarded_index_date": "2025-06-12",
+      "first_eligible_weekday_report": "2025-06-18",
+      "headline_pattern": "(?=.*(?:BOJ|Bank of Japan))(?=.*(?:holds?|keeps?|leaves?|decision|raises?|hikes?|rates))"
+    },
+    {
+      "label": "FOMC June rate decision",
+      "earliest_guarded_index_date": "2025-06-13",
+      "first_eligible_weekday_report": "2025-06-19",
+      "headline_pattern": "(?=.*(?:Fed|Federal Reserve|FOMC))(?=.*(?:holds? rates|keeps? rates|leaves? rates|rate decision|unchanged|dot plot|projections))"
+    },
+    {
+      "label": "UK May CPI",
+      "earliest_guarded_index_date": "2025-06-13",
+      "first_eligible_weekday_report": "2025-06-19",
+      "headline_pattern": "(?=.*(?:UK|U\\.?K\\.?|Britain|British))(?=.*(?:CPI|inflation|consumer prices))(?=.*May)"
+    },
+    {
+      "label": "Australia May employment",
+      "earliest_guarded_index_date": "2025-06-14",
+      "first_eligible_weekday_report": "2025-06-20",
+      "headline_pattern": "(?=.*Australia)(?=.*(?:jobs|employment|unemployment|hiring))(?=.*(?:May|jobs|employment))"
+    },
+    {
+      "label": "BoE June rate decision",
+      "earliest_guarded_index_date": "2025-06-14",
+      "first_eligible_weekday_report": "2025-06-20",
+      "headline_pattern": "(?=.*(?:BoE|Bank of England))(?=.*(?:holds?|keeps?|leaves?|decision|rates))"
+    },
+    {
+      "label": "China June LPR",
+      "earliest_guarded_index_date": "2025-06-15",
+      "first_eligible_weekday_report": "2025-06-23",
+      "headline_pattern": "(?=.*(?:China|PBOC))(?=.*(?:loan prime|benchmark lending|LPR))"
+    },
+    {
+      "label": "June flash PMIs",
+      "earliest_guarded_index_date": "2025-06-18",
+      "first_eligible_weekday_report": "2025-06-24",
+      "headline_pattern": "(?=.*(?:PMI|purchasing managers|business activity))(?=.*(?:June|flash))(?=.*(?:euro\\s?zone|Germany|German|France|French|Britain|British|UK|U\\.?S\\.?|S&P Global))"
+    },
+    {
+      "label": "Australia May monthly CPI",
+      "earliest_guarded_index_date": "2025-06-20",
+      "first_eligible_weekday_report": "2025-06-26",
+      "headline_pattern": "(?=.*Australia)(?=.*(?:CPI|inflation|consumer prices))(?=.*(?:May|monthly))"
+    },
+    {
+      "label": "US Q1 GDP third estimate",
+      "earliest_guarded_index_date": "2025-06-21",
+      "first_eligible_weekday_report": "2025-06-27",
+      "headline_pattern": "(?=.*(?:U\\.?S\\.?|American))(?=.*(?:GDP|gross domestic product|economy|growth))(?=.*(?:Q1|first.quarter|1st.quarter))(?=.*(?:third|final|revised|revision|contracts?|shrank))"
+    },
+    {
+      "label": "US May PCE",
+      "earliest_guarded_index_date": "2025-06-22",
+      "first_eligible_weekday_report": "2025-06-30",
+      "headline_pattern": "(?=.*(?:PCE|personal consumption expenditure))(?=.*(?:May|inflation|prices))"
+    },
+    {
+      "label": "China June official PMI",
+      "earliest_guarded_index_date": "2025-06-25",
+      "first_eligible_weekday_report": "2025-07-01",
+      "headline_pattern": "(?=.*China)(?=.*(?:official|NBS))(?=.*(?:PMI|manufacturing|factory|non.manufactur))(?=.*(?:June|49\\.7|50\\.5))"
+    },
+    {
+      "label": "Polish June flash CPI",
+      "earliest_guarded_index_date": "2025-06-25",
+      "first_eligible_weekday_report": "2025-07-01",
+      "headline_pattern": "(?=.*(?:Poland|Polish|Polsce|Polski|inflacja|inflacji))(?=.*(?:CPI|inflation|consumer prices|inflacja|inflacji))(?=.*(?:June|czerwc))"
+    },
+    {
+      "label": "US May JOLTS",
+      "earliest_guarded_index_date": "2025-06-25",
+      "first_eligible_weekday_report": "2025-07-02",
+      "headline_pattern": "(?=.*(?:JOLTS|U\\.?S\\.? job openings))(?=.*May)"
+    }
+  ],
+  "early_UTC_exceptions": "Japan TokyoCPIJune27 and industrialproductionJune30 may precedeUTCmidnight locally; no exception is granted here. A cited source needs independent original-time proof before admitting an actual release into its same-local-calendar-day report.",
+  "geopolitical_election_limits": "Economic release guards do not establish election winner, war-strike or ceasefire timing; those selected claims require their own canonical/date and original-time review."
+}

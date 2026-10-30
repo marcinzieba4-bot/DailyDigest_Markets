@@ -1,0 +1,24 @@
+{
+ "ticker": "ETHA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2026-10-06",
+   "factor": 0.3333333333333333,
+   "ratio": "1:3"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETHA?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "bfe21e09f883913a8d587f2a7f5a90a75abfe2d3f9e6711b4b29ae8747bde0cb",
+   "fetched_at_utc": "2026-10-30T08:53:07.491544+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETHA?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "b54055965d8247e36380997e3bb0844ebbb8f422932ab42b96fd5396a727c251",
+   "fetched_at_utc": "2026-10-30T08:53:07.778359+00:00"
+  }
+ ]
+}

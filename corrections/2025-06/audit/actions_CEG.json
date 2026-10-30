@@ -1,0 +1,18 @@
+{
+ "ticker": "CEG",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CEG?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "c8c86b2a6ca339b1ecbe9c3a04fc2891a8bccf7ddae42b1bcdc486949baa9314",
+   "fetched_at_utc": "2026-10-30T08:53:36.465860+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CEG?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "933ff764cf227d2bd82e008190d6fc0cdd5ec2e7464f3a85c09f7bce523d189b",
+   "fetched_at_utc": "2026-10-30T08:53:36.789846+00:00"
+  }
+ ]
+}

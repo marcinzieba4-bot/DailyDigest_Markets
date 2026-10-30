@@ -1,0 +1,18 @@
+{
+ "ticker": "NVDA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "71efab8b93bdf1fccff586be15172b72d831b09b00d86bc71ea6f44bae7cd49e",
+   "fetched_at_utc": "2026-10-30T08:53:29.634508+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "150a47e2c6ec047676902ae8716f34cee0bea205442823037cb9e53ff74b04c8",
+   "fetched_at_utc": "2026-10-30T08:53:29.915194+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "DELL",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DELL?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "9be4e62ba725b330c7e4daa0a298f84648596512249499a3bbde5afc27530775",
+   "fetched_at_utc": "2026-10-30T08:53:31.067639+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DELL?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "f4ab1bb53cf60d4155b1bba24acd7813c03b06f8f5e15539696212657f5c9102",
+   "fetched_at_utc": "2026-10-30T08:53:31.440708+00:00"
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+  "reviewer": "/root/jun_review",
+  "checked_at_utc": "2026-10-30T09:05:44.008651+00:00",
+  "scope_limit": "Availability of the specified underlying event/release only; does not prove the vintage of a later publisher article body or admit later market reactions.",
+  "report_date": "2025-06-30",
+  "cutoff_utc": "2025-06-30T00:00:00Z",
+  "status": "official release timestamp verified before cutoff",
+  "known_before_utc": "2025-06-29T23:51:00Z",
+  "event_time_local": "2025-06-30 08:50 Asia/Tokyo (JST UTC+09)",
+  "event_time_utc": "2025-06-29T23:50:00Z",
+  "dataset_id": "000040291032",
+  "release": "Japan May2025 preliminary industrialproduction",
+  "allowed_scope": [
+    "Underlying official preliminary release available before cutoff; facts still require the own-date eligible headline."
+  ],
+  "excluded_scope": [
+    "Later June30 session or market reactions; revised subsequent release data."
+  ],
+  "sources": [
+    {
+      "url": "https://www.e-stat.go.jp/index.php/stat-search/files?kikan=00550&layout=dataset&page=1&stat_infid=000040291032&toukei=00550300",
+      "kind": "Official eStat release metadata",
+      "observed_publication": "2025-06-30 08:50",
+      "metadata_label": "公開年月日時分",
+      "support": "Official table namesMay2025preliminary industrialproduction and records release08:50 onJune30."
+    },
+    {
+      "url": "https://www.meti.go.jp/english/statistics/tyo/iip/b2020_202505se.html",
+      "kind": "OfficialMETI originalrelease searchmetadata corroboration",
+      "observed_publication": "Preliminary Report for May2025 released at8:50June30,2025",
+      "support": "Search metadata agrees; fullMETIpage returned403, so eStatmetadata is the directly opened timestamp proof."
+    }
+  ]
+}

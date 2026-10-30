@@ -1,0 +1,18 @@
+{
+ "ticker": "XLC",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLC?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "ba898984f2479259cabb0f6bdb5000fc811dca1216e2f1971f71acea75a1db15",
+   "fetched_at_utc": "2026-10-30T08:53:27.787935+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLC?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "3ee491f63015240ee0b24acf3aec41a1c4fdd7bc790362cdd3f9a0de107e9b7a",
+   "fetched_at_utc": "2026-10-30T08:53:27.948498+00:00"
+  }
+ ]
+}

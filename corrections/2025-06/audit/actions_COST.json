@@ -1,0 +1,18 @@
+{
+ "ticker": "COST",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/COST?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "69ae1f7c24d379876ed7742a48d9b6178392f3177c433c221b2850459fdaba45",
+   "fetched_at_utc": "2026-10-30T08:53:38.055623+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/COST?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "9ad48bb36cf2ff6b71679b6a57668bc401fcf7697d9c797b5035e0a4bd6107ab",
+   "fetched_at_utc": "2026-10-30T08:53:38.312488+00:00"
+  }
+ ]
+}

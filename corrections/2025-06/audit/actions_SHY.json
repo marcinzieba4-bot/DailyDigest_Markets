@@ -1,0 +1,18 @@
+{
+ "ticker": "SHY",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SHY?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "24465dd2f837302ff1c5067a6c0f99469a7a0bb1e8da254d3e1c813a41ce9c3c",
+   "fetched_at_utc": "2026-10-30T08:53:28.897132+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SHY?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "fc348dad41eeb5826a52720932f82cfc0cc6282e03c5bb41d48c39169c8373fc",
+   "fetched_at_utc": "2026-10-30T08:53:29.114594+00:00"
+  }
+ ]
+}

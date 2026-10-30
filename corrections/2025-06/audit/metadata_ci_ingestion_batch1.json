@@ -1,0 +1,50 @@
+{
+  "purpose": "Hash-verified public Google News canonical metadata recovery for selected priority Reuters source-date screening; no publisher body or report prose fetches.",
+  "ingested_at_utc": "2026-10-30T09:03:15.716170+00:00",
+  "workflow_run_id": 41030214859,
+  "workflow_job_id": 123977912362,
+  "commit_sha": "447c7cfe2c446ad051dd5c262f3b4f1226706ef4",
+  "temporary_pr": "https://github.com/marcinzieba4-bot/DailyDigest_Markets/pull/4",
+  "input_sha256": "68e39a288ecf33a636d0f26e56dc641faef1b88c624cb32da1f05427e5679255",
+  "runner_sha256": "17b1549f22145dc8a5d74e9da9a0179533d5cee3b1bfd31655fd53d4be17ba18",
+  "resolver_sha256": "777a8e7b34cebbd95890cf49506299cadb8642a1e676baf32e5063d6620c2768",
+  "workflow_sha256": "fa0c5c9eae16dc5cdbc18a3fc476861b1c6cf58d2d67731e553d65877967509f",
+  "output_sha256": "2e3dd7bd475db111ca2d75479977dbb71cc252ed667930d19b6fdf16792b2a60",
+  "payload_sha256": "618d8376063b49f5b2e3dba3752ccd87dfcce3db5823fe84aaab380f4a8593b3",
+  "job_log_sha256": "bfa36b22d525c2f45e2573d79d124b0ae8fe94dd577751f3e79974597ffad362",
+  "records": 997,
+  "failures": 0,
+  "successful_urls_without_path_dates": 0,
+  "invalid_canonical_results": 0,
+  "existing_mapping_conflicts": 0,
+  "all_hash_checks_passed": true,
+  "requested_url_set_exact": true,
+  "imports": {
+    "canonical_reuters_urls.json": {
+      "successful_mappings_imported": 997,
+      "cache_records_before": 35,
+      "cache_records_after": 1032,
+      "before_sha256": "5e094a0c2de3d20bc2132682bbc69f88202c984f1869b23891a0178427a68510",
+      "after_sha256": "c494dd2427bdf50c8529641b78eb494daf9b5b75e6257ff57f991861927c60de"
+    },
+    "canonical_all_cited_urls.json": {
+      "successful_mappings_imported": 997,
+      "cache_records_before": 0,
+      "cache_records_after": 997,
+      "before_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "after_sha256": "2e3dd7bd475db111ca2d75479977dbb71cc252ed667930d19b6fdf16792b2a60"
+    }
+  },
+  "errors": {},
+  "original_body_vintage_proven": false,
+  "frozen_feeds_changed": false,
+  "specs_changed": false,
+  "source_change_verification": "Exact-head remote files matched all four expected SHA256 hashes; compare from initial main showed exactly the four reviewed workflow/recovery files.",
+  "run_completion": {
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "447c7cfe2c446ad051dd5c262f3b4f1226706ef4"
+  },
+  "files": "work/recovery_batch1/",
+  "transport_note": "The initial CI batch was queued after the prior July metadata challenge. Root ordinary native canonical probe subsequently succeeded at 2026-10-30T09:00:51Z; current native access is not described as blocked."
+}

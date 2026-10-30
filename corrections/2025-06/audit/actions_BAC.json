@@ -1,0 +1,18 @@
+{
+ "ticker": "BAC",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BAC?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "a1a7ba6d5e8c9a0ce8f71478b8395a93cc73af6b005943e3a81c01e5cacd76d7",
+   "fetched_at_utc": "2026-10-30T08:53:35.460795+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BAC?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "9233eed24468df5abc8bfec3d071f8a38bdb353f0c4ac72205838b8cfcfdf5e0",
+   "fetched_at_utc": "2026-10-30T08:53:35.696176+00:00"
+  }
+ ]
+}

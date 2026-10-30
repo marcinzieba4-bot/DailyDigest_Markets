@@ -1,0 +1,18 @@
+{
+ "ticker": "ASHR",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ASHR?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "3602c13c4ecd47f93d593227cc03bda925e67bd27ff02fefa84f627dd45d008b",
+   "fetched_at_utc": "2026-10-30T08:53:26.572806+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ASHR?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "0b0f9cf11901450ed27f5806ed7fa55aa4e9d19858bf59947040f037c650a8ad",
+   "fetched_at_utc": "2026-10-30T08:53:26.746526+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "UNH",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/UNH?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "0a32c06fb26e74700585e386a481599acc5402bee6a66951f30484fff8652e37",
+   "fetched_at_utc": "2026-10-30T08:53:37.160746+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/UNH?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "f630e892ef3161fbfdda340bf4aaeadeba341526013a4c693c6dedefa82a8eb0",
+   "fetched_at_utc": "2026-10-30T08:53:37.720392+00:00"
+  }
+ ]
+}

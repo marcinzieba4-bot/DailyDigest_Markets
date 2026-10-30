@@ -1,0 +1,18 @@
+{
+ "ticker": "RIO.AX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RIO.AX?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "cfa92a2d0a6302e39bf9f9250d4138595f6aa978c0138921948171ab3cf01db5",
+   "fetched_at_utc": "2026-10-30T08:53:27.392604+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RIO.AX?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "e701f5e9c0b119c2aa46048b12d4929491e6218859189d461ef8784436db9315",
+   "fetched_at_utc": "2026-10-30T08:53:27.635236+00:00"
+  }
+ ]
+}

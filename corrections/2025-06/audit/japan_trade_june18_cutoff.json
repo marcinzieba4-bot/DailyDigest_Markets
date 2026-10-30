@@ -1,0 +1,49 @@
+{
+  "reviewer": "/root/jun_review",
+  "reviewed_at_utc": "2026-10-30T10:14:35.274512+00:00",
+  "report_date": "2025-06-18",
+  "cutoff_exclusive_utc": "2025-06-18T00:00:00+00:00",
+  "underlying_release": "Japan May2025 provisional national merchandise trade",
+  "scheduled_release_jst": "2025-06-18T08:50:00+09:00",
+  "scheduled_release_utc": "2025-06-17T23:50:00+00:00",
+  "basis": "Mixed provenance: original primary release datedJune18 plus dated national official-calendar printout on association host, current primary national release protocol and economic-calendar actuals. No exact historical eStat posting timestamp was located.",
+  "evidence": [
+    {
+      "url": "https://www.customs.go.jp/toukei/shinbun/trade-st_e/2025/2025054e.pdf",
+      "access": "directly opened original primary dated release",
+      "scope": "May2025 national provisional release datedJune18,2025; no exactclock printed."
+    },
+    {
+      "url": "https://www.jcga-page.or.jp/struct/wp-content/uploads/250207yoteihyou-1.pdf",
+      "access": "directly opened dated official-national-calendar printout/reproduction, hosted by Japan Customs Brokers Association",
+      "schedule_vintage": "2025-02-07",
+      "scope": "May2025 full-month provisional column listsJune18. Header says08:50. Host is an association, not the original government domain; provenance explicitly distinguished."
+    },
+    {
+      "url": "https://www.customs.go.jp/toukei/calendar/calend.htm",
+      "access": "directly opened primary national calendar",
+      "scope": "Current page datedJan19,2026 confirms national provisional release protocol08:50JST, separately final/detail09:30; current page does not itself prove2025day."
+    },
+    {
+      "url": "https://www.customs.go.jp/nagoya/boueki/kouhyouyotei-0702.pdf",
+      "access": "directly opened primary regional2025schedule",
+      "scope": "CorroboratesJune18date only. Explicit10:30 regionalrelease; NOT evidence for national08:50clock."
+    },
+    {
+      "url": "https://www.cmegroup.com/education/events/econoday/646977",
+      "access": "directly opened actuals; search index supplies historical eventdatetime",
+      "event_time_display": "June17,2025 06:50PM CT",
+      "event_time_utc": "2025-06-17T23:50:00+00:00",
+      "scope": "Independent secondary economic-calendar actuals align with national release; this is event timing, not proof of current-page publication time."
+    },
+    {
+      "url": "https://www.fxblue.com/calendar/item/4cba97ab-ffe8-4f0d-a661-b457df5de695/c18dd204-e1a4-466a-9990-95314526db66",
+      "access": "search-index metadata",
+      "event_time_display": "June17,2025 23:50, actual export decline1.7%",
+      "scope": "Secondary corroboration of event timing, not original page timestamp."
+    }
+  ],
+  "admission_scope": "Only underlying national trade fact already contained in own frozen CNBCn1392 headline: exports fell at sharpest pace in8months as US shipments fell. Do not add new primary numeric values or later commentary/reactions. Do not claim CNBC original article was published before00UTC; original CNBC clock remains unverified (restricted fetch).",
+  "limitation": "Historical08:50availability is corroborated from dated schedule+original release+actual-event calendars, not a directly recovered original intraday government posting. No evidence of delay found; a schedule alone would not prove absence of an unexpected delay. No later June18 session reaction admitted.",
+  "known_before_utc_corroborated": "2025-06-17T23:51:00+00:00"
+}

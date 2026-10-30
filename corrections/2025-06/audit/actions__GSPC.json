@@ -1,0 +1,18 @@
+{
+ "ticker": "^GSPC",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "5bbb7768ca49e9aa106da51ac7bfde767d1f3e66875414b343937721089a6454",
+   "fetched_at_utc": "2026-10-30T08:53:05.337828+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "0a4666516e9c447216f4b9e07f3239fc7683fdfc2c1eb880d78ffe35fcbda539",
+   "fetched_at_utc": "2026-10-30T08:53:05.866972+00:00"
+  }
+ ]
+}

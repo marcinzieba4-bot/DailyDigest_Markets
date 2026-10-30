@@ -1,0 +1,18 @@
+{
+ "ticker": "NKE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NKE?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "f13ecdfa1e91c836b07eaf1950080c50fad9724c3a6b2af65741f1f60a248170",
+   "fetched_at_utc": "2026-10-30T08:53:38.411959+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NKE?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "d40616f21081daf7a990bbec4a85bcd900cdcea45e8c9f9c5ee157993b7aef90",
+   "fetched_at_utc": "2026-10-30T08:53:38.723703+00:00"
+  }
+ ]
+}

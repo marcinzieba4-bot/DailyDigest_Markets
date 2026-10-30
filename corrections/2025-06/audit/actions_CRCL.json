@@ -1,0 +1,18 @@
+{
+ "ticker": "CRCL",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CRCL?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "470a2501583d395ed23807a03bccdac254123ec7377e04a4e9bd6ea68284f754",
+   "fetched_at_utc": "2026-10-30T08:53:07.775003+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CRCL?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "0730b6c08c04ca8c14f81c65c85496da5cc07f63d2850a36b6f192144f13da43",
+   "fetched_at_utc": "2026-10-30T08:53:08.013380+00:00"
+  }
+ ]
+}

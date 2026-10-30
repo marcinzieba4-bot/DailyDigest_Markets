@@ -1,0 +1,54 @@
+{
+  "reviewer": "/root/jun_review",
+  "checked_at_utc": "2026-10-30T09:21:24.578297+00:00",
+  "report_date": "2025-06-30",
+  "cutoff_utc": "2025-06-30T00:00:00Z",
+  "status": "Actual rescission/collection-halt announcement excluded at June30cutoff",
+  "precutoff_actual_availability_verified": false,
+  "approved_exception": false,
+  "disposition": "Retain only eligible own-date prior dispute/negotiation risks; do not claim the tax was rescinded, collection halted or talks restored at midnightUTC. The June29 Canadian local date does not prove pre-cutoff UTC availability.",
+  "earliest_observed_primary_announcement_utc": "2025-06-30T02:06:22.074Z",
+  "earliest_observed_primary_time_is_platform_id_derived": true,
+  "original_status_url": "https://x.com/FP_Champagne/status/1939505759827697908",
+  "original_status_id": "1939505759827697908",
+  "derived_time_method": "TwitterSnowflake: timestamp_ms=(integer_status_id >>22)+1288834974657. ID linked in original CanadianPress/CityNews article; timestamp conversion yieldsJune30 02:06:22.074UTC. Xpage itself returned403, so this is a platformID-derived time, not a directly rendered Xtimestamp.",
+  "earliest_opened_news_timestamp_utc": "2025-06-30T02:12:00Z",
+  "scope_limit": "This records the earliest officialpost/news time found in the reviewed evidence, not a proof that no earlier private conversation or unlocated publication occurred. Because no pre-cutoff public proof was found, the actual announcement remains conservatively excluded.",
+  "sources": [
+    {
+      "url": "https://www.canada.ca/en/department-finance/news/2025/06/canada-rescinds-digital-services-tax-to-advance-broader-trade-negotiations-with-the-united-states.html",
+      "kind": "OfficialFinanceCanada release directlyopened",
+      "observed_date": "June29,2025 Ottawa; page-detailsJune30,2025",
+      "exact_original_intraday_time_displayed": false,
+      "support": "Officialrelease confirmsintentiontorescindedtax/haltcollection butprovides no intradaytimestamp capableofprovingbefore00UTC."
+    },
+    {
+      "url": "https://toronto.citynews.ca/2025/06/29/canada-rescinds-digital-services-tax-to-restart-talks-with-the-united-states/",
+      "kind": "Directlyopened CanadianPress/CityNews originalpublication metadata andofficialtweetlink",
+      "observed_publication": "June29,2025 10:47pm Toronto (EDT UTC-04)",
+      "converted_utc": "2025-06-30T02:47:00Z",
+      "support": "Links FinanceMinisteroriginalXstatus1939505759827697908 andquotesannouncement. Allverifiedtimingaftercutoff."
+    },
+    {
+      "url": "https://news.bloombergtax.com/financial-accounting/canada-rescinds-digital-services-tax-to-advance-us-trade-talks",
+      "kind": "Directlyopened BloombergNews contemporaneouspublication",
+      "observed_publication": "June30,2025 2:12AMUTC",
+      "support": "EarliestexplicitUTCnews timestamp found; afterreportcutoff."
+    },
+    {
+      "url": "https://www.cnbc.com/2025/06/30/canada-rescinds-digital-services-tax-after-trump-cuts-off-us-trade-talks.html",
+      "kind": "Originalpublishersearchmetadata mirroredinsearch; directpagefetch restricted",
+      "observed_publication": "SunJun29,2025 10:35PMEDT",
+      "converted_utc": "2025-06-30T02:35:00Z",
+      "support": "Corroborates lateCanadianlocalday/nextUTCdaypublication; fulloriginalpage unavailable."
+    },
+    {
+      "url": "https://www.streetinsider.com/Reuters/Canada%2Brescinds%2Bdigital%2Bservices%2Btax%2Bto%2Badvance%2Bstalled%2BUS%2Btrade%2Btalks/24993106.html",
+      "kind": "Reuterssyndication searchmetadata",
+      "observed_publication": "June29,2025 10:25PMEDT",
+      "converted_utc": "2025-06-30T02:25:00Z",
+      "support": "ObservedReuterssyndicationtimestampaftercutoff; laterupdatedbodydetails notadmitted."
+    }
+  ],
+  "negative_search_scope": "ReviewedFinanceCanadaoriginalrelease, officialministerpost linkedfromCanadianPress, BloombergNews,Reuterssyndications,CNBC,AP/CanadianPress/CNNandPoliticosearchresults. No exactpre00UTCactualannouncementfound."
+}

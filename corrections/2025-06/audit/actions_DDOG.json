@@ -1,0 +1,18 @@
+{
+ "ticker": "DDOG",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DDOG?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "7ed9552e28028b895af37f9926f94ed959668bf80475ae8ba11d37d5a899620c",
+   "fetched_at_utc": "2026-10-30T08:53:31.951461+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DDOG?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "b657416590a1b0aba7f140cbd42ba65433d420a457ba3f7418f55ba45355bacd",
+   "fetched_at_utc": "2026-10-30T08:53:32.217920+00:00"
+  }
+ ]
+}

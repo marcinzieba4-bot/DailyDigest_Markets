@@ -1,0 +1,18 @@
+{
+ "ticker": "TPE.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TPE.WA?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "84ac65317ff552852f1617a076b05b559d3366e91a034d540e9fcc1171c6b996",
+   "fetched_at_utc": "2026-10-30T08:53:15.865348+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TPE.WA?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "8d8b8e28410de8075cfcdaf61dd95625da76d56536f112ba54c8d9b35e4fed91",
+   "fetched_at_utc": "2026-10-30T08:53:16.810202+00:00"
+  }
+ ]
+}

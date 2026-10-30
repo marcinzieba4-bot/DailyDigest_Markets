@@ -1,0 +1,18 @@
+{
+ "ticker": "IREN",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/IREN?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "940174180edd8343673b7d6a91aa808efc968df25e1d40884e19ffb4efabeeda",
+   "fetched_at_utc": "2026-10-30T08:53:08.072481+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/IREN?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "add53b680a8bc81a6071fe61cd9573fe0507eeecfb88f3d25c009974dc3cabac",
+   "fetched_at_utc": "2026-10-30T08:53:08.335689+00:00"
+  }
+ ]
+}

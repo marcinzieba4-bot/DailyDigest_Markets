@@ -1,0 +1,24 @@
+{
+ "ticker": "XLU",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2025-12-05",
+   "factor": 2.0,
+   "ratio": "2:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLU?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "09d328c0943a105b7604e9ebb1102b3ed7b3a7260c4206c067b7b2c89eed6ab1",
+   "fetched_at_utc": "2026-10-30T08:53:28.355690+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLU?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "6748ef07820cde107e2d569179ba4130fdcd9f2d62d24c675b49ec2c80aaa707",
+   "fetched_at_utc": "2026-10-30T08:53:28.677416+00:00"
+  }
+ ]
+}

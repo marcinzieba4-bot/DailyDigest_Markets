@@ -1,0 +1,18 @@
+{
+ "ticker": "RDDT",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RDDT?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "ed3456e4d87498217d9ed41d5d80eb43058106dcf3af1087c699b87f6f831152",
+   "fetched_at_utc": "2026-10-30T08:53:32.498948+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RDDT?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "49bf1e23b25555207cf0c41e874010a1a3f0260a6f4fdf4de438fd18b28819ac",
+   "fetched_at_utc": "2026-10-30T08:53:32.688029+00:00"
+  }
+ ]
+}

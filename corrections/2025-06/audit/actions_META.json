@@ -1,0 +1,18 @@
+{
+ "ticker": "META",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/META?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "32e22543e09763bbb6f4b32e3d6b4d93ab4c46d4b3a5f82292b39cb60f5c6d09",
+   "fetched_at_utc": "2026-10-30T08:53:30.163476+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/META?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "b250383dbd1d29e49962f2171f0489729083e5ed7c3dc44b3597f54e508b9ba6",
+   "fetched_at_utc": "2026-10-30T08:53:30.423696+00:00"
+  }
+ ]
+}

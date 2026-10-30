@@ -1,0 +1,18 @@
+{
+ "ticker": "ABBV",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ABBV?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "cc0e49be40adf8bab18072f765675db058dfb5bbc700b873fbac09cc154f02ef",
+   "fetched_at_utc": "2026-10-30T08:53:37.185513+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ABBV?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "0a8d131689d4115f18efb2a84e8baa3a9a2a970fdac5755a603cd37d660f3994",
+   "fetched_at_utc": "2026-10-30T08:53:37.606042+00:00"
+  }
+ ]
+}

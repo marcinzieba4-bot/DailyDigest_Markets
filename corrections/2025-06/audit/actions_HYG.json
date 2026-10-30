@@ -1,0 +1,18 @@
+{
+ "ticker": "HYG",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HYG?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "2b4ba8e454a8f3b9674690a231079b3339b19b00f9d68ff18a510ee279c1fad1",
+   "fetched_at_utc": "2026-10-30T08:53:28.604437+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HYG?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "9bfc9d26289efc84b0d7cc27fcbbdf8174fcd5f66abe46297c83cbcf64b665b1",
+   "fetched_at_utc": "2026-10-30T08:53:28.782454+00:00"
+  }
+ ]
+}

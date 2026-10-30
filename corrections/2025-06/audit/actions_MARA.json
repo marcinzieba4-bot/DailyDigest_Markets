@@ -1,0 +1,18 @@
+{
+ "ticker": "MARA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MARA?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "a7889d82b2440768aeb16b31056a257e40edcfe781eff83112c81e7aebe4ac7f",
+   "fetched_at_utc": "2026-10-30T08:53:07.865088+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MARA?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "a3138c74fb3444e539e1274807955bee759a326746d76be84146da2ef22bf98f",
+   "fetched_at_utc": "2026-10-30T08:53:08.104384+00:00"
+  }
+ ]
+}

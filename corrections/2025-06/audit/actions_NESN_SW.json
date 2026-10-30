@@ -1,0 +1,18 @@
+{
+ "ticker": "NESN.SW",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NESN.SW?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "d5f90f9e881e4b5c1be475a14f1add6a5bf37fa744345d33567f90771e9a0287",
+   "fetched_at_utc": "2026-10-30T08:53:24.506752+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NESN.SW?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "4eb01f18ce785a746d256cbfb7fafe59f1807b000bf0f28394c963b044d9370b",
+   "fetched_at_utc": "2026-10-30T08:53:25.847521+00:00"
+  }
+ ]
+}

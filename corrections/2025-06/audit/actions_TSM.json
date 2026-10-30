@@ -1,0 +1,18 @@
+{
+ "ticker": "TSM",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TSM?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "8ff3e70d6b695a6897e5afac527dbafd2741220589a958a51770a19f49917979",
+   "fetched_at_utc": "2026-10-30T08:53:30.570344+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TSM?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "6f43f26174a6c51eab312a63af6454c297f5cab54b7c6ca2a8956d1c29ac4148",
+   "fetched_at_utc": "2026-10-30T08:53:30.846836+00:00"
+  }
+ ]
+}

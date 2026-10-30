@@ -1,0 +1,18 @@
+{
+ "ticker": "LITE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LITE?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "d7138d2f706eb98eff3cd5fb7758da4ad9cd044d3246afe478ab44fc80c2f5ae",
+   "fetched_at_utc": "2026-10-30T08:53:31.607315+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LITE?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "553472ba3c4aa1291fb1247622f408d38d88fef1e1573a39baca9fd358f76f43",
+   "fetched_at_utc": "2026-10-30T08:53:31.831226+00:00"
+  }
+ ]
+}

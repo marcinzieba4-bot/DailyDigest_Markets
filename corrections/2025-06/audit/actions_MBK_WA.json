@@ -1,0 +1,18 @@
+{
+ "ticker": "MBK.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MBK.WA?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "3ea1f781c2ca7668d9885f65a047a9812a6ab4b5949bcc043499f4724193cf4e",
+   "fetched_at_utc": "2026-10-30T08:53:15.165785+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MBK.WA?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "b3692ca54ecdd0263a3d6afa04d885997247ca27346283179039f86902f8b360",
+   "fetched_at_utc": "2026-10-30T08:53:16.202810+00:00"
+  }
+ ]
+}

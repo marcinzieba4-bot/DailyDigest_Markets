@@ -1,0 +1,36 @@
+{
+  "reviewer": "/root/jun_review",
+  "reviewed_at_utc": "2026-10-30T10:13:03.095971+00:00",
+  "report_date": "2025-06-20",
+  "cutoff_exclusive_utc": "2025-06-20T00:00:00+00:00",
+  "own_feed_id": "n4461",
+  "headline": "Shift4 To Buy Smartpay For $180M To Deepen Australia-New Zealand Footprint: Retail Shrugs For Now",
+  "pre_cutoff_availability_verified": false,
+  "decision": "Exclude the definitive Smartpay agreement and June23 retail-sentiment signal from June20. Frozen June19 index timestamp is a several-day misdate. Earlier nonbinding interest is a separate fact and cannot be substituted for this definitive agreement.",
+  "evidence": [
+    {
+      "url": "https://investors.shift4.com/news-events/press-releases/detail/265/shift4-to-acquire-australian-payments-leader-smartpay",
+      "access": "directly opened primary issuer release",
+      "release_date": "2025-06-22",
+      "exact_intraday_time": "not displayed",
+      "scope": "Definitive agreement announced by issuer June22; no assumption about US local date required to establish this is later than June20 cutoff."
+    },
+    {
+      "url": "https://www.nzx.com/announcements/453737",
+      "access": "directly opened primary exchange announcement",
+      "displayed_time": "20:52 Sun22June2025",
+      "timezone": "unspecified in extracted display; not converted",
+      "scope": "Agreement announcement several days after the June20 cutoff. Attached announcement has June23 local-date reference; exact earliest original UTC is not asserted."
+    },
+    {
+      "url": "https://in.investing.com/news/stock-market-news/shift4-to-buy-smartpay-for-180m-to-deepen-australianew-zealand-footprint-retail-shrugs-for-now-4884614",
+      "access": "directly opened exact Stocktwits syndication linking original canonical chmPHEqRR5i",
+      "publication_display": "23-06-2025 12:24pm; updated12:45pm",
+      "timezone": "not assumed from India domain/display",
+      "sentiment_snapshot": "02:53a.m.ET June23,2025",
+      "sentiment_snapshot_utc": "2025-06-23T06:53:00+00:00",
+      "scope": "The matched retail-shrug signal itself is explicitly June23, after June20 cutoff."
+    }
+  ],
+  "limitation": "No absolute earliest UTC announcement time proved. Evidence suffices for conservative exclusion from June20, not for approving another report-date exception."
+}

@@ -1,0 +1,24 @@
+{
+ "ticker": "XLY",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2025-12-05",
+   "factor": 2.0,
+   "ratio": "2:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLY?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "193f1159a2536873da79f5b04e9dcb30b514d6d407fefcef2161c163ec1820ce",
+   "fetched_at_utc": "2026-10-30T08:53:27.871636+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLY?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "f6e49df716fa38faa574e5a467ef90785a9175db76a7e069d2e626f5a9317ead",
+   "fetched_at_utc": "2026-10-30T08:53:28.043632+00:00"
+  }
+ ]
+}

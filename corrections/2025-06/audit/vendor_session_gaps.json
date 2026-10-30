@@ -1,0 +1,391 @@
+{
+  "month": "2025-06",
+  "unexpected_gaps": [],
+  "explicit_cases": [
+    {
+      "report_date": "2025-06-02",
+      "ticker": "^GSPC",
+      "expected_session": "2025-05-30"
+    },
+    {
+      "report_date": "2025-06-20",
+      "ticker": "^GSPC",
+      "expected_session": "2025-06-18"
+    },
+    {
+      "report_date": "2025-06-23",
+      "ticker": "^GSPC",
+      "expected_session": "2025-06-20"
+    },
+    {
+      "report_date": "2025-06-03",
+      "ticker": "000001.SS",
+      "expected_session": "2025-05-30"
+    },
+    {
+      "report_date": "2025-06-03",
+      "ticker": "^HSI",
+      "expected_session": "2025-06-02"
+    },
+    {
+      "report_date": "2025-06-04",
+      "ticker": "^KS11",
+      "expected_session": "2025-06-02"
+    },
+    {
+      "report_date": "2025-06-09",
+      "ticker": "^KS11",
+      "expected_session": "2025-06-05"
+    },
+    {
+      "report_date": "2025-06-02",
+      "ticker": "^TWII",
+      "expected_session": "2025-05-29"
+    },
+    {
+      "report_date": "2025-06-10",
+      "ticker": "^AXJO",
+      "expected_session": "2025-06-06"
+    },
+    {
+      "report_date": "2025-06-20",
+      "ticker": "PKO.WA",
+      "expected_session": "2025-06-18"
+    }
+  ],
+  "additional_history_case": {
+    "ticker": "000001.SS",
+    "previous_session": "2025-04-30",
+    "next_session": "2025-05-06",
+    "reason": "MainlandChinaLaborDayexchangeholidayMay1\u20135; neededforJune2 20-observation lookback."
+  },
+  "important_distinction": "HongKongwasopenJune2 whilemainlandChinawasclosed.",
+  "IPO_or_series_start_cases": [
+    {
+      "date": "2025-06-02",
+      "ticker": "BMNR",
+      "reason": "No completed source observation before the report cutoff."
+    },
+    {
+      "date": "2025-06-02",
+      "ticker": "CRCL",
+      "reason": "No completed source observation before the report cutoff."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "BMNR",
+      "reason": "No completed source observation before the report cutoff."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "CRCL",
+      "reason": "No completed source observation before the report cutoff."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "BMNR",
+      "reason": "No completed source observation before the report cutoff."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "CRCL",
+      "reason": "No completed source observation before the report cutoff."
+    },
+    {
+      "date": "2025-06-05",
+      "ticker": "BMNR",
+      "reason": "No completed source observation before the report cutoff."
+    },
+    {
+      "date": "2025-06-05",
+      "ticker": "CRCL",
+      "reason": "No completed source observation before the report cutoff."
+    }
+  ],
+  "partial_history_metrics": [
+    {
+      "date": "2025-06-06",
+      "ticker": "BMNR",
+      "prior_observations": 1,
+      "unavailable_sessions": [
+        1,
+        5,
+        20
+      ]
+    },
+    {
+      "date": "2025-06-06",
+      "ticker": "CRCL",
+      "prior_observations": 1,
+      "unavailable_sessions": [
+        1,
+        5,
+        20
+      ]
+    },
+    {
+      "date": "2025-06-09",
+      "ticker": "BMNR",
+      "prior_observations": 2,
+      "unavailable_sessions": [
+        5,
+        20
+      ]
+    },
+    {
+      "date": "2025-06-09",
+      "ticker": "CRCL",
+      "prior_observations": 2,
+      "unavailable_sessions": [
+        5,
+        20
+      ]
+    },
+    {
+      "date": "2025-06-10",
+      "ticker": "BMNR",
+      "prior_observations": 3,
+      "unavailable_sessions": [
+        5,
+        20
+      ]
+    },
+    {
+      "date": "2025-06-10",
+      "ticker": "CRCL",
+      "prior_observations": 3,
+      "unavailable_sessions": [
+        5,
+        20
+      ]
+    },
+    {
+      "date": "2025-06-11",
+      "ticker": "BMNR",
+      "prior_observations": 4,
+      "unavailable_sessions": [
+        5,
+        20
+      ]
+    },
+    {
+      "date": "2025-06-11",
+      "ticker": "CRCL",
+      "prior_observations": 4,
+      "unavailable_sessions": [
+        5,
+        20
+      ]
+    },
+    {
+      "date": "2025-06-12",
+      "ticker": "BMNR",
+      "prior_observations": 5,
+      "unavailable_sessions": [
+        5,
+        20
+      ]
+    },
+    {
+      "date": "2025-06-12",
+      "ticker": "CRCL",
+      "prior_observations": 5,
+      "unavailable_sessions": [
+        5,
+        20
+      ]
+    },
+    {
+      "date": "2025-06-13",
+      "ticker": "BMNR",
+      "prior_observations": 6,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-13",
+      "ticker": "CRCL",
+      "prior_observations": 6,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-16",
+      "ticker": "BMNR",
+      "prior_observations": 7,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-16",
+      "ticker": "CRCL",
+      "prior_observations": 7,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-17",
+      "ticker": "BMNR",
+      "prior_observations": 8,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-17",
+      "ticker": "CRCL",
+      "prior_observations": 8,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-18",
+      "ticker": "BMNR",
+      "prior_observations": 9,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-18",
+      "ticker": "CRCL",
+      "prior_observations": 9,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-19",
+      "ticker": "BMNR",
+      "prior_observations": 10,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-19",
+      "ticker": "CRCL",
+      "prior_observations": 10,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-20",
+      "ticker": "BMNR",
+      "prior_observations": 10,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-20",
+      "ticker": "CRCL",
+      "prior_observations": 10,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-23",
+      "ticker": "BMNR",
+      "prior_observations": 11,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-23",
+      "ticker": "CRCL",
+      "prior_observations": 11,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-24",
+      "ticker": "BMNR",
+      "prior_observations": 12,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-24",
+      "ticker": "CRCL",
+      "prior_observations": 12,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-25",
+      "ticker": "BMNR",
+      "prior_observations": 13,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-25",
+      "ticker": "CRCL",
+      "prior_observations": 13,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-26",
+      "ticker": "BMNR",
+      "prior_observations": 14,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-26",
+      "ticker": "CRCL",
+      "prior_observations": 14,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-27",
+      "ticker": "BMNR",
+      "prior_observations": 15,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-27",
+      "ticker": "CRCL",
+      "prior_observations": 15,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-30",
+      "ticker": "BMNR",
+      "prior_observations": 16,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-06-30",
+      "ticker": "CRCL",
+      "prior_observations": 16,
+      "unavailable_sessions": [
+        20
+      ]
+    }
+  ]
+}

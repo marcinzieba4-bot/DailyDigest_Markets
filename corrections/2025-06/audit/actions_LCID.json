@@ -1,0 +1,24 @@
+{
+ "ticker": "LCID",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2025-09-02",
+   "factor": 0.1,
+   "ratio": "1:10"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LCID?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "5fe35a1158b6048e3bb8298dfdf3684ea83484c69a71be7a001092ce907a7057",
+   "fetched_at_utc": "2026-10-30T08:53:35.060748+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LCID?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "522bec4f859aa848bef37dba9f5d29970239b7d602218b2f58dbe9ea62392593",
+   "fetched_at_utc": "2026-10-30T08:53:35.326283+00:00"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+  "reviewer": "/root/jun_review",
+  "checked_at_utc": "2026-10-30T09:25:59.802277+00:00",
+  "report_date": "2025-06-05",
+  "cutoff_utc": "2025-06-05T00:00:00Z",
+  "status": "IPOpricing announcement verified before cutoff; exchange trading and offering closing still prospective",
+  "known_before_utc": "2025-06-04T22:23:00Z",
+  "event_time_local": "BusinessWireprimary-release syndication17:50EDT June4; independently Reuters22:22UTC June4",
+  "allowed_scope": [
+    "Circle IPO priced at31dollars per share;34million offeredshares, onlyifowneligibleheadlineprovidesthosefacts.",
+    "June5expectedexchange trading andJune6expectedclosing mustremain prospective beforeJune5cutoff."
+  ],
+  "excluded_scope": [
+    "AnyJune5trading price,shareperformance,completedlisting-sessionorJune6closing.",
+    "Latergreenshoeexercise/proceeds or postcutoffpublisherdetails."
+  ],
+  "sources": [
+    {
+      "url": "https://www.circle.com/pressroom/circle-announces-pricing-of-upsized-initial-public-offering",
+      "kind": "Originalissuerpressrelease directlyopened",
+      "observed_publication": "June4,2025; no intraday timestamp rendered",
+      "support": "Issuerconfirms31dollarprice/34millionshares; tradingexpectedJune5 andclosingexpectedJune6subjecttoconditions."
+    },
+    {
+      "url": "https://www.businesswire.com/news/home/20250604831596/en/Circle-Announces-Pricing-of-Upsized-Initial-Public-Offering",
+      "kind": "Originalprimarynewswire directlyopened",
+      "observed_publication": "June4 releaseID;intradaytime notrenderedbywebparser",
+      "support": "Issuerrelease facts match."
+    },
+    {
+      "url": "https://markets.financialcontent.com/1discountbrokerage/article/bizwire-2025-6-4-circle-announces-pricing-of-upsized-initial-public-offering",
+      "kind": "Syndicated primaryBusinessWirerelease directlyopened",
+      "observed_publication": "June04,2025 at17:50PMEDT",
+      "converted_utc": "2025-06-04T21:50:00Z",
+      "support": "IdentifiesCircleissuer viaBusinessWire andlinkstheoriginalrelease;datedsyndicationconfirms beforeUTCcutoff."
+    },
+    {
+      "url": "https://www.reuters.com/technology/stablecoin-issuer-circle-raises-105-billion-upsized-us-ipo-2025-06-04/",
+      "kind": "Contemporaneous originalReuters publication directlyopened",
+      "observed_publication": "June4,2025 10:22PMUTC",
+      "converted_utc": "2025-06-04T22:22:00Z",
+      "support": "IndependentexplicitUTCconfirmationthatIPOpricingwasalreadypublicbeforeJune5midnight."
+    },
+    {
+      "url": "https://www.streetinsider.com/Hot%2BIPOs/Circle%2BInternet%2BGroup%2B(CRCL)%2BIPO%2Bprices%2Bat%2B$31/24899406.html",
+      "kind": "Contemporaneous publisher confirmation directlyopened",
+      "observed_publication": "June4,2025 5:51PMEDT",
+      "converted_utc": "2025-06-04T21:51:00Z",
+      "support": "Corroborates31dollarpricing pre-cutoff."
+    }
+  ],
+  "scope_limit": "Availability of the specified pricingannouncement only; own-date headlinefactsremainrequired. Originalbodyvintageforotherpublisherarticles isnotasserted."
+}

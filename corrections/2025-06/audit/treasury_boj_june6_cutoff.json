@@ -1,0 +1,39 @@
+{
+  "reviewer": "/root/jun_review",
+  "reviewed_at_utc": "2026-10-30T10:39:49.321725+00:00",
+  "report_date": "2025-06-06",
+  "cutoff_exclusive_utc": "2025-06-06T00:00:00+00:00",
+  "own_feed_id": "n4035",
+  "underlying_event": "Treasury June2025 FX Report recommends continued BOJ tightening conditional on domestic fundamentals.",
+  "pre_cutoff_underlying_availability_corroborated": true,
+  "known_before_utc": "2025-06-05T21:50:00+00:00",
+  "evidence": [
+    {
+      "url": "https://home.treasury.gov/news/press-releases/sb0157",
+      "access": "directly opened primary June5 release notice with link217 to full report",
+      "date_display": "June5,2025",
+      "scope": "Confirms June5 release of the full semiannual report; primary page has date but no intraday clock in extracted text."
+    },
+    {
+      "url": "https://home.treasury.gov/system/files/136/June-2025-FX-Report.pdf",
+      "access": "directly opened original primary report via release notice",
+      "pdf_page_index": 24,
+      "scope": "Contains recommendation that BOJ policy tightening continue in response to domestic fundamentals including growth/inflation. Existing report text only; no new report numerics imported."
+    },
+    {
+      "url": "https://www.reuters.com/world/china/us-finds-no-currency-manipulators-adds-ireland-switzerland-monitoring-2025-06-05/",
+      "access": "directly opened contemporaneous Reuters report/factbox",
+      "publication_display": "June5,2025 9:48PM UTC;updatedJune5,2025",
+      "scope": "Reports released Treasury review before cutoff, corroborating full report availability. This is the intraday evidence; it does not make the primary press page itself timestamped."
+    },
+    {
+      "url": "https://www.streetinsider.com/Reuters/US%2BTreasury%2Bsays%2BBOJ%2Bshould%2Bcontinue%2Bto%2Btighten%2Bpolicy/24905708.html",
+      "access": "search-index exact targeted Reuters syndication time",
+      "publication_display": "June5,2025 8:09PM EDT",
+      "publication_utc": "2025-06-06T00:09:00+00:00",
+      "scope": "Targeted later report is AFTER cutoff; do not rely on its later Kato comments/reactions."
+    }
+  ],
+  "admission_scope": "Only underlying Treasury recommendation from own n4035 headline, clearly attributed to Treasury and not a BOJ decision. No CNBC original-publication claim, later Japanese-government response, market reaction, new primary numeric or guaranteed rate path.",
+  "limitations": "Historical full-report public availability is corroborated by primary dated release/report plus pre-cutoff wire, not a recovered Treasury server-publication timestamp. Exact original CNBC publication remains unverified."
+}

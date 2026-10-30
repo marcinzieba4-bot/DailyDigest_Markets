@@ -1,0 +1,65 @@
+{
+  "date": "2025-06-11",
+  "author": "jun_writer_f",
+  "historical_cutoff_utc": "2025-06-11T00:00:00Z",
+  "spec_path": "specs/2025-06-11.json",
+  "spec_sha256": "a6769894e5b73a96290b535cb1e7f3c148adbb0b2b6b1eb83ee9909c2cea3f8e",
+  "feed_path": "feeds/2025-06-11.json.gz",
+  "feed_sha256": "c0126eb5256864d545b149b3f6fce5ab43ed971f367015814b96a7d38aa01420",
+  "card_path": "cards/2025-06-11.json",
+  "card_sha256": "a398c85c8b6e8ae706fadb7801b03cb7112389eeeb0a3ce2aed7dc2d22a3a24e",
+  "html_path": "html/2025-06-11.html",
+  "html_sha256": "cd770504416ec2352d5b8d5c3584fd8c18539883d0133e3eadf1995b1912df25",
+  "json_path": "json/2025-06-11_Market_Intelligence.json",
+  "json_sha256": "a5ba1f97a4a61b2ca3ac85b40da3cb7d00ca9877c26ba3ce274fbb07bc2ec395",
+  "verification": {
+    "command": "python3 -I tools/verify.py 2025-06-11",
+    "status": "PASS",
+    "fail_count": 0,
+    "warning_count": 0,
+    "words": 10428,
+    "distinct_source_ids": 120
+  },
+  "render": {
+    "command": "python3 -I tools/render.py 2025-06-11",
+    "status": "success",
+    "bytes": 223597
+  },
+  "retail_words": [
+    725,
+    172,
+    175,
+    155
+  ],
+  "retail_regex_words": [
+    728,
+    175,
+    179,
+    158
+  ],
+  "timing_review": {
+    "excluded": [
+      "US May CPI actual released during June11; inflation remains pending",
+      "Oracle earnings released later June11; release remains pending",
+      "June11 Musk regret/apology post; no eligible proof before00UTC",
+      "Any unsupported realised outcome of initial London framework or planned nuclear/quantum projects"
+    ],
+    "treated_as_pending_or_conditional": [
+      "London officials framework subject to Trump/Xi approval and implementation; not attributed as cause of earlier June10 US cash-session advance",
+      "Rolls-Royce small modular reactor backing and Sizewell C funding are project steps, not operating reactors",
+      "Westinghouse targeted expansion is ambition, not contracted/completed whole-programme revenues",
+      "IBM Starling and Blue Jay roadmap targets are not completed computers",
+      "Reported Meta Scale AI stake transaction remains prospective",
+      "IPO targets and marketed xAI debt are not completed capital raises",
+      "WIBOR legal consideration is not an adverse court judgment"
+    ]
+  },
+  "evidence_discipline": {
+    "only_own_date_headline_card_facts": true,
+    "no_other_date_report_feed_card_spec_read": true,
+    "earlier_notes_editorial_memory_only": true,
+    "no_social_counts_or_measured_ranking_invented": true,
+    "new_listing_missing_returns_not_estimated": true,
+    "exact_card_numbers_and_sessions_audited": true
+  }
+}

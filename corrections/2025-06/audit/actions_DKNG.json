@@ -1,0 +1,18 @@
+{
+ "ticker": "DKNG",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DKNG?period1=1744675200&period2=1751328000&interval=1d&events=div,splits",
+   "sha256": "d5e5959cff1fef8fd136b58176b0defe24c2644f14eae5287779a2d5931fe90f",
+   "fetched_at_utc": "2026-10-30T08:53:33.051315+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DKNG?period1=1751328000&period2=1793350383&interval=1d&events=div,splits",
+   "sha256": "d343cf45f21d9412c4f263120595c3f751c9c43907cacc79e76c6e0a60796515",
+   "fetched_at_utc": "2026-10-30T08:53:33.292686+00:00"
+  }
+ ]
+}
