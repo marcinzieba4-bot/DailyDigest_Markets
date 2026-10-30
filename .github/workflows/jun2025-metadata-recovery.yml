@@ -1,0 +1,28 @@
+name: June 2025 public metadata recovery
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/jun2025-metadata-recovery.yml'
+      - 'corrections/2025-06/recovery/**'
+permissions:
+  contents: read
+jobs:
+  public-metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: corrections/2025-06/recovery
+          sparse-checkout-cone-mode: false
+      - name: Resolve public Google News metadata
+        run: python corrections/2025-06/recovery/run.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jun2025-public-metadata
+          path: corrections/2025-06/recovery/output/
+          retention-days: 3
+          if-no-files-found: error
+
