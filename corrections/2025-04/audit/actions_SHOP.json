@@ -1,0 +1,18 @@
+{
+ "ticker": "SHOP",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SHOP?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "a122a95c6165f1ff162d9fd8caa2855b96509e973ea515f30b0ac4b6f393844d",
+   "fetched_at_utc": "2026-10-30T14:40:03.212279+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SHOP?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "edf05198044d69a41b06c27619b68bcd841315fa1a50e37c63575c4a3885d147",
+   "fetched_at_utc": "2026-10-30T14:40:03.919530+00:00"
+  }
+ ]
+}

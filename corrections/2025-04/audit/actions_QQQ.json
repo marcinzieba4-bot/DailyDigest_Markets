@@ -1,0 +1,18 @@
+{
+ "ticker": "QQQ",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/QQQ?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "3b7c975d3ae0f3fbeac9e35ca614ae804a6625d4703228856f1ca0414b163cad",
+   "fetched_at_utc": "2026-10-30T14:39:54.323027+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/QQQ?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "71f5ee9314b86c50a2eedf275b510b990edc84c3df07c126175ef7b876879a83",
+   "fetched_at_utc": "2026-10-30T14:39:54.973949+00:00"
+  }
+ ]
+}

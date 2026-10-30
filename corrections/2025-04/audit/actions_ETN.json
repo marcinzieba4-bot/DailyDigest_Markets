@@ -1,0 +1,18 @@
+{
+ "ticker": "ETN",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETN?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "3e306dde3c87a6edd58cda5aa9292e38568a4d2ac815b36a47668f0298b47811",
+   "fetched_at_utc": "2026-10-30T14:40:04.811617+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETN?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "38a2ac1cd2683790e4b8fe4e310eb30c4b4ddf0a225d1827898237f4eb9bedd2",
+   "fetched_at_utc": "2026-10-30T14:40:05.133321+00:00"
+  }
+ ]
+}

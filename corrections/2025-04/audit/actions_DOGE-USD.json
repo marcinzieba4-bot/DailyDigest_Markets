@@ -1,0 +1,18 @@
+{
+ "ticker": "DOGE-USD",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DOGE-USD?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "aad75314129025bcfbdadeebe3d71cd7d9053be818dab3fa1b1542aec291ce5b",
+   "fetched_at_utc": "2026-10-30T14:39:43.699067+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DOGE-USD?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "e9d95aae14f04c46d058531ce7cd8627c92dfde3b35cc6abc5632b1ee45b879e",
+   "fetched_at_utc": "2026-10-30T14:39:44.074497+00:00"
+  }
+ ]
+}

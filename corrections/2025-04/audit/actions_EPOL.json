@@ -1,0 +1,18 @@
+{
+ "ticker": "EPOL",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EPOL?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "5ce2621ad20e30e40957c373414860d858c1895f13f009c5b99f6f9e5d81d2f5",
+   "fetched_at_utc": "2026-10-30T14:39:45.047184+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EPOL?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "d576578d70eed457b2efd9d03833f69daa99e3b9cd83a6be48239f803a9cebbd",
+   "fetched_at_utc": "2026-10-30T14:39:45.502386+00:00"
+  }
+ ]
+}

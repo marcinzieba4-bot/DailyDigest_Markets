@@ -1,0 +1,18 @@
+{
+ "ticker": "COPX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/COPX?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "2e2d5b163c44ad105e820d831a29880ea2f201e920ab1ef40d61a132ffe1af17",
+   "fetched_at_utc": "2026-10-30T14:39:55.698678+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/COPX?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "83dc7c32060ba2f8cddd4f20f552484335626e12c558afd954f7e1b65456f7b0",
+   "fetched_at_utc": "2026-10-30T14:39:56.002703+00:00"
+  }
+ ]
+}

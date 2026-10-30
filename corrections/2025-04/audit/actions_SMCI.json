@@ -1,0 +1,18 @@
+{
+ "ticker": "SMCI",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SMCI?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "de2c6bca9743f3b82b7ad1f99986b969a871eed7ae13ad094b9fecbe253c548b",
+   "fetched_at_utc": "2026-10-30T14:39:59.551608+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SMCI?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "b39df16247f35be46c34c453cceb571c46c3afe6fb39b2334e0ab01870ccfe34",
+   "fetched_at_utc": "2026-10-30T14:40:00.635844+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "NET",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NET?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "4b86ac41f1ce0996249923d2bc6c45af57e2c747821cd1592838ee9ad52f522a",
+   "fetched_at_utc": "2026-10-30T14:40:01.667830+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NET?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "ef9525f615f87dbd1d1d8b52e0b08fa6b55ba5fd882f2525c70fa5b837afbdf5",
+   "fetched_at_utc": "2026-10-30T14:40:02.252493+00:00"
+  }
+ ]
+}

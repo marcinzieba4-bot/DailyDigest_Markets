@@ -1,0 +1,18 @@
+{
+ "ticker": "JPY=X",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/JPY%3DX?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "dcd6f0235d795db08fc2b10d0fa2147ec361c90022eb17797bf8f8619c3f4ae8",
+   "fetched_at_utc": "2026-10-30T14:39:44.579270+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/JPY%3DX?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "ea79dc80762f2a73ca0910044f9ae41870390f7d359ef0a796b16acaa5328637",
+   "fetched_at_utc": "2026-10-30T14:39:44.986416+00:00"
+  }
+ ]
+}

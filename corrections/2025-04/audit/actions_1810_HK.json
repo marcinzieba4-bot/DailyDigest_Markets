@@ -1,0 +1,18 @@
+{
+ "ticker": "1810.HK",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/1810.HK?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "15a0273c539701bd995724df6c453c4e5da90bba5484e0bdf3d5ceeaeb0572cf",
+   "fetched_at_utc": "2026-10-30T14:39:51.959332+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/1810.HK?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "11fb891218ad90fb5859316b4cee049be892c8b9c0b5349d5b83aead6ec50a00",
+   "fetched_at_utc": "2026-10-30T14:39:52.417053+00:00"
+  }
+ ]
+}

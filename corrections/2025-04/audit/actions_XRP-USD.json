@@ -1,0 +1,18 @@
+{
+ "ticker": "XRP-USD",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XRP-USD?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "e11ed423a7359b4502125cf0dacb204d8a38a2de53ae5e71b47477033d119a16",
+   "fetched_at_utc": "2026-10-30T14:39:43.605114+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XRP-USD?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "1118e986347fd726010f5a6d6b965eb89563996c23ca8117ed1788aa753686c2",
+   "fetched_at_utc": "2026-10-30T14:39:43.970312+00:00"
+  }
+ ]
+}

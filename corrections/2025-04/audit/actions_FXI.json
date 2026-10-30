@@ -1,0 +1,18 @@
+{
+ "ticker": "FXI",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FXI?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "47da040ea087c87caa455417b471fefd1d0cee6c3af6efa1226ecfad79588ad6",
+   "fetched_at_utc": "2026-10-30T14:39:51.124266+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FXI?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "cccfc8bf3a95f0921072181aa887635dd8d1d7f00844e919c8d053a5ab5a5729",
+   "fetched_at_utc": "2026-10-30T14:39:51.621055+00:00"
+  }
+ ]
+}

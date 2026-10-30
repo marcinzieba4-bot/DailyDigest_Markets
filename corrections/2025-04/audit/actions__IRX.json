@@ -1,0 +1,18 @@
+{
+ "ticker": "^IRX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIRX?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "e53e6309b6f22c5267fb6213ab6297dd21559655688072379a66c70418874eb7",
+   "fetched_at_utc": "2026-10-30T14:39:42.352563+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIRX?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "e4dd27611aba30997f8b1d34a87799483c38c94972b01edce87b8d2ba4f92f60",
+   "fetched_at_utc": "2026-10-30T14:39:42.628650+00:00"
+  }
+ ]
+}

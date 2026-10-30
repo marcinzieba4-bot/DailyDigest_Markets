@@ -1,0 +1,18 @@
+{
+ "ticker": "COIN",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/COIN?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "37cdbbec560d07e170f2eab5603e5f59336bf6069208f3161cbc7fa68a2231dd",
+   "fetched_at_utc": "2026-10-30T14:39:43.668122+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/COIN?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "da4a282ccef63c71874a64c725492774ef5755d5503c4725fc5284117c2c045b",
+   "fetched_at_utc": "2026-10-30T14:39:43.977428+00:00"
+  }
+ ]
+}

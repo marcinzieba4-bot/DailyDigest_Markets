@@ -1,0 +1,18 @@
+{
+ "ticker": "9988.HK",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/9988.HK?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "f1c764f1eb90a20cbf8d472c3e3d11b08eee10cdb72f941cb111c4a191ef992e",
+   "fetched_at_utc": "2026-10-30T14:39:51.873658+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/9988.HK?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "8aa7e913aff544597d5dce689468a4500b79d0b728d6d3e00241fb480e3784e5",
+   "fetched_at_utc": "2026-10-30T14:39:52.471862+00:00"
+  }
+ ]
+}

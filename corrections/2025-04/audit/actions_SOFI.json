@@ -1,0 +1,18 @@
+{
+ "ticker": "SOFI",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SOFI?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "6cf784add37b3a55e30f9a071692aac27fd02896d7af752017e7198a329a05b9",
+   "fetched_at_utc": "2026-10-30T14:40:03.909791+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SOFI?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "76b67ade8775186a597c5992ae0d1606346e6f7d8514403a22d0adcfd22e8f5c",
+   "fetched_at_utc": "2026-10-30T14:40:04.490613+00:00"
+  }
+ ]
+}

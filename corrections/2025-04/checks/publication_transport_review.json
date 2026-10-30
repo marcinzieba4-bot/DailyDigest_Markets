@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-10-30T14:57:27.037884+00:00",
+  "publisher_sha256": "2edcf0e134b7436e1b5f31c8f3fd6157101ddddda2932b106164a44c5ab9179d",
+  "network_calls": 0,
+  "real_receipts_unchanged": true,
+  "test_scope": "Inherited publisher offline interruption/resume suite using two temporary synthetic target files, not completed report artifacts.",
+  "summary": "OFFLINE SELF-TEST PASS: atomic GET version-bound SHA; cached identical ETags avoid repeat downloads; changed ETags rehashed; foreign changes blocked; full-set gate enforced; interrupted confirmations retained; pre-snapshot and partial-backup failures resume; ambiguous successful copies preserve original versions; changed/unrecognized backups blocked; exact targets/backups preserved; bounded configurable retries; no network or real receipt changes",
+  "native_access_probe": "audit/publication_native_access_probe.json",
+  "supported_alternatives_review": [
+    "Ordinary boto3 Session uses inherited proxy, configured AWS bindings and TLS trust; one HeadObject attempt failed503withoutAWSrequestID.",
+    "Changing connection pooling or allowed target path cannot repair an immediate managed Envoy tunnel connection failure before response headers.",
+    "No supported managed restart, credential/configuration mutation or network-policy-update tool is exposed in this session.",
+    "Existing endpoint variants remain downstream of the same inherited managed egress path; no bypass/credential export/TLS changes performed."
+  ],
+  "publication_can_resume_when_transport_recovers": true,
+  "resume_conditions": [
+    "Keep exact checked artifacts and original publication receipt; use publish.py --go --resume after a started publication.",
+    "Backup source versions and protected snapshot remain bound; all targets require content-SHA confirmation before index merge.",
+    "Multipart source state binds archiveSHA,key,bytes,remote partETags and checksums; re-run publish_sources.py --go with the same archive."
+  ],
+  "limitation": "Provider-managed HTTPS tunnel connection failure is outside repository application control; runtime readiness reports setup, not successful outbound transport."
+}

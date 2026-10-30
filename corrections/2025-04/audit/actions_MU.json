@@ -1,0 +1,18 @@
+{
+ "ticker": "MU",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "ff0c29ce37d59cb99366aac10d4b86894dba81b386c0eb456511cd625e75a2e6",
+   "fetched_at_utc": "2026-10-30T14:39:56.891127+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "fd4b284d73d7329f36fa795d93e77ac9f1a0206260fc6d0ff99959dee73cd5fa",
+   "fetched_at_utc": "2026-10-30T14:39:57.336832+00:00"
+  }
+ ]
+}

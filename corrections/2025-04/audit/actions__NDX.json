@@ -1,0 +1,18 @@
+{
+ "ticker": "^NDX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "f7fef0409573851e97498fd787d806013dc1a1a319f21fdb421b3778e5be038f",
+   "fetched_at_utc": "2026-10-30T14:39:41.352287+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ENDX?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "87854023094713f2f056e797be319e20952e0a46b55e14b79d91669c472215d5",
+   "fetched_at_utc": "2026-10-30T14:39:42.427068+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "OPEN",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/OPEN?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "d99a2453db8915b18f13ea267bcbfef2b966a8092fa563e475339d98c5014816",
+   "fetched_at_utc": "2026-10-30T14:40:06.733167+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/OPEN?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "97b9ba7245a24366539dacbb9e1164abf1f0e3b53e52f324253fe90f22175b37",
+   "fetched_at_utc": "2026-10-30T14:40:07.051003+00:00"
+  }
+ ]
+}

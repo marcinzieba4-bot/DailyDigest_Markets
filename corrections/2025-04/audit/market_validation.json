@@ -1,0 +1,482 @@
+{
+  "passed": true,
+  "assertions": 79569,
+  "errors": [],
+  "cards": 22,
+  "instruments_per_card": [
+    290
+  ],
+  "raw_symbols": 292,
+  "fetch_failures": 0,
+  "unavailable_short_history_metrics": [
+    {
+      "date": "2025-04-01",
+      "ticker": "CRWV",
+      "prior_observations": 2,
+      "unavailable_sessions": [
+        5,
+        20
+      ]
+    },
+    {
+      "date": "2025-04-02",
+      "ticker": "CRWV",
+      "prior_observations": 3,
+      "unavailable_sessions": [
+        5,
+        20
+      ]
+    },
+    {
+      "date": "2025-04-03",
+      "ticker": "CRWV",
+      "prior_observations": 4,
+      "unavailable_sessions": [
+        5,
+        20
+      ]
+    },
+    {
+      "date": "2025-04-04",
+      "ticker": "CRWV",
+      "prior_observations": 5,
+      "unavailable_sessions": [
+        5,
+        20
+      ]
+    },
+    {
+      "date": "2025-04-07",
+      "ticker": "CRWV",
+      "prior_observations": 6,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-04-08",
+      "ticker": "CRWV",
+      "prior_observations": 7,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-04-09",
+      "ticker": "CRWV",
+      "prior_observations": 8,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-04-10",
+      "ticker": "CRWV",
+      "prior_observations": 9,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-04-11",
+      "ticker": "CRWV",
+      "prior_observations": 10,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-04-14",
+      "ticker": "CRWV",
+      "prior_observations": 11,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-04-15",
+      "ticker": "CRWV",
+      "prior_observations": 12,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-04-16",
+      "ticker": "CRWV",
+      "prior_observations": 13,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-04-17",
+      "ticker": "CRWV",
+      "prior_observations": 14,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-04-18",
+      "ticker": "CRWV",
+      "prior_observations": 15,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-04-21",
+      "ticker": "CRWV",
+      "prior_observations": 15,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-04-22",
+      "ticker": "CRWV",
+      "prior_observations": 16,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-04-23",
+      "ticker": "CRWV",
+      "prior_observations": 17,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-04-24",
+      "ticker": "CRWV",
+      "prior_observations": 18,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-04-25",
+      "ticker": "CRWV",
+      "prior_observations": 19,
+      "unavailable_sessions": [
+        20
+      ]
+    },
+    {
+      "date": "2025-04-28",
+      "ticker": "CRWV",
+      "prior_observations": 20,
+      "unavailable_sessions": [
+        20
+      ]
+    }
+  ],
+  "absent_before_first_source_observation": [],
+  "information_cutoff": "00:00 UTC per report; crypto prior UTC candle completes at that boundary",
+  "retained_price_last_date": "2025-04-30",
+  "future_price_rows_retained": 0,
+  "level_suppression": {
+    "CMCSA": "corporate-action/spin-off adjustment; quote percentage changes only"
+  },
+  "vintage_limit": "Current-vintage historical data may contain vendor revisions; original contemporaneous vendor snapshots are not asserted.",
+  "sources": [
+    "Yahoo Finance daily chart API",
+    "US Treasury daily par yield curve"
+  ],
+  "excluded_no_April_source_history": {
+    "BMNR": {
+      "status": "excluded_no_April_source_history",
+      "reason": "Source returned no historical price data for the February\u2013April2025 request; no prices or returns estimated.",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 400: Bad Request",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/BMNR?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+      "checked_at_utc": "2026-10-30T14:41:55.328052+00:00",
+      "http_status": 400,
+      "response_sha256": "c26c368fc7e42d3ef5c2e6fa32e1ec886334ec0c36e15a329a385a8a01731c90",
+      "source_error": {
+        "code": "Bad Request",
+        "description": "Data doesn't exist for startDate = 1738368000, endDate = 1746057600"
+      }
+    },
+    "CRCL": {
+      "status": "excluded_no_April_source_history",
+      "reason": "Source returned no historical price data for the February\u2013April2025 request; no prices or returns estimated.",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 400: Bad Request",
+      "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/CRCL?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+      "checked_at_utc": "2026-10-30T14:41:56.018381+00:00",
+      "http_status": 400,
+      "response_sha256": "c26c368fc7e42d3ef5c2e6fa32e1ec886334ec0c36e15a329a385a8a01731c90",
+      "source_error": {
+        "code": "Bad Request",
+        "description": "Data doesn't exist for startDate = 1738368000, endDate = 1746057600"
+      }
+    }
+  },
+  "calendar_cases": [
+    {
+      "report_date": "2025-04-03",
+      "ticker": "^TWII",
+      "expected_session": "2025-04-02"
+    },
+    {
+      "report_date": "2025-04-04",
+      "ticker": "^TWII",
+      "expected_session": "2025-04-02"
+    },
+    {
+      "report_date": "2025-04-07",
+      "ticker": "^TWII",
+      "expected_session": "2025-04-02"
+    },
+    {
+      "report_date": "2025-04-08",
+      "ticker": "^TWII",
+      "expected_session": "2025-04-07"
+    },
+    {
+      "report_date": "2025-04-04",
+      "ticker": "000001.SS",
+      "expected_session": "2025-04-03"
+    },
+    {
+      "report_date": "2025-04-07",
+      "ticker": "000001.SS",
+      "expected_session": "2025-04-03"
+    },
+    {
+      "report_date": "2025-04-08",
+      "ticker": "000001.SS",
+      "expected_session": "2025-04-07"
+    },
+    {
+      "report_date": "2025-04-04",
+      "ticker": "^HSI",
+      "expected_session": "2025-04-03"
+    },
+    {
+      "report_date": "2025-04-07",
+      "ticker": "^HSI",
+      "expected_session": "2025-04-03"
+    },
+    {
+      "report_date": "2025-04-08",
+      "ticker": "^HSI",
+      "expected_session": "2025-04-07"
+    },
+    {
+      "report_date": "2025-04-18",
+      "ticker": "^GSPC",
+      "expected_session": "2025-04-17"
+    },
+    {
+      "report_date": "2025-04-21",
+      "ticker": "^GSPC",
+      "expected_session": "2025-04-17"
+    },
+    {
+      "report_date": "2025-04-22",
+      "ticker": "^GSPC",
+      "expected_session": "2025-04-21"
+    },
+    {
+      "report_date": "2025-04-18",
+      "ticker": "PKO.WA",
+      "expected_session": "2025-04-17"
+    },
+    {
+      "report_date": "2025-04-21",
+      "ticker": "PKO.WA",
+      "expected_session": "2025-04-17"
+    },
+    {
+      "report_date": "2025-04-22",
+      "ticker": "PKO.WA",
+      "expected_session": "2025-04-17"
+    },
+    {
+      "report_date": "2025-04-23",
+      "ticker": "PKO.WA",
+      "expected_session": "2025-04-22"
+    },
+    {
+      "report_date": "2025-04-18",
+      "ticker": "^FTSE",
+      "expected_session": "2025-04-17"
+    },
+    {
+      "report_date": "2025-04-22",
+      "ticker": "^FTSE",
+      "expected_session": "2025-04-17"
+    },
+    {
+      "report_date": "2025-04-23",
+      "ticker": "^FTSE",
+      "expected_session": "2025-04-22"
+    },
+    {
+      "report_date": "2025-04-22",
+      "ticker": "^GDAXI",
+      "expected_session": "2025-04-17"
+    },
+    {
+      "report_date": "2025-04-22",
+      "ticker": "^FCHI",
+      "expected_session": "2025-04-17"
+    },
+    {
+      "report_date": "2025-04-22",
+      "ticker": "NESN.SW",
+      "expected_session": "2025-04-17"
+    },
+    {
+      "report_date": "2025-04-17",
+      "ticker": "NOVO-B.CO",
+      "expected_session": "2025-04-16"
+    },
+    {
+      "report_date": "2025-04-18",
+      "ticker": "NOVO-B.CO",
+      "expected_session": "2025-04-16"
+    },
+    {
+      "report_date": "2025-04-21",
+      "ticker": "NOVO-B.CO",
+      "expected_session": "2025-04-16"
+    },
+    {
+      "report_date": "2025-04-22",
+      "ticker": "NOVO-B.CO",
+      "expected_session": "2025-04-16"
+    },
+    {
+      "report_date": "2025-04-23",
+      "ticker": "NOVO-B.CO",
+      "expected_session": "2025-04-22"
+    },
+    {
+      "report_date": "2025-04-18",
+      "ticker": "^HSI",
+      "expected_session": "2025-04-17"
+    },
+    {
+      "report_date": "2025-04-22",
+      "ticker": "^HSI",
+      "expected_session": "2025-04-17"
+    },
+    {
+      "report_date": "2025-04-23",
+      "ticker": "^HSI",
+      "expected_session": "2025-04-22"
+    },
+    {
+      "report_date": "2025-04-21",
+      "ticker": "000001.SS",
+      "expected_session": "2025-04-18"
+    },
+    {
+      "report_date": "2025-04-22",
+      "ticker": "000001.SS",
+      "expected_session": "2025-04-21"
+    },
+    {
+      "report_date": "2025-04-21",
+      "ticker": "^TWII",
+      "expected_session": "2025-04-18"
+    },
+    {
+      "report_date": "2025-04-22",
+      "ticker": "^TWII",
+      "expected_session": "2025-04-21"
+    },
+    {
+      "report_date": "2025-04-21",
+      "ticker": "^N225",
+      "expected_session": "2025-04-18"
+    },
+    {
+      "report_date": "2025-04-22",
+      "ticker": "^N225",
+      "expected_session": "2025-04-21"
+    },
+    {
+      "report_date": "2025-04-21",
+      "ticker": "^KS11",
+      "expected_session": "2025-04-18"
+    },
+    {
+      "report_date": "2025-04-22",
+      "ticker": "^KS11",
+      "expected_session": "2025-04-21"
+    },
+    {
+      "report_date": "2025-04-18",
+      "ticker": "^AXJO",
+      "expected_session": "2025-04-17"
+    },
+    {
+      "report_date": "2025-04-22",
+      "ticker": "^AXJO",
+      "expected_session": "2025-04-17"
+    },
+    {
+      "report_date": "2025-04-23",
+      "ticker": "^AXJO",
+      "expected_session": "2025-04-22"
+    },
+    {
+      "report_date": "2025-04-25",
+      "ticker": "^AXJO",
+      "expected_session": "2025-04-24"
+    },
+    {
+      "report_date": "2025-04-28",
+      "ticker": "^AXJO",
+      "expected_session": "2025-04-24"
+    },
+    {
+      "report_date": "2025-04-29",
+      "ticker": "^AXJO",
+      "expected_session": "2025-04-28"
+    },
+    {
+      "report_date": "2025-04-29",
+      "ticker": "^N225",
+      "expected_session": "2025-04-28"
+    },
+    {
+      "report_date": "2025-04-30",
+      "ticker": "^N225",
+      "expected_session": "2025-04-28"
+    }
+  ],
+  "card_sha256": {
+    "2025-04-01": "d1c4f0758f6f2ac9225890e80852d91f9ad2604ff1396977a44d775edb74eaac",
+    "2025-04-02": "494b703126a5ce23913b4da572850a149a2eb881a3e8f041431e3d34f3ec02ab",
+    "2025-04-03": "a5e6791be84bd2e45f76fadbf92bea96a35ccaa90b7fbe648cf2e12b9148d780",
+    "2025-04-04": "f7a9d3ecb54fa75f503fd62f0eddf29d7f73a05cf0c13549ecc916bc2ac80d80",
+    "2025-04-07": "f52d6c7e75a7aaa86f0958c11730031f17787c2e0218361b0eeffda83c5d0bbb",
+    "2025-04-08": "9328b0118c7e02576b793f89a6363dd6a118afe316f4b13e88707235b0943d40",
+    "2025-04-09": "f02daff8b471c6105e8b242d29e324cfe49afdc4213cda736085e03db3cafc5c",
+    "2025-04-10": "2ce07821a6ac58a137f46117beebca544683c49538a65e2413fbcc8cfc2777e1",
+    "2025-04-11": "e044009ce55388b798a8ed6788a092aeaa491ef79dcdafae53d7fa756146ce94",
+    "2025-04-14": "17b754b68a57886e623f5bf7b60633c3397afd44ba3c1e8639726b98ed428813",
+    "2025-04-15": "cafc6d2ed22d9c618c45528e96cf7ae18a8b372d994f0e0967c2fb005f05d8f8",
+    "2025-04-16": "efe04268b444db7195bb2696ddf83c42733be9b4d97d965266eec0fcc5b068cd",
+    "2025-04-17": "0f38095cde33ab72ba3a4d50a9a31a446baac6a294f844d286f45ba4272a0434",
+    "2025-04-18": "2853d0a146755588aaee47572ddb56f5d6072ad9a76d6c90c38defe6178b82dc",
+    "2025-04-21": "4a19a1d09279a22d2d076bc1f90a61f69f507de8c913b2c06bff3b2c2f49946b",
+    "2025-04-22": "15815319e2cb17b4015102d71c0c2ea59f4bea5f5b2f5abd85e852fa42baca1f",
+    "2025-04-23": "8f78224c0a45cda4bee9e6e73c66c845ee6c0d61f246e633640aa583c9c8c2ea",
+    "2025-04-24": "7fe7cde7db7cc510f17a5606cd3c43c3f0ab5c65a92c816f2dc164484c4ae2fc",
+    "2025-04-25": "89d213a38e00a724f2c406bd313715e7f9bdf51e21213fb7e9d2e769fa0e391a",
+    "2025-04-28": "f364894418e6af1e3776af30c23e4ce07e3fc527299ca9ba428aef38cfb131e5",
+    "2025-04-29": "ae558574d20d2d212bf9147ed452bf7fbc05ae892345a5f701032d7f42015034",
+    "2025-04-30": "0fd6459ad045d108a60bf1dac5f7e5583013031e3b6d0dc7a6a3fb97d5972ce4"
+  },
+  "independent_calendar_review_sha256": "df84dc94f077336c72a8f4dc54894fb45cdd1113865a3ea77ef940cd11ae7594",
+  "independent_calendar_prior_session_checks": 5918
+}

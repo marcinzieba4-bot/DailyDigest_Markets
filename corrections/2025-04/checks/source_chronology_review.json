@@ -1,0 +1,45 @@
+{
+  "reviewer": "root preliminary chronology editor",
+  "scope": "Conservative edits to two sealed author versions; final all-cited screen and independent selected/delta review remain required.",
+  "checked_at_utc": "2026-10-30T15:51:40.186560+00:00",
+  "changes": [
+    {
+      "date": "2025-04-01",
+      "path": [
+        "sectors",
+        7,
+        "parts",
+        1,
+        1
+      ],
+      "before": "Bloomberg reported Chinese biotech shares advancing on better earnings and additional deals. [[n2217]] Reuters reported FDA staff struggling to meet product-review deadlines after DOGE layoffs. [[n8739]] The former is a positive commercial signal; the latter shows how administrative capacity can affect the timing of revenue-bearing milestones.",
+      "after": "Reuters reported FDA staff struggling to meet product-review deadlines after DOGE layoffs. [[n8739]] That makes regulatory execution part of the healthcare investment case: an attractive product still needs a timely path through review. Favour companies whose financing can absorb a delay, and separate a promising pipeline from the cash timetable attached to it.",
+      "removed_ids": [
+        "n2217"
+      ],
+      "reason": "Bloomberg canonical path is April1; original pre-cutoff availability of the Chinese biotech market move is unverified. Remove the uncertain outcome; retain the already cited own-date Reuters fact and conditional investment reasoning.",
+      "before_spec_sha256": "aed17f9c9470d1037647f61cd7b6cf865ad948c667b20551f2b81f6e935c91ea",
+      "after_spec_sha256": "7aef09e4ce23bba5da79c1616954a06297d9e2b338b706c7bb10e77473eb2a6e",
+      "independent_rereview_pending": true
+    },
+    {
+      "date": "2025-04-09",
+      "path": [
+        "geo",
+        4,
+        "parts",
+        0,
+        1
+      ],
+      "before": "Australia's currency is absorbing part of the tariff shock, but investors should distinguish that adjustment from immunity. ABC News & Headlines – Australian Broadcasting Corporation described a diving Australian dollar and warnings of potential market mayhem. AFR argued that the currency was serving as the shock absorber anticipated by Bullock. A weaker currency can support translated foreign income while making imported purchases more expensive; the benefit is uneven across household budgets and company cost structures. [[n0496]] [[n0503]]",
+      "after": "Australia's currency is absorbing part of the tariff shock, but investors should distinguish that adjustment from immunity. AFR argued that the currency was serving as the shock absorber anticipated by Bullock. A weaker currency can support translated foreign income while making imported purchases more expensive; the benefit is uneven across household budgets and company cost structures. [[n0503]]",
+      "removed_ids": [
+        "n0496"
+      ],
+      "reason": "ABC canonical path uses April9; original pre-cutoff publication time has not been established. Conservatively remove its separate mayhem clause and retain the already cited AFR shock-absorber headline plus general currency transmission reasoning.",
+      "before_spec_sha256": "ac091a94058a00b16a04ffe1776fa2e9e0569e6f1614e8947102acabbac2a98d",
+      "after_spec_sha256": "df4b4897cb5aefe652b0a891ade8ff1ba729215f2764833c447bccf72cf51005",
+      "independent_rereview_pending": true
+    }
+  ]
+}

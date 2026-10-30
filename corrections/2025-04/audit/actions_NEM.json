@@ -1,0 +1,18 @@
+{
+ "ticker": "NEM",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NEM?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "f77afd973a92546152f39cc1e7ceb7d979041637c33e10983907eb370c63ab55",
+   "fetched_at_utc": "2026-10-30T14:40:08.811319+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NEM?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "65fc242425dbf777b94222686f7e1b5c73c9ddb8d347400962f2c38d26d38095",
+   "fetched_at_utc": "2026-10-30T14:40:09.181667+00:00"
+  }
+ ]
+}

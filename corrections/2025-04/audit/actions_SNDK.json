@@ -1,0 +1,18 @@
+{
+ "ticker": "SNDK",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SNDK?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "af9f963d212d2983b4f2ee0b237f78b36382735f50d0e7ca513c752844afb1fd",
+   "fetched_at_utc": "2026-10-30T14:39:59.514903+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SNDK?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "3883451fb20c525121785f446faf163d5bb3efd0709f9d47f26d9ace01fc7c9b",
+   "fetched_at_utc": "2026-10-30T14:40:00.508379+00:00"
+  }
+ ]
+}

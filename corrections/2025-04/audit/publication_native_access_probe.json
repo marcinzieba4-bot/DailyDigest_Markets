@@ -1,0 +1,17 @@
+{
+  "observed_at_utc": "2026-10-30T14:56:52.595806+00:00",
+  "purpose": "One bounded read-only S3 HeadObject probe through inherited proxy and normal injected AWS bindings; no retries, endpoint changes or credential export.",
+  "operation": "HeadObject",
+  "endpoint_family": "s3.eu-north-1.amazonaws.com",
+  "bucket": "s3bucketmz",
+  "key": "reports/latest.html",
+  "sdk_total_attempt_limit": 1,
+  "writes_performed": false,
+  "credential_values_logged": false,
+  "success": false,
+  "error_type": "ClientError",
+  "http_status": 503,
+  "aws_error_code": "503",
+  "has_aws_request_id": false,
+  "retry_attempts": 0
+}

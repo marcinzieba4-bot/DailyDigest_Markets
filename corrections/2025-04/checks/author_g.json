@@ -1,0 +1,49 @@
+{
+  "author": "g",
+  "dates": {
+    "2025-04-25": {
+      "verify": "PASS",
+      "words": 9741,
+      "distinct_citations": 117,
+      "failures": 0,
+      "warnings": 0,
+      "render": "PASS",
+      "manual_review": [
+        "Event timing and release status",
+        "Provider attribution",
+        "Instrument session dates and units",
+        "Return signs and horizons",
+        "No measured social behavior invented",
+        "Playbook consistency"
+      ]
+    },
+    "2025-04-28": {
+      "verify": "PASS",
+      "words": 9685,
+      "distinct_citations": 118,
+      "max_citation_uses": 4,
+      "failures": 0,
+      "warnings": 0,
+      "render": "PASS",
+      "manual_review": [
+        "Strict matching-date evidence isolation",
+        "Apr25 sealed before Apr28 opened",
+        "Australia local equity Apr24 session; FX Apr25; crypto Apr27",
+        "Shanghai and DXY in index points",
+        "Every numerical sign/horizon/unit matched",
+        "No actuals inferred from previews",
+        "Attribution reconciled to own-date headlines",
+        "No invented measured flows or social participation",
+        "Consistent trigger-based playbooks"
+      ]
+    }
+  },
+  "strict_chronology": true,
+  "complete": true,
+  "retail_notes": [
+    "work/writer_g/selection_2025-04-25.json",
+    "work/writer_g/selection_2025-04-28.json"
+  ],
+  "scope": "Only owned specs/checks, work/writer_g and own-date rendered output written. No web, network, git, data, posthoc or reviewer files read.",
+  "earlier_report_sealed": "Apr25 spec and render finalized before Apr28 feed/card opened; no subsequent Apr25 revision."
+}

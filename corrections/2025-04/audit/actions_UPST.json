@@ -1,0 +1,18 @@
+{
+ "ticker": "UPST",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/UPST?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "f7c8d053b1488b77b4e852f5b77df88f30eb090c84d33b0e5c0718ba892dfe12",
+   "fetched_at_utc": "2026-10-30T14:40:04.222836+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/UPST?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "fa6dd772cda2de7dde89aa5a75e41f0388723cca95d19cfc82fbef07fc475e09",
+   "fetched_at_utc": "2026-10-30T14:40:04.783851+00:00"
+  }
+ ]
+}

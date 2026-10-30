@@ -1,0 +1,24 @@
+{
+ "ticker": "CVNA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2026-05-08",
+   "factor": 5.0,
+   "ratio": "5:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CVNA?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "090de5a7deedc5f30847b0d12fa3863aa02e6c9b42c3a73b10b4464211dd6668",
+   "fetched_at_utc": "2026-10-30T14:40:07.066410+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CVNA?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "2a2ff1500b4fb625c4fe1ee731a0e996b7dc6a7cc38085d62cb08bdb1dab4bd4",
+   "fetched_at_utc": "2026-10-30T14:40:07.307018+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "^RUT",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ERUT?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "68e0f5612c6b6220b5584cec400f5a431f84f86967842f05d84bab1764191cff",
+   "fetched_at_utc": "2026-10-30T14:39:41.305596+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ERUT?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "34c20234bd0d65b35ea64fc6adbf7cb0045a7b33c3da221b6eee1c4d32a68efb",
+   "fetched_at_utc": "2026-10-30T14:39:42.267333+00:00"
+  }
+ ]
+}

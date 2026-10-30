@@ -1,0 +1,18 @@
+{
+ "ticker": "LEU",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LEU?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "4a57d9bbf040fe94948157dbb1e00125cf8dc8e22fc5840990781de3e5853e48",
+   "fetched_at_utc": "2026-10-30T14:40:05.915611+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LEU?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "26df5a6c324aeac5a9e87d3618604197b3f58fac5b372332bb07d07a817f3970",
+   "fetched_at_utc": "2026-10-30T14:40:06.343270+00:00"
+  }
+ ]
+}

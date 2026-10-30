@@ -1,0 +1,36 @@
+{
+  "checked_at_utc": "2026-10-30T14:55:21.549888+00:00",
+  "native_failure": "HTTP503 before destination; managed egress transport returned upstream connect error / Invalid argument for envoy://cloudflare_https_tunnel/",
+  "evidence": [
+    "audit/news_http503_diagnostic.json",
+    "audit/news_http503_comparison.json"
+  ],
+  "affected_confirmed_destinations": [
+    "news.google.com",
+    "home.treasury.gov"
+  ],
+  "managed_status_observation": {
+    "observations_current": true,
+    "connectivity": "connected",
+    "observed_phase": "running",
+    "network_policy_state": "enforced",
+    "failure": null,
+    "network_diagnostics": null
+  },
+  "retained_diagnostics": {
+    "history_status": "not_found",
+    "records": []
+  },
+  "current_debug_reader": "INVALID_ARGUMENT: directs caller to retained diagnostics, which contain no records",
+  "available_management_capabilities": "Status and diagnostic readers only; no restart or configuration mutation tool exposed.",
+  "policy_or_credentials_changed": false,
+  "tls_verification_disabled": false,
+  "legacy_cache_fallback_used": false,
+  "authorized_recovery": "Reviewed isolated GitHub Actions public Google News request recovery; no AWS credentials, publisher article bodies or report prose.",
+  "native_delivery_status": "Native transport recovered at2026-10-30T15:06UTC, verified public CloudFront GET200 and ordinary credentialed S3 HeadObject200 with AWS request ID; publication still awaits completed reports/reviews.",
+  "recovery_status_evidence": [
+    "audit/native_access_status.json",
+    "audit/native_s3_recovery_status.json"
+  ],
+  "recovery_mechanism": "Transient managed tunnel recovered without local proxy, CA, TLS, IAM or credential changes. Public RSS CI recovery prevented data gaps during the outage."
+}

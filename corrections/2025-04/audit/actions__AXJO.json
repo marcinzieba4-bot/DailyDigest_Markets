@@ -1,0 +1,18 @@
+{
+ "ticker": "^AXJO",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EAXJO?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "554c32903f069588b47e1331ee92d18e7be7587cad3eacf6fd8bfd938271f49d",
+   "fetched_at_utc": "2026-10-30T14:39:52.005150+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EAXJO?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "7109bde6537a1c99d7e686da267136ee34a1a5d488dfa0a562244698fecd5046",
+   "fetched_at_utc": "2026-10-30T14:39:52.488747+00:00"
+  }
+ ]
+}

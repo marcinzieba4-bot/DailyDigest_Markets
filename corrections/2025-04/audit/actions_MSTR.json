@@ -1,0 +1,18 @@
+{
+ "ticker": "MSTR",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "6090b4a3b30bcd4a2c704f43caa2e429afe9aac0d070cf8d47d47749ea4ac18f",
+   "fetched_at_utc": "2026-10-30T14:39:43.973579+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "910ea1f588db7d50af249cf6359c59de4fa02836812d8b1ec02eab01fbfff844",
+   "fetched_at_utc": "2026-10-30T14:39:44.343344+00:00"
+  }
+ ]
+}

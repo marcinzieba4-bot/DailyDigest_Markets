@@ -1,0 +1,96 @@
+April 2025 retrospective briefings — methodology
+
+Scope: 22 Monday–Friday report dates, 2025-04-01 through 2025-04-30.
+Per-report news cutoff: 00:00 UTC on its report date, strictly exclusive.
+Source-query lookbacks: fresh news and previews 7 days, company results 14 days,
+macro releases and policy baselines 35 days. Categories originate in the query
+catalogue; older background is time-qualified and is not presented as a fresh
+event. Drafting and final editing use only the matching own-date feed and market card.
+Before drafting, acquisition adds query prefixes ending at each straddled report
+cutoff and refines capped multi-day windows into daily queries. A report's merge
+uses only queries whose upper bound is at or before that report's cutoff. The
+raw dated feeds, parsed query-response caches, exclusions and code needed for replay
+are bound by audit/news_replay_inventory.json and retained in the source ZIP.
+Final editorial checks and exports bind the frozen own-date feeds in feeds/.
+Actual releases at or after the UTC cutoff are excluded until a later edition.
+
+News: dated Google News historical RSS, 255,468 own-date headline records
+across these 22 feeds (per-date range 9,031–13,004).
+Category totals count the same headline again when eligible on multiple dates:
+{'monthly': 74046, 'news': 162652, 'result': 18770}.
+Acquisition audit: Acquisition details are recorded in the included source audit receipts.
+Cutoff-bounded acquisition coverage:
+version: apr-cutoff-prefix-v1
+started_at_utc: 2026-10-30T15:24:44.942153+00:00
+finished_at_utc: 2026-10-30T15:25:26.257597+00:00
+report_dates: 22
+query_catalog_contexts: 445
+weekly_contexts: 2974
+cutoff_prefix_contexts: 7120
+unique_query_urls: 11211
+daily_refinement_urls: 1117
+failed_requests: 0
+remaining_daily_caps: 135
+parser_schema: rss-root-channel-aware-timestamp-v1
+query_plan: audit/news_query_plan.json
+query_plan_sha256: cb87988cef13e29881381725fb9d809592c98f1db77f6f0aa8b081aecd261550
+own_date_records: 255603
+Search-index result limits mean coverage is broad, not exhaustive. Publication
+timestamps can be approximate. Reports use cited headline facts, not details
+inferred from unread article bodies. Original article vintages are not
+independently archived. The source archive preserves parsed retrieval-time
+query caches, not original RSS XML or contemporaneous 2025 server responses.
+Readiness and chronology audit receipts, where present,
+record conservative exclusions and source-date checks; metadata does not prove
+an original article-body vintage. Later outcomes are excluded from writer inputs.
+
+Some publisher URLs use a later local calendar date. Explicit source-ledger timing
+notes identify original publications or underlying releases independently proved
+available before the report cutoff; they do not admit later article details.
+
+Frozen feeds and included audit receipts:
+https://d7g7nkeytae81.cloudfront.net/reports/2025-04/April_2025_Frozen_News_Feeds.zip
+SHA256: a87f5b9e497147dc374ed5c33dac6ea7117ed3350f7baf15948a65470a471283
+The report bundle contains cited evidence ledgers, not all raw feed rows.
+
+Markets: Yahoo Finance historical daily charts, completed sessions before each
+report date, exchange-local session dates; crypto uses completed UTC days.
+Instruments per card: 290.
+Returns compare split-adjusted closes over 1, 5 and 20 observations and exclude
+dividends. Displayed price levels restore historical share units by reversing
+later split factors. CMCSA levels are suppressed because its adjustment includes
+a spin-off. Corporate-action metadata is used only for unit conversion; later
+price rows are excluded from writer inputs. Current-vintage prices may include
+later vendor revisions; original contemporaneous vendor snapshots were not found.
+Futures series may be affected by contract rolls.
+Instrument-specific gaps and split/restoration limits are recorded in this month's
+market provenance and validation audits. Local closures use the last completed
+session, without inventing a holiday-session quote. Selected observations derived
+from the final cards:
+Mainland China Qingming: 2025-04-07 edition uses the 2025-04-03 completed local close.
+Hong Kong Qingming: 2025-04-07 edition uses the 2025-04-03 completed local close.
+Taiwan April holidays: 2025-04-07 edition uses the 2025-04-02 completed local close.
+US equities Good Friday: 2025-04-21 edition uses the 2025-04-17 completed local close.
+Euro-area Easter holidays: 2025-04-22 edition uses the 2025-04-17 completed local close.
+Polish equities Easter holidays: 2025-04-22 edition uses the 2025-04-17 completed local close.
+Australian Easter holidays: 2025-04-22 edition uses the 2025-04-17 completed local close.
+Japan Showa Day: 2025-04-30 edition uses the 2025-04-28 completed local close.
+US Treasury: 2025-04-21 edition uses the 2025-04-17 observation.
+Crypto has completed UTC daily candles.
+Returns compare 20 valid observations, rather than calendar days, and exclude
+dividends. Treasury uses actual two- and ten-year par yields; yield changes and
+curve spreads are basis points.
+
+Style: August 2026 nine-section structure, geographic and sector cards,
+1280px desktop width, responsive navigation and linked evidence ledger.
+Each HTML edition has a PDF and machine-readable JSON with its source evidence.
+Prepared retrospectively in October 2026; these are historical reconstructions.
+
+Code provenance:
+selected_base_branch: codex/may-2025-retrospective-20261030
+selected_commit: 774dc11cbfbd2c45709e0396ca42b0c34b96f90f
+working_branch: codex/apr-2025-retrospective-20261030
+default_branch_warning: main is not the latest report application; no default-branch-only assumption was used.
+parallel_branch_code_check: {'comparison_commit': '75f12ededa072406eb74b841f6b971b2977119fe', 'comparison_branch': 'claude/funny-noether-co1zem', 'ancestry_required': False, 'source_blobs_identical': True, 'files': [{'path': 'generate_report.py', 'selected_base_git_blob': 'dcf4a623821d61bca10020c05df8f7f682fc276d', 'comparison_git_blob': 'dcf4a623821d61bca10020c05df8f7f682fc276d', 'identical': True}, {'path': 'lambda_function.py', 'selected_base_git_blob': '8400236dfe18ca692493f286a3c94c441a154f25', 'comparison_git_blob': '8400236dfe18ca692493f286a3c94c441a154f25', 'identical': True}, {'path': 'deploy_report.py', 'selected_base_git_blob': '43be1fc0cd05262c88fd14c1eda49e3615f7054a', 'comparison_git_blob': '43be1fc0cd05262c88fd14c1eda49e3615f7054a', 'identical': True}, {'path': 'deploy_webhook.py', 'selected_base_git_blob': '2ad598d50be7a6be6880084ad555e679edef88d6', 'comparison_git_blob': '2ad598d50be7a6be6880084ad555e679edef88d6', 'identical': True}, {'path': 'telegram_webhook_lambda.py', 'selected_base_git_blob': '95680a8501039a2c7c8f558327c52ecccbfbfe1e', 'comparison_git_blob': '95680a8501039a2c7c8f558327c52ecccbfbfe1e', 'identical': True}], 'non_corrections_nonsecret_diff': 'Only .gitignore differs; protected root CLAUDE.md was not read or compared as source.'}
+Each edition uses its own dated historical inputs. Source acquisition, exclusions,
+chronology checks and retrieval limits are recorded in the included audit receipts.

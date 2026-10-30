@@ -1,0 +1,18 @@
+{
+ "ticker": "GE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GE?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "94885afc41d7aab9cc00072ae31c1656e9215326e0c72ad5dd8c4a950631fec5",
+   "fetched_at_utc": "2026-10-30T14:40:14.811087+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GE?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "f9884149be5b54a826cbea77e324cde765f223033d6cd44097e593b0512305ba",
+   "fetched_at_utc": "2026-10-30T14:40:15.450559+00:00"
+  }
+ ]
+}

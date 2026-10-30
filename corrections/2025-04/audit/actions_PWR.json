@@ -1,0 +1,18 @@
+{
+ "ticker": "PWR",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PWR?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "0c2802e46f2f4e62ff264e8c69e0500b8392a5d47a13f522acc5d9fefec709f4",
+   "fetched_at_utc": "2026-10-30T14:40:04.973685+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PWR?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "c4948125bcde45d20a076672c75eb7a1f6b466f048d5f5cf9a8f70c56ee48ca7",
+   "fetched_at_utc": "2026-10-30T14:40:05.386079+00:00"
+  }
+ ]
+}

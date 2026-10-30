@@ -1,0 +1,44 @@
+{
+  "ticker": "BP.L",
+  "issue": "Yahoo daily chart has null OHLC for expected LSE session2025-02-27",
+  "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/BP.L?period1=1740528000&period2=1740787200&interval=1d&events=div,splits",
+    "sha256": "a8f104ad2cde345fd57e4154ba7e3a74c03a104564c1cb70c6f6c2012c2cf996",
+    "fetched_at_utc": "2026-10-30T14:44:20.308712+00:00"
+  },
+  "response_timestamps": [
+    1740556800,
+    1740643200,
+    1740729600
+  ],
+  "response_quotes": [
+    {
+      "open": [
+        436.8500061035156,
+        null,
+        436.54998779296875
+      ],
+      "low": [
+        425.1000061035156,
+        null,
+        431.70001220703125
+      ],
+      "high": [
+        443.0,
+        null,
+        439.8500061035156
+      ],
+      "close": [
+        430.8999938964844,
+        null,
+        437.3500061035156
+      ],
+      "volume": [
+        69134691,
+        null,
+        68589964
+      ]
+    }
+  ],
+  "impact": "Outside all April 1/5/20-session card windows; earliest April1 20-session reference is March3. No filling, alternative-unit splice or invented price."
+}

@@ -1,0 +1,423 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-30T16:47:35.385256+00:00",
+  "reviewer": "/root/apr_retail",
+  "report_count": 22,
+  "reviewed_retail_entries": 88,
+  "chronological_review": true,
+  "scope_limit": "Own-date frozen headline/card and strictly earlier editorial history review; no future performance, asset quota, exhaustive popularity or original article-body-vintage certification.",
+  "unresolved_issues": [],
+  "spec_sha256": {
+    "2025-04-01": "5ff283be0af42223d10b25aa8ccf3246f42b30978a568958c42143dd7339811a",
+    "2025-04-02": "c0270b78d1caaf67da49989a7df30a1498d9226f52a777de6a7bf5ae8fc71617",
+    "2025-04-03": "5bbcc5bdc1bedaae3ba5b7a4b99b89975abc653f37223ecdd3c292879940f219",
+    "2025-04-04": "6451166758648bdcc36308f368eeb26d7157271a6ab683f279f32fca0b9c09a4",
+    "2025-04-07": "ba9a26254f8ddac66cc9318c9181cb4eab12d2c861115052895575587c3dae96",
+    "2025-04-08": "a94c9ea3fdded31237f6ee82081f0239c6f5300bbc729ff2f8a047f2f48a522a",
+    "2025-04-09": "2f4800ef6622d0f999ea0687136c45a2095d73c4be31879200d762875d97f656",
+    "2025-04-10": "e9a943e3fe39a72642e41502ca02e311f28dd4a7d5515a56b6f27e11c371bf9d",
+    "2025-04-11": "54c77301720045b13a1caab6966f738f751fee4f6f7ee62dc3aeb309b5af5380",
+    "2025-04-14": "df175f8c1d876cad765342b29f41fc4c50b98d97f9bfff9533458bc4a30a54fb",
+    "2025-04-15": "5e52b73822dff2874a2503d2a6d6b60c8556913c979d6eedb7bcafb001f8afb3",
+    "2025-04-16": "60ac7a5eed9825a26350fe99911741a5ec526cd825c3f89ae894bebddf5ce573",
+    "2025-04-17": "a6703ec57184a44b74b00dfbd647b4ce77df7c078f13c595f8f4d26d2dc4729f",
+    "2025-04-18": "2a5d458db285d78ba75c6cd262db176ec4ee2d6ea9e50ce5466a1762bb3e26e1",
+    "2025-04-21": "4e8e76c053a50c4cd102f807a3f2a9ef02127ac2a2b1d4ffe28df09de784c018",
+    "2025-04-22": "1dfa00dc842d9112f2d9a4908bd6e8c8f151ccc0385a27711bd804f44130b178",
+    "2025-04-23": "12f41af91096d3875ac7e7ca3a566a846c9ca73a537efe89d9d52f1f2e9bf04f",
+    "2025-04-24": "8d8eb55e8582d4a9d6b773fbd58bf6d25f4c1e44f9d6f1d6d47c1d9202f0e656",
+    "2025-04-25": "196f130ab853b51eac82fbc3153d8cd00e7deb3babd49902dd4e3ec86d2e13bb",
+    "2025-04-28": "1e79b052e1830f0f42c1e675999cb406b05ed28df4e321b1bda47aa856081a8c",
+    "2025-04-29": "87bacc3ca6b723767dd526b355d98d99427a6ed346ca71add730530823c1fcc8",
+    "2025-04-30": "c30c239afa797f4b57c7c515fd128147d56fbbab80a14c8971701cf2172fcdad"
+  },
+  "feed_sha256": {
+    "2025-04-01": "566b4f3e39dc344859f4877b907ad7bf06d71958fb75f9a563c118cd23feebea",
+    "2025-04-02": "60deb3958cd48de450ad0d1ae58ad089f6121214735ae2eb9e6d8a664f5ccd7b",
+    "2025-04-03": "ec25b57af8dead82da78b4cdabffde26a1a13e9ff574ef4abd22ea174fef8aaf",
+    "2025-04-04": "aa0a3eaadc0643a29ed31e3932694df8bf5c260eaa22672b2df1520f32ecba55",
+    "2025-04-07": "6573a3355ec1a26b4aa68ddfb81aad08670dcbdd67be62c88fe5eea0a17c1b1a",
+    "2025-04-08": "6681de58baae5065b3baf661668e7b6e162238146ec5a70a714be2dcf3e0c1ac",
+    "2025-04-09": "828cca1fe30ee9579752b680607f43f0d2a13973a23552e58611852a19323da9",
+    "2025-04-10": "e2cb1a0ebf34269f3cb4c7cf4d0627f0f46e02137a9a3d70ab1eed800af32e9d",
+    "2025-04-11": "2967e7da2b2166afd30cf243daff3726fe53d76e8181e18bef1aa905933fed1d",
+    "2025-04-14": "b4f7ca695880e92c2bc7b299309b7860a9ef2609a48932816da7cffa66b3ff42",
+    "2025-04-15": "67bcbd05fc027275f777ab369158f22c4bc40e5479ed5cd2236ea960ed645d68",
+    "2025-04-16": "6bcdfa23774295e84ba486325f02566cdaaa13905151c36f419bc30192a99cb4",
+    "2025-04-17": "051399a6388fc6222bb517df863ced7550683b5f51eb7f3212f527f32f78b73b",
+    "2025-04-18": "961cbf58862ccb80cd40a9b57ba28985a3df3ac4c4b3ec6fd4a02f07e63a0482",
+    "2025-04-21": "15e3dfbea613c12e431373a7d01bac27bed97d069219b74f184d46142152a52b",
+    "2025-04-22": "98b5ec35911e18e5fe1a146e4387b6183c1fbe25c9801590eec5d123addeab28",
+    "2025-04-23": "b88ee944ac6efc71355e821eaa16b0fb66c9a45eaf0a82c7831985428d284ccd",
+    "2025-04-24": "fab19e9e6d66ff2a3c8479344d75057c0112f109c51c1156d3754f5d8e44e910",
+    "2025-04-25": "5f32903f743c81062e8048c83f4735afccd6e4d2a590ac59c7439e51fa3f7f57",
+    "2025-04-28": "cfeec053f90635175e9b69fac6a582c7486e9fca059fa30abd9c1f5f3563a7cb",
+    "2025-04-29": "de7483c1a62c39157de487757468f3a7e8c5cea5d4a1f39a23d5bc50d27d6cd2",
+    "2025-04-30": "58f061ff15173338f84fed47b0cd8da5621ea86493e4b0f434b0ae988426901d"
+  },
+  "card_sha256": {
+    "2025-04-01": "d1c4f0758f6f2ac9225890e80852d91f9ad2604ff1396977a44d775edb74eaac",
+    "2025-04-02": "494b703126a5ce23913b4da572850a149a2eb881a3e8f041431e3d34f3ec02ab",
+    "2025-04-03": "a5e6791be84bd2e45f76fadbf92bea96a35ccaa90b7fbe648cf2e12b9148d780",
+    "2025-04-04": "f7a9d3ecb54fa75f503fd62f0eddf29d7f73a05cf0c13549ecc916bc2ac80d80",
+    "2025-04-07": "f52d6c7e75a7aaa86f0958c11730031f17787c2e0218361b0eeffda83c5d0bbb",
+    "2025-04-08": "9328b0118c7e02576b793f89a6363dd6a118afe316f4b13e88707235b0943d40",
+    "2025-04-09": "f02daff8b471c6105e8b242d29e324cfe49afdc4213cda736085e03db3cafc5c",
+    "2025-04-10": "2ce07821a6ac58a137f46117beebca544683c49538a65e2413fbcc8cfc2777e1",
+    "2025-04-11": "e044009ce55388b798a8ed6788a092aeaa491ef79dcdafae53d7fa756146ce94",
+    "2025-04-14": "17b754b68a57886e623f5bf7b60633c3397afd44ba3c1e8639726b98ed428813",
+    "2025-04-15": "cafc6d2ed22d9c618c45528e96cf7ae18a8b372d994f0e0967c2fb005f05d8f8",
+    "2025-04-16": "efe04268b444db7195bb2696ddf83c42733be9b4d97d965266eec0fcc5b068cd",
+    "2025-04-17": "0f38095cde33ab72ba3a4d50a9a31a446baac6a294f844d286f45ba4272a0434",
+    "2025-04-18": "2853d0a146755588aaee47572ddb56f5d6072ad9a76d6c90c38defe6178b82dc",
+    "2025-04-21": "4a19a1d09279a22d2d076bc1f90a61f69f507de8c913b2c06bff3b2c2f49946b",
+    "2025-04-22": "15815319e2cb17b4015102d71c0c2ea59f4bea5f5b2f5abd85e852fa42baca1f",
+    "2025-04-23": "8f78224c0a45cda4bee9e6e73c66c845ee6c0d61f246e633640aa583c9c8c2ea",
+    "2025-04-24": "7fe7cde7db7cc510f17a5606cd3c43c3f0ab5c65a92c816f2dc164484c4ae2fc",
+    "2025-04-25": "89d213a38e00a724f2c406bd313715e7f9bdf51e21213fb7e9d2e769fa0e391a",
+    "2025-04-28": "f364894418e6af1e3776af30c23e4ce07e3fc527299ca9ba428aef38cfb131e5",
+    "2025-04-29": "ae558574d20d2d212bf9147ed452bf7fbc05ae892345a5f701032d7f42015034",
+    "2025-04-30": "0fd6459ad045d108a60bf1dac5f7e5583013031e3b6d0dc7a6a3fb97d5972ce4"
+  },
+  "reports": {
+    "2025-04-01": {
+      "spec_sha256": "5ff283be0af42223d10b25aa8ccf3246f42b30978a568958c42143dd7339811a",
+      "feed_sha256": "566b4f3e39dc344859f4877b907ad7bf06d71958fb75f9a563c118cd23feebea",
+      "card_sha256": "d1c4f0758f6f2ac9225890e80852d91f9ad2604ff1396977a44d775edb74eaac",
+      "retail_sha256": "6fd834c6f354d04d15b68d2207340d76cdc50cb83a1f06e0aecc126097c55a8d",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "bb480475bd2e61a68b213c96e7362d9c9a4d2748ab144a8c1549a142e896d351",
+        "52a5146cc3519c4c874299515990e42c98ff933a5ec9d3edc277c4e73bf2ff0d",
+        "b52dbcc5349683b2427ed74e0b872489a6e25de4bd80ae5429c0132b67182851",
+        "bf82d4a1e65fcf44a1b8eed84e838a2d829a60f82a13a6b3e19e8171fa55864d"
+      ],
+      "reviewed": true,
+      "notes": "NMAX: dated IPO/political-meme packaging; no historical attention metric inferred from an evergreen profile. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-02": {
+      "spec_sha256": "c0270b78d1caaf67da49989a7df30a1498d9226f52a777de6a7bf5ae8fc71617",
+      "feed_sha256": "60deb3958cd48de450ad0d1ae58ad089f6121214735ae2eb9e6d8a664f5ccd7b",
+      "card_sha256": "494b703126a5ce23913b4da572850a149a2eb881a3e8f041431e3d34f3ec02ab",
+      "retail_sha256": "93b8c4917b63afc59dee86bf826b17ad4f8cf9f1b1cb03e07a2c36991e7bc7be",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "d756dae098a1e0e19e99a3a1478e2f27ead7c751d5ebc9239d93e615c1d414f4",
+        "11eab7ec4404544d07ea9fe43936696c249a78c0009ef2d7adb8b659e9e1b1ae",
+        "1265787183a350f5ccbf2a0181b721238130fa8fce47dc496185f4109c20ba73",
+        "a066539303df68e42ccc68ea9346d6a843b45c2f95d723691feb712acb11a2b8"
+      ],
+      "reviewed": true,
+      "notes": "HIMS: new Lilly/Zepbound access arrangement; platform exposure distinguished from drug ownership. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-03": {
+      "spec_sha256": "5bbcc5bdc1bedaae3ba5b7a4b99b89975abc653f37223ecdd3c292879940f219",
+      "feed_sha256": "ec25b57af8dead82da78b4cdabffde26a1a13e9ff574ef4abd22ea174fef8aaf",
+      "card_sha256": "a5e6791be84bd2e45f76fadbf92bea96a35ccaa90b7fbe648cf2e12b9148d780",
+      "retail_sha256": "ab4be7c394d117b89f56d478ec2529ab1d26c04f3be16936ded8b3e4537aa569",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "82d56150845aa90bda0244ece5e8e2a5cb2e7ad5619f9a02d51b4aea177b78eb",
+        "3e4c1e7e5649b41669a77cc970aad1f69e7d28e38f4589df6ce691412b378569",
+        "6e5905cf5a21ba66bc9249db2a4638de2507751a705b109190f06dc15c61124e",
+        "b4678f072b0591989160aeca1b5544735d6b6cdd94d51aeeb23c182fc991d6a7"
+      ],
+      "reviewed": true,
+      "notes": "TSLA: actual delivery disappointment and attributed possible government-role change; future role remains conditional. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-04": {
+      "spec_sha256": "6451166758648bdcc36308f368eeb26d7157271a6ab683f279f32fca0b9c09a4",
+      "feed_sha256": "aa0a3eaadc0643a29ed31e3932694df8bf5c260eaa22672b2df1520f32ecba55",
+      "card_sha256": "f7a9d3ecb54fa75f503fd62f0eddf29d7f73a05cf0c13549ecc916bc2ac80d80",
+      "retail_sha256": "d6640145de2587ef7541477044c01d85d8b45e65cd146a9603bd7c9df71e9a3a",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "86a997c136463d09da1863590a2a5998f4bd1bcef05b13d0cc816d916ee56e90",
+        "f466b1ca3c69c99ea2c9b7dd1bf8251c84832a97f122e8d8783b8c3372e46674",
+        "81ed9af269539516adb89e18850540842d43cf608ce2453eadb809a70cd635c1",
+        "e85b6c0bc1c6dc137c70575609734b86da18770ab25c62dc97b3c0b9de780c68"
+      ],
+      "reviewed": true,
+      "notes": "QQQ: initial tariff-shock/options-despondency narrative supported by this date's coverage. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-07": {
+      "spec_sha256": "ba9a26254f8ddac66cc9318c9181cb4eab12d2c861115052895575587c3dae96",
+      "feed_sha256": "6573a3355ec1a26b4aa68ddfb81aad08670dcbdd67be62c88fe5eea0a17c1b1a",
+      "card_sha256": "f52d6c7e75a7aaa86f0958c11730031f17787c2e0218361b0eeffda83c5d0bbb",
+      "retail_sha256": "72b91fe57c7475316ed488c6ea0e90d46220a5358a26e55685f4564e96e0fca5",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "d4d36f76db5eb5c4411861818ac3bb2791f8a92858c08c05dfc7ebf66dbaabb6",
+        "fa345a264a5b00380a73d9e3a81aa6fd77cdb72ab15e4889dc6f0a7204cad4cd",
+        "299c4cd633e07fe2dba1edc4fb419607337f1ae0d86be7a8efd1794009e12a71",
+        "27d7cd62b44462dd2b8af1d565027228c3b0215a662347f27672166548be95eb"
+      ],
+      "reviewed": true,
+      "notes": "SPY/QQQ: new reported record retail buying versus the prior despair story; observed buying kept attributed. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-08": {
+      "spec_sha256": "a94c9ea3fdded31237f6ee82081f0239c6f5300bbc729ff2f8a047f2f48a522a",
+      "feed_sha256": "6681de58baae5065b3baf661668e7b6e162238146ec5a70a714be2dcf3e0c1ac",
+      "card_sha256": "9328b0118c7e02576b793f89a6363dd6a118afe316f4b13e88707235b0943d40",
+      "retail_sha256": "044036c308e60decb69900dfed1b0d5f7c7c69daad1de9ceff6278cb7dfe72a5",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "3738f4950b9cd561444976931e27ce34213b5fa0e20e210a02a7740aa1ff9563",
+        "40690354c6a1cdaf118495151132a1584803e6ed6fe4b6c0158bd09d24f696a5",
+        "1a057e8e2516f113ae561c3a5b3467093721dda11e82fa43172b629257c8f6ba",
+        "03f02b3b4056a7e0a1538ebbffa4c527606ee6999e28d130f841dd5122e07847"
+      ],
+      "reviewed": true,
+      "notes": "IONQ: new DARPA/benchmarking attention and reported reaction; evaluation distinguished from booked commercial revenue. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-09": {
+      "spec_sha256": "2f4800ef6622d0f999ea0687136c45a2095d73c4be31879200d762875d97f656",
+      "feed_sha256": "828cca1fe30ee9579752b680607f43f0d2a13973a23552e58611852a19323da9",
+      "card_sha256": "f02daff8b471c6105e8b242d29e324cfe49afdc4213cda736085e03db3cafc5c",
+      "retail_sha256": "9028318a7bf276dd7254824c8e4cc37fe29fa5404c7d8506b5811be2327715c9",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "16ba6e4289b4dc6fa173d7cea7572aec444780d13152c01d3fb61f7e8c44e184",
+        "58db70e80041862d14a2fa30e7f0ff02500116636f2811364409008d874bc162",
+        "bd5b1f3f21c88611432129ecd9bf9897c6f8b7012ebcc2ce8343667e7500509c",
+        "b04bfea275def2b8c26844a7ff2ed8a0e0c36034d13be3a8d6daca2e4ed7e727"
+      ],
+      "reviewed": true,
+      "notes": "SOXL: semiconductor tariff transmission, reported pull-forward/surcharge developments and leverage-specific implementation. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-10": {
+      "spec_sha256": "e9a943e3fe39a72642e41502ca02e311f28dd4a7d5515a56b6f27e11c371bf9d",
+      "feed_sha256": "e2cb1a0ebf34269f3cb4c7cf4d0627f0f46e02137a9a3d70ab1eed800af32e9d",
+      "card_sha256": "2ce07821a6ac58a137f46117beebca544683c49538a65e2413fbcc8cfc2777e1",
+      "retail_sha256": "92aaee1d514793904d053000df084a4fd05373a20673bd7a37d4544c5c2be46e",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "e7ce13c6017f3805abe272cc706ae3dcc700159f265780e970df582129d524cc",
+        "30884f6e0eaa60b8d7d4130d8bd7b19d8d2e073d2924cb3854534552e6113bf9",
+        "22c0c164312dfcde6582f89bea9b235f364db6145e5e3be70020d4f4e5a8a68e",
+        "2e138eaa955086c73439afbe21cb722ad09ad8077f78394d75954a3f7ed991c3"
+      ],
+      "reviewed": true,
+      "notes": "BABA: dated Stocktwits chatter spike with cautious outlook; no invented bullish consensus. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-11": {
+      "spec_sha256": "54c77301720045b13a1caab6966f738f751fee4f6f7ee62dc3aeb309b5af5380",
+      "feed_sha256": "2967e7da2b2166afd30cf243daff3726fe53d76e8181e18bef1aa905933fed1d",
+      "card_sha256": "e044009ce55388b798a8ed6788a092aeaa491ef79dcdafae53d7fa756146ce94",
+      "retail_sha256": "159407059ec12e2ddad4e89ffbbbaa5309a0507be74182f62eb48184fa7f950e",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "e6c7cbc3cb4bfeb6c03426da259c55e35c0e17d49027c0ddb12d61997e2eb3d2",
+        "82209ee7baa7af9d91ee6839895bf5d9ff4cd771a6ae881788729dffd96f1670",
+        "594b2ab33233e42e9554d1ef9f052d88333084412df4ba4ac20985e82626ecb7",
+        "17343cf212d15d5bd40f05e7645d73c1a0e50b560fdf0bf49e22125280876bbc"
+      ],
+      "reviewed": true,
+      "notes": "GLD: changed monetary-confidence/alternative-hedge failure angle, reviewed in the evidence-bound concentration disposition. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-14": {
+      "spec_sha256": "df175f8c1d876cad765342b29f41fc4c50b98d97f9bfff9533458bc4a30a54fb",
+      "feed_sha256": "b4f7ca695880e92c2bc7b299309b7860a9ef2609a48932816da7cffa66b3ff42",
+      "card_sha256": "17b754b68a57886e623f5bf7b60633c3397afd44ba3c1e8639726b98ed428813",
+      "retail_sha256": "c5b238a41823c5c1d6049fe476d8d9d51c760bcac315af9e1fb0a12b43911975",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "9606d0c29cc50283189e1f5deba8dc16a372776ee6f14d121c9f27cf3d2fa094",
+        "670bcdd3d2b3606f556526c14345cb521e6e2432872a072ce86679d43c22940e",
+        "6420530638b490f785362cd770ca07dc3dd7a32a93221a76bdbcd9a20a83099d",
+        "1738d8ddfc807028eda91233b4a6c6f555daa41e64a03ae722711d4e562b6eba"
+      ],
+      "reviewed": true,
+      "notes": "TQQQ: fresh policy reversal/electronics relief and leveraged-vehicle attention; 0DTE context distinguished from TQQQ flows. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-15": {
+      "spec_sha256": "5e52b73822dff2874a2503d2a6d6b60c8556913c979d6eedb7bcafb001f8afb3",
+      "feed_sha256": "67bcbd05fc027275f777ab369158f22c4bc40e5479ed5cd2236ea960ed645d68",
+      "card_sha256": "cafc6d2ed22d9c618c45528e96cf7ae18a8b372d994f0e0967c2fb005f05d8f8",
+      "retail_sha256": "e9e824184149d7e3486187c5a15084e0ec643ea57c4d6bf25823784b73cb0191",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "672db80e12577c29cf5753f5802fb55522a45327d6f31e11b9918a8a0ddb1a7f",
+        "510f45c79f9c9d2a3fe6c6d6ec20b73a071419c7681667890fa208641c6e5ad2",
+        "794cb523a12c2ad17273d1897a290cec08b74892336df76af70cdd6d6ee3fe9e",
+        "4c9a32c6c22690e48f315f10081e15d7e396842157825a697a395088a7949901"
+      ],
+      "reviewed": true,
+      "notes": "GLD: new Chinese physical trading frenzy and dollar-trust concerns, rather than a price-only repeat. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-16": {
+      "spec_sha256": "60ac7a5eed9825a26350fe99911741a5ec526cd825c3f89ae894bebddf5ce573",
+      "feed_sha256": "6bcdfa23774295e84ba486325f02566cdaaa13905151c36f419bc30192a99cb4",
+      "card_sha256": "efe04268b444db7195bb2696ddf83c42733be9b4d97d965266eec0fcc5b068cd",
+      "retail_sha256": "5b07a2933f536b61b7b36985c8cb75b929d4c44c8f6f3b609fbec11fa1d01e93",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "76a44dcd4669b23a325e3caf4096be553b8dfe77dc0c4f1f2537826b77ec0760",
+        "01f2f3cb33c8f2a05965be7b67478daeb30960771f3882d7ed082e0e574ccef8",
+        "7afaa40294c1112780dbb3e368db8506d5f5ec036b211bd19ade8238065d2c29",
+        "84bb8621764989afb0529d5cbe46ef5f5b77a42a129d8ebfe337f81f5c2fe216"
+      ],
+      "reviewed": true,
+      "notes": "NFLX: new revenue ambition and pre-earnings coverage; actual earnings kept pending at this cutoff. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-17": {
+      "spec_sha256": "a6703ec57184a44b74b00dfbd647b4ce77df7c078f13c595f8f4d26d2dc4729f",
+      "feed_sha256": "051399a6388fc6222bb517df863ced7550683b5f51eb7f3212f527f32f78b73b",
+      "card_sha256": "0f38095cde33ab72ba3a4d50a9a31a446baac6a294f844d286f45ba4272a0434",
+      "retail_sha256": "0beb4f866cbe8ef8dc7b2d44cea495084a0bc22fb5d778fb40416bd4e11430a8",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "a405853d49fa3d7a148d0467b79dcaa16b3daec97ef8147234df38208a9e5826",
+        "85885b3227a5b1d7305b569e3d44e33ca797359346b40578cc0f3982432c09f8",
+        "f5885e2e3c912964a305785b286d3cef42683e9d6f3229bfc943633fabea7cd4",
+        "8d19fb14e1a6022f2effcaf592ed9cf6f692e24955333ffaf1e72819caa4111f"
+      ],
+      "reviewed": true,
+      "notes": "HTZ: applied new disclosed-stake/turnaround lead; no fabricated HTZ historical close. Prior gold lead reduced to a brief side. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-18": {
+      "spec_sha256": "2a5d458db285d78ba75c6cd262db176ec4ee2d6ea9e50ce5466a1762bb3e26e1",
+      "feed_sha256": "961cbf58862ccb80cd40a9b57ba28985a3df3ac4c4b3ec6fd4a02f07e63a0482",
+      "card_sha256": "2853d0a146755588aaee47572ddb56f5d6072ad9a76d6c90c38defe6178b82dc",
+      "retail_sha256": "25b30866cde9efc4eaf712b0bd5d33b40153f1c602c71851787fe69dd902fe00",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "3239f363b5469167cd702ec1228ac858dfb30b5be82392d7d66645391201e4ac",
+        "145b5b2621c1bfef59c4ad6bdd7785798566254fe12ce05d80af061fa9d8cc03",
+        "a13032f5a22ff3a578ddfd761697d3779bcdf2da1522a22ba689987ebd651e2f",
+        "f754b4b99d0576847920641f80cd471f872dccec49751f73900b6d8aa87c6d40"
+      ],
+      "reviewed": true,
+      "notes": "SOXL: fresh leveraged-product persistence coverage and TSMC guidance versus H20 restrictions/target cuts. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-21": {
+      "spec_sha256": "4e8e76c053a50c4cd102f807a3f2a9ef02127ac2a2b1d4ffe28df09de784c018",
+      "feed_sha256": "15e3dfbea613c12e431373a7d01bac27bed97d069219b74f184d46142152a52b",
+      "card_sha256": "4a19a1d09279a22d2d076bc1f90a61f69f507de8c913b2c06bff3b2c2f49946b",
+      "retail_sha256": "a5f11894cc5aacfd6431cb555e52b9d122553aac9a45ccfd97db6686f7829a85",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "02595a20766965005a5a80a5be4824fdd15354a98f7a5da0f841c69803290b59",
+        "2055e587c384c5e9b28efbfd6bb5e75e6a4c6df1737e7cd64d28e36dc8bf2bc1",
+        "140b938672541b426bc106ee656b8d247515844067243e265ae0ca364407d494",
+        "454ad332462026c2c8786223fd9d366d38c11a3a251ad61e9f7d019ef123eaa9"
+      ],
+      "reviewed": true,
+      "notes": "GLD: new Shanghai ATM crowd and named professional-allocation coverage, with observation scope preserved. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-22": {
+      "spec_sha256": "1dfa00dc842d9112f2d9a4908bd6e8c8f151ccc0385a27711bd804f44130b178",
+      "feed_sha256": "98b5ec35911e18e5fe1a146e4387b6183c1fbe25c9801590eec5d123addeab28",
+      "card_sha256": "15815319e2cb17b4015102d71c0c2ea59f4bea5f5b2f5abd85e852fa42baca1f",
+      "retail_sha256": "a18143f81b9bd38ea887c05214b14a890f9d284d6e994e0cd90b8b4c4edca42e",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "062b1c6c24d4ce2c0fd543283f2081b2b821f9a924f1717cd9e62dd5c3dc778c",
+        "29287e799d613cfff99a2e043ac01c5149c3ee802a4df17514127e446177126d",
+        "95488572f66db0a507dfc43367b484a9481119a237560a227ff9feb848259124",
+        "12ba038c146497412ed82be53bd279dfff7d96b37af4a1e4bbcd3f6352f039c0"
+      ],
+      "reviewed": true,
+      "notes": "TQQQ: new Fed-independence shock plus dated Hartnett leveraged-ETF attention, with amplified daily exposure distinguished. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-23": {
+      "spec_sha256": "12f41af91096d3875ac7e7ca3a566a846c9ca73a537efe89d9d52f1f2e9bf04f",
+      "feed_sha256": "b88ee944ac6efc71355e821eaa16b0fb66c9a45eaf0a82c7831985428d284ccd",
+      "card_sha256": "8f78224c0a45cda4bee9e6e73c66c845ee6c0d61f246e633640aa583c9c8c2ea",
+      "retail_sha256": "bed20c0e1170fd3bf9f417e2536e06810e4b53294079a13dbe76553e7d3b4291",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "3dc93ff5888fe20cba82b903973bb34605eb347104eacd5909bdd56621b47f6f",
+        "c2667d104d2d855e6f3119d83f2b768ca5106ebfbbacac41eb7b1d1556463058",
+        "f153b5783ed6ee741eb1d15971e6840743d71d183237ef26a46516e9c662cc00",
+        "c8e8d0957bf3ae77f0b010fd54175f2960921a1115f0089f3779a2ced37fde66"
+      ],
+      "reviewed": true,
+      "notes": "TSLA: actual earnings miss and management-refocus disclosure replace the pending event; completed close identified as pre-result. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-24": {
+      "spec_sha256": "8d8eb55e8582d4a9d6b773fbd58bf6d25f4c1e44f9d6f1d6d47c1d9202f0e656",
+      "feed_sha256": "fab19e9e6d66ff2a3c8479344d75057c0112f109c51c1156d3754f5d8e44e910",
+      "card_sha256": "7fe7cde7db7cc510f17a5606cd3c43c3f0ab5c65a92c816f2dc164484c4ae2fc",
+      "retail_sha256": "ad618864ce1b109dc0da36edeca1fa90c45cfad651116fd8f71eed9e5fe8b98f",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "5a5c7ac30ee7e1ab7a0a20fe7106bdea65eac6d8f16a541d1ca694939366a034",
+        "844d2e76401aa11e77045276e00214286e3e8a6697be0e956e156a217529753b",
+        "3d850e43769d6115b9e818f8f6d6d066c8bcbcb7c5bea7279583ab20c7d7274c",
+        "bffee28c26204462b9c758cc5ed95fab3fbeddead60f30b0bb500f1748692f99"
+      ],
+      "reviewed": true,
+      "notes": "NVDA: new individual-concentration account and China-chip stockpiling report; an individual story is not a population ranking. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-25": {
+      "spec_sha256": "196f130ab853b51eac82fbc3153d8cd00e7deb3babd49902dd4e3ec86d2e13bb",
+      "feed_sha256": "5f32903f743c81062e8048c83f4735afccd6e4d2a590ac59c7439e51fa3f7f57",
+      "card_sha256": "89d213a38e00a724f2c406bd313715e7f9bdf51e21213fb7e9d2e769fa0e391a",
+      "retail_sha256": "2d07b33abe13b52cf42d37538a8eac9a9fbd389ce75e4b8c67d23132d6ed74e4",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "2314006805b7ac3e177911d9a7c58a3527cc81d219fa020bcbff8f8aa2fdf02f",
+        "6b769f384aa2b4dbccb983b148bc2b21d6e366c966efd5ec307c804f7b8526f3",
+        "eb63a1ce5554e9a81063971c931452f1e20a69583aa807c389925539a7efcfea",
+        "b3cde29a12ee1a36f4540915078d6cc0ce6f84eba2efffe6d9820f3d2c5cbf81"
+      ],
+      "reviewed": true,
+      "notes": "VRT: company-specific Colosseum partnership and fresh infrastructure demand context; broader retail attention explicitly indirect. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-28": {
+      "spec_sha256": "1e79b052e1830f0f42c1e675999cb406b05ed28df4e321b1bda47aa856081a8c",
+      "feed_sha256": "cfeec053f90635175e9b69fac6a582c7486e9fca059fa30abd9c1f5f3563a7cb",
+      "card_sha256": "f364894418e6af1e3776af30c23e4ce07e3fc527299ca9ba428aef38cfb131e5",
+      "retail_sha256": "0aba6b206b964d6b9f77d893065e69ef5d57b61806122254913a2d398d64bdc1",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "0ea3f3cc9fb4be4f8a0c6bdad3816fabd8f7df39f1b34f163eb82bb8ba1791d3",
+        "5a4c31aab8cab3ca387fdc52df6269eb2d2ffc45d535f2be164a8de370b4b32e",
+        "6528995ed98fe4e1916a1173457bf85a08eb0310f79870924b407216de82f275",
+        "d6cc93509afab948bcb840d6205f8abc56c55f4af53f5d4657a6cea1b7720f94"
+      ],
+      "reviewed": true,
+      "notes": "TSLA: actual new self-driving rule relief supplies a regulatory-option angle distinct from earnings/management focus. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-29": {
+      "spec_sha256": "87bacc3ca6b723767dd526b355d98d99427a6ed346ca71add730530823c1fcc8",
+      "feed_sha256": "de7483c1a62c39157de487757468f3a7e8c5cea5d4a1f39a23d5bc50d27d6cd2",
+      "card_sha256": "ae558574d20d2d212bf9147ed452bf7fbc05ae892345a5f701032d7f42015034",
+      "retail_sha256": "fd2e5ea2e6f45b98d23101cdb2987f79a9657937669b4d3eb95ec570dcb902cb",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "47353d8cb063ef7a1fe3375253f4e8981705d81bfca317faa5e0d9642ed40e6f",
+        "1564ebbc3753c2f9589f3ec4bb74685a5dfc883b368bae67da9bd50ee82c0e88",
+        "ef1f09edf787f9da0ac2a1562d31dbc84361f66dde36abbbd7a7447b49cd8d22",
+        "4211a9a9607fd511b3296d161a026091d18156cb444aa8169bd89d9b2a0748de"
+      ],
+      "reviewed": true,
+      "notes": "XRP: applied prospective leveraged/short futures-fund access lead; reported review and possible launch remain attributed/pending. Unchanged PLTR lead reduced to brief side. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    },
+    "2025-04-30": {
+      "spec_sha256": "c30c239afa797f4b57c7c515fd128147d56fbbab80a14c8971701cf2172fcdad",
+      "feed_sha256": "58f061ff15173338f84fed47b0cd8da5621ea86493e4b0f434b0ae988426901d",
+      "card_sha256": "0fd6459ad045d108a60bf1dac5f7e5583013031e3b6d0dc7a6a3fb97d5972ce4",
+      "retail_sha256": "deba3a45e7840330de704a4309341918f352afc68616d8f9788c3679d82d4a2b",
+      "reviewed_entries": 4,
+      "entry_sha256": [
+        "81b3752946cd0f5f411daab9b3f9f7644e7089d3c248575bb3a8d4ba08955824",
+        "11fee3ed582d8ee17de01a2022ed3148ef35b4aac96f7c9ea507f1c73cc90a21",
+        "6b2e64891f6d1f7956127cff268876621336c6f9cb36a553ae710285e42cf868",
+        "f49328c97970ce1651965880baf8913efd3a135fa8fe8eee6e5bb8735e43d587"
+      ],
+      "reviewed": true,
+      "notes": "HIMS: actual new Novo/Wegovy arrangement distinct from April 2 Lilly channel; nonexclusive company/platform exposure preserved. All four current entries read chronologically against own-date eligible headlines/cards and earlier editorial history; no unresolved issue."
+    }
+  },
+  "decision_file_sha256": "90921e2fbcfef743bb10c50e5b1a28251d4177f7d34e182e2dfff7cd60f68732",
+  "guard_receipt_sha256": "38676c64418352b20e168d3aaa6e0d1aa45e471b700bc93f29aa3632808663ce",
+  "guard_code_sha256": "e8cc16cd2786c6f3364d0074cff391e84e4024b32b20db4da6db515d39a9ce18",
+  "proposals_sha256": "14b12ddb373334e831c5ef7b341adb19ceb46b66dbe2417097cb958d4d133b86",
+  "guard_flag_count": 41,
+  "guard_unresolved_flags": 0,
+  "hard_failure_count": 0,
+  "exact_applied_proposal_count": 22,
+  "unchanged_entry_bindings_checked": 68
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "GME",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GME?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "e88f14ef667ae401f7ff6f573fb3fedb42745d9ff5dbb173fb830ca34e416e82",
+   "fetched_at_utc": "2026-10-30T14:40:07.262397+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GME?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "dd2e198fe57b8e53a24bf6009fcae10706adecfd383e23797a744e8907028bfb",
+   "fetched_at_utc": "2026-10-30T14:40:07.733752+00:00"
+  }
+ ]
+}

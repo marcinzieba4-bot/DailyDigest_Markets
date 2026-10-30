@@ -1,0 +1,30 @@
+{
+  "BMNR": {
+    "status": "excluded_no_April_source_history",
+    "reason": "Source returned no historical price data for the February\u2013April2025 request; no prices or returns estimated.",
+    "error_type": "HTTPError",
+    "error": "HTTP Error 400: Bad Request",
+    "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/BMNR?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+    "checked_at_utc": "2026-10-30T14:41:55.328052+00:00",
+    "http_status": 400,
+    "response_sha256": "c26c368fc7e42d3ef5c2e6fa32e1ec886334ec0c36e15a329a385a8a01731c90",
+    "source_error": {
+      "code": "Bad Request",
+      "description": "Data doesn't exist for startDate = 1738368000, endDate = 1746057600"
+    }
+  },
+  "CRCL": {
+    "status": "excluded_no_April_source_history",
+    "reason": "Source returned no historical price data for the February\u2013April2025 request; no prices or returns estimated.",
+    "error_type": "HTTPError",
+    "error": "HTTP Error 400: Bad Request",
+    "request_url": "https://query1.finance.yahoo.com/v8/finance/chart/CRCL?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+    "checked_at_utc": "2026-10-30T14:41:56.018381+00:00",
+    "http_status": 400,
+    "response_sha256": "c26c368fc7e42d3ef5c2e6fa32e1ec886334ec0c36e15a329a385a8a01731c90",
+    "source_error": {
+      "code": "Bad Request",
+      "description": "Data doesn't exist for startDate = 1738368000, endDate = 1746057600"
+    }
+  }
+}

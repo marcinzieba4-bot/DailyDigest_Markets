@@ -1,0 +1,18 @@
+{
+ "ticker": "AAPL",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "d2f7c53298c09ba013e6314a46f43febb3e307335a745a6f2857636297b16fd5",
+   "fetched_at_utc": "2026-10-30T14:39:57.494044+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "d94d0c68f82f5ae47605fe3c3b2910ac55d4b6f4e5dd3b96b7baee1212c7fbcc",
+   "fetched_at_utc": "2026-10-30T14:39:57.755367+00:00"
+  }
+ ]
+}

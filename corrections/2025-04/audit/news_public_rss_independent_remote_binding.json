@@ -1,0 +1,505 @@
+{
+  "status": "passed",
+  "reviewer": "/root/apr_source_qa",
+  "repository": "marcinzieba4-bot/DailyDigest_Markets",
+  "checked_at_utc": "2026-10-30T15:09:53.361Z",
+  "method": "Independent GitHub connector GET reads of run, job, artifact metadata and actual commit Git trees; selected execution and content identities retained without personal account metadata.",
+  "runs": [
+    {
+      "id": 41076208487,
+      "head_sha": "c0f015d8c67cd2096f1704c099706dbe58305406",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "path": ".github/workflows/apr2025-rss-recovery.yml",
+      "head_branch": "codex/apr2025-public-rss-recovery",
+      "repository_full_name": "marcinzieba4-bot/DailyDigest_Markets",
+      "html_url": "https://github.com/marcinzieba4-bot/DailyDigest_Markets/actions/runs/41076208487",
+      "independently_observed": true,
+      "observed_at_utc": "2026-10-30T15:08:05.307Z",
+      "tree": {
+        "sha": "e340b40d69a98681e79965f846acf51ca94fe2f1",
+        "truncated": false,
+        "files": [
+          {
+            "path": ".github/workflows/apr2025-rss-recovery.yml",
+            "sha": "cbcc681fbcbb4e6bcfadd9ffbf75c66376f56d7c",
+            "size": 1199,
+            "type": "blob"
+          },
+          {
+            "path": "README.md",
+            "sha": "bf5df4f254597ebef77a4c4e79c3af746fb5a3bd",
+            "size": 21,
+            "type": "blob"
+          },
+          {
+            "path": "corrections/2025-04/rss_recovery/fetch_news.py",
+            "sha": "05cccf7f93b1006917a115feb82c7f1b2d03b889",
+            "size": 10533,
+            "type": "blob"
+          },
+          {
+            "path": "corrections/2025-04/rss_recovery/input.json",
+            "sha": "2aa6c3bc7aa00db2b0f435f33a6174986110dba1",
+            "size": 30244,
+            "type": "blob"
+          },
+          {
+            "path": "corrections/2025-04/rss_recovery/run.py",
+            "sha": "88a2241c6969196c673bf540c5839dc56d71ca06",
+            "size": 3086,
+            "type": "blob"
+          }
+        ]
+      },
+      "jobs": [
+        {
+          "id": 124132959748,
+          "run_id": 41076208487,
+          "head_sha": "c0f015d8c67cd2096f1704c099706dbe58305406",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 12987585637,
+          "name": "apr2025-public-rss-0",
+          "size_in_bytes": 376391,
+          "digest": "sha256:957a0b9445bde98649b4c84904f108fde86b36bbc18e9b5818f24ad272ed4b2d",
+          "expired": false,
+          "workflow_run": {
+            "id": 41076208487,
+            "repository_id": 1175142120,
+            "head_repository_id": 1175142120,
+            "head_branch": "codex/apr2025-public-rss-recovery",
+            "head_sha": "c0f015d8c67cd2096f1704c099706dbe58305406"
+          }
+        }
+      ]
+    },
+    {
+      "id": 41076742760,
+      "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "path": ".github/workflows/apr2025-rss-recovery.yml",
+      "head_branch": "codex/apr2025-public-rss-recovery",
+      "repository_full_name": "marcinzieba4-bot/DailyDigest_Markets",
+      "html_url": "https://github.com/marcinzieba4-bot/DailyDigest_Markets/actions/runs/41076742760",
+      "independently_observed": true,
+      "observed_at_utc": "2026-10-30T15:06:09.472Z",
+      "tree": {
+        "sha": "aec4889db2878090e121b59dce4deda1a8477347",
+        "truncated": false,
+        "files": [
+          {
+            "path": ".github/workflows/apr2025-rss-recovery.yml",
+            "sha": "d7beb5e359acd6f1d989b1191ae121ae85baf1bb",
+            "size": 1238,
+            "type": "blob"
+          },
+          {
+            "path": "README.md",
+            "sha": "bf5df4f254597ebef77a4c4e79c3af746fb5a3bd",
+            "size": 21,
+            "type": "blob"
+          },
+          {
+            "path": "corrections/2025-04/rss_recovery/fetch_news.py",
+            "sha": "05cccf7f93b1006917a115feb82c7f1b2d03b889",
+            "size": 10533,
+            "type": "blob"
+          },
+          {
+            "path": "corrections/2025-04/rss_recovery/input.json",
+            "sha": "6f98b31228d39189d145b65b8845fddf3af0b368",
+            "size": 2792287,
+            "type": "blob"
+          },
+          {
+            "path": "corrections/2025-04/rss_recovery/run.py",
+            "sha": "88a2241c6969196c673bf540c5839dc56d71ca06",
+            "size": 3086,
+            "type": "blob"
+          }
+        ]
+      },
+      "jobs": [
+        {
+          "id": 124134845886,
+          "run_id": 41076742760,
+          "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 124134846085,
+          "run_id": 41076742760,
+          "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 124134846160,
+          "run_id": 41076742760,
+          "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 124134846174,
+          "run_id": 41076742760,
+          "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 124134846194,
+          "run_id": 41076742760,
+          "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 124134846210,
+          "run_id": 41076742760,
+          "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 124134846253,
+          "run_id": 41076742760,
+          "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 124134846281,
+          "run_id": 41076742760,
+          "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 124134846322,
+          "run_id": 41076742760,
+          "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 124134846331,
+          "run_id": 41076742760,
+          "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 124134846439,
+          "run_id": 41076742760,
+          "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 124134846545,
+          "run_id": 41076742760,
+          "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 124134846553,
+          "run_id": 41076742760,
+          "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 12988416038,
+          "name": "apr2025-public-rss-12",
+          "size_in_bytes": 468614,
+          "digest": "sha256:b3c106d685b31145b11d5204b01ea106542015b18c33261764b865be8f9fb634",
+          "expired": false,
+          "workflow_run": {
+            "id": 41076742760,
+            "repository_id": 1175142120,
+            "head_repository_id": 1175142120,
+            "head_branch": "codex/apr2025-public-rss-recovery",
+            "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab"
+          }
+        },
+        {
+          "id": 12988310736,
+          "name": "apr2025-public-rss-2",
+          "size_in_bytes": 793462,
+          "digest": "sha256:889b3336ba11d8d7ae8b1f5000b232e145efcdbb6fe270913879ba019e6853a9",
+          "expired": false,
+          "workflow_run": {
+            "id": 41076742760,
+            "repository_id": 1175142120,
+            "head_repository_id": 1175142120,
+            "head_branch": "codex/apr2025-public-rss-recovery",
+            "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab"
+          }
+        },
+        {
+          "id": 12988180948,
+          "name": "apr2025-public-rss-1",
+          "size_in_bytes": 2542816,
+          "digest": "sha256:8f801cf7ae405f5d83cfd971544abbf9bca25932c7f7c3a983995cf5eee76a4b",
+          "expired": false,
+          "workflow_run": {
+            "id": 41076742760,
+            "repository_id": 1175142120,
+            "head_repository_id": 1175142120,
+            "head_branch": "codex/apr2025-public-rss-recovery",
+            "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab"
+          }
+        },
+        {
+          "id": 12988131310,
+          "name": "apr2025-public-rss-8",
+          "size_in_bytes": 1365781,
+          "digest": "sha256:4d056e6b83349ad6d42e85eb190eed1c38c8df7b03b2cb1ab918d20e7f942107",
+          "expired": false,
+          "workflow_run": {
+            "id": 41076742760,
+            "repository_id": 1175142120,
+            "head_repository_id": 1175142120,
+            "head_branch": "codex/apr2025-public-rss-recovery",
+            "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab"
+          }
+        },
+        {
+          "id": 12987896341,
+          "name": "apr2025-public-rss-5",
+          "size_in_bytes": 896795,
+          "digest": "sha256:31ff99418aaa25498f14976708ea6970625052fcfdc86509c5a0e3def4037e74",
+          "expired": false,
+          "workflow_run": {
+            "id": 41076742760,
+            "repository_id": 1175142120,
+            "head_repository_id": 1175142120,
+            "head_branch": "codex/apr2025-public-rss-recovery",
+            "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab"
+          }
+        },
+        {
+          "id": 12987741396,
+          "name": "apr2025-public-rss-0",
+          "size_in_bytes": 2683376,
+          "digest": "sha256:c2212f10c23b79ec6d8bea7149e933d3a065c9c72123bf4b2608e5ad743791ab",
+          "expired": false,
+          "workflow_run": {
+            "id": 41076742760,
+            "repository_id": 1175142120,
+            "head_repository_id": 1175142120,
+            "head_branch": "codex/apr2025-public-rss-recovery",
+            "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab"
+          }
+        },
+        {
+          "id": 12987377464,
+          "name": "apr2025-public-rss-10",
+          "size_in_bytes": 1089054,
+          "digest": "sha256:73d6cfd99fe8f25ec5bc2551828186365d330d80b1f1c482fecb1e6e7a9b6c1a",
+          "expired": false,
+          "workflow_run": {
+            "id": 41076742760,
+            "repository_id": 1175142120,
+            "head_repository_id": 1175142120,
+            "head_branch": "codex/apr2025-public-rss-recovery",
+            "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab"
+          }
+        },
+        {
+          "id": 12987149692,
+          "name": "apr2025-public-rss-9",
+          "size_in_bytes": 2048208,
+          "digest": "sha256:a22e069ca80671e0f0cfa3b37b86a20987d2c194880a313f24b2749cf090e210",
+          "expired": false,
+          "workflow_run": {
+            "id": 41076742760,
+            "repository_id": 1175142120,
+            "head_repository_id": 1175142120,
+            "head_branch": "codex/apr2025-public-rss-recovery",
+            "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab"
+          }
+        },
+        {
+          "id": 12987014018,
+          "name": "apr2025-public-rss-6",
+          "size_in_bytes": 1815627,
+          "digest": "sha256:1f89010d4da12715acd896b0f42d569be62d6e18217707099e3f2c8827f9be44",
+          "expired": false,
+          "workflow_run": {
+            "id": 41076742760,
+            "repository_id": 1175142120,
+            "head_repository_id": 1175142120,
+            "head_branch": "codex/apr2025-public-rss-recovery",
+            "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab"
+          }
+        },
+        {
+          "id": 12986974348,
+          "name": "apr2025-public-rss-11",
+          "size_in_bytes": 1902090,
+          "digest": "sha256:402a37a17e46bc9d7d68e3d6f9b1c8ee87d06b80410c4c3ef918b37af16c4530",
+          "expired": false,
+          "workflow_run": {
+            "id": 41076742760,
+            "repository_id": 1175142120,
+            "head_repository_id": 1175142120,
+            "head_branch": "codex/apr2025-public-rss-recovery",
+            "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab"
+          }
+        },
+        {
+          "id": 12986964114,
+          "name": "apr2025-public-rss-4",
+          "size_in_bytes": 2190213,
+          "digest": "sha256:31d8639164fe88960852cd5b2debb1736bdf775ab4d41be7a4566e564d0ab3fd",
+          "expired": false,
+          "workflow_run": {
+            "id": 41076742760,
+            "repository_id": 1175142120,
+            "head_repository_id": 1175142120,
+            "head_branch": "codex/apr2025-public-rss-recovery",
+            "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab"
+          }
+        },
+        {
+          "id": 12986939238,
+          "name": "apr2025-public-rss-7",
+          "size_in_bytes": 1427615,
+          "digest": "sha256:db6701c4526b4b08e372970ee0439b5cd9b0bbd750584b8828f71ed32a2caba5",
+          "expired": false,
+          "workflow_run": {
+            "id": 41076742760,
+            "repository_id": 1175142120,
+            "head_repository_id": 1175142120,
+            "head_branch": "codex/apr2025-public-rss-recovery",
+            "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab"
+          }
+        },
+        {
+          "id": 12986599379,
+          "name": "apr2025-public-rss-3",
+          "size_in_bytes": 1186567,
+          "digest": "sha256:e0b9de124c1c43bfcbf02c98ab14f886ca93e77067691387fc8ebe15c2df8b30",
+          "expired": false,
+          "workflow_run": {
+            "id": 41076742760,
+            "repository_id": 1175142120,
+            "head_repository_id": 1175142120,
+            "head_branch": "codex/apr2025-public-rss-recovery",
+            "head_sha": "835443ca9d50a23a0ae00cf8525a64165b0b1aab"
+          }
+        }
+      ]
+    },
+    {
+      "id": 41077695811,
+      "head_sha": "fca2143455c1e96434d70952551f4e9bbe498b81",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "path": ".github/workflows/apr2025-rss-recovery.yml",
+      "head_branch": "codex/apr2025-public-rss-recovery",
+      "repository_full_name": "marcinzieba4-bot/DailyDigest_Markets",
+      "html_url": "https://github.com/marcinzieba4-bot/DailyDigest_Markets/actions/runs/41077695811",
+      "independently_observed": true,
+      "observed_at_utc": "2026-10-30T15:09:53.361Z",
+      "tree": {
+        "sha": "ff1c9e7c0c92d27e5120cf50e88e8c5674d187a2",
+        "truncated": false,
+        "files": [
+          {
+            "path": ".github/workflows/apr2025-rss-recovery.yml",
+            "sha": "3afeba7ff593be85b1221c16f6e48643f5d1f572",
+            "size": 1202,
+            "type": "blob"
+          },
+          {
+            "path": "README.md",
+            "sha": "bf5df4f254597ebef77a4c4e79c3af746fb5a3bd",
+            "size": 21,
+            "type": "blob"
+          },
+          {
+            "path": "corrections/2025-04/rss_recovery/fetch_news.py",
+            "sha": "05cccf7f93b1006917a115feb82c7f1b2d03b889",
+            "size": 10533,
+            "type": "blob"
+          },
+          {
+            "path": "corrections/2025-04/rss_recovery/input.json",
+            "sha": "b769c6a4c75cfa7e17e9e67f595a427516c1b607",
+            "size": 331055,
+            "type": "blob"
+          },
+          {
+            "path": "corrections/2025-04/rss_recovery/run.py",
+            "sha": "88a2241c6969196c673bf540c5839dc56d71ca06",
+            "size": 3086,
+            "type": "blob"
+          }
+        ]
+      },
+      "jobs": [
+        {
+          "id": 124138166318,
+          "run_id": 41077695811,
+          "head_sha": "fca2143455c1e96434d70952551f4e9bbe498b81",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 124138167205,
+          "run_id": 41077695811,
+          "head_sha": "fca2143455c1e96434d70952551f4e9bbe498b81",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 12987861870,
+          "name": "apr2025-public-rss-1",
+          "size_in_bytes": 1074935,
+          "digest": "sha256:0b8bf53fa4e0d04bbde75398eef3ec731f40a0f6bcb4204ef2890de237ff0351",
+          "expired": false,
+          "workflow_run": {
+            "id": 41077695811,
+            "repository_id": 1175142120,
+            "head_repository_id": 1175142120,
+            "head_branch": "codex/apr2025-public-rss-recovery",
+            "head_sha": "fca2143455c1e96434d70952551f4e9bbe498b81"
+          }
+        },
+        {
+          "id": 12987472533,
+          "name": "apr2025-public-rss-0",
+          "size_in_bytes": 1982018,
+          "digest": "sha256:993de6e52376966c98e760b77e091ac6f9f0de3ae1b65d72b16a4547f078660d",
+          "expired": false,
+          "workflow_run": {
+            "id": 41077695811,
+            "repository_id": 1175142120,
+            "head_repository_id": 1175142120,
+            "head_branch": "codex/apr2025-public-rss-recovery",
+            "head_sha": "fca2143455c1e96434d70952551f4e9bbe498b81"
+          }
+        }
+      ]
+    }
+  ],
+  "scope": "These independently observed run/head/job/server-artifact-digest and Git-blob identities bind the reviewed local recovery files and downloaded archives. Actual parsed-record and cache byte replay is checked separately by tools/check_news_acquisition.py."
+}

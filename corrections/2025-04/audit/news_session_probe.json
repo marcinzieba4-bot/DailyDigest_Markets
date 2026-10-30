@@ -1,0 +1,18 @@
+{
+  "observed_utc": "2026-10-30T14:54:10.228587+00:00",
+  "transport": "systemPython requests.Session; inherited proxy and trust/TLS; twoGETs sameSession",
+  "rows": [
+    {
+      "attempt": 1,
+      "status": 503,
+      "content_type": "text/plain",
+      "body_prefix": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: immediate connect error: Invalid argument|remote address:envoy://cloudflare_https_tunnel/"
+    },
+    {
+      "attempt": 2,
+      "status": 503,
+      "content_type": "text/plain",
+      "body_prefix": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: immediate connect error: Invalid argument|remote address:envoy://cloudflare_https_tunnel/"
+    }
+  ]
+}

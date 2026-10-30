@@ -1,0 +1,98 @@
+{
+  "scope": "Reviewer-only verification of exchange trading sessions. Current web retrieval validates historical calendar dates; it does not assert archived original website snapshots. This material is outside historical writers' inputs.",
+  "verified_at_utc": "2026-10-30T14:44:19.390591+00:00",
+  "sources": [
+    {
+      "market": "Mainland China",
+      "source_type": "dated exchange annual notice",
+      "published_date": "2024-12-23",
+      "url": "https://www.sse.com.cn/disclosure/dealinstruc/closed/c/c_20241223_10767110.shtml",
+      "verified": "April 4–6 closed; normal trading resumes April 7. April18 and21 ordinary cash sessions."
+    },
+    {
+      "market": "Hong Kong",
+      "source_type": "exchange 2025 index-feed calendar PDF",
+      "url": "https://www.hkex.com.hk/chi/prod/dataprod_cn/Documents/Index%20Feed%20Calendar%202025%20(English%20&%20Chinese).pdf",
+      "verified": "April4 Ching Ming, April18 GoodFriday and April21 EasterMonday are Hong Kong holidays; HSI index calendar has no feed on these dates."
+    },
+    {
+      "market": "Taiwan",
+      "source_type": "dated cash-equity broker notice corroborated by exchange-calendar implementation and official futures schedule",
+      "published_date": "2025-04-02",
+      "urls": [
+        "https://www.pocket.tw/announcement/1368/",
+        "https://www.taifex.com.tw/enl/eng11/newsDetail?idx=9189&newsType=1"
+      ],
+      "verified": "Cash-equity broker explicitly says Taiwan stocks close April3–4. TAIFEX separately confirms its matching futures closures; futures alone are not treated as cash-equity proof."
+    },
+    {
+      "market": "Japan",
+      "source_type": "dated broker cash-equity schedule plus exchange derivatives notice",
+      "published_date": "2025-04-25",
+      "urls": [
+        "https://www.rakuten-sec.co.jp/web/info/info20250425-02.html",
+        "https://www.jpx.co.jp/english/news/2040/20250428-01.html"
+      ],
+      "verified": "Broker table marks April29 domestic cash equities closed and April30 open. JPX notice specifically allows derivatives holiday trading April29; cash-equity closure does not mean all derivatives closed."
+    },
+    {
+      "market": "Australia",
+      "source_type": "dated exchange cash-market operating notice",
+      "published_date": "2025-03-19",
+      "url": "https://asxonline.com/public/notices/2025/march/0271.25.03.html",
+      "verified": "ASX Trade closed April18,21,25; April17 and22 normal trading. Current page also records a March2026 update; original unchanged body vintage is not asserted."
+    },
+    {
+      "market": "Poland",
+      "source_type": "exchange board resolution",
+      "published_date": "2024-06-06",
+      "url": "https://www.gpw.pl/pub/GPW/uchwaly/2024/701_2024.pdf",
+      "verified": "Resolution701/2024 identifies April18 and21 as days with no exchange sessions."
+    },
+    {
+      "market": "Copenhagen",
+      "source_type": "exchange holiday schedule2025",
+      "url": "https://www.nasdaq.com/sv/european-market-activity/trading-hours",
+      "verified": "Copenhagen closed April17,18,21. April16 to22 therefore spans six calendar days without an intervening session."
+    },
+    {
+      "market": "United States",
+      "source_type": "dated exchange holiday reminder",
+      "published_date": "2025-04-07",
+      "url": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ETA2025-22",
+      "verified": "US equities/options closed April18 GoodFriday. April21 is an ordinary US equity trading day, unlike many European venues."
+    },
+    {
+      "market": "Germany",
+      "source_type": "exchange trading-calendar2025 PDF",
+      "url": "https://www.cashmarket.deutsche-boerse.com/resource/blob/4064968/4079a2d5a9fec324905942b807b398ed/data/xetra-trading-calendar-2025.pdf",
+      "verified": "The dated calendar lists April18 and21 among Xetra/Frankfurt non-trading dates."
+    },
+    {
+      "market": "France",
+      "source_type": "exchange 2025 holiday table",
+      "url": "https://www.euronext.com/en/trading/trading-hours-holidays",
+      "verified": "Paris cash markets closed April18 and21 in the historical2025 table."
+    }
+  ],
+  "implementation_crosscheck": {
+    "package": "exchange-calendars",
+    "version": "4.11.3",
+    "calendars": [
+      "XNYS",
+      "XLON",
+      "XETR",
+      "XPAR",
+      "XWAR",
+      "XCSE",
+      "XSWX",
+      "XHKG",
+      "XSHG",
+      "XTAI",
+      "XTKS",
+      "XKRX",
+      "XASX"
+    ],
+    "note": "Package calendars are an independent computational crosscheck, not a substitute for dated market-specific source notices. Korea has no April weekday closures in this calendar."
+  }
+}

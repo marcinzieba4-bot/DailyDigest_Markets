@@ -1,0 +1,18 @@
+{
+ "ticker": "RGTI",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RGTI?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "e6f62df80173b5b6955b46e620f230c33f9a6961241c0d08cc7660d2714d59f5",
+   "fetched_at_utc": "2026-10-30T14:40:06.033633+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RGTI?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "96a2164d5a795f6f06165e6ec9e67d532af324bff1a25723c0344640b70f2292",
+   "fetched_at_utc": "2026-10-30T14:40:06.506661+00:00"
+  }
+ ]
+}

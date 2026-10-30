@@ -1,0 +1,122 @@
+{
+  "reviewer": "/root/apr_review",
+  "scope": "Reviewer-only timing hazards. This file must not be supplied to an earlier historical author. Current retrieval of original dated release pages verifies the release boundary, not original news-body vintages or every claim in a report.",
+  "report_cutoff": "report date at 00:00 UTC, exclusive",
+  "retrieved_on": "2026-10-30",
+  "method": "Independent web search/open of official dated releases and calendars. Clock conversions use the event date's local timezone; a later same-day edition cannot be substituted for the midnight edition.",
+  "sources": [
+    {
+      "key": "rba-april-decision",
+      "urls": ["https://www.rba.gov.au/news/", "https://www.rba.gov.au/media-releases/2025/mr-25-10.html"],
+      "observed": "Official news index shows 1 April 2025 2.30 pm AEDT; dated decision says cash rate unchanged at 4.10%.",
+      "event_utc": "2025-04-01T03:30:00Z",
+      "first_eligible_weekday_report": "2025-04-02",
+      "hazard": "Cached ABC and Guardian actual-hold headlines carry Mar31 RSS dates. They cannot support an April1 outcome. February decision remains the preceding stance; an April preview remains pending."
+    },
+    {
+      "key": "rba-april-minutes",
+      "urls": ["https://www.rba.gov.au/news/"],
+      "observed": "Official news index lists April meeting minutes at 15 April 2025 11.30 am AEST.",
+      "event_utc": "2025-04-15T01:30:00Z",
+      "first_eligible_weekday_report": "2025-04-16",
+      "hazard": "April15 midnight edition can describe only pending minutes or the already public April1 decision."
+    },
+    {
+      "key": "tankan-march",
+      "urls": ["https://www.boj.or.jp/en/statistics/tk/gaiyo/2021/tka2503.pdf"],
+      "observed": "PDF p1 embargo is 8:50 a.m. Tuesday April1 2025, Japan time.",
+      "event_utc": "2025-03-31T23:50:00Z",
+      "first_eligible_weekday_report": "2025-04-01",
+      "hazard": "An April1 local date is not automatically too late. Only own eligible frozen headline facts can enter the report; later yen/equity reactions cannot be imported."
+    },
+    {
+      "key": "bls-april-calendar",
+      "urls": ["https://www.bls.gov/schedule/2025/04_sched_list.htm"],
+      "observed": "Calendar lists March payrolls Apr4 08:30 Eastern, March CPI Apr10 08:30, March PPI Apr11 08:30, and March JOLTS Apr29 10:00.",
+      "first_eligible_weekday_reports": {"March payrolls": "2025-04-07", "March CPI": "2025-04-11", "March PPI": "2025-04-14", "March JOLTS": "2025-04-30"},
+      "hazard": "All are later than their release-date midnight cutoff. Exact report-day actuals and market reactions belong to the following weekday. A scheduled preview does not establish a released result."
+    },
+    {
+      "key": "china-march-trade",
+      "urls": ["https://english.scio.gov.cn/pressroom/node_9015550.html", "https://cn.chinagate.cn/webcast/2025-04/15/content_117859416.shtml", "https://apnews.com/article/86ecd3f1594b69e537085ae94e8f0e8f"],
+      "observed": "Official SCIO index identifies the Q1 trade briefing as Apr14. Chinese briefing notice says 10:00 Beijing; AP outcome timestamp is Apr14 03:31:24 UTC.",
+      "event_utc": "2025-04-14T02:00:00Z",
+      "first_eligible_weekday_report": "2025-04-15",
+      "hazard": "CNBC actual March export surge headline in cache is stamped Apr13. Exclude from Apr14 report. This trade-date screen does not establish the date of the separate March bank-lending release; Sunday credit must be assessed independently.",
+      "retrieval_limit": "Opening the English SCIO index timed out, although search returned its dated official index record; Chinese briefing notice and AP result corroborate after-midnight availability."
+    },
+    {
+      "key": "china-q1-gdp-activity",
+      "urls": ["https://www.stats.gov.cn/english/PressRelease/202504/t20250416_1959313.html", "https://english.www.gov.cn/archive/statistics/202504/16/content_WS67ff448fc6d0868f4e8f1bf5.html"],
+      "observed": "Official NBS release and government republication are dated Apr16 2025; government page lists 13:47 Beijing.",
+      "first_eligible_weekday_report": "2025-04-17",
+      "hazard": "Q1 growth and March activity actuals are unavailable to Apr16 midnight. Do not rewrite a preview as the completed release."
+    },
+    {
+      "key": "nbp-april-decision",
+      "urls": ["https://nbp.pl/wp-content/uploads/2025/04/Komunikat-RPP-kwiecien-2025-ANG.pdf"],
+      "observed": "Official statement is dated Warsaw 2 April2025 and says reference rate unchanged at5.75%.",
+      "first_eligible_weekday_report": "2025-04-03",
+      "hazard": "Apr2 report can use only preceding stance or own pending-decision previews; do not import Apr3 governor press-conference language into Apr3 midnight."
+    },
+    {
+      "key": "poland-march-wages-industry",
+      "urls": ["https://stat.gov.pl/files/gfx/portalinformacyjny/en/defaultaktualnosci/3292/3/168/1/average_paid_employment_and_average_gross_wages_and_salaries_in_the_enterprise_sector_03.2025.pdf", "https://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultaktualnosci/3296/12/75/1/index_of_sold_production_of_industry_in_march_2025.pdf"],
+      "observed": "Both original GUS release PDFs are dated22.04.2025.",
+      "first_eligible_weekday_report": "2025-04-23",
+      "hazard": "Holiday-shifted release calendar: March enterprise wages/employment and industrial-production actuals cannot enter Apr22 midnight. The nearby retail-sales release is Apr23, not Apr22."
+    },
+    {
+      "key": "poland-march-retail-sales",
+      "urls": ["https://publikacje.new.stat.gov.pl/en/publications-portal/retail-sales-index-march-2025", "https://www.polskieradio.pl/395/7786/artykul/3514484%2Cpolish-retail-sales-03-down-yy-in-march-stats-office"],
+      "observed": "GUS publication is dated23.04.2025; contemporaneous PAP/IAR republication embeds the GUS Apr23 announcement.",
+      "first_eligible_weekday_report": "2025-04-24",
+      "hazard": "Do not use March sales outcome in Apr23 midnight; use only eligible own-date expectations or prior data."
+    },
+    {
+      "key": "us-q1-gdp-advance",
+      "urls": ["https://www.bea.gov/sites/default/files/2025-04/gdp1q25-adv.pdf"],
+      "observed": "Original release embargo is Apr30 2025 08:30EDT.",
+      "event_utc": "2025-04-30T12:30:00Z",
+      "first_eligible_weekday_report": "2025-05-01",
+      "hazard": "No April midnight edition can state the advance GDP actual or its market reaction."
+    },
+    {
+      "key": "us-march-pce",
+      "urls": ["https://www.bea.gov/sites/default/files/2025-04/pi0325.pdf", "https://www.bea.gov/news/2025/personal-income-and-outlays-march-2025"],
+      "observed": "Original release embargo is Apr30 2025 10:00EDT.",
+      "event_utc": "2025-04-30T14:00:00Z",
+      "first_eligible_weekday_report": "2025-05-01",
+      "hazard": "No April midnight edition can state March PCE/income/spending actuals. The April30 schedule differs from the usual08:30 release."
+    },
+    {
+      "key": "australia-q1-cpi",
+      "urls": ["https://www.qgso.qld.gov.au/issues/3441/consumer-price-index-202503.pdf"],
+      "observed": "Queensland official statistical office identifies ABS Consumer Price Index release30April2025 11:30AEST.",
+      "event_utc": "2025-04-30T01:30:00Z",
+      "first_eligible_weekday_report": "2025-05-01",
+      "hazard": "Q1 CPI and March monthly CPI actuals are not available to Apr30 midnight."
+    },
+    {
+      "key": "nvda-h20-disclosure",
+      "urls": ["https://www.sec.gov/Archives/edgar/data/1045810/0001045810-25-000082-index.html", "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000082/nvda-20250409.htm", "https://www.reuters.com/technology/nvidia-expects-up-55-billion-charge-first-quarter-2025-04-15/"],
+      "observed": "SEC index filing dateApr15 and accepted17:22:59 Eastern; period-of-reportApr9 is not its public filing date. Reuters datedApr15 reports an expected charge.",
+      "event_utc": "2025-04-15T21:22:59Z",
+      "first_eligible_weekday_report": "2025-04-16",
+      "hazard": "Do not backdate public H20 license/charge knowledge toApr9. Apr16 own eligible headline can support expected charge; later actual booked charge, restrictions relief, China revenue or Apr16 session reaction cannot be imported."
+    },
+    {
+      "key": "tariff-event-boundaries",
+      "urls": ["https://www.whitehouse.gov/presidential-actions/2025/04/regulating-imports-with-a-reciprocal-tariff-to-rectify-trade-practices-that-contribute-to-large-and-persistent-annual-united-states-goods-trade-deficits/", "https://www.govinfo.gov/app/details/DCPD-202500459", "https://www.whitehouse.gov/presidential-actions/2025/04/clarification-of-exceptions-under-executive-order-14257-of-april-2-2025-as-amended/"],
+      "observed": "Initial reciprocal-tariff order datedApr2; pause/modification order datedApr9; electronics clarification memorandum datedApr11. Initial country-specific duties had an effective time ofApr9 00:01EDT, which is04:01UTC.",
+      "first_eligible_weekday_reports": {"Apr2 announcement": "2025-04-03", "Apr9 pause announcement": "2025-04-10", "Apr11 electronics clarification": "2025-04-14"},
+      "hazard": "Separate announcement from effectiveness, reciprocal component from pre-existing additional duties, and cash closes from after-close policy headlines. An April9 midnight report cannot call04:01UTC implementation already completed. This general event chronology does not establish exact intraday publication for every news article."
+    }
+  ],
+  "unresolved_checks_for_selected_review": [
+    "EarlyJapan MarchCPI Apr18 and TokyoCPI Apr25 need exact own eligible headline plus source-specific original timing if canonical path reaches report date;8:30JST is preceding23:30UTC.",
+    "April30 China official/CaixinPMI actuals occur after midnightUTC and cannot enter April30edition. Verify direct official embargo timing if a disputed headline is selected.",
+    "April16 Tesla/Musk narratives and April23 earnings must separate company results, executive political plans, analyst expectations, and actual market reaction.",
+    "Provider, company role, units, percentage versus index/basis points, market return horizon, and conditional versus completed-event semantics require paragraph-level review beyond these calendar screens."
+  ]
+}

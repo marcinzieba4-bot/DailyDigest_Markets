@@ -1,0 +1,18 @@
+{
+ "ticker": "FEZ",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FEZ?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "52cdd129a46f598bfe2bd3c82f6e9be9548fee987d94351ab86cf298b1478c7d",
+   "fetched_at_utc": "2026-10-30T14:39:47.767863+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FEZ?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "1f522a2231699d0230e437c95a1e12caca1d5ccbd45bbb51a6ae66e674389d10",
+   "fetched_at_utc": "2026-10-30T14:39:48.162277+00:00"
+  }
+ ]
+}

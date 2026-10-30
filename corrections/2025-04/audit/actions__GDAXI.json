@@ -1,0 +1,18 @@
+{
+ "ticker": "^GDAXI",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGDAXI?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "b5165e3c5ac1f0580c9c3c5e6fb4a2b3a9e179e256460e93461ae6f1a6daaa01",
+   "fetched_at_utc": "2026-10-30T14:39:47.419522+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGDAXI?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "a8d10671e206e0f9801f016d447f07aaa0a4f82976c96c671c149250f88370dd",
+   "fetched_at_utc": "2026-10-30T14:39:47.821170+00:00"
+  }
+ ]
+}

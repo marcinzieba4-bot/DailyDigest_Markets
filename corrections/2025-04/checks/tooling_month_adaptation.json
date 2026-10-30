@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-10-30T14:41:53.561876+00:00",
+  "scope": "April month adaptation before draft generation; no rendered reports or remote operations",
+  "checks": [
+    "22 matching April weekday dates across builder/publisher/live/finalizer",
+    "25 unique protected latest/weekend keys",
+    "archive merge adds April22 links and preserves May links",
+    "owned Python modules parse/import"
+  ],
+  "code_sha256": {
+    "tools/build_artifacts.py": "612d0550a7b3b2eb9745c1c2454cb32f30c58fa176017fd7f05e6bbe69efaeae",
+    "tools/render.py": "299f7fee37e0d96373d7d44010bea0c42355d78d0513a61e9c3ebbc55afb84f2",
+    "tools/verify.py": "a997604128d9c6f94f3e42bb108f160a75d88563996d1be9e90a0bfb55f3bdf4",
+    "tools/publish.py": "2edcf0e134b7436e1b5f31c8f3fd6157101ddddda2932b106164a44c5ab9179d",
+    "tools/publish_sources.py": "0f719e9adc9348c5982853b4584a58afb9673a66a9f514d1238b355cb7cf7f69",
+    "tools/verify_live.py": "ab374b7c8a9a4919c318b852e3aaf69411ec0868bb5fafc34db735b7e11ef8d7",
+    "tools/finalize.py": "ef441cc558672bece87cef51a1a52db6a247989103b2e1c84d903d405676a8d3",
+    "tools/check_finalization.py": "ecac3b45b61bd20f26ca7a9367c16afa475bf9ce8f5f4c8f84bc3556bb678c86",
+    "tools/digest.py": "b33ebda93f46a85637eb263fb5c98bf8bd6085d0478c359f95b0b4cfcc98e719"
+  },
+  "network_calls": 0
+}

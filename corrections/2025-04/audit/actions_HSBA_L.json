@@ -1,0 +1,18 @@
+{
+ "ticker": "HSBA.L",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HSBA.L?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "8b8b890d2ec455423a5d5a8d70f9ad0d6e655dc3d7b7ad959c34626eb931e214",
+   "fetched_at_utc": "2026-10-30T14:39:49.169073+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HSBA.L?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "0b8254ceead25908795851ceb5aa62a04b355a0332a3195d43e270701e56573e",
+   "fetched_at_utc": "2026-10-30T14:39:49.729683+00:00"
+  }
+ ]
+}

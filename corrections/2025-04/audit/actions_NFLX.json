@@ -1,0 +1,24 @@
+{
+ "ticker": "NFLX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2025-11-17",
+   "factor": 10.0,
+   "ratio": "10:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NFLX?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "fbd9d3a155369aa48b4204259f86c397f9c6440fa473230285bf16a8f073633c",
+   "fetched_at_utc": "2026-10-30T14:39:57.700218+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NFLX?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "356ae3a8921926028633e682ac678d47a71cffa350f4fb73b6afb829f5d44621",
+   "fetched_at_utc": "2026-10-30T14:39:58.101390+00:00"
+  }
+ ]
+}

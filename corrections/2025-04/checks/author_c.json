@@ -1,0 +1,81 @@
+{
+  "author": "writer_c",
+  "dates": [
+    "2025-04-09",
+    "2025-04-10",
+    "2025-04-11"
+  ],
+  "reports": {
+    "2025-04-09": {
+      "words": 9749,
+      "distinct_citations": 107,
+      "citation_reuse_limit": 4,
+      "verify": {
+        "result": "PASS",
+        "failures": 0,
+        "warnings": 0,
+        "log": "work/writer_c/verify_2025-04-09.txt"
+      },
+      "render": "PASS",
+      "selection_note": "work/writer_c/selection_2025-04-09.json",
+      "finalized_utc": "2026-10-30T15:41:24.285929+00:00",
+      "artifacts": {
+        "specs/2025-04-09.json": "ac091a94058a00b16a04ffe1776fa2e9e0569e6f1614e8947102acabbac2a98d",
+        "html/2025-04-09.html": "fd4993ed4f1f4f8d5a6fd19d56dbabc85b9dd4447376aa720e4eb48f6934a9e4",
+        "json/2025-04-09_Market_Intelligence.json": "d35c2a3b31468191d3fd9be06b593085be2ac20ccdd7d76a10485cca6f869789"
+      }
+    },
+    "2025-04-10": {
+      "words": 9552,
+      "distinct_citations": 103,
+      "citation_reuse_limit": 4,
+      "verify": {
+        "result": "PASS",
+        "failures": 0,
+        "warnings": 0,
+        "log": "work/writer_c/verify_2025-04-10.txt"
+      },
+      "render": "PASS",
+      "selection_note": "work/writer_c/selection_2025-04-10.json",
+      "finalized_utc": "2026-10-30T15:50:47.832808+00:00",
+      "artifacts": {
+        "specs/2025-04-10.json": "eef7d7fdfda3079e644fe27c5e428ec35aaea71f5305e39a9b91b14a5d8bb2c5",
+        "html/2025-04-10.html": "c788d4bad5cda2bcd72f87cd9f8dc3cae84a7cc86ce71a8c6247535a0ff68397",
+        "json/2025-04-10_Market_Intelligence.json": "c592a4347ce6accbff43c4670f7ae8656d75f760be4c817ace57bca5559643ca"
+      }
+    },
+    "2025-04-11": {
+      "words": 9577,
+      "distinct_citations": 96,
+      "citation_reuse_limit": 4,
+      "verify": {
+        "result": "PASS",
+        "failures": 0,
+        "warnings": 0,
+        "log": "work/writer_c/verify_2025-04-11.txt"
+      },
+      "render": "PASS",
+      "selection_note": "work/writer_c/selection_2025-04-11.json",
+      "finalized_utc": "2026-10-30T16:00:47.120430+00:00",
+      "artifacts": {
+        "specs/2025-04-11.json": "bd7cd2685ac3fd00eea3bc5b19e913f63edf9f2b5579ab0379b7b3f8c9a334a0",
+        "html/2025-04-11.html": "1459d596c2c8987c3aef38da92f93a03c6d6a9c340b7e320dd000a97d8dfdba1",
+        "json/2025-04-11_Market_Intelligence.json": "820ad0f1c1f49bc3d5f1938b2deb915bc6697a0c5e3cd80e7d901093b712c1e1"
+      }
+    }
+  },
+  "chronological_isolation": {
+    "accepted_frozen_inputs_start": "Explicit parent START received before first dated input access",
+    "processing_order": [
+      "2025-04-09",
+      "2025-04-10",
+      "2025-04-11"
+    ],
+    "seal_before_next": true,
+    "earlier_report_revisions_after_later_input": false,
+    "only_matching_feed_card_and_strictly_earlier_selection_notes": true,
+    "forbidden_sources_read": false,
+    "web_network_git_children_used": false
+  },
+  "scope": "Only assigned specs, rendered artifacts, work/writer_c and checks/author_c.json written. Frozen acquisition artifacts and tools unchanged."
+}

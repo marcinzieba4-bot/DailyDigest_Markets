@@ -1,0 +1,18 @@
+{
+ "ticker": "^STOXX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESTOXX?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "f48ce17b8dcc4c0eb73b915747f0177614563ca99eba807022567f0ee875fdf8",
+   "fetched_at_utc": "2026-10-30T14:39:47.396527+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESTOXX?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "02172e9570a21af0da8fe8f22d6a24ec7a2ec6089f7f3ecf9634f107bf690819",
+   "fetched_at_utc": "2026-10-30T14:39:47.785940+00:00"
+  }
+ ]
+}

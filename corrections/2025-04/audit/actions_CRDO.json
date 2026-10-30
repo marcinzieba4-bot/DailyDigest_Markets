@@ -1,0 +1,18 @@
+{
+ "ticker": "CRDO",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CRDO?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "27cc105130ee4045fc1b40b2d7f6fd64ff7122bf801f6741ff83d544aabcd69b",
+   "fetched_at_utc": "2026-10-30T14:40:00.577499+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CRDO?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "a003d2b6a1b8cdcec01d660c1800e2c8b517f7b187b21ef1f8d99bfb510161aa",
+   "fetched_at_utc": "2026-10-30T14:40:01.231936+00:00"
+  }
+ ]
+}

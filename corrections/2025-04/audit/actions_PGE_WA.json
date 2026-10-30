@@ -1,0 +1,18 @@
+{
+ "ticker": "PGE.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PGE.WA?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "89b1219f0c4932e42458c341f2e729711fa80c9a8413d3bb1dbcc88e435af415",
+   "fetched_at_utc": "2026-10-30T14:39:46.429421+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PGE.WA?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "57dae9ad3a4d61a069820c190723e8cb9d0d16588ba44ebfd6fc4b0a78139afa",
+   "fetched_at_utc": "2026-10-30T14:39:46.883446+00:00"
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+  "author": "writer_d",
+  "status": "COMPLETE",
+  "dates": [
+    "2025-04-14",
+    "2025-04-15",
+    "2025-04-16"
+  ],
+  "reports": {
+    "2025-04-14": {
+      "date": "2025-04-14",
+      "words": 9834,
+      "distinct_citations": 107,
+      "verify_fails": [],
+      "verify_warnings": [],
+      "render": "PASS",
+      "hashes": {
+        "specs/2025-04-14.json": "7f9ac4e07352b117ba30d1ade6c955278f42ddd090052f00fd42a70cd3c6338c",
+        "html/2025-04-14.html": "f98bfef87df0d88bbb88ba403ad0eff2914b4881162e33299285a2fd7a5f2f3a",
+        "json/2025-04-14_Market_Intelligence.json": "bad7d9c216f298b8b16a2b26b071bf0037000b33972fee7606ccc3154bb61b15",
+        "feeds/2025-04-14.json.gz": "b4f7ca695880e92c2bc7b299309b7860a9ef2609a48932816da7cffa66b3ff42",
+        "cards/2025-04-14.json": "17b754b68a57886e623f5bf7b60633c3397afd44ba3c1e8639726b98ed428813"
+      },
+      "chronological_isolation": "Apr14 complete, verified, rendered and selection saved before any Apr15 input."
+    },
+    "2025-04-15": {
+      "date": "2025-04-15",
+      "words": 9679,
+      "distinct_citations": 87,
+      "verify_fails": [],
+      "verify_warnings": [],
+      "render": "PASS",
+      "hashes": {
+        "specs/2025-04-15.json": "5e2dd84439e45a84bfcba15b49349e85be0bface7a73f9b63e3c417d971a4025",
+        "html/2025-04-15.html": "6facb6331a560f2812283ddb28667fbbe4aa36dc958d44192e3ff7cd543fdaf2",
+        "json/2025-04-15_Market_Intelligence.json": "935f61d2f3d98350b9b8a5a03e30302d7d16ae6509256d515da2fcedaf0b108e",
+        "feeds/2025-04-15.json.gz": "67bcbd05fc027275f777ab369158f22c4bc40e5479ed5cd2236ea960ed645d68",
+        "cards/2025-04-15.json": "cafc6d2ed22d9c618c45528e96cf7ae18a8b372d994f0e0967c2fb005f05d8f8"
+      },
+      "chronological_isolation": "Apr15 complete, verified, rendered and selection saved before any Apr16 input. Apr14 not reopened or revised."
+    },
+    "2025-04-16": {
+      "date": "2025-04-16",
+      "words": 9688,
+      "distinct_citations": 89,
+      "verify_fails": [],
+      "verify_warnings": [],
+      "render": "PASS",
+      "hashes": {
+        "specs/2025-04-16.json": "60ac7a5eed9825a26350fe99911741a5ec526cd825c3f89ae894bebddf5ce573",
+        "html/2025-04-16.html": "404b270500c70981eadfb6926e882ce6a86aed57136898622ce0ed64a43902ba",
+        "json/2025-04-16_Market_Intelligence.json": "4a67c502ca215785ea70d3dccac05e55ce63dc648ec17d90a5fb5f2c56890255",
+        "feeds/2025-04-16.json.gz": "6bcdfa23774295e84ba486325f02566cdaaa13905151c36f419bc30192a99cb4",
+        "cards/2025-04-16.json": "efe04268b444db7195bb2696ddf83c42733be9b4d97d965266eec0fcc5b068cd"
+      },
+      "chronological_isolation": "Apr16 complete, verified, rendered and selection saved. No later date input opened. Apr14 and Apr15 not reopened or revised after advancement."
+    }
+  },
+  "source_scope": "Accepted frozen own-date feeds via digest and cards via showcard only; no web, network, git, raw data, other authors reports, reviewer/posthoc inputs or later date inputs used. Earlier retail selection notes used as editorial memory only.",
+  "chronological_isolation": "Apr14 spec/verify/render/selection completed before reading Apr15; Apr15 spec/verify/render/selection completed before reading Apr16; earlier reports never reopened or revised after advancing. All three own-date render outputs generated.",
+  "verification": "Each report PASS with zero FAIL and zero WARN; every numeric unit, sign, horizon and local source date manually checked against own-date values. All structural block minima met; >=50 distinct citations each and no citation reused more than four times.",
+  "selection_notes": [
+    "work/writer_d/selection_2025-04-14.json",
+    "work/writer_d/selection_2025-04-15.json",
+    "work/writer_d/selection_2025-04-16.json"
+  ],
+  "limitations": "Editorial receipt describes author checks; independent content review remains separate."
+}

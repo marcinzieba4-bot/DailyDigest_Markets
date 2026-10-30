@@ -1,0 +1,18 @@
+{
+ "ticker": "GOOGL",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "b591138dfd4eeaeca64984cd3def504392862a6ab06bc3a59cc4f2552695e27d",
+   "fetched_at_utc": "2026-10-30T14:39:57.494547+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "365665affb97ac660733a930b719ecb7a94d77a4a448e4a298a587ee8cd03c44",
+   "fetched_at_utc": "2026-10-30T14:39:57.818952+00:00"
+  }
+ ]
+}

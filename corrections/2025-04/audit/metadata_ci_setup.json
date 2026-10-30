@@ -1,0 +1,176 @@
+{
+  "purpose": "Repair public canonical-URL metadata after the native Google News signing RPC anti-bot challenge. No report execution or publisher bodies.",
+  "status": "closed_unmerged_final_evidence_frozen",
+  "branch": "codex/apr2025-public-metadata-recovery",
+  "base_branch": "main",
+  "base_commit": "43842a8f58dc8d1b5fe06ca5265ae39f4ba61d73",
+  "base_tree_paths": [
+    "README.md"
+  ],
+  "permissions": {
+    "contents": "read"
+  },
+  "checkout": {
+    "persist_credentials": false,
+    "explicit_sparse_paths": [
+      ".github/workflows/apr2025-metadata-recovery.yml",
+      "corrections/2025-04/recovery/input.json",
+      "corrections/2025-04/recovery/resolve_news_url.py",
+      "corrections/2025-04/recovery/run.py"
+    ]
+  },
+  "input_contract": "https news.google.com /rss/articles or /articles URLs only, maximum10000; no article bodies/prose/credentials.",
+  "reviewed_template_files": [
+    {
+      "path": ".github/workflows/apr2025-metadata-recovery.yml",
+      "sha256": "8496eabccc45a76c5e3f3c3670606bc8a1afd581fefb15b0ecda0e7c7812f601",
+      "bytes": 1077
+    },
+    {
+      "path": "corrections/2025-04/recovery/resolve_news_url.py",
+      "sha256": "777a8e7b34cebbd95890cf49506299cadb8642a1e676baf32e5063d6620c2768",
+      "bytes": 4292
+    },
+    {
+      "path": "corrections/2025-04/recovery/run.py",
+      "sha256": "514c6cdd01fbdf8ad33817f16a891500c36682ab2f99f561ac0debdf15db49a9",
+      "bytes": 3059
+    }
+  ],
+  "created_at_utc": "2026-10-30T14:51:23.600871+00:00",
+  "native_root_cause": "audit/metadata_native_preflight.json",
+  "planned_close": "Close draft PR unmerged after all mappings recovered.",
+  "pr": 7,
+  "head": "4b7074e44a1d90cb7b3bd453672bbff8875bb6dc",
+  "run_id": 41092629226,
+  "job_id": 124190175742,
+  "records": 2108,
+  "final_priority_urls": 1067,
+  "rank_additional_lookups_needed": 0,
+  "state": "closed",
+  "merged": false,
+  "initial_priority_head": "c1881cb12f27ffdfe72dde3036223e580e9fd053",
+  "latest_run_id": 41083339522,
+  "latest_job_id": 124157930737,
+  "total_verified_mappings": 1486,
+  "cited_source_batches": [
+    {
+      "batch": "work/recovery_batch2",
+      "records": 417,
+      "reports": [
+        "2025-04-01",
+        "2025-04-04",
+        "2025-04-09",
+        "2025-04-14",
+        "2025-04-17",
+        "2025-04-22"
+      ],
+      "head": "7049aabb9ae5b2a75004cdb7a58d72d0e27237d3",
+      "run_id": 41083339522,
+      "job_id": 124157930737,
+      "verified_and_imported": true
+    }
+  ],
+  "updated_at_utc": "2026-10-30T15:49:04.347373+00:00",
+  "successful_batch_records": 2108,
+  "canonical_cache_entries": 2108,
+  "latest_batch": {
+    "receipt": "audit/metadata_ci_ingestion_batch7.json",
+    "records": 4,
+    "head": "4b7074e44a1d90cb7b3bd453672bbff8875bb6dc",
+    "run_id": 41092629226,
+    "job_id": 124190175742,
+    "files": "work/recovery_batch7",
+    "receipt_sha256": "c58e9139b5861e7576d4829abcf52504d673fa78ab112847eb509b10fd8ff2f8"
+  },
+  "batch_history": [
+    {
+      "receipt": "audit/metadata_ci_ingestion_batch1.json",
+      "records": 1069,
+      "head": "c1881cb12f27ffdfe72dde3036223e580e9fd053",
+      "run_id": 41078421480,
+      "job_id": 124140745792,
+      "files": "work/recovery_batch1",
+      "receipt_sha256": "fc82b4044b9ddd5b3d1d4022630a6907be11479cc19278169685872be4098055"
+    },
+    {
+      "receipt": "audit/metadata_ci_ingestion_batch2.json",
+      "records": 417,
+      "head": "7049aabb9ae5b2a75004cdb7a58d72d0e27237d3",
+      "run_id": 41083339522,
+      "job_id": 124157930737,
+      "files": "work/recovery_batch2",
+      "receipt_sha256": "c1b7ed06e099e946f94323aeab831e7c5153b05ea45395c140babf2e473e3384"
+    },
+    {
+      "receipt": "audit/metadata_ci_ingestion_batch3.json",
+      "records": 217,
+      "head": "122b2932b291245ac1b64eda3f642da7a6ea16a1",
+      "run_id": 41086022046,
+      "job_id": 124167264646,
+      "files": "work/recovery_batch3",
+      "receipt_sha256": "f9b983d619e6a9e69669a4e095df44eb2a8606707a1b4885068a23caa19cf336"
+    },
+    {
+      "receipt": "audit/metadata_ci_ingestion_batch4.json",
+      "records": 210,
+      "head": "a8840de3d91d16ccc65d22ed595563159f774a4e",
+      "run_id": 41087102054,
+      "job_id": 124171008705,
+      "files": "work/recovery_batch4",
+      "receipt_sha256": "15e42abc2e265e2c152383a22cfb9fd5b11ff5923eae2e446f87faadc00ba2b2"
+    },
+    {
+      "receipt": "audit/metadata_ci_ingestion_batch5.json",
+      "records": 102,
+      "head": "4ddb8e11c4ea3701e45fe179b66ce871716c8be0",
+      "run_id": 41087936166,
+      "job_id": 124173924226,
+      "files": "work/recovery_batch5",
+      "receipt_sha256": "d4cec60991f4f685f874d9c8572e96f4634e49f4dabeee6357b2b0a5f438a0e2"
+    },
+    {
+      "receipt": "audit/metadata_ci_ingestion_batch6.json",
+      "records": 89,
+      "head": "7130210c2456d87c117eead181335d3609b5407c",
+      "run_id": 41089484635,
+      "job_id": 124179309646,
+      "files": "work/recovery_batch6",
+      "receipt_sha256": "c44274462765d4236c6593a71407d4afa1e9c1544f7e152c5753f2c707d8eb8d"
+    },
+    {
+      "receipt": "audit/metadata_ci_ingestion_batch7.json",
+      "records": 4,
+      "head": "4b7074e44a1d90cb7b3bd453672bbff8875bb6dc",
+      "run_id": 41092629226,
+      "job_id": 124190175742,
+      "files": "work/recovery_batch7",
+      "receipt_sha256": "c58e9139b5861e7576d4829abcf52504d673fa78ab112847eb509b10fd8ff2f8"
+    }
+  ],
+  "initial_priority_batch": {
+    "receipt": "audit/metadata_ci_ingestion_batch1.json",
+    "records": 1069,
+    "head": "c1881cb12f27ffdfe72dde3036223e580e9fd053",
+    "run_id": 41078421480,
+    "job_id": 124140745792,
+    "files": "work/recovery_batch1",
+    "receipt_sha256": "fc82b4044b9ddd5b3d1d4022630a6907be11479cc19278169685872be4098055"
+  },
+  "sealed_reports": 22,
+  "missing_cited_urls": 0,
+  "pending_report_dates": [],
+  "closure_policy": "Keep PR7 open until root confirms retail/editorial passes complete and no more citations will be added.",
+  "unresolved_current_path_conflicts": 0,
+  "closed_at": "2026-10-30T16:49:06Z",
+  "closure": {
+    "number": 7,
+    "state": "closed",
+    "merged": false,
+    "head_sha": "4b7074e44a1d90cb7b3bd453672bbff8875bb6dc",
+    "closed_at": "2026-10-30T16:49:06Z",
+    "url": "https://github.com/marcinzieba4-bot/DailyDigest_Markets/pull/7"
+  },
+  "no_more_citations_confirmed_by": "/root",
+  "root_final_acceptance": "A/B accepted all final retail deltas; market and retail final gates passed; no more citations authorized."
+}

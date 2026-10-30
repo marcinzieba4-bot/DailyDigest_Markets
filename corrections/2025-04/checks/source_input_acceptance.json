@@ -1,0 +1,21 @@
+{
+  "status": "accepted_for_historical_authoring",
+  "accepted_at_utc": "2026-10-30T15:30:54.406095+00:00",
+  "source_qa_sha256": "53b7ee234719eef8f44f634f3ce09b17701c6f4eeb51e4c79ccc536bc7960a5d",
+  "source_gate_rejection_checks_sha256": "dc20284c0611b4832ac711223271bb00cb31ee1bd5e48cdfa7726bbe2af95559",
+  "source_review_gate_sha256": "f2003333ed8ca46291d877a69ec122fe9812442afbfb838f52c407d83e1dcc51",
+  "report_dates": 22,
+  "ready_records": 255468,
+  "frozen_input_policy": "Each author opens only its matching feed/card after the source-gate acceptance; dates proceed chronologically and an earlier author version is not revised after opening a later feed. Editors subsequently use own-date sources and explicit timing proof.",
+  "scope_limit": "Parsed-cache replay and selected publication-date screening do not prove original publisher article-body vintages or exhaustive historical search coverage.",
+  "recorded_at_utc": "2026-10-30T15:33:59.766478+00:00",
+  "acceptance_gate_snapshot": {
+    "path": "work/source_acceptance/review_gate_at_acceptance.py",
+    "sha256": "f2003333ed8ca46291d877a69ec122fe9812442afbfb838f52c407d83e1dcc51"
+  },
+  "acceptance_check_receipt_snapshot": {
+    "path": "work/source_acceptance/source_gate_checks_at_acceptance.json",
+    "sha256": "dc20284c0611b4832ac711223271bb00cb31ee1bd5e48cdfa7726bbe2af95559"
+  },
+  "source_gate_rejection_checks_path": "work/source_acceptance/source_gate_checks_at_acceptance.json"
+}

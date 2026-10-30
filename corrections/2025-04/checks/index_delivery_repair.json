@@ -1,0 +1,35 @@
+{
+  "started_at_utc": "2026-10-30T17:22:34.507959+00:00",
+  "operation": "conditional index-only merge after post-publication overwrite",
+  "original_publication_index_sha256": "f78654332a871fcb3b71ee85e25a06fb9479eeb34af02fd3e2937cbcea3e53e7",
+  "writer_identity": "not established; object modification after initial index publication confirmed",
+  "generator_risk": "Existing root lambda_function.py rebuilds index from daily archive keys and omits monthly collection links. No Lambda deployment or invocation performed.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "before_etag": "\"92b8f5be1761cc4b57ea63c5fb8cd2c1\"",
+      "before_last_modified": "2026-10-30 17:13:35+00:00",
+      "before_sha256": "9f153ac58285259db57c3f01f46bd2837d3e815f6b8917b67ddb5b352f39b9e4",
+      "after_sha256": "bf983b40aaea80a4819f6c25cd6c407a70ec15da3ff1342b74cd5de94585901c",
+      "before_bytes": 25215,
+      "after_bytes": 24462,
+      "existing_hrefs_preserved": true,
+      "added_hrefs": [
+        "2025-04.html"
+      ],
+      "checkpoint_key": "reports/_retrospective_backup/apr-2025-weekdays/20261030T170715Z/index-delivery-repair-20261030T172235840660Z.html",
+      "after_etag": "\"091f282270dca71ede117178851be90b\"",
+      "written_at_utc": "2026-10-30T17:22:37.883206+00:00"
+    }
+  ],
+  "report_or_source_artifact_writes": false,
+  "latest_write_performed": false,
+  "origin_sha_verified": true,
+  "index_sha256": "bf983b40aaea80a4819f6c25cd6c407a70ec15da3ff1342b74cd5de94585901c",
+  "index_etag": "\"091f282270dca71ede117178851be90b\"",
+  "index_link_count": 22,
+  "invalidation_id": "IC3IFOQV9BMEUDSRBFHU3GKEKB",
+  "invalidation_status": "InProgress",
+  "finished_at_utc": "2026-10-30T17:22:39.655769+00:00",
+  "passed": true
+}

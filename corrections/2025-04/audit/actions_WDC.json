@@ -1,0 +1,24 @@
+{
+ "ticker": "WDC",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2025-02-24",
+   "factor": 1.323,
+   "ratio": "1323:1000"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/WDC?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "65f837621a80ed56797ea7f69df7553796260a2477586dbf85eaf572b14a2b6c",
+   "fetched_at_utc": "2026-10-30T14:39:59.789298+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/WDC?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "73696f6c0fabcc1dc7e13f5f27d74deb746e1e38b475b9233c851c62af4e3501",
+   "fetched_at_utc": "2026-10-30T14:40:00.670879+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "LLY",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LLY?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "8f3dced8cbcf645cd93b868cab60f121cab40586e90a777dd32b403099283c61",
+   "fetched_at_utc": "2026-10-30T14:40:09.831131+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LLY?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "35ec43ff898e54b14011d3c835e974b0f301e723d551780d14c7c7d1559f7bcd",
+   "fetched_at_utc": "2026-10-30T14:40:10.612563+00:00"
+  }
+ ]
+}

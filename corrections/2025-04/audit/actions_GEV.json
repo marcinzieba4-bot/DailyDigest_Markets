@@ -1,0 +1,18 @@
+{
+ "ticker": "GEV",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GEV?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "2c5e9449d260eab8698768b4722832724be44393f613e4361eaec95c53a23887",
+   "fetched_at_utc": "2026-10-30T14:40:04.715491+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/GEV?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "b68ac6939f672f402b9f6a8bcd3c8e2e91834b4f15e7356a9da7d0dc627cc5b1",
+   "fetched_at_utc": "2026-10-30T14:40:05.065571+00:00"
+  }
+ ]
+}

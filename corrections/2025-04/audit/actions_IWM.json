@@ -1,0 +1,18 @@
+{
+ "ticker": "IWM",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/IWM?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "2ac355eb20f6e0776cdadaf7e21ec71de2e5a6b19abc0a4ea0c2c2f4d736d47b",
+   "fetched_at_utc": "2026-10-30T14:39:54.175906+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/IWM?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "52072d0b83705557301a361033148601bdf719e7afdfc4348146f215eaa03f37",
+   "fetched_at_utc": "2026-10-30T14:39:54.690870+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "0700.HK",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/0700.HK?period1=1738368000&period2=1746057600&interval=1d&events=div,splits",
+   "sha256": "96fc977a0effbd726bcf2d109e8bef8ecd7812ac0cbe89fd5574b51de50c01f9",
+   "fetched_at_utc": "2026-10-30T14:39:51.854450+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/0700.HK?period1=1746057600&period2=1793371177&interval=1d&events=div,splits",
+   "sha256": "3dcdb4ae2347eddaa4ef50925f966a36a13b65df9f6ee979964cbe7f922c312c",
+   "fetched_at_utc": "2026-10-30T14:39:52.311109+00:00"
+  }
+ ]
+}
