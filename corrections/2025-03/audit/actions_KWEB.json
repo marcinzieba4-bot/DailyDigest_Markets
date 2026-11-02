@@ -1,0 +1,18 @@
+{
+ "ticker": "KWEB",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KWEB?period1=1735689600&period2=1743465600&interval=1d&events=div,splits",
+   "sha256": "cfc4df819055dfefef9ea9bcd70760297b4daaba3aa8bb4549537af3035aa21e",
+   "fetched_at_utc": "2026-11-02T11:01:44.606012+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KWEB?period1=1743465600&period2=1793617299&interval=1d&events=div,splits",
+   "sha256": "b09e76c2a60b589bb8d972e7d109bd3307a93424c9a3f945d0d121d0cf473918",
+   "fetched_at_utc": "2026-11-02T11:01:44.789828+00:00"
+  }
+ ]
+}

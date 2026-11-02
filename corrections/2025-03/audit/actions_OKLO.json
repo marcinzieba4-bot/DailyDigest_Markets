@@ -1,0 +1,18 @@
+{
+ "ticker": "OKLO",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/OKLO?period1=1735689600&period2=1743465600&interval=1d&events=div,splits",
+   "sha256": "429e173de9e5562acc090a31e3ee4ee530cb0b64b2660a23fd86f765b693569f",
+   "fetched_at_utc": "2026-11-02T11:01:50.588468+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/OKLO?period1=1743465600&period2=1793617299&interval=1d&events=div,splits",
+   "sha256": "42f5d1351129134b4f7223f0b043ce23c87975b46c1857449ab1f57064709c08",
+   "fetched_at_utc": "2026-11-02T11:01:50.779984+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "EURPLN=X",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EURPLN%3DX?period1=1735689600&period2=1743465600&interval=1d&events=div,splits",
+   "sha256": "34a02d94804eb410e7e90332d2aa53e62ddd075df36ecd2291ba4ca7798a60cf",
+   "fetched_at_utc": "2026-11-02T11:01:41.722477+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EURPLN%3DX?period1=1743465600&period2=1793617299&interval=1d&events=div,splits",
+   "sha256": "f60de0f6d11b5b99712c0624653fab25cde2b222e71ff5983a03eda8f7c001e8",
+   "fetched_at_utc": "2026-11-02T11:01:41.912464+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "RNO.PA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RNO.PA?period1=1735689600&period2=1743465600&interval=1d&events=div,splits",
+   "sha256": "c2915ed9f0a02f51c478a5c4f58a62ae41f64de41e03d2541b022ab4be444145",
+   "fetched_at_utc": "2026-11-02T11:01:43.221861+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RNO.PA?period1=1743465600&period2=1793617299&interval=1d&events=div,splits",
+   "sha256": "a838b83c135071ace952da706f99eb0acaacc5cc70812e61ad05a9c7f592a696",
+   "fetched_at_utc": "2026-11-02T11:01:43.446180+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "SAP.DE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SAP.DE?period1=1735689600&period2=1743465600&interval=1d&events=div,splits",
+   "sha256": "d3a1d7e899fa470b5ea56ab8d485a63be1168873927994636736c98a16d2ed09",
+   "fetched_at_utc": "2026-11-02T11:01:43.463229+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SAP.DE?period1=1743465600&period2=1793617299&interval=1d&events=div,splits",
+   "sha256": "fd238748acde01b21a01efe1260971eb11cbdfb72b2cd337d50ff9ce194a32a9",
+   "fetched_at_utc": "2026-11-02T11:01:43.668896+00:00"
+  }
+ ]
+}

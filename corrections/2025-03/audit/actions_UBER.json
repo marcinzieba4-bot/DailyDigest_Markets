@@ -1,0 +1,18 @@
+{
+ "ticker": "UBER",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/UBER?period1=1735689600&period2=1743465600&interval=1d&events=div,splits",
+   "sha256": "99cc51c0de343193bb4dbc10081366d4b75a15a940ffbd3de88d7452c55887c2",
+   "fetched_at_utc": "2026-11-02T11:01:49.828138+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/UBER?period1=1743465600&period2=1793617299&interval=1d&events=div,splits",
+   "sha256": "652e62406ce65b751929750ad2f5768e41d91f4619c421ce1ccb5b56ac6eaab1",
+   "fetched_at_utc": "2026-11-02T11:01:50.019282+00:00"
+  }
+ ]
+}

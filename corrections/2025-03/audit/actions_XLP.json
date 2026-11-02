@@ -1,0 +1,18 @@
+{
+ "ticker": "XLP",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLP?period1=1735689600&period2=1743465600&interval=1d&events=div,splits",
+   "sha256": "a71d3fe4e38641bfb7ed0a83fc2f30e32155620ccec1d136c98024bac38f60b8",
+   "fetched_at_utc": "2026-11-02T11:01:45.927197+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLP?period1=1743465600&period2=1793617299&interval=1d&events=div,splits",
+   "sha256": "be1ef4596aab730b26a257fe8370aa695679da086c66ad5ceffa7bc0a19bf241",
+   "fetched_at_utc": "2026-11-02T11:01:46.139982+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "CSL.AX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CSL.AX?period1=1735689600&period2=1743465600&interval=1d&events=div,splits",
+   "sha256": "a6d3b44d517973bec4d794b21acc966845b5afc37b06790046c01ca2fb18b156",
+   "fetched_at_utc": "2026-11-02T11:01:45.704712+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CSL.AX?period1=1743465600&period2=1793617299&interval=1d&events=div,splits",
+   "sha256": "ca6f60eccea6075760f0c082a133210fc7a0f714b67a686f8b05b3932540fe7c",
+   "fetched_at_utc": "2026-11-02T11:01:45.924317+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "PDD",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PDD?period1=1735689600&period2=1743465600&interval=1d&events=div,splits",
+   "sha256": "93d953b95d775088dc2015331808966dfca23dc2161f5a2bee156b0026f412dc",
+   "fetched_at_utc": "2026-11-02T11:01:44.805877+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PDD?period1=1743465600&period2=1793617299&interval=1d&events=div,splits",
+   "sha256": "152b78b3993d41de40121878298783637197ccf02dc85a3128e769f447816b68",
+   "fetched_at_utc": "2026-11-02T11:01:45.003514+00:00"
+  }
+ ]
+}
