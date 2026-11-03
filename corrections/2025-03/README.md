@@ -24,7 +24,7 @@ Scope: 21 weekday editions, 3-31 March 2025. Each edition is as it would have st
 3. **Feed gaps.** Some expected releases are absent from the feed (for example China's factory PMI and some credit prints). Where that happened the text says so, or leaves the item out.
 4. **Verify warnings remain.** Some editions run above the word target (3/10, 3/18 and others), a few citations are reused more than four times, a few calendar phrases need dated headlines, and some market sentences lack the source tag the brief asks for. These are warnings, not failures.
 5. **Notes for 3/10, 3/12 and 3/18** were regenerated from the saved specs, because the writers' original records were not saved. They are marked `regenerated_from_spec`.
-6. **Not published.** Nothing was sent to S3, CloudFront, Lambda, email or Telegram.
+6. **Published at your instruction (2026-11-03).** The 21 editions (HTML and JSON), the retail page and the 21 archive links were uploaded to the public bucket, and CloudFront paths `/reports/*` and `/Strategies/json/2025-03-*` were invalidated (`tools/publish_march_2025.py`; receipt in `audit/publish_receipt_2025-03.json`). Each page and JSON file carries an AI-audited, not-independently-reviewed notice. `reports/latest.html` and all April keys were not written. The April review gate and the retail-quality preflight were not run for March, and no review receipts were created. No PDFs or collection ZIP were produced for March. No Lambda, email or Telegram was involved.
 
 ## Tooling changes versus April
 
