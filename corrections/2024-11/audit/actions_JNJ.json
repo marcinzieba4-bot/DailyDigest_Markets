@@ -1,0 +1,18 @@
+{
+ "ticker": "JNJ",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/JNJ?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "0d032800de59223eb2077bb103551b34dc1718b9e70709b94a19ff70aedea350",
+   "fetched_at_utc": "2026-11-03T16:15:28.724215+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/JNJ?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "834ccd94e184df8889e65d152ea02ac0e585489d80ef6c924cbd5f613181e133",
+   "fetched_at_utc": "2026-11-03T16:15:28.959097+00:00"
+  }
+ ]
+}

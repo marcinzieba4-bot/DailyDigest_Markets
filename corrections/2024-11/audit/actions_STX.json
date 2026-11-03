@@ -1,0 +1,18 @@
+{
+ "ticker": "STX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/STX?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "61d5c53e3d2240b7bf90f568416e44aefd6d8ff72e9dd613b404cfed26b3c83f",
+   "fetched_at_utc": "2026-11-03T16:15:25.400465+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/STX?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "50260c10a3007f848a9f564539f6dda97f4f215a649da539131addae9f77e740",
+   "fetched_at_utc": "2026-11-03T16:15:25.581866+00:00"
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+  "date": "2024-11-05",
+  "reviewer": "independent-writer-middle",
+  "reviewed_at_utc": "2026-11-03T17:04:20.131319+00:00",
+  "scope": {
+    "keys": [
+      "date",
+      "geo",
+      "sectors",
+      "earnings_pattern",
+      "underowned",
+      "crypto",
+      "flows",
+      "anticipatory",
+      "catalysts"
+    ],
+    "blocks": 36,
+    "paragraphs": 136,
+    "distinct_cited_headlines": 96,
+    "entire_nonretail_text_read": true,
+    "own_cited_headlines_read": true,
+    "market_prices_units_directions_horizons_checked": true,
+    "release_boundaries_reviewed": true,
+    "retail_outside_scope_preserved": true
+  },
+  "findings": [
+    {
+      "where": "sectors:SOXX/Narrative",
+      "severity": "MINOR",
+      "quote": "Nvidia Dow inclusion",
+      "problem": "Headlineannouncesfuturemembership;effectiveentrynotyethappened.",
+      "action": "Madeannouncedfutureentrystatusexplicit."
+    },
+    {
+      "where": "sectors:SOXX/EPS Upside Watch",
+      "severity": "MINOR",
+      "quote": "TSMC receiving next-generation ASML equipment",
+      "problem": "Headlinereferstoprospectivedelivery,notcompletedreceipt.",
+      "action": "Changedtoisto receive."
+    }
+  ],
+  "remaining_fatal_or_major": 0,
+  "review_limits": [
+    "Independent AI editorial audit of frozen headline evidence and own-date market card; not human review",
+    "Original article bodies and publisher-date vintages not independently established by this audit"
+  ],
+  "nonretail_canonical_sha256": "b78c2a111c4fa26cd7c1ca341880b0cce2714e3d67aca03af981f156aaa14852",
+  "final_full_spec_sha256": "f04305788a55bc41fc9ca95fdae68cf6b71ce6ac60eb9091003fa976d0307954",
+  "feed_sha256": "8a7c93412d006e6eef47e61e92aae5349472a195c793bdce85481b0d16cc24f5",
+  "card_sha256": "b8237b5e07e39c7b14634d9cc003931a9dbbeca886ee33b9d7ce3f330bd86d79",
+  "retail_canonical_sha256": "c650edc0032519ed35a8bbbd8e337144792f53af04845eedf0c7a62505169f7b",
+  "nonretail_content_sha256": "b78c2a111c4fa26cd7c1ca341880b0cce2714e3d67aca03af981f156aaa14852",
+  "fatal_or_major_remaining": 0,
+  "full_spec_sha256_at_review": "f04305788a55bc41fc9ca95fdae68cf6b71ce6ac60eb9091003fa976d0307954",
+  "market_identity_checks": {
+    "instrument_level_and_horizon_pairs_checked": 29,
+    "additional_horizons_checked": 7,
+    "mismatches": 0,
+    "treasury_levels_spreads_and_20observation_changes_checked": true
+  },
+  "release_boundary_dispositions": [
+    "RBAandNov5USISM/Caixinservicesactualsnotimportedbeforemidnight",
+    "PalantirNov4USafter-closeresulteligiblebutNov4cashcloseexplicitlypredatesreaction",
+    "JapanCultureDayobservedNov4;NikkeipriorNov1closecorrect",
+    "USpresidentialelectionremainsunresolved",
+    "LockheedcancellationoriginalNov4 03:14:37UTCiseligibleforNov5cutoff;seeaudit/publisher_time_lockheed_2024-11-04.json",
+    "ToyotaNov6resultkeptaspreviewonly"
+  ]
+}

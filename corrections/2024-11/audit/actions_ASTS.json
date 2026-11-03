@@ -1,0 +1,18 @@
+{
+ "ticker": "ASTS",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ASTS?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "ab0ad17b4f43d4c067e043211f03f43706ef87a8a9fff8cbccea47a4f2be0b8d",
+   "fetched_at_utc": "2026-11-03T16:15:26.869601+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ASTS?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "17b310bcdf7e70e1718dfe0fe8710fb2b43b531833169dbdf06cb7222788a415",
+   "fetched_at_utc": "2026-11-03T16:15:27.026924+00:00"
+  }
+ ]
+}

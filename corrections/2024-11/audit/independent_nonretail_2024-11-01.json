@@ -1,0 +1,66 @@
+{
+  "date": "2024-11-01",
+  "reviewer": "independent-writer-middle",
+  "reviewed_at_utc": "2026-11-03T16:55:52.057219+00:00",
+  "scope": {
+    "keys": [
+      "date",
+      "geo",
+      "sectors",
+      "earnings_pattern",
+      "underowned",
+      "crypto",
+      "flows",
+      "anticipatory",
+      "catalysts"
+    ],
+    "blocks": 36,
+    "paragraphs": 136,
+    "distinct_cited_headlines": 92,
+    "entire_nonretail_text_read": true,
+    "own_cited_headlines_read": true,
+    "market_prices_units_directions_horizons_checked": true,
+    "release_boundaries_reviewed": true,
+    "retail_outside_scope_preserved": true
+  },
+  "findings": [
+    {
+      "where": "geo:US/Macro Stance",
+      "severity": "MAJOR",
+      "quote": "latest core inflation release moved closer",
+      "problem": "The cited CNBC headline gives September inflation at2.1%, not a core-inflation reading. The core label is unsupported.",
+      "action": "Removed core; retained the supported direction toward theFedtarget."
+    },
+    {
+      "where": "sectors:XLU/Reported",
+      "severity": "MINOR",
+      "quote": "CEZ taking a stake",
+      "problem": "Headline says CEZ to take a stake, a prospective transaction rather than a completed ownership event.",
+      "action": "Changed to CEZ plan to take a stake."
+    }
+  ],
+  "remaining_fatal_or_major": 0,
+  "review_limits": [
+    "Independent AI editorial audit of frozen headline evidence and own-date market card; not human review",
+    "Original article bodies and publisher-date vintages not independently established by this audit"
+  ],
+  "nonretail_canonical_sha256": "7088eb4281acdf765d6aebeb4f9dae84a5461f2a5bc19191f67ab4a3040333c9",
+  "final_full_spec_sha256": "0f9a248ef8ac4c5b34a564d122d57233eb035ab7814fd527e673d40da6c1dfa1",
+  "feed_sha256": "4f597ae92c2f9d01588b376753c7d54d7731bbe92a5f37c01f28358449c1e3f4",
+  "card_sha256": "a4e17a96a1249a47a2ddb60d69f58d20ea000e900da4ee89d5240819001fe21d",
+  "retail_canonical_sha256": "de9fc98f772e802c21c2f2947a7a6510ee3b5224e90035d01979fff7b6c2022f",
+  "market_identity_checks": {
+    "instrument_level_and_horizon_pairs_checked": 28,
+    "mismatches": 0,
+    "treasury_levels_spreads_and_20observation_changes_checked": true
+  },
+  "release_boundary_dispositions": [
+    "Nov1 payroll outcome unavailable; only eligible preview used",
+    "Nov1 Caixin outcome not used; official October manufacturing improvement predates cutoff",
+    "Oct31USafter-close earnings already beforeNov1midnight; completed cash closes not misdescribed as post-result reaction",
+    "FutureChina2025propertypath explicitly forecast, not realised"
+  ],
+  "nonretail_content_sha256": "7088eb4281acdf765d6aebeb4f9dae84a5461f2a5bc19191f67ab4a3040333c9",
+  "fatal_or_major_remaining": 0,
+  "full_spec_sha256_at_review": "0f9a248ef8ac4c5b34a564d122d57233eb035ab7814fd527e673d40da6c1dfa1"
+}

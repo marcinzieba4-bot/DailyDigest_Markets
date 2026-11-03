@@ -1,0 +1,18 @@
+{
+ "ticker": "AMGN",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMGN?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "2b30a5d3aa100b7aea8bb47c91ccf6349109ea331a5996eda45c27be11a51aa3",
+   "fetched_at_utc": "2026-11-03T16:15:28.944788+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMGN?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "c0d94cbfd237c73699eb41812c303ce7c8cc3bce13997fb64e4fdbf94914865d",
+   "fetched_at_utc": "2026-11-03T16:15:29.178292+00:00"
+  }
+ ]
+}

@@ -1,0 +1,147 @@
+{
+  "date": "2024-11-11",
+  "reviewer": "writer_early_independent_nonretail",
+  "completed_at_utc": "2026-11-03T17:08:09.752535+00:00",
+  "scope": "Read every nonretail paragraph and its own-date cited headline metadata; manually checked facts, companies, preview versus outcome, release timing, numerical direction and timeframe; checked all quoted market figures against own card and ran verifier. Retail keys excluded.",
+  "reviewed_nonretail_paragraph_count": 136,
+  "reviewed_nonretail_distinct_citations": 86,
+  "findings": [
+    {
+      "severity": "minor",
+      "finding": "Currency symbols and several index levels needed explicit units; clarified without changing values.",
+      "resolved": true
+    },
+    {
+      "severity": "timing_review",
+      "finding": "China local-debt package and CPI outcomes are dated before the cutoff; no future US policy or direct-stimulus outcome is asserted. Crypto uses the November 10 UTC daily close; listed assets and Treasury use the November 8 completed close. Polish Independence Day creates no invented local November 11 session.",
+      "resolved": true
+    }
+  ],
+  "actions": [
+    {
+      "path": "geo[0].parts[1]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "geo[2].parts[0]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "geo[2].parts[5]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "geo[3].parts[1]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "geo[4].parts[1]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "geo[5].parts[1]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "geo[5].parts[4]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "sectors[0].parts[0]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "sectors[1].parts[0]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "sectors[2].parts[1]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "sectors[3].parts[0]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "sectors[4].parts[0]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "sectors[5].parts[0]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "sectors[6].parts[0]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "sectors[7].parts[0]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "sectors[8].parts[0]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "sectors[9].parts[0]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "sectors[10].parts[0]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "sectors[12].parts[0]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "anticipatory[2].parts[0]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "catalysts[0].parts[1]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "catalysts[1].parts[1]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "catalysts[2].parts[1]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "catalysts[5].parts[1]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "crypto[0].parts[0]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "crypto[0].parts[1]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "flows[0].parts[1]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "flows[0].parts[2]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    },
+    {
+      "path": "flows[0].parts[3]",
+      "action": "Made currency or index-point units explicit; market values and claims unchanged."
+    }
+  ],
+  "fatal_or_major_remaining": 0,
+  "limitations": [
+    "Headline-level evidence review; no independent reconstruction of full article bodies or original unrevised market vintages."
+  ],
+  "before_spec_sha256": "cc8705b0862ac4ec51179e0e31ac90e4d5f02a28950d0e6c9569df1419808bf2",
+  "nonretail_content_sha256": "5b103643e0269319513903e1962f909be6bc327c6d2f83b2a2f73fdad7f3a693",
+  "feed_sha256": "d31bbbb7368ff820c1a03d12c7954b0d3d05156e9a95e09e292a56830d2ed94b",
+  "card_sha256": "3fbc1c00a867b24366588a9c27be953e4e627040ca1d4ea791961714d381441a",
+  "full_spec_sha256_at_review": "745e3c9cf6510c5caaa837af68f73f8fe1572d55722a1445a83f4c2f7d00182f"
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "TSLA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TSLA?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "e6d1cd0b15078e524132b9d9f0ccc1e441b9fcfef44355f0ff2829a3be81a978",
+   "fetched_at_utc": "2026-11-03T16:15:24.651278+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TSLA?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "254aba17d7c00392f578837476000fcf13707d03224653ec7734b1306b6d88f7",
+   "fetched_at_utc": "2026-11-03T16:15:24.785009+00:00"
+  }
+ ]
+}

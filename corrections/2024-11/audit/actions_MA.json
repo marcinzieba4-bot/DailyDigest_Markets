@@ -1,0 +1,18 @@
+{
+ "ticker": "MA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MA?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "effb89b7bd5d1ad45d4234cd9444cf5365fe40d35e21149fb9c320651ac0c719",
+   "fetched_at_utc": "2026-11-03T16:15:26.230117+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MA?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "ac5f0d7378d33df1bfa56462b62096aec0a792ab5686df9db8159aad9d9896a8",
+   "fetched_at_utc": "2026-11-03T16:15:26.351026+00:00"
+  }
+ ]
+}

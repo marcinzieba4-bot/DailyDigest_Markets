@@ -1,0 +1,18 @@
+{
+ "ticker": "MC.PA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MC.PA?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "151a2f1b4c28421cbc5fda45f8de0293adcb1c833c1998fb48668cc13372e32d",
+   "fetched_at_utc": "2026-11-03T16:15:20.792113+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MC.PA?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "66aee2e1cf078a8e04a8001f6c50adf7891a9c3995198fb1c262d006b778857a",
+   "fetched_at_utc": "2026-11-03T16:15:21.129728+00:00"
+  }
+ ]
+}

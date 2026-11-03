@@ -1,0 +1,18 @@
+{
+ "ticker": "QBTS",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/QBTS?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "fcb9915fd058757c52cb60b26ca15ef8663f9fda5d5979aadb5646aef971ca18",
+   "fetched_at_utc": "2026-11-03T16:15:26.858491+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/QBTS?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "6f2f6ea1276d2dab7af1d0160615b15ac0f3a0f31da997d6ec9e019173f7fd02",
+   "fetched_at_utc": "2026-11-03T16:15:27.031234+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "XTB.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XTB.WA?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "323a4f610eb9d7e94ef40c979ef28ee120162ea18fec17c26b81e995703aa8f8",
+   "fetched_at_utc": "2026-11-03T16:15:19.769148+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XTB.WA?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "c8e6ab796b84171c019e78c133661bd59cd7924cb90421da3c3996a5e31c5dd3",
+   "fetched_at_utc": "2026-11-03T16:15:19.904147+00:00"
+  }
+ ]
+}

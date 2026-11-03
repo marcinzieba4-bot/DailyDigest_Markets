@@ -1,0 +1,18 @@
+{
+ "ticker": "NBIS",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NBIS?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "dfcb40cd5209791cf14b9229bb9bad323ab8a20b400d8a7156aa743a9c0f3270",
+   "fetched_at_utc": "2026-11-03T16:15:26.412810+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NBIS?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "ac162325565922a4f677f9079f91eb1987df7c3969116a2fa84821944b5e74b1",
+   "fetched_at_utc": "2026-11-03T16:15:26.539033+00:00"
+  }
+ ]
+}

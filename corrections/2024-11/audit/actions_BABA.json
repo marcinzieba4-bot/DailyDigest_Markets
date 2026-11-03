@@ -1,0 +1,18 @@
+{
+ "ticker": "BABA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BABA?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "e83a3e3f110e0935122c08f2c004c06dfc69ce4f704c7efb0f5c8d322f1f32a9",
+   "fetched_at_utc": "2026-11-03T16:15:21.777906+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BABA?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "08929556d234df1cfe133c8e44fb118b619fc81876bbc1bf5d9b4a8f014949ee",
+   "fetched_at_utc": "2026-11-03T16:15:22.159003+00:00"
+  }
+ ]
+}

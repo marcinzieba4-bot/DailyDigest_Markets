@@ -1,0 +1,18 @@
+{
+ "ticker": "URA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/URA?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "e29562c052d3354d3cdf244b8302381e757df2957064958b9913b77abe77d03d",
+   "fetched_at_utc": "2026-11-03T16:15:23.933341+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/URA?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "452e590557d6c621559502dceac930f4f2dcc9a283b6b13f61cc423d100844a2",
+   "fetched_at_utc": "2026-11-03T16:15:24.161562+00:00"
+  }
+ ]
+}

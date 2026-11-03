@@ -1,0 +1,18 @@
+{
+ "ticker": "AMC",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMC?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "9ccae798c8320d98598d8d130a691b3d5b692151b0ecc24c3115978f3fa21030",
+   "fetched_at_utc": "2026-11-03T16:15:27.392422+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMC?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "07171809d4cd8c76730e6b548c143815283262a625f63183cd7f4b88fa76afeb",
+   "fetched_at_utc": "2026-11-03T16:15:27.527505+00:00"
+  }
+ ]
+}

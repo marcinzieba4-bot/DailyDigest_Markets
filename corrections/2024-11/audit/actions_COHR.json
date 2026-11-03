@@ -1,0 +1,18 @@
+{
+ "ticker": "COHR",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/COHR?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "28eb1b093198f6e569142be4137e3d0cb4c0f6900b10815aeb40d8870d715b83",
+   "fetched_at_utc": "2026-11-03T16:15:25.483514+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/COHR?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "a2b8bc755a25a010f9db31a7f0deb7ea645fca9660e637eb50361e045b727f23",
+   "fetched_at_utc": "2026-11-03T16:15:25.735969+00:00"
+  }
+ ]
+}

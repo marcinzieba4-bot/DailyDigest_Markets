@@ -1,0 +1,76 @@
+{
+  "date": "2024-11-04",
+  "reviewer": "independent-writer-middle",
+  "reviewed_at_utc": "2026-11-03T17:00:01.025125+00:00",
+  "scope": {
+    "keys": [
+      "date",
+      "geo",
+      "sectors",
+      "earnings_pattern",
+      "underowned",
+      "crypto",
+      "flows",
+      "anticipatory",
+      "catalysts"
+    ],
+    "blocks": 36,
+    "paragraphs": 136,
+    "distinct_cited_headlines": 99,
+    "entire_nonretail_text_read": true,
+    "own_cited_headlines_read": true,
+    "market_prices_units_directions_horizons_checked": true,
+    "release_boundaries_reviewed": true,
+    "retail_outside_scope_preserved": true
+  },
+  "findings": [
+    {
+      "where": "geo:AU/Demand & Financing; sectors:XLI/Breaking Convention",
+      "severity": "MAJOR",
+      "quote": "Australia cancels Lockheed Martin military satellite project",
+      "problem": "Frozen RSS nominalNov3date masks originalReuters publicationNov4 03:14:37UTC, after midnightcutoff. Two passages stated completed outcome.",
+      "action": "Removedbothoutcomeclaims; usedeligibleown-dateFortescueindustryriskandBoeingcredit-scenarioheadlinesinstead.",
+      "proof_file": "audit/publisher_time_lockheed_2024-11-04.json"
+    },
+    {
+      "where": "sectors:SOXX/Narrative; catalysts:NVDA/Catalyst & Thesis",
+      "severity": "MINOR",
+      "quote": "Nvidia joining/entering the Dow",
+      "problem": "The headline announces a future entry, not membership already effective at this edition.",
+      "action": "Madefuturestatus explicit: is to join/enter."
+    },
+    {
+      "where": "earnings_pattern/Rewarded",
+      "severity": "MINOR",
+      "quote": "Chevron completed share close also advanced",
+      "problem": "Card-baseddirectionneededaninlinepricesourcetag.",
+      "action": "AddedYahooFinancepriorNov1closetag."
+    }
+  ],
+  "remaining_fatal_or_major": 0,
+  "review_limits": [
+    "Independent AI editorial audit of frozen headline evidence and own-date market card; not human review",
+    "Original article bodies and publisher-date vintages not independently established by this audit"
+  ],
+  "nonretail_canonical_sha256": "4c6dce38c6a2f8aee8d60fcdb619c9fc1b93ecc926a8c08087de106ff271a20d",
+  "final_full_spec_sha256": "ba80508274eb61ba68773ef0d418f48b12d599ad8f1e15ffec3c03c0756d239e",
+  "feed_sha256": "3f6c621b56d411bf40204d2ab7d02c2eff4359eab17d2e58aff497a7ca1f83bc",
+  "card_sha256": "310af2c7b6b7be8dbc37f416cc83a4b76ed76baf81d21bf27295181d29056af2",
+  "retail_canonical_sha256": "731c012f46f7f02313cb0a6c536775d965c196c771cf0578a657ec69a0710f9f",
+  "market_identity_checks": {
+    "instrument_level_and_horizon_pairs_checked": 24,
+    "additional_horizons_checked": 4,
+    "mismatches": 0,
+    "treasury_levels_spreads_and_20observation_changes_checked": true
+  },
+  "release_boundary_dispositions": [
+    "Nov1payrollandISMactualseligiblebeforeNov4cutoff",
+    "US election remainsunresolved;Fed/RBAoutcomesnotimported",
+    "PolishequitiespriorOct31versusUSpriorNov1correct;cryptoNov3dailyclosecorrect",
+    "Lockheedcancellationactualaftercutoffexcluded",
+    "NvidiaDowentrykeptasannouncedfuturechange"
+  ],
+  "nonretail_content_sha256": "4c6dce38c6a2f8aee8d60fcdb619c9fc1b93ecc926a8c08087de106ff271a20d",
+  "fatal_or_major_remaining": 0,
+  "full_spec_sha256_at_review": "ba80508274eb61ba68773ef0d418f48b12d599ad8f1e15ffec3c03c0756d239e"
+}

@@ -1,0 +1,169 @@
+{
+  "date": "2024-11-26",
+  "reviewer": "market_render",
+  "reviewed_at_utc": "2026-11-03T17:23:46.606182+00:00",
+  "scope": "Independent retail-only review of the introduction and every body paragraph: 13 paragraphs, one six-part RKLB lead and three two-part RIVN/WIF/GLD secondary items. Compared all cited frozen own-date headlines, numeric claims against the own-date card, and every strictly earlier retail note for chronology. Nonretail spec keys were not edited.",
+  "draft_path": "retail_drafts/2024-11-26.json",
+  "draft_sha256_before_review": "8a158772bf2aeb1115f8877057d3e0500b892713f36ec478e022b3926b31d34d",
+  "draft_sha256": "7b721e2577b315bd2f85daeca8b327d94bda4386f7747f11bce4855c3dd660f2",
+  "final_draft_sha256": "7b721e2577b315bd2f85daeca8b327d94bda4386f7747f11bce4855c3dd660f2",
+  "feed_sha256": "db14b8c919b0bd5fb97183c4351a8bd353a083b5c7a3858389f9b689c74cdc3f",
+  "card_sha256": "aa1352e5a31f19e7acc1e216e9461042af79c597545dd1e3d8b04c97b287b089",
+  "retail_content_sha256": "53065c619a1bb0e163964e54720c9de94b9bf572839c9f2927432410fb09abb2",
+  "reviewed_paragraphs": 13,
+  "body_word_counts": {
+    "Rocket Lab / RKLB — the launch cadence becomes the pitch": 698,
+    "Rivian / RIVN — a legal overhang moves toward resolution": 170,
+    "Dogwifhat / WIF — another meme gets a familiar distribution channel": 167,
+    "Gold / GLD — a softer risk premium can still hurt": 161
+  },
+  "source_checks": [
+    {
+      "id": "n0527",
+      "headline": "Gold tumbles over 3% on reports of Israel-Hezbollah ceasefire, US Treasury pick - Reuters",
+      "source": "Reuters",
+      "frozen_published_at": "2024-11-24T08:00:00+00:00",
+      "citation_occurrences": 1
+    },
+    {
+      "id": "n1671",
+      "headline": "Is Rocket Lab’s (NASDAQ:RKLB) Rally Just Getting Started? - Yahoo Finance",
+      "source": "Yahoo Finance",
+      "frozen_published_at": "2024-11-19T08:00:00+00:00",
+      "citation_occurrences": 1
+    },
+    {
+      "id": "n1686",
+      "headline": "Rocket Lab Director Sells $96.7M in Shares Following a 240% Stock Price Surge - Yahoo Finance",
+      "source": "Yahoo Finance",
+      "frozen_published_at": "2024-11-19T08:00:00+00:00",
+      "citation_occurrences": 1
+    },
+    {
+      "id": "n1898",
+      "headline": "Where Will Rocket Lab Be in 3 Years? - Yahoo Finance",
+      "source": "Yahoo Finance",
+      "frozen_published_at": "2024-11-23T08:00:00+00:00",
+      "citation_occurrences": 1
+    },
+    {
+      "id": "n1974",
+      "headline": "Rocket Lab nails two missions within 24 hours — one in each hemisphere - TechCrunch",
+      "source": "TechCrunch",
+      "frozen_published_at": "2024-11-25T08:00:00+00:00",
+      "citation_occurrences": 4
+    },
+    {
+      "id": "n3859",
+      "headline": "Dogwifhat Price Jumps as Solana Meme Coin Joins Dogecoin on Robinhood - Decrypt",
+      "source": "Decrypt",
+      "frozen_published_at": "2024-11-25T08:00:00+00:00",
+      "citation_occurrences": 1
+    },
+    {
+      "id": "n4526",
+      "headline": "Tesla, Rivian Agree to Settle Four-Year Trade Secrets Lawsuit - Yahoo Finance",
+      "source": "Yahoo Finance",
+      "frozen_published_at": "2024-11-25T08:00:00+00:00",
+      "citation_occurrences": 1
+    }
+  ],
+  "findings": [
+    {
+      "topic": "RKLB completed missions and timing",
+      "result": "Pass",
+      "detail": "The own-date TechCrunch headline describes two completed missions within 24 hours. Publisher article dated November 25, 2024 at 13:23 PST (21:23 UTC) explicitly confirms successful execution, before the November 26 00:00 UTC cutoff. The draft does not turn a pending launch into a completion or import later operating outcomes."
+    },
+    {
+      "topic": "RIVN settlement status",
+      "result": "Narrow correction made",
+      "detail": "The frozen headline supports an agreement to settle, not a completed dismissal. The second paragraph called it a resolved distraction. Replaced that wording with an agreement to settle; the first paragraph already limited the reported milestone correctly. The title remains prospective: moves toward resolution."
+    },
+    {
+      "topic": "WIF listing and instrument identity",
+      "result": "Pass",
+      "detail": "Own-date Decrypt headline supports the Dogwifhat Robinhood listing and a rising token price. The publisher article is November 25. The draft distinguishes WIF from an ownership claim on Robinhood, adds no unsupported token quotation or percentage, and makes no measured flow or social ranking claim."
+    },
+    {
+      "topic": "GLD prior-session selloff and ceasefire status",
+      "result": "Pass",
+      "detail": "The GLD figures are November 25 ETF share quotes, not spot-gold dollar levels. The Reuters headline supplies the reported ceasefire/Treasury-pick connection; the prose describes a possible agreement rather than claiming an implemented ceasefire. The frozen RSS timestamp is approximate and does not supply the market-session label; the card supplies the explicit November 25 prior session."
+    },
+    {
+      "topic": "Social and institutional inference",
+      "result": "Pass after style clarification",
+      "detail": "The Social Signal cites actual investor-facing Yahoo questions and the TechCrunch event; no platform post counts, popularity rank or retail holdings are invented. The director sale is attributed to its headline and motives are left unasserted. Professional-investor discussion is explicitly a valuation appraisal, not a claim of institutional buying or selling. Removed two input-gap sentences from Smart Money View and retained an investment-focused conditional appraisal."
+    },
+    {
+      "topic": "Historical analogy and risk",
+      "result": "Pass",
+      "detail": "The analogy is a general demonstration-to-repetition mechanism, with no invented historical episode. Narrative-break paragraphs are conditional and do not forecast subsequent outcomes or call reference closes guaranteed support."
+    },
+    {
+      "topic": "Chronological freshness and selection",
+      "result": "Pass; all four selections preserved",
+      "detail": "Compared strictly earlier notes through November 25. RKLB previously led November 14 on first-Neutron-customer news; the November 25 completed mission pair is a fresh operating event. RIVN previously appeared November 15 on the Volkswagen partnership; the settlement agreement is distinct. WIF is newly selected, with its own November 25 listing headline rather than recycling the earlier PEPE listing. GLD last appeared November 12 on dollar-driven weakness; the newly eligible November 25 ceasefire/Treasury-pick selloff supplies a distinct cited event. Price changes alone were not used to justify repetition."
+    }
+  ],
+  "numeric_checks": {
+    "all_quoted_us_equity_etf_sessions": "2024-11-25",
+    "RKLB": {
+      "close_usd": "24.06",
+      "one_session_pct": 3.44,
+      "five_sessions_pct": 24.73,
+      "twenty_sessions_pct": 113.68
+    },
+    "RIVN": {
+      "close_usd": "11.60",
+      "one_session_pct": 13.28,
+      "five_sessions_pct": 15.19
+    },
+    "GLD": {
+      "close_usd": "242.48",
+      "one_session_pct": -2.95,
+      "five_sessions_pct": 0.58
+    },
+    "treasury": {
+      "date": "2024-11-25",
+      "ten_year_pct": "4.27%",
+      "change_five_observations_bps": -15
+    },
+    "WIF": "No numeric price/return claim; absent from market card.",
+    "fx": "No =X numeric level, return or session-close claim."
+  },
+  "publisher_timing_checks": [
+    {
+      "url": "https://techcrunch.com/2024/11/25/rocket-lab-nails-two-missions-within-24-hours-one-in-each-hemisphere/",
+      "publication_utc": "2024-11-25T21:23:00Z",
+      "purpose": "Confirm completed missions, not pending; actual publisher time before cutoff."
+    },
+    {
+      "url": "https://decrypt.co/293455/dogwifhat-price-jumps-robinhood-listing?amp=1",
+      "publication_date": "2024-11-25",
+      "purpose": "Confirm actual WIF Robinhood access/listing and instrument identity."
+    },
+    {
+      "url": "https://techcrunch.com/2024/11/23/tesla-says-it-has-reached-a-conditional-settlement-in-rivian-trade-secrets-lawsuit/",
+      "publication_date": "2024-11-23",
+      "purpose": "Confirm agreement remained conditional; used only to narrow report language, no new factual detail imported into report."
+    }
+  ],
+  "changes": [
+    {
+      "path": "retail[0].parts[4][1]",
+      "action": "Replaced input-gap narration about absent mission margins with an explicitly conditional professional appraisal connecting cadence, economics and return on committed capital; kept original n1974 citation and director-sale discussion."
+    },
+    {
+      "path": "retail[1].parts[1][1]",
+      "action": "Changed resolved distraction to agreement to settle to preserve agreement-versus-completion distinction."
+    }
+  ],
+  "files_edited": [
+    "retail_drafts/2024-11-26.json"
+  ],
+  "selection_preserved": true,
+  "fatal_or_major_remaining": 0,
+  "limits": [
+    "Frozen RSS dates can be approximate; publisher timing was checked specifically for the RKLB completion and WIF listing, and settlement-status wording was independently corroborated. No claim of a fully reconstructed original publication vintage is made."
+  ]
+}

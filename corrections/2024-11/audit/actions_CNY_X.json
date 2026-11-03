@@ -1,0 +1,18 @@
+{
+ "ticker": "CNY=X",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CNY%3DX?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "98a1ce97f302b90ca44615077fea2808a5010fa945093548445aacbe4e6eca00",
+   "fetched_at_utc": "2026-11-03T16:15:18.954949+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CNY%3DX?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "1f6bc6b887ec80a69f7f6481f66c470af5fe00e2b5c3e6b65c438801a63aa124",
+   "fetched_at_utc": "2026-11-03T16:15:19.045000+00:00"
+  }
+ ]
+}

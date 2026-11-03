@@ -1,0 +1,18 @@
+{
+ "ticker": "NIO",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NIO?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "d4616333a3bd2a176fc3dc5216f93a3af78980904b6b864eedd4b0633147b3da",
+   "fetched_at_utc": "2026-11-03T16:15:22.018861+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NIO?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "756692a4d08e913d2f4e50c05ca80e2b611e85bf54e5e41513041e9bce71fc8e",
+   "fetched_at_utc": "2026-11-03T16:15:22.193315+00:00"
+  }
+ ]
+}

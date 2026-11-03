@@ -1,0 +1,140 @@
+{
+  "date": "2024-11-08",
+  "reviewer": "writer_early_independent_nonretail",
+  "completed_at_utc": "2026-11-03T17:08:09.755748+00:00",
+  "scope": "Read every nonretail paragraph and its own-date cited headline metadata; manually checked facts, companies, preview versus outcome, release timing, numerical direction and timeframe; checked all quoted market figures against own card and ran verifier. Retail keys excluded.",
+  "reviewed_nonretail_paragraph_count": 136,
+  "reviewed_nonretail_distinct_citations": 86,
+  "findings": [
+    {
+      "severity": "minor",
+      "finding": "Several market levels used currency symbols or omitted explicit index-point units; normalised units.",
+      "resolved": true
+    },
+    {
+      "severity": "timing_review",
+      "finding": "Fed and BoE decisions were released November 7 and are eligible. Japan household spending was released at 08:30 JST on November 8, equivalent to November 7 23:30 UTC, before this cutoff. China November 8 fiscal-package outcome remains pending and is not claimed.",
+      "resolved": true
+    }
+  ],
+  "actions": [
+    {
+      "path": "geo[0].parts[1]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "geo[2].parts[5]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "geo[3].parts[1]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "geo[4].parts[1]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "geo[5].parts[1]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "geo[5].parts[4]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "sectors[0].parts[0]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "sectors[1].parts[0]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "sectors[2].parts[0]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "sectors[3].parts[0]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "sectors[4].parts[0]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "sectors[5].parts[0]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "sectors[6].parts[0]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "sectors[7].parts[0]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "sectors[8].parts[0]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "sectors[9].parts[0]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "sectors[9].parts[1]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "sectors[10].parts[0]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "sectors[12].parts[0]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "underowned[2].parts[1]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "catalysts[0].parts[1]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "catalysts[1].parts[1]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "catalysts[4].parts[1]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "catalysts[5].parts[1]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "crypto[0].parts[0]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "crypto[0].parts[2]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    },
+    {
+      "path": "flows[0].parts[2]",
+      "action": "Made currency or index-point units explicit; numerical values and facts unchanged."
+    }
+  ],
+  "fatal_or_major_remaining": 0,
+  "limitations": [
+    "Headline-level evidence review; no independent reconstruction of full article bodies or original unrevised market vintages."
+  ],
+  "before_spec_sha256": "d1ccf200b6be64c365f28d39ceccf440d9efdc68d352cee16ecf25c23ce141a9",
+  "nonretail_content_sha256": "a8b07a8e7b66168f35fa05a80340fb87106aa0ab442dde4ce966a69fca901449",
+  "feed_sha256": "b9a5a6b583a1341f56bac5074c727a6ccb94dcf0de3ece0c79f95025ba0970ae",
+  "card_sha256": "9c86fb7696284686e8a2c47240284e49c2de1d73e66382de17fb4a4f89aaae09",
+  "full_spec_sha256_at_review": "2a792cfdca080c830f77cceb16a6147fa6f519bb613e680208e76fbf6a2115ec",
+  "verification": "All quoted own-card levels, return horizons, signs and Treasury fields manually checked; own-date verify PASS after final patch."
+}

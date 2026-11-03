@@ -1,0 +1,18 @@
+{
+ "ticker": "SIE.DE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SIE.DE?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "fb257b0a78afb547ed6042c70d09bef56459a731491455870ee59cc2dca60978",
+   "fetched_at_utc": "2026-11-03T16:15:20.337663+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SIE.DE?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "a1b4dfb13bd13a3b8e69d90d327cc8c01da616b7e485f074fc21e482fd5e0ad7",
+   "fetched_at_utc": "2026-11-03T16:15:20.558378+00:00"
+  }
+ ]
+}

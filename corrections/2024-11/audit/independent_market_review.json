@@ -1,0 +1,88 @@
+{
+  "reviewer": "independent-rules-style-agent",
+  "reviewed_at_utc": "2026-11-03T16:25:56.986921+00:00",
+  "status": "arithmetic_passed_with_fx_interpretation_unresolved",
+  "scope": "Independent read-only recomputation of all 21 cards: prior row, display units, currency, 1/5/20-session returns, Treasury levels/bps/spread, crypto UTC dates; targeted holiday cases. Acquisition tool/source metadata reviewed; no report claims reviewed yet.",
+  "assertions": 36529,
+  "errors": [],
+  "card_sha256": {
+    "2024-11-01": "a4e17a96a1249a47a2ddb60d69f58d20ea000e900da4ee89d5240819001fe21d",
+    "2024-11-04": "310af2c7b6b7be8dbc37f416cc83a4b76ed76baf81d21bf27295181d29056af2",
+    "2024-11-05": "b8237b5e07e39c7b14634d9cc003931a9dbbeca886ee33b9d7ce3f330bd86d79",
+    "2024-11-06": "6d2bc7cebbe134941834c7e44669582ace7579ca21a04ba6b8bc7901c45ae53f",
+    "2024-11-07": "3ad9513d9fd146b8e7756e5103ce1df8fb20889a4d667db00973481e2ace725e",
+    "2024-11-08": "9c86fb7696284686e8a2c47240284e49c2de1d73e66382de17fb4a4f89aaae09",
+    "2024-11-11": "3fbc1c00a867b24366588a9c27be953e4e627040ca1d4ea791961714d381441a",
+    "2024-11-12": "2070d84f61136d52c50a5ef2e2e4c0cdae8fe7d6f49bf6dfeeb556b1b86d3bef",
+    "2024-11-13": "c8c359ca7c6df51e54acc544183574d06b75147f885536e5954451248d81ae83",
+    "2024-11-14": "e0301cbe6c57fcf9833ac2fead238f9ac9e75e6299db04f6a48e801815614d05",
+    "2024-11-15": "d88b41b6ae717df48a95b8f084046277c0c3ac39cb7a81141ac0234b2d6d12d4",
+    "2024-11-18": "fe2af08e137b6b71913b86ef8ea58f396d9096bb59f53fd25668bb6c8defe497",
+    "2024-11-19": "5c6167ced9256f97fe64f1dc2f6284130910b4594e521a2a124042d6d82aa762",
+    "2024-11-20": "2f2dad50fc885199339b156daa084ad57026e47ac2c65351fcd9f2b23993512e",
+    "2024-11-21": "39d5042be4e0d82e9e94c0046a2caa9904e08a3c4dec59a9199cef7d0fd88039",
+    "2024-11-22": "0125abc15caaca170d2286b310d2bc23cede5e2595e7ebf87e6f99d2e8ce6fca",
+    "2024-11-25": "284727cdffd78226b6cc85c8a8a2db4e2e07437469b20f763ae6d4b47669d782",
+    "2024-11-26": "aa1352e5a31f19e7acc1e216e9461042af79c597545dd1e3d8b04c97b287b089",
+    "2024-11-27": "41e4ead1b2b33177b16c58bd1283bbfa3fa4a5cde5a81704bb86ae6a221b8364",
+    "2024-11-28": "2e701d449f77a72db57a7ef4698a3648a4cde58c2b1bac464df4e02ae515c734",
+    "2024-11-29": "cc637545079f0979faba5499c6a5ee56d8fd7d3dc1e5720fc2e272620b33f0b8"
+  },
+  "tool_sha256": {
+    "tools/fetch_market.py": "53d9b690cedce65eca3f7b1c96709d0d1d92e398367bbcc01f1ed0539dc33af9",
+    "tools/build_cards.py": "0826f62812ff03939318af784acaebf865fdf6a8a2914953c541b9c7b24e541f",
+    "tools/validate_market.py": "7ccfc0462a674460679b34073abe3b4a5d7709a90fdc403ae6983c6aacbad184"
+  },
+  "owner_validation_sha256": "4e9d96425c33ce09670fd2a2c8f702e71f4ab6e63f8625fa6ebcf692319f36bd",
+  "calendar_cases": [
+    {
+      "date": "2024-11-01",
+      "ticker": "^TWII",
+      "expected_session": "2024-10-30"
+    },
+    {
+      "date": "2024-11-04",
+      "ticker": "PKO.WA",
+      "expected_session": "2024-10-31"
+    },
+    {
+      "date": "2024-11-05",
+      "ticker": "^N225",
+      "expected_session": "2024-11-01"
+    },
+    {
+      "date": "2024-11-12",
+      "ticker": "PKO.WA",
+      "expected_session": "2024-11-08"
+    },
+    {
+      "date": "2024-11-29",
+      "ticker": "^GSPC",
+      "expected_session": "2024-11-27"
+    }
+  ],
+  "taiwan_exception_review": {
+    "url": "https://wwwc.twse.com.tw/staticFiles/news/news/tsecnews/8a8216d69236c2e30192dd523eb10329.pdf",
+    "source_date": "2024-10-30",
+    "result": "Independently confirmed official TWSE search-result text states Oct31 full closure for Kong-Rey. Direct PDF open timed out. No synthetic row inserted."
+  },
+  "limitations": [
+    "Current-vintage retrospective Yahoo/Treasury data may contain vendor revisions.",
+    "This check recomputes retained histories rather than proving original unrevised publisher vintages.",
+    "Future corporate-action events restore display share units only; returns remain comparable split-adjusted price returns excluding dividends.",
+    "Full per-exchange calendar inventory is covered by owner validation; independent audit added targeted holiday/exception cases.",
+    "News acquisition and narrative claims are separate pending reviews.",
+    "FX daily completion/close convention is unresolved; arithmetic and date-label checks do not certify those marks as actual completed session closes."
+  ],
+  "fx_review": {
+    "status": "unresolved_vendor_daily_close_convention",
+    "observations": [
+      "Nov6-labelled EURUSD1.0934459/USDPLN3.97948599/USDJPY151.43499756/AUDUSD0.66415 conflict with Nov6 election-reaction headline directions; Nov7-labelled quotes contain the reaction.",
+      "Independent exact Yahoo API re-fetches failedHTTP503; direct dated historical-page open was unavailable.",
+      "Yahoo current historical table frequently has daily Close approximately equal to Open; yfinance issue991 documents Yahoo daily Close resetting to Open."
+    ],
+    "supporting_reference": "https://github.com/ranaroussi/yfinance/issues/991",
+    "scope_limit": "This does not establish an exact universal date shift. No raw rows or card values were changed.",
+    "required_editorial_disposition": "Avoid presenting these FX marks as verified same-session completed closes or using them to prove election reaction. Root/market owner to resolve wording/suppression; independently supported eligible headline direction remains usable."
+  }
+}

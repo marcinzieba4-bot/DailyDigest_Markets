@@ -1,0 +1,24 @@
+{
+ "ticker": "XLK",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2025-12-05",
+   "factor": 2.0,
+   "ratio": "2:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLK?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "ce87d748301ab8f11c986f89bf1df19b287071aed604614b9823e193e36d1c63",
+   "fetched_at_utc": "2026-11-03T16:15:22.793391+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLK?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "46c6b082b6fd4a03a19b6d1b133f27f4372a5bde84e1410bae3d5407599a827a",
+   "fetched_at_utc": "2026-11-03T16:15:22.977289+00:00"
+  }
+ ]
+}

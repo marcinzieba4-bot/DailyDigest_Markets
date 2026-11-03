@@ -1,0 +1,112 @@
+{
+  "date": "2024-11-27",
+  "reviewer": "independent-writer-middle",
+  "reviewed_at_utc": "2026-11-03T17:16:00.446618+00:00",
+  "scope": {
+    "retail_intro_read": true,
+    "items": 4,
+    "paragraphs_including_intro": 13,
+    "all_cited_headlines_read": true,
+    "distinct_cited_headlines": 8,
+    "company_platform_institutional_claims_reviewed": true,
+    "own_date_numerical_identity_horizon_checks": [
+      {
+        "ticker": "MSTR",
+        "session": "2024-11-26",
+        "close": "353.69",
+        "returns_pct": {
+          "1s": -12.33,
+          "5s": -17.85,
+          "20s": 36.96
+        },
+        "result": "match"
+      },
+      {
+        "ticker": "BTC-USD",
+        "session": "2024-11-26",
+        "close": "91,985.32",
+        "returns_pct": {
+          "5s": -6.62,
+          "20s": 21.61
+        },
+        "result": "match"
+      },
+      {
+        "ticker": "DELL",
+        "session": "2024-11-26",
+        "close": "141.74",
+        "returns_pct": {
+          "20s": 16.53
+        },
+        "result": "match; pre-result regular-session close explicitly qualified"
+      },
+      {
+        "ticker": "LMT",
+        "session": "2024-11-26",
+        "close": "521.45",
+        "returns_pct": {
+          "20s": -4.64
+        },
+        "result": "match"
+      }
+    ],
+    "strictly_earlier_selection_notes_reviewed": true,
+    "selection_rechosen": false
+  },
+  "findings": [
+    {
+      "severity": "minor",
+      "finding": "VUZI risk paragraph could imply knowledge that no subsequent order had arrived.",
+      "action": "Made follow-on-order risk explicitly conditional, retaining the dated Stocktwits attention evidence."
+    },
+    {
+      "severity": "minor",
+      "finding": "Directional wording repeated signed returns (up + / down -).",
+      "action": "Normalized prose signs without altering numbers or horizons."
+    }
+  ],
+  "chronology_comparison": {
+    "MSTR": "New Nov25 largest-ever acquisition and Nov26 Barrons wrapper attention are after Nov22 common-stock lead and Nov25 wrapper-side report cutoffs; corporate purchase materially changes prior short-seller debate.",
+    "VUZI": "New selection with dated Nov25 Stocktwits six-figure-order and extremely-bullish report.",
+    "DELL": "New selection; Nov26 earnings are eligible before Nov27 midnight; completed regular-session close is explicitly separated from after-close result reaction.",
+    "LMT": "New selection, scoped to Stocktwits reported contract and neutral audience; no inferred institutional flows."
+  },
+  "fatal_or_major_remaining": 0,
+  "draft_sha256": "ec5f10317ba869cb1649471f9bdcdd6b82827efba9680b2cf1cfca1af8c0e975",
+  "retail_content_sha256": "9954843af4468de3ea7ffe9fd6b3c51deff26fece9a851ca193e44ddcf6fa4fd",
+  "feed_sha256": "9ed1d80601d274491eab887cc5f95df9904dbfe49fc02c958c508ef2d0ce2b1b",
+  "card_sha256": "41e4ead1b2b33177b16c58bd1283bbfa3fa4a5cde5a81704bb86ae6a221b8364",
+  "review_limits": [
+    "Independent AI review of frozen headlines and market card, not human review",
+    "Original publication timing is established only for specifically checked high-risk items; RSS dates may be nominal"
+  ],
+  "word_counts": [
+    {
+      "title": "MicroStrategy / MSTR — the biggest buy still needs buyers",
+      "words": 694
+    },
+    {
+      "title": "Vuzix / VUZI — an order turns attention sharply bullish",
+      "words": 166
+    },
+    {
+      "title": "Dell / DELL — AI sales do not rescue every forecast",
+      "words": 157
+    },
+    {
+      "title": "Lockheed Martin / LMT — a large contract meets a restrained crowd",
+      "words": 159
+    }
+  ],
+  "selected_timing_checks": [
+    {
+      "event": "Dell Q3 release and forecast",
+      "result": "Eligible before Nov27 00:00UTC; primary release syndicated Nov26 16:05ET=21:05UTC and Reuters forecast account Nov26 23:18:47UTC. Original CNBC HTML inaccessible; exact frozen headline attributed without importing external article facts.",
+      "metadata_sources": [
+        "https://www.prnewswire.com/news-releases/dell-technologies-delivers-third-quarter-fiscal-2025-financial-results-302316911.html",
+        "https://www.reuters.com/technology/dells-third-quarter-revenue-misses-pc-weakness-2024-11-26/",
+        "https://www.constellationr.com/insights/news/dell-technologies-q3-server-and-networking-revenue-surges-q3-pc-business-lags"
+      ]
+    }
+  ]
+}

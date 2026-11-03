@@ -1,0 +1,226 @@
+{
+  "date": "2024-11-20",
+  "reviewer": "retail_author",
+  "original_author": "evidence_pipeline",
+  "review_scope": [
+    "All nonretail prose in six geographic blocks",
+    "All thirteen sector blocks",
+    "Earnings pattern",
+    "All four underowned themes",
+    "Crypto",
+    "All five flows parts",
+    "All four anticipatory scenarios",
+    "All six catalysts"
+  ],
+  "method": "Read every nonretail paragraph alongside every cited own-date headline; inspected every quoted market/treasury figure, horizon, direction, unit and exchange-local or crypto UTC session; checked result versus preview, proposed versus completed policy and finance actions, headline support and timing. Retail excluded and preserved. No later-date sources used.",
+  "findings": [
+    {
+      "severity": "major",
+      "finding": "Removed vendor-close-ambiguous numeric FX levels/returns from CN/JP/AU/PL and narrowed dependent currency conclusions."
+    },
+    {
+      "severity": "major",
+      "finding": "Conservatively omitted all completed Alibaba USD5bn dual-currency bond-issue claims n2364 because original outcome timing versus Nov20 cutoff was unconfirmed. Replaced financing examples with eligible Nov18 ServiceTitan IPO filing and existing policy baseline; clearly described filing as proposed capital access."
+    },
+    {
+      "severity": "moderate",
+      "finding": "Narrowed unsupported Target scheduled-result inference from a week-ahead stock-selection title; retained next-update analysis."
+    },
+    {
+      "severity": "moderate",
+      "finding": "Country Garden headline establishes a submitted plan; changed agreement wording to proposal. Removed ambiguous October-period wording from Australia annual-inflation claim."
+    },
+    {
+      "severity": "minor",
+      "finding": "Corrected options USD amount spacing."
+    }
+  ],
+  "actions": [
+    {
+      "path": "geo[0].New / Most Important",
+      "finding": "Spacing and explicit currency; cited options-implied size unchanged.",
+      "old": "possible$300 billion",
+      "new": "possible USD 300 billion"
+    },
+    {
+      "path": "anticipatory[0].What Is Priced",
+      "finding": "Spacing and explicit currency; cited options-implied size unchanged.",
+      "old": "possible$300 billion",
+      "new": "possible USD 300 billion"
+    },
+    {
+      "path": "geo[2].Markets & Flows",
+      "finding": "Remove forbidden vendor-close-ambiguous numeric FX level/return.",
+      "old": "USD/CNY stood at 7.2354, up 1.65% over 20 sessions. ",
+      "new": ""
+    },
+    {
+      "path": "geo[3].Activity & Currency",
+      "finding": "Remove forbidden numeric FX; preserve exact equity index level/returns.",
+      "old": "USD/JPY closed at 154.6170, down 0.03% in the session but up 2.66% over 20 sessions; the Nikkei225 closed at 38,414.43 points, up 0.51% on the day and down 1.39% over 20 sessions.",
+      "new": "The Nikkei 225 closed at 38,414.43 points, up 0.51% on the day and down 1.39% over 20 sessions."
+    },
+    {
+      "path": "geo[3].Activity & Currency",
+      "finding": "Remove conclusion based on ambiguous numeric FX observation; keep general risk mechanism.",
+      "old": "The currency and the equity market are therefore carrying different horizons of information.",
+      "new": "An equity allocation still needs a separate assessment of currency and funding risk."
+    },
+    {
+      "path": "geo[4].Demand & Financing",
+      "finding": "Remove forbidden numeric FX; preserve exact equity index.",
+      "old": "AUD/USD closed at 0.6506, down 2.21% over 20 sessions. The ASX200 was 8,374.00 points, up 2.05% over that horizon.",
+      "new": "The ASX 200 was 8,374.00 points, up 2.05% over 20 sessions."
+    },
+    {
+      "path": "geo[4].Demand & Financing",
+      "finding": "Remove ambiguous publication-month/measurement-period wording; retain only headline-supported annual rate.",
+      "old": "The Guardian's October headline-inflation report puts the annual rate at 2.8%",
+      "new": "The Guardian's report puts the annual inflation rate at 2.8%"
+    },
+    {
+      "path": "geo[5].Markets",
+      "finding": "Remove forbidden numeric FX levels/returns.",
+      "old": "USD/PLN at 4.0712 was down 0.77% in the session, while EUR/PLN at 4.3133 fell 0.19%. ",
+      "new": ""
+    },
+    {
+      "path": "geo[5].Markets",
+      "finding": "Remove conclusion relying on ambiguous currency measurement.",
+      "old": "Equity weakness and a firmer zloty in that session are a useful caution against forcing every move into one flow story.",
+      "new": "Equity weakness does not establish a uniform flow story."
+    },
+    {
+      "path": "geo[2].Property",
+      "finding": "Headline establishes submitted restructuring plan, not completed creditor agreement.",
+      "old": "Do not confuse an agreement to reorganize claims",
+      "new": "Do not confuse a proposal to reorganize claims"
+    },
+    {
+      "path": "sectors[5].EPS Upside Watch",
+      "finding": "Stock-selection headline does not explicitly establish scheduled earnings.",
+      "old": "The week-ahead selection in Yahoo Finance identifies Target as a pending test. [[n0465]]",
+      "new": "Yahoo Finance's week-ahead stock selection puts Target in focus. [[n0465]] Assess its next operating update without treating a stock recommendation as a scheduled earnings outcome."
+    },
+    {
+      "path": "geo[2].Credit Impulse",
+      "finding": "Conservatively omit completed Alibaba dual-currency issue outcome with unconfirmed original publication timing versus Nov20 cutoff.",
+      "old": "Alibaba's$5 billion dual-currency bond deal, reported by Reuters, demonstrates access to funding for a particular issuer. [[n2364]] It does not measure an economy-wide revival in private credit.",
+      "new": "Capital-market access for a particular issuer would not by itself measure an economy-wide revival in private credit."
+    },
+    {
+      "path": "geo[2].New / Most Important",
+      "finding": "Omit uncertain Alibaba outcome and preserve transmission argument using eligible own-date policy baseline.",
+      "old": "Funding access and weak business confidence can coexist. Alibaba's bond issue is a concrete financing transaction, while Barron's describes small firms still not feeling stimulus and preparing for disappointment. [[n2364]] [[n0988]] The contrast is economically useful: a large issuer can access markets before an ordinary entrepreneur sees a reason to expand.",
+      "new": "Financial repair and weak business confidence can coexist. Reuters describes a local-debt package without direct stimulus, while Barron's describes small firms still not feeling stimulus and preparing for disappointment. [[n0785]] [[n0988]] The contrast is economically useful: liability repair can progress before an ordinary entrepreneur sees a reason to expand."
+    },
+    {
+      "path": "flows.Credit Check",
+      "finding": "Replace uncertain completed Alibaba issue with eligible Nov18 ServiceTitan filing; preserve proposed-versus-completed distinction.",
+      "old": "Alibaba’s dual-currency bond transaction provides a specific counterpoint to a generalized funding alarm. [[n2364]] A strong issuer can access capital while another borrower fails. Compare the claim, currency and maturity being financed before drawing a conclusion about systemic liquidity. Capital access is evidence about the issuer and the transaction, not a certificate that every investment it funds will earn an adequate return.",
+      "new": "CNBC reports ServiceTitan filing to go public, adding a specific proposed capital-market transaction to the financing discussion. [[n5137]] A filing expresses an intention to seek capital rather than a completed fundraising. Compare the claim, timing and terms before drawing a conclusion about systemic liquidity. An individual capital plan cannot certify that every investment it may fund will earn an adequate return."
+    },
+    {
+      "path": "underowned[3].Attention Gap",
+      "finding": "Replace uncertain Alibaba completed issue with eligible own-date proposed capital-access event.",
+      "old": "Alibaba's dual-currency bond issue demonstrates access to capital for a specific company during a difficult Chinese recovery debate. [[n2364]] The opportunity is to identify resilient issuers rather than assume that one successful deal proves broad credit transmission is repaired.",
+      "new": "CNBC reports cloud-software company ServiceTitan filing to go public on Nasdaq. [[n5137]] That is a concrete step toward seeking capital, rather than evidence that funding has already been raised or that every issuer faces an equally receptive market. The opportunity is to evaluate issuer quality and terms separately from general enthusiasm for access."
+    },
+    {
+      "path": "underowned[3].Exposure & Risk",
+      "finding": "Align exposure analysis with proposed IPO rather than omitted completed bond issue.",
+      "old": "A bond and a common share offer different claims. Select the instrument whose payoff matches the thesis, considering currency, maturity and the operating cash that supports it. A company can refinance successfully while its equity still requires stronger demand to justify the valuation.",
+      "new": "A public-offering filing and a completed capital raise are different stages. Assess the prospective security, valuation, funding need and operating cash generation before participating. A company may seek equity successfully while a demanding entry price still leaves new shareholders with an unattractive expected return."
+    }
+  ],
+  "retained_checks": [
+    "All other quoted index/equity/fund/crypto/treasury observations match own card, including Warsaw bank/company prices and Siemens EUR level/returns.",
+    "Japan export-release claim retained as early Japanese-local release before UTC midnight, not a report-day UTC daytime outcome.",
+    "Nvidia event remains pending; options USD300bn is potential move scale rather than forecast gain.",
+    "Nov19 Walmart outlook, US housing starts, Russian doctrine change and actual missile-use reports are eligible; political interpretations remain attributed.",
+    "Reported portfolio flows, money-market balances, proposed buyback and ETF access remain distinct from price returns or guaranteed future purchases."
+  ],
+  "verifier": {
+    "status": "PASS",
+    "failures": 0,
+    "warnings": 0
+  },
+  "render": "PASS",
+  "cited_nonretail_ids": [
+    "n0117",
+    "n0162",
+    "n0433",
+    "n0465",
+    "n0481",
+    "n0634",
+    "n0737",
+    "n0785",
+    "n0915",
+    "n0988",
+    "n1007",
+    "n1020",
+    "n1026",
+    "n1032",
+    "n1077",
+    "n1081",
+    "n1086",
+    "n1277",
+    "n1278",
+    "n1297",
+    "n1683",
+    "n1689",
+    "n1712",
+    "n1728",
+    "n1734",
+    "n1747",
+    "n1761",
+    "n1763",
+    "n1772",
+    "n1784",
+    "n1788",
+    "n1876",
+    "n1903",
+    "n1914",
+    "n1915",
+    "n1927",
+    "n1938",
+    "n1955",
+    "n2122",
+    "n2269",
+    "n2275",
+    "n2316",
+    "n2328",
+    "n2335",
+    "n2559",
+    "n2561",
+    "n2572",
+    "n2905",
+    "n3028",
+    "n3034",
+    "n3226",
+    "n3304",
+    "n3314",
+    "n3325",
+    "n3352",
+    "n3378",
+    "n3417",
+    "n3517",
+    "n3650",
+    "n3664",
+    "n3674",
+    "n3810",
+    "n4047",
+    "n4067",
+    "n4146",
+    "n4164",
+    "n4904",
+    "n4949",
+    "n5137"
+  ],
+  "fatal_or_major_remaining": 0,
+  "feed_sha256": "cb7d00e9a5db33d7ef0826a774802f13dd9d71432ed5738f3e260012e0bcf94e",
+  "card_sha256": "2f2dad50fc885199339b156daa084ad57026e47ac2c65351fcd9f2b23993512e",
+  "nonretail_content_sha256": "a0df50b2afb90c79e9b777c94b639c97119d06f2b9b63c52e26c2ba7b3cf5e3b",
+  "full_spec_sha256_at_review": "5366cb125e650ecb1726c3268b3328194b72d5717b48855458dcb2fdda1091bb",
+  "reviewed_at_utc": "2026-11-03T17:16:59.886482+00:00"
+}

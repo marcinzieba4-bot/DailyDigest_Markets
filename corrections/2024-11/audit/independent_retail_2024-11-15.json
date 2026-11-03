@@ -1,0 +1,103 @@
+{
+  "date": "2024-11-15",
+  "reviewer": "independent-writer-middle",
+  "reviewed_at_utc": "2026-11-03T17:14:30.986530+00:00",
+  "scope": {
+    "retail_intro_read": true,
+    "items": 4,
+    "paragraphs_including_intro": 13,
+    "all_cited_headlines_read": true,
+    "distinct_cited_headlines": 8,
+    "company_platform_institutional_claims_reviewed": true,
+    "own_date_numerical_identity_horizon_checks": [
+      {
+        "ticker": "SMCI",
+        "session": "2024-11-14",
+        "close": "18.01",
+        "returns_pct": {
+          "1s": -11.41,
+          "5s": -29.32,
+          "20s": -62.16
+        },
+        "result": "match"
+      },
+      {
+        "ticker": "MSTR",
+        "session": "2024-11-14",
+        "close": "327.67",
+        "returns_pct": {
+          "5s": 21.0,
+          "20s": 69.41
+        },
+        "result": "match"
+      },
+      {
+        "ticker": "RIVN",
+        "session": "2024-11-14",
+        "close": "10.31",
+        "returns_pct": {
+          "1s": -14.3,
+          "5s": 2.59
+        },
+        "result": "match"
+      },
+      {
+        "ticker": "DIS",
+        "session": "2024-11-14",
+        "close": "109.12",
+        "returns_pct": {
+          "1s": 6.23,
+          "20s": 13.03
+        },
+        "result": "match"
+      }
+    ],
+    "strictly_earlier_selection_notes_reviewed": true,
+    "selection_rechosen": false
+  },
+  "findings": [
+    {
+      "severity": "minor",
+      "finding": "The leveraged-fund asset milestone was described as adoption and demand, which would overinterpret assets as subscriptions.",
+      "action": "Kept the USD 1 billion headline, described product size and explicitly separated assets from subscriptions and market appreciation."
+    },
+    {
+      "severity": "minor",
+      "finding": "Directional wording repeated signed returns (up + / down -).",
+      "action": "Normalized prose signs without altering numbers or horizons."
+    }
+  ],
+  "chronology_comparison": {
+    "SMCI": "New Nov13 Reuters filing delay and Nov14 index/delisting discussion are after prior Nov13 report cutoff and materially change prior smaller bank-downgrade caution; potential removals remain conditional.",
+    "MSTX": "New Nov12 leveraged-wrapper asset milestone is after prior MSTR Nov12 report cutoff; no measured inflow claim retained.",
+    "RIVN": "New Nov13 VW partnership is after prior Nov11 cost-cutting appearance; distinct strategic-funding angle.",
+    "DIS": "New selection supported by Nov14 multiyear forecast headlines."
+  },
+  "fatal_or_major_remaining": 0,
+  "draft_sha256": "e91ce11a2a3fb02f7e5837a4ed3838da835d39e4d3daca07d94f77ac9b96791d",
+  "retail_content_sha256": "d52873edb3c07ae3b81e68ed7326c00a4849f96bdef27d239d6874ecae944e7f",
+  "feed_sha256": "4c47677381ccb0a625583fa04e35fa88118e2f502a701eb76c85b165ffccf2c7",
+  "card_sha256": "d88b41b6ae717df48a95b8f084046277c0c3ac39cb7a81141ac0234b2d6d12d4",
+  "review_limits": [
+    "Independent AI review of frozen headlines and market card, not human review",
+    "Original publication timing is established only for specifically checked high-risk items; RSS dates may be nominal"
+  ],
+  "word_counts": [
+    {
+      "title": "Super Micro / SMCI — how cheap is an unanswered question?",
+      "words": 685
+    },
+    {
+      "title": "MicroStrategy funds / MSTX — bitcoin conviction gets another layer",
+      "words": 176
+    },
+    {
+      "title": "Rivian / RIVN — a partner brings money and obligations",
+      "words": 159
+    },
+    {
+      "title": "Disney / DIS — the turnaround offers a longer horizon",
+      "words": 168
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "LQD",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LQD?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "1168a5a67f7d4e91d0389b1f778c546c6d25ad3e4ed29d0a27f7b6a51587f38b",
+   "fetched_at_utc": "2026-11-03T16:15:23.626824+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LQD?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "5443b881ed30e2831604afb003d8eb20af5a184b8263a3c3762a62e19f1708f2",
+   "fetched_at_utc": "2026-11-03T16:15:23.825565+00:00"
+  }
+ ]
+}

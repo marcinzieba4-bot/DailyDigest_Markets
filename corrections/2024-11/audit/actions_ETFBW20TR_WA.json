@@ -1,0 +1,18 @@
+{
+ "ticker": "ETFBW20TR.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETFBW20TR.WA?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "e4bde4c8bc2411ed33d6679d2d29f2af53107ed7328c0416588ce8402889837a",
+   "fetched_at_utc": "2026-11-03T16:15:19.073765+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETFBW20TR.WA?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "027698dff522a6f41c01fb093d4146ee101cdad1ae44db93c6f43b5964593303",
+   "fetched_at_utc": "2026-11-03T16:15:19.188664+00:00"
+  }
+ ]
+}

@@ -1,0 +1,177 @@
+{
+  "date": "2024-11-27",
+  "reviewer": "retail_author",
+  "original_author": "evidence_pipeline",
+  "review_scope": [
+    "All nonretail prose in six geographic blocks",
+    "All thirteen sector blocks",
+    "Earnings pattern",
+    "All four underowned themes",
+    "Crypto",
+    "All five flows parts",
+    "All four anticipatory scenarios",
+    "All six catalysts"
+  ],
+  "method": "Read every nonretail paragraph alongside all cited own-date headlines; checked all quoted market and treasury instruments, exact values, signs, horizons, units and actual session tags; assessed release status, chronology, roles, proposal versus action, result versus expectation and flow versus price. Retail excluded and preserved. No later-date sources used.",
+  "findings": [
+    {
+      "severity": "moderate",
+      "finding": "Japan and Australia had missing return horizons after prior currency removal; restored explicit twenty-session wording matching the own card."
+    },
+    {
+      "severity": "moderate",
+      "finding": "Ceasefire scenario used pending-agreement framing despite own-date Atlantic Council n2762 explicit deal-struck headline. Updated to agreement reached with implementation still a future test."
+    },
+    {
+      "severity": "moderate",
+      "finding": "n3913 was used five times across full report. Removed the redundant completed-purchase fact and citation from nonretail catalyst; retained supported proxy-valuation discussion. Final reuse four, no uncited purchase assertion left."
+    },
+    {
+      "severity": "minor",
+      "finding": "Made China currency translation conditional rather than an observed FX conclusion; corrected year/currency spacing."
+    }
+  ],
+  "actions": [
+    {
+      "path": "geo[3].Activity & Currency",
+      "finding": "Restore explicit horizon after earlier numeric-FX removal left an orphaned comparison.",
+      "old": "down 0.42% over the same horizon",
+      "new": "down 0.42% over 20 sessions"
+    },
+    {
+      "path": "geo[4].Demand & Financing",
+      "finding": "Restore explicit horizon; all exact returns are twenty-session card fields.",
+      "old": "The ASX200 at 8,359.40 points was up 1.34%; Commonwealth Bank at AUD 154.46 had gained 7.14%, while BHP at AUD 39.86 was down 7.39%.",
+      "new": "Over 20 sessions, the ASX 200 at 8,359.40 points was up 1.34%; Commonwealth Bank at AUD 154.46 had gained 7.14%, while BHP at AUD 39.86 was down 7.39%."
+    },
+    {
+      "path": "geo[2].Markets & Flows",
+      "finding": "Make currency transmission conditional; equity returns do not establish an observed FX move.",
+      "old": "These are weak risk-asset outcomes and a currency translation challenge, but they do not reveal a measured foreign-flow total.",
+      "new": "These are weak risk-asset outcomes that can be complicated by currency translation, but they do not reveal a measured foreign-flow total."
+    },
+    {
+      "path": "geo[2].Fiscal, Policy & Trade",
+      "finding": "Spacing only; source-supported advisory year unchanged.",
+      "old": "for2025",
+      "new": "for 2025"
+    },
+    {
+      "path": "anticipatory[2].What Is Priced",
+      "finding": "Spacing only; source-supported advisory year unchanged.",
+      "old": "for2025",
+      "new": "for 2025"
+    },
+    {
+      "path": "crypto.New / Most Important",
+      "finding": "Spacing and explicit currency only; exact cited amount unchanged.",
+      "old": "worth$5.4 billion",
+      "new": "worth USD 5.4 billion"
+    },
+    {
+      "path": "catalysts[5].Catalyst & Thesis",
+      "finding": "Remove redundant purchase fact and its citation, rather than leave it uncited; n3913 reuse falls from five to four while retail remains unchanged.",
+      "old": "Decrypt reports a $5.4 billion bitcoin purchase, while Yahoo Finance reports a new short bet during bitcoin's record-price period. [[n3913]] [[n1261]] These are competing company developments around a shared underlying asset, not proof that either equity valuation is correct.",
+      "new": "Yahoo Finance reports a new short bet during bitcoin's record-price period. [[n1261]] The disagreement highlights the extra valuation decision made by a buyer of the corporate proxy: enthusiasm for the underlying asset does not by itself establish the appropriate price for the common equity."
+    },
+    {
+      "path": "anticipatory[3].What Is Priced",
+      "finding": "Use eligible own-date explicit agreement headline; distinguish agreement reached from implementation still to be tested, rather than outdated pending-agreement framing.",
+      "old": "South China Morning Post reports China urging Iran to avoid military action as an Israel-Hezbollah ceasefire approaches. [[n2759]] This is a prospective de-escalation development, not proof that every implementation stage has succeeded or that all regional risks have disappeared.",
+      "new": "Atlantic Council describes Israel and Lebanon striking a ceasefire deal and asks whether the Israel-Hezbollah war is really over. [[n2762]] An agreement is not proof that implementation has succeeded or that all regional risks have disappeared. The pending investment test is whether de-escalation holds, rather than whether a deal can first be reached."
+    }
+  ],
+  "retained_checks": [
+    "All quoted equity/index/crypto/fund/treasury figures and actual sessions match own card, including twenty-session Sony, five-session PZU/CD Projekt and twenty-session Dino returns.",
+    "Dell actual earnings reaction remains separate from preceding regular-session close; company-wide forecast weakness is not rewritten as absence of AI demand.",
+    "Nvidia strong revenue versus lofty investor expectations, Amgen clinical effect versus market hurdle and Abercrombie raised guidance versus market expectations remain distinct comparisons.",
+    "China growth figure is an advisers recommendation, OPEC+ delay is under discussion, Nippon-US Steel appeal is not completed approval and Intel public funding remains conditioned support.",
+    "Polish Witcher4 full production is a production milestone, not a released game or current sales; existing catalogue sales and insurer results remain separately sourced.",
+    "Fed overnight operating-rate discussion is not presented as completed easing or a new asset-purchase program."
+  ],
+  "citation_reuse_after_fix": {
+    "n3913": 4
+  },
+  "verifier": {
+    "status": "PASS",
+    "failures": 0,
+    "warnings": 0
+  },
+  "render": "PASS",
+  "cited_nonretail_ids": [
+    "n0129",
+    "n0394",
+    "n0433",
+    "n0523",
+    "n0534",
+    "n0538",
+    "n0541",
+    "n0712",
+    "n0760",
+    "n0799",
+    "n0854",
+    "n0856",
+    "n0907",
+    "n0930",
+    "n1005",
+    "n1046",
+    "n1118",
+    "n1261",
+    "n1458",
+    "n1494",
+    "n1496",
+    "n1517",
+    "n1698",
+    "n1723",
+    "n1788",
+    "n1795",
+    "n2003",
+    "n2010",
+    "n2011",
+    "n2017",
+    "n2026",
+    "n2035",
+    "n2146",
+    "n2318",
+    "n2356",
+    "n2375",
+    "n2377",
+    "n2380",
+    "n2484",
+    "n2492",
+    "n2762",
+    "n2775",
+    "n3025",
+    "n3048",
+    "n3115",
+    "n3116",
+    "n3213",
+    "n3217",
+    "n3223",
+    "n3366",
+    "n3444",
+    "n3565",
+    "n3714",
+    "n3728",
+    "n3736",
+    "n3744",
+    "n3749",
+    "n3750",
+    "n3769",
+    "n3913",
+    "n3946",
+    "n4496",
+    "n4500",
+    "n4504",
+    "n4508",
+    "n4523",
+    "n5352",
+    "n5626"
+  ],
+  "fatal_or_major_remaining": 0,
+  "feed_sha256": "9ed1d80601d274491eab887cc5f95df9904dbfe49fc02c958c508ef2d0ce2b1b",
+  "card_sha256": "41e4ead1b2b33177b16c58bd1283bbfa3fa4a5cde5a81704bb86ae6a221b8364",
+  "nonretail_content_sha256": "258c9f2d788459a1ba5200fde7d3a98e54d169275b48cf06af4408efd1beb00d",
+  "full_spec_sha256_at_review": "e7c04f0e5ddea0933f8eba78a5bf696dda8b64f7fb996024d4b143ebac302689",
+  "reviewed_at_utc": "2026-11-03T17:19:39.973791+00:00"
+}

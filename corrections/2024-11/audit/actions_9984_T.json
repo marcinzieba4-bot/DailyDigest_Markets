@@ -1,0 +1,24 @@
+{
+ "ticker": "9984.T",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2025-12-29",
+   "factor": 4.0,
+   "ratio": "4:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/9984.T?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "d03c147efc18434d76fcc61646c820f2c5f282ecdfb805ac4490a2294c96d64c",
+   "fetched_at_utc": "2026-11-03T16:15:21.067126+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/9984.T?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "96d435eb53aa78c91f23fbfef05331b6b7c1f6e579377b42c9779a37a5a761c9",
+   "fetched_at_utc": "2026-11-03T16:15:21.275627+00:00"
+  }
+ ]
+}

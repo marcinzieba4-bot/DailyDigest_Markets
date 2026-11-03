@@ -1,0 +1,18 @@
+{
+ "ticker": "^KS11",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EKS11?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "d80845a5a7bfe5dffd914993a48c22bb1bfc6f932394b3a84d700a7dcaffd55c",
+   "fetched_at_utc": "2026-11-03T16:15:21.230201+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EKS11?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "c35724e7a3df28a64be61556758f7800bd99301dd53f8cddc7b18c998390150f",
+   "fetched_at_utc": "2026-11-03T16:15:21.481227+00:00"
+  }
+ ]
+}

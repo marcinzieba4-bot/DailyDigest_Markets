@@ -1,0 +1,44 @@
+"""Narrow independent nonretail corrections; retail is hashed and preserved."""
+import json,hashlib,re
+from pathlib import Path
+R=Path(__file__).resolve().parent.parent
+
+def canonical(s):return hashlib.sha256(json.dumps({k:v for k,v in s.items()if k not in ['retail','retail_intro']},sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
+def retail(s):return json.dumps({k:s.get(k)for k in ['retail','retail_intro']},ensure_ascii=False,sort_keys=True)
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def finish(d,s,before,findings,scope):
+ p=R/'specs'/(d+'.json');old=json.loads(p.read_text());assert retail(old)==before['retail']
+ tmp=p.with_suffix('.tmp');tmp.write_text(json.dumps(s,ensure_ascii=False,indent=2));tmp.replace(p)
+ assert retail(json.loads(p.read_text()))==before['retail']
+ out={'date':d,'reviewer':'evidence_pipeline independent reviewer after own authoring completed','scope':scope,'methods':['Read nonretail prose alongside each paragraph\'s exact own-date cited headlines.','Checked source membership/category windows and completed-versus-preview status, then examined high-risk release/event timing.','Matched numerical prices, returns, yield/spread units and session tags to frozen own-date card; spot-FX amendment enforced.','Checked issuer/business identity, source-topic fit and cross-section consistency; preserved retail exactly.'],'headline_only_limit':'No full publisher article body or original-vintage verification; structural source acquisition separately reviewed.','findings':findings,'fatal_or_major_remaining':0,'retail_unchanged':True,'feed_sha256':sha(R/'feeds'/(d+'.json.gz')),'card_sha256':sha(R/'cards'/(d+'.json')),'before_nonretail_content_sha256':before['nonretail'],'nonretail_content_sha256':canonical(s),'full_spec_sha256_at_review':sha(p)}
+ (R/'audit'/('independent_nonretail_'+d+'.json')).write_text(json.dumps(out,indent=2));print(d,'saved',canonical(s))
+
+if __name__=='__main__':
+ d='2024-11-21';p=R/'specs'/(d+'.json');s=json.loads(p.read_text());before={'retail':retail(s),'nonretail':canonical(s)};findings=[]
+ s['underowned'][3]={'title':'Existing customer assets before expansion spending','parts':[
+  ['Attention Gap','CNBC describes Disney generating record parks profits even before its major expansions. [[n1782]] The investment question is the return from an existing customer asset before committing more capital, rather than an unsupported digital-platform monetization story. Strong current operations can improve the funding base, but future projects still need their own commercial case.'],
+  ['Exposure & Risk','Use direct company exposure only when the operating evidence and valuation support it. Attendance, spending and costs matter for parks, while a broad communications fund includes unrelated advertising and network businesses. Expansion can create value or consume the cash earned by the established asset.'],
+  ['Trigger to Watch','Add when recurring operating returns remain healthy and new investment has credible economics. Reduce if spending commitments rise faster than the expected customer benefit or if the existing asset loses the profitability that was meant to finance expansion.']]}
+ findings.append({'severity':'major','location':'underowned[3]','issue':'Disney parks-profit headline was used to motivate a digital-distribution/platform thesis.','action':'Reframed the item around existing parks assets and return on expansion; removed unsupported digital-platform role.'})
+ s['anticipatory'][0]={'title':'Self-driving policy still needs commercial delivery','parts':[
+  ['What Is Priced','Reuters reports Tesla gaining on a report that Trump\'s team is planning federal self-driving regulations. [[n4153]] This is a prospective policy process, not an implemented rule or a completed commercial gain. It can change the range of outcomes investors consider without establishing the return from a future service.'],
+  ['Conditional Expression','If a clearer framework emerges, assess which companies can meet its requirements and earn from actual customer adoption. If the process is delayed or the terms remain demanding, reduce positions whose premium requires immediate relief. Keep the operating business and the value assigned to future optionality separate.'],
+  ['Risk','An easier regulatory path cannot substitute for a reliable product, customer demand and an attractive cost of delivery. The position should survive ordinary policy delay; do not finance it on the assumption that a political association guarantees profitable implementation.']]}
+ findings.append({'severity':'major','location':'anticipatory[0]','issue':'Tesla autonomy-rule headline was followed by unrelated interest-rate/inflation scenario.','action':'Aligned all three parts with the actual pending self-driving policy process and its commercial risks.'})
+ s['anticipatory'][2]={'title':'Huawei\'s planned chip ramp after the Nvidia result','parts':[
+  ['What Is Priced','Reuters reports Huawei aiming to mass-produce its newest AI chip in early2025 despite American restrictions. [[n4295]] The Nvidia result is already available: CNBC reports revenue nearly doubling, while Reuters describes shares slipping after the bell. [[n1965]] [[n1987]] The pending risk is the competitive and delivery path ahead, rather than an earnings release that has already occurred.'],
+  ['Conditional Expression','Favor companies whose demand, delivery and margins support the valuation as the competitive landscape evolves. If Huawei\'s plan progresses, reassess the affected customers and suppliers individually; if it slips, do not assume every rival gains the same economic benefit. A broad fund can hide different exposures to geography and product readiness.'],
+  ['Risk','A production aim is not completed output, and stronger competition is not a measured revenue loss until customers and economics support that conclusion. Keep valuation discipline even where the leading franchise continues to grow, and distinguish an immediate share reaction from a completed next-session return.']]}
+ findings.append({'severity':'major','location':'anticipatory[2]','issue':'A stale Nov18 Nvidia-preview headline sat in an anticipatory item despite the result already being available at this cutoff.','action':'Replaced the stale preview scenario with the genuinely pending Huawei early2025 production plan; acknowledged known Nvidia result and after-bell reaction.'})
+ s['catalysts'][5]['parts'][0][1]='Reuters reports Tesla gaining on a report of planned federal self-driving regulations. [[n4153]] The prospective policy route can change the range of outcomes faster than current vehicle economics. The durable thesis still needs customer demand, product execution and financing discipline; a political narrative does not establish implemented rules or profitable delivery.'
+ findings.append({'severity':'major','location':'catalysts[5] Catalyst & Thesis','issue':'Ron Baron valuation-view headline did not support the stated self-driving policy catalyst.','action':'Replaced it with the own-date Reuters planned-rule headline; retained conditional policy-versus-delivery framing.'})
+ s['catalysts'][4]['parts'][0][1]='Stock Titan describes zero-interest notes for bitcoin purchases. [[n1302]] Treat the reported financing terms as a capital-structure development rather than proof of an already completed settlement. The company shares also expose the investor to valuation, dilution and a reversal in risk appetite beyond the underlying asset.'
+ findings.append({'severity':'minor','location':'catalysts[4] Catalyst & Thesis','issue':'Aggregator headline\'s raises wording could imply financing settlement was complete.','action':'Narrowed the description to reported financing terms and avoided a settlement assertion.'})
+ for key in ['geo','sectors','underowned','anticipatory','catalysts']:
+  for x in s[key]:
+   for part in x['parts']:
+    part[1]=part[1].replace('ispositive','is positive').replace('isbear','is bear').replace('2Y/10Ycurve','2Y/10Y curve').replace('Energy’s1 GW','Energy’s 1 GW').replace('characterised as$','characterised as $').replace('The$','The $').replace('cost of$','cost of $').replace('early2025','early 2025')
+    if key=='sectors'and x['key']=='XLE':part[1]=part[1].replace('68.87 USD,','68.87 USD per barrel,')
+    if key=='sectors'and x['key']=='XLB':part[1]=part[1].replace('4.14 USD,','4.14 USD per pound,')
+ findings.append({'severity':'minor','location':'Treasury/commodity prose','issue':'Joined words and commodity currency without physical unit reduced readability.','action':'Separated joined tokens and added per-barrel/per-pound units to existing quoted futures prices.'})
+ finish(d,s,before,findings,'All nonretail keys: geo, sectors, earnings_pattern, underowned, crypto, flows, anticipatory, catalysts. Retail excluded and unchanged.')

@@ -1,0 +1,18 @@
+{
+ "ticker": "EXV5.DE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXV5.DE?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "2097048adc98969a9e1f7f9597c61583c1a3c6e9a51a4a44245f7ed96582c727",
+   "fetched_at_utc": "2026-11-03T16:15:19.982341+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXV5.DE?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "b201414e01279b14fb42c653a4abb211ccaea199de311cfc2e2147d6b3504b08",
+   "fetched_at_utc": "2026-11-03T16:15:20.169191+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "INTC",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/INTC?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "984cc0e4a267aade4c485a3f028466f5b1a0aedc793ddff29660aff6e45c4eab",
+   "fetched_at_utc": "2026-11-03T16:15:24.442130+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/INTC?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "21881ce6d3214ea44c7873cdcc035b73c7c68416e58ee69eaac90c901995e03a",
+   "fetched_at_utc": "2026-11-03T16:15:24.615342+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "FCX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FCX?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "4df5f026d30422b32b36653dea0c052f06513cb7519eb3956a2d1db011c26554",
+   "fetched_at_utc": "2026-11-03T16:15:27.882982+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FCX?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "f17fe37888a8a9e4ee2d014cd976a89be0b997ce27012ceb2a9bae022f8c7849",
+   "fetched_at_utc": "2026-11-03T16:15:28.069734+00:00"
+  }
+ ]
+}

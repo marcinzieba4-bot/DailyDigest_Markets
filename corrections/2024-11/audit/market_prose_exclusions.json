@@ -1,0 +1,11 @@
+{
+  "status": "enforced_authoring_exclusion",
+  "date": "2026-11-03",
+  "scope": "All Nov2024 report prose",
+  "excluded_fields": "All numerical close/reference/return/session-close assertions for tickers ending =X",
+  "preserved": "Raw vendor histories and frozen market cards unchanged for auditability",
+  "reason": "Yahoo daily FX close convention can equal session opening reference and conflict with dated market reactions; original session completion cannot be certified.",
+  "allowed": "Dated own-feed FX headlines for direction and general transmission; DXY index remains allowed.",
+  "prohibited_repair": "No date shift, later-row substitution or fabricated close.",
+  "supporting_review": "Independent reviewer rules_style, yfinance maintainer issue https://github.com/ranaroussi/yfinance/issues/991"
+}

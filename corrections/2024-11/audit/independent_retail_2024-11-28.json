@@ -1,0 +1,131 @@
+{
+  "date": "2024-11-28",
+  "reviewer": "independent-writer-middle",
+  "reviewed_at_utc": "2026-11-03T17:23:40.991127+00:00",
+  "scope": {
+    "retail_intro_read": true,
+    "items": 4,
+    "paragraphs_including_intro": 13,
+    "all_cited_headlines_read": true,
+    "distinct_cited_headlines": 9,
+    "company_platform_institutional_claims_reviewed": true,
+    "own_date_numerical_identity_horizon_checks": [
+      {
+        "ticker": "TSLA",
+        "session": "2024-11-27",
+        "close": "332.89",
+        "returns_pct": {
+          "20s": 29.25
+        },
+        "result": "match"
+      },
+      {
+        "ticker": "PLTR",
+        "session": "2024-11-27",
+        "close": "66.05",
+        "returns_pct": {
+          "20s": 51.18
+        },
+        "result": "match"
+      },
+      {
+        "ticker": "MSTR",
+        "session": "2024-11-27",
+        "close": "388.84",
+        "returns_pct": {
+          "1s": 9.94,
+          "5s": -17.94
+        },
+        "result": "match"
+      },
+      {
+        "ticker": "DELL",
+        "session": "2024-11-27",
+        "close": "124.38",
+        "returns_pct": {
+          "1s": -12.25,
+          "5s": -7.15
+        },
+        "result": "match"
+      },
+      {
+        "ticker": "RDDT",
+        "session": "2024-11-27",
+        "close": "140.04",
+        "returns_pct": {
+          "1s": 3.27,
+          "20s": 20.67
+        },
+        "result": "match"
+      },
+      {
+        "instrument": "US Treasury 10Y",
+        "session": "2024-11-27",
+        "yield_pct": "4.25%",
+        "result": "match"
+      }
+    ],
+    "strictly_earlier_selection_notes_reviewed": true,
+    "selection_rechosen": false
+  },
+  "findings": [
+    {
+      "severity": "major",
+      "finding": "Guardian RDDT UK popularity article n4136 was nominally Nov27 in frozen feed, but publisher timestamp is Nov28 01:01CET =00:01UTC, after cutoff.",
+      "action": "Removed late audience/ranking claim and citation. Preserved RDDT selection as a brief carryover based on own-feed eligible Nov22 Advance financing headlines n3999/n4020; no claimed new catalyst. Publication proof saved audit/publisher_time_reddit_2024-11-28.json."
+    },
+    {
+      "severity": "minor",
+      "finding": "DELL repeat side exceeded160words despite principally updating the same forecast/PC conflict with the completed price reaction.",
+      "action": "Trimmed2words to160; retained as short carryover rather than claiming a new corporate catalyst."
+    },
+    {
+      "severity": "minor",
+      "finding": "NBC appointment wording shortened advisory board to board.",
+      "action": "Made advisory-board identity explicit; no claim of corporate-director or government role."
+    },
+    {
+      "severity": "minor",
+      "finding": "Directional wording repeated signed returns.",
+      "action": "Normalized prose signs without altering numbers or horizons."
+    },
+    {
+      "severity": "minor",
+      "finding": "Final shared chronological gate counts hyphenated terms and decimal fragments separately: prior155whitespace words counted166gate words, exceeding160carryover limit.",
+      "action": "Three-word wording trim preserves every number and citation; final152whitespace words/160gate words. No new catalyst claimed."
+    }
+  ],
+  "chronology_comparison": {
+    "UMAC": "New selection. Advisory appointment only; no government order, preferred treatment or commercial outcome implied. Guardian publication Nov27 14:16EST =19:16UTC confirmed eligible.",
+    "MSTR": "Fresh Nov27 retail-investor-pain/options attention after Nov27 cutoff supplies changed investor-participation angle; retained160word side.",
+    "DELL": "Same forecast/PC-mix thesis after Nov27 appearance; completed regular-session reaction is price information, so conservatively kept brief160word carryover.",
+    "RDDT": "Late new-angle evidence excluded. Same selection retained as brief shareholder-financing carryover using earlier eligible own-feed sources; no new-catalyst claim."
+  },
+  "fatal_or_major_remaining": 0,
+  "draft_sha256": "fa877d4c728d312648e64acd7802555e7f935005f0e4fb4a3fb101beb2a826d8",
+  "retail_content_sha256": "f107486245b40e7fb6ae8669c7a53639ff45c5f47cc444461822bb7cdf3abd37",
+  "feed_sha256": "e76ea1d495bd373d9a1beea466d95c56d6d79de422f7d39d8ec7bca17ea46423",
+  "card_sha256": "2e701d449f77a72db57a7ef4698a3648a4cde58c2b1bac464df4e02ae515c734",
+  "review_limits": [
+    "Independent AI review of frozen headlines and market card, not human review",
+    "Original publication timing is established only for specifically checked high-risk items; RSS dates may be nominal"
+  ],
+  "word_counts": [
+    {
+      "title": "Unusual Machines / UMAC — a famous adviser changes the conversation",
+      "words": 696
+    },
+    {
+      "title": "MicroStrategy / MSTR — retail pain survives the rebound",
+      "words": 160
+    },
+    {
+      "title": "Dell / DELL — the completed selloff tests the AI bargain",
+      "words": 160
+    },
+    {
+      "title": "Reddit / RDDT — shareholder financing still needs company evidence",
+      "words": 152
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "date": "2024-11-29",
+  "reviewer": "independent-writer-middle",
+  "reviewed_at_utc": "2026-11-03T17:18:45.846662+00:00",
+  "scope": {
+    "retail_intro_read": true,
+    "items": 4,
+    "paragraphs_including_intro": 13,
+    "all_cited_headlines_read": true,
+    "distinct_cited_headlines": 6,
+    "company_platform_institutional_claims_reviewed": true,
+    "own_date_numerical_identity_horizon_checks": [
+      {
+        "ticker": "ETH-USD",
+        "session": "2024-11-28",
+        "close": "3,579.81",
+        "returns_pct": {
+          "1s": -2.12,
+          "5s": 5.41,
+          "20s": 20.85
+        },
+        "result": "match; completed daily observation"
+      },
+      {
+        "ticker": "ETHA",
+        "session": "2024-11-27",
+        "close": "27.60",
+        "returns_pct": {
+          "1s": 9.74,
+          "5s": 18.45
+        },
+        "result": "match; actual last exchange session before Thanksgiving, explicitly distinguished from later crypto observation"
+      }
+    ],
+    "strictly_earlier_selection_notes_reviewed": true,
+    "selection_rechosen": false
+  },
+  "findings": [
+    {
+      "severity": "minor",
+      "finding": "DXYZ repeated the earlier private-company access thesis with a new price-attention headline, which does not establish a new corporate catalyst; original side165words exceeded brief-carryover maximum160.",
+      "action": "Retained same DXYZ selection, made brief-carryover status explicit and shortened side to150–160words; no ETF identity inferred from the headline."
+    },
+    {
+      "severity": "minor",
+      "finding": "Directional wording repeated signed returns.",
+      "action": "Normalized prose signs without altering numbers, observation dates or horizons."
+    },
+    {
+      "severity": "minor",
+      "finding": "Fortune concentration account is an investor self-report, not independently verified portfolio holdings.",
+      "action": "Made saying he had put explicit in first sentence; retained specific-account scope."
+    }
+  ],
+  "chronology_comparison": {
+    "ETH": "New retail selection. Own-feed Nov26 network-usage, rediscovery-attention and EU staking-service evidence supports distinct token thesis; no inherited BTC/MSTR event facts.",
+    "IREN": "New selection; own Nov27 CoinDesk miner/AI/possible-dividend account, possible payout remains conditional.",
+    "DJT": "New Nov23 Fortune account of one self-reported highly concentrated investor is after prior Nov19 proposed-deal appearance; specific account explicitly not generalized to all holders or verified portfolio holdings.",
+    "DXYZ": "Own Nov22 attention headline is after prior Nov12 appearance but price-only attention leaves same access thesis. Retained as explicitly brief150–160word carryover, with no new-catalyst claim."
+  },
+  "fatal_or_major_remaining": 0,
+  "draft_sha256": "5a7f2a9f50673b113f617ec4fc67f1302e89856d5324a8c75e772b18164ae815",
+  "retail_content_sha256": "06d79d3c208139bf86b9648b6f5362a38f0a8135c725002f2d0d135537e2c6da",
+  "feed_sha256": "db98016a1129ed9ec27563a8b1660a3111b0440ce2db53edad5d2e723ea4b876",
+  "card_sha256": "cc637545079f0979faba5499c6a5ee56d8fd7d3dc1e5720fc2e272620b33f0b8",
+  "review_limits": [
+    "Independent AI review of frozen headlines and market card, not human review",
+    "Original publication timing is established only for specifically checked high-risk items; RSS dates may be nominal"
+  ],
+  "word_counts": [
+    {
+      "title": "Ether / ETH — the network asks for another look",
+      "words": 706
+    },
+    {
+      "title": "IREN / IREN — a miner acquires an AI and payout story",
+      "words": 166
+    },
+    {
+      "title": "Trump Media / DJT — conviction reaches the retirement account",
+      "words": 179
+    },
+    {
+      "title": "Private-company access / DXYZ — the wrapper is part of the wager",
+      "words": 153
+    }
+  ],
+  "selected_timing_checks": [
+    {
+      "event": "DJT concentrated-investor attention account",
+      "result": "Fortune original datedNov23 and publisher sitemap confirms; eligible before Nov29 cutoff. Self-report only, no external article facts imported.",
+      "metadata_sources": [
+        "https://fortune.com/2024/11/23/trump-media-stock-djt-investor-retirement-funds-truth-social/",
+        "https://fortune.com/sitemap/2024/11/23/"
+      ]
+    },
+    {
+      "event": "IREN AI/possible payout report",
+      "result": "CoinDesk original datedNov27 11:58a.m.; safely before Nov29 cutoff. Possibility not converted to declaration or payment.",
+      "metadata_sources": [
+        "https://www.coindesk.com/business/2024/11/27/bitcoin-miner-iren-surges-on-renewed-ai-interest-possible-btc-dividend-payment"
+      ]
+    }
+  ]
+}

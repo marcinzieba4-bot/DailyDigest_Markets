@@ -1,0 +1,18 @@
+{
+ "ticker": "CBA.AX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CBA.AX?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "b23037d2c83d4de1f3e8238fefd7f1e0c65d04e4a68c4671a2be1febb374ee9c",
+   "fetched_at_utc": "2026-11-03T16:15:22.482886+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CBA.AX?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "5373ab61d082eb2601acadf0e8fbfbc2a3f1a0d2fc38b64b949d425dff14350b",
+   "fetched_at_utc": "2026-11-03T16:15:22.675033+00:00"
+  }
+ ]
+}

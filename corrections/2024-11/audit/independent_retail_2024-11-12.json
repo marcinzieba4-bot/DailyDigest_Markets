@@ -1,0 +1,74 @@
+{
+  "date": "2024-11-12",
+  "reviewer": "independent-writer-middle",
+  "reviewed_at_utc": "2026-11-03T17:08:00.217719+00:00",
+  "scope": {
+    "retail_intro_read": true,
+    "items": 4,
+    "paragraphs_including_intro": 13,
+    "all_cited_headlines_read": true,
+    "distinct_cited_headlines": 12,
+    "company_platform_institutional_claims_reviewed": true,
+    "own_date_numerical_identity_horizon_checks": "TSLA350/+8.96%1s/+44.13%5s/+59.70%20s;MSTR340/+25.73%1s/+52.47%5s;BTC88701.48Nov11daily;GLD242.14/-2.35%1s/-4.23%5s;Treasury10Y4.30%Nov8allmatched",
+    "strictly_earlier_selection_notes_reviewed": true,
+    "selection_rechosen": false
+  },
+  "findings": [
+    {
+      "item": "Allitems",
+      "severity": "MINOR",
+      "quote": "up +8.96% / down -2.35%",
+      "problem": "Duplicateddirectionwordandsignedreturnmakesordinaryproseclumsy.",
+      "action": "Keptthecorrectdirectionandmagnitude,removedredundantsignsafterup/down."
+    },
+    {
+      "item": "Gold/GLD",
+      "severity": "MINOR",
+      "quote": "for a contrarian buyer",
+      "problem": "Thegold/dollarhedgeangleisacontinuationofearlierNov7insuranceunwind,despiteafreshNov11marketheadline. Ashortsidecarryoverisappropriate.",
+      "action": "Removedfourunnecessarywordsto159words,withinbrief-carryover150–160range;selectionandfactsunchanged."
+    }
+  ],
+  "chronology_comparison": {
+    "prior_notes_dates": [
+      "2024-11-05",
+      "2024-11-06",
+      "2024-11-07",
+      "2024-11-08",
+      "2024-11-11"
+    ],
+    "lead": "Nov12TSLAfullleadhasnewReutersNov11euphoric-optionsparticipationevidence(n3954),publishedafterNov11cutoff. Argumentchangesfrompoliticalaccess/common-equitytooptionexpiry,premiumandpayoffrisk;materialupdate,notprice-only.",
+    "sides": [
+      "MSTRchangesfromcapitalplantoactualNov11purchase(n1279);newcompanyaction",
+      "DXYZnewprivate-companyaccessnarrativewithNov11Barrons/24-7headlines(n3952,n4489)",
+      "GLDcontinuationkeptasbrief159wordside;freshNov11dollar/fallsource(n5190),notanewfulllead"
+    ]
+  },
+  "fatal_or_major_remaining": 0,
+  "draft_sha256": "7ed66b5a0217fa618cb247dd0af7b7bf3aae5c7e64e702a0548f656ff9dbec2e",
+  "retail_content_sha256": "35d42acb0f5e438d6ed60b859ff6eba34031e041ac424efc1b0dc5ccd7d93907",
+  "feed_sha256": "a6af462a6e0c61582a1e59244bbfe18c9c7c7e51a1ae86ddda094a609eda088a",
+  "card_sha256": "2070d84f61136d52c50a5ef2e2e4c0cdae8fe7d6f49bf6dfeeb556b1b86d3bef",
+  "review_limits": [
+    "Independent AI review of frozen headlines and market card, not human review",
+    "Original publication timing is established only for specifically checked high-risk items; RSS dates may be nominal"
+  ],
+  "word_counts": [
+    {
+      "title": "Tesla / TSLA — conviction acquires an expiry date",
+      "words": 704
+    },
+    {
+      "title": "MicroStrategy / MSTR — the acquisition plan becomes an acquisition",
+      "words": 164
+    },
+    {
+      "title": "Destiny Tech100 / DXYZ — buy a route to private-company excitement",
+      "words": 169
+    },
+    {
+      "title": "Gold / GLD — another dollar shock tests the hedge",
+      "words": 159
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "date": "2024-11-28",
+  "reviewer": "writer_early_independent_nonretail",
+  "completed_at_utc": "2026-11-03T17:11:20.864356+00:00",
+  "scope": "Read every nonretail paragraph and its own-date cited headline metadata; manually checked facts, companies, preview versus outcome, release timing, numerical direction and timeframe; checked all quoted market figures against own card and ran verifier. Retail keys excluded.",
+  "reviewed_nonretail_paragraph_count": 136,
+  "reviewed_nonretail_distinct_citations": 94,
+  "findings": [
+    {
+      "severity": "major",
+      "finding": "Chinese-state-media warning was not established by cited Reuters tariff-vow headline; narrowed to the supported fact.",
+      "resolved": true
+    },
+    {
+      "severity": "major",
+      "finding": "SXAP emissions-fine claim had unresolved alias auto_co2 and no exact-support own-feed headline; removed claim and alias.",
+      "resolved": true
+    },
+    {
+      "severity": "minor",
+      "finding": "Currency/index units clarified. Quoted card levels, signs, horizons and Treasury fields checked manually.",
+      "resolved": true
+    },
+    {
+      "severity": "timing_review",
+      "finding": "The November 27 PCE and GDP releases are eligible; no Thanksgiving US session or November 28 Polish GDP outcome is invented. All market prose uses completed November 27 sessions and the prior crypto UTC day.",
+      "resolved": true
+    }
+  ],
+  "actions": [
+    {
+      "path": "geo[2].parts[4]",
+      "action": "Replaced unsupported Chinese-state-media attribution with the tariff-intention fact established by own cited Reuters headline n0574."
+    },
+    {
+      "path": "sectors[11].parts[2]",
+      "action": "Removed unsupported emissions-fine claim and unresolved nonstandard citation marker auto_co2; retained concrete operating trigger."
+    },
+    {
+      "path": "geo[0].parts[1]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "geo[2].parts[5]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "geo[3].parts[1]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "geo[4].parts[1]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "geo[5].parts[0]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "geo[5].parts[1]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "sectors[0].parts[0]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "sectors[1].parts[0]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "sectors[2].parts[0]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "sectors[3].parts[0]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "sectors[4].parts[0]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "sectors[5].parts[0]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "sectors[6].parts[0]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "sectors[7].parts[0]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "sectors[8].parts[0]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "sectors[9].parts[0]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "sectors[10].parts[0]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "sectors[12].parts[0]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "catalysts[0].parts[1]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "catalysts[1].parts[1]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "catalysts[3].parts[1]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "catalysts[4].parts[1]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "crypto[0].parts[0]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "crypto[0].parts[1]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "crypto[0].parts[2]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "flows[0].parts[1]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    },
+    {
+      "path": "flows[0].parts[2]",
+      "action": "Made currency or index-point units explicit; market figures unchanged."
+    }
+  ],
+  "fatal_or_major_remaining": 0,
+  "limitations": [
+    "Headline-level evidence review; no independent reconstruction of full article bodies or original unrevised market vintages."
+  ],
+  "before_spec_sha256": "64204160c3937f073c46ac48caad97c8ca89d5cc478551fd10e99fc98e11e01b",
+  "nonretail_content_sha256": "d0bef4af3ee4f97e10797e51e371956b01e1f7734f4ca7249dd2ffecb059d077",
+  "feed_sha256": "e76ea1d495bd373d9a1beea466d95c56d6d79de422f7d39d8ec7bca17ea46423",
+  "card_sha256": "2e701d449f77a72db57a7ef4698a3648a4cde58c2b1bac464df4e02ae515c734",
+  "full_spec_sha256_at_review": "dfc22e6975283212d15bdff89d08b70d0d228c93034720b7598957d900517f45",
+  "additional_timing_check": {
+    "checked_at_utc": "2026-11-03T17:17:43.600152+00:00",
+    "item": "n4136 Guardian Reddit/UK audience article",
+    "confirmed_original_publication": "2024-11-28T00:01:00Z",
+    "own_nonretail_citation_or_ranking_claim_present": false,
+    "action": "No nonretail change required. Retail reviewer owns removal of the after-cutoff item from November28 retail."
+  }
+}

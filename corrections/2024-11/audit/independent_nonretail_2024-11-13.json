@@ -1,0 +1,55 @@
+{
+  "date": "2024-11-13",
+  "reviewer": "independent_nonretail_writer_late",
+  "scope": "All nonretail paragraphs compared with own-date cited headlines; numerical values/signs and actual session labels checked against the market card. Retail excluded and preserved.",
+  "findings": [
+    {
+      "severity": "major_fixed",
+      "location": "XLY EPS Upside Watch",
+      "detail": "The paragraph incorrectly called Home Depot pending although eligible Nov12 results were already incorporated elsewhere. Replaced with the actual cautious customer outlook and a conditional next-step test."
+    },
+    {
+      "severity": "major_fixed",
+      "location": "XLP Reported",
+      "detail": "Oct29 Woolworths company report was fifteen days old, outside the company-results window despite monthly feed classification. Replaced with eligible Nov6 Itochu food/FamilyMart peer result and explicit non-US context."
+    },
+    {
+      "severity": "support_fixed",
+      "location": "XLK/XLC EPS and XLK Breaking Convention",
+      "detail": "Removed uncited carryover named-company assertions; retained conditional operating tests rather than introducing unsupported facts."
+    },
+    {
+      "severity": "support_fixed",
+      "location": "HD Catalyst & Thesis",
+      "detail": "Removed an explicitly attributed CNBC caution not accompanied by that source in the paragraph; kept Reuters-supported completed result and conditional persistence analysis."
+    },
+    {
+      "severity": "timing_precaution",
+      "location": "XLC Reported",
+      "detail": "Kept the supported subscriber-growth result and removed a share-reaction assertion whose precise after-hours versus next-session scope was not independently resolved."
+    }
+  ],
+  "actions": [
+    "Applied narrow spec-only replacements; no retail changes.",
+    "Preserved the released/pending distinction for CPI, Nvidia and actual Home Depot results."
+  ],
+  "fatal_or_major_remaining": 0,
+  "nonretail_content_sha256": "1f5e37f4bf7d22a7bd43b9e34a554b44b2d8a416a6f89813775b93e526d63141",
+  "feed_sha256": "97b9a2d726081642087c12b31f812c0acb0a25757060cb1e343991d012a3d26f",
+  "card_sha256": "c8c359ca7c6df51e54acc544183574d06b75147f885536e5954451248d81ae83",
+  "full_spec_sha256_at_review": "d169de5da80463f572d3af4409ca3cf689d419c979fe413fb5dc75c76c8f9d0f",
+  "full_spec_sha256_before_fixes": "840413813ebcb9b3e85579be36ecdc047aa037f3fbd6a18f6af0a90e0ce7403e",
+  "distinct_nonretail_citations": 92,
+  "review_limits": [
+    "Frozen headline evidence and market card only; no independent publisher article-body or original-vintage verification.",
+    "No human-editor review claimed."
+  ],
+  "final_local_validation": {
+    "passed": true,
+    "failures": 0,
+    "warnings": 0,
+    "full_report_sources": 102,
+    "full_report_words": 10281
+  },
+  "completed_utc": "2026-11-03T17:21:58.633576+00:00"
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "6857.T",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/6857.T?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "ebbfde2a40ab1377034fd42e29ddeec84ca4155c22e1916d6f38bc87e90917e3",
+   "fetched_at_utc": "2026-11-03T16:15:21.138246+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/6857.T?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "223629039eb9ec0a1d23f3e1dd2c7b89341d05929747d2eec6e3702cfffcef03",
+   "fetched_at_utc": "2026-11-03T16:15:21.382992+00:00"
+  }
+ ]
+}

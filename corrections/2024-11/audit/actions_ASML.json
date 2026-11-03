@@ -1,0 +1,18 @@
+{
+ "ticker": "ASML",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ASML?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "4871a6ac787c8ae72a90297f93dd73ba873ab3472bb1c89c7b0d3d386d4a6fc9",
+   "fetched_at_utc": "2026-11-03T16:15:24.773859+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ASML?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "f70c95fb01cc97b66d0f29e1de278a0380a6f07eb41c5dc949d8c1b0ed2c7251",
+   "fetched_at_utc": "2026-11-03T16:15:24.942537+00:00"
+  }
+ ]
+}

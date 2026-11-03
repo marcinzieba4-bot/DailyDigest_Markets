@@ -1,0 +1,227 @@
+{
+  "date": "2024-11-18",
+  "reviewer": "retail_author",
+  "original_author": "evidence_pipeline",
+  "review_scope": [
+    "All nonretail prose in six geographic blocks",
+    "All thirteen sector blocks",
+    "Earnings pattern",
+    "All four underowned themes",
+    "Crypto",
+    "All five flows parts",
+    "All four anticipatory scenarios",
+    "All six catalysts"
+  ],
+  "method": "Read every nonretail paragraph alongside every cited own-date headline, inspected all quoted market-card instruments/treasury observations and actual session tags, checked release status versus midnight and allowed lookbacks; independently assessed unsupported inference, role, units, direction, flow versus price, forecast versus outcome. Retail excluded and preserved. No later-date sources used.",
+  "findings": [
+    {
+      "severity": "major",
+      "finding": "Vendor-close-ambiguous numeric FX levels/returns appeared in China, Japan, Australia and Poland; removed without changing admissible non-FX market evidence."
+    },
+    {
+      "severity": "major",
+      "finding": "Sunday-indexed Reuters China forecast-downgrade outcome n1091 had unconfirmed original release timing; omitted conservatively rather than resolve from later evidence."
+    },
+    {
+      "severity": "moderate",
+      "finding": "A stock-selection headline was insufficient support for a specific pending-earnings interpretation. Nvidia statements now cite explicit eligible Saxo upcoming-earnings preview n2084; Target narrowed to selection/next-update analysis."
+    },
+    {
+      "severity": "minor",
+      "finding": "Corrected Nasdaq/return and KWEB/currency spacing."
+    }
+  ],
+  "actions": [
+    {
+      "path": "geo[0].Rates & Curve",
+      "finding": "Spacing correction; return exactly matches card.",
+      "old": "the Nasdaq100 lost2.40%",
+      "new": "the Nasdaq 100 lost 2.40%"
+    },
+    {
+      "path": "geo[2].Macro Stance",
+      "finding": "Omit doubtful Sunday-indexed downgrade outcome whose original timing is unconfirmed; use eligible Nov8 policy baseline.",
+      "old": "Reuters reports that Goldman Sachs and Morgan Stanley have downgraded their China outlooks. [[n1091]] That warning sits alongside better consumer evidence rather than replacing it:",
+      "new": "Reuters describes a large local-debt package without direct stimulus. [[n0813]] That limitation sits alongside better consumer evidence rather than replacing it:"
+    },
+    {
+      "path": "geo[2].Markets & Flows",
+      "finding": "Remove forbidden vendor-close-ambiguous numeric FX level/return.",
+      "old": "USD/CNY at 7.2292 was up 1.49% over 20 sessions. ",
+      "new": ""
+    },
+    {
+      "path": "geo[2].Markets & Flows",
+      "finding": "Equity moves cannot establish a currency move after ambiguous numeric FX observation removed.",
+      "old": "Those prices show pressure on Chinese risk assets and the currency;",
+      "new": "Those prices show pressure on Chinese risk assets;"
+    },
+    {
+      "path": "geo[2].Markets & Flows",
+      "finding": "Spacing and currency precision; unchanged exact card values.",
+      "old": "KWEB$30.26, with twenty-session changes of−1.51% and−7.09%",
+      "new": "KWEB USD 30.26, with twenty-session changes of -1.51% and -7.09%"
+    },
+    {
+      "path": "geo[3].Activity & Currency",
+      "finding": "Remove forbidden vendor-close-ambiguous numeric FX level/return; preserve index figure.",
+      "old": "USD/JPY closed at 156.4680, up 4.24% over 20 sessions, while the Nikkei225 stood at 38,642.91 points, down 0.69% over the same horizon.",
+      "new": "The Nikkei 225 stood at 38,642.91 points, down 0.69% over 20 sessions."
+    },
+    {
+      "path": "geo[3].Activity & Currency",
+      "finding": "Keep transmission conditional after removing ambiguous FX measurement; weak-yen context already supported by n2917.",
+      "old": "The currency move has not translated into an uncomplicated equity advance.",
+      "new": "A weaker currency does not guarantee an equity advance."
+    },
+    {
+      "path": "geo[4].Demand & Financing",
+      "finding": "Remove forbidden vendor-close-ambiguous numeric FX level/return; preserve index figure.",
+      "old": "AUD/USD closed at 0.6455, down 3.65% over 20 sessions; the ASX200 was 8,285.20 points, almost unchanged over that horizon at +0.02%.",
+      "new": "The ASX 200 was 8,285.20 points, almost unchanged over 20 sessions at +0.02%."
+    },
+    {
+      "path": "geo[5].Markets",
+      "finding": "Remove forbidden vendor-close-ambiguous numeric FX levels/returns.",
+      "old": "USD/PLN closed at 4.1029, up 3.17% over 20 sessions, and EUR/PLN at 4.3210 was up 0.33%. ",
+      "new": ""
+    },
+    {
+      "path": "geo[5].Markets",
+      "finding": "Keep general currency-risk distinction, without relying on ambiguous relative FX returns.",
+      "old": "The currency split matters: dollar-based investors face a different return problem from those funding in euro or zloty.",
+      "new": "The funding currency matters: dollar-based investors face a different translation exposure from those funding in euro or zloty."
+    },
+    {
+      "finding": "Replace unsupported earnings-calendar inference from stock-selection title with explicit eligible pending-earnings preview, or narrow Target to selection itself.",
+      "old": "Yahoo Finance's week-ahead stock selection puts Nvidia and Target in focus, establishing the latter as an upcoming company test rather than a reported outcome. [[n0485]]",
+      "new": "Yahoo Finance's week-ahead stock selection puts Target in focus. [[n0485]] Assess its next operating update without assuming that a share-price recommendation supplies an earnings outcome."
+    },
+    {
+      "finding": "Replace unsupported earnings-calendar inference from stock-selection title with explicit eligible pending-earnings preview, or narrow Target to selection itself.",
+      "old": "The upcoming Nvidia result is a focal event in Yahoo Finance's week-ahead selection. [[n0485]]",
+      "new": "Saxo outlines options strategies for the upcoming Nvidia earnings, establishing a pending company event. [[n2084]]"
+    },
+    {
+      "finding": "Replace unsupported earnings-calendar inference from stock-selection title with explicit eligible pending-earnings preview, or narrow Target to selection itself.",
+      "old": "The next Nvidia result is prominent in Yahoo Finance's week-ahead stock selection. [[n0485]]",
+      "new": "Saxo examines options strategies ahead of Nvidia's upcoming earnings. [[n2084]]"
+    },
+    {
+      "finding": "Replace unsupported earnings-calendar inference from stock-selection title with explicit eligible pending-earnings preview, or narrow Target to selection itself.",
+      "old": "Yahoo Finance's week-ahead stock selection puts Nvidia at the center of the coming company tests, and Stocktwits reports retail focus on earnings alongside Blackwell supplier-allocation concerns. [[n0485]] [[n1877]]",
+      "new": "Saxo's options strategies for upcoming Nvidia earnings establish the pending event, while Stocktwits reports retail focus on earnings alongside Blackwell supplier-allocation concerns. [[n2084]] [[n1877]]"
+    }
+  ],
+  "retained_checks": [
+    "All other quoted prices, horizons, changes, treasury levels/spread/curve wording matched own card.",
+    "Japan Ueda speech remains a pending preview; no completed Nov18 outcome asserted.",
+    "Nov17 Ukraine authorization/attack/Polish scramble are eligible prior-day events.",
+    "Company earnings, forecasts, appointments and proposed tariffs remain distinct from future delivery or enacted rules.",
+    "No price change is presented as a measured investor flow."
+  ],
+  "verifier": {
+    "status": "PASS",
+    "failures": 0,
+    "warnings": 3,
+    "warnings_disposition": "All three upcoming-word warnings cite n2084, Saxo Nov15 explicit upcoming Nvidia earnings preview; no exact earnings date invented."
+  },
+  "render": "PASS",
+  "cited_nonretail_ids": [
+    "n0187",
+    "n0407",
+    "n0417",
+    "n0483",
+    "n0485",
+    "n0487",
+    "n0491",
+    "n0662",
+    "n0765",
+    "n0813",
+    "n0917",
+    "n0961",
+    "n1003",
+    "n1006",
+    "n1072",
+    "n1086",
+    "n1095",
+    "n1100",
+    "n1336",
+    "n1384",
+    "n1424",
+    "n1549",
+    "n1877",
+    "n1907",
+    "n1939",
+    "n1945",
+    "n1946",
+    "n1968",
+    "n1984",
+    "n1990",
+    "n1994",
+    "n1995",
+    "n2003",
+    "n2017",
+    "n2019",
+    "n2028",
+    "n2031",
+    "n2040",
+    "n2044",
+    "n2084",
+    "n2091",
+    "n2293",
+    "n2382",
+    "n2412",
+    "n2415",
+    "n2437",
+    "n2439",
+    "n2451",
+    "n2526",
+    "n2536",
+    "n2538",
+    "n2616",
+    "n2632",
+    "n2917",
+    "n2923",
+    "n2930",
+    "n3272",
+    "n3366",
+    "n3408",
+    "n3412",
+    "n3416",
+    "n3437",
+    "n3460",
+    "n3464",
+    "n3491",
+    "n3508",
+    "n3511",
+    "n3547",
+    "n3658",
+    "n3706",
+    "n3755",
+    "n3894",
+    "n3904",
+    "n3975",
+    "n4059",
+    "n4064",
+    "n4111",
+    "n4163",
+    "n4171",
+    "n4212",
+    "n4223",
+    "n4259",
+    "n4977",
+    "n4985",
+    "n4989",
+    "n5232",
+    "n5247",
+    "n5266",
+    "n5280"
+  ],
+  "fatal_or_major_remaining": 0,
+  "feed_sha256": "1916417249d3e29a97339a98613c98df795147b8c46ec29cb6e91cbe17ee97dc",
+  "card_sha256": "fe2af08e137b6b71913b86ef8ea58f396d9096bb59f53fd25668bb6c8defe497",
+  "nonretail_content_sha256": "4ade7f3f34f7758ed9e0125df784d5937e5c45b08d9d7862fd158b2cd6dbb208",
+  "full_spec_sha256_at_review": "8b85fba005d1b84f8e7289b2b871ed3d4cec8aa023312beba2b50bc0f4ebe770",
+  "reviewed_at_utc": "2026-11-03T17:09:18.653119+00:00"
+}

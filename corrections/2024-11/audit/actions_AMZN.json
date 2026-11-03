@@ -1,0 +1,18 @@
+{
+ "ticker": "AMZN",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "f0e64fa07d373b4a115179ea4304e13d5f5edcb3ca489b1fe91e6381481c5973",
+   "fetched_at_utc": "2026-11-03T16:15:24.787096+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "27fd174bb220121ebffa2f5f4052748932f3e8020ed4362a1002d86ff1af28af",
+   "fetched_at_utc": "2026-11-03T16:15:24.917340+00:00"
+  }
+ ]
+}

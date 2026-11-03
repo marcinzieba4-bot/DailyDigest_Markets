@@ -1,0 +1,60 @@
+{
+  "date": "2024-11-14",
+  "reviewer": "independent_nonretail_writer_late",
+  "scope": "All nonretail paragraphs read with their own cited headlines; market figures, signs, session labels and curve description checked against the card. Retail excluded and preserved.",
+  "findings": [
+    {
+      "severity": "major_fixed",
+      "location": "XLY EPS Upside Watch",
+      "detail": "Stale Home Depot preview wording contradicted already released Nov12 results. Replaced with the actual cautious customer outlook and conditional next-step analysis."
+    },
+    {
+      "severity": "major_fixed",
+      "location": "XLP Reported",
+      "detail": "Oct29 Woolworths company news was sixteen days old, beyond the results window despite monthly feed classification. Replaced with the eligible Itochu food/FamilyMart result as explicitly foreign peer context."
+    },
+    {
+      "severity": "support_fixed",
+      "location": "XLK/XLC EPS, XLK/XLI Breaking Convention",
+      "detail": "Removed uncited carryover named-company assertions, retaining conditional operating analysis."
+    },
+    {
+      "severity": "support_fixed",
+      "location": "RKLB and HD catalysts",
+      "detail": "Kept only the Payload-supported Neutron customer claim in RKLB, removing the separately unsupported Electron clause; removed a CNBC assertion from HD whose paragraph cited only Reuters."
+    },
+    {
+      "severity": "clarified",
+      "location": "US Playbook",
+      "detail": "Changed hypothetical softer inflation outcome to further disinflation, preserving the already released CPI status."
+    },
+    {
+      "severity": "checked",
+      "location": "All nonretail",
+      "detail": "Root timing advisory on The Block PEPE article n4061 checked: no PEPE or n4061 use exists in nonretail text. Retail is excluded from this review."
+    }
+  ],
+  "actions": [
+    "Narrow spec-only replacements; no retail text changes.",
+    "Confirmed Tencent/property tax changes are pre-cutoff outcomes; no same-day Orlen/KGHM results introduced."
+  ],
+  "fatal_or_major_remaining": 0,
+  "nonretail_content_sha256": "fc69de556485c81da0d4c80ba5a808c85961d616171fd828c1fff833ae80e1b5",
+  "feed_sha256": "81af6b50583cce201028c8dfc65d77c718feafe30d210f16910bf67409ab2e44",
+  "card_sha256": "e0301cbe6c57fcf9833ac2fead238f9ac9e75e6299db04f6a48e801815614d05",
+  "full_spec_sha256_at_review": "d556e1e6e936807ac948fec7d9fd9d7eb434d3fe46e3c94bb98a4e68d2a27c0f",
+  "full_spec_sha256_before_fixes": "2931afb55179aa7ffd42dee0865800263849717ca8fc579dacf00eccd9d011fb",
+  "distinct_nonretail_citations": 94,
+  "review_limits": [
+    "Frozen headline evidence and market card only; no independent publisher article-body or original-vintage verification.",
+    "No human-editor review claimed."
+  ],
+  "final_local_validation": {
+    "passed": true,
+    "failures": 0,
+    "warnings": 0,
+    "full_report_sources": 102,
+    "full_report_words": 10192
+  },
+  "completed_utc": "2026-11-03T17:21:58.725856+00:00"
+}

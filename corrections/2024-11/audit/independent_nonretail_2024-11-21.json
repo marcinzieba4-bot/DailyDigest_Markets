@@ -1,0 +1,66 @@
+{
+  "date": "2024-11-21",
+  "reviewer": "evidence_pipeline independent reviewer after own authoring completed",
+  "scope": "All nonretail keys: geo, sectors, earnings_pattern, underowned, crypto, flows, anticipatory, catalysts. Retail excluded and unchanged.",
+  "methods": [
+    "Read nonretail prose alongside each paragraph's exact own-date cited headlines.",
+    "Checked source membership/category windows and completed-versus-preview status, then examined high-risk release/event timing.",
+    "Matched numerical prices, returns, yield/spread units and session tags to frozen own-date card; spot-FX amendment enforced.",
+    "Checked issuer/business identity, source-topic fit and cross-section consistency; preserved retail exactly."
+  ],
+  "headline_only_limit": "No full publisher article body or original-vintage verification; structural source acquisition separately reviewed.",
+  "findings": [
+    {
+      "severity": "major",
+      "location": "underowned[3]",
+      "issue": "Disney parks-profit headline was used to motivate a digital-distribution/platform thesis.",
+      "action": "Reframed the item around existing parks assets and return on expansion; removed unsupported digital-platform role."
+    },
+    {
+      "severity": "major",
+      "location": "anticipatory[0]",
+      "issue": "Tesla autonomy-rule headline was followed by unrelated interest-rate/inflation scenario.",
+      "action": "Aligned all three parts with the actual pending self-driving policy process and its commercial risks."
+    },
+    {
+      "severity": "major",
+      "location": "anticipatory[2]",
+      "issue": "A stale Nov18 Nvidia-preview headline sat in an anticipatory item despite the result already being available at this cutoff.",
+      "action": "Replaced the stale preview scenario with the genuinely pending Huawei early2025 production plan; acknowledged known Nvidia result and after-bell reaction."
+    },
+    {
+      "severity": "major",
+      "location": "catalysts[5] Catalyst & Thesis",
+      "issue": "Ron Baron valuation-view headline did not support the stated self-driving policy catalyst.",
+      "action": "Replaced it with the own-date Reuters planned-rule headline; retained conditional policy-versus-delivery framing."
+    },
+    {
+      "severity": "minor",
+      "location": "catalysts[4] Catalyst & Thesis",
+      "issue": "Aggregator headline's raises wording could imply financing settlement was complete.",
+      "action": "Narrowed the description to reported financing terms and avoided a settlement assertion."
+    },
+    {
+      "severity": "minor",
+      "location": "Treasury/commodity prose",
+      "issue": "Joined words and commodity currency without physical unit reduced readability.",
+      "action": "Separated joined tokens and added per-barrel/per-pound units to existing quoted futures prices."
+    }
+  ],
+  "fatal_or_major_remaining": 0,
+  "retail_unchanged": true,
+  "feed_sha256": "40cdeeaf2cff7cfedd50c60d2e7affcbff2099ff8f48f3ef9fc80d887d520a70",
+  "card_sha256": "39d5042be4e0d82e9e94c0046a2caa9904e08a3c4dec59a9199cef7d0fd88039",
+  "before_nonretail_content_sha256": "c2602ce1389006e5107d8158868ec6e1cd952ac76bcdc90b79a173015421bc38",
+  "nonretail_content_sha256": "0ad6e1eb764e7fd3c38490b2cc66b122acc786568cd1dcf5f8b973469261941c",
+  "full_spec_sha256_at_review": "fd0ed1a72ae422f71dd5302c4c331040acf94bcc5e9eba792e1343f2f9ea3b44",
+  "validation": "Own-date verifier passed with zero failures and zero warnings after narrow edits.",
+  "numeric_quote_binding": {
+    "path": "audit/numeric_quote_binding_2024-11-21.json",
+    "sha256": "dae92a22d12f006c8a6f32b5b96988edaaaeddde9c9e5388042232b537dc030e",
+    "instrument_close_return_session_quotes_checked": 45,
+    "errors": 0
+  },
+  "treasury_validation": "Manually matched own-card 2Y/10Y prior-close levels, 10Y-2Y bps spread, quoted five/twenty-observation bps changes and curve labels.",
+  "spot_fx_exclusion": "No numeric spot-FX pair levels/returns in reviewed nonretail prose; DXY index retained."
+}

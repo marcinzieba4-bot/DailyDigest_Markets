@@ -1,0 +1,18 @@
+{
+ "ticker": "SCHW",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SCHW?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "99f69cae1121ee6e9ff46ffe3a43646786780d4d5e66bc212b90db4976e7db3f",
+   "fetched_at_utc": "2026-11-03T16:15:27.649048+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SCHW?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "3f0cf54b4e4c06844fe28c49ff40a2a269e82e4dd1a3cdbe00b05f48956ed8f8",
+   "fetched_at_utc": "2026-11-03T16:15:27.810202+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "PZU.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PZU.WA?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "87a9e33abc63f53cba4bd05cbeb1b84e096801c66713ef39370daf8254dcd7ca",
+   "fetched_at_utc": "2026-11-03T16:15:19.338493+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PZU.WA?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "f7aafbe7b1c7747597f2b11b60728b171b1cd706271d8e651518f8b76348e398",
+   "fetched_at_utc": "2026-11-03T16:15:19.533128+00:00"
+  }
+ ]
+}

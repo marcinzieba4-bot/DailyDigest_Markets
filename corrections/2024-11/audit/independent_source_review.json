@@ -1,0 +1,418 @@
+{
+  "reviewer": "independent-rules-style-agent",
+  "reviewed_at_utc": "2026-11-03T16:27:15.555873+00:00",
+  "status": "passed_structural_source_checks",
+  "review_scope": "Independent own-date request-plan coverage from query catalogue; physical cache hashes/schema/signatures; complete capped-window child inventory; final feed/raw/exclusion/provenance membership; timezone-aware cutoff/category windows. Every available frozen feed is checked. Separate release-guard source review and per-claim audit remain necessary.",
+  "assertions": 749617,
+  "errors": [],
+  "dates": [
+    {
+      "date": "2024-11-01",
+      "feed_sha256": "4f597ae92c2f9d01588b376753c7d54d7731bbe92a5f37c01f28358449c1e3f4",
+      "raw_sha256": "f85916b6e25e927ad1b9903d6f42e89bbc661066dcb314e2969695d20e8dd050",
+      "ready_receipt_sha256": "fe96435957fee46acef6bce6e2910eeaa2608bcf376e4b3408b481003f5a266f",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "0c9189fe871c638d985a77699cd04d98edc9afed9aeafc0eda6ccfb7509d0385",
+      "items": 4687,
+      "qualifying_query_requests": 638,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 591,
+      "refined_capped_contexts": 7,
+      "remaining_daily_cap_contexts": 4,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-04",
+      "feed_sha256": "3f6c621b56d411bf40204d2ab7d02c2eff4359eab17d2e58aff497a7ca1f83bc",
+      "raw_sha256": "c9e1133aa88b8e75fe043d00ddce5952af6faa2e3f1d9afa2c7cc996e4fbedd5",
+      "ready_receipt_sha256": "f163404f5a0b9f6c42f2c0b9b49ce09204fe749a977759ac8e23f484016360d9",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "65354e1f2358949c7021e66f10be6bbc471b7e42552f4f058250d506c2804c48",
+      "items": 4770,
+      "qualifying_query_requests": 920,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 889,
+      "refined_capped_contexts": 9,
+      "remaining_daily_cap_contexts": 4,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-05",
+      "feed_sha256": "8a7c93412d006e6eef47e61e92aae5349472a195c793bdce85481b0d16cc24f5",
+      "raw_sha256": "152213bd56bd2668abc0ca876f49a391fee92450080d33881751f9dd9526a152",
+      "ready_receipt_sha256": "790167154e7a3a4165ed6bb26fc60b52216580f966d228a240b2c97eb7671831",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "b67fef0969c199601f4d2ac27873c43994ac995cda9ae736eded8bdbd72a3251",
+      "items": 4931,
+      "qualifying_query_requests": 1215,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 889,
+      "refined_capped_contexts": 11,
+      "remaining_daily_cap_contexts": 4,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-06",
+      "feed_sha256": "d3ca4de29bdec1e2c7ec505a505f82e1fec04a7938daf6a1bd1dba9841a62bac",
+      "raw_sha256": "ae36e2c7ba1a4fa13bea1bfdf35f4316092596aaaa8233b7e78231cde53a265a",
+      "ready_receipt_sha256": "2f8ca3922e3b0d38c989d67a49d60a84fcc812583a94c0afaf0d336708b3ee65",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "3021159e191ed94d6f0d5754bc6c5f5305b42f3a2af7a3ffeea3b7402a87db2b",
+      "items": 5017,
+      "qualifying_query_requests": 1515,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 889,
+      "refined_capped_contexts": 13,
+      "remaining_daily_cap_contexts": 4,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-07",
+      "feed_sha256": "826e47cdeb5857664309920f879ed5f9821496c74b1c54349523e00e0c52109a",
+      "raw_sha256": "ffe62b4a82d1f593d3e9f92026d69ca966769363a0b749710f9c21fffe245e23",
+      "ready_receipt_sha256": "1fba4eef38edf524e9a4cb9820e0ddc68b69d37071fbfe86f5e1456eae8f019c",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "6781f19d53ec2df6715477ecb2de2802721e7258ee95fee3b5f094464324ad25",
+      "items": 5304,
+      "qualifying_query_requests": 1820,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 889,
+      "refined_capped_contexts": 17,
+      "remaining_daily_cap_contexts": 2,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-08",
+      "feed_sha256": "b9a5a6b583a1341f56bac5074c727a6ccb94dcf0de3ece0c79f95025ba0970ae",
+      "raw_sha256": "f87e9d6adb4d278818a971d91437cbd2a3ee9aece6d8ee0cf94e6754a57f8a2a",
+      "ready_receipt_sha256": "007b24a160b62afa6f192d652b5901d6fe9bf6e4314d642c7aeacc2a7ffaf044",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "4ed07e6756017ed5adf3fddf77a0ff4c0b7c50240d821854082b1eccc3a99b26",
+      "items": 5775,
+      "qualifying_query_requests": 1857,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 591,
+      "refined_capped_contexts": 19,
+      "remaining_daily_cap_contexts": 4,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-11",
+      "feed_sha256": "d31bbbb7368ff820c1a03d12c7954b0d3d05156e9a95e09e292a56830d2ed94b",
+      "raw_sha256": "d3681cada52eafb4507be2a5dfb7b2ea3b2595254e277d63c1c323db25a95111",
+      "ready_receipt_sha256": "ee7a89e82e426025591c527c3ffcb36fc3e6c579dcc8fb69d755b27f45400f10",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "78fb5b25c4a45d8e09b13bef80292113ef8bd49df5f07181bdd7431c50dfff09",
+      "items": 5628,
+      "qualifying_query_requests": 1933,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 889,
+      "refined_capped_contexts": 20,
+      "remaining_daily_cap_contexts": 2,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-12",
+      "feed_sha256": "a6af462a6e0c61582a1e59244bbfe18c9c7c7e51a1ae86ddda094a609eda088a",
+      "raw_sha256": "e15839f2cf121d343898149f799e77e4b6fb9cb116cee8474133648983e397f8",
+      "ready_receipt_sha256": "492079e19a495d6f5901556efa32daabd6440ca6ab82682edfeb2aa38d1b245a",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "2686e38b11bfa51c02d1e641b88e5129c96123e19eb791161a490c8988685692",
+      "items": 5666,
+      "qualifying_query_requests": 2028,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 889,
+      "refined_capped_contexts": 19,
+      "remaining_daily_cap_contexts": 2,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-13",
+      "feed_sha256": "97b9a2d726081642087c12b31f812c0acb0a25757060cb1e343991d012a3d26f",
+      "raw_sha256": "e66b609d4fe584e060f394d6ac441a956e7f54d12e0d41831285c5ab5dbd74fd",
+      "ready_receipt_sha256": "a3b0196a1aa300ecb4b4baf9a1da5515f3084e0a67812ee8980d92534181edb6",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "d15a3658727555766a280b64f9aa244774f6eacad041ec0df032ba9550ea92f6",
+      "items": 5828,
+      "qualifying_query_requests": 2133,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 889,
+      "refined_capped_contexts": 21,
+      "remaining_daily_cap_contexts": 2,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-14",
+      "feed_sha256": "81af6b50583cce201028c8dfc65d77c718feafe30d210f16910bf67409ab2e44",
+      "raw_sha256": "4d3091173d11d12d7196761bdee5257c55fd5ea2844d76e1d9be601cbf266990",
+      "ready_receipt_sha256": "46d48f0743a2a0305b0ed3400f84502266c37b4171b51b8e6d6c5c5d58d11eb3",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "5619fdb79f592c69c96ad6064e788cfc7b4c90988c757375655dcd6f85d7c7b7",
+      "items": 5804,
+      "qualifying_query_requests": 2253,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 889,
+      "refined_capped_contexts": 23,
+      "remaining_daily_cap_contexts": 4,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-15",
+      "feed_sha256": "4c47677381ccb0a625583fa04e35fa88118e2f502a701eb76c85b165ffccf2c7",
+      "raw_sha256": "34df72a5d37bec532a7d7c49c9b7837b386e64f5c0fc1e0ccfc1ad499596c3f9",
+      "ready_receipt_sha256": "66fcb6078a4e7b42276bbd0a41c67e4eb09424b0ff4c16f2290b6208c29d2cbf",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "95dd2d499b7659c0b6bdd0a6b5a29f0a06a2dfcaebe7e562448d5667714b0032",
+      "items": 5816,
+      "qualifying_query_requests": 2256,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 591,
+      "refined_capped_contexts": 18,
+      "remaining_daily_cap_contexts": 4,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-18",
+      "feed_sha256": "1916417249d3e29a97339a98613c98df795147b8c46ec29cb6e91cbe17ee97dc",
+      "raw_sha256": "dab1d3b0c1d219c5130cc5704052e8a8c92590a98bd2ba33b2c9ea6fd15e731e",
+      "ready_receipt_sha256": "0979386590c910c888f8bc4affaaff5f0d1cb0b6167f2e0a74424d6eacb1d959",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "7ec09e3d6cca670796a47e48b7c5658e6347d5c797a753f11d383d3065114fa8",
+      "items": 5282,
+      "qualifying_query_requests": 2289,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 889,
+      "refined_capped_contexts": 16,
+      "remaining_daily_cap_contexts": 3,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-19",
+      "feed_sha256": "3807930649e311a5aa96aa5930629b2a98bfe52778015a6a596e832fcf859ed7",
+      "raw_sha256": "965b5c7749f6fc229c4f1d60be1fb668e661719a65d9a1f5feda89340fa7760f",
+      "ready_receipt_sha256": "9fabc4e3b00db832d9853597424f45e0d822ff62f67ea8abfbf0bb6bbd91f8a2",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "b8d48e7d7fb77aaff11d0a59f5ca9aeb625000e12e371a7119187419688a3b75",
+      "items": 5293,
+      "qualifying_query_requests": 2346,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 889,
+      "refined_capped_contexts": 17,
+      "remaining_daily_cap_contexts": 3,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-20",
+      "feed_sha256": "cb7d00e9a5db33d7ef0826a774802f13dd9d71432ed5738f3e260012e0bcf94e",
+      "raw_sha256": "8d533ae0681592621f4b8ba3624a1a95532d9ea0695129fde68df76070924a64",
+      "ready_receipt_sha256": "6de4b35ee99415add5d13f1309009cb0b1a326a1ac6739ec0ac4a65d5b0cb4f3",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "f77f803d75d0830782dc4fef8de3f30638ee099192645391d660e6ac79d6450a",
+      "items": 5194,
+      "qualifying_query_requests": 2408,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 889,
+      "refined_capped_contexts": 15,
+      "remaining_daily_cap_contexts": 3,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-21",
+      "feed_sha256": "40cdeeaf2cff7cfedd50c60d2e7affcbff2099ff8f48f3ef9fc80d887d520a70",
+      "raw_sha256": "c3431f8c41c9d5b09f0af0127e4b3b119af4afb8959c00f2fdfdae07d120f8bc",
+      "ready_receipt_sha256": "c45aea4faff0c31184a66f99e10f30cf91ae42bba544ee447dc62c7aa656e44b",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "5fee222f4dc6a934e5bb5801053ed29fa9adb3d44bfd0720c5b63d81aad76e06",
+      "items": 5321,
+      "qualifying_query_requests": 2474,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 889,
+      "refined_capped_contexts": 13,
+      "remaining_daily_cap_contexts": 9,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-22",
+      "feed_sha256": "a8b4655f19b22d56828f6c42d6a0e067297955991d4cc2047136550568eeb6cb",
+      "raw_sha256": "6bce9c550bae683198b3f4d39973c87af075fb5a06cf82d68f7e7de9b9117f53",
+      "ready_receipt_sha256": "4eb690e36b1a5774b47a11cb5cb846ccdaaa257c4d5124c5ef5b8af644b4b6a5",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "f37ffcb946a4e6cc8b55065ab0656db57ca0bc14eb5918e687873c72ab6e052d",
+      "items": 5651,
+      "qualifying_query_requests": 2501,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 591,
+      "refined_capped_contexts": 15,
+      "remaining_daily_cap_contexts": 14,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-25",
+      "feed_sha256": "5d62503453019650f206c49cfe7b0a3b6afc6b8fc108a21712a2eff7397332e0",
+      "raw_sha256": "a6a0f2733dd05c163d5c13a275e5ac05620a4e0080b2273ec6462b100ebef8df",
+      "ready_receipt_sha256": "be606038eeceea67df8091be89d818183c2c78433d8ac8c1d55ea5a8b76c2ddc",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "5a325913057653286c35d55b7eed22b13790fb9eff473e14f5c122d25b9aaeb9",
+      "items": 5601,
+      "qualifying_query_requests": 2546,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 889,
+      "refined_capped_contexts": 17,
+      "remaining_daily_cap_contexts": 15,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-26",
+      "feed_sha256": "db14b8c919b0bd5fb97183c4351a8bd353a083b5c7a3858389f9b689c74cdc3f",
+      "raw_sha256": "2754368836061fb70e0b7ddefed22cd2c68bc473fa07013f50e371015bcd6bde",
+      "ready_receipt_sha256": "c500e4ac2687aa0696d4cceb9c3c975399e6591f4d1ba5002b080637743ffe7a",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "2f8dc1031d23eb0943d94e88b9f57c08ddf06f6b0a3ccb27e0aa8a6f82eddd0f",
+      "items": 5591,
+      "qualifying_query_requests": 2609,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 889,
+      "refined_capped_contexts": 18,
+      "remaining_daily_cap_contexts": 13,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-27",
+      "feed_sha256": "9ed1d80601d274491eab887cc5f95df9904dbfe49fc02c958c508ef2d0ce2b1b",
+      "raw_sha256": "93e64b01d89111c06d8ad226feab53a05957e946b1042f529bfda72fb36dd580",
+      "ready_receipt_sha256": "5d42cb6300b01bbd661d7cb7f2797a2b66b2964c93fbc48da6fc291ae5ceccf1",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "a0b83e71587d7c4c5232d87cf66ab38d090fedcfe57eb848aca1d1560cb5d617",
+      "items": 5652,
+      "qualifying_query_requests": 2668,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 889,
+      "refined_capped_contexts": 17,
+      "remaining_daily_cap_contexts": 10,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-28",
+      "feed_sha256": "e76ea1d495bd373d9a1beea466d95c56d6d79de422f7d39d8ec7bca17ea46423",
+      "raw_sha256": "1ca1c5e15b0d76d4a2b64c5dd5f098adfcf699355953d4002f24c67af8b57271",
+      "ready_receipt_sha256": "645cc009dc73b3df323c838d8eb6d3ab570dde33ea292c2385b4f258d8a34954",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "b466a0f089ee4d36882cfd63cfa80f60b1aa169d3a2f9acc66cd4ba2f0f73001",
+      "items": 5946,
+      "qualifying_query_requests": 2744,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 889,
+      "refined_capped_contexts": 18,
+      "remaining_daily_cap_contexts": 9,
+      "full_month_replay_pending": false
+    },
+    {
+      "date": "2024-11-29",
+      "feed_sha256": "db98016a1129ed9ec27563a8b1660a3111b0440ce2db53edad5d2e723ea4b876",
+      "raw_sha256": "823333a7a5a7ce8e6474adb8efd69ca5fa02f71f5338ec0ca2b8fcf03e349c8f",
+      "ready_receipt_sha256": "da8df176999f071c6e330368236fd60271d4e313b2d75b9f8ca8bdcf3e81b072",
+      "query_plan_sha256": "a246a518ecc11d51081ec0793788481c80f394a4e649e6ddd2a6ca1fe8d25fe1",
+      "provenance_sha256": "c4360ca4a0b17ecbb5e772b0dedb3c7d0f3004119585c0e0ce976fc581210b85",
+      "items": 6182,
+      "qualifying_query_requests": 2768,
+      "global_plan_requests": 6860,
+      "required_base_contexts": 591,
+      "refined_capped_contexts": 20,
+      "remaining_daily_cap_contexts": 11,
+      "full_month_replay_pending": false
+    }
+  ],
+  "pending_dates": [],
+  "tool_sha256": {
+    "tools/fetch_news.py": "1a379bb33da7ea3e6b467d29a22c6a086eae9508f85ec39057b3e1a94f3075d4",
+    "tools/expand_capped_news.py": "152e5ab0e52c546b836efdfbbfb371e6a2f00e4df315aff4ed8c217fbfbb0e0e",
+    "tools/topics.py": "eb40a4c210008086ae5e771451d8c7118b1c8786fde9fd8b82b72d6bd2e09370",
+    "tools/ready_feeds.py": "62326d79fd60b54371c5553932002f4e92609b40559bb8fe25c40c2adf16a4b5"
+  },
+  "limitations": [
+    "Google RSS dates are approximate, original publisher dates/bodies were not resolved.",
+    "Historical search/index selection and single-day caps prevent exhaustive coverage.",
+    "Regex release guards can miss or conservatively exclude headlines; every cited claim requires editorial source/timing review.",
+    "This receipt does not approve report narrative claims or certify an original unrevised historical information set.",
+    "Freeze receipts can precede full-month replay; final replay must be confirmed before publication."
+  ],
+  "announced_feed_preservation": [
+    {
+      "date": "2024-11-01",
+      "announced_sha256": "4f597ae92c2f9d01588b376753c7d54d7731bbe92a5f37c01f28358449c1e3f4",
+      "actual_sha256": "4f597ae92c2f9d01588b376753c7d54d7731bbe92a5f37c01f28358449c1e3f4",
+      "matched": true
+    },
+    {
+      "date": "2024-11-07",
+      "announced_sha256": "826e47cdeb5857664309920f879ed5f9821496c74b1c54349523e00e0c52109a",
+      "actual_sha256": "826e47cdeb5857664309920f879ed5f9821496c74b1c54349523e00e0c52109a",
+      "matched": true
+    },
+    {
+      "date": "2024-11-12",
+      "announced_sha256": "a6af462a6e0c61582a1e59244bbfe18c9c7c7e51a1ae86ddda094a609eda088a",
+      "actual_sha256": "a6af462a6e0c61582a1e59244bbfe18c9c7c7e51a1ae86ddda094a609eda088a",
+      "matched": true
+    },
+    {
+      "date": "2024-11-21",
+      "announced_sha256": "40cdeeaf2cff7cfedd50c60d2e7affcbff2099ff8f48f3ef9fc80d887d520a70",
+      "actual_sha256": "40cdeeaf2cff7cfedd50c60d2e7affcbff2099ff8f48f3ef9fc80d887d520a70",
+      "matched": true
+    }
+  ],
+  "source_freeze_sha256": "f155df84e5ef9d1c663d16c3ccf6472141f57a0d1711cf160e7eda53b0f8052d",
+  "incident_review": {
+    "path": "audit/source_pipeline_incident.json",
+    "sha256": "1a945d3188a2efa6b65d6df20f3c758b1548efcf3c67e6c444391f735050e475",
+    "assessment": "Corrected filter distinguishes ordinary cutoff_prefix from daily_refinement ancestry. Independent full raw merge/ID replay passed all21 dates after owner finalization. Four announced feeds match preserved original hashes; failed intermediate artifacts are not approved author inputs."
+  },
+  "release_guard_review": {
+    "findings": [
+      {
+        "issue": "A general modal in a second clause could exempt a completed event",
+        "action": "Owner corrected COMPLETED/EXPLICIT_PREVIEW precedence before final freeze.",
+        "status": "corrected"
+      },
+      {
+        "issue": "Conditional election previews can be conservatively excluded by the elected/won guard",
+        "action": "Coverage loss retained and disclosed; frozen author feeds are unchanged.",
+        "status": "documented_limit"
+      },
+      {
+        "issue": "Nov7n0869Reuters exports outcome has early RSSdate and omitsOctober so guard does not match",
+        "action": "Root and writers notified to omit fromNov7; independent claim audit must enforce.",
+        "status": "author_exclusion_required"
+      }
+    ],
+    "primary_timing_checks": [
+      {
+        "topic": "US payroll/CPI/PPI dates",
+        "url": "https://www.bls.gov/schedule/2024/11_sched_list.htm",
+        "assessment": "Nov1/Nov13/Nov14 releases at08:30Eastern; their results are unavailable at same-day midnightUTC."
+      },
+      {
+        "topic": "FOMC",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20241107a.htm",
+        "assessment": "Nov7 release14:00EST is afterNov7cutoff."
+      },
+      {
+        "topic": "RBA",
+        "url": "https://www.rba.gov.au/monetary-policy/int-rate-decisions/2024/",
+        "assessment": "Nov5decision released14:30Sydney, afterNov5cutoff."
+      },
+      {
+        "topic": "PCEholiday release",
+        "url": "https://bea.gov/news/2024/personal-income-and-outlays-october-2024",
+        "assessment": "Actual release10:00ESTNov27=15:00UTC; ownerlabel correct. Reviewed unusual holiday timing."
+      },
+      {
+        "topic": "US national election call",
+        "url": "https://www.ap.org/the-definitive-source/behind-the-news/calling-the-2024-presidential-race-state-by-state/",
+        "assessment": "APnationalcall05:34ESTNov6, afterNov6midnightUTC; no national election outcome then."
+      }
+    ]
+  },
+  "authoring_acceptance": "Source acquisition/immutability structurally accepted for authoring; this is not approval of any narrative claim. Enforce known exclusions and independent per-claim timing review."
+}

@@ -1,0 +1,209 @@
+{
+  "date": "2024-11-19",
+  "reviewer": "retail_author",
+  "original_author": "evidence_pipeline",
+  "review_scope": [
+    "All nonretail prose in six geographic blocks",
+    "All thirteen sector blocks",
+    "Earnings pattern",
+    "All four underowned themes",
+    "Crypto",
+    "All five flows parts",
+    "All four anticipatory scenarios",
+    "All six catalysts"
+  ],
+  "method": "Read every nonretail paragraph alongside every cited own-date headline, inspected quoted equity/index/crypto/fund/treasury instruments and actual session tags, checked release status versus midnight and allowed lookbacks; independently assessed roles, units, direction, forecast versus outcome, flows versus prices and policy scenarios. Re-read three author-cleaned Barrons substitutions after owner completion. Retail excluded and preserved. No later-date sources used.",
+  "findings": [
+    {
+      "severity": "major",
+      "finding": "Vendor-close-ambiguous numeric FX levels/returns appeared in China, Japan, Australia and Poland; removed without altering admissible non-FX market evidence."
+    },
+    {
+      "severity": "moderate",
+      "finding": "Target stock-selection headline did not explicitly establish scheduled earnings; narrowed to selection and next-update analysis."
+    },
+    {
+      "severity": "moderate",
+      "finding": "Australia inflation wording could confuse publication month with measurement period; removed the month qualifier and retained only the headline-supported annual 2.8%."
+    },
+    {
+      "severity": "minor",
+      "finding": "Corrected retail-sales, spread, ETF-return and Solana/currency spacing."
+    }
+  ],
+  "actions": [
+    {
+      "path": "geo[0].Macro Stance",
+      "finding": "Spacing only; exact cited 0.4% unchanged.",
+      "old": "retail sales rising0.4%",
+      "new": "retail sales rising 0.4%"
+    },
+    {
+      "path": "geo[0].Rates & Curve",
+      "finding": "Spacing only; exact curve spread unchanged.",
+      "old": "a +13bps",
+      "new": "a +13 bps"
+    },
+    {
+      "path": "geo[2].Markets & Flows",
+      "finding": "Remove forbidden vendor-close-ambiguous numeric FX level/return.",
+      "old": "USD/CNY closed at 7.2310, up 1.83% over 20 sessions. ",
+      "new": ""
+    },
+    {
+      "path": "geo[2].Markets & Flows",
+      "finding": "Spacing only; exact own-card ETF returns unchanged.",
+      "old": "respective ETF changes were−0.54% and−4.25%",
+      "new": "respective ETF changes were -0.54% and -4.25%"
+    },
+    {
+      "path": "geo[3].Activity & Currency",
+      "finding": "Remove forbidden vendor-close-ambiguous numeric FX level/returns.",
+      "old": "USD/JPY closed at 154.6640, down 1.15% in the session but still up 3.39% over 20 sessions. ",
+      "new": ""
+    },
+    {
+      "path": "geo[3].Activity & Currency",
+      "finding": "Remove directional conclusion reliant on ambiguous numeric FX observations; retain general mechanism.",
+      "old": "The currency is moving in both directions, and the equity market cannot be explained by a single export translation effect.",
+      "new": "The equity market cannot be explained by a single export translation effect."
+    },
+    {
+      "path": "geo[4].Demand & Financing",
+      "finding": "Remove forbidden vendor-close-ambiguous numeric FX level/return; preserve equity index exact value.",
+      "old": "AUD/USD closed at 0.6463, down 3.77% over 20 sessions; the ASX200 was 8,300.20 points, down 0.53% over that horizon.",
+      "new": "The ASX 200 was 8,300.20 points, down 0.53% over 20 sessions."
+    },
+    {
+      "path": "geo[4].Demand & Financing",
+      "finding": "Clarify period: an October publication does not establish October-period inflation; headline establishes annual 2.8% only.",
+      "old": "The Guardian's October inflation report put annual inflation at 2.8%",
+      "new": "The Guardian's report put annual inflation at 2.8%"
+    },
+    {
+      "path": "geo[5].Markets",
+      "finding": "Remove forbidden vendor-close-ambiguous numeric FX levels/returns.",
+      "old": "USD/PLN closed at 4.1027, up 3.61% over 20 sessions, while EUR/PLN was 4.3214, up 0.41%. ",
+      "new": ""
+    },
+    {
+      "path": "sectors[5].EPS Upside Watch",
+      "finding": "Narrow stock-selection title to what it establishes; do not infer a specific scheduled earnings event.",
+      "old": "Yahoo Finance's week-ahead selection identifies Target among the upcoming stock tests. [[n0469]]",
+      "new": "Yahoo Finance's week-ahead stock selection puts Target in focus. [[n0469]] Assess its next operating update without assuming that a share-price recommendation establishes an earnings outcome."
+    },
+    {
+      "path": "crypto.Market Context",
+      "finding": "Spacing and explicit currency only; exact card value unchanged.",
+      "old": "and Solana$239.79",
+      "new": "and Solana was USD 239.79"
+    }
+  ],
+  "author_cleanup_review": {
+    "owner": "evidence_pipeline",
+    "result": "Three redundant n3701 references replaced with exact-support Barrons n2045; BDO name removed in those passages because Barrons title does not establish it. Re-read and accepted. Retail unchanged."
+  },
+  "retained_checks": [
+    "All other quoted prices, horizons, changes, treasury levels/spread/curve wording match own card.",
+    "Nvidia earnings remain pending and are explicitly supported by Reuters investors-awaiting-earnings headline; Blackwell overheating remains reported concern.",
+    "Country Garden submitted plan is not completed creditor agreement; local property tax measures are actual actions and transaction effects remain prospective.",
+    "Ueda Nov18 speech stance, Spirit Nov18 bankruptcy, ServiceTitan Nov18 IPO filing and self-driving-regulation report are eligible by Nov19 cutoff; no actual battlefield-use outcome inferred from missile authorization.",
+    "Company earnings and guidance distinguished from forecasts; institutional positioning and money-market balances not rewritten as future mandatory buying."
+  ],
+  "verifier": {
+    "status": "PASS",
+    "failures": 0,
+    "warnings": 0
+  },
+  "render": "PASS",
+  "cited_nonretail_ids": [
+    "n0128",
+    "n0423",
+    "n0444",
+    "n0469",
+    "n0475",
+    "n0642",
+    "n0745",
+    "n0793",
+    "n0949",
+    "n0952",
+    "n0988",
+    "n1024",
+    "n1043",
+    "n1056",
+    "n1060",
+    "n1061",
+    "n1067",
+    "n1068",
+    "n1195",
+    "n1353",
+    "n1452",
+    "n1840",
+    "n1846",
+    "n1869",
+    "n1885",
+    "n1891",
+    "n1904",
+    "n1918",
+    "n1920",
+    "n1929",
+    "n1941",
+    "n1945",
+    "n2022",
+    "n2043",
+    "n2045",
+    "n2225",
+    "n2308",
+    "n2370",
+    "n2371",
+    "n2377",
+    "n2384",
+    "n2432",
+    "n2436",
+    "n2448",
+    "n2455",
+    "n2623",
+    "n2922",
+    "n2931",
+    "n3015",
+    "n3024",
+    "n3241",
+    "n3310",
+    "n3407",
+    "n3450",
+    "n3505",
+    "n3511",
+    "n3512",
+    "n3513",
+    "n3519",
+    "n3528",
+    "n3695",
+    "n3701",
+    "n3762",
+    "n3979",
+    "n4031",
+    "n4203",
+    "n4212",
+    "n4213",
+    "n4220",
+    "n4222",
+    "n4265",
+    "n4278",
+    "n4292",
+    "n4298",
+    "n4948",
+    "n5002",
+    "n5011",
+    "n5017",
+    "n5207",
+    "n5247",
+    "n5271",
+    "n5275"
+  ],
+  "fatal_or_major_remaining": 0,
+  "feed_sha256": "3807930649e311a5aa96aa5930629b2a98bfe52778015a6a596e832fcf859ed7",
+  "card_sha256": "5c6167ced9256f97fe64f1dc2f6284130910b4594e521a2a124042d6d82aa762",
+  "nonretail_content_sha256": "208bf8cb61b934fb7e43f7a3279977416d71ba0980029e1136cf1f3ea320e745",
+  "full_spec_sha256_at_review": "551163a106c214b5109c5191543c823a7a1befa375779deae8710deaffca7da0",
+  "reviewed_at_utc": "2026-11-03T17:13:27.328159+00:00"
+}

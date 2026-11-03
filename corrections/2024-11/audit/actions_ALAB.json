@@ -1,0 +1,18 @@
+{
+ "ticker": "ALAB",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALAB?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "fad3d5dad8297a014369d0f90f6503042b2739f8c4bf47c8ed2eea03970551b9",
+   "fetched_at_utc": "2026-11-03T16:15:25.471168+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALAB?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "377c979fa429aae2427688dbc7686956aa15fcef94ff3d5bb671df07dd0b1243",
+   "fetched_at_utc": "2026-11-03T16:15:25.635620+00:00"
+  }
+ ]
+}

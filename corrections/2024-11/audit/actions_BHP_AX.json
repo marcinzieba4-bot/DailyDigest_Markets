@@ -1,0 +1,18 @@
+{
+ "ticker": "BHP.AX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BHP.AX?period1=1725148800&period2=1733011200&interval=1d&events=div,splits",
+   "sha256": "84d9c9003351d4cbdd6e2fc0b90f0284241f52a69cf58cbecc74ecd42fb42a4b",
+   "fetched_at_utc": "2026-11-03T16:15:22.435937+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BHP.AX?period1=1733011200&period2=1793722517&interval=1d&events=div,splits",
+   "sha256": "7153aa78760edf1d3a8a74eafd5ecd43fcd15de14a48338bace7ffc057a3b121",
+   "fetched_at_utc": "2026-11-03T16:15:22.626293+00:00"
+  }
+ ]
+}
