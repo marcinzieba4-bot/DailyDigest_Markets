@@ -1,0 +1,1654 @@
+{
+  "status": "accepted_for_authoring_with_semantic_exclusions",
+  "passed": true,
+  "infrastructure_status": "accepted",
+  "semantic_status": "requires_own_claim_review",
+  "scope": "All22 August source acquisition/identity/immutability infrastructure only. Every physical raw RSS XML independently reparsed; catalogue jobs, capped daily refinements, own-cutoff merges, IDs and physical provenance independently reconstructed. Screening/semantic regex policy inspected and separately applied, not independently known article publication dates. No report narrative or retail-selection approval is conferred. Controlled revision v2 adds independently reparsed own-cutoff retail coverage; immutable base proofs and existing IDs/items are preserved.",
+  "checks": 102454,
+  "checks_by_scope": {
+    "raw_transport": 37010,
+    "xml_reparse": 29608,
+    "physical_inventory": 2,
+    "plan": 7,
+    "merge": 66,
+    "screening": 61,
+    "freeze": 135,
+    "age": 35473,
+    "staging": 91,
+    "conservative_preview_diagnostic": 1
+  },
+  "errors": [],
+  "dates": [
+    {
+      "date": "2024-08-01",
+      "raw_items": 1811,
+      "ready_items": 1804,
+      "excluded": 7,
+      "feed_sha256": "b34b2282a5a7b64924a0692756bc6445765036eadc17c3ae300a50547a9497d0",
+      "raw_sha256": "cedbdd376813976ec2f8bf14f557d631a6f0d42065b8b618af92d924d81279c5",
+      "provenance_sha256": "29053f6a28d75a5d1c7dfbdf089399a6ec183e773d243987cbdf2c8b772de88f",
+      "ready_receipt_sha256": "d4bc15f33786e5c1940576fd2a600998c9ef4d829874fac5d5175b9a061c04e3",
+      "qualifying_physical_requests": 649,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 0,
+      "later_parent_daily_contexts_excluded": 12
+    },
+    {
+      "date": "2024-08-02",
+      "raw_items": 1841,
+      "ready_items": 1838,
+      "excluded": 3,
+      "feed_sha256": "de115a8ad62df6c8f4e2444bc30eb787cf19d132e5ace18ae6dfd836a5417b70",
+      "raw_sha256": "9687b57f9092bd0fea133209d219a0e50c094db5a44df832a322c7295417cf46",
+      "provenance_sha256": "dd82e9d308d35b101910b88107d86783665ae95ca445e6fb7bdad316c78a8d17",
+      "ready_receipt_sha256": "dca2b0cae53d67d006f3292db9f94cda118df1229981c1270d654169548c4dba",
+      "qualifying_physical_requests": 969,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 321,
+      "later_parent_daily_contexts_excluded": 12
+    },
+    {
+      "date": "2024-08-05",
+      "raw_items": 1875,
+      "ready_items": 1870,
+      "excluded": 5,
+      "feed_sha256": "21c1162441960d3d8098caa7dcb1137e30931dd4fb91c8a3fa8ff55dd9d7853c",
+      "raw_sha256": "1410ddef072871bc6190d433678909694a9c12b5265b043369028ce171a457e2",
+      "provenance_sha256": "4ced1f046b908a498d9a07d3f600b58e30c8c365b6ea43d2d9e4a75adce90c48",
+      "ready_receipt_sha256": "bbc91aeeb2d3bcc948be4836b200dd57a7160a89142cc147431591e112e4da43",
+      "qualifying_physical_requests": 1287,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 642,
+      "later_parent_daily_contexts_excluded": 12
+    },
+    {
+      "date": "2024-08-06",
+      "raw_items": 1907,
+      "ready_items": 1903,
+      "excluded": 4,
+      "feed_sha256": "8a0a93f8b915a06638e61851d87e3e78ed5d96f83688b78961d1ee935afcbc52",
+      "raw_sha256": "ca79ab7b0a6a7879cdc62494942151c351b4a8082fe9b8f21ee1a2a4b9352977",
+      "provenance_sha256": "9b99a12709403f32440485272882db21fbe1c263732b3f38647586dbf3b720b0",
+      "ready_receipt_sha256": "1358e99330acc921ea26b2382e80127aa15d9c724e030da7cf95f127fbbedcf9",
+      "qualifying_physical_requests": 1607,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 963,
+      "later_parent_daily_contexts_excluded": 12
+    },
+    {
+      "date": "2024-08-07",
+      "raw_items": 1866,
+      "ready_items": 1865,
+      "excluded": 1,
+      "feed_sha256": "5b0b359af972987d9b3dfa132c47d9931197d9e27dafad15b9093a32e2e1ba5d",
+      "raw_sha256": "4982d5ba8ad13eca59e9f622749e3c1067c16027fe38ad035039e6805575697d",
+      "provenance_sha256": "eb9f6bcdaf62428c982718247a5586b5acee1485b9230cdb54310a943053b418",
+      "ready_receipt_sha256": "30c4f07144ca2c19d52d80e97ac3a9728b82085bf8e4e6002e48780405a3ab36",
+      "qualifying_physical_requests": 1927,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 1284,
+      "later_parent_daily_contexts_excluded": 12
+    },
+    {
+      "date": "2024-08-08",
+      "raw_items": 2043,
+      "ready_items": 2039,
+      "excluded": 4,
+      "feed_sha256": "e422c615cc685e6afe32e4446b4d6037399fb665d1a080c645952e05fd8d0056",
+      "raw_sha256": "e1177d1f279ea4c3f5af11412738bf4640d7447d6dbaed65fa76e67e4f17c754",
+      "provenance_sha256": "c47f0d3621f440483450c4f36548b43f7ad0a95cbcdb5f323df9cf2c47189cee",
+      "ready_receipt_sha256": "46bcb12def32efe67e517a8a2b73db526d497cb9776a230ac4c8172aff4ad53e",
+      "qualifying_physical_requests": 1938,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 0,
+      "later_parent_daily_contexts_excluded": 0
+    },
+    {
+      "date": "2024-08-09",
+      "raw_items": 1958,
+      "ready_items": 1942,
+      "excluded": 16,
+      "feed_sha256": "b5c4d94c60e1db93a785cdf4c65292f6533e9201bdb4f4333509a352a26e6f04",
+      "raw_sha256": "215dcff3ed322b8a89d943ddeb83f0c9ad5e9d56e9ac9defd839dd224fe84255",
+      "provenance_sha256": "9050fe8d25fd8a4905bbe3dcfdb35663dacb53b37bee02b20c6df4d5b2437c02",
+      "ready_receipt_sha256": "42ec9254e86fa1cc525b65f3843dd73a646816ac486c12a41726d079f36cfb8d",
+      "qualifying_physical_requests": 2062,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 321,
+      "later_parent_daily_contexts_excluded": 0
+    },
+    {
+      "date": "2024-08-12",
+      "raw_items": 1820,
+      "ready_items": 1799,
+      "excluded": 21,
+      "feed_sha256": "faed9f0ea5b06a93f0c3a03a598fcf9e4f010cae3177decbeecc5e77680384b2",
+      "raw_sha256": "b5071650413b49cf8a2679d4388a267e1efb84787c7dd982c0ca606e447ccf8d",
+      "provenance_sha256": "39a047fff15a0789f997471b491a20dae0f5bf296a619398fd0bc3180f5db6d7",
+      "ready_receipt_sha256": "37a1d3c79293cf1557aad5feee0a51039f9aa2ba5de2e23dec7b1cb73bc6c6a2",
+      "qualifying_physical_requests": 2178,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 642,
+      "later_parent_daily_contexts_excluded": 0
+    },
+    {
+      "date": "2024-08-13",
+      "raw_items": 1676,
+      "ready_items": 1651,
+      "excluded": 25,
+      "feed_sha256": "fad9612f4b84a0b7f7ab4158795f1e766434f5c49f1a0a604a311ad961d3a245",
+      "raw_sha256": "13e9bfca22e0abe8669c412d10c606877d2d099438b70cf2bc9d7db88b8abad4",
+      "provenance_sha256": "2dcef5fcf900b70bdf3f29c944bda9accb7e47d307f71d6e2121f8438e2937d3",
+      "ready_receipt_sha256": "2c17fa037cdc344474852d286ed0696735c312502bf49ec878dd03a87a04e1cd",
+      "qualifying_physical_requests": 2300,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 963,
+      "later_parent_daily_contexts_excluded": 0
+    },
+    {
+      "date": "2024-08-14",
+      "raw_items": 1615,
+      "ready_items": 1625,
+      "excluded": 19,
+      "feed_sha256": "43e7ad83ec1c92c95466385e9ce3569d25bdfca85d0eb28a79572ea0fbd6c11c",
+      "raw_sha256": "0f09e1b04c3bb10bb7ef024901e505c1546e367136ca09ad5522c6cdd666b590",
+      "provenance_sha256": "1d50ede74865cb39f28693248769080e18243c99ea483c0440b152bc0ef91e03",
+      "ready_receipt_sha256": "05272b278208bc0ad350477a974aefbcda768853ec1b9e52e2eb7b5b7cf7b41c",
+      "qualifying_physical_requests": 2422,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 1284,
+      "later_parent_daily_contexts_excluded": 0,
+      "base_feed_sha256": "12ccda9ac0863170961cd7e9230ea4fd7231894ba99c1171ddd7a184c92e1f81",
+      "supplement_items": 29
+    },
+    {
+      "date": "2024-08-15",
+      "raw_items": 1683,
+      "ready_items": 1719,
+      "excluded": 9,
+      "feed_sha256": "0d0d987535934b00e6c9cfa7ac0627989bfab0ea27903cb91286c1e3ad5cf159",
+      "raw_sha256": "28977e7a00d705c972a1945c5f22f348ea020974d66456cafc8777b788cf79c7",
+      "provenance_sha256": "14e56ac857156bc352eff62c30e0f20bc12793ab64e19a922a1a958a51ec2b4a",
+      "ready_receipt_sha256": "78bce971a5e0612a5b1ba6fcf9c4536d29ebaae9482163943618ddc62bd77ccb",
+      "qualifying_physical_requests": 2419,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 0,
+      "later_parent_daily_contexts_excluded": 0,
+      "base_feed_sha256": "4c338a7bea6f2582bf62922e2adeaa639014b51c6a984715a9278b365ea71586",
+      "supplement_items": 45
+    },
+    {
+      "date": "2024-08-16",
+      "raw_items": 1589,
+      "ready_items": 1636,
+      "excluded": 0,
+      "feed_sha256": "a02d718f878f32f1d618ced747582b0bc558e648e329660662bb1f9f5d439763",
+      "raw_sha256": "f73b0c214006698aa185645c5014f89ae80ed3ccaaf052c717bee475b0adb936",
+      "provenance_sha256": "abb539c8240941e283fb8d6a6b9facc6d26305c464043fdd96f4d6fb0dc4cf7c",
+      "ready_receipt_sha256": "af2392b13e5e5a59bb0c3b549d7e17edf69a0e1770879e2a668574aadfcdf4d9",
+      "qualifying_physical_requests": 2482,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 321,
+      "later_parent_daily_contexts_excluded": 0,
+      "base_feed_sha256": "f0e5e850d9a0e2503b3f692eba1239ec794a0341bcd54de431cecd4bdc8200bf",
+      "supplement_items": 47
+    },
+    {
+      "date": "2024-08-19",
+      "raw_items": 1538,
+      "ready_items": 1584,
+      "excluded": 2,
+      "feed_sha256": "3723fbb59f332799cb0c616900fdc1771b29a25a12f8d2f33303c098f9ae8e8e",
+      "raw_sha256": "b6502bf02252ecb907d18a4ff1217a92f12fe6a75dfea7806f61f1dd80881460",
+      "provenance_sha256": "e21b4e4e64664d6197ab6bcfd9e0f912c6ed068561c47c4f2627929cac2b40d9",
+      "ready_receipt_sha256": "9d74fcbb43dcdf1537552ea2353951713df1effef6039736fad1ce08c54e8c81",
+      "qualifying_physical_requests": 2545,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 642,
+      "later_parent_daily_contexts_excluded": 0,
+      "base_feed_sha256": "349ebe78f9e35bd7796a82561b0d58e807faab44003dd03c48f5800922f9ec1a",
+      "supplement_items": 48
+    },
+    {
+      "date": "2024-08-20",
+      "raw_items": 1538,
+      "ready_items": 1583,
+      "excluded": 3,
+      "feed_sha256": "ba9a126f23ae93048a27576c2ff0e194528b54530d8e54978a460703bc81b46f",
+      "raw_sha256": "07af9eb243de9b38d3c97fe46ed2e69ef0d57ab2b1a43c4dbfd5397c8d171df5",
+      "provenance_sha256": "fa80c8ce6e2e4943cc3ca795760f22877b5c3650eec20cf4f23331efac7c287c",
+      "ready_receipt_sha256": "de36b121a3d623c2c411332d3437cc0e7d7e485fd45f7210c8153db91246b7e9",
+      "qualifying_physical_requests": 2608,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 963,
+      "later_parent_daily_contexts_excluded": 0,
+      "base_feed_sha256": "7a76457cad5f1e888ee1a2ad2d723ad3d60177f2f1fbfb46991341f0d61498fd",
+      "supplement_items": 48
+    },
+    {
+      "date": "2024-08-21",
+      "raw_items": 1500,
+      "ready_items": 1496,
+      "excluded": 4,
+      "feed_sha256": "0f18dd2b1db356bebde2650d32cc5e092ca72fcb3152194988a5bdf7ce98db5a",
+      "raw_sha256": "4f1e4e1dc943b41e48a614819c9703b6a87ef269e26e33c52e6fdf1faca5259e",
+      "provenance_sha256": "243dfcf233593d3e5d60ff34d3aeb6744d60f1c8d83dd9b8d0b5900ef7378cd7",
+      "ready_receipt_sha256": "4946bd5e3d20176ed085d12d5818ad46e769737f267c49645d91ec15ee4acad9",
+      "qualifying_physical_requests": 2671,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 1284,
+      "later_parent_daily_contexts_excluded": 0
+    },
+    {
+      "date": "2024-08-22",
+      "raw_items": 1539,
+      "ready_items": 1535,
+      "excluded": 4,
+      "feed_sha256": "a139cd0f048566f7e1482ab5af37527c9b57f2371a8b082a1fecf1a53885ee16",
+      "raw_sha256": "1159c8d5b8c56e165c6f366d06201102e790161e2e6050d5ca8d39dd9412e6aa",
+      "provenance_sha256": "c5b3738e68eb2ea8ff744c587ac3846d271f7035406160c6ce58d690f26db79d",
+      "ready_receipt_sha256": "e1c1c0b732507859cabd80407fa9170deacb250e6ac13ab50d897c6b65d3ea7d",
+      "qualifying_physical_requests": 2671,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 0,
+      "later_parent_daily_contexts_excluded": 0
+    },
+    {
+      "date": "2024-08-23",
+      "raw_items": 1516,
+      "ready_items": 1512,
+      "excluded": 4,
+      "feed_sha256": "91f62f574a6b0c3eddee9da7f566ff4aa8553560f9e62c4a86a16b39d4f25635",
+      "raw_sha256": "27a18280c3e90210bb77907058cc7924b621b6be45f92f559cfdf77364133f8f",
+      "provenance_sha256": "e6ced7a598ee24c85cb1b1d8d880563699187b5e99805900bb2f181cdc1a00ce",
+      "ready_receipt_sha256": "a0d00d0d54d7144d2eda0d9a3df672f7ecd88f8f492e39c0f0326a0c7a0c1f53",
+      "qualifying_physical_requests": 2734,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 321,
+      "later_parent_daily_contexts_excluded": 0
+    },
+    {
+      "date": "2024-08-26",
+      "raw_items": 1375,
+      "ready_items": 1372,
+      "excluded": 3,
+      "feed_sha256": "59546b45ad00e6be3f3f771a5825e4c20008a7f7e86a80a747680626a580a56b",
+      "raw_sha256": "47fb81100c9d9e51ae07bace833799514d6be11b9d6ffaabcbaca81f6377540f",
+      "provenance_sha256": "761e866b7a8832e8d819804d2cb1117a4a67b7e3a4404ce83fa5ae42c7943db9",
+      "ready_receipt_sha256": "7e3d15b4f63125955e6dae00b69967e7e29adc82f8b1326247de9c6513fe5b9d",
+      "qualifying_physical_requests": 2797,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 642,
+      "later_parent_daily_contexts_excluded": 0
+    },
+    {
+      "date": "2024-08-27",
+      "raw_items": 1273,
+      "ready_items": 1268,
+      "excluded": 5,
+      "feed_sha256": "ad53dc16d4ec50b56956386e33a68e5295965b4403a93ea5f272102fec4fef9a",
+      "raw_sha256": "c7c94c7e1273089f610aa592bf15ac7413253b5308fb965f806336ab145227e1",
+      "provenance_sha256": "17500207a1f927aa484f0d5c8b21769ed0011278479502609fec25515ca1acf6",
+      "ready_receipt_sha256": "3ce347fbad6f005ac2e3a1ad7d907d40b30ee091e339386c73d6ecc245c75925",
+      "qualifying_physical_requests": 2860,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 963,
+      "later_parent_daily_contexts_excluded": 0
+    },
+    {
+      "date": "2024-08-28",
+      "raw_items": 1187,
+      "ready_items": 1181,
+      "excluded": 6,
+      "feed_sha256": "b4e3e081a437eb4b87f70af9bff398f7a1bc61f1cb7247dbfa9bd891e3a72510",
+      "raw_sha256": "4a6a509faea1f8b731331b7263902317855bbcc77622160f0ac66ef894a3aa3b",
+      "provenance_sha256": "430e0c6cdbbdc0aa7e5942bcde85902953ff5d1d97dfc8fbd2940e145109dc9b",
+      "ready_receipt_sha256": "297589cf3210a8d783a8c3f1f52d9233129e49cf7dbbdead76ae6d30009c7254",
+      "qualifying_physical_requests": 2923,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 1284,
+      "later_parent_daily_contexts_excluded": 0
+    },
+    {
+      "date": "2024-08-29",
+      "raw_items": 1232,
+      "ready_items": 1232,
+      "excluded": 0,
+      "feed_sha256": "7ae8364cfb323ca7fb1ca5c804b7c2ad2cbcba8ecef5a4e2eaab85d6eef6e564",
+      "raw_sha256": "eb865b89dc361d3cde6db0436dd23da717940e35df17de6942d34addc552e21a",
+      "provenance_sha256": "c37669bcfdc450f4b67a945daca9df10da1fa37a0f7be4ee61b3e237f13706be",
+      "ready_receipt_sha256": "164e631c233d427a9d7c14ee47e353e46847984eec60969adac5331fd31ceee7",
+      "qualifying_physical_requests": 2923,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 0,
+      "later_parent_daily_contexts_excluded": 0
+    },
+    {
+      "date": "2024-08-30",
+      "raw_items": 1236,
+      "ready_items": 1236,
+      "excluded": 0,
+      "feed_sha256": "774bb974aa654580336d81a3e92b841487c5cd0d1da06637762ba9425ba7b52c",
+      "raw_sha256": "3620265b0429883094f56d0dc958bcec105801d9573e252857b155a2c2ce2abe",
+      "provenance_sha256": "7df4cbb704866d881a573dc46b6650dd360dccf406537a297b56f37293dba19b",
+      "ready_receipt_sha256": "d7c142f4b3eb6da1b0c6824216274ce139e0a94784fa3d8d8f3d354a48e5574b",
+      "qualifying_physical_requests": 2986,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 0,
+      "later_parent_daily_contexts_excluded": 0
+    }
+  ],
+  "physical_requests": 7402,
+  "raw_xml_uncompressed_bytes": 52195098,
+  "independently_reparsed_items": 20899,
+  "failed_queries": 0,
+  "physical_source_inventory_sha256": "d1afe3251b9192a26d7165a265749880db91750113f3fa0e22ca41d1618bab61",
+  "remaining_daily_caps": 0,
+  "remaining_daily_cap_signatures": [],
+  "query_plan_sha256": "73b41f8ae29fdb35db296c6c04a5855fb0a320ecac5a36e961f570dda7f75857",
+  "source_freeze_sha256": "d6169beb21d9b15d2ba2e2a0afe8938315e00f0641b1340a7f6979d6533d8b0f",
+  "card_sha256": {
+    "2024-08-01": "fbf583fef4e058c1d7137e468dbcb46ee3a983523dce13ef11d188dadb6759b6",
+    "2024-08-02": "9b85008956544fde9f546689b48c56d1312ba99e8fc626c274d1680eaee6928f",
+    "2024-08-05": "566f1ba3f7e65798cf6b085b51d7718b9102db63f9f55d47c7a9f4f92961b881",
+    "2024-08-06": "ed19b3d0ffdaef7b305939a2cd963e6454fe827f2f686c5f14089265711555c0",
+    "2024-08-07": "557c12d785d9435898cdd244d8998d22daed168fa0d3fca1bb696c08471e0692",
+    "2024-08-08": "da4522e2b82c186ebb4eb24212d0442702dff9728d8531aa18793eb13b73bc03",
+    "2024-08-09": "8826230299438c31cfe79d5ce1ea75494fb5d6b9293b6321d99d2777f1378479",
+    "2024-08-12": "093415229d1feb1489450a322b12aba3aa0e92f2398baef90d5e2d82a45612e9",
+    "2024-08-13": "c58ac79b8ce3df2453918139a2740be14dfbe327eeed92b507bb3e40a14c7bee",
+    "2024-08-14": "9ea6aded0ed678e924a00d145ed1d56282db2581239478792d84a2ce6699a2dd",
+    "2024-08-15": "6d29e828eb9b4712278a61a65706b8a9b4a4b06d135e7a40a51da668bc2e224e",
+    "2024-08-16": "d70d07497fd58a12b84913d0278dd75d3815acdec224e37c8f178e4291b2b27a",
+    "2024-08-19": "bb337125cadeadd4fd58d6127e3e6d1ef85c43a4fc86fc3c081a6804e873c90d",
+    "2024-08-20": "589905ac730e8e5c66a32912490a525a4279c343024d68c91404919e4a165a74",
+    "2024-08-21": "417ee2bce09030e81b4f2989307c03b38074364c2ebb33113877b81515f29eea",
+    "2024-08-22": "5c4f1ea5c95a645f2b020559c5636b184fe6c71fad605f42fd316fe9ce40a610",
+    "2024-08-23": "b1484ff7ecbd1cfe4b011b615f5a624a718d6327d543f97669a1016b6412c363",
+    "2024-08-26": "c6e3ac44102ad829e2098bd2a569e884cda3c9dc7859f5a5f82ca6e28711f407",
+    "2024-08-27": "ae842c7b635fe23b57e8ffec4937c132a50036c81ac7f94b07aae5e0b5cf97bd",
+    "2024-08-28": "1cd7d0ee684b5a62ab6a843f685ecfd5099e4a6b1fb3a225a7e46b3e515f40fd",
+    "2024-08-29": "9ced14b0edd861a92f55da3f4fa663d2e162991ef49d4e8109b1ccbd89a1b4de",
+    "2024-08-30": "cddd264346fa61c8991e89ddbd8548c6be831a7f8e94e60725ef5cde644a3db0"
+  },
+  "tool_sha256": {
+    "fetch_news.py": "38415da38a32b700d59c819dfe388226d3e9e60aed6406c16ba763c85fb0fbec",
+    "expand_capped_news.py": "1b46bba22a6b0f4d9059fe9a5735ede5ec84696ab7ca00094b25e88d3841b08f",
+    "ready_feeds.py": "1d1b10b649d05c6f55b9bef24f91a47c0eca169c9111c30a3b591c60d6b7130e",
+    "topics.py": "8974c5ba579abf0630736defffff1e1b79d01b35117fa27cca8620a8931f4dc5",
+    "finalize_sources.py": "4b1902bee04d7071dd20c8fdc4e31685e49e962b1b5c5659765a983089fa2f33"
+  },
+  "contract_sha256": {
+    "AUTHORING.md": "210256d32e3673a33179a1544cb1ba9df9ddd49ef0c109f0c22526d087ff3101",
+    "BRIEF.md": "210256d32e3673a33179a1544cb1ba9df9ddd49ef0c109f0c22526d087ff3101"
+  },
+  "guard_regressions_tested": 18,
+  "conservative_preview_diagnostics": [
+    {
+      "title": "Powell expected to signal rate cuts at Jackson Hole",
+      "publication_date": "2024-08-22",
+      "report_date": "2024-08-23",
+      "observed": "conservatively_excluded_preview",
+      "disposition": "Permitted conservative omission; no premature actual is admitted. This does not certify exhaustive preview coverage."
+    }
+  ],
+  "declared_release_guards_extracted": 48,
+  "age_policy": "Headline semantics tighten maximum7day news/preview,14day company results,35day macro/policy windows. Independent replay uses inspected regex policy; semantic review by authors remains required.",
+  "limits": [
+    "Retrieval-time historical Google search results are not original contemporaneous RSS vintages. Raw retrieval responses are archived and hash-bound.",
+    "Daily100result caps and search indexing/selection prevent exhaustive coverage; residual daily caps explicitly listed.",
+    "RSS pubDate can precede actual release; publisher canonical dates and article bodies were not independently resolved.",
+    "Finite headline semantics/release regexes may miss relevant names or conservatively remove previews; exact cited claims require own-date editorial timing/meaning review.",
+    "This infrastructure acceptance does not approve report prose, concrete numeric claims, causal interpretation or historical trade selection."
+  ],
+  "reviewer_tool_sha256": "9efe0be241ac283c2a1df992f67543796f398082c90ba9416a23411cc71fbd2c",
+  "reviewed_at_utc": "2026-11-04T15:18:12.912293+00:00",
+  "known_semantic_exclusions": {
+    "by_date": {
+      "2024-08-01": {
+        "feed_sha256": "b34b2282a5a7b64924a0692756bc6445765036eadc17c3ae300a50547a9497d0",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-02": {
+        "feed_sha256": "de115a8ad62df6c8f4e2444bc30eb787cf19d132e5ace18ae6dfd836a5417b70",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-05": {
+        "feed_sha256": "21c1162441960d3d8098caa7dcb1137e30931dd4fb91c8a3fa8ff55dd9d7853c",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-06": {
+        "feed_sha256": "8a0a93f8b915a06638e61851d87e3e78ed5d96f83688b78961d1ee935afcbc52",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-07": {
+        "feed_sha256": "5b0b359af972987d9b3dfa132c47d9931197d9e27dafad15b9093a32e2e1ba5d",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-08": {
+        "feed_sha256": "e422c615cc685e6afe32e4446b4d6037399fb665d1a080c645952e05fd8d0056",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-09": {
+        "feed_sha256": "b5c4d94c60e1db93a785cdf4c65292f6533e9201bdb4f4333509a352a26e6f04",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-12": {
+        "feed_sha256": "faed9f0ea5b06a93f0c3a03a598fcf9e4f010cae3177decbeecc5e77680384b2",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-13": {
+        "feed_sha256": "fad9612f4b84a0b7f7ab4158795f1e766434f5c49f1a0a604a311ad961d3a245",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-14": {
+        "feed_sha256": "43e7ad83ec1c92c95466385e9ce3569d25bdfca85d0eb28a79572ea0fbd6c11c",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-15": {
+        "feed_sha256": "0d0d987535934b00e6c9cfa7ac0627989bfab0ea27903cb91286c1e3ad5cf159",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-16": {
+        "feed_sha256": "a02d718f878f32f1d618ced747582b0bc558e648e329660662bb1f9f5d439763",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-19": {
+        "feed_sha256": "3723fbb59f332799cb0c616900fdc1771b29a25a12f8d2f33303c098f9ae8e8e",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-20": {
+        "feed_sha256": "ba9a126f23ae93048a27576c2ff0e194528b54530d8e54978a460703bc81b46f",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-21": {
+        "feed_sha256": "0f18dd2b1db356bebde2650d32cc5e092ca72fcb3152194988a5bdf7ce98db5a",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-22": {
+        "feed_sha256": "a139cd0f048566f7e1482ab5af37527c9b57f2371a8b082a1fecf1a53885ee16",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-23": {
+        "feed_sha256": "91f62f574a6b0c3eddee9da7f566ff4aa8553560f9e62c4a86a16b39d4f25635",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-26": {
+        "feed_sha256": "59546b45ad00e6be3f3f771a5825e4c20008a7f7e86a80a747680626a580a56b",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-27": {
+        "feed_sha256": "ad53dc16d4ec50b56956386e33a68e5295965b4403a93ea5f272102fec4fef9a",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-28": {
+        "feed_sha256": "b4e3e081a437eb4b87f70af9bff398f7a1bc61f1cb7247dbfa9bd891e3a72510",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-29": {
+        "feed_sha256": "7ae8364cfb323ca7fb1ca5c804b7c2ad2cbcba8ecef5a4e2eaab85d6eef6e564",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      },
+      "2024-08-30": {
+        "feed_sha256": "774bb974aa654580336d81a3e92b841487c5cd0d1da06637762ba9425ba7b52c",
+        "exclusions": [],
+        "scope": "No additional known semantic IDs are predeclared. Each concrete cited claim still requires own-date author and independent editorial review; infrastructure acceptance is not prose approval."
+      }
+    }
+  },
+  "known_timing_exclusions": {
+    "by_date": {
+      "2024-08-01": {
+        "feed_sha256": "b34b2282a5a7b64924a0692756bc6445765036eadc17c3ae300a50547a9497d0",
+        "exclusions": [
+          {
+            "id": "n0098",
+            "published_at": "2024-07-31T07:00:00+00:00",
+            "src": "ACOSS",
+            "title": "RBA must cut rates – not raise them - ACOSS",
+            "guard": "RBA August decision (6 Aug 04:30 UTC)"
+          },
+          {
+            "id": "n0099",
+            "published_at": "2024-07-31T07:00:00+00:00",
+            "src": "AFR",
+            "title": "RBA: Interest rate rise off the table as inflation not so bad - AFR",
+            "guard": "RBA August decision (6 Aug 04:30 UTC)"
+          },
+          {
+            "id": "n0101",
+            "published_at": "2024-07-31T07:00:00+00:00",
+            "src": "Property Update",
+            "title": "Rates to remain on hold as CPI provides the RBA with a temporary leave pass - Property Update",
+            "guard": "RBA August decision (6 Aug 04:30 UTC)"
+          },
+          {
+            "id": "n0756",
+            "published_at": "2024-07-31T07:00:00+00:00",
+            "src": "InvestorPlace",
+            "title": "Why You Should Load Up on Apple Stock Before It Reports Earnings on August 1 - InvestorPlace",
+            "guard": "Apple Amazon Intel quarterly outcome guard"
+          },
+          {
+            "id": "n0792",
+            "published_at": "2024-07-25T07:00:00+00:00",
+            "src": "Reuters",
+            "title": "First Bank of England rate cut since 2020 hangs on knife edge - Reuters",
+            "guard": "Bank of England August decision (1 Aug 11:00 UTC)"
+          },
+          {
+            "id": "n0852",
+            "published_at": "2024-07-31T07:00:00+00:00",
+            "src": "Reuters",
+            "title": "Bank of England close to cutting rates from 16-year high - Reuters",
+            "guard": "Bank of England August decision (1 Aug 11:00 UTC)"
+          },
+          {
+            "id": "n1773",
+            "published_at": "2024-07-28T07:00:00+00:00",
+            "src": "The Guardian",
+            "title": "Bank of England set to rain on hopes of interest rate cut after economic bounce - The Guardian",
+            "guard": "Bank of England August decision (1 Aug 11:00 UTC)"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-02": {
+        "feed_sha256": "de115a8ad62df6c8f4e2444bc30eb787cf19d132e5ace18ae6dfd836a5417b70",
+        "exclusions": [
+          {
+            "id": "n0078",
+            "published_at": "2024-07-31T07:00:00+00:00",
+            "src": "ACOSS",
+            "title": "RBA must cut rates – not raise them - ACOSS",
+            "guard": "RBA August decision (6 Aug 04:30 UTC)"
+          },
+          {
+            "id": "n0079",
+            "published_at": "2024-07-31T07:00:00+00:00",
+            "src": "AFR",
+            "title": "RBA: Interest rate rise off the table as inflation not so bad - AFR",
+            "guard": "RBA August decision (6 Aug 04:30 UTC)"
+          },
+          {
+            "id": "n0081",
+            "published_at": "2024-07-31T07:00:00+00:00",
+            "src": "Property Update",
+            "title": "Rates to remain on hold as CPI provides the RBA with a temporary leave pass - Property Update",
+            "guard": "RBA August decision (6 Aug 04:30 UTC)"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-05": {
+        "feed_sha256": "21c1162441960d3d8098caa7dcb1137e30931dd4fb91c8a3fa8ff55dd9d7853c",
+        "exclusions": [
+          {
+            "id": "n0064",
+            "published_at": "2024-07-31T07:00:00+00:00",
+            "src": "ACOSS",
+            "title": "RBA must cut rates – not raise them - ACOSS",
+            "guard": "RBA August decision (6 Aug 04:30 UTC)"
+          },
+          {
+            "id": "n0065",
+            "published_at": "2024-07-31T07:00:00+00:00",
+            "src": "AFR",
+            "title": "RBA: Interest rate rise off the table as inflation not so bad - AFR",
+            "guard": "RBA August decision (6 Aug 04:30 UTC)"
+          },
+          {
+            "id": "n0067",
+            "published_at": "2024-07-31T07:00:00+00:00",
+            "src": "Property Update",
+            "title": "Rates to remain on hold as CPI provides the RBA with a temporary leave pass - Property Update",
+            "guard": "RBA August decision (6 Aug 04:30 UTC)"
+          },
+          {
+            "id": "n0085",
+            "published_at": "2024-08-02T07:00:00+00:00",
+            "src": "The Australian",
+            "title": "When RBA and government went to war over policy - The Australian",
+            "guard": "RBA August decision (6 Aug 04:30 UTC)"
+          },
+          {
+            "id": "n0221",
+            "published_at": "2024-08-04T07:00:00+00:00",
+            "src": "CNBC",
+            "title": "Japan's Nikkei logs worst day since 1987 Black Monday crash - CNBC",
+            "guard": "Nikkei 5 August crash magnitude"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-06": {
+        "feed_sha256": "8a0a93f8b915a06638e61851d87e3e78ed5d96f83688b78961d1ee935afcbc52",
+        "exclusions": [
+          {
+            "id": "n0049",
+            "published_at": "2024-07-31T07:00:00+00:00",
+            "src": "ACOSS",
+            "title": "RBA must cut rates – not raise them - ACOSS",
+            "guard": "RBA August decision (6 Aug 04:30 UTC)"
+          },
+          {
+            "id": "n0050",
+            "published_at": "2024-07-31T07:00:00+00:00",
+            "src": "AFR",
+            "title": "RBA: Interest rate rise off the table as inflation not so bad - AFR",
+            "guard": "RBA August decision (6 Aug 04:30 UTC)"
+          },
+          {
+            "id": "n0052",
+            "published_at": "2024-07-31T07:00:00+00:00",
+            "src": "Property Update",
+            "title": "Rates to remain on hold as CPI provides the RBA with a temporary leave pass - Property Update",
+            "guard": "RBA August decision (6 Aug 04:30 UTC)"
+          },
+          {
+            "id": "n0070",
+            "published_at": "2024-08-02T07:00:00+00:00",
+            "src": "The Australian",
+            "title": "When RBA and government went to war over policy - The Australian",
+            "guard": "RBA August decision (6 Aug 04:30 UTC)"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-07": {
+        "feed_sha256": "5b0b359af972987d9b3dfa132c47d9931197d9e27dafad15b9093a32e2e1ba5d",
+        "exclusions": [
+          {
+            "id": "n0228",
+            "published_at": "2024-08-06T07:00:00+00:00",
+            "src": "Reuters",
+            "title": "China's exports seen expanded in July lifted by global trade upturn: Reuters poll - Reuters",
+            "guard": "China July trade (7 Aug UTC day)"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-08": {
+        "feed_sha256": "e422c615cc685e6afe32e4446b4d6037399fb665d1a080c645952e05fd8d0056",
+        "exclusions": [
+          {
+            "id": "n0849",
+            "published_at": "2024-08-06T07:00:00+00:00",
+            "src": "EnterpriseAM",
+            "title": "Shipping and maritime updates from the UAE - EnterpriseAM",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1756",
+            "published_at": "2024-08-07T07:00:00+00:00",
+            "src": "FinanceBuzz",
+            "title": "Back-to-School Shopping [2026]: Is Inflation Affecting Spending? - FinanceBuzz",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1957",
+            "published_at": "2024-08-07T07:00:00+00:00",
+            "src": "Pew Research Center",
+            "title": "Eggs, gasoline and car insurance: Where inflation has hit Americans hardest - Pew Research Center",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1960",
+            "published_at": "2024-08-07T07:00:00+00:00",
+            "src": "Cato Institute",
+            "title": "Poll: 63% of Americans Want to Increase Trade with Other Nations, 75% Worry Tariffs Are Raising Consumer Prices - Cato Institute",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-09": {
+        "feed_sha256": "b5c4d94c60e1db93a785cdf4c65292f6533e9201bdb4f4333509a352a26e6f04",
+        "exclusions": [
+          {
+            "id": "n0121",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "LBB - Little Black Book",
+            "title": "10 Years, 10 Jobs and 10 Lessons with Special Australia — LBB - LBB - Little Black Book",
+            "guard": "Australia July jobs (15 Aug 01:30 UTC)"
+          },
+          {
+            "id": "n0127",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "ABC News & Headlines – Australian Broadcasting Corporation",
+            "title": "This 'closet' sex worker was blackmailed and extorted. Now she's stopping others from using her secret against her - ABC News & Headlines – Australian Broadcasting Corporation",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0328",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Reuters",
+            "title": "China's consumer prices boosted by weather disruptions; domestic demand still soft - Reuters",
+            "guard": "China July CPI/PPI (9 Aug 01:30 UTC)"
+          },
+          {
+            "id": "n0329",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Bloomberg",
+            "title": "China’s Consumer Inflation Picks Up But Demand Concerns Persist - Bloomberg",
+            "guard": "China July CPI/PPI (9 Aug 01:30 UTC)"
+          },
+          {
+            "id": "n0332",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "gCaptain",
+            "title": "Euronav Flags U.S. Election, China Economy as Risks to Shipping Momentum - gCaptain",
+            "guard": "China July CPI/PPI (9 Aug 01:30 UTC)"
+          },
+          {
+            "id": "n0725",
+            "published_at": "2024-08-06T07:00:00+00:00",
+            "src": "EnterpriseAM",
+            "title": "Shipping and maritime updates from the UAE - EnterpriseAM",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0812",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "SiliconValley.com",
+            "title": "Costco card entry scanners popping up at California warehouses - SiliconValley.com",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1045",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Reuters",
+            "title": "Euronav flags US politics, China economy as risks to shipping momentum - Reuters",
+            "guard": "China July CPI/PPI (9 Aug 01:30 UTC)"
+          },
+          {
+            "id": "n1046",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "VOA - Voice of America English News",
+            "title": "Houthis undeterred despite US action to protect Red Sea shipping - VOA - Voice of America English News",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1055",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Business Insider",
+            "title": "The US Navy says it can't stop the Houthi attacks on shipping with force alone - Business Insider",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1462",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Business Insider",
+            "title": "Shopping for Same Groceries at Trader Joe's and Walmart, Clear Winner - Business Insider",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1633",
+            "published_at": "2024-08-07T07:00:00+00:00",
+            "src": "FinanceBuzz",
+            "title": "Back-to-School Shopping [2026]: Is Inflation Affecting Spending? - FinanceBuzz",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1660",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Fortune",
+            "title": "Amazon eliminates a crucial fee for sellers as the busy holiday shopping season approaches - Fortune",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1679",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Modern Retail",
+            "title": "Poppi outspent Gatorade & Dr. Pepper on advertising - Modern Retail",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1842",
+            "published_at": "2024-08-07T07:00:00+00:00",
+            "src": "Pew Research Center",
+            "title": "Eggs, gasoline and car insurance: Where inflation has hit Americans hardest - Pew Research Center",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1845",
+            "published_at": "2024-08-07T07:00:00+00:00",
+            "src": "Cato Institute",
+            "title": "Poll: 63% of Americans Want to Increase Trade with Other Nations, 75% Worry Tariffs Are Raising Consumer Prices - Cato Institute",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-12": {
+        "feed_sha256": "faed9f0ea5b06a93f0c3a03a598fcf9e4f010cae3177decbeecc5e77680384b2",
+        "exclusions": [
+          {
+            "id": "n0101",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "LBB - Little Black Book",
+            "title": "10 Years, 10 Jobs and 10 Lessons with Special Australia — LBB - LBB - Little Black Book",
+            "guard": "Australia July jobs (15 Aug 01:30 UTC)"
+          },
+          {
+            "id": "n0107",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "ABC News & Headlines – Australian Broadcasting Corporation",
+            "title": "This 'closet' sex worker was blackmailed and extorted. Now she's stopping others from using her secret against her - ABC News & Headlines – Australian Broadcasting Corporation",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0289",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "gCaptain",
+            "title": "Euronav Flags U.S. Election, China Economy as Risks to Shipping Momentum - gCaptain",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0305",
+            "published_at": "2024-08-09T07:00:00+00:00",
+            "src": "The Edge Malaysia",
+            "title": "Malaysia's industrial output rises faster than expected in June, official data show - The Edge Malaysia",
+            "guard": "US July industrial output (15 Aug 13:15 UTC)"
+          },
+          {
+            "id": "n0317",
+            "published_at": "2024-08-11T07:00:00+00:00",
+            "src": "Bloomberg.com",
+            "title": "Small US Inflation Pickup Won’t Derail a Fed Rate Cut in September - Bloomberg.com",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0383",
+            "published_at": "2024-08-11T00:41:38+00:00",
+            "src": "Revolut",
+            "title": "Convert 0.62 Bitcoin to PHP | Bitcoin Price in Philippine Pesos - Revolut",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0588",
+            "published_at": "2024-08-06T07:00:00+00:00",
+            "src": "EnterpriseAM",
+            "title": "Shipping and maritime updates from the UAE - EnterpriseAM",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0675",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "SiliconValley.com",
+            "title": "Costco card entry scanners popping up at California warehouses - SiliconValley.com",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0861",
+            "published_at": "2024-08-09T07:00:00+00:00",
+            "src": "CEPR",
+            "title": "Demand versus supply: Drivers of the post-pandemic inflation and interest rates - CEPR",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0912",
+            "published_at": "2024-08-09T07:00:00+00:00",
+            "src": "South China Morning Post",
+            "title": "‘Double happiness’ at C’estbon bottler with IPO nod, Olympic medals - South China Morning Post",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0949",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Reuters",
+            "title": "Euronav flags US politics, China economy as risks to shipping momentum - Reuters",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0950",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "VOA - Voice of America English News",
+            "title": "Houthis undeterred despite US action to protect Red Sea shipping - VOA - Voice of America English News",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0959",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Business Insider",
+            "title": "The US Navy says it can't stop the Houthi attacks on shipping with force alone - Business Insider",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1351",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Business Insider",
+            "title": "Shopping for Same Groceries at Trader Joe's and Walmart, Clear Winner - Business Insider",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1481",
+            "published_at": "2024-08-07T07:00:00+00:00",
+            "src": "FinanceBuzz",
+            "title": "Back-to-School Shopping [2026]: Is Inflation Affecting Spending? - FinanceBuzz",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1508",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Fortune",
+            "title": "Amazon eliminates a crucial fee for sellers as the busy holiday shopping season approaches - Fortune",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1527",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Modern Retail",
+            "title": "Poppi outspent Gatorade & Dr. Pepper on advertising - Modern Retail",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1562",
+            "published_at": "2024-08-09T13:18:22+00:00",
+            "src": "Appinventiv",
+            "title": "Navigating the Role of AI in Energy Sector - Appinventiv",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1702",
+            "published_at": "2024-08-07T07:00:00+00:00",
+            "src": "Pew Research Center",
+            "title": "Eggs, gasoline and car insurance: Where inflation has hit Americans hardest - Pew Research Center",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1705",
+            "published_at": "2024-08-07T07:00:00+00:00",
+            "src": "Cato Institute",
+            "title": "Poll: 63% of Americans Want to Increase Trade with Other Nations, 75% Worry Tariffs Are Raising Consumer Prices - Cato Institute",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1819",
+            "published_at": "2024-08-10T07:00:00+00:00",
+            "src": "TradingView",
+            "title": "US Market Real Value Adjusted for CPI and Dollar Index — Indicator by fa-lala-lala-la-la-la-la - TradingView",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-13": {
+        "feed_sha256": "fad9612f4b84a0b7f7ab4158795f1e766434f5c49f1a0a604a311ad961d3a245",
+        "exclusions": [
+          {
+            "id": "n0082",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "LBB - Little Black Book",
+            "title": "10 Years, 10 Jobs and 10 Lessons with Special Australia — LBB - LBB - Little Black Book",
+            "guard": "Australia July jobs (15 Aug 01:30 UTC)"
+          },
+          {
+            "id": "n0088",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "ABC News & Headlines – Australian Broadcasting Corporation",
+            "title": "This 'closet' sex worker was blackmailed and extorted. Now she's stopping others from using her secret against her - ABC News & Headlines – Australian Broadcasting Corporation",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0256",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "gCaptain",
+            "title": "Euronav Flags U.S. Election, China Economy as Risks to Shipping Momentum - gCaptain",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0272",
+            "published_at": "2024-08-09T07:00:00+00:00",
+            "src": "The Edge Malaysia",
+            "title": "Malaysia's industrial output rises faster than expected in June, official data show - The Edge Malaysia",
+            "guard": "US July industrial output (15 Aug 13:15 UTC)"
+          },
+          {
+            "id": "n0284",
+            "published_at": "2024-08-11T07:00:00+00:00",
+            "src": "Bloomberg.com",
+            "title": "Small US Inflation Pickup Won’t Derail a Fed Rate Cut in September - Bloomberg.com",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0294",
+            "published_at": "2024-08-12T07:00:00+00:00",
+            "src": "TrendForce",
+            "title": "[News] China’s July CPI Edges Up to 0.5%, but PPI Contracts for 22 Consecutive Months - TrendForce",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0340",
+            "published_at": "2024-08-11T00:41:38+00:00",
+            "src": "Revolut",
+            "title": "Convert 0.62 Bitcoin to PHP | Bitcoin Price in Philippine Pesos - Revolut",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0492",
+            "published_at": "2024-08-06T07:00:00+00:00",
+            "src": "EnterpriseAM",
+            "title": "Shipping and maritime updates from the UAE - EnterpriseAM",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0580",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "SiliconValley.com",
+            "title": "Costco card entry scanners popping up at California warehouses - SiliconValley.com",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0774",
+            "published_at": "2024-08-09T07:00:00+00:00",
+            "src": "CEPR",
+            "title": "Demand versus supply: Drivers of the post-pandemic inflation and interest rates - CEPR",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0831",
+            "published_at": "2024-08-09T07:00:00+00:00",
+            "src": "South China Morning Post",
+            "title": "‘Double happiness’ at C’estbon bottler with IPO nod, Olympic medals - South China Morning Post",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0838",
+            "published_at": "2024-08-12T07:00:00+00:00",
+            "src": "Americans For Tax Fairness",
+            "title": "Reviewing the Major Tax Reforms in the Inflation Reduction Act on Its Second Anniversary - Americans For Tax Fairness",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0863",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Reuters",
+            "title": "Euronav flags US politics, China economy as risks to shipping momentum - Reuters",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0864",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "VOA - Voice of America English News",
+            "title": "Houthis undeterred despite US action to protect Red Sea shipping - VOA - Voice of America English News",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0873",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Business Insider",
+            "title": "The US Navy says it can't stop the Houthi attacks on shipping with force alone - Business Insider",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1252",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Business Insider",
+            "title": "Shopping for Same Groceries at Trader Joe's and Walmart, Clear Winner - Business Insider",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1338",
+            "published_at": "2024-08-07T07:00:00+00:00",
+            "src": "FinanceBuzz",
+            "title": "Back-to-School Shopping [2026]: Is Inflation Affecting Spending? - FinanceBuzz",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1365",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Fortune",
+            "title": "Amazon eliminates a crucial fee for sellers as the busy holiday shopping season approaches - Fortune",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1384",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "Modern Retail",
+            "title": "Poppi outspent Gatorade & Dr. Pepper on advertising - Modern Retail",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1419",
+            "published_at": "2024-08-09T13:18:22+00:00",
+            "src": "Appinventiv",
+            "title": "Navigating the Role of AI in Energy Sector - Appinventiv",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1462",
+            "published_at": "2024-08-12T11:13:30+00:00",
+            "src": "Outbrain",
+            "title": "Holiday Advertising Ideas: Boost Sales During the Top Shopping Seasons - Outbrain",
+            "guard": "US July PPI (13 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1569",
+            "published_at": "2024-08-07T07:00:00+00:00",
+            "src": "Pew Research Center",
+            "title": "Eggs, gasoline and car insurance: Where inflation has hit Americans hardest - Pew Research Center",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1572",
+            "published_at": "2024-08-07T07:00:00+00:00",
+            "src": "Cato Institute",
+            "title": "Poll: 63% of Americans Want to Increase Trade with Other Nations, 75% Worry Tariffs Are Raising Consumer Prices - Cato Institute",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1615",
+            "published_at": "2024-08-12T07:00:00+00:00",
+            "src": "Circana",
+            "title": "Circana Reports on First Half 2024 Global Toy Industry Retail Sales - Circana",
+            "guard": "US July retail sales (15 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1668",
+            "published_at": "2024-08-10T07:00:00+00:00",
+            "src": "TradingView",
+            "title": "US Market Real Value Adjusted for CPI and Dollar Index — Indicator by fa-lala-lala-la-la-la-la - TradingView",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-14": {
+        "feed_sha256": "43e7ad83ec1c92c95466385e9ce3569d25bdfca85d0eb28a79572ea0fbd6c11c",
+        "exclusions": [
+          {
+            "id": "n0058",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "LBB - Little Black Book",
+            "title": "10 Years, 10 Jobs and 10 Lessons with Special Australia — LBB - LBB - Little Black Book",
+            "guard": "Australia July jobs (15 Aug 01:30 UTC)"
+          },
+          {
+            "id": "n0101",
+            "published_at": "2024-08-13T07:00:00+00:00",
+            "src": "AdNews",
+            "title": "Australia’s next best creatives reveal their dream jobs - AdNews",
+            "guard": "Australia July jobs (15 Aug 01:30 UTC)"
+          },
+          {
+            "id": "n0105",
+            "published_at": "2024-08-13T07:00:00+00:00",
+            "src": "The Australia Institute",
+            "title": "Greedflation: what’s really causing inflation | Joseph Stiglitz on Q+A - The Australia Institute",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0110",
+            "published_at": "2024-08-13T07:00:00+00:00",
+            "src": "The Kenya Times",
+            "title": "NYS Announces 993 Jobs Paying Ksh6.5 M Per Year for Graduates in Australia - The Kenya Times",
+            "guard": "Australia July jobs (15 Aug 01:30 UTC)"
+          },
+          {
+            "id": "n0233",
+            "published_at": "2024-08-09T07:00:00+00:00",
+            "src": "The Edge Malaysia",
+            "title": "Malaysia's industrial output rises faster than expected in June, official data show - The Edge Malaysia",
+            "guard": "US July industrial output (15 Aug 13:15 UTC)"
+          },
+          {
+            "id": "n0245",
+            "published_at": "2024-08-11T07:00:00+00:00",
+            "src": "Bloomberg.com",
+            "title": "Small US Inflation Pickup Won’t Derail a Fed Rate Cut in September - Bloomberg.com",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0255",
+            "published_at": "2024-08-12T07:00:00+00:00",
+            "src": "TrendForce",
+            "title": "[News] China’s July CPI Edges Up to 0.5%, but PPI Contracts for 22 Consecutive Months - TrendForce",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0713",
+            "published_at": "2024-08-09T07:00:00+00:00",
+            "src": "CEPR",
+            "title": "Demand versus supply: Drivers of the post-pandemic inflation and interest rates - CEPR",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0741",
+            "published_at": "2024-08-13T07:00:00+00:00",
+            "src": "Luxembourg Times",
+            "title": "European stocks rise as investors await key US inflation data - Luxembourg Times",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0780",
+            "published_at": "2024-08-12T07:00:00+00:00",
+            "src": "Americans For Tax Fairness",
+            "title": "Reviewing the Major Tax Reforms in the Inflation Reduction Act on Its Second Anniversary - Americans For Tax Fairness",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n0937",
+            "published_at": "2024-08-13T07:00:00+00:00",
+            "src": "CNBC",
+            "title": "Japan Prime Minister Fumio Kishida will not run for party reelection - CNBC",
+            "guard": "Kishida withdrawal (14 Aug Japan UTC day)"
+          },
+          {
+            "id": "n0940",
+            "published_at": "2024-08-13T07:00:00+00:00",
+            "src": "ABC News & Headlines – Australian Broadcasting Corporation",
+            "title": "Japan's Prime Minister Fumio Kishida to step down in September - ABC News & Headlines – Australian Broadcasting Corporation",
+            "guard": "Kishida withdrawal (14 Aug Japan UTC day)"
+          },
+          {
+            "id": "n1491",
+            "published_at": "2024-08-07T07:00:00+00:00",
+            "src": "Pew Research Center",
+            "title": "Eggs, gasoline and car insurance: Where inflation has hit Americans hardest - Pew Research Center",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1494",
+            "published_at": "2024-08-07T07:00:00+00:00",
+            "src": "Cato Institute",
+            "title": "Poll: 63% of Americans Want to Increase Trade with Other Nations, 75% Worry Tariffs Are Raising Consumer Prices - Cato Institute",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1537",
+            "published_at": "2024-08-12T07:00:00+00:00",
+            "src": "Circana",
+            "title": "Circana Reports on First Half 2024 Global Toy Industry Retail Sales - Circana",
+            "guard": "US July retail sales (15 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1543",
+            "published_at": "2024-08-13T07:00:00+00:00",
+            "src": "ThinkMarkets",
+            "title": "50bps rate cut in focus: CPI's impact on gold, indices, and the Fed - ThinkMarkets",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1562",
+            "published_at": "2024-08-13T07:00:00+00:00",
+            "src": "Reuters",
+            "title": "US producer inflation slows as pricing power diminishes - Reuters",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1563",
+            "published_at": "2024-08-13T07:00:00+00:00",
+            "src": "WAGM",
+            "title": "US wholesale inflation cooled in July in sign that price pressures are continuing to ease - WAGM",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1602",
+            "published_at": "2024-08-10T07:00:00+00:00",
+            "src": "TradingView",
+            "title": "US Market Real Value Adjusted for CPI and Dollar Index — Indicator by fa-lala-lala-la-la-la-la - TradingView",
+            "guard": "US July CPI (14 Aug 12:30 UTC)"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-15": {
+        "feed_sha256": "0d0d987535934b00e6c9cfa7ac0627989bfab0ea27903cb91286c1e3ad5cf159",
+        "exclusions": [
+          {
+            "id": "n0044",
+            "published_at": "2024-08-08T07:00:00+00:00",
+            "src": "LBB - Little Black Book",
+            "title": "10 Years, 10 Jobs and 10 Lessons with Special Australia — LBB - LBB - Little Black Book",
+            "guard": "Australia July jobs (15 Aug 01:30 UTC)"
+          },
+          {
+            "id": "n0087",
+            "published_at": "2024-08-13T07:00:00+00:00",
+            "src": "AdNews",
+            "title": "Australia’s next best creatives reveal their dream jobs - AdNews",
+            "guard": "Australia July jobs (15 Aug 01:30 UTC)"
+          },
+          {
+            "id": "n0096",
+            "published_at": "2024-08-13T07:00:00+00:00",
+            "src": "The Kenya Times",
+            "title": "NYS Announces 993 Jobs Paying Ksh6.5 M Per Year for Graduates in Australia - The Kenya Times",
+            "guard": "Australia July jobs (15 Aug 01:30 UTC)"
+          },
+          {
+            "id": "n0108",
+            "published_at": "2024-08-14T07:00:00+00:00",
+            "src": "Reuters",
+            "title": "Australia churns out new jobs even as unemployment rises - Reuters",
+            "guard": "Australia July jobs (15 Aug 01:30 UTC)"
+          },
+          {
+            "id": "n0119",
+            "published_at": "2024-08-14T07:00:00+00:00",
+            "src": "7NEWS",
+            "title": "The top 10 happiest jobs in Australia revealed - 7NEWS",
+            "guard": "Australia July jobs (15 Aug 01:30 UTC)"
+          },
+          {
+            "id": "n0120",
+            "published_at": "2024-08-14T07:00:00+00:00",
+            "src": "7NEWS",
+            "title": "Thousands of jobs advertised across the country with Australia Post - 7NEWS",
+            "guard": "Australia July jobs (15 Aug 01:30 UTC)"
+          },
+          {
+            "id": "n0211",
+            "published_at": "2024-08-09T07:00:00+00:00",
+            "src": "The Edge Malaysia",
+            "title": "Malaysia's industrial output rises faster than expected in June, official data show - The Edge Malaysia",
+            "guard": "US July industrial output (15 Aug 13:15 UTC)"
+          },
+          {
+            "id": "n1573",
+            "published_at": "2024-08-12T07:00:00+00:00",
+            "src": "Circana",
+            "title": "Circana Reports on First Half 2024 Global Toy Industry Retail Sales - Circana",
+            "guard": "US July retail sales (15 Aug 12:30 UTC)"
+          },
+          {
+            "id": "n1625",
+            "published_at": "2024-08-14T07:00:00+00:00",
+            "src": "AgFunderNews",
+            "title": "US retail sales of plant-based milk by numbers: Coconut is up, almond is down, soy and oat are flat - AgFunderNews",
+            "guard": "US July retail sales (15 Aug 12:30 UTC)"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-16": {
+        "feed_sha256": "a02d718f878f32f1d618ced747582b0bc558e648e329660662bb1f9f5d439763",
+        "exclusions": [],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-19": {
+        "feed_sha256": "3723fbb59f332799cb0c616900fdc1771b29a25a12f8d2f33303c098f9ae8e8e",
+        "exclusions": [
+          {
+            "id": "n0252",
+            "published_at": "2024-08-17T07:00:00+00:00",
+            "src": "Bloomberg",
+            "title": "Fed Chair Powell Steps Into the Spotlight at Jackson Hole - Bloomberg",
+            "guard": "Powell Jackson Hole speech (23 Aug 14:00 UTC)"
+          },
+          {
+            "id": "n1528",
+            "published_at": "2024-08-16T07:00:00+00:00",
+            "src": "Barron's",
+            "title": "Powell’s Jackson Hole Speech Will Set the Stage for Fed Rate Cuts. What to Expect. - Barron's",
+            "guard": "Powell Jackson Hole speech (23 Aug 14:00 UTC)"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-20": {
+        "feed_sha256": "ba9a126f23ae93048a27576c2ff0e194528b54530d8e54978a460703bc81b46f",
+        "exclusions": [
+          {
+            "id": "n0240",
+            "published_at": "2024-08-17T07:00:00+00:00",
+            "src": "Bloomberg",
+            "title": "Fed Chair Powell Steps Into the Spotlight at Jackson Hole - Bloomberg",
+            "guard": "Powell Jackson Hole speech (23 Aug 14:00 UTC)"
+          },
+          {
+            "id": "n0864",
+            "published_at": "2024-08-19T07:00:00+00:00",
+            "src": "Bloomberg",
+            "title": "The Stakes Are High for Powell and the Fed at Jackson Hole - Bloomberg",
+            "guard": "Powell Jackson Hole speech (23 Aug 14:00 UTC)"
+          },
+          {
+            "id": "n1521",
+            "published_at": "2024-08-16T07:00:00+00:00",
+            "src": "Barron's",
+            "title": "Powell’s Jackson Hole Speech Will Set the Stage for Fed Rate Cuts. What to Expect. - Barron's",
+            "guard": "Powell Jackson Hole speech (23 Aug 14:00 UTC)"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-21": {
+        "feed_sha256": "0f18dd2b1db356bebde2650d32cc5e092ca72fcb3152194988a5bdf7ce98db5a",
+        "exclusions": [
+          {
+            "id": "n0220",
+            "published_at": "2024-08-17T07:00:00+00:00",
+            "src": "Bloomberg",
+            "title": "Fed Chair Powell Steps Into the Spotlight at Jackson Hole - Bloomberg",
+            "guard": "Powell Jackson Hole speech (23 Aug 14:00 UTC)"
+          },
+          {
+            "id": "n0639",
+            "published_at": "2024-08-20T07:00:00+00:00",
+            "src": "CNBC",
+            "title": "Dollar drops as jobs gains revised sharply lower - CNBC",
+            "guard": "US payrolls annual benchmark (21 Aug 14:00 UTC)"
+          },
+          {
+            "id": "n0831",
+            "published_at": "2024-08-19T07:00:00+00:00",
+            "src": "Bloomberg",
+            "title": "The Stakes Are High for Powell and the Fed at Jackson Hole - Bloomberg",
+            "guard": "Powell Jackson Hole speech (23 Aug 14:00 UTC)"
+          },
+          {
+            "id": "n1477",
+            "published_at": "2024-08-16T07:00:00+00:00",
+            "src": "Barron's",
+            "title": "Powell’s Jackson Hole Speech Will Set the Stage for Fed Rate Cuts. What to Expect. - Barron's",
+            "guard": "Powell Jackson Hole speech (23 Aug 14:00 UTC)"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-22": {
+        "feed_sha256": "a139cd0f048566f7e1482ab5af37527c9b57f2371a8b082a1fecf1a53885ee16",
+        "exclusions": [
+          {
+            "id": "n0201",
+            "published_at": "2024-08-17T07:00:00+00:00",
+            "src": "Bloomberg",
+            "title": "Fed Chair Powell Steps Into the Spotlight at Jackson Hole - Bloomberg",
+            "guard": "Powell Jackson Hole speech (23 Aug 14:00 UTC)"
+          },
+          {
+            "id": "n0864",
+            "published_at": "2024-08-19T07:00:00+00:00",
+            "src": "Bloomberg",
+            "title": "The Stakes Are High for Powell and the Fed at Jackson Hole - Bloomberg",
+            "guard": "Powell Jackson Hole speech (23 Aug 14:00 UTC)"
+          },
+          {
+            "id": "n1466",
+            "published_at": "2024-08-21T07:00:00+00:00",
+            "src": "Portfolio Adviser",
+            "title": "Jackson Hole Economic Symposium puts eyes on Powell - Portfolio Adviser",
+            "guard": "Powell Jackson Hole speech (23 Aug 14:00 UTC)"
+          },
+          {
+            "id": "n1509",
+            "published_at": "2024-08-16T07:00:00+00:00",
+            "src": "Barron's",
+            "title": "Powell’s Jackson Hole Speech Will Set the Stage for Fed Rate Cuts. What to Expect. - Barron's",
+            "guard": "Powell Jackson Hole speech (23 Aug 14:00 UTC)"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-23": {
+        "feed_sha256": "91f62f574a6b0c3eddee9da7f566ff4aa8553560f9e62c4a86a16b39d4f25635",
+        "exclusions": [
+          {
+            "id": "n0173",
+            "published_at": "2024-08-17T07:00:00+00:00",
+            "src": "Bloomberg",
+            "title": "Fed Chair Powell Steps Into the Spotlight at Jackson Hole - Bloomberg",
+            "guard": "Powell Jackson Hole speech (23 Aug 14:00 UTC)"
+          },
+          {
+            "id": "n0823",
+            "published_at": "2024-08-19T07:00:00+00:00",
+            "src": "Bloomberg",
+            "title": "The Stakes Are High for Powell and the Fed at Jackson Hole - Bloomberg",
+            "guard": "Powell Jackson Hole speech (23 Aug 14:00 UTC)"
+          },
+          {
+            "id": "n1431",
+            "published_at": "2024-08-21T07:00:00+00:00",
+            "src": "Portfolio Adviser",
+            "title": "Jackson Hole Economic Symposium puts eyes on Powell - Portfolio Adviser",
+            "guard": "Powell Jackson Hole speech (23 Aug 14:00 UTC)"
+          },
+          {
+            "id": "n1478",
+            "published_at": "2024-08-16T07:00:00+00:00",
+            "src": "Barron's",
+            "title": "Powell’s Jackson Hole Speech Will Set the Stage for Fed Rate Cuts. What to Expect. - Barron's",
+            "guard": "Powell Jackson Hole speech (23 Aug 14:00 UTC)"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-26": {
+        "feed_sha256": "59546b45ad00e6be3f3f771a5825e4c20008a7f7e86a80a747680626a580a56b",
+        "exclusions": [
+          {
+            "id": "n0462",
+            "published_at": "2024-08-23T07:00:00+00:00",
+            "src": "CNBC",
+            "title": "Is Nvidia's earnings report really make or break? Here's why we don't think so - CNBC",
+            "guard": "Nvidia Salesforce Chewy quarterly outcome guard"
+          },
+          {
+            "id": "n0464",
+            "published_at": "2024-08-23T07:00:00+00:00",
+            "src": "Investopedia",
+            "title": "Nvidia Stock Surges as Earnings Expectations Grow - Investopedia",
+            "guard": "Nvidia Salesforce Chewy quarterly outcome guard"
+          },
+          {
+            "id": "n0476",
+            "published_at": "2024-08-25T07:00:00+00:00",
+            "src": "Investopedia",
+            "title": "Nvidia Stock Price Levels to Watch as Earnings Report Looms - Investopedia",
+            "guard": "Nvidia Salesforce Chewy quarterly outcome guard"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-27": {
+        "feed_sha256": "ad53dc16d4ec50b56956386e33a68e5295965b4403a93ea5f272102fec4fef9a",
+        "exclusions": [
+          {
+            "id": "n0414",
+            "published_at": "2024-08-23T07:00:00+00:00",
+            "src": "CNBC",
+            "title": "Is Nvidia's earnings report really make or break? Here's why we don't think so - CNBC",
+            "guard": "Nvidia Salesforce Chewy quarterly outcome guard"
+          },
+          {
+            "id": "n0416",
+            "published_at": "2024-08-23T07:00:00+00:00",
+            "src": "Investopedia",
+            "title": "Nvidia Stock Surges as Earnings Expectations Grow - Investopedia",
+            "guard": "Nvidia Salesforce Chewy quarterly outcome guard"
+          },
+          {
+            "id": "n0428",
+            "published_at": "2024-08-25T07:00:00+00:00",
+            "src": "Investopedia",
+            "title": "Nvidia Stock Price Levels to Watch as Earnings Report Looms - Investopedia",
+            "guard": "Nvidia Salesforce Chewy quarterly outcome guard"
+          },
+          {
+            "id": "n0434",
+            "published_at": "2024-08-26T07:00:00+00:00",
+            "src": "Investopedia",
+            "title": "Chip Stocks Fall Ahead of Nvidia's Earnings Report - Investopedia",
+            "guard": "Nvidia Salesforce Chewy quarterly outcome guard"
+          },
+          {
+            "id": "n0444",
+            "published_at": "2024-08-26T07:00:00+00:00",
+            "src": "Morningstar",
+            "title": "What if Nvidia Misses Earnings? - Morningstar",
+            "guard": "Nvidia Salesforce Chewy quarterly outcome guard"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-28": {
+        "feed_sha256": "b4e3e081a437eb4b87f70af9bff398f7a1bc61f1cb7247dbfa9bd891e3a72510",
+        "exclusions": [
+          {
+            "id": "n0352",
+            "published_at": "2024-08-23T07:00:00+00:00",
+            "src": "CNBC",
+            "title": "Is Nvidia's earnings report really make or break? Here's why we don't think so - CNBC",
+            "guard": "Nvidia Salesforce Chewy quarterly outcome guard"
+          },
+          {
+            "id": "n0354",
+            "published_at": "2024-08-23T07:00:00+00:00",
+            "src": "Investopedia",
+            "title": "Nvidia Stock Surges as Earnings Expectations Grow - Investopedia",
+            "guard": "Nvidia Salesforce Chewy quarterly outcome guard"
+          },
+          {
+            "id": "n0366",
+            "published_at": "2024-08-25T07:00:00+00:00",
+            "src": "Investopedia",
+            "title": "Nvidia Stock Price Levels to Watch as Earnings Report Looms - Investopedia",
+            "guard": "Nvidia Salesforce Chewy quarterly outcome guard"
+          },
+          {
+            "id": "n0372",
+            "published_at": "2024-08-26T07:00:00+00:00",
+            "src": "Investopedia",
+            "title": "Chip Stocks Fall Ahead of Nvidia's Earnings Report - Investopedia",
+            "guard": "Nvidia Salesforce Chewy quarterly outcome guard"
+          },
+          {
+            "id": "n0382",
+            "published_at": "2024-08-26T07:00:00+00:00",
+            "src": "Morningstar",
+            "title": "What if Nvidia Misses Earnings? - Morningstar",
+            "guard": "Nvidia Salesforce Chewy quarterly outcome guard"
+          },
+          {
+            "id": "n0383",
+            "published_at": "2024-08-27T07:00:00+00:00",
+            "src": "markets.businessinsider.com",
+            "title": "'An underpriced risk': Wall Street is upbeat but cautious on Nvidia earnings amid chip delays and soaring AI hype - markets.businessinsider.com",
+            "guard": "Nvidia Salesforce Chewy quarterly outcome guard"
+          }
+        ],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-29": {
+        "feed_sha256": "7ae8364cfb323ca7fb1ca5c804b7c2ad2cbcba8ecef5a4e2eaab85d6eef6e564",
+        "exclusions": [],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      },
+      "2024-08-30": {
+        "feed_sha256": "774bb974aa654580336d81a3e92b841487c5cd0d1da06637762ba9425ba7b52c",
+        "exclusions": [],
+        "scope": "Known early-outcome exclusions already removed from the frozen writer feed, independently replayed from exact raw responses."
+      }
+    }
+  },
+  "structural_errors": [],
+  "pending_dates": [],
+  "source_revision": 2,
+  "base_acceptance_path": "audit/source_amendments/base_independent_source_review.json",
+  "base_acceptance_sha256": "631a4f53d5f01439f3223d8ddaffc8d440efab76bd6d43cdabfb149202b37c35",
+  "append_only_revision_sha256": "c8bf4f50b5565ed0c7f1e5c68cca065a4d9f922cfb266a089f441d32a55cf91c",
+  "supplement_checks": 1420,
+  "supplement_request_count": 30
+}

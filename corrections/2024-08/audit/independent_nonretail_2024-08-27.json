@@ -1,0 +1,115 @@
+{
+  "date": "2024-08-27",
+  "status": "accepted",
+  "nonretail_content_sha256": "8e9845cb029d885a943a521f2015c598dda44befb4e483fa830dafcd0df814e8",
+  "feed_sha256": "ad53dc16d4ec50b56956386e33a68e5295965b4403a93ea5f272102fec4fef9a",
+  "card_sha256": "ae842c7b635fe23b57e8ffec4937c132a50036c81ac7f94b07aae5e0b5cf97bd",
+  "fatal_or_major_remaining": 0,
+  "reviewer_scope": "Independently read all 136 current nonretail paragraphs and all 97 distinct exact cited own-date headline records, including Polish-language records. Checked attribution, source age and actual release availability, previews and forecasts versus outcomes, company roles, local citations, conditional actions, and inference scope. Compared every quoted market and Treasury number with its correct own-date instrument, session, horizon, unit and split context. Read current-date timing exclusions and confirmed none is cited. Re-read each named edited string. No later-date inputs were read before this acceptance.",
+  "style_depth": {
+    "passed": true,
+    "basis": [
+      "US contrasts Powell easing guidance and the historical employment revision with an inverted bull-steepening curve, distinguishing policy relief from evidence of current job loss.",
+      "China connects PDD profit uncertainty, weak manufacturing and housing, selective luxury demand, lending margins, liquidity operations, trade barriers and conditional company earnings, with separate Shanghai and Hong Kong price comparisons.",
+      "Poland joins GDP and real wage support to fiscal financing, retail bond terms, Dino price competition, Orlen profit/capex pressure, PZU governance and conditional security risks without converting readiness or allegations into orders or verdicts.",
+      "All thirteen sector sections retain issuer-specific operating evidence and distinguish foreign peer comparisons. Defensive and cyclical positions have concrete valuation, margin, demand and regulatory invalidation conditions.",
+      "Flows distinguishes documented crypto subscriptions, NISA allocation and buybacks from prices and corporate issuance plans. Anticipatory analysis preserves pending Nvidia results and prospective oil output. Catalysts use different operating drivers rather than repeated broad-market arguments."
+    ]
+  },
+  "findings": [
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "forecast and implementation precision",
+      "action": "Changed the EIA Permian discussion from completed capacity expansion to forecast production growth and the Canadian EV tariff from imposed to announced."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "company roles",
+      "action": "Made Deutsche Bank, PetroChina and BHP explicit foreign peer comparisons rather than constituents of the US sector ETFs."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "action clarity",
+      "action": "Replaced an ambiguous instruction to reduce a defensive preference when cost pressure worsens with an explicit instruction to reduce cyclical exposure."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "local support and format",
+      "action": "Added local China luxury-home and Poland GDP/Dino/Orlen/PZU citations and Powell support, explicitly labelled the Treasury curve inverted, matched Bloomberg.com, ing think and 朝日新聞 (Asahi Shimbun) source names, and formatted all six catalyst titles with $TICKER."
+    },
+    {
+      "severity": "none",
+      "status": "checked",
+      "area": "cutoff and status",
+      "action": "Nvidia remains an earnings preview; pending output and issuance remain plans; TSM fab groundbreaking is not production; anticipated project orders and PZU allegations remain conditional. Report-date Chinese industrial-profit and German GfK actuals, premature euro-area inflation, timing-excluded Nvidia material, and Coles report-date results are absent."
+    },
+    {
+      "severity": "none",
+      "status": "checked",
+      "area": "numbers and flows",
+      "action": "August 26 completed market sessions and UTC crypto candles match. Treasury 2Y 3.91%, 10Y 3.82%, negative 9bp spread and changes support inverted bull steepening. Price changes are not asserted as fund flows; explicit Bitcoin inflows, NISA allocation and buybacks retain their bounded scopes. Numeric spot-FX and copper-ratio growth signals are absent."
+    }
+  ],
+  "named_fix_log": "review_scratch/2024-08-27_writer_early_named_fixes.json",
+  "verification": {
+    "paragraphs": 136,
+    "distinct_sources": 97,
+    "words": 8558,
+    "maximum_citation_uses": 3,
+    "failures": [],
+    "warnings": [],
+    "words_by_block": {
+      "geo:US": 452,
+      "geo:EU": 304,
+      "geo:CN": 865,
+      "geo:JP": 294,
+      "geo:AU": 247,
+      "geo:PL": 867,
+      "sectors:XLK": 183,
+      "sectors:XLC": 181,
+      "sectors:XLF": 193,
+      "sectors:XLE": 197,
+      "sectors:XLI": 180,
+      "sectors:XLY": 180,
+      "sectors:XLP": 175,
+      "sectors:XLV": 177,
+      "sectors:XLB": 189,
+      "sectors:XLRE": 184,
+      "sectors:XLU": 169,
+      "sectors:SXAP": 177,
+      "sectors:SOXX": 182,
+      "earnings_pattern:Demand wins when the cost of winning stays controlled": 392,
+      "crypto:Access widens while the daily price pauses": 322,
+      "flows:Easing expectations are a price tailwind, not one global flow": 635,
+      "underowned:1: Power demand with a recoverable return": 134,
+      "underowned:2: Value retail as an operating model": 130,
+      "underowned:3: European manufacturing access has a capital cost": 130,
+      "underowned:4: Liquidity support versus Chinese bank earnings": 126,
+      "anticipatory:1: Easing preserves demand rather than compensating for damage": 166,
+      "anticipatory:2: Nvidia must convert product attention into an earnings bridge": 158,
+      "anticipatory:3: Oil supply plans meet a firmer futures price": 153,
+      "anticipatory:4: Trade barriers reshape where an EV sale earns money": 157,
+      "catalysts:1: PDD / $PDD — The uncertainty warning changes the hurdle": 110,
+      "catalysts:2: Nvidia / $NVDA — The report still lies ahead": 112,
+      "catalysts:3: Snowflake / $SNOW — A bounce must answer widening losses": 109,
+      "catalysts:4: Target / $TGT — Price cuts must keep earning their return": 110,
+      "catalysts:5: Boeing / $BA — Testing creates a delivery hurdle": 107,
+      "catalysts:6: Eli Lilly / $LLY — Clinical benefit needs commercial conversion": 111
+    }
+  },
+  "warning_dispositions": [],
+  "limits": [
+    "Evidence consists of exact dated headline records and current-vintage historical market cards, not full publisher article bodies or original unrevised data vintages.",
+    "Acceptance binds the exact current nonretail component only. Retail is independently reviewed; subsequent nonretail edits require renewed review and binding."
+  ],
+  "exact_block_ranges": {
+    "method": "Independent paragraph-body whitespace count after removing canonical citation tokens; all 36 exact AUTHORING bounds.",
+    "blocks_checked": 36,
+    "out_of_range": [],
+    "evidence": "review_scratch/2024-08-27_block_ranges.json"
+  }
+}

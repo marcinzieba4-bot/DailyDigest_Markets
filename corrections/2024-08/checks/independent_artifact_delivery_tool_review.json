@@ -1,0 +1,261 @@
+{
+  "status": "reviewed_code_and_local_preview_only",
+  "passed": true,
+  "checked_at_utc": "2026-11-04T16:39:33.354506+00:00",
+  "scope": "Independent static code inspection and isolated exact-predicate tests of local artifact packaging and read-only delivery verification. No full-month artifact, prose, origin/public delivery or publication approval. No builder, acquisition/amendment or network/publication entrypoint executed.",
+  "checks": [
+    {
+      "check": "six tools parse as Python",
+      "passed": true
+    },
+    {
+      "check": "22 correct weekday dates",
+      "passed": true
+    },
+    {
+      "check": "builder asserts full-month71 targets and69 ZIP members",
+      "passed": true
+    },
+    {
+      "check": "builder rejects invalid/duplicate/unsorted dates",
+      "passed": true
+    },
+    {
+      "check": "publisher rejects partial local preview and requires71 unique targets",
+      "passed": true
+    },
+    {
+      "check": "publisher requires all three formats per report",
+      "passed": true
+    },
+    {
+      "check": "isolate exact delivery-receipt predicate without network code",
+      "passed": true
+    },
+    {
+      "check": "delivery target predicate: valid",
+      "passed": true
+    },
+    {
+      "check": "delivery target predicate: missing_target",
+      "passed": true
+    },
+    {
+      "check": "delivery target predicate: duplicate_target",
+      "passed": true
+    },
+    {
+      "check": "delivery target predicate: foreign_target",
+      "passed": true
+    },
+    {
+      "check": "delivery target predicate: extra_target",
+      "passed": true
+    },
+    {
+      "check": "delivery target predicate: wrong_dates",
+      "passed": true
+    },
+    {
+      "check": "isolate exact69 public ZIP predicate",
+      "passed": true
+    },
+    {
+      "check": "public ZIP membership predicate: valid",
+      "passed": true
+    },
+    {
+      "check": "public ZIP membership predicate: missing",
+      "passed": true
+    },
+    {
+      "check": "public ZIP membership predicate: duplicate",
+      "passed": true
+    },
+    {
+      "check": "public ZIP membership predicate: foreign",
+      "passed": true
+    },
+    {
+      "check": "public ZIP membership predicate: extra",
+      "passed": true
+    },
+    {
+      "check": "all-source archive path predicate: valid",
+      "passed": true
+    },
+    {
+      "check": "all-source archive path predicate: outside_root",
+      "passed": true
+    },
+    {
+      "check": "all-source archive path predicate: missing_file",
+      "passed": true
+    },
+    {
+      "check": "all-source archive path predicate: symlink_file",
+      "passed": true
+    },
+    {
+      "check": "all-source archive path predicate: symlink_parent",
+      "passed": true
+    },
+    {
+      "check": "retail collection subtitle startsAug1",
+      "passed": true
+    },
+    {
+      "check": "all source-ledger details opened before PDF",
+      "passed": true
+    },
+    {
+      "check": "builder extracts PDF text and checks ledger marker",
+      "passed": true
+    },
+    {
+      "check": "renderer emits every used source in HTML ledger and JSON evidence",
+      "passed": true
+    },
+    {
+      "check": "delivery checks all66 report bodies and public ZIP CRC",
+      "passed": true
+    },
+    {
+      "check": "delivery compares origin and public full-body SHA/size",
+      "passed": true
+    },
+    {
+      "check": "PDF/JSON public delivery verified through canonical report ZIP rather than fallback route",
+      "passed": true
+    },
+    {
+      "check": "delivery checks protected bodies/index links and live Lambda metadata",
+      "passed": true
+    },
+    {
+      "check": "existing build is explicitly partial preview",
+      "passed": true
+    },
+    {
+      "check": "all current replay-inventory paths/content hashes",
+      "passed": true,
+      "detail": {
+        "files": 15055,
+        "errors": []
+      }
+    },
+    {
+      "check": "replay inventory binds current source/market acceptances",
+      "passed": true
+    },
+    {
+      "check": "preview frozen-source archive internal inventory/body hashes",
+      "passed": true,
+      "detail": {
+        "members": 15783,
+        "files": 15782,
+        "errors": []
+      }
+    },
+    {
+      "check": "preview full cited-headline ledger present in PDF",
+      "passed": true,
+      "detail": {
+        "date": "2024-08-01",
+        "pages": 29,
+        "sources": 123,
+        "missing_full_headlines": []
+      }
+    },
+    {
+      "check": "preview three artifact hashes match manifest",
+      "passed": true
+    },
+    {
+      "check": "tool hashes stable over this final review pass",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "tool_sha256": {
+    "build_artifacts.py": "8f750ec7cc6b31dbdbd1b84a28a2be2ed69a999c71529a32ea6616fc3e4cd5e4",
+    "build_source_inventory.py": "064e830c2a95bda8e7fb8f1d3e3776d2b4ed84fee34a9aad3ab1020dee7ca7b6",
+    "verify_delivery.py": "eeef172568c2803d5910022a82bc26038a870ec346690524fd1def6750584873",
+    "render.py": "8202dd2d61dda94ac5f0db9520945ba3f3794e11174e39384f0d78366be57548",
+    "build_retail_page.py": "01c6c54fa6bb5e60ed34f5a999ebb4d9480f872f5cba0eacf6d507b748b10bad",
+    "publish.py": "0138fdacf735cc71526357ff7408eb81d403a9d280d17e948931bbbd7624406c"
+  },
+  "reviewer_tool_sha256": "fb296795f79b7f49585ff90e98d4162c67a2715d4ea933b1238c3ff8e285c739",
+  "full_month_expected": {
+    "dates": [
+      "2024-08-01",
+      "2024-08-02",
+      "2024-08-05",
+      "2024-08-06",
+      "2024-08-07",
+      "2024-08-08",
+      "2024-08-09",
+      "2024-08-12",
+      "2024-08-13",
+      "2024-08-14",
+      "2024-08-15",
+      "2024-08-16",
+      "2024-08-19",
+      "2024-08-20",
+      "2024-08-21",
+      "2024-08-22",
+      "2024-08-23",
+      "2024-08-26",
+      "2024-08-27",
+      "2024-08-28",
+      "2024-08-29",
+      "2024-08-30"
+    ],
+    "reports": 22,
+    "daily_artifacts": 66,
+    "collection_artifacts": 5,
+    "targets": 71,
+    "report_zip_members": 69
+  },
+  "preview": {
+    "dates": [
+      "2024-08-01"
+    ],
+    "complete_month": false,
+    "artifact_targets": 8,
+    "report_zip_members": 6,
+    "manifest_sha256": "64391680d1d9722ca051d693f48c5c7491fd5938d83e0a5c179d1f271ad52275",
+    "source_archive_members": 15783,
+    "source_archive_files": 15782
+  },
+  "preview_pdf_ledger_checks": [
+    {
+      "date": "2024-08-01",
+      "pdf_pages": 29,
+      "ledger_sources": 123,
+      "all_full_headlines_found": true
+    }
+  ],
+  "replay_inventory_sha256": "e59df45cc9df12ad47b1aadafc54b2367a56faa1aed3578b5f1354ad0bbd2a09",
+  "source_amendment_review_sha256": "bfc25f66cfc115ad5c08934f2806e5b6a6af995aaefa4315e841efe1ffca98d0",
+  "resolved_findings": [
+    {
+      "finding": "retail collection subtitle beganAug2",
+      "resolution": "Current template starts1–30Aug2024."
+    },
+    {
+      "finding": "final source-archive glob inputs lacked all-path safety check",
+      "resolution": "Current builder rejects escape/missing/symlink-file/symlink-parent candidates; five isolated predicate cases tested."
+    },
+    {
+      "finding": "delivery relied on publisher counts rather than exact independent key/member sets",
+      "resolution": "Current delivery verifier independently requires71 exact August target keys and69 exact public ZIP member names; positive/negative fixtures tested."
+    }
+  ],
+  "limitations": [
+    "Only the existing one-date local preview was opened; all22 final PDFs, ledgers, collections and final source archive must be rebuilt and checked after prose freezes.",
+    "Origin/public HTTPS, actual protected-object preservation, archive-index merge and invalidation completion were inspected in code but not executed here.",
+    "Native PDF/JSON public delivery is through the verified report ZIP; direct /Strategies fallback URLs are not treated as downloads.",
+    "Final replay inventory should include both independent review scripts under audit_work and be refreshed before the final source archive is built."
+  ]
+}

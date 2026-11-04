@@ -1,0 +1,18 @@
+{
+ "ticker": "SHEL.L",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SHEL.L?period1=1719792000&period2=1727654400&interval=1d&events=div,splits",
+   "sha256": "25a441f9c18904bf8d0f350fd8fdd35c5827f72cb03b87e01db21911750a45e0",
+   "fetched_at_utc": "2026-11-04T11:20:38.272296+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SHEL.L?period1=1727654400&period2=1793791229&interval=1d&events=div,splits",
+   "sha256": "0bea024737940d5dbc2ee0742a47b6adffd5c336ced33fc1b19840d7f0844e55",
+   "fetched_at_utc": "2026-11-04T11:20:38.743016+00:00"
+  }
+ ]
+}

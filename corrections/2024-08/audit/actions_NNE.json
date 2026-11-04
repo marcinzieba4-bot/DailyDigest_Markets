@@ -1,0 +1,18 @@
+{
+ "ticker": "NNE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NNE?period1=1719792000&period2=1727654400&interval=1d&events=div,splits",
+   "sha256": "6a0c02f46c0ca7296dd3d6dec39757518d70b7d8283b68dd6ea9e61f936c0459",
+   "fetched_at_utc": "2026-11-04T11:20:51.854874+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NNE?period1=1727654400&period2=1793791229&interval=1d&events=div,splits",
+   "sha256": "3aff4ec25ee072c4cc87728d05321d662dd5b3e00f06d4c05fb1fd54aee71553",
+   "fetched_at_utc": "2026-11-04T11:20:52.217772+00:00"
+  }
+ ]
+}

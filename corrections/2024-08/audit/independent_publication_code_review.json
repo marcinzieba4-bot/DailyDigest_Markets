@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-04",
+  "status": "code_review_complete",
+  "passed": true,
+  "publisher_sha256": "0138fdacf735cc71526357ff7408eb81d403a9d280d17e948931bbbd7624406c",
+  "scope": "Independent read-only source review of the complete current tools/publish.py; no AWS mutation or publication performed by this reviewer.",
+  "findings": [
+    {
+      "area": "review binding",
+      "disposition": "Plan requires all 22 source/card acceptances, precision and final editorial receipts, current component hashes, retail merge equality, and artifact manifest hashes before writes."
+    },
+    {
+      "area": "scope and preservation",
+      "disposition": "DATES contains 22 August 2024 weekdays. Target whitelist/count restricts writes to 66 daily and five collection objects. Fresh writes reject existing targets and use IfNoneMatch; resume verifies expected bytes. Protected snapshots include latest, weekends, and other historical HTML collections."
+    },
+    {
+      "area": "index transaction",
+      "disposition": "Index merge preserves every prior link, checks unique links for all 22 dates, backs up its initial body, uses IfMatch for the production write, and verifies the complete body afterward."
+    },
+    {
+      "area": "verification and delivery",
+      "disposition": "Each origin artifact body hash and length is verified; protected content is rechecked; cache invalidation paths cover only August 2024 reports and the index. No Lambda invocation, configuration write, email, or Telegram code is present."
+    }
+  ],
+  "fatal_or_major_remaining": 0,
+  "limits": [
+    "Code review does not assert live AWS authorization or successful publication.",
+    "Current-source binding must be refreshed if publisher code changes.",
+    "Report prose,PDFpagination,andartifactcontent are covered by separate reviews."
+  ]
+}

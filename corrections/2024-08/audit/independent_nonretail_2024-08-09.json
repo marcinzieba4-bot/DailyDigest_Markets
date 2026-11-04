@@ -1,0 +1,78 @@
+{
+  "date": "2024-08-09",
+  "status": "accepted",
+  "nonretail_content_sha256": "753d13b3b86d32c570e7f0de634e25bee1550d9179644579b4cbf3092ef6a9b8",
+  "feed_sha256": "b5c4d94c60e1db93a785cdf4c65292f6533e9201bdb4f4333509a352a26e6f04",
+  "card_sha256": "8826230299438c31cfe79d5ce1ea75494fb5d6b9293b6321d99d2777f1378479",
+  "fatal_or_major_remaining": 0,
+  "reviewer_scope": "Independently read all 136 nonretail paragraphs with all 99 cited own-date headline records. Checked every concrete headline assertion, Polish translation, attribution, company role, actual-versus-preview status, source age, scenario and stance. Independently compared every quoted market and Treasury figure against its correct own-date instrument, session, horizon and unit. Re-read all three named fixes and reran verification. No later-date factual source justified an August 9 claim.",
+  "style_depth": {
+    "passed": true,
+    "basis": [
+      "The US chapter compares the one-session rebound with the twenty-session decline and distinguishes manufacturing contraction from services expansion and lower mortgage rates.",
+      "China connects weak manufacturer/consumer profits, services resilience, bank credit risk, property oversupply, currency sensitivity and the EV sales milestone rather than repeating a generic stimulus thesis.",
+      "Poland distinguishes PKO ex-dividend price effects from operating deterioration, Pekao provisions from Alior one-offs, housing affordability from marketplace competition, and policy intentions from completed procurement.",
+      "Sectors use contrasting actual company evidence, including Palantir/JFrog, Lilly/CVS, Caterpillar/Embraer, consumer travel/value formats, and SMIC/Infineon. Stances vary with those operating differences.",
+      "The flows chapter separates carry funding, credit spreads, actual issuance, investor selling and repurchases. Scenarios preserve the uncertainty of Nvidia earnings and Middle East diplomacy."
+    ]
+  },
+  "findings": [
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "planned versus completed company event",
+      "action": "Changed Palantir deploying products to plans to deploy, preserving the future wording of Reuters n0849. No amount or timing of revenue is inferred."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "ordinary report voice",
+      "action": "Replaced Poland input narration about what a headline does not supply with direct analysis of debt service and public investment."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "local attribution",
+      "action": "Added exact unemployment, provision and housing-price citations to Poland divergence synthesis."
+    },
+    {
+      "severity": "none",
+      "status": "checked",
+      "area": "numeric and instrument precision",
+      "action": "All quoted levels and one/five/twenty-observation returns match their own instruments. The 2Y/10Y yields, negative five-bps spread and bull steepening agree with Treasury. Crypto uses the completed UTC candle. PKO price changes explicitly exclude dividend wealth effects; numeric spot-FX is absent."
+    },
+    {
+      "severity": "none",
+      "status": "checked",
+      "area": "source semantics and timing",
+      "action": "Nvidia n0716 is a forecast despite its broad RSS result label; its August 6 timestamp is within the stricter seven-day preview window and the prose explicitly treats it as pending. ECB July 18 unchanged-rate/data-dependent guidance is a current policy baseline within 35 days, with no later decision asserted. Lilly, SMIC, Disney and other August 8/7 results are already available at this cutoff."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "exact block word ranges",
+      "action": "A separate independent exact counter found small length violations not surfaced by verify.py. Targeted trims or useful brief risk sentences now put all36 blocks inside their exact bounds; financial claims and citations are unchanged. Named log: review_scratch/2024-08-09_range_fixes.json."
+    }
+  ],
+  "named_fix_log": "review_scratch/2024-08-09_named_fixes.json",
+  "verification": {
+    "paragraphs": 136,
+    "distinct_sources": 99,
+    "words": 8760,
+    "maximum_citation_uses": 2,
+    "failures": [],
+    "warnings": []
+  },
+  "warning_dispositions": [],
+  "limits": [
+    "Exact RSS headlines and historical cards do not establish full publisher article contents or original unrevised vintages.",
+    "Acceptance covers only this exact nonretail component; retail is reviewed separately and later edits require renewed binding."
+  ],
+  "exact_block_ranges": {
+    "method": "Independent paragraph-body whitespace count after removing canonical citation tokens; all36 exact AUTHORING bounds.",
+    "blocks_checked": 36,
+    "out_of_range": [],
+    "evidence": "review_scratch/2024-08-09_block_ranges.json"
+  },
+  "prior_reviewed_component_sha256": "397f8a6f937cbd192290476d5d8de7b420afe8c9f4b8945699e6e3ca570bb5d8"
+}

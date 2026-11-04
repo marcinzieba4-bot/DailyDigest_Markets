@@ -1,0 +1,18 @@
+{
+ "ticker": "MRVL",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MRVL?period1=1719792000&period2=1727654400&interval=1d&events=div,splits",
+   "sha256": "00c8b7844df5ade454600c4f029fea4d927974ca2d7f30c61fefab0b275c62c1",
+   "fetched_at_utc": "2026-11-04T11:20:47.256851+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MRVL?period1=1727654400&period2=1793791229&interval=1d&events=div,splits",
+   "sha256": "9e6ad4dac72b7c2685e49696b56aff55c33cecc43997f62ea4e3bda8f817183d",
+   "fetched_at_utc": "2026-11-04T11:20:47.661670+00:00"
+  }
+ ]
+}

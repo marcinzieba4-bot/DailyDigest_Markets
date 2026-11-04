@@ -1,0 +1,21 @@
+{
+  "checked_at_utc": "2026-11-04T16:50:43.901347+00:00",
+  "passed": true,
+  "errors": [],
+  "scope": "Independent delta review against prior39-check tool review; source-inventory builder adds only audit_work/*.py code-snapshot collection. It does not execute those scripts or acquire/change evidence; existing path safety and hash/size inventory generation remain in force.",
+  "prior_review_sha256": "76d9d25ea074a25354bdf1eedbf3b398698d6682d05c94768d2afa0174392e1b",
+  "prior_inventory_builder_sha256": "064e830c2a95bda8e7fb8f1d3e3776d2b4ed84fee34a9aad3ab1020dee7ca7b6",
+  "current_tool_sha256": {
+    "build_artifacts.py": "8f750ec7cc6b31dbdbd1b84a28a2be2ed69a999c71529a32ea6616fc3e4cd5e4",
+    "build_source_inventory.py": "30135cc82d19727a440c32737ecb2db40197414d29c2f56a3cd837409d8b5bfc",
+    "verify_delivery.py": "eeef172568c2803d5910022a82bc26038a870ec346690524fd1def6750584873",
+    "render.py": "8202dd2d61dda94ac5f0db9520945ba3f3794e11174e39384f0d78366be57548",
+    "build_retail_page.py": "01c6c54fa6bb5e60ed34f5a999ebb4d9480f872f5cba0eacf6d507b748b10bad",
+    "publish.py": "0138fdacf735cc71526357ff7408eb81d403a9d280d17e948931bbbd7624406c"
+  },
+  "inspected_added_line": "paths.update((ROOT/'audit_work').glob('*.py'))",
+  "hash_after_removing_exact_added_line": "064e830c2a95bda8e7fb8f1d3e3776d2b4ed84fee34a9aad3ab1020dee7ca7b6",
+  "limits": [
+    "Final source inventory and source ZIP have not yet been built with the new checker. No final22 or network/publication approval."
+  ]
+}

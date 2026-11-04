@@ -1,0 +1,1702 @@
+import json, boto3, urllib.request, urllib.parse, re, os, logging, csv, io
+import xml.etree.ElementTree as ET
+from datetime import datetime, timezone, timedelta
+from concurrent.futures import ThreadPoolExecutor
+import anthropic
+import html as html_lib
+
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
+ANTHROPIC_API_KEY  = os.environ['ANTHROPIC_API_KEY']
+SENDER_EMAIL       = os.environ['SENDER_EMAIL']
+RECIPIENT_EMAIL    = os.environ['RECIPIENT_EMAIL']
+REGION             = 'eu-north-1'
+TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN', '')
+TELEGRAM_CHAT_ID   = os.environ.get('TELEGRAM_CHAT_ID', '')
+S3_BUCKET          = os.environ.get('S3_BUCKET', 's3bucketmz')
+CLOUDFRONT_DISTRIBUTION_ID = os.environ.get('CLOUDFRONT_DISTRIBUTION_ID', 'E15IJW4438D21G')
+
+HEADERS        = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'}
+FRESHNESS_DAYS = 7   # drop any RSS/Reddit item older than this
+MACRO_DATA_DAYS = 35 # monthly releases (PMIs, credit, home prices) stay relevant until the next print
+EARNINGS_DAYS = 14   # earnings reactions: two weeks of results so the Earnings Pattern is not a single-day read
+
+# ── HTTP helper ───────────────────────────────────────────────────────────────
+
+def fetch_url(url, timeout=12):
+    try:
+        req = urllib.request.Request(url, headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return r.read().decode('utf-8', errors='ignore')
+    except Exception as e:
+        logger.warning(f"Failed to fetch {url}: {e}")
+        return ""
+
+# ── Date helpers ──────────────────────────────────────────────────────────────
+
+def parse_date(s):
+    """Parse RSS (RFC 2822) or Atom (ISO 8601) date string → UTC datetime or None."""
+    if not s:
+        return None
+    s = s.strip()
+    if 'T' in s:
+        try:
+            dt = datetime.fromisoformat(s.replace('Z', '+00:00'))
+            return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
+        except ValueError:
+            pass
+    s = s.replace('GMT', '+0000')
+    for fmt in ('%a, %d %b %Y %H:%M:%S %z', '%a, %d %b %Y %H:%M:%S +0000',
+                '%d %b %Y %H:%M:%S %z', '%d %b %Y %H:%M:%S +0000'):
+        try:
+            dt = datetime.strptime(s, fmt)
+            return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+    return None
+
+def is_fresh(dt, max_age_days=FRESHNESS_DAYS):
+    if dt is None:
+        return True   # no date → let through (better than blanket-dropping)
+    return (datetime.now(timezone.utc) - dt).days < max_age_days
+
+# ── Source 1: X / Twitter trends ─────────────────────────────────────────────
+
+def get_twitter_trends():
+    html = fetch_url("https://trends24.in/united-states/")
+    if not html:
+        return []
+    trends = re.findall(r'<a[^>]+class=trend-link>([^<]+)</a>', html)
+    if not trends:
+        trends = re.findall(r'<a[^>]+class="[^"]*trend-name[^"]*"[^>]*>([^<]+)</a>', html)
+    result = [t.strip() for t in trends[:60] if t.strip()]
+    logger.info(f"Twitter trends: {len(result)} items")
+    return result
+
+# ── Source 2: Reddit ──────────────────────────────────────────────────────────
+
+def get_reddit_posts(subreddit, limit=25):
+    url = f"https://www.reddit.com/r/{subreddit}/hot.json?limit={limit}&raw_json=1"
+    raw = fetch_url(url)
+    if not raw:
+        return []
+    try:
+        data  = json.loads(raw)
+        posts = data['data']['children']
+        cutoff = datetime.now(timezone.utc) - timedelta(days=FRESHNESS_DAYS)
+        titles = []
+        for p in posts:
+            d = p['data']
+            if d.get('stickied'):
+                continue
+            ts = d.get('created_utc', 0)
+            if ts and datetime.fromtimestamp(ts, tz=timezone.utc) < cutoff:
+                continue                       # too old
+            age_h = int((datetime.now(timezone.utc).timestamp() - ts) / 3600) if ts else 0
+            titles.append(f"{d['title']} [{age_h}h ago]")
+        logger.info(f"r/{subreddit}: {len(titles)} fresh posts")
+        return titles
+    except Exception as e:
+        logger.warning(f"Reddit parse error for {subreddit}: {e}")
+        return []
+
+# ── Source 3: RSS ─────────────────────────────────────────────────────────────
+
+def get_rss_titles(url, max_items=20, max_age_days=FRESHNESS_DAYS):
+    raw = fetch_url(url)
+    if not raw:
+        return []
+    try:
+        root = ET.fromstring(raw)
+        ns   = {'atom': 'http://www.w3.org/2005/Atom'}
+        titles = []
+
+        for item in root.findall('.//item'):
+            if len(titles) >= max_items:
+                break
+            t = item.findtext('title', '').strip()
+            if not t:
+                continue
+            dt = parse_date(item.findtext('pubDate', ''))
+            if not is_fresh(dt, max_age_days):
+                continue           # older than the window → drop
+            tag = f" [{dt.strftime('%b %d')}]" if dt else ''
+            titles.append(f"{t}{tag}")
+
+        if not titles:
+            for entry in root.findall('.//atom:entry', ns):
+                if len(titles) >= max_items:
+                    break
+                t = entry.findtext('atom:title', '', ns).strip()
+                if not t:
+                    continue
+                pub = (entry.findtext('atom:published', '', ns) or
+                       entry.findtext('atom:updated',   '', ns))
+                dt = parse_date(pub)
+                if not is_fresh(dt, max_age_days):
+                    continue
+                tag = f" [{dt.strftime('%b %d')}]" if dt else ''
+                titles.append(f"{t}{tag}")
+
+        logger.info(f"RSS {url[:60]}: {len(titles)} fresh items")
+        return titles
+    except Exception as e:
+        logger.warning(f"RSS parse error for {url}: {e}")
+        return []
+
+# ── Real-time market data: stooq (primary) + Yahoo Finance (fallback) ────────
+
+# Ticker map: stooq_ticker → Yahoo Finance ticker
+_YF_FALLBACK = {
+    "dxy.f":   "DX=F",
+    "^vix":    "^VIX",
+    "10us.b":  "^TNX",    # Yahoo TNX = 10Y yield in %
+    "^spx":    "^GSPC",
+    "^rut":    "^RUT",
+    "^ndq":    "^NDX",
+    "cl.f":    "CL=F",
+    "hg.f":    "HG=F",
+    "xauusd":  "GC=F",
+    "btcusd":  "BTC-USD",
+    "usdpln":  "PLN=X",
+    "eurpln":  "EURPLN=X",
+    "epol.us": "EPOL",
+}
+
+def _stooq_rows(ticker, days_back=35):
+    d2  = datetime.utcnow().strftime('%Y%m%d')
+    d1  = (datetime.utcnow() - timedelta(days=days_back)).strftime('%Y%m%d')
+    url = f"https://stooq.com/q/d/l/?s={ticker}&d1={d1}&d2={d2}&i=d"
+    raw = fetch_url(url)
+    if not raw or 'no data' in raw.lower() or '<' in raw[:20]:
+        return []
+    try:
+        rows = [r for r in csv.DictReader(io.StringIO(raw))
+                if r.get('Date') and r.get('Close') and r['Close'].strip()]
+        rows.sort(key=lambda r: r['Date'])
+        return rows
+    except Exception as e:
+        logger.warning(f"Stooq parse error {ticker}: {e}")
+        return []
+
+def _yahoo_rows(yf_ticker, days_back=35):
+    url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{yf_ticker}"
+           f"?interval=1d&range=60d&includePrePost=false")
+    yf_headers = {**HEADERS, 'Accept': 'application/json',
+                  'Accept-Language': 'en-US,en;q=0.9'}
+    try:
+        req = urllib.request.Request(url, headers=yf_headers)
+        with urllib.request.urlopen(req, timeout=12) as r:
+            raw = r.read().decode('utf-8', errors='ignore')
+    except Exception as e:
+        logger.warning(f"Yahoo Finance fetch failed {yf_ticker}: {e}")
+        return []
+    try:
+        data      = json.loads(raw)
+        result    = data['chart']['result'][0]
+        timestamps = result['timestamp']
+        closes    = result['indicators']['quote'][0]['close']
+        cutoff_ts = (datetime.utcnow() - timedelta(days=days_back)).timestamp()
+        rows = []
+        for ts, c in zip(timestamps, closes):
+            if c is None or ts < cutoff_ts:
+                continue
+            rows.append({'Date': datetime.utcfromtimestamp(ts).strftime('%Y-%m-%d'),
+                         'Close': str(c)})
+        rows.sort(key=lambda r: r['Date'])
+        return rows
+    except Exception as e:
+        logger.warning(f"Yahoo Finance parse error {yf_ticker}: {e}")
+        return []
+
+def _get_rows(stooq_ticker, days_back=35):
+    """Try stooq first; fall back to Yahoo Finance."""
+    rows = _stooq_rows(stooq_ticker, days_back)
+    if rows:
+        return rows
+    yf_ticker = _YF_FALLBACK.get(stooq_ticker)
+    if yf_ticker:
+        logger.info(f"Stooq empty for {stooq_ticker} — trying Yahoo {yf_ticker}")
+        rows = _yahoo_rows(yf_ticker, days_back)
+    if not rows:
+        logger.warning(f"No data for {stooq_ticker} from any source")
+    return rows
+
+def _close(rows, idx):
+    try:
+        v = rows[idx].get('Close', '').strip()
+        return float(v) if v else None
+    except (IndexError, ValueError):
+        return None
+
+def _summary_line(stooq_ticker, label, days_back=35, kind='price'):
+    """kind='price' → 4W change in %; kind='yield' → 4W change in basis points
+    (a yield moving 4.49% → 4.74% is +25 bps, never '+5.6%')."""
+    rows = _get_rows(stooq_ticker, days_back)
+    cur  = _close(rows, -1)
+    ref  = _close(rows, max(0, len(rows) - 21))   # ~4 trading weeks back
+    if cur is None:
+        return f"{label}: n/a", None, None, None
+    if ref and ref != 0:
+        if kind == 'yield':
+            chg  = (cur - ref) * 100                      # bps
+            line = f"{label}: {cur:.2f}%  ({chg:+.0f} bps vs 4W ago)"
+        else:
+            chg   = (cur - ref) / ref * 100
+            arrow = '↑' if chg >= 0 else '↓'
+            line  = f"{label}: {cur:.2f}  ({arrow}{abs(chg):.1f}% vs 4W ago)"
+        return line, cur, ref, chg
+    return f"{label}: {cur:.2f}", cur, ref, None
+
+
+# ── Official US Treasury par yield curve (end-of-day closes) ──────────────────
+# The live feeds above only give a reliable intraday 10Y. The 2Y note has no
+# dependable live ticker (the old ^IRX fallback is the 13-week BILL, not the 2Y),
+# so the curve is taken from the official daily closes: Treasury first, FRED as
+# fallback. Values are the PRIOR business day's close and are labelled as such.
+
+_TREASURY_CSV = ("https://home.treasury.gov/resource-center/data-chart-center/interest-rates/"
+                 "daily-treasury-rates.csv/{year}/all?type=daily_treasury_yield_curve"
+                 "&field_tdr_date_value={year}&page&_format=csv")
+_FRED_CSV = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}&cosd={d1}&coed={d2}"
+
+def _treasury_curve_rows():
+    """[(date 'YYYY-MM-DD', {'3m','2y','5y','10y','30y'}), ...] sorted ascending."""
+    out = {}
+    year = datetime.utcnow().year
+    for y in (year - 1, year):
+        raw = fetch_url(_TREASURY_CSV.format(year=y), timeout=20)
+        if not raw or 'Date' not in raw[:200]:
+            continue
+        try:
+            for r in csv.DictReader(io.StringIO(raw)):
+                try:
+                    m, d, yy = r['Date'].split('/')
+                    out[f"{yy}-{m}-{d}"] = {'3m': float(r['3 Mo']), '2y': float(r['2 Yr']),
+                                           '5y': float(r['5 Yr']), '10y': float(r['10 Yr']),
+                                           '30y': float(r['30 Yr'])}
+                except (KeyError, ValueError):
+                    continue
+        except Exception as e:
+            logger.warning(f"Treasury CSV parse error {y}: {e}")
+    if out:
+        return sorted(out.items())
+    # FRED fallback (same official series, one day lag)
+    d2 = datetime.utcnow().strftime('%Y-%m-%d')
+    d1 = (datetime.utcnow() - timedelta(days=70)).strftime('%Y-%m-%d')
+    series = {}
+    for sid, key in (('DGS3MO', '3m'), ('DGS2', '2y'), ('DGS5', '5y'), ('DGS10', '10y'), ('DGS30', '30y')):
+        raw = fetch_url(_FRED_CSV.format(sid=sid, d1=d1, d2=d2), timeout=20)
+        if not raw:
+            continue
+        for r in csv.DictReader(io.StringIO(raw)):
+            v = r.get(sid, '.')
+            if v not in ('', '.'):
+                series.setdefault(r['observation_date'], {})[key] = float(v)
+    rows = [(k, v) for k, v in sorted(series.items()) if '2y' in v and '10y' in v]
+    if not rows:
+        logger.warning("No official Treasury curve data from Treasury or FRED")
+    return rows
+
+def _curve_shape(spread_bps):
+    if spread_bps < 0:   return "INVERTED"
+    if spread_bps < 25:  return "positive but very flat"
+    if spread_bps < 60:  return "positively sloped but still FLAT by historical standards (long-run average ≈ +90-100 bps)"
+    if spread_bps < 100: return "moderately steep, approaching the long-run average"
+    return "steep"
+
+def _curve_move(chg2, chg10):
+    if abs(chg2) < 4 and abs(chg10) < 4:
+        return "little changed"
+    if chg10 >= chg2 and chg10 > 0:
+        return "bear steepening (both up, 10Y up more)" if chg2 > 0 else "steepening (10Y up, 2Y down/flat)"
+    if chg10 < chg2 and chg2 > 0:
+        return "bear flattening (both up, 2Y up more)" if chg10 > 0 else "flattening (2Y up, 10Y down/flat)"
+    if chg10 <= chg2 and chg10 < 0:
+        return "bull flattening (both down, 10Y down more)" if chg2 < 0 else "flattening (10Y down, 2Y up/flat)"
+    if chg2 < chg10 and chg2 < 0:
+        return "bull steepening (both down, 2Y down more)" if chg10 < 0 else "steepening (2Y down, 10Y up/flat)"
+    return "mixed"
+
+def compile_quant_snapshot():
+    """Fetch live market data. Returns a formatted text block for prompt injection
+    plus a dict of raw values for ratio calculations."""
+    lines = ["=== LIVE QUANT SNAPSHOT (treat as current ground truth) ==="]
+    raw_vals = {}   # stooq_ticker → (current, 4W_ref, 4W_chg_pct)
+
+    def add(stooq_ticker, label, kind='price'):
+        line, cur, ref, chg = _summary_line(stooq_ticker, label, kind=kind)
+        lines.append(line)
+        raw_vals[stooq_ticker] = (cur, ref, chg)
+
+    add("dxy.f",   "DXY Dollar Index")
+    add("^vix",    "VIX")
+    add("10us.b",  "US 10Y Yield (live)", kind='yield')
+    add("^spx",    "S&P 500")
+    add("^rut",    "Russell 2000")
+    add("^ndq",    "Nasdaq 100")
+    add("cl.f",    "WTI Crude Oil")
+    add("hg.f",    "Copper (AI data-centre / grid capex metal — NOT a China-growth gauge)")
+    add("xauusd",  "Gold")
+    add("btcusd",  "Bitcoin")
+    add("usdpln",  "USD/PLN")
+    add("eurpln",  "EUR/PLN")
+    add("epol.us", "EPOL (iShares MSCI Poland ETF, USD)")
+
+    # ── Derived ratios ────────────────────────────────────────────────────────
+
+    # Official Treasury curve (prior business-day close): 2Y, 3M, 30Y and the 10Y-2Y spread.
+    # Both legs of the spread come from the SAME close so the curve is a consistent snapshot.
+    curve = _treasury_curve_rows()
+    today = datetime.utcnow().strftime('%Y-%m-%d')
+    curve = [(k, v) for k, v in curve if k < today]          # never use today's partial/forward data
+    if curve:
+        pdate, pc = curve[-1]
+        p4date, p4 = curve[max(0, len(curve) - 21)]           # ~4 trading weeks earlier
+        spread_bps = (pc['10y'] - pc['2y']) * 100
+        spread4    = (p4['10y'] - p4['2y']) * 100
+        chg2  = (pc['2y']  - p4['2y'])  * 100
+        chg10 = (pc['10y'] - p4['10y']) * 100
+        lines.append(f"--- Official US Treasury closes, prior business day ({pdate}) ---")
+        lines.append(f"US 2Y Yield (prior close): {pc['2y']:.2f}%  ({chg2:+.0f} bps vs 4W ago)")
+        lines.append(f"US 10Y Yield (prior close): {pc['10y']:.2f}%  ({chg10:+.0f} bps vs 4W ago)")
+        if '3m' in pc:
+            lines.append(f"US 3M T-bill (prior close): {pc['3m']:.2f}%")
+        if '30y' in pc:
+            lines.append(f"US 30Y Yield (prior close): {pc['30y']:.2f}%  (30Y-10Y: {(pc['30y']-pc['10y'])*100:+.0f} bps)")
+        lines.append(f"10Y-2Y Spread (prior close): {spread_bps:+.0f} bps  — {_curve_shape(spread_bps)}; "
+                     f"{spread_bps - spread4:+.0f} bps vs 4W ago → {_curve_move(chg2, chg10)}")
+        raw_vals['yield_spread_bps']   = spread_bps
+        raw_vals['yield_spread_4w_chg'] = spread_bps - spread4
+        raw_vals['2y_prior_close']     = pc['2y']
+        raw_vals['curve_date']         = pdate
+    else:
+        lines.append("US 2Y Yield / 10Y-2Y Spread: n/a (official curve unavailable — do NOT infer the 2Y from bills)")
+
+    # Russell / Nasdaq ratio  (breadth vs concentration signal)
+    rut_c, rut_r = raw_vals.get("^rut", (None, None))[:2]
+    ndq_c, ndq_r = raw_vals.get("^ndq", (None, None))[:2]
+    if rut_c and ndq_c and ndq_c != 0 and rut_r and ndq_r and ndq_r != 0:
+        cur_ratio = rut_c / ndq_c
+        ref_ratio = rut_r / ndq_r
+        ratio_chg = (cur_ratio - ref_ratio) / ref_ratio * 100
+        arrow     = '↑' if ratio_chg >= 0 else '↓'
+        desc      = 'small-caps outperforming (breadth expanding)' if ratio_chg > 0 else 'mega-cap dominance (narrow market)'
+        lines.append(f"Russell/Nasdaq Ratio: {arrow}{abs(ratio_chg):.1f}% vs 4W ago  ({desc})")
+        raw_vals['rut_ndq_ratio_chg'] = ratio_chg
+
+    # Gold / Bitcoin ratio  (convergence/divergence signal)
+    gold_c, gold_ref = raw_vals.get("xauusd", (None, None))[:2]
+    btc_c,  btc_ref  = raw_vals.get("btcusd", (None, None))[:2]
+    if gold_c and btc_c and btc_c != 0:
+        gb_ratio = gold_c / btc_c
+        lines.append(f"Gold/BTC Ratio: {gb_ratio:.4f}  (lower = BTC outperforming gold as macro hedge)")
+        # 4W divergence
+        if gold_ref and btc_ref and btc_ref != 0:
+            gold_chg = (gold_c - gold_ref) / gold_ref * 100
+            btc_chg  = (btc_c  - btc_ref)  / btc_ref  * 100
+            diverge  = gold_chg - btc_chg
+            lines.append(f"Gold vs BTC 4W divergence: {diverge:+.1f}pp  "
+                          f"({'Gold outrunning BTC — watch for convergence' if diverge > 10 else 'BTC outrunning Gold' if diverge < -10 else 'moving in sync'})")
+            raw_vals['gold_btc_divergence_4w'] = diverge
+
+    # VIX context
+    vix_c, _, vix_chg = raw_vals.get("^vix", (None, None, None))
+    if vix_c:
+        regime = ("FEAR / potential capitulation" if vix_c > 25
+                  else "ELEVATED" if vix_c > 18
+                  else "COMPLACENCY — low hedging demand")
+        lines.append(f"VIX Regime: {regime}  (current {vix_c:.1f})")
+
+    lines.append("=== END QUANT SNAPSHOT ===")
+    block = "\n".join(lines)
+    logger.info(f"Quant snapshot compiled:\n{block}")
+    return block
+
+# ── Source 4: Stocktwits (real financial social content, no auth for public stream) ──
+
+def get_stocktwits_trending():
+    """Fetch trending messages from Stocktwits. Filters to last 48 hours."""
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=48)
+    results = []
+    # Trending stocks stream
+    for url in [
+        "https://api.stocktwits.com/api/2/streams/trending.json?limit=30",
+        "https://api.stocktwits.com/api/2/streams/suggested.json?limit=20",
+    ]:
+        raw = fetch_url(url)
+        if not raw:
+            continue
+        try:
+            data = json.loads(raw)
+            for msg in data.get('messages', []):
+                dt = parse_date(msg.get('created_at', ''))
+                if dt and dt < cutoff:
+                    continue
+                body = msg.get('body', '').strip()
+                if len(body) < 40:
+                    continue
+                syms = [s.get('symbol', '') for s in msg.get('symbols', []) if s.get('symbol')]
+                tag  = f" [${', $'.join(syms)}]" if syms else ''
+                results.append(f"{body}{tag}")
+        except Exception as e:
+            logger.warning(f"Stocktwits parse error {url}: {e}")
+    logger.info(f"Stocktwits: {len(results)} fresh messages")
+    return results
+
+# ── Aggregate all signals ─────────────────────────────────────────────────────
+
+def compile_signals():
+    signals = {}
+    mon_yr  = datetime.utcnow().strftime('%B %Y')   # e.g. "February 2026"
+
+    # Social
+    signals['twitter_trends']      = get_twitter_trends()
+    signals['reddit_investing']    = get_reddit_posts('investing')
+    signals['reddit_stocks']       = get_reddit_posts('stocks')
+    signals['reddit_wsb']          = get_reddit_posts('wallstreetbets', limit=15)
+    signals['reddit_worldnews']    = get_reddit_posts('worldnews', limit=20)
+    signals['reddit_geopolitics']  = get_reddit_posts('geopolitics', limit=15)
+    signals['reddit_economics']    = get_reddit_posts('economics', limit=15)
+    signals['reddit_crypto']       = get_reddit_posts('CryptoCurrency', limit=15)
+
+    # General finance & macro
+    signals['yahoo_finance']       = get_rss_titles('https://finance.yahoo.com/rss/topstories')
+    signals['google_markets']      = get_rss_titles(
+        'https://news.google.com/rss/search?q=stock+market+investing+economy&hl=en-US&gl=US&ceid=US:en')
+    signals['google_macro']        = get_rss_titles(
+        'https://news.google.com/rss/search?q=central+bank+inflation+geopolitics+commodities&hl=en-US&gl=US&ceid=US:en')
+
+    # ── Quant indicator news feeds (month-scoped so Google returns fresh data) ─
+    signals['ism_pmi']             = get_rss_titles(
+        f'https://news.google.com/rss/search?q=ISM+manufacturing+services+PMI+{mon_yr}&hl=en-US&gl=US&ceid=US:en',
+        max_items=8)
+    signals['fed_liquidity']       = get_rss_titles(
+        f'https://news.google.com/rss/search?q=Fed+balance+sheet+bank+reserves+QT+{mon_yr}&hl=en-US&gl=US&ceid=US:en',
+        max_items=8)
+    signals['credit_spreads']      = get_rss_titles(
+        f'https://news.google.com/rss/search?q=high+yield+credit+spreads+HYG+investment+grade+{mon_yr}&hl=en-US&gl=US&ceid=US:en',
+        max_items=8)
+    signals['rig_count']           = get_rss_titles(
+        f'https://news.google.com/rss/search?q=Baker+Hughes+rig+count+oil+drilling+{mon_yr}&hl=en-US&gl=US&ceid=US:en',
+        max_items=6)
+
+    # ── Central bank feeds ────────────────────────────────────────────────────
+    signals['cb_fed']              = get_rss_titles(
+        'https://news.google.com/rss/search?q=Federal+Reserve+FOMC+interest+rate+decision&hl=en-US&gl=US&ceid=US:en',
+        max_items=10)
+    signals['cb_ecb']              = get_rss_titles(
+        'https://news.google.com/rss/search?q=ECB+European+Central+Bank+interest+rate+eurozone&hl=en-US&gl=US&ceid=US:en',
+        max_items=10)
+    signals['cb_boj']              = get_rss_titles(
+        'https://news.google.com/rss/search?q=Bank+of+Japan+BOJ+rate+hike+yen&hl=en-US&gl=US&ceid=US:en',
+        max_items=10)
+    signals['cb_rba']              = get_rss_titles(
+        'https://news.google.com/rss/search?q=Reserve+Bank+Australia+RBA+interest+rate&hl=en-US&gl=US&ceid=US:en',
+        max_items=10)
+    signals['cb_nbp_poland']       = get_rss_titles(
+        'https://news.google.com/rss/search?q=Poland+NBP+interest+rate+zloty+inflation&hl=en-US&gl=US&ceid=US:en',
+        max_items=10)
+    # ── Poland depth feeds (Polish-language Google News + English + Polish portals) ──
+    since = (datetime.utcnow() - timedelta(days=FRESHNESS_DAYS)).strftime('%Y-%m-%d')   # Google 'after:' keeps results fresh
+    def _pl(q, n=12):
+        return get_rss_titles('https://news.google.com/rss/search?q=' + urllib.parse.quote(f'{q} after:{since}')
+                              + '&hl=pl&gl=PL&ceid=PL:pl', max_items=n)
+    # Google News ANDs every term, so queries stay short (one topic each)
+    signals['pl_nbp']      = _pl('NBP stopy procentowe')
+    signals['pl_cpi']      = _pl('inflacja GUS')
+    signals['pl_data']     = _pl('PKB GUS', 6) + _pl('sprzedaż detaliczna', 6) + _pl('produkcja przemysłowa', 6) + _pl('wynagrodzenia GUS', 6)
+    signals['pl_gpw']      = _pl('WIG20')
+    signals['pl_pln']      = _pl('kurs złotego', 8) + _pl('obligacje skarbowe', 8)
+    signals['pl_fiscal']   = _pl('deficyt budżetu', 6) + _pl('dług publiczny', 6) + _pl('Ministerstwo Finansów', 6) + _pl('Sejm ustawa', 6)
+    signals['pl_corp']     = (_pl('Orlen', 5) + _pl('PKO BP', 5) + _pl('KGHM', 5) + _pl('PGE', 5)
+                              + _pl('Allegro', 4) + _pl('Dino', 4) + _pl('CD Projekt', 4) + _pl('LPP', 4))
+    signals['pl_banks']    = _pl('banki kredyty', 6) + _pl('WIBOR', 5) + _pl('frankowicze', 5)
+    signals['pl_energy_housing'] = _pl('ceny energii', 6) + _pl('elektrownia jądrowa', 4) + _pl('kredyt hipoteczny', 6) + _pl('ceny mieszkań', 6)
+    signals['pl_geo']      = _pl('Polska Ukraina', 8) + _pl('wojsko NATO', 6)
+    signals['pl_en']       = (get_rss_titles('https://news.google.com/rss/search?q=' + urllib.parse.quote(f'Poland economy after:{since}')
+                                             + '&hl=en-US&gl=US&ceid=US:en', max_items=10)
+                              + get_rss_titles('https://news.google.com/rss/search?q=' + urllib.parse.quote(f'Poland zloty after:{since}')
+                                               + '&hl=en-US&gl=US&ceid=US:en', max_items=6)
+                              + get_rss_titles('https://news.google.com/rss/search?q=' + urllib.parse.quote(f'Polish stocks after:{since}')
+                                               + '&hl=en-US&gl=US&ceid=US:en', max_items=6))
+    signals['pl_bankier']  = get_rss_titles('https://www.bankier.pl/rss/wiadomosci.xml', max_items=15)
+    signals['pl_money']    = get_rss_titles('https://www.money.pl/rss/', max_items=15)
+
+    signals['cb_pboc_china']       = get_rss_titles(
+        'https://news.google.com/rss/search?q=PBOC+China+rate+cut+stimulus+yuan+RRR&hl=en-US&gl=US&ceid=US:en',
+        max_items=10)
+
+    # ── China deep-dive (parity with US coverage depth) + global growth pulse ──
+    # Same rule as Poland: Google News ANDs every term, so one short topic per query.
+    # Monthly releases (PMIs, credit, home prices, activity) use a 35-day window ('m') so the latest print is present.
+    since_m = (datetime.utcnow() - timedelta(days=MACRO_DATA_DAYS)).strftime('%Y-%m-%d')
+    since_e = (datetime.utcnow() - timedelta(days=EARNINGS_DAYS)).strftime('%Y-%m-%d')
+    W, M, E, P = 'w', 'm', 'e', 'p'     # P = the week before the current 7-day window (earnings history)
+    topic_queries = {
+        'china_pboc':     [('PBOC', 6, W), ('loan prime rate', 4, W), ('yuan fixing', 4, W)],
+        'china_pmi':      [('China PMI', 8, M), ('Caixin PMI', 4, M)],
+        'china_credit':   [('China credit data', 5, M), ('China aggregate financing', 5, M),
+                           ('China new loans', 4, M), ('China M1 M2', 3, M)],
+        'china_activity': [('China retail sales', 4, M), ('China industrial output', 4, M),
+                           ('China industrial profits', 3, M), ('China CPI PPI', 4, M), ('China GDP', 3, M)],
+        'china_property': [('China new home prices', 5, M), ('China property investment', 4, M),
+                           ('China property sales', 4, W), ('China developer debt', 4, W), ('Vanke', 3, W),
+                           ('China local government debt', 3, M)],
+        'china_policy':   [('China stimulus', 5, W), ('China special bonds', 3, W), ('Politburo economy', 3, W),
+                           ('State Council China economy', 3, W)],
+        'china_trade':    [('China exports', 5, M), ('China tariffs', 4, W), ('China rare earths', 3, W)],
+        'china_markets':  [('CSI 300', 4, W), ('Hang Seng', 4, W), ('China bond yields', 3, W), ('yuan dollar', 3, W)],
+        'growth_pmi':     [('flash PMI', 6, M), ('eurozone PMI', 4, M), ('Japan PMI', 3, M), ('Australia PMI', 3, M),
+                           ('UK PMI', 3, M), ('ISM services', 3, M)],
+        'growth_credit':  [('credit impulse', 4, M), ('bank lending eurozone', 3, M), ('US bank lending', 3, M),
+                           ('senior loan officer survey', 2, M)],
+        # Earnings: who reported (beat / miss / guidance) and who is set up for an EPS surprise — feeds the sector call
+        'earn_reported':  [('earnings beat estimates', 8, E), ('earnings miss estimates', 6, E), ('raises guidance', 6, E),
+                           ('cuts guidance', 5, E), ('quarterly results shares', 5, E), ('stock falls despite beat', 4, E),
+                           ('shares jump after earnings', 4, E)],
+        'earn_prev_week': [('earnings beat estimates', 6, P), ('earnings miss estimates', 4, P), ('raises guidance', 4, P),
+                           ('cuts guidance', 3, P), ('stock falls despite beat', 3, P), ('shares jump after earnings', 3, P)],
+        'earn_outlook':   [('earnings preview', 5, W), ('analysts raise estimates', 4, W), ('earnings estimates revised', 3, W),
+                           ('price target raised earnings', 3, W), ('earnings this week', 4, W), ('earnings to watch', 3, W),
+                           ('options implied move earnings', 3, W), ('whisper number', 2, W)],
+        'earn_sector':    [('tech earnings', 3, W), ('chipmaker earnings', 3, W), ('bank earnings', 3, W),
+                           ('oil company earnings', 3, W), ('retailer earnings', 3, W), ('pharma earnings', 3, W),
+                           ('industrial earnings', 3, W), ('airline earnings', 2, W), ('utility earnings', 2, W),
+                           ('homebuilder earnings', 2, W), ('automaker earnings', 3, W), ('media earnings', 2, W),
+                           ('REIT earnings', 2, W), ('chemical earnings', 2, W), ('food company earnings', 2, W)],
+        'growth_housing': [('housing starts', 4, M), ('existing home sales', 4, M), ('new home sales', 3, M),
+                           ('mortgage rates', 4, W), ('Case-Shiller', 3, M), ('house prices Europe', 3, M),
+                           ('Australia home prices', 3, M)],
+    }
+    def _en(job):
+        q, n, win = job
+        after = {M: since_m, E: since_e, P: since_e}.get(win, since)
+        before = f' before:{since}' if win == P else ''
+        return get_rss_titles('https://news.google.com/rss/search?q=' + urllib.parse.quote(f'{q} after:{after}{before}')
+                              + '&hl=en-US&gl=US&ceid=US:en', max_items=n,
+                              max_age_days={M: MACRO_DATA_DAYS, E: EARNINGS_DAYS, P: EARNINGS_DAYS}.get(win, FRESHNESS_DAYS))
+    jobs = [(key, job) for key, js in topic_queries.items() for job in js]
+    with ThreadPoolExecutor(max_workers=8) as ex:          # ~75 short queries — parallel to protect the Lambda timeout
+        results = list(ex.map(lambda kj: _en(kj[1]), jobs))
+    for key in topic_queries:
+        signals[key] = []
+    for (key, _), items in zip(jobs, results):
+        signals[key] += [t for t in items if t not in signals[key]]
+
+    # Sector-specific
+    signals['google_semis']        = get_rss_titles(
+        'https://news.google.com/rss/search?q=semiconductor+NVIDIA+TSMC+ASML+AVGO+AI+chips&hl=en-US&gl=US&ceid=US:en',
+        max_items=15)
+    signals['google_energy']       = get_rss_titles(
+        'https://news.google.com/rss/search?q=oil+energy+crude+OPEC+natural+gas+rig+count&hl=en-US&gl=US&ceid=US:en',
+        max_items=12)
+    signals['google_euauto']       = get_rss_titles(
+        'https://news.google.com/rss/search?q=European+auto+BMW+Volkswagen+Stellantis+EV&hl=en-US&gl=US&ceid=US:en',
+        max_items=10)
+
+    # Flows & EM
+    signals['google_flows']        = get_rss_titles(
+        'https://news.google.com/rss/search?q=capital+flows+dollar+DXY+emerging+markets+liquidity&hl=en-US&gl=US&ceid=US:en',
+        max_items=12)
+
+    # Crypto
+    signals['google_crypto']       = get_rss_titles(
+        'https://news.google.com/rss/search?q=bitcoin+ethereum+crypto+defi+stablecoin&hl=en-US&gl=US&ceid=US:en',
+        max_items=15)
+    signals['coindesk']            = get_rss_titles(
+        'https://www.coindesk.com/arc/outboundfeeds/rss/', max_items=15)
+
+    signals['stocktwits']          = get_stocktwits_trending()
+
+    total = sum(len(v) for v in signals.values())
+    logger.info(f"Total signals compiled: {total} items across {len(signals)} sources")
+    return signals
+
+# ── Claude helpers ────────────────────────────────────────────────────────────
+
+def fmt(label, items):
+    if not items:
+        return ""
+    return f"\n### {label}\n" + "\n".join(f"- {i}" for i in items)
+
+# DATA INTEGRITY: no invented numbers
+DATA_INTEGRITY_RULE = """
+⚠️  DATA INTEGRITY — NON-NEGOTIABLE:
+You MUST NOT state specific numeric values (interest rates, GDP %, CPI, index levels, price targets)
+UNLESS that exact figure appears in the signal feed above OR in the QUANT SNAPSHOT.
+Your training-data knowledge of rates/data is STALE and WILL be wrong.
+Use qualitative language for anything not sourced from the feed:
+  ✓ "in an active easing cycle after recent cuts"     ✗ "at 4.0%"
+  ✓ "inflation trending toward target"                ✗ "CPI at 2.3%"
+EXCEPTION: QUANT SNAPSHOT values (DXY, VIX, yields, etc.) are live — use them freely.
+If genuinely uncertain about a figure, write "[verify current figure]" or omit it.
+"""
+
+# FRESHNESS: never treat past events as future
+FRESHNESS_RULE = """
+📅  FRESHNESS — ABSOLUTE RULE — TODAY'S DATE IS IN THE PROMPT HEADER:
+Every news headline in the feed has a [Mon DD] date tag.
+• Events whose date tag is ≤ today HAVE ALREADY HAPPENED — describe them in PAST TENSE.
+  ✓ "following last week's State of the Union"     ✗ "ahead of the State of the Union"
+  ✓ "after the NBP held rates at its last meeting" ✗ "NBP is expected to lower rates"
+  ✓ "following the RBA's recent cut"               ✗ "the RBA is set to cut"
+• NEVER call any event "upcoming" or "anticipated" unless the signal feed contains a headline
+  explicitly dated in the FUTURE confirming that it has not yet occurred.
+• Do NOT rely on your training-data memory for event calendars — those dates may be months or years stale.
+  "Data due this week", "PMIs at month-end", "ahead of the flash PMIs" need a headline in the feed announcing them.
+• QUANT SNAPSHOT data is live — treat those figures as current ground truth.
+"""
+
+BREVITY_RULE = """
+📏  BREVITY — CRITICAL FOR OUTPUT LIMITS:
+• Items with NOTHING NEW today: 2 sentences maximum. Do not pad.
+• Items with something NEW or STRUCTURAL: up to 8 sentences — earn every word.
+• Never repeat the same idea in different words to fill space.
+Maximum information density. Readers are professionals — skip the obvious.
+"""
+
+DIRECTION_INTEGRITY_RULE = """
+🧭  DIRECTION ACCURACY — THIS IS A HARD RULE — NO EXCEPTIONS:
+The QUANT SNAPSHOT encodes live price direction with an arrow: ↑ = rising, ↓ = falling vs 4 weeks ago.
+BEFORE writing ANY directional statement about an asset, check its QUANT SNAPSHOT arrow.
+
+YIELDS: If QUANT SNAPSHOT shows "US 10Y Yield (live): X.XX%  (+N bps vs 4W ago)" → yields are RISING / CLIMBING.
+  ✓ Write: "with the 10Y up 25 bps in four weeks" / "as the 10Y climbs" / "in a rising-rate environment"
+  ✗ NEVER write: "yields are declining" / "falling rates" / "rate relief" — if the change is positive
+If the bps change is negative → yields are falling. Write accordingly.
+Calibrate adjectives to size: <10 bps = "edged"/"drifted"; 10-25 bps = "rose"/"fell"; >25 bps in 4W = "surged"/"slid".
+
+Same rule applies to EVERY asset: DXY, Gold, Oil, S&P, BTC, VIX — arrow = ground truth.
+If you write a direction that contradicts the QUANT SNAPSHOT arrow, it is a factual error.
+When in doubt: quote the snapshot line verbatim and let the number speak.
+"""
+
+YIELD_UNITS_AND_CURVE_RULE = """
+📐  YIELD UNITS & CURVE — HARD RULE:
+1. Yield CHANGES are always in BASIS POINTS, never in percent of the yield. 4.49% → 4.74% is "+25 bps", NOT "+5.6%".
+   ✗ "yields surged 5.8%"  ✗ "10Y ↑5.0%"      ✓ "the 10Y rose 25 bps"  ✓ "10Y at 4.74% (+25 bps vs 4W)"
+2. The US 2Y and the 10Y-2Y spread in the QUANT SNAPSHOT are the OFFICIAL PRIOR-CLOSE values (both legs from the same
+   close). Quote them as such ("2Y at 4.28% at the prior close", "10Y-2Y +47 bps at the prior close"). Do not recompute
+   the spread from the live 10Y, and never use a T-bill rate as the 2Y.
+3. Describe the curve with the label given in the snapshot. A +20 to +50 bps 2s10s is "positively sloped but still flat"
+   — NOT "normal", "healthy", "steep" or "the best NIM environment in years". The long-run average is about +90-100 bps.
+4. Use the snapshot's curve-move label (bear steepening / bull flattening / little changed). "Bear steepening" means
+   BOTH yields rose with the 10Y rising more; do not claim the front end is "anchored" if the 2Y moved ≥10 bps.
+5. If the snapshot says the 2Y / spread is n/a, do not state a 2Y level or a spread figure at all.
+"""
+
+COMPANY_ACCURACY_RULE = """
+🏢  COMPANY ACCURACY — HARD RULE:
+When naming a specific company in the Sector Deep Dive (Reported / EPS Upside Watch) or any instrument recommendation:
+1. The company's described activity MUST be directly traceable to a headline in the signal feed — do NOT infer or embellish.
+2. If the signal is an M&A / acquisition / bid, state WHAT the target actually does — do not relabel the target's industry to match the sector narrative.
+   ✓ "MLM bidding $13.5B for [aggregates company X] — a pure-play M&A event in materials"
+   ✗ "MLM bidding on an AI megaproject" — if the target is not an AI company, NEVER call it one.
+3. If a company is a PARTNER or CO-BUILDER in a disruptive product, it is a BENEFICIARY — never list it as collateral damage or a threatened incumbent.
+4. If you cannot verify a company's role from the feed, write "role unclear — verify" rather than guessing.
+"""
+
+GROWTH_PULSE_RULE = """
+📈  GROWTH PULSE — READ GROWTH FROM PMIs, CREDIT AND HOUSING, NOT FROM COPPER:
+1. Copper is no longer a clean China / global-growth barometer: its marginal demand is AI data-centre build-out, power-grid
+   and electrification capex. NEVER infer China demand, global growth or risk appetite from copper, a gold/copper ratio or
+   an oil/copper ratio, and do not build models on them. Mention copper only as an asset in its own right (Materials,
+   miners, AI-infrastructure supply chain, KGHM). Gold is an asset (central-bank buying, real rates, dollar), not a gauge.
+2. Anchor every growth judgement on the growth pulse in the feed:
+   • PMIs — level vs 50, direction, and new orders / new export orders (ISM, S&P Global flash, NBS and private China PMIs)
+   • Credit impulse — is new credit accelerating or decelerating (China TSF / new loans / M1-M2; US and euro-area bank
+     lending, loan-officer surveys, credit spreads)
+   • Real estate — home prices, sales, starts / investment, mortgage rates, developer stress
+3. Monthly releases carry a [Mon DD] tag that can be weeks old: call them "the latest (May) print", never "this week".
+   Quote figures only as they appear in a headline; if a headline gives no number, describe the direction only.
+"""
+
+def call_claude(prompt_text, max_tokens=16000):
+    import time
+    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    for attempt in range(5):
+        try:
+            msg = client.beta.messages.create(
+                model="claude-opus-4-6",
+                max_tokens=max_tokens,
+                betas=["output-128k-2025-02-19"],
+                messages=[{"role": "user", "content": prompt_text}]
+            )
+            text = msg.content[0].text
+            logger.info(f"Claude call done — {len(text)} chars, stop_reason={msg.stop_reason}")
+            if msg.stop_reason == "max_tokens":
+                logger.warning("Still truncated at max_tokens — increase if needed")
+            return text
+        except anthropic.RateLimitError as e:
+            wait = 60 * (attempt + 1)  # 60s, 120s, 180s, 240s, 300s
+            logger.warning(f"Rate limit hit (attempt {attempt+1}/5) — waiting {wait}s: {e}")
+            if attempt == 4:
+                raise
+            time.sleep(wait)
+
+# ── Part 1: Geography + Sectors + Underowned ──────────────────────────────────
+
+def analyze_part1(signals, today_str, quant_snapshot):
+    raw = (
+        fmt("X/Twitter Trending (US)",         signals.get('twitter_trends', []))
+        + fmt("Reddit r/investing",             signals.get('reddit_investing', []))
+        + fmt("Reddit r/stocks",                signals.get('reddit_stocks', []))
+        + fmt("Reddit r/wallstreetbets",        signals.get('reddit_wsb', []))
+        + fmt("Reddit r/worldnews",             signals.get('reddit_worldnews', []))
+        + fmt("Reddit r/geopolitics",           signals.get('reddit_geopolitics', []))
+        + fmt("Reddit r/economics",             signals.get('reddit_economics', []))
+        + fmt("Yahoo Finance",                  signals.get('yahoo_finance', []))
+        + fmt("Google News — Markets",          signals.get('google_markets', []))
+        + fmt("Google News — Macro",            signals.get('google_macro', []))
+        + fmt("ISM / PMI News",                 signals.get('ism_pmi', []))
+        + fmt("Fed Balance Sheet / Liquidity",  signals.get('fed_liquidity', []))
+        + fmt("Credit Spreads",                 signals.get('credit_spreads', []))
+        + fmt("Rig Count / Drilling",           signals.get('rig_count', []))
+        + fmt("CB Feed — US Fed / FOMC",        signals.get('cb_fed', []))
+        + fmt("CB Feed — ECB / Eurozone",       signals.get('cb_ecb', []))
+        + fmt("CB Feed — Bank of Japan",        signals.get('cb_boj', []))
+        + fmt("CB Feed — RBA / Australia",      signals.get('cb_rba', []))
+        + fmt("CB Feed — NBP / Poland",         signals.get('cb_nbp_poland', []))
+        + fmt("Poland — NBP / RPP (PL)",        signals.get('pl_nbp', []))
+        + fmt("Poland — Inflation / GUS (PL)",  signals.get('pl_cpi', []))
+        + fmt("Poland — Activity Data (PL)",    signals.get('pl_data', []))
+        + fmt("Poland — GPW / WIG20 (PL)",      signals.get('pl_gpw', []))
+        + fmt("Poland — Zloty & POLGBs (PL)",   signals.get('pl_pln', []))
+        + fmt("Poland — Fiscal & Politics (PL)", signals.get('pl_fiscal', []))
+        + fmt("Poland — Corporates (PL)",       signals.get('pl_corp', []))
+        + fmt("Poland — Banks / WIBOR / CHF (PL)", signals.get('pl_banks', []))
+        + fmt("Poland — Energy & Housing (PL)", signals.get('pl_energy_housing', []))
+        + fmt("Poland — Geopolitics & Security (PL)", signals.get('pl_geo', []))
+        + fmt("Poland — English press",         signals.get('pl_en', []))
+        + fmt("Poland — Bankier.pl",            signals.get('pl_bankier', []))
+        + fmt("Poland — Money.pl",              signals.get('pl_money', []))
+        + fmt("CB Feed — PBOC / China",         signals.get('cb_pboc_china', []))
+        + fmt("China — PBOC / LPR / Yuan",      signals.get('china_pboc', []))
+        + fmt("China — PMIs (monthly)",         signals.get('china_pmi', []))
+        + fmt("China — Credit / TSF / Loans (monthly)", signals.get('china_credit', []))
+        + fmt("China — Activity, CPI/PPI (monthly)", signals.get('china_activity', []))
+        + fmt("China — Property & LGFV",        signals.get('china_property', []))
+        + fmt("China — Fiscal & Policy",        signals.get('china_policy', []))
+        + fmt("China — Trade & Tariffs",        signals.get('china_trade', []))
+        + fmt("China — Markets & Flows",        signals.get('china_markets', []))
+        + fmt("Growth Pulse — Global PMIs (monthly)", signals.get('growth_pmi', []))
+        + fmt("Growth Pulse — Credit & Bank Lending (monthly)", signals.get('growth_credit', []))
+        + fmt("Growth Pulse — Housing & Mortgages (monthly)", signals.get('growth_housing', []))
+        + fmt("Google News — Semis & AI Chips", signals.get('google_semis', []))
+        + fmt("Google News — Energy & Oil",     signals.get('google_energy', []))
+        + fmt("Google News — European Auto",    signals.get('google_euauto', []))
+        + fmt("Google News — Flows & Dollar",   signals.get('google_flows', []))
+    )
+
+    prompt = f"""You are a senior portfolio manager at a global macro hedge fund. Today is {today_str}.
+You are inspired by capitalflowresearch.com — you think in terms of global liquidity cycles, cross-border capital flows, and how money moves across asset classes.
+Be willing to take non-consensus or controversial views. When something is structurally NEW, write 5-8 sentences on it.
+
+{DATA_INTEGRITY_RULE}
+{FRESHNESS_RULE}
+{BREVITY_RULE}
+{DIRECTION_INTEGRITY_RULE}
+{YIELD_UNITS_AND_CURVE_RULE}
+{COMPANY_ACCURACY_RULE}
+{GROWTH_PULSE_RULE}
+
+{quant_snapshot}
+
+RAW SIGNAL FEED (news ≤{FRESHNESS_DAYS} days old; monthly-data feeds ≤{MACRO_DATA_DAYS} days; each tagged [Mon DD]):
+{raw}
+
+---
+Produce a clean HTML fragment (NO <html>/<body> tags). Complete ALL FOUR sections below fully.
+
+<h2 style="color:#1a1a2e;border-bottom:2px solid #1a73e8;padding-bottom:6px">🌍 Geographic Macro Overview</h2>
+
+Cover EXACTLY these geographies. Never skip any.
+For EACH write FOUR explicit labelled parts:
+• Macro Stance — monetary direction, fiscal stance, and the GROWTH PULSE: latest PMIs (and new orders), credit
+  impulse / bank lending and housing data for that geography from the feed (no invented numbers; never copper)
+• New / Most Important — what has materially CHANGED per the signal feed this week (use past tense for completed events)
+• Playbook ✓ — what is going exactly as the consensus script predicts
+• ⚠️ Divergence — what BREAKS from the playbook. If structural, write 5-8 sentences on the mechanic.
+
+Block per geography:
+<div style="margin-bottom:24px;padding:16px;background:#f8f9ff;border-left:5px solid #1a73e8;border-radius:4px">
+  <h3 style="margin:0 0 10px">[Flag] [Country] &nbsp;<span style="font-size:13px;font-weight:normal;color:[#2d7a2d/#c0392b/#b07d00]">[Bullish/Bearish/Mixed]</span> &nbsp;<span style="font-size:12px;background:#e8f0fe;padding:2px 8px;border-radius:10px;color:#1a73e8">[↑↓→ rate direction]</span></h3>
+  <p><strong>Macro Stance:</strong> ...</p>
+  <p><strong>New / Most Important:</strong> ...</p>
+  <p><strong>Playbook ✓:</strong> ... &nbsp;|&nbsp; <strong>⚠️ Divergence:</strong> ...</p>
+</div>
+
+The rate-direction pill must state a policy direction ("→ hold, easing bias", "↑ hike risk", "↓ cutting") — never
+"unclear", "n/a" or a remark about the feed or data availability.
+
+Required geographies: 🇺🇸 United States · 🇪🇺 European Union · 🇨🇳 China · 🇯🇵 Japan · 🇦🇺 Australia · 🇵🇱 Poland · 🌏 EM (1-2 most interesting only, skip if nothing new)
+
+🇨🇳 CHINA DEPTH — write China at the SAME depth as the United States or wider (never a 2-sentence stub): 450-800 words
+(hard cap 800 — the rest of the report must still fit).
+Use the dedicated "China —" feeds; cite source and [Mon DD] tag for key claims. Replace the four generic labelled parts
+with these EIGHT labelled <p> parts, in this order:
+• Macro Stance — PBOC: LPR / RRR / liquidity operations, yuan fixing vs spot, CNY direction; CPI / PPI (deflation risk)
+• PMIs & Activity — official NBS and private manufacturing / non-manufacturing PMIs (level vs 50, new orders, new export
+  orders), retail sales, industrial output, industrial profits, GDP
+• Credit Impulse — new yuan loans, total social financing growth, M1 / M2, government-bond share of credit: is the credit
+  impulse turning up or down, and is it reaching households and private firms
+• Property — new and resale home prices (70-city), sales, real-estate investment, starts, land sales, developer stress
+  (Vanke etc.), local-government / LGFV debt and special bonds
+• Fiscal, Policy & Trade — Politburo / State Council / NDRC signals (stimulus delivered vs promised), exports and the
+  surplus, US/EU tariffs, rare-earth / export controls
+• Markets & Flows — CSI 300 / Hang Seng, CGB yields, CNY, foreign inflows vs outflows
+• New / Most Important — the single development that matters most this week and why
+• Playbook ✓ … &nbsp;|&nbsp; ⚠️ Divergence … — one paragraph; Divergence must explain the transmission mechanic to global
+  assets (AUD, EM, European exporters, bulk commodities such as iron ore and oil) through PMIs, credit and property —
+  NOT through copper
+If a topic has nothing in the feed, write one honest sentence saying so — never pad or invent.
+
+🇵🇱 POLAND DEPTH — the reader is a Poland-based professional investor. Write Poland at LEAST as wide as the United
+States block (never a 2-sentence stub): 550-850 words. Use the dedicated "Poland —" feeds (Polish-language headlines —
+translate the substance; cite source and [Mon DD] tag for key claims). Replace the four generic labelled parts with
+these SEVEN labelled <p> parts, in this order:
+• Macro Stance — NBP / RPP decision and guidance, CPI (GUS flash / final), GDP, retail sales, industry, wages, labour
+• Markets — GPW / WIG20 action and leaders (from headlines); the zloty ONLY from the QUANT SNAPSHOT USD/PLN and EUR/PLN
+  lines; POLGB yields only if a headline gives them; EPOL from the snapshot
+• Fiscal & Politics — budget, deficit, debt issuance, government / Sejm / presidential decisions, EU funds (KPO), taxes
+• Corporate & Sectors — banks (PKO, Pekao, WIBOR, FX-mortgage cases), energy (Orlen, PGE, power prices, nuclear),
+  retail (Dino, LPP, Allegro), mining (KGHM), gaming (CD Projekt), housing / mortgages — whatever the feed supports
+• Geopolitics & Security — Ukraine, border, defence spending, NATO, Russia-related headlines affecting Poland
+• New / Most Important — the single development that matters most this week and why
+• Playbook ✓ … &nbsp;|&nbsp; ⚠️ Divergence … — one paragraph, as for other geographies
+If a topic has nothing in the feed, write one honest sentence saying so — never pad or invent. Every number must come
+from a headline or the QUANT SNAPSHOT (Polish decimal comma 3,1 proc. → 3.1%).
+
+<hr style="border:none;border-top:2px solid #eee;margin:28px 0">
+
+<h2 style="color:#1a1a2e;border-bottom:2px solid #34a853;padding-bottom:6px">📊 Sector Deep Dive</h2>
+
+Cover ALL sectors below — never skip any. Brief if quiet, but always include.
+Sectors: XLK · XLC · XLF · XLE · XLI · XLY · XLP · XLV · XLB · XLRE · XLU · European Auto (SXAP) · US/Asia Semis (SOXX/ASML/TSMC)
+Anchor cyclical sectors on the growth pulse: XLI / XLB on PMIs and new orders (copper as an AI / grid-capex input, not a
+growth gauge), XLRE / homebuilders on housing data and mortgage rates, XLF on credit growth and loan demand.
+
+EARNINGS-FIRST, SHORT FORMAT. For EACH sector write FOUR labelled parts, about 100-160 words in total:
+• Narrative — 1-2 sentences: the current consensus, the direction and the single driver that matters now (rates,
+  PMIs / new orders, credit, housing, AI capex, oil). Copper only as an AI data-centre / grid metal.
+• Reported — who in this sector reported this week (from the "Earnings —" feeds): beat or miss, the EPS / revenue figure
+  vs estimates if a headline gives it, guidance, the share reaction and WHY (the driver). 1-3 names, one clause each.
+  If nobody relevant reported, write "No major reports this week." — never invent results.
+• EPS Upside Watch — 1-2 companies set up for a surprising EPS boost (guidance raised, estimates or targets lifted,
+  pricing / volume / margin tailwinds, a preview pointing to a beat) and the mechanism, from the feed only. If none: "None flagged."
+• ⚡ Breaking Convention — 1-3 sentences on a signal that goes against the standard narrative for the sector, and why it
+  matters. If none: "None today."
+Global sectors only: never mention Polish companies, the Warsaw market (GPW / WIG) or Poland here — Poland has its
+own geography block. Every figure must be in a headline or the QUANT SNAPSHOT.
+
+Block per sector:
+<div style="margin-bottom:18px;padding:14px;background:#f9fff9;border-left:4px solid #34a853;border-radius:4px">
+  <h3 style="margin:0 0 8px">[Emoji] [Sector / ETF] &nbsp;<span style="font-size:13px;font-weight:normal;color:[#2d7a2d/#c0392b/#b07d00]">[Bullish/Bearish/Mixed]</span></h3>
+  <p><strong>Narrative:</strong> ...</p>
+  <p><strong>Reported:</strong> ...</p>
+  <p><strong>EPS Upside Watch:</strong> ...</p>
+  <p>⚡ <strong>Breaking Convention:</strong> ...</p>
+</div>
+
+<hr style="border:none;border-top:2px solid #eee;margin:28px 0">
+
+<h2 style="color:#1a1a2e;border-bottom:2px solid #00897b;padding-bottom:6px">🧮 Earnings Pattern — What the Market Pays For</h2>
+
+Read the pattern from ALL results in the "Earnings —" feeds of the last two weeks (not just today): which result profiles
+the market rewarded and which it punished, judged by the share reaction in the headline — beat + raised guidance,
+beat + higher capex / costs, beat + China or tariff exposure, AI revenue line, pricing vs volume, miss + better guidance.
+Then apply it to the stocks getting the most attention into their upcoming reports. SHORT: 220-300 words, hard cap 330 (2-3
+examples per part). One block, five labelled parts written as plain sentences — no numbered or bulleted lists. Name each example once as
+"Company — what it reported — the share move (Source, [Mon DD])"; never a bare date tag. Never invent a result, an
+estimate or a reaction:
+<div style="margin-bottom:18px;padding:14px;background:#f0faf8;border-left:4px solid #00897b;border-radius:4px">
+  <p><strong>Rewarded:</strong> [the profile the market paid for — 2-4 examples with the share move]</p>
+  <p><strong>Punished:</strong> [the profile it sold even on a beat — 2-4 examples with the share move]</p>
+  <p><strong>Pattern:</strong> [the rule in 1-2 sentences — what matters more than the EPS beat itself right now]</p>
+  <p><strong>Attention into EPS:</strong> [3-5 stocks with previews, estimate / target changes or implied moves ahead of
+  their report (only if a headline announces it): what is priced in, which side of the pattern each falls on, and the
+  reaction the pattern implies]</p>
+  <p><strong>Playbook:</strong> [1-2 concrete ideas from the pattern (own into print / fade the beat / pair), with the risk]</p>
+</div>
+If fewer than ~5 results reported in two weeks, say so in one line and keep only Attention into EPS and Playbook.
+
+<hr style="border:none;border-top:2px solid #eee;margin:28px 0">
+
+<h2 style="color:#1a1a2e;border-bottom:2px solid #f4b400;padding-bottom:6px">🔍 Underowned Themes — Active on X, Underweight in Portfolios</h2>
+
+3-5 themes showing disproportionate social activity vs. institutional ownership. Early-mover setups.
+
+CRITICAL RULE — Role clarity for every named company: Before listing any instrument, explicitly determine whether the company is a BENEFICIARY (innovator, enabler, partner) or a THREATENED INCUMBENT (disrupted by the theme). Never list a company as a short or as collateral damage if it is actually a direct participant or partner in the innovation being described. If a company is jointly building or partnering on the disruptive product, it is a LONG, not a short. State the role in the Instrument line.
+
+<div style="margin-bottom:16px;padding:14px;background:#fffdf0;border-left:4px solid #f4b400;border-radius:4px">
+  <h4 style="margin:0 0 6px">🔍 [Theme]</h4>
+  <p><strong>Why underowned institutionally:</strong> ...</p>
+  <p><strong>X signal:</strong> [High/Medium — what specifically is being discussed]</p>
+  <p><strong>Instrument:</strong> [specific ETF, stock, or pair trade — label each as BENEFICIARY or THREATENED INCUMBENT]</p>
+</div>
+
+"""
+
+    # Two calls in parallel: the wide China and Poland blocks made a single call hit max_tokens (cut-off Underowned
+    # Themes) and pushed the run to the Lambda timeout. Same rules and feed; the task text is split in two.
+    head, tasks = prompt.split('\n---\nProduce a clean HTML fragment', 1)
+    # Sector call: global feed only (the Polish feeds made Polish names leak into US sector blocks) + earnings feeds
+    raw_sec = ''.join(chunk for chunk in re.split(r'(?=\n### )', raw)
+                      if not re.match(r'\n### (Poland —|CB Feed — NBP)', chunk))
+    raw_sec += (fmt("Earnings — Reported / Guidance / Reactions (this week)", signals.get('earn_reported', []))
+                + fmt("Earnings — Reported / Reactions (previous week)", signals.get('earn_prev_week', []))
+                + fmt("Earnings — Previews / Estimates / Calendar / Implied Moves", signals.get('earn_outlook', []))
+                + fmt("Earnings — By Sector", signals.get('earn_sector', [])))
+    head_sec = head.replace(raw, raw_sec)
+    tasks = 'Produce a clean HTML fragment' + tasks
+    cut = tasks.index('<hr style="border:none;border-top:2px solid #eee;margin:28px 0">\n\n'
+                      '<h2 style="color:#1a1a2e;border-bottom:2px solid #34a853')
+    geo_task = tasks[:cut].replace('Complete ALL FOUR sections below fully.', 'Complete the ONE section below fully.')
+    sec_task = ('Produce a clean HTML fragment (NO <html>/<body> tags). Complete ALL THREE sections below fully.\n\n'
+                + tasks[cut:].split('\n', 1)[1].lstrip('\n'))
+    logger.info("Calling Claude — Part 1a (Geo) and 1b (Sectors + Earnings Pattern + Underowned) in parallel")
+    with ThreadPoolExecutor(max_workers=2) as ex:
+        geo = ex.submit(call_claude, head + '\n---\n' + geo_task, 16000)
+        sec = ex.submit(call_claude, head_sec + '\n---\n' + sec_task, 16000)
+        return geo.result() + '\n<hr style="border:none;border-top:2px solid #eee;margin:28px 0">\n\n' + sec.result()
+
+# ── Part 2: Crypto + Flows + Anticipatory + Stocks ───────────────────────────
+
+def analyze_part2(signals, today_str, quant_snapshot):
+    raw = (
+        fmt("X/Twitter Trending (US)",         signals.get('twitter_trends', []))
+        + fmt("Reddit r/CryptoCurrency",        signals.get('reddit_crypto', []))
+        + fmt("Reddit r/investing",             signals.get('reddit_investing', []))
+        + fmt("Reddit r/worldnews",             signals.get('reddit_worldnews', []))
+        + fmt("Reddit r/economics",             signals.get('reddit_economics', []))
+        + fmt("Yahoo Finance",                  signals.get('yahoo_finance', []))
+        + fmt("Google News — Markets",          signals.get('google_markets', []))
+        + fmt("Google News — Macro",            signals.get('google_macro', []))
+        + fmt("Google News — Crypto",           signals.get('google_crypto', []))
+        + fmt("CoinDesk",                       signals.get('coindesk', []))
+        + fmt("Google News — Flows & Dollar",   signals.get('google_flows', []))
+        + fmt("Fed Balance Sheet / Liquidity",  signals.get('fed_liquidity', []))
+        + fmt("Credit Spreads",                 signals.get('credit_spreads', []))
+        + fmt("CB Feed — US Fed / FOMC",        signals.get('cb_fed', []))
+        + fmt("CB Feed — ECB / Eurozone",       signals.get('cb_ecb', []))
+        + fmt("CB Feed — Bank of Japan",        signals.get('cb_boj', []))
+        + fmt("CB Feed — PBOC / China",         signals.get('cb_pboc_china', []))
+        + fmt("China — PMIs (monthly)",         signals.get('china_pmi', []))
+        + fmt("China — Credit / TSF / Loans (monthly)", signals.get('china_credit', []))
+        + fmt("China — Property & LGFV",        signals.get('china_property', []))
+        + fmt("Growth Pulse — Global PMIs (monthly)", signals.get('growth_pmi', []))
+        + fmt("Growth Pulse — Credit & Bank Lending (monthly)", signals.get('growth_credit', []))
+        + fmt("Growth Pulse — Housing & Mortgages (monthly)", signals.get('growth_housing', []))
+        + fmt("Google News — Energy & Oil",     signals.get('google_energy', []))
+        + fmt("Google News — Semis & AI Chips", signals.get('google_semis', []))
+    )
+
+    prompt = f"""You are a senior portfolio manager at a global macro hedge fund. Today is {today_str}.
+You are inspired by capitalflowresearch.com — global liquidity cycles, cross-border flows, how money moves across asset classes.
+Be specific, contrarian where warranted, and detailed on anything structurally new.
+
+{DATA_INTEGRITY_RULE}
+{FRESHNESS_RULE}
+{BREVITY_RULE}
+{DIRECTION_INTEGRITY_RULE}
+{YIELD_UNITS_AND_CURVE_RULE}
+{GROWTH_PULSE_RULE}
+
+{quant_snapshot}
+
+RAW SIGNAL FEED (news ≤{FRESHNESS_DAYS} days old; monthly-data feeds ≤{MACRO_DATA_DAYS} days; each tagged [Mon DD]):
+{raw}
+
+---
+Produce a clean HTML fragment (NO <html>/<body> tags). Complete ALL FOUR sections fully.
+
+<h2 style="color:#1a1a2e;border-bottom:2px solid #9c27b0;padding-bottom:6px">₿ Crypto & Digital Assets</h2>
+
+Focus on what is NEW or STRUCTURALLY CHANGING — not just price action. Cover:
+• Narrative shifts — what is the market repricing (BTC as macro hedge vs risk asset, ETH yield, etc.)
+• New protocol/regulatory/institutional change that challenges current thinking
+• Cross-asset correlations: BTC vs Nasdaq, stablecoin supply as liquidity signal
+• Contrarian or underowned crypto narratives gaining early X traction
+If structurally interesting: 5-8 sentences on mechanic and portfolio implications.
+If truly nothing new: say so in 2 sentences.
+
+<div style="margin-bottom:20px;padding:16px;background:#f5f0ff;border-left:5px solid #9c27b0;border-radius:4px">
+  <h3 style="margin:0 0 10px">₿ Crypto & Digital Assets</h3>
+  [content]
+</div>
+
+<hr style="border:none;border-top:2px solid #eee;margin:28px 0">
+
+<h2 style="color:#1a1a2e;border-bottom:2px solid #e91e8c;padding-bottom:6px">💰 Capital Flows & Liquidity Framework</h2>
+
+Structure around five pillars. Use QUANT SNAPSHOT values where relevant:
+1. GLOBAL LIQUIDITY — G4 CB balance sheets direction. Use fed_liquidity feed. Expanding or contracting? What does it mean for risk asset multiples? (Global M2 leads risk assets by 6-12 months)
+2. CROSS-BORDER FLOWS — DXY as the organizing variable (use QUANT SNAPSHOT DXY level + 4W change). Strong USD = EM stress = commodity headwind. Weak USD = EM relief, commodity tailwind, international equity outperformance.
+3. ROTATION — bonds and equities falling together (liquidity event) vs moving inversely (normal rotation)? Use S&P + VIX + yield data from QUANT SNAPSHOT.
+4. GROWTH PULSE — is global growth momentum turning? PMIs (ISM, euro-area / Japan flash, China NBS and private, new
+   orders), the credit impulse (China TSF / new loans, US and euro-area bank lending) and housing (US starts / sales /
+   mortgage rates, China home prices). Liquidity without a credit impulse does not reach the real economy.
+5. CROWDED TRADE RISK — 1-2 consensus positions that look vulnerable to unwinding
+
+Embed 2-3 liquidity and flow models using ACTUAL QUANT SNAPSHOT numbers. Be creative:
+Think about: Dollar carry unwind signals, EM liquidity traps, stablecoin supply as on-chain M2, credit leading equity, repo stress,
+China credit impulse vs EM / AUD, PMI new-orders momentum vs cyclicals, housing / mortgage rates vs the Fed path.
+Models may use headline PMI / credit / housing figures from the feed, but never copper or gold/copper / oil/copper ratios.
+Format: "MODEL NAME: [Condition A: actual value ✓/✗] AND [Condition B: actual value ✓/✗] → [RISK-ON / RISK-OFF / MIXED] — [what to buy/sell]"
+
+Examples of creative models here:
+"DOLLAR CARRY UNWIND: DXY 4W change < -2% ✓ AND VIX falling ✓ AND EM bond spreads tightening → RISK-ON for EM and carry trades — long EEM, BRL, IDR"
+"CREDIT LEADS EQUITY REVERSAL: HY spreads 4W widening > 50bps ✗ AND S&P 500 near highs → equities have NOT priced in credit stress yet — sell SPY, 2-week lead"
+"GLOBAL LIQUIDITY EXPANSION: G4 CB balance sheets net expanding per news feed AND BTC rising AND credit spreads tightening → early liquidity cycle — RISK-ON across the board"
+"CHINA CREDIT IMPULSE TURN: TSF growth re-accelerating per feed ✓ AND NBS manufacturing new orders > 50 ✗ → impulse not yet reaching the real economy — stay underweight AUD / European exporters"
+
+<div style="margin-bottom:20px;padding:16px;background:#fff0f8;border-left:5px solid #e91e8c;border-radius:4px">
+  <h3 style="margin:0 0 10px">💰 Capital Flows & Liquidity</h3>
+  [content with embedded models using live numbers]
+</div>
+
+<hr style="border:none;border-top:2px solid #eee;margin:28px 0">
+
+<h2 style="color:#1a1a2e;border-bottom:2px solid #00b894;padding-bottom:6px">🔮 Anticipatory Positioning — Markets Pricing In Future Events</h2>
+
+2-4 assets/sectors/pairs moving NOW in anticipation of something NOT YET happened.
+Only include genuine forward-pricing signals visible in today's feed — not stale expectations from memory.
+Pattern: defense stocks → front-running NATO spending; small-caps breadth → front-running rate cut; gold → CB diversification.
+
+<div style="margin-bottom:16px;padding:14px;background:#f0fff4;border-left:4px solid #00b894;border-radius:4px">
+  <h4 style="margin:0 0 6px">🔮 [Asset / Sector / Pair]</h4>
+  <p><strong>What the market is pricing in:</strong> ...</p>
+  <p><strong>Evidence from today's signals:</strong> ...</p>
+  <p><strong>Anticipated timing:</strong> ...</p>
+  <p><strong>Risk if wrong:</strong> ...</p>
+</div>
+
+<hr style="border:none;border-top:2px solid #eee;margin:28px 0">
+
+<h2 style="color:#1a1a2e;border-bottom:2px solid #e67e22;padding-bottom:6px">⚡ High-Conviction Stock Catalysts</h2>
+
+4-8 stocks with heavy buzz AND a specific near-term catalyst for a large move. Only concrete stories:
+• Something concrete ABOUT TO HAPPEN (earnings, product launch, regulatory decision, contract, index inclusion, short squeeze)
+• Structural repricing being priced in early (business model pivot, supply/demand shock)
+• Crowd ahead of the street — retail and fintwit moving before analysts update
+No generic "AI tailwinds". Mechanism-level specificity only.
+
+<div style="margin-bottom:22px;padding:16px;background:#fff8f0;border-left:4px solid #e67e22;border-radius:4px">
+  <h3 style="margin:0 0 6px"><code style="background:#ffe0b2;padding:2px 6px;border-radius:3px">$TICKER</code> &nbsp;[Company] &nbsp;<span style="font-size:13px;color:[#2d7a2d/#c0392b]">[↑/↓]</span></h3>
+  <p><strong>What is happening:</strong> [specific mechanism, not vibes]</p>
+  <p><strong>Catalyst / timing:</strong> ...</p>
+  <p><strong>Risk:</strong> ...</p>
+</div>
+
+<p style="color:#aaa;font-size:11px;margin-top:24px">Signals: X/Twitter · Reddit · Yahoo Finance · Google News · CoinDesk · CB feeds · stooq live market data. Framework: capitalflowresearch.com. Not financial advice.</p>"""
+
+    logger.info("Calling Claude — Part 2 (Crypto + Flows + Anticipatory + Stocks)")
+    return call_claude(prompt, max_tokens=16000)
+
+# ── Part 3: What Retail Is Playing ───────────────────────────────────────────
+
+def analyze_part3(signals, today_str, quant_snapshot):
+    raw = (
+        fmt("Stocktwits — Trending Messages",        signals.get('stocktwits', []))
+        + fmt("Reddit r/wallstreetbets",             signals.get('reddit_wsb', []))
+        + fmt("Reddit r/investing",                  signals.get('reddit_investing', []))
+        + fmt("Reddit r/stocks",                     signals.get('reddit_stocks', []))
+        + fmt("Reddit r/CryptoCurrency",             signals.get('reddit_crypto', []))
+        + fmt("X/Twitter Trending Topics",           signals.get('twitter_trends', []))
+        + fmt("Google News — Markets",               signals.get('google_markets', []))
+        + fmt("Yahoo Finance",                       signals.get('yahoo_finance', []))
+        + fmt("Google News — Semis & AI Chips",      signals.get('google_semis', []))
+        + fmt("Google News — Energy & Oil",          signals.get('google_energy', []))
+    )
+
+    prompt = f"""You are a market analyst specialising in retail investor behaviour and crowd psychology. Today is {today_str}.
+
+{DATA_INTEGRITY_RULE}
+{FRESHNESS_RULE}
+{DIRECTION_INTEGRITY_RULE}
+{YIELD_UNITS_AND_CURVE_RULE}
+{GROWTH_PULSE_RULE}
+
+{quant_snapshot}
+
+RAW SIGNAL FEED (social media, news — ≤{FRESHNESS_DAYS} days old):
+{raw}
+
+---
+TASK: Identify "What Retail Is Playing Right Now" — the dominant popular-narrative trade of this moment.
+
+Historical examples of this phenomenon (use these as a reference for the TYPE of thing you are looking for):
+• Rheinmetall / European defense stocks in 2025 — narrative: NATO rearmament supercycle, Europe defence budget explosion
+• Gold in 2025 — narrative: dollar debasement, central-bank buying, de-dollarisation
+• Nvidia in 2023–2024 — narrative: AI infrastructure arms race, every company needs GPUs
+• Tesla in 2019–2021 — narrative: EV disruption, Elon as visionary, short-squeeze fuel
+• GameStop in Jan 2021 — narrative: retail vs Wall St hedge funds, short squeeze as protest
+• Bitcoin in 2020–2021 — narrative: digital gold, institutional adoption, inflation hedge
+
+You are looking for ONE asset or theme that RIGHT NOW is:
+1. Visibly surging in price (confirmed by QUANT SNAPSHOT or news in the feed)
+2. Generating high retail social buzz (visible in Stocktwits, Reddit, Twitter in the feed)
+3. Anchored to a simple, emotionally compelling popular narrative that retail investors are repeating
+
+Only identify assets with ACTUAL evidence in the feed or QUANT SNAPSHOT — do not invent.
+
+Produce a clean HTML fragment starting with:
+
+<h2 style="color:#1a1a2e;border-bottom:2px solid #ff6b35;padding-bottom:6px">🔥 What Retail Is Playing</h2>
+<p style="color:#666;font-size:13px;margin-bottom:20px">The dominant popular-narrative trade capturing retail attention right now — analogous to Rheinmetall 2025, Gold 2025, Nvidia 2023, Tesla 2019.</p>
+
+Then ONE main block for the #1 retail trade:
+
+<div style="margin-bottom:28px;padding:20px;background:#fff8f5;border-left:6px solid #ff6b35;border-radius:4px">
+  <h3 style="margin:0 0 12px;font-size:20px">[Asset Name / Ticker] &nbsp;<span style="font-size:14px;font-weight:normal;color:#ff6b35">[The Popular Narrative in 5-8 words]</span></h3>
+  <p><strong>Why retail is here:</strong> [The emotional/narrative hook — what story are retail investors telling themselves? Why does this feel obvious and unstoppable to them? What is the simple thesis?]</p>
+  <p><strong>What's driving the surge:</strong> [Specific catalysts and price action — use the QUANT SNAPSHOT number and direction arrow for this asset if available, plus relevant news from the feed]</p>
+  <p><strong>The social signal:</strong> [What are Reddit / Stocktwits / Twitter actually saying right now? Specific language, recurring themes, sentiment visible in the feed]</p>
+  <p><strong>Historical analog:</strong> [Which past retail mania this most resembles — explain the mechanical similarity, not just surface vibes]</p>
+  <p><strong>Smart money view:</strong> [What institutional / professional money thinks — is the move justified by fundamentals, is it a bubble forming, or a genuine structural trend that both sides agree on?]</p>
+  <p><strong>When the narrative breaks:</strong> [The specific event, data point, or price level that would kill this trade and trigger a violent reversal — be concrete]</p>
+</div>
+
+Then 2–3 secondary themes also getting meaningful retail attention (smaller blocks):
+
+<div style="margin-bottom:14px;padding:14px;background:#fff8f5;border-left:3px solid #ff9a70;border-radius:4px">
+  <h4 style="margin:0 0 6px">[Asset / Theme] &nbsp;<span style="font-size:12px;font-weight:normal;color:#888">[Narrative tag]</span></h4>
+  <p>[2–3 sentences: what retail is saying, the narrative hook, and the key risk to the trade]</p>
+</div>
+
+No other text outside the HTML blocks."""
+
+    logger.info("Calling Claude — Part 3 (What Retail Is Playing)")
+    return call_claude(prompt, max_tokens=6000)
+
+# ── PDF (matplotlib PdfPages) ──────────────────────────────────────────────────
+
+def _parse_html_paragraphs(full_html):
+    """Strip HTML tags and return list of (style, text) tuples.
+    Styles: 'title', 'h1', 'h2', 'body', 'hr'
+    """
+    clean = re.sub(r'<style[^>]*>.*?</style>', '', full_html, flags=re.DOTALL | re.IGNORECASE)
+    clean = re.sub(r'<script[^>]*>.*?</script>', '', clean, flags=re.DOTALL | re.IGNORECASE)
+
+    tag_re = re.compile(r'<(/?)(\w+)[^>]*>', re.IGNORECASE)
+    buf, paragraphs, in_skip, tag_stack = [], [], 0, []
+    BLOCK_TAGS = {'p', 'div', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'td', 'th', 'blockquote'}
+
+    def flush(tag='body'):
+        text = html_lib.unescape(''.join(buf)).strip()
+        buf.clear()
+        if not text:
+            return
+        style = 'h1' if tag == 'h1' else ('h2' if tag in ('h2', 'h3', 'h4', 'h5') else 'body')
+        paragraphs.append((style, text))
+
+    for token in re.split(r'(<[^>]+>)', clean):
+        m = tag_re.match(token)
+        if m:
+            tag, closing = m.group(2).lower(), m.group(1) == '/'
+            if tag in ('head', 'style', 'script'):
+                in_skip += -1 if closing else 1
+            elif in_skip > 0:
+                pass
+            elif not closing:
+                tag_stack.append(tag)
+                if tag == 'hr':
+                    flush(); paragraphs.append(('hr', ''))
+                elif tag == 'br':
+                    buf.append('\n')
+            else:
+                if tag_stack and tag_stack[-1] == tag:
+                    tag_stack.pop()
+                if tag in BLOCK_TAGS:
+                    flush(tag)
+        elif in_skip == 0:
+            buf.append(token)
+
+    flush()
+    return paragraphs
+
+
+def _sanitize_for_mpl(text):
+    """Escape matplotlib math-mode triggers and drop characters DejaVu Sans can't render."""
+    # Strip supplementary-plane characters (emojis, etc. — codepoint > U+FFFF)
+    text = ''.join(c if ord(c) <= 0xFFFF else '' for c in text)
+    # Escape $ so matplotlib doesn't treat it as a math-mode delimiter
+    text = text.replace('$', r'\$')
+    return text
+
+
+def _html_to_pdf_bytes(full_html, today_str):
+    """Render the report HTML to PDF bytes using matplotlib PdfPages."""
+    import textwrap
+    from io import BytesIO
+    import matplotlib
+    matplotlib.use('Agg')
+    from matplotlib.backends.backend_pdf import PdfPages
+    import matplotlib.pyplot as plt
+    import matplotlib.patches as mpatches
+
+    # ── design tokens ────────────────────────────────────────────────────────
+    C_BG     = '#0d1117'
+    C_TITLE  = '#e6edf3'
+    C_H1     = '#4fc3f7'
+    C_H2     = '#81d4a0'
+    C_BODY   = '#c9d1d9'
+    C_MUTED  = '#8b949e'
+    C_RULE   = '#30363d'
+    C_ACCENT = '#1a73e8'
+
+    PAGE_W, PAGE_H = 8.5, 11.0   # inches
+    MX, MT, MB = 0.75, 0.70, 0.55
+    TEXT_W_IN = PAGE_W - 2 * MX
+    TEXT_H_IN = PAGE_H - MT - MB
+
+    # ── font sizes → approximate line heights in axes-fraction coords ─────────
+    # 1 inch = 72 pt; at PAGE_H inches tall, 1pt ≈ 1/(PAGE_H*72) figure-height
+    # We express y in data-units 0..PAGE_H
+    FS = {'title': 16, 'h1': 12, 'h2': 10, 'body': 8.5}
+    LH = {'title': 0.26, 'h1': 0.22, 'h2': 0.19, 'body': 0.155}   # inches per line
+    GAP = {'title': 0.20, 'h1': 0.18, 'h2': 0.10, 'body': 0.06, 'hr': 0.18}
+
+    # Characters that fit across TEXT_W_IN at each font size
+    # Empirical: DejaVu Sans ≈ 0.055 in/char at 9pt → scale proportionally
+    def chars_per_line(style):
+        base_pt = 9; base_cpl = 100
+        return max(30, int(base_cpl * base_pt / FS.get(style, base_pt)))
+
+    paragraphs = _parse_html_paragraphs(full_html)
+
+    # ── helper: wrap a paragraph into lines, return list[str] ────────────────
+    def wrap(text, style):
+        lines = []
+        for raw_line in text.split('\n'):
+            stripped = raw_line.strip()
+            if not stripped:
+                lines.append('')
+                continue
+            lines.extend(textwrap.wrap(stripped, chars_per_line(style)) or [stripped])
+        return lines or ['']
+
+    # ── pre-compute line-sets per paragraph ──────────────────────────────────
+    items = []   # list of (style, lines_list)
+    for style, text in paragraphs:
+        if style == 'hr':
+            items.append(('hr', []))
+        else:
+            items.append((style, wrap(text, style)))
+
+    # ── paginate ─────────────────────────────────────────────────────────────
+    def paragraph_height(style, lines):
+        if style == 'hr':
+            return GAP['hr']
+        return len(lines) * LH.get(style, LH['body']) + GAP.get(style, GAP['body'])
+
+    pages = []   # list of list of (style, lines)
+    cur_page, cur_y = [], TEXT_H_IN
+
+    for style, lines in items:
+        h = paragraph_height(style, lines)
+        if h > TEXT_H_IN:
+            # very long paragraph: split across pages
+            if cur_page:
+                pages.append(cur_page); cur_page = []; cur_y = TEXT_H_IN
+            # chunk lines into pages
+            if style != 'hr':
+                chunk = []
+                chunk_h = GAP.get(style, GAP['body'])
+                for ln in lines:
+                    lh = LH.get(style, LH['body'])
+                    if chunk_h + lh > TEXT_H_IN and chunk:
+                        pages.append([(style, chunk)])
+                        chunk = []; chunk_h = GAP.get(style, GAP['body'])
+                    chunk.append(ln); chunk_h += lh
+                if chunk:
+                    cur_page = [(style, chunk)]; cur_y = TEXT_H_IN - chunk_h
+            continue
+
+        if h > cur_y and cur_page:
+            pages.append(cur_page); cur_page = []; cur_y = TEXT_H_IN
+
+        cur_page.append((style, lines))
+        cur_y -= h
+
+    if cur_page:
+        pages.append(cur_page)
+
+    # ── render ────────────────────────────────────────────────────────────────
+    buf = BytesIO()
+    with PdfPages(buf) as pdf:
+        total_pages = len(pages)
+        for page_idx, page_items in enumerate(pages):
+            fig = plt.figure(figsize=(PAGE_W, PAGE_H), facecolor=C_BG)
+            ax  = fig.add_axes([0, 0, 1, 1], facecolor=C_BG)
+            ax.set_xlim(0, PAGE_W); ax.set_ylim(0, PAGE_H); ax.axis('off')
+
+            # ── top accent bar ────────────────────────────────────────────────
+            ax.add_patch(mpatches.FancyBboxPatch(
+                (0, PAGE_H - 0.06), PAGE_W, 0.06,
+                boxstyle='square,pad=0', facecolor=C_ACCENT, linewidth=0))
+
+            # ── header: title + date on page 1 ───────────────────────────────
+            if page_idx == 0:
+                ax.text(MX, PAGE_H - MT, 'Market Intelligence Briefing',
+                        color=C_TITLE, fontsize=18, fontweight='bold',
+                        va='top', ha='left', fontfamily='DejaVu Sans')
+                ax.text(MX, PAGE_H - MT - 0.30, _sanitize_for_mpl(today_str) + '  ·  Macro  ·  Sectors  ·  Flows  ·  Crypto  ·  Quant',
+                        color=C_MUTED, fontsize=8, va='top', ha='left', fontfamily='DejaVu Sans')
+                # underline
+                ax.plot([MX, PAGE_W - MX], [PAGE_H - MT - 0.52, PAGE_H - MT - 0.52],
+                        color=C_ACCENT, linewidth=0.8)
+                content_top = PAGE_H - MT - 0.65
+            else:
+                content_top = PAGE_H - MT + 0.05
+
+            # ── body content ──────────────────────────────────────────────────
+            y = content_top
+            for style, lines in page_items:
+                if style == 'hr':
+                    mid = y - GAP['hr'] / 2
+                    ax.plot([MX, PAGE_W - MX], [mid, mid], color=C_RULE, linewidth=0.4, alpha=0.7)
+                    y -= GAP['hr']
+                    continue
+
+                # top gap before heading
+                if style in ('h1', 'h2', 'title'):
+                    y -= GAP.get(style, 0.10) * 0.5
+
+                color = {'h1': C_H1, 'h2': C_H2, 'title': C_TITLE}.get(style, C_BODY)
+                fs    = FS.get(style, FS['body'])
+                bold  = style in ('h1', 'h2', 'title')
+                lh    = LH.get(style, LH['body'])
+
+                for ln in lines:
+                    ax.text(MX, y, _sanitize_for_mpl(ln),
+                            color=color, fontsize=fs,
+                            fontweight='bold' if bold else 'normal',
+                            va='top', ha='left', fontfamily='DejaVu Sans',
+                            clip_on=True)
+                    y -= lh
+
+                y -= GAP.get(style, GAP['body'])
+
+            # ── footer: page number ───────────────────────────────────────────
+            ax.text(PAGE_W / 2, MB - 0.30, f'Page {page_idx + 1} / {total_pages}',
+                    color=C_MUTED, fontsize=7, va='bottom', ha='center',
+                    fontfamily='DejaVu Sans')
+            ax.plot([MX, PAGE_W - MX], [MB - 0.15, MB - 0.15],
+                    color=C_RULE, linewidth=0.3)
+
+            pdf.savefig(fig, facecolor=C_BG, dpi=150)
+            plt.close(fig)
+
+    return buf.getvalue()
+
+
+REPORTS_PREFIX = 'reports'
+
+def save_html_to_s3(full_html):
+    """Publish the report as a static HTML page to S3 (served via CloudFront) and
+    rebuild the archive index. Non-fatal on failure."""
+    try:
+        s3 = boto3.client('s3', region_name=REGION)
+        date_str = datetime.now().strftime('%Y-%m-%d')
+        archive_key = f"{REPORTS_PREFIX}/archive/{date_str}.html"
+        s3.put_object(Bucket=S3_BUCKET, Key=archive_key, Body=full_html.encode('utf-8'), ContentType='text/html; charset=utf-8')
+        s3.put_object(Bucket=S3_BUCKET, Key=f"{REPORTS_PREFIX}/latest.html", Body=full_html.encode('utf-8'), ContentType='text/html; charset=utf-8')
+        logger.info(f"HTML report saved → s3://{S3_BUCKET}/{archive_key}")
+
+        keys = sorted({
+            obj['Key'].rsplit('/', 1)[-1].replace('.html', '')
+            for obj in s3.list_objects_v2(Bucket=S3_BUCKET, Prefix=f"{REPORTS_PREFIX}/archive/").get('Contents', [])
+        }, reverse=True)
+
+        rows = '\n'.join(
+            f'  <li><a href="archive/{d}.html">{d}</a></li>' for d in keys
+        )
+        index_html = f"""<html>
+<head><meta charset="utf-8"><title>Market Intelligence Briefing — Archive</title></head>
+<body style="font-family:Arial,sans-serif;max-width:600px;margin:40px auto;color:#222">
+  <h1 style="color:#1a1a2e">Market Intelligence Briefing</h1>
+  <p><a href="latest.html">View latest report</a></p>
+  <h2>Archive</h2>
+  <ul style="line-height:1.8">
+{rows}
+  </ul>
+</body>
+</html>"""
+        s3.put_object(Bucket=S3_BUCKET, Key=f"{REPORTS_PREFIX}/index.html", Body=index_html.encode('utf-8'), ContentType='text/html; charset=utf-8')
+        logger.info(f"Archive index rebuilt — {len(keys)} reports")
+
+        cf = boto3.client('cloudfront')
+        inv = cf.create_invalidation(
+            DistributionId=CLOUDFRONT_DISTRIBUTION_ID,
+            InvalidationBatch={
+                'Paths': {'Quantity': 1, 'Items': [f'/{REPORTS_PREFIX}/*']},
+                'CallerReference': f"{date_str}-{datetime.now().timestamp()}",
+            },
+        )
+        logger.info(f"CloudFront invalidation created — {inv['Invalidation']['Id']}")
+    except Exception as e:
+        logger.error(f"save_html_to_s3 failed (non-fatal): {e}", exc_info=True)
+
+
+def save_pdf_to_s3(full_html, today_str):
+    """Render report as a multi-page PDF via matplotlib PdfPages and upload to S3."""
+    try:
+        pdf_bytes = _html_to_pdf_bytes(full_html, today_str)
+        key = f"Strategies/{datetime.now().strftime('%Y-%m-%d')}_Market_Intelligence.pdf"
+        s3 = boto3.client('s3', region_name=REGION)
+        s3.put_object(Bucket=S3_BUCKET, Key=key, Body=pdf_bytes, ContentType='application/pdf')
+        logger.info(f"PDF saved → s3://{S3_BUCKET}/{key}  ({len(pdf_bytes):,} bytes)")
+    except Exception as e:
+        logger.error(f"save_pdf_to_s3 failed (non-fatal): {e}", exc_info=True)
+
+    # Also save a machine-readable JSON version
+    try:
+        paragraphs = _parse_html_paragraphs(full_html)
+        sections, current = [], None
+        for style, text in paragraphs:
+            if style == 'h1':
+                current = {'heading': text, 'subheadings': [], 'body': []}
+                sections.append(current)
+            elif style == 'h2':
+                if current is None:
+                    current = {'heading': '', 'subheadings': [], 'body': []}
+                    sections.append(current)
+                current['subheadings'].append(text)
+            elif style == 'body' and text:
+                if current is None:
+                    current = {'heading': '', 'subheadings': [], 'body': []}
+                    sections.append(current)
+                current['body'].append(text)
+            # 'hr' ignored — just a visual separator
+
+        payload = {
+            'date': today_str,
+            'generated_at': datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ'),
+            'sections': sections,
+        }
+        json_key = f"Strategies/json/{datetime.now().strftime('%Y-%m-%d')}_Market_Intelligence.json"
+        s3 = boto3.client('s3', region_name=REGION)
+        s3.put_object(
+            Bucket=S3_BUCKET, Key=json_key,
+            Body=json.dumps(payload, ensure_ascii=False, indent=2).encode('utf-8'),
+            ContentType='application/json',
+        )
+        logger.info(f"JSON saved → s3://{S3_BUCKET}/{json_key}  ({len(sections)} sections)")
+    except Exception as e:
+        logger.error(f"save JSON to S3 failed (non-fatal): {e}", exc_info=True)
+
+
+# ── Email ─────────────────────────────────────────────────────────────────────
+
+RECIPIENT_EMAILS = [RECIPIENT_EMAIL, 'marcin.zieba4@gmail.com']
+
+def send_email(html_part1, html_part2, html_part3):
+    logger.info(f"Sending email — Source: {SENDER_EMAIL} | To: {RECIPIENT_EMAILS}")
+    ses = boto3.client('ses', region_name=REGION)
+
+    try:
+        quota = ses.get_send_quota()
+        logger.info(f"SES quota — Max24H: {quota.get('Max24HourSend')}, Sent: {quota.get('SentLast24Hours')}")
+        attrs = ses.get_identity_verification_attributes(Identities=[SENDER_EMAIL] + RECIPIENT_EMAILS)
+        for addr, info in attrs.get('VerificationAttributes', {}).items():
+            logger.info(f"SES verification — {addr}: {info.get('VerificationStatus')}")
+    except Exception as e:
+        logger.warning(f"SES pre-check failed (non-fatal): {e}")
+
+    today = datetime.now().strftime('%A, %B %d %Y')
+    full_html = f"""<html>
+<body style="font-family:Arial,sans-serif;max-width:820px;margin:auto;padding:24px;color:#222;line-height:1.6">
+  <h1 style="color:#1a1a2e;margin-bottom:4px">Market Intelligence Briefing</h1>
+  <p style="color:#888;margin-top:0">{today} &mdash; Macro · Sectors · Flows · Crypto</p>
+  <hr style="border:none;border-top:3px solid #1a73e8;margin:16px 0 24px">
+  {html_part1}
+  <hr style="border:none;border-top:3px solid #9c27b0;margin:32px 0 24px">
+  {html_part2}
+  <hr style="border:none;border-top:3px solid #ff6b35;margin:32px 0 24px">
+  {html_part3}
+  <hr style="border:none;border-top:1px solid #ddd;margin:24px 0 12px">
+  <p style="color:#aaa;font-size:11px">Powered by AWS Lambda + Claude Opus &mdash; for informational purposes only, not financial advice.</p>
+</body>
+</html>"""
+
+    try:
+        response = ses.send_email(
+            Source=SENDER_EMAIL,
+            Destination={'ToAddresses': RECIPIENT_EMAILS},
+            Message={
+                'Subject': {'Data': f'Market Intelligence — {today}'},
+                'Body': {'Html': {'Data': full_html}, 'Text': {'Data': 'Open in HTML mode.'}}
+            }
+        )
+        logger.info(f"SES send_email succeeded — MessageId: {response.get('MessageId')}")
+    except ses.exceptions.MessageRejected as e:
+        logger.error(f"SES MessageRejected: {e}")
+        raise
+    except ses.exceptions.MailFromDomainNotVerifiedException as e:
+        logger.error(f"SES MailFromDomainNotVerified — check SENDER_EMAIL is verified: {e}")
+        raise
+    except Exception as e:
+        logger.error(f"SES send_email failed — {type(e).__name__}: {e}")
+        raise
+    return full_html
+
+# ── Telegram ──────────────────────────────────────────────────────────────────
+
+def send_telegram(html_part1, html_part2, html_part3):
+    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+        logger.info("Telegram not configured (TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID missing) — skipping")
+        return
+
+    today = datetime.now().strftime('%A, %B %d %Y')
+    full_html = f"""<html>
+<body style="font-family:Arial,sans-serif;max-width:820px;margin:auto;padding:24px;color:#222;line-height:1.6">
+  <h1 style="color:#1a1a2e;margin-bottom:4px">Market Intelligence Briefing</h1>
+  <p style="color:#888;margin-top:0">{today} &mdash; Macro &middot; Sectors &middot; Flows &middot; Crypto</p>
+  <hr style="border:none;border-top:3px solid #1a73e8;margin:16px 0 24px">
+  {html_part1}
+  <hr style="border:none;border-top:3px solid #9c27b0;margin:32px 0 24px">
+  {html_part2}
+  <hr style="border:none;border-top:3px solid #ff6b35;margin:32px 0 24px">
+  {html_part3}
+  <hr style="border:none;border-top:1px solid #ddd;margin:24px 0 12px">
+  <p style="color:#aaa;font-size:11px">Powered by AWS Lambda + Claude Opus &mdash; for informational purposes only, not financial advice.</p>
+</body>
+</html>"""
+
+    base = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}"
+
+    # 1 — brief intro message
+    intro = (
+        f"\U0001f4ca *Market Intelligence Briefing*\n"
+        f"{today}\n\n"
+        f"_Macro \u00b7 Sectors \u00b7 Flows \u00b7 Crypto_\n\n"
+        f"Full report attached \U0001f447"
+    )
+    try:
+        msg_body = json.dumps({'chat_id': TELEGRAM_CHAT_ID, 'text': intro, 'parse_mode': 'Markdown'}).encode()
+        req = urllib.request.Request(
+            f"{base}/sendMessage",
+            data=msg_body,
+            headers={'Content-Type': 'application/json'},
+            method='POST'
+        )
+        urllib.request.urlopen(req, timeout=15)
+        logger.info("Telegram intro message sent")
+    except Exception as e:
+        logger.warning(f"Telegram sendMessage failed: {e}")
+
+    # 2 — send the HTML report as a document
+    filename = f"market_briefing_{datetime.now().strftime('%Y-%m-%d')}.html"
+    html_bytes = full_html.encode('utf-8')
+    boundary = b'TgBoundaryMarketDigest7890'
+
+    def _field(name, value):
+        return (
+            b'--' + boundary + b'\r\n'
+            b'Content-Disposition: form-data; name="' + name.encode() + b'"\r\n\r\n'
+            + str(value).encode() + b'\r\n'
+        )
+
+    def _file_field(name, fname, content):
+        return (
+            b'--' + boundary + b'\r\n'
+            b'Content-Disposition: form-data; name="' + name.encode() +
+            b'"; filename="' + fname.encode() + b'"\r\n'
+            b'Content-Type: text/html\r\n\r\n'
+            + content + b'\r\n'
+        )
+
+    body = (
+        _field('chat_id', TELEGRAM_CHAT_ID)
+        + _field('caption', f"Market Briefing — {today}")
+        + _file_field('document', filename, html_bytes)
+        + b'--' + boundary + b'--\r\n'
+    )
+
+    try:
+        req = urllib.request.Request(
+            f"{base}/sendDocument",
+            data=body,
+            headers={'Content-Type': f'multipart/form-data; boundary={boundary.decode()}'},
+            method='POST'
+        )
+        urllib.request.urlopen(req, timeout=60)
+        logger.info("Telegram document sent successfully")
+    except Exception as e:
+        logger.error(f"Telegram sendDocument failed: {e}")
+
+# ── Handler ───────────────────────────────────────────────────────────────────
+
+def compliance_issues(full_html):
+    """Report-scope self-check (China depth, copper rules, rate pills). Logged, never blocking."""
+    issues = []
+    text = html_lib.unescape(re.sub(r'<[^>]+>', ' ', full_html))
+    if re.search(r'(?i)(gold|oil)\s*/\s*copper|copper\s*/\s*(gold|oil)', text):
+        issues.append('copper ratio used')
+    m = re.search(r'<h3[^>]*>🇨🇳.*?</div>', full_html, flags=re.S)
+    if not m:
+        issues.append('China block missing')
+    else:
+        block = html_lib.unescape(re.sub(r'<[^>]+>', ' ', m.group(0)))
+        for label in ('Macro Stance', 'PMIs & Activity', 'Credit Impulse', 'Property', 'Fiscal, Policy & Trade',
+                      'Markets & Flows', 'New / Most Important', 'Playbook', 'Divergence'):
+            if label not in block:
+                issues.append('China label missing: ' + label)
+        words = len(re.findall(r"[A-Za-z][A-Za-z'’-]*", block))
+        if words < 400:
+            issues.append(f'China block thin ({words} words)')
+    for pill in re.findall(r'color:#1a73e8">([^<]*)</span></h3>', full_html):
+        if re.search(r'(?i)feed|unclear|limited data|n/a', pill):
+            issues.append('meta rate pill: ' + pill)
+    a = full_html.find('Sector Deep Dive</h2>'); b = full_html.find('Underowned Themes', a)
+    if a >= 0 and b > a:
+        sectors = html_lib.unescape(re.sub(r'<[^>]+>', ' ', full_html[a:b]))
+        for label in ('Narrative:', 'Reported:', 'EPS Upside Watch:', 'Breaking Convention:'):
+            if sectors.count(label) < 13:
+                issues.append(f'sector label "{label}" in {sectors.count(label)} of 13 sectors')
+        if re.search(r'Poland|Polish|Warsaw|\bGPW\b|\bWIG|KGHM|Orlen|\bPKO\b|Pekao|\bPZU\b|Allegro|\bXTB\b', sectors):
+            issues.append('Polish market reference in Sector Deep Dive')
+    ep = full_html.find('Earnings Pattern — What the Market Pays For')
+    if ep < 0:
+        issues.append('Earnings Pattern section missing')
+    else:
+        block = html_lib.unescape(re.sub(r'<[^>]+>', ' ', full_html[ep:full_html.find('Underowned Themes', ep)]))
+        for label in ('Attention into EPS:', 'Playbook:'):
+            if label not in block:
+                issues.append('Earnings Pattern label missing: ' + label)
+    if 'Underowned Themes' not in full_html or 'What Retail Is Playing' not in full_html:
+        issues.append('section missing (possible truncation)')
+    return issues
+
+def lambda_handler(event, context):
+    logger.info("Lambda started")
+    try:
+        signals        = compile_signals()
+        quant_snapshot = compile_quant_snapshot()
+
+        total = sum(len(v) for v in signals.values())
+        if total == 0:
+            logger.error("No signals collected — aborting")
+            return {'statusCode': 500, 'body': 'No signals collected'}
+
+        today_str  = datetime.now().strftime('%A, %B %d %Y')
+        with ThreadPoolExecutor(max_workers=3) as ex:     # independent calls — parallel keeps the run well inside the timeout
+            f1 = ex.submit(analyze_part1, signals, today_str, quant_snapshot)
+            f2 = ex.submit(analyze_part2, signals, today_str, quant_snapshot)
+            f3 = ex.submit(analyze_part3, signals, today_str, quant_snapshot)
+            html_part1, html_part2, html_part3 = f1.result(), f2.result(), f3.result()
+        for issue in compliance_issues(html_part1 + html_part2 + html_part3):
+            logger.warning(f"Report-scope check: {issue}")
+
+        full_html = send_email(html_part1, html_part2, html_part3)
+        save_pdf_to_s3(full_html, today_str)
+        save_html_to_s3(full_html)
+        send_telegram(html_part1, html_part2, html_part3)
+        logger.info("All done successfully")
+        return {'statusCode': 200, 'body': f'Sent digest with {total} raw signals'}
+    except Exception as e:
+        logger.exception(f"Unhandled error: {e}")
+        raise

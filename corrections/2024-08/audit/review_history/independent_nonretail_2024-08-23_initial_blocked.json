@@ -1,0 +1,45 @@
+{
+  "date": "2024-08-23",
+  "status": "blocked_for_substantive_style_revision",
+  "nonretail_content_sha256": "be3001005935fec05268d96b53cb4790d0c27ebc09e600346cf519ac7df1313a",
+  "feed_sha256": "91f62f574a6b0c3eddee9da7f566ff4aa8553560f9e62c4a86a16b39d4f25635",
+  "card_sha256": "b1484ff7ecbd1cfe4b011b615f5a624a718d6327d543f97669a1016b6412c363",
+  "fatal_or_major_remaining": 1,
+  "reviewer_scope": "Read every one of the 136nonretail paragraphs with all 66cited own-date headlines. Independently compared every quoted market/Treasury figure with its correct instrument,session,andunit in the own-date card. Reviewed actual-versus-preview timing,Polish translations,company roles,conditional scenarios,stances,and section structure. No later-date evidence was used to justify an Aug23 claim.",
+  "style_depth": {
+    "passed": false,
+    "finding": "Generic reusable mechanics overwhelms concrete daily comparisons. Against the separately saved Aug26 text,520of558substantive sentences recur verbatim,91.7%ofsentence words. Root independently agreed this is blocking; author is revising Aug23 andAug26."
+  },
+  "findings": [
+    {
+      "severity": "major",
+      "area": "substantive depth and daily specificity",
+      "status": "open",
+      "action": "Replace generic discussion with own-date data/company comparisons,causal interpretation,and distinct decision triggers;root notified and author paused further generation."
+    },
+    {
+      "severity": "minor",
+      "area": "local attribution",
+      "status": "fixed",
+      "action": "Applied six named overview-sentence fixes adding exact own-date payroll,JacksonHole,China bank/developer/company,andPoland GDP/wage/company citations.The facts were already supported elsewhere in this same report. Changes logged in review_scratch/2024-08-23_citation_fixes.json."
+    },
+    {
+      "severity": "none",
+      "area": "numbers,timing,and source support",
+      "status": "checked",
+      "action": "All quoted prior-close values and one/twenty-observation returns match their own instruments;Treasury2Y/10Y,negative spread,andbullsteepening match.Aug23 excluded IDs n0626 andn0850 are not cited.Nvidia stays a preview;Ross/Target/Lilly/BMW facts stay within their exact headline scope."
+    }
+  ],
+  "verification": {
+    "distinct_sources": 66,
+    "words": 8638,
+    "failures": [],
+    "warnings": []
+  },
+  "warning_dispositions": [],
+  "limits": [
+    "Headline-only evidence does not establish full article contents or original unrevised publisher vintages.",
+    "This is a blocked current-component receipt and must be replaced only after independently rereading the revised named content.",
+    "Text-overlap measurement used later draft text solely to assess repetition,not factual evidence forAug23."
+  ]
+}

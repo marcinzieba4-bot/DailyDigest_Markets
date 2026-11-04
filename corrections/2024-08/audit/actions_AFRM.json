@@ -1,0 +1,18 @@
+{
+ "ticker": "AFRM",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AFRM?period1=1719792000&period2=1727654400&interval=1d&events=div,splits",
+   "sha256": "d25bf9f26464ed44d8abd8d7fa3fefdc21a54e571103cabc2c32c323422b1728",
+   "fetched_at_utc": "2026-11-04T11:20:50.803545+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AFRM?period1=1727654400&period2=1793791229&interval=1d&events=div,splits",
+   "sha256": "ba7c84f9902c2e1558d816ab6018260c2f3eb214212a52c6791122ee9d24b528",
+   "fetched_at_utc": "2026-11-04T11:20:51.255154+00:00"
+  }
+ ]
+}

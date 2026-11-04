@@ -1,0 +1,18 @@
+{
+ "ticker": "MSFT",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?period1=1719792000&period2=1727654400&interval=1d&events=div,splits",
+   "sha256": "373b37195e77fb608f5ed390700719918072039e73a59f5c401e40c8fe1765b4",
+   "fetched_at_utc": "2026-11-04T11:20:46.151748+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?period1=1727654400&period2=1793791229&interval=1d&events=div,splits",
+   "sha256": "5e74b8ba46a2a08b2071394041b6fbf082762f00c28ad4665590cbc087c0389d",
+   "fetched_at_utc": "2026-11-04T11:20:46.545493+00:00"
+  }
+ ]
+}

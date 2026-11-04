@@ -1,0 +1,60 @@
+{
+  "date": "2024-08-22",
+  "passed": true,
+  "checked_at_utc": "2026-11-04T17:00:19.142824+00:00",
+  "checks": 635,
+  "errors": [],
+  "input_bindings": {
+    "spec": {
+      "path": "specs/2024-08-22.json",
+      "sha256": "dc38890fed5b5ad6a60c9a415a416b9f40e61ea0a9c4fd246bc1860395cffb1a",
+      "bytes": 82503
+    },
+    "feed": {
+      "path": "feeds/2024-08-22.json.gz",
+      "sha256": "a139cd0f048566f7e1482ab5af37527c9b57f2371a8b082a1fecf1a53885ee16",
+      "bytes": 368961
+    },
+    "card": {
+      "path": "cards/2024-08-22.json",
+      "sha256": "5c4f1ea5c95a645f2b020559c5636b184fe6c71fad605f42fd316fe9ce40a610",
+      "bytes": 285713
+    },
+    "layout_receipt": {
+      "path": "checks/artifacts/2024-08-22.json",
+      "sha256": "f3b5c1d6e4a2c739d6f1c83401d9e95279b4a37e45b9030ce72c6a8c55f42145",
+      "bytes": 1215
+    },
+    "html": {
+      "path": "html/2024-08-22.html",
+      "sha256": "7e5cd9beb931b07c1979588f4eca4f12a8dbf54e27dd42b28ee51cabaa48e0c9",
+      "bytes": 196142
+    },
+    "json": {
+      "path": "json/2024-08-22_Market_Intelligence.json",
+      "sha256": "9a7b584e740e82a74401768472b8501c16a063705d09fefc13f6a9d3be555290",
+      "bytes": 237467
+    },
+    "pdf": {
+      "path": "pdf/2024-08-22_Market_Intelligence.pdf",
+      "sha256": "0e2fab7871e5b5a8d3751d09a9803fbbce2bd1050da63bdde588e465a49ec681",
+      "bytes": 499934
+    }
+  },
+  "pdf_pages": 28,
+  "source_count": 101,
+  "section_count": 9,
+  "full_paragraphs_checked": 149,
+  "full_paragraphs_found_in_pdf": 149,
+  "full_paragraphs_found_in_html": 149,
+  "missing_pdf_paragraphs": [],
+  "missing_html_paragraphs": [],
+  "missing_pdf_headlines": [],
+  "reviewer_tool_sha256": "6fb56d849909036c23b0d0ef0c87cae732dcbc5d21ae90f055302a717188755d",
+  "scope": "One local saved edition; all cited full headlines in final PDF ledger, all nine headings, and every spec parts-body plus retail intro compared with extracted PDF and HTML. Existing desktop/mobile execution receipts are hash-bound and inspected; no browser render rerun.",
+  "normalization": "Unicode NFKC, invisible soft-hyphen/zero-width removal, CJK-to-CJK line-wrap whitespace joining, ordered Unicode word/numeral tokens and whitespace folding. Citation-number chips and exact repeated PDF footer removed for paragraph matching; no fuzzy or partial-text exceptions. Typography/punctuation differences are outside this text-completeness check.",
+  "limits": [
+    "Full paragraph matching verifies every textual word/numeral sequence, not identical punctuation, visual glyph shape or economic meaning.",
+    "PDF page geometry is represented by the builder layout receipt; visual styling is separately reviewed."
+  ]
+}

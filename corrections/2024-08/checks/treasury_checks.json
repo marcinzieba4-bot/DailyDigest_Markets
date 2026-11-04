@@ -1,0 +1,16 @@
+{
+  "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2024/all?type=daily_treasury_yield_curve&field_tdr_date_value=2024&page&_format=csv",
+  "source_file": "/workspace/work/august2024/market/treasury_2024.csv",
+  "source_sha256": "6775840b76cd7fd41121f61d6f6c60184eca6b2ba49954ec7372c463cbeef34d",
+  "source_rows": 250,
+  "source_first_observation": "2024-01-02",
+  "source_last_observation": "2024-12-31",
+  "available_timestamp_rule": "Latest Treasury observation date strictly before report date;20-sessionbaseline is exactly20earlier observation rows. Official daily observations have no exact publication timestamp or unrevised vintage assertion.",
+  "checks": {
+    "calendar_day_count": 31,
+    "all_august2024_dates": true,
+    "all_observations_strictly_before_report_date": true,
+    "all_baselines_exactly_20_sessions_before_observation": true,
+    "spread_delta_equals_10y_delta_minus_2y_delta": true
+  }
+}

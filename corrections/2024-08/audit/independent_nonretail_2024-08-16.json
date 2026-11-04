@@ -1,0 +1,79 @@
+{
+  "date": "2024-08-16",
+  "status": "accepted",
+  "nonretail_content_sha256": "3eef25ec3eab0de8abfff727df9ede68108b82a18f2d167b7d5eab11c5301e53",
+  "feed_sha256": "a02d718f878f32f1d618ced747582b0bc558e648e329660662bb1f9f5d439763",
+  "card_sha256": "d70d07497fd58a12b84913d0278dd75d3815acdec224e37c8f178e4291b2b27a",
+  "source_revision": "Current amended v2 own-date feed. Existing cited base IDs and records were unchanged; author original notes retain base provenance. This receipt binds current physical feed bytes. Amendment ledger: audit/source_amendments/amendment.json.",
+  "fatal_or_major_remaining": 0,
+  "reviewer_scope": "Independently read all136 paragraphs and all104 distinct cited exact own-date headline records. Checked factual scope, translated Polish claims, actual versus preview/announced action, company and instrument roles, exact attribution, source age, conditional risks, stances and all quoted numbers against their correct instrument/session/horizon. Reviewed15 targeted named corrections and reran verification. No later-date factual source justified an August16 claim.",
+  "style_depth": {
+    "passed": true,
+    "basis": [
+      "The US chapter compares cooling CPI and strong retail sales with the weaker July labour report, credit-spread recovery and Walmart execution; the call depends on composition rather than declaring every consumer strong.",
+      "China connects weak output, fifteen-year-low new loans, completion and collateral concerns, targeted farm funding, proposed antimony restrictions and disclosed investor holdings. Tencent/Alibaba/Carlsberg provide concrete conflicting earnings signals.",
+      "Poland distinguishes GDP and household income support from energy inflation and rate-cut pressure, separates US and Warsaw sessions, and compares platform reach, Orlen disposal/ownership changes, procurement and CDProjekt development details without treating them as equivalent cash flows.",
+      "Sectors have differentiated current evidence: Cisco/Lenovo, Texas banks/ECB collateral concerns, Exxon/Chevron, Deere/Boeing, HomeDepot/restaurant sales/Starbucks appointment, Walmart/Mars/Carlsberg, Lilly, Barrick/Linde, Simon/property collateral and TSMC/Micron/Huawei.",
+      "Flows separates policy regions, observed fund inflows and yen positions from price performance, pandemic household wealth from market access, and commercial-paper cost savings from rollover risk. Scenarios retain the unresolved Powell/Ueda communications, China support and ceasefire conditions."
+    ]
+  },
+  "findings": [
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "announced versus effective action",
+      "action": "Specified planned antimony export curbs and planned excise increases; described Starbucks leadership appointment/announcement without implying the executive had already completed the operational handover."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "source precision and ordinary voice",
+      "action": "Used exact Bloomberg.com labels for six claims. Replaced an earnings instruction about unsupported reaction magnitudes with direct operating/legal risk analysis. Narrowed Walmart customer claim to the higher-income customer evidence actually established in n0592."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "local support",
+      "action": "Added exact China and Poland divergence support and the Warsaw prior-close tag. Added the slowing-sales headline beside the Deere reduced-hurdle synthesis. Unlike the unsupported estimate-path claim removed from August23, the August16 reduced-estimates wording is directly established by MarketWatch n0571."
+    },
+    {
+      "severity": "none",
+      "status": "checked",
+      "area": "correct instrument and market units",
+      "action": "All levels, yields, spreads and quoted one/five/twenty returns match the proper own-date card. Treasury4.08%/3.92%,negative16-bps spread and minus38/minus28-bps changes are exact. STOXX/EuroStoxx quote available five-session comparisons only. EPOL uses August15 while Warsaw tracker/Allegro/CDProjekt/KGHM use August14, preserving the local holiday. WTI/gold are futures with barrel/ounce units, crypto uses completed UTC daily closes, and no numeric spot-FX is quoted. All six stock catalyst numeric anchors agree."
+    },
+    {
+      "severity": "none",
+      "status": "checked",
+      "area": "timing, freshness and policy status",
+      "action": "August14 CPI, August15 retail sales and China activity/property releases are available. Powell JacksonHole and Ueda August23 testimony remain pending with explicit previews n0151/n0849. Kishida decision is a planned departure, not a completed replacement. Older macro/policy items are within35days. Exxon/Chevron/Linde company results are still within14days; Simon is treated semantically as a company result despite its monthly category and remains within14days. All fresh company news/previews are within7days."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "exact block word ranges",
+      "action": "A separate independent exact counter found small length violations not surfaced by verify.py. Targeted trims or useful brief risk sentences now put all36 blocks inside their exact bounds; financial claims and citations are unchanged. Named log: review_scratch/2024-08-16_range_fixes.json."
+    }
+  ],
+  "named_fix_log": "review_scratch/2024-08-16_named_fixes.json",
+  "verification": {
+    "paragraphs": 136,
+    "distinct_sources": 104,
+    "words": 8836,
+    "maximum_citation_uses": 3,
+    "failures": [],
+    "warnings": []
+  },
+  "warning_dispositions": [],
+  "limits": [
+    "Evidence consists of exact own-date RSS headlines and certified historical market cards; full publisher article bodies and original unrevised data vintages are not asserted.",
+    "Acceptance is limited to this exact nonretail component. Retail and later content changes need separate review and final binding."
+  ],
+  "exact_block_ranges": {
+    "method": "Independent paragraph-body whitespace count after removing canonical citation tokens; all36 exact AUTHORING bounds.",
+    "blocks_checked": 36,
+    "out_of_range": [],
+    "evidence": "review_scratch/2024-08-16_block_ranges.json"
+  },
+  "prior_reviewed_component_sha256": "a66edfd2c5b04e09af5899a0c0a8ea67e4782eb940962801cd5ffd8215125db7"
+}

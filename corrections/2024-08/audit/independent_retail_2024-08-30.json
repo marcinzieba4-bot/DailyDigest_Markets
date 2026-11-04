@@ -1,0 +1,138 @@
+{
+  "date": "2024-08-30",
+  "status": "accepted",
+  "retail_draft_sha256": "db3ebc140e56d61bb4e25076f8e4a3d4ac4374dd629291ce365f656401e6b3a8",
+  "feed_sha256": "774bb974aa654580336d81a3e92b841487c5cd0d1da06637762ba9425ba7b52c",
+  "card_sha256": "cddd264346fa61c8991e89ddbd8548c6be831a7f8e94e60725ef5cde644a3db0",
+  "fatal_or_major_remaining": 0,
+  "concrete_findings": [
+    "All retail intro and twelve parts read; every one of ten exact cited headline records checked. Reuters n0979/CNBC n0418 establish actual Lululemon forecast cuts, tepid US demand, slower refresh, missed sales and botched launch. Business in Vancouver n0417 supports womenswear-newness problem. No product-specific sales, inventory, traffic or later recovery claim is invented.",
+    "Added the contract-required lead price anchor: LULU259.01USD,+0.07%, completed Aug29, exactly matching own card. The text explicitly treats that mark as a valuation reference that does not establish the results reaction, without inventing after-hours price or release timestamp.",
+    "WSJ n0262 establishes TikTok-crowd appeal of dupes, while Business Insider n0175 establishes contrasting North-American/Chinese customer enthusiasm. The analysis distinguishes attention from profitable conversion and regional patterns from a uniform global brand verdict. No TikTok count, specific post, product comparison measurement or named historical episode is invented.",
+    "AFRM41.66USD,+31.92%session,+57.68%twenty-session match completed Aug29. Investopedia n0408 supplies the public30% rally explainer, not a specific uncited earnings cause. The story does not infer institutional buying or future profitable participation from the price.",
+    "MarketWatch n0401 supplies reported Dell earnings/AI-server-growth share boost, with actual Dell Q2FY2025 announcement n0400. No server-growth percentage, margin, later cash close or numerical after-hours gain is invented. A reported boost is not conflated with the own-card completed cash return.",
+    "NBC News n0403 supplies25% reported Dollar General decline, outlook cut and financially constrained customers; WSJ n0402 supplies disappointing quarterly results/reduced guidance. Percentage is explicitly headline-reported, not an unavailable own-card DG cash quote. Exact source display was corrected to NBC News. All sources are eligible before own midnight, with Aug29 actual results distinct from later trading outcomes."
+  ],
+  "fixes": [
+    {
+      "where": "LULU / Why Retail Is Here",
+      "action": "Added259.01USD/+0.07% completed Aug29 cash price anchor and exact source/date tag, explicitly distinguished from the results reaction.",
+      "reason": "Required relevant lead price anchor was missing."
+    },
+    {
+      "where": "DG / Why Retail Is Here",
+      "before": "NBC reports; NBC's reported move",
+      "after": "NBC News reports; NBC News' reported move",
+      "reason": "Exact outlet attribution."
+    }
+  ],
+  "chronology_review": "Read strictly earlier notes Aug1–29. LULU, AFRM, DELL and DG are first standalone selections. Lead selection combines newly eligible actual earnings/forecast cuts with its eligible Aug25 TikTok-dupes attention and new regional-demand contrast. It does not reuse the preceding Nvidia results lead: Dell is a specific secondary server-earnings case, while new consumer-product and household-budget evidence supplies the dominant story. No unchanged carryover.",
+  "claimcheckscope": {
+    "all_prose_read": true,
+    "retail_blocks_read": [
+      "retail_intro",
+      "Lululemon / LULU — The brand needs something new",
+      "Affirm / AFRM — The surge creates its own urgency",
+      "Dell / DELL — AI demand reaches another earnings report",
+      "Dollar General / DG — Value seekers can still spend less"
+    ],
+    "all_cited_headlines_read": true,
+    "citations": [
+      {
+        "id": "n0979",
+        "headline": "Lululemon cuts annual forecasts on tepid US demand, slower product refresh - Reuters",
+        "source": "Reuters",
+        "published_at": "2024-08-29T07:00:00+00:00"
+      },
+      {
+        "id": "n0418",
+        "headline": "Lululemon cuts guidance, misses sales estimates after botched product launch - CNBC",
+        "source": "CNBC",
+        "published_at": "2024-08-29T07:00:00+00:00"
+      },
+      {
+        "id": "n0417",
+        "headline": "Lululemon cuts full-year outlook amid struggle with 'newness' in its womenswear - Business in Vancouver",
+        "source": "Business in Vancouver",
+        "published_at": "2024-08-29T07:00:00+00:00"
+      },
+      {
+        "id": "n0262",
+        "headline": "Lululemon ‘Dupes’ Are Just as Cool With the TikTok Crowd - WSJ",
+        "source": "WSJ",
+        "published_at": "2024-08-25T07:00:00+00:00"
+      },
+      {
+        "id": "n0175",
+        "headline": "North Americans aren't buying as much Lululemon, but Chinese consumers can't get enough - Business Insider",
+        "source": "Business Insider",
+        "published_at": "2024-08-29T07:00:00+00:00"
+      },
+      {
+        "id": "n0408",
+        "headline": "Here's Why Affirm Stock Is Up 30% Today - Investopedia",
+        "source": "Investopedia",
+        "published_at": "2024-08-29T07:00:00+00:00"
+      },
+      {
+        "id": "n0401",
+        "headline": "Dell’s stock gets a boost as earnings show huge growth in AI servers - MarketWatch",
+        "source": "MarketWatch",
+        "published_at": "2024-08-29T07:00:00+00:00"
+      },
+      {
+        "id": "n0400",
+        "headline": "Dell Technologies Delivers Second Quarter Fiscal 2025 Financial Results - Dell",
+        "source": "Dell",
+        "published_at": "2024-08-29T07:00:00+00:00"
+      },
+      {
+        "id": "n0403",
+        "headline": "Dollar General shares crater 25% as retailer cuts outlook, blaming ‘financially constrained’ customers - NBC News",
+        "source": "NBC News",
+        "published_at": "2024-08-29T07:00:00+00:00"
+      },
+      {
+        "id": "n0402",
+        "headline": "Dollar General Scales Back Guidance After Quarterly Results Fall Short of Target - WSJ",
+        "source": "WSJ",
+        "published_at": "2024-08-29T07:00:00+00:00"
+      }
+    ],
+    "checks": [
+      "Exact own-date headline support and original source attribution",
+      "Actual/preview, semantic freshness and event status before own00:00UTC cutoff",
+      "Quoted instrument, historical share units, currency, return windows and completed session against own-date card",
+      "Attention claims limited to actual platform/broker/fund/issuer evidence; no invented posts, demand rankings or flows",
+      "General analogy versus supported historical episode; conditional institutional tendencies and invalidation",
+      "Selection change against strictly earlier retail notes; no new price alone justifies repeated full lead"
+    ]
+  },
+  "style_depth": {
+    "passed": true,
+    "basis": "Connected narrative distinguishes the psychological appeal, exact catalyst, investment mechanism and observable downside in each of four different trades; analysis does not turn attention into evidence of profitable demand."
+  },
+  "retail_word_counts": {
+    "lead": 697,
+    "smaller": [
+      170,
+      169,
+      171
+    ],
+    "including_intro": 1232,
+    "regex_words_per_item": [
+      707,
+      178,
+      174,
+      176
+    ]
+  },
+  "structure_and_length_check": "Exact required part order, four titles/hooks,650–850 lead,150–220 smaller and1200–1350 including-intro total checked on current draft. Any unchanged carryover separately checked at most160 regex words.",
+  "reviewer": "historical_data",
+  "retail_author_independence": "Reviewer authored none of these retail components; no reselection or script regeneration.",
+  "limits": [
+    "Review is limited to exact RSS headlines and accepted own-date market cards; no full-article details are asserted.",
+    "Strictly earlier selection notes provide editorial chronology only. No later feed/card establishes an earlier claim.",
+    "Root retains final merged citation-reuse, global chronology/retail-quality preflight and publication binding."
+  ]
+}

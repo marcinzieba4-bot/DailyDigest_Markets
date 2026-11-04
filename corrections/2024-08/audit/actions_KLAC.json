@@ -1,0 +1,24 @@
+{
+ "ticker": "KLAC",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2026-06-12",
+   "factor": 10.0,
+   "ratio": "10:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KLAC?period1=1719792000&period2=1727654400&interval=1d&events=div,splits",
+   "sha256": "8c3d3adabd9042db216392628abd108c6fca1e93ab3e57379eb4fe415a11afe9",
+   "fetched_at_utc": "2026-11-04T11:20:47.845947+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KLAC?period1=1727654400&period2=1793791229&interval=1d&events=div,splits",
+   "sha256": "3a030e4646031a7e4ce0bf29356d6c705dbf234da8b30ed43bcf7412183aade2",
+   "fetched_at_utc": "2026-11-04T11:20:48.279845+00:00"
+  }
+ ]
+}

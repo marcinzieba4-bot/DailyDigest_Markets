@@ -1,0 +1,78 @@
+{
+  "date": "2024-08-23",
+  "status": "accepted",
+  "nonretail_content_sha256": "28aed27bb96f0c9b638daf22d3dd9960fded9934c833cac5f8fb98e77db0a662",
+  "feed_sha256": "91f62f574a6b0c3eddee9da7f566ff4aa8553560f9e62c4a86a16b39d4f25635",
+  "card_sha256": "b1484ff7ecbd1cfe4b011b615f5a624a718d6327d543f97669a1016b6412c363",
+  "fatal_or_major_remaining": 0,
+  "reviewer_scope": "Fresh independent reread of all 136 paragraphs of the substantively rewritten nonretail component, with every one of its 92 cited own-date headline records. Checked exact headline claim scope, Polish translations, attribution, roles, release timing versus previews, semantic source ages, all quoted correct-instrument market figures and horizons, conditional risks and cross-section consistency. Read every named correction again and reran own-date verification. No later-date factual source was used to justify an August 23 claim.",
+  "style_depth": {
+    "passed": true,
+    "basis": [
+      "The original major finding concerned extensive generic chapter reuse. The replacement is substantially new source-specific analysis and resolves that finding; acceptance binds only the rewritten current component.",
+      "The US chapter compares the 818,000 payroll revision with consumer sentiment and separates almost parallel falling Treasury yields from a large curve-steepening narrative. The different one/five/twenty-session S&P and volatility signals are interpreted explicitly.",
+      "China compares bank-margin pressure and property restructuring with Xiaomi and Wukong product demand, distinguishes the Walmart ownership sale from aggregate flows, and preserves separate lender/borrower exposures.",
+      "Poland contrasts GDP and PKO profit resilience with slower real wages, expensive housing credit and Orlen capital expenditure, separating acquisition intentions, fiscal capacity and procurement implementation.",
+      "Sectors use distinct operating mechanisms and opposing company evidence: Peloton/Cava versus sector weakness, Lilly/Regeneron product risk, productivity/gas drilling, Meta monetisation/Microsoft disclosure, power constraints and BMW/Mercedes divergence.",
+      "Earnings compares Ross/Target with Hays/Collins and separates earnings beats from demand improvement. Flows distinguishes QT from rate cuts, foreign NISA allocation from buybacks, owner stake sales from aggregate capital flight, and issuance from indiscriminate borrower access."
+    ]
+  },
+  "findings": [
+    {
+      "severity": "major",
+      "status": "resolved_by_substantive_author_rewrite",
+      "area": "depth and duplicated generic analysis",
+      "action": "Fresh full reread confirms that the rewritten chapters replace the earlier generic shared template with concrete current comparisons, causal analysis and company-specific triggers. No major depth issue remains in this component."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "headline scope",
+      "action": "Removed unsupported assertion that Deere estimates had been reduced and adjusted the following comparison. The own headline establishes an estimate beat despite slowing sales, without the prior estimate path."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "programme and attribution precision",
+      "action": "Changed NISA wording to investment allocated abroad through NISA, without describing the programme itself as an overseas-only allocation programme. Attributed the Business Insider AI company assessment to Bank of America."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "local evidence",
+      "action": "Added exact own-date citations to named China/Poland synthesis, sector opening comparisons, the pending Powell policy hurdle and the China consumption scenario. Added the prior-close tag beside the staples performance synthesis. Citation use remains at most three."
+    },
+    {
+      "severity": "none",
+      "status": "checked",
+      "area": "numbers, instrument and session",
+      "action": "Manually matched all market/Treasury levels, yields, spreads and one/five/twenty returns to the correct August 22 completed session. S&P, VIX, DXY, Shanghai, Hang Seng, Nikkei, ASX, Polish trackers, all thirteen sector instruments, BTC/ETH and six single names agree. Treasury 3.99%/3.86%, negative 13-bps spread and minus42/minus41-bps twenty-observation changes are exact. Crypto uses completed UTC daily closes and spot-FX numeric quotes are absent."
+    },
+    {
+      "severity": "none",
+      "status": "checked",
+      "area": "timing and source windows",
+      "action": "Powell Friday speech and Nvidia August 28 earnings remain pending with explicit own-date previews. August 22 company releases are eligible before the August 23 cutoff, with the after-hours result distinguished from the regular-session anchor. Omitted early-indexed Ueda testimony n0850 and August flash-inflation outcome n0626 are not cited. Older RBA/BOJ policy, German/Japan/China/US macro and Polish GDP records are within35days; Deere/Cisco are within14day result windows; all other cited company news/previews are within7days."
+    }
+  ],
+  "named_fix_log": "review_scratch/2024-08-23_named_fixes.json",
+  "verification": {
+    "paragraphs": 136,
+    "distinct_sources": 92,
+    "words": 8658,
+    "maximum_citation_uses": 3,
+    "failures": [],
+    "warnings": []
+  },
+  "warning_dispositions": [],
+  "limits": [
+    "Evidence reviewed comprises exact own-date RSS headlines and historical market cards; full article content and original unrevised market-data vintage are not asserted.",
+    "Acceptance covers this exact nonretail component. Retail and any subsequent content changes need separate binding."
+  ],
+  "exact_block_ranges": {
+    "method": "Independent paragraph-body whitespace count after removing canonical citation tokens; all36 exact AUTHORING bounds.",
+    "blocks_checked": 36,
+    "out_of_range": [],
+    "evidence": "review_scratch/2024-08-23_block_ranges.json"
+  }
+}

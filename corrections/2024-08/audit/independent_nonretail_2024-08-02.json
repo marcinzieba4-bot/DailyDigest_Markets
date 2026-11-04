@@ -1,0 +1,77 @@
+{
+  "date": "2024-08-02",
+  "status": "accepted",
+  "nonretail_content_sha256": "2d805d2db039d5a2caca91bd7a17136ca45a1407b1f62a3d1bc165302c07e403",
+  "feed_sha256": "de115a8ad62df6c8f4e2444bc30eb787cf19d132e5ace18ae6dfd836a5417b70",
+  "card_sha256": "9b85008956544fde9f546689b48c56d1312ba99e8fc626c274d1680eaee6928f",
+  "fatal_or_major_remaining": 0,
+  "reviewer_scope": "Independently read all 136 nonretail paragraphs and every cited own-date headline record (105 originally,104 after one conservative omission). Checked exact factual scope, English and Polish attribution, institution/company roles, release timing, preview versus outcome, semantic source age, stances, action consistency and every quoted correct-instrument market/Treasury number and session. Named fixes were reviewed again and own-date verification rerun. No later-date source was used to justify an August2 claim.",
+  "style_depth": {
+    "passed": true,
+    "basis": [
+      "The US argument connects manufacturing weakness and rising claims to the different consequences of lower yields, with the employment print explicitly unresolved. It compares current monthly weakness with stronger second-quarter growth rather than treating one series as the entire economy.",
+      "China links discount-driven solar exports, weak final demand, adviser recommendations versus adopted policy, completion confidence, Canadian union tariff demands and hospitals delaying equipment orders. These are separate transmission channels and risks.",
+      "Poland distinguishes manufacturing hope from energy inflation and the domestic policy path, company-specific dispersion from the broad USD tracker, PKO operational controls from credit losses, VeloBank acquisition from earnings, fiscal funding and specific security developments.",
+      "Sectors compare actual divergent earnings evidence: Apple/Intel/Microsoft, Meta/Snap, Barclays/SocGen, Amazon/Booking/Next, ABInBev/Kellanova/P&G, Lilly/Moderna, and European autos/Toyota. Utilities and property have different financing/operating hurdles.",
+      "The flows chapter separates policy regions, duration from corporate credit, actual Japanese and China allocation reports from ETF price returns, and distribution decisions from universal credit health. All four scenarios keep pending outcomes conditional."
+    ]
+  },
+  "findings": [
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "exact headline scope",
+      "action": "Removed the ambiguous claim that Intel missed its own quarterly guidance; retained the directly established workforce-cut announcement in both occurrences. Replaced an unsupported proposed housing-credit change with conditional financing relief and the separately cited game-release preview."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "geography and instrument roles",
+      "action": "Identified Barclays/SocGen as foreign-peer comparisons for XLF, and McDonald's weak-sales account as a global corporate read-through rather than Australian-specific customer evidence."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "conservative release timing",
+      "action": "Omitted the Japanese government white-paper claim n1074 because its exact release timing around this cutoff was uncertain. Kept the eligible industrial-production evidence. This is a draft-level conservative omission, not a change to immutable sources or an assertion of a known future release."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "local attribution and product inference",
+      "action": "Added PMI support and the dated prior-close tag to the Poland divergence, and narrowed CDProjekt-relative-price commentary from a concrete product calendar to product expectations."
+    },
+    {
+      "severity": "none",
+      "status": "checked",
+      "area": "numeric precision",
+      "action": "All quoted levels and returns match their correct own-date instruments: US, German, Chinese, Japanese, Australian and Polish markets; sector ETFs; WTI futures; bitcoin, ether, solana; TLT/HYG/LQD and single names. Treasury4.16%/3.99%,negative17-bps spread and minus55/minus37-bps twenty-observation changes agree exactly. Price changes exclude dividends and crypto uses completed UTC daily closes; numeric spot-FX is absent."
+    },
+    {
+      "severity": "none",
+      "status": "checked",
+      "area": "actual versus preview and source age",
+      "action": "The Friday employment release remains pending with n1769 preview support. July31 Fed and BOJ events and August1 BOE/PMI releases are eligible. August1 after-hours Apple/Amazon/Intel/Booking/Coinbase developments are eligible before midnight, with prior regular-session prices identified as cash benchmarks. Early-indexed report-date Nikkei outcome n1075 is omitted. Older China housing/PBOC, Poland defence/RPP and June US employment items are35day macro/policy baselines, not recycled company news."
+    }
+  ],
+  "named_fix_log": "review_scratch/2024-08-02_named_fixes.json",
+  "verification": {
+    "paragraphs": 136,
+    "distinct_sources": 104,
+    "words": 8562,
+    "maximum_citation_uses": 3,
+    "failures": [],
+    "warnings": []
+  },
+  "warning_dispositions": [],
+  "limits": [
+    "Review is limited to exact own-date headline evidence and certified market cards; full publisher article bodies and original unrevised vendor vintages are not established.",
+    "Acceptance binds only this exact nonretail component. Retail and subsequent content changes require separate review and binding."
+  ],
+  "exact_block_ranges": {
+    "method": "Independent paragraph-body whitespace count after removing canonical citation tokens; all36 exact AUTHORING bounds.",
+    "blocks_checked": 36,
+    "out_of_range": [],
+    "evidence": "review_scratch/2024-08-02_block_ranges.json"
+  }
+}

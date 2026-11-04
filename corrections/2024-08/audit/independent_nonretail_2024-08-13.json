@@ -1,0 +1,83 @@
+{
+  "date": "2024-08-13",
+  "status": "accepted",
+  "nonretail_content_sha256": "1e59043cd7d2da74f9bbebb6bac93d0077ca47cbf90685790a57c48e8e762c74",
+  "feed_sha256": "fad9612f4b84a0b7f7ab4158795f1e766434f5c49f1a0a604a311ad961d3a245",
+  "card_sha256": "c58ac79b8ce3df2453918139a2740be14dfbe327eeed92b507bb3e40a14c7bee",
+  "fatal_or_major_remaining": 0,
+  "reviewer_scope": "Independently read all136 nonretail paragraphs and all100 cited own-date headline records. Checked exact claim scope, English/Polish translation, entity identity, company/instrument roles, attribution, semantic freshness, release timing, scenarios and stances. Manually compared every market/Treasury number with its correct instrument/session/horizon. Reviewed20 targeted named-string fixes, including one company-identity error, and reran verification. No later-date factual source justified this report.",
+  "style_depth": {
+    "passed": true,
+    "basis": [
+      "The US chapter connects remaining volatility, the one/five/twenty-session price pattern, household liquid-wealth depletion and the manufacturing/services split. It keeps inflation and retail earnings pending and distinguishes disinflation from a weak customer.",
+      "China distinguishes borrowing capacity from borrower demand, bank bond-trade intervention from stimulus, luxury property from structural repair, low-carbon funding from broad reflation and currency/trade pressure from shipment volumes.",
+      "Poland compares wage support with real deposit returns, the market rebound with provisions/distributions, sourcing risks with local demand, and Witcher creative news with cash generation. The security discussion preserves suspected attribution and business-specific exposure.",
+      "Sectors use specific opposing results and mechanisms: Palantir/JFrog analyst-versus-company expectations, NewsCorp/Paramount distribution economics, foreign-bank fee/lending mix, Dangote/Shell/Aramco, Caterpillar/Vestas, beverage dispersion, Lilly/CVS, Linde/Ashland and TSMC/AMD/SMIC.",
+      "Flows distinguishes household and corporate balance sheets, actual fundraising and subscriptions from ETF prices, foreign equity selling from currency positioning, and GLD diversification from identified purchases. Scenarios remain conditional and name the operating evidence that would change the call."
+    ]
+  },
+  "findings": [
+    {
+      "severity": "major",
+      "status": "fixed",
+      "area": "company identity",
+      "action": "Corrected Bridge Investment to BridgeInvest, the entity actually named in WSJ n0791. The USD670million fundraise is no longer attributed to the differently named investment manager."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "instrument and flow precision",
+      "action": "Identified the USD228.41 quote as SPDR Gold Shares ETF(GLD) per share, avoiding a spot-gold interpretation. Corrected India flow language to positive inflows at a lower level, rather than incorrectly saying subscriptions were growing less quickly. Dropped the unqualified numeric iron-ore forecast threshold while retaining the reported direction and forecast status."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "headline scope and roles",
+      "action": "Removed unsupported operating-cost pressure from Pekao; the headline establishes increased provisions at the expense of profit. Identified DBS/ABNAmro as foreign-peer comparisons for XLF and avoided classifying CNO as an insurer without explicit evidence in the cited title. Added Reuters support to Caterpillar's soft-demand clause."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "attribution and ordinary voice",
+      "action": "Used exact Bloomberg.com, Notes From Poland, Bankier.pl and AFR names where needed. Replaced the Japanese session-date instruction and eligible-preview authoring language with ordinary market analysis. Nvidia forecast is attributed to the research firm through CNBC."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "local support",
+      "action": "Added the own-date rural-bank citation and China/Poland divergence support, preserving maximum3 uses per headline."
+    },
+    {
+      "severity": "none",
+      "status": "checked",
+      "area": "numeric and session precision",
+      "action": "All quoted regional, Polish, sector, cryptocurrency, fund and single-name figures agree with the correct own-date card. Treasury4.01%/3.90%,negative11-bps spread,minus43/minus33-bps twenty-observation changes and plus12/plus12-bps five-observation changes are exact. Nikkei correctly uses August9; most cash instruments August12; crypto completed UTC August12. No numeric spot-FX is quoted."
+    },
+    {
+      "severity": "none",
+      "status": "checked",
+      "area": "timing and semantic windows",
+      "action": "Retail earnings and inflation remain pending with own previews n0699/n0141. China July lending n0268 remains a preview before its report-date release. Nvidia n0483 is a research forecast despite result-category metadata and is still within7days. Older company result records remain within14days; macro/policy/activity and aggregate export commentary remain within35days. No later outcome is used."
+    }
+  ],
+  "named_fix_log": "review_scratch/2024-08-13_named_fixes.json",
+  "verification": {
+    "paragraphs": 136,
+    "distinct_sources": 100,
+    "words": 8514,
+    "maximum_citation_uses": 3,
+    "failures": [],
+    "warnings": []
+  },
+  "warning_dispositions": [],
+  "limits": [
+    "Review covers exact own-date RSS headlines and certified market cards, not full article bodies or original unrevised market-data vintages.",
+    "Acceptance binds only this exact nonretail component; retail and later changes require separate review and renewed binding."
+  ],
+  "exact_block_ranges": {
+    "method": "Independent paragraph-body whitespace count after removing canonical citation tokens; all36 exact AUTHORING bounds.",
+    "blocks_checked": 36,
+    "out_of_range": [],
+    "evidence": "review_scratch/2024-08-13_block_ranges.json"
+  }
+}

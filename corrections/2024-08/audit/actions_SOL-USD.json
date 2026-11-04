@@ -1,0 +1,18 @@
+{
+ "ticker": "SOL-USD",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SOL-USD?period1=1719792000&period2=1727654400&interval=1d&events=div,splits",
+   "sha256": "b4dd2da4125fa9286cfaa2f529bd2eafc2f85d659d40d8b49cc9a22f8d62f620",
+   "fetched_at_utc": "2026-11-04T11:20:32.732349+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SOL-USD?period1=1727654400&period2=1793791229&interval=1d&events=div,splits",
+   "sha256": "046e3412513dafee7a6a43823cf85c90cd4db9bb8f8026ebe6d276f6358b3271",
+   "fetched_at_utc": "2026-11-04T11:20:32.989891+00:00"
+  }
+ ]
+}

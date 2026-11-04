@@ -1,0 +1,18 @@
+{
+ "ticker": "BP.L",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BP.L?period1=1719792000&period2=1727654400&interval=1d&events=div,splits",
+   "sha256": "f547b86dfa6da5436c94bcf21c33ca2ec53cef0e1561fd84010f4a36969d2b87",
+   "fetched_at_utc": "2026-11-04T11:20:38.495777+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BP.L?period1=1727654400&period2=1793791229&interval=1d&events=div,splits",
+   "sha256": "7173b41b616db4ba507a56ba9f1cccd53d204179337c5202e896a6e3b11ee825",
+   "fetched_at_utc": "2026-11-04T11:20:38.954744+00:00"
+  }
+ ]
+}

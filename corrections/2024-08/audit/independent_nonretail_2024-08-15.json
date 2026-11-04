@@ -1,0 +1,78 @@
+{
+  "date": "2024-08-15",
+  "status": "accepted",
+  "nonretail_content_sha256": "7a96140fbb64e36f19c6c33b8a1d2a7f657fced0082638b961894f994cb55d1e",
+  "feed_sha256": "0d0d987535934b00e6c9cfa7ac0627989bfab0ea27903cb91286c1e3ad5cf159",
+  "card_sha256": "6d29e828eb9b4712278a61a65706b8a9b4a4b06d135e7a40a51da668bc2e224e",
+  "source_revision": "Current amended v2 own-date feed; base IDs unchanged. Amendment ledger: audit/source_amendments/amendment.json.",
+  "fatal_or_major_remaining": 0,
+  "reviewer_scope": "Independently read all136 paragraphs and every one of87 cited own-date headline records, checking factual scope, Polish translation, source/entity roles, exact attribution, announcements versus completed events, semantic freshness, all quoted correct-instrument market values and sessions, scenarios and stances. Reread22 named fixes, reran verification and independently counted all36 exact block ranges. No later-date factual source was used.",
+  "style_depth": {
+    "passed": true,
+    "basis": [
+      "The US chapter compares actual2.9% inflation with functioning finance, HomeDepot transaction weakness and depleted household liquid wealth, distinguishing policy relief from profitable demand.",
+      "China compares Tencent gaming/advertising strength with weak credit demand, property completion and Carlsberg consumption warnings, while separating lagged manager holdings from present subscriptions and targeted support from broad reflation.",
+      "Poland uses the actual3.2% GDP surprise, real household income and energy-driven inflation to distinguish a domestic-demand opportunity from a leveraged rate-cut trade. Orlen disposal, Allegro search redesign, XTB security/product choices and Apache procurement retain separate execution/contract risks.",
+      "Sectors compare specific company mechanisms: Cisco/Foxconn, UBS wealth/cash-sweep costs, Vestas orders/margins, Douglas/HomeDepot, announced Mars deal/Dole, Cardinal/Syros/Sandoz, rental concessions and semiconductor supply-chain economics.",
+      "Flows differentiates functioning markets from borrower quality, disclosed manager positions from global flows, fund subscriptions from fund returns and GLD shares from the underlying commodity. Anticipatory positions use the Fed decision, Ueda communication, Allegro implementation and pending Kellanova completion as distinct tests."
+    ]
+  },
+  "findings": [
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "event and session timing",
+      "action": "Removed the implication that regional Asian index closes demonstrated the reaction to Tencent's newly reported earnings; they are now explicitly market context rather than proof of a uniform earnings response. Cisco's45.44 prior cash close remains explicitly separate from its reported post-announcement rally."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "exact attribution and forward cost",
+      "action": "Identified the Polish GDP/CPI outlet as Miesięcznik Finansowy BANK citing GUS; attributed the XTB account to Forex Club rather than the company itself. Specified that UBS's USD50million annual cash-sweep earnings cost is expected, matching the headline's future wording."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "instrument roles and precision",
+      "action": "Identified UBS as a foreign-peer comparison for XLF and Tencent as an international comparison for XLC. Made the McDonald'sJapan share exposure specific and clarified utility investment-cost recovery. Used exact WSJ/Bloomberg.com/Bankier.pl/Notes From Poland outlet names."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "local support and ordinary analysis",
+      "action": "Added own-date support to China/Poland divergence and the leadership-transition scenario, removed one repeated uncited Carlsberg assertion and redundant named corporate-plan repetition, and replaced a transaction-risk source-boundary instruction with direct conditional risk analysis."
+    },
+    {
+      "severity": "none",
+      "status": "checked",
+      "area": "numeric precision",
+      "action": "All quoted correct-instrument values, returns and units match. Treasury3.94%/3.83%,negative11-bps spread and minus48/minus33-bps twenty-observation changes agree. Regional/Polish/sector/fund and single-name prices use August14 completed cash sessions; crypto uses completed UTC August14. CPI2.9%, Polish GDP3.2% and CPI4.2%, ApacheUSD10billion/96, Riot18.9%, and prospective UBSUSD50million are explicitly headline-supported. GLD is explicitly an ETF share price; numeric spot-FX is absent."
+    },
+    {
+      "severity": "none",
+      "status": "checked",
+      "area": "release timing and freshness",
+      "action": "US CPI and Tencent results are completed August14 releases. RBNZ cut and CBA results are now eligible and distinguished from Australian policy; RBA4.35% remains a separate baseline. Kishida departure is planned, UedaAugust23 explanation and AllegroOctober implementation remain pending with exact previews. The Mars acquisition is announced but uncompleted. Meta/Shell/Linde/Honda company results remain within14days; RBA/PMI/Fed baselines within35days; all other cited company news/previews within7days."
+    }
+  ],
+  "named_fix_log": "review_scratch/2024-08-15_named_fixes.json",
+  "verification": {
+    "paragraphs": 136,
+    "distinct_sources": 87,
+    "words": 8519,
+    "maximum_citation_uses": 3,
+    "failures": [],
+    "warnings": []
+  },
+  "warning_dispositions": [],
+  "exact_block_ranges": {
+    "method": "Independent body whitespace count after canonical citation removal against all AUTHORING exact ranges.",
+    "blocks_checked": 36,
+    "out_of_range": [],
+    "evidence": "review_scratch/2024-08-15_block_ranges.json"
+  },
+  "limits": [
+    "Exact RSS headlines and certified historical cards do not establish full article content or original unrevised market-data vintages.",
+    "Acceptance covers only this exact nonretail component; retail and later content changes require separate review and binding."
+  ]
+}

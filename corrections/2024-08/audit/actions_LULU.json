@@ -1,0 +1,18 @@
+{
+ "ticker": "LULU",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LULU?period1=1719792000&period2=1727654400&interval=1d&events=div,splits",
+   "sha256": "3398f3aa1e08cc4569dbac4efb511a3f31ea8f0fcaa4d9e4e016f4c1bc428223",
+   "fetched_at_utc": "2026-11-04T11:20:57.968559+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LULU?period1=1727654400&period2=1793791229&interval=1d&events=div,splits",
+   "sha256": "9dc7dc6ae3abd4de5fa497086100c41a57e31a1c947670bea9bceb625fe0463a",
+   "fetched_at_utc": "2026-11-04T11:20:58.407095+00:00"
+  }
+ ]
+}

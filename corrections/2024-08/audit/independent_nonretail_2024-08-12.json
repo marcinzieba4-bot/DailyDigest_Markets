@@ -1,0 +1,84 @@
+{
+  "date": "2024-08-12",
+  "status": "accepted",
+  "nonretail_content_sha256": "3a48b6db32503a250674e154a4762d79fc2a4928291fe426792fa0f6c20eb793",
+  "feed_sha256": "faed9f0ea5b06a93f0c3a03a598fcf9e4f010cae3177decbeecc5e77680384b2",
+  "card_sha256": "093415229d1feb1489450a322b12aba3aa0e92f2398baef90d5e2d82a45612e9",
+  "fatal_or_major_remaining": 0,
+  "reviewer_scope": "Read all136 nonretail paragraphs and every one of100 cited exact own-date headline records. Independently checked factual scope, Polish translation, attribution, company roles, actual-versus-preview status, semantic freshness, every correct-instrument numeric claim and completed session, conditional risks, stances, labels and word ranges. Reread six named fixes and reran verification. No later-date factual evidence was used to justify this report.",
+  "style_depth": {
+    "passed": true,
+    "basis": [
+      "The US chapter contrasts lower twenty-observation Treasury yields with a five-observation reversal, the equity stabilisation with its remaining drawdown, and the inflation/activity combinations that would justify different allocations.",
+      "China separates weather-related consumer inflation from demand, discounted exports from profitable orders, low-carbon facility extension from borrower willingness, luxury property demand from oversupply, and product adoption from manufacturer margins.",
+      "Poland compares wage support with energy inflation and deposit purchasing power, bank provisions with intended dividends, apparel supply disruption with automation, and smaller housing tickets with affordability. Corporate and Ukraine investment exposures retain implementation and counterparty risks.",
+      "Sectors have distinct current company comparisons: NewsCorp/Disney/Google, DBS/Robinhood, Expedia/Airbnb/McDonald'sJapan, P&G/Mondelez, Lilly/CVS, Simon/REMAX and TSMC/SMIC/Infineon. They do not reduce all earnings cases to a rate-cut thesis.",
+      "Flows distinguishes yen positioning, actual issuance and borrower access, corporate and swap spread meanings, mutual-fund inflows, attributed institutional participation and announced buybacks. Scenarios preserve the unresolved inflation, China lending, security and Nvidia tests."
+    ]
+  },
+  "findings": [
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "unsupported specific causation",
+      "action": "Replaced forced-selling language with the established steep sell-off and replaced removal of a funding shock with the measured reduction in volatility. The broader carry-unwind discussion remains separately supported by Reuters positioning evidence."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "future versus completed company action",
+      "action": "Changed Palantir deploying to plans to deploy, matching Reuters n0713 future wording; no amount or timing of revenue is asserted."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "ordinary report voice",
+      "action": "Replaced crypto commentary about inventing buyer amounts and identities with direct investment analysis of conditional support and funding risk."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "local support",
+      "action": "Added exact own-date citations to Poland wage/investment/depositor/housing divergence and the semiconductor end-market contrast. Maximum citation use remains3."
+    },
+    {
+      "severity": "none",
+      "status": "checked",
+      "area": "instrument precision",
+      "action": "All quoted US/German/Chinese/Japanese/Australian/Polish and sector prices/returns match their own instruments and horizons. Treasury4.05%/3.94%,negative11-bps spread,minus40/minus24-bps twenty-observation changes and plus17/plus14-bps five-observation changes agree. PLTR21.30% five-session gain and Lilly10.84% five-session gain are correctly distinguished from twenty-session returns. Bitcoin/ether/solana use August11 completed UTC closes; cash instruments use August9. Spot-FX numeric marks are absent."
+    },
+    {
+      "severity": "none",
+      "status": "checked",
+      "area": "timing and semantic source windows",
+      "action": "Inflation remains pending with August11 previews n0154/n0156; July bank lending n0301 and Nvidia n0579 are treated as forecasts rather than results. Nvidia preview is within7days despite its broad result category. Microsoft/Mondelez/P&G/Apple/BAE/Shell/Linde result records are within14days. Older China PMI/aggregate solar export commentary and Polish RPP/inflation items are macro or policy baselines within35days. No later outcome is substituted for these pending events."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "area": "exact block word ranges",
+      "action": "A separate independent exact counter found small length violations not surfaced by verify.py. Targeted trims or useful brief risk sentences now put all36 blocks inside their exact bounds; financial claims and citations are unchanged. Named log: review_scratch/2024-08-12_range_fixes.json."
+    }
+  ],
+  "named_fix_log": "review_scratch/2024-08-12_named_fixes.json",
+  "verification": {
+    "paragraphs": 136,
+    "distinct_sources": 100,
+    "words": 8514,
+    "maximum_citation_uses": 3,
+    "failures": [],
+    "warnings": []
+  },
+  "warning_dispositions": [],
+  "limits": [
+    "Review covers exact own-date headlines and historical cards, not full publisher article bodies or original unrevised market-data vintages.",
+    "Acceptance binds this exact nonretail component; retail is separately reviewed and later content changes require renewed binding."
+  ],
+  "exact_block_ranges": {
+    "method": "Independent paragraph-body whitespace count after removing canonical citation tokens; all36 exact AUTHORING bounds.",
+    "blocks_checked": 36,
+    "out_of_range": [],
+    "evidence": "review_scratch/2024-08-12_block_ranges.json"
+  },
+  "prior_reviewed_component_sha256": "7d960b16e832ff91f19d06b70a815d8982462e48378b0d1b0c7d69298b41c68a"
+}
