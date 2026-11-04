@@ -1,0 +1,141 @@
+{
+  "checked_at_utc": "2026-11-04T17:14:45.164361+00:00",
+  "passed": true,
+  "errors": [],
+  "scope": "Read-only public navigation/display usability. Full origin/public body hashes and preservation are independently handled by root verify_delivery.py; this receipt does not duplicate them.",
+  "publication_stage_observed": "origin_verified",
+  "invalidation": {
+    "id": "I8RQIKL43K3SO97V3OH9CLGWM",
+    "status": "InProgress"
+  },
+  "manifest_sha256": "9029e64a8a787b60b814b811f6d4e796d3f81ce743b24c5d050fff0cc4bed56b",
+  "collection": {
+    "response": {
+      "url": "https://zembihf.xyz/reports/2024-08.html",
+      "final_url": "https://zembihf.xyz/reports/2024-08.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": "8199",
+      "content_range": null,
+      "content_disposition": null,
+      "bytes_read": 8199
+    },
+    "title": "August 2024 · Market Intelligence Archive",
+    "daily_cards": 22,
+    "dates_in_order": true,
+    "buttons": [
+      {
+        "label": "Download all reports · HTML, PDF & JSON",
+        "url": "https://zembihf.xyz/reports/2024-08/August_2024_Weekday_Reports.zip"
+      },
+      {
+        "label": "Download dated sources & audit",
+        "url": "https://zembihf.xyz/reports/2024-08/August_2024_Frozen_Sources.zip"
+      },
+      {
+        "label": "What Retail Is Playing · the full month",
+        "url": "https://zembihf.xyz/reports/2024-08/What_Retail_Is_Playing_2024-08.html"
+      },
+      {
+        "label": "Sources & historical method",
+        "url": "https://zembihf.xyz/reports/2024-08/methodology.txt"
+      }
+    ]
+  },
+  "retail": {
+    "response": {
+      "url": "https://zembihf.xyz/reports/2024-08/What_Retail_Is_Playing_2024-08.html",
+      "final_url": "https://zembihf.xyz/reports/2024-08/What_Retail_Is_Playing_2024-08.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": "418278",
+      "content_range": null,
+      "content_disposition": null,
+      "bytes_read": 418278
+    },
+    "title": "What Retail Is Playing · August 2024",
+    "dates": 22,
+    "trade_cards": 88,
+    "full_paragraphs_compared": 286,
+    "paragraph_text_pass": true
+  },
+  "navigation_sample_responses": [
+    {
+      "url": "https://zembihf.xyz/reports/archive/2024-08-01.html",
+      "final_url": "https://zembihf.xyz/reports/archive/2024-08-01.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": "206487",
+      "content_range": null,
+      "content_disposition": null,
+      "bytes_read": 206487
+    },
+    {
+      "url": "https://zembihf.xyz/reports/archive/2024-08-16.html",
+      "final_url": "https://zembihf.xyz/reports/archive/2024-08-16.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": "201758",
+      "content_range": null,
+      "content_disposition": null,
+      "bytes_read": 201758
+    },
+    {
+      "url": "https://zembihf.xyz/reports/archive/2024-08-30.html",
+      "final_url": "https://zembihf.xyz/reports/archive/2024-08-30.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": "209680",
+      "content_range": null,
+      "content_disposition": null,
+      "bytes_read": 209680
+    },
+    {
+      "url": "https://zembihf.xyz/reports/2024-08/methodology.txt",
+      "final_url": "https://zembihf.xyz/reports/2024-08/methodology.txt",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "content_length": "3075",
+      "content_range": null,
+      "content_disposition": null,
+      "bytes_read": 3075
+    }
+  ],
+  "download_route_responses": [
+    {
+      "url": "https://zembihf.xyz/reports/2024-08/August_2024_Weekday_Reports.zip",
+      "final_url": "https://zembihf.xyz/reports/2024-08/August_2024_Weekday_Reports.zip",
+      "status": 206,
+      "content_type": "application/zip",
+      "content_length": "4",
+      "content_range": "bytes 0-3/12646120",
+      "content_disposition": null,
+      "bytes_read": 4,
+      "zip_signature_pass": true,
+      "expected_file_bytes": 12646120
+    },
+    {
+      "url": "https://zembihf.xyz/reports/2024-08/August_2024_Frozen_Sources.zip",
+      "final_url": "https://zembihf.xyz/reports/2024-08/August_2024_Frozen_Sources.zip",
+      "status": 206,
+      "content_type": "application/zip",
+      "content_length": "4",
+      "content_range": "bytes 0-3/79590665",
+      "content_disposition": null,
+      "bytes_read": 4,
+      "zip_signature_pass": true,
+      "expected_file_bytes": 79590665
+    }
+  ],
+  "observations": [
+    "The collection links all22 weekday editions and gives four direct buttons for the report ZIP, frozen sources ZIP, retail collection and methodology.",
+    "The public retail collection contains all22 dates,88trade cards and286complete narrative/intro paragraphs matching final saved editions after citation-chip/Unicode normalization.",
+    "PDF/JSON delivery is through the report ZIP; user-facing collection links do not point to the known fallback /Strategies routes.",
+    "ZIP routes were sampled with Range bytes0–3 and checked for ZIP signature/type only; no full ZIP re-download or duplicate member-hash audit performed."
+  ],
+  "limits": [
+    "No independent browser interaction or screen-reader audit; HTML content/navigation and download response metadata were inspected.",
+    "External news-citation destinations were not exhaustively followed.",
+    "No artifact/prose/source/manifest changes, build, publication, Lambda or outbound sends performed."
+  ]
+}

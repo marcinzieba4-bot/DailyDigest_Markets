@@ -1,0 +1,194 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-11-04T17:23:41.573715+00:00",
+  "script_sha256": "fb2ddc68cd08858dd52599ac9397a3aa67c215628bd48b0574c4747e4e2c5917",
+  "frozen_original_script_sha256": "eeef172568c2803d5910022a82bc26038a870ec346690524fd1def6750584873",
+  "publication_sha256": "a8342202b0e1b07c029ad707e7a4a8458793280f11bb5547a50f7cda4962123b",
+  "concurrent_update_review_sha256": "aefa4cc2826ce89cc7187d62bae96ef8034af0971284cc1e054ec287c319dbc1",
+  "index_reconciliation_plan_sha256": "04c64596824e045b0d8942caaaa7d523e6646d8cf2c77731dc915b04d06657a8",
+  "index_reconciliation_review_sha256": "b1d51cec60175c65f9a5496cc38a2321b4bbee5050cfd9921b505dec40731a15",
+  "checks": [
+    {
+      "check": "all71 target/origin/public and69ZIP/66body code unchanged from frozen reviewed tool",
+      "passed": true
+    },
+    {
+      "check": "frozen verifier matches prior approved hash",
+      "passed": true
+    },
+    {
+      "check": "updated delivery verifier remains read-only remotely",
+      "passed": true
+    },
+    {
+      "check": "exact reviewed later latest update accepted",
+      "passed": true
+    },
+    {
+      "check": "reject unaccepted external review",
+      "passed": true
+    },
+    {
+      "check": "reject different publication binding",
+      "passed": true
+    },
+    {
+      "check": "reject missing protected key",
+      "passed": true
+    },
+    {
+      "check": "reject any additional protected change",
+      "passed": true
+    },
+    {
+      "check": "reject incorrect declared changed keys",
+      "passed": true
+    },
+    {
+      "check": "reject generic unchanged-snapshot exception",
+      "passed": true
+    },
+    {
+      "check": "reject current snapshot drift",
+      "passed": true
+    },
+    {
+      "check": "reject failure of original before-equals-after proof",
+      "passed": true
+    },
+    {
+      "check": "exact live archive/timestamp evidence accepted",
+      "passed": true
+    },
+    {
+      "check": "reject latest timestamp not after publication",
+      "passed": true
+    },
+    {
+      "check": "reject different live archive body",
+      "passed": true
+    },
+    {
+      "check": "reject live archive hash different from accepted evidence",
+      "passed": true
+    },
+    {
+      "check": "live evidence route restricted to dated Nov4 archive",
+      "passed": true
+    },
+    {
+      "check": "exact hash-bound reconciliation accepted",
+      "passed": true
+    },
+    {
+      "check": "reject reconciliation mismatch passed",
+      "passed": true
+    },
+    {
+      "check": "reject reconciliation mismatch plan_sha256",
+      "passed": true
+    },
+    {
+      "check": "reject reconciliation mismatch review_sha256",
+      "passed": true
+    },
+    {
+      "check": "reject reconciliation mismatch script_sha256",
+      "passed": true
+    },
+    {
+      "check": "reject reconciliation mismatch conditional_etag_write",
+      "passed": true
+    },
+    {
+      "check": "reject reconciliation mismatch report_or_latest_writes",
+      "passed": true
+    },
+    {
+      "check": "reject unreviewed merged index hash",
+      "passed": true
+    },
+    {
+      "check": "reject reconciliation plan for another publication",
+      "passed": true
+    },
+    {
+      "check": "reject unaccepted index review",
+      "passed": true
+    },
+    {
+      "check": "final index must preserve original and concurrent navigation plus August",
+      "passed": true
+    },
+    {
+      "check": "actual index must match exact reconciled hash",
+      "passed": true
+    },
+    {
+      "check": "final gate accepts only all complete verified conditions",
+      "passed": true
+    },
+    {
+      "check": "final gate rejects one bad origin body",
+      "passed": true
+    },
+    {
+      "check": "final gate rejects one bad public body",
+      "passed": true
+    },
+    {
+      "check": "final gate rejects missing ZIP member",
+      "passed": true
+    },
+    {
+      "check": "final gate rejects bad ZIP member",
+      "passed": true
+    },
+    {
+      "check": "final gate rejects unreviewed protected change",
+      "passed": true
+    },
+    {
+      "check": "final gate rejects publication preservation failure",
+      "passed": true
+    },
+    {
+      "check": "final gate rejects Lambda metadata change",
+      "passed": true
+    },
+    {
+      "check": "final gate rejects old archive link lost",
+      "passed": true
+    },
+    {
+      "check": "final gate rejects concurrent archive link lost",
+      "passed": true
+    },
+    {
+      "check": "final gate rejects index public hash mismatch",
+      "passed": true
+    },
+    {
+      "check": "final gate rejects original invalidation pending",
+      "passed": true
+    },
+    {
+      "check": "final gate rejects reconciliation invalidation pending",
+      "passed": true
+    },
+    {
+      "check": "result keeps original divergence and scoped acceptance transparent",
+      "passed": true
+    },
+    {
+      "check": "script unchanged throughout review",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "scope": "Independent code and isolated positive/negative predicate review only; updated verifier not executed here. All original target/public/member checks are byte-identical before the scoped preservation additions. No generic protected-object or index exception accepted.",
+  "limits": [
+    "Actual origin/public bodies, exact current protected snapshot, later latest/live archive correlation, reconciled index and both completed invalidations still must pass when root executes this exact verifier.",
+    "No publication receipt, artifact, S3 object, Lambda or configuration was modified by this review."
+  ]
+}

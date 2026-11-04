@@ -102,15 +102,70 @@ def main():
                         row['public_bundle_member']=artifact['path']
     protected=pub.snapshot(s3)
     unchanged=protected==receipt['protected_before']
+    publication_preserved=(receipt['protected_before']==receipt['protected_after'])
+    external_review_path=ROOT/'audit/independent_concurrent_update_review.json'
+    external_review=None
+    reviewed_external_update=False
+    if external_review_path.exists():
+        external_review=json.loads(external_review_path.read_text())
+        expected=external_review.get('protected_current',{})
+        changed=sorted(key for key in set(expected)|set(receipt['protected_before'])
+                       if expected.get(key)!=receipt['protected_before'].get(key))
+        if (external_review.get('passed') is not True
+                or external_review.get('publication_sha256')!=hashlib.sha256(pub.RECEIPT.read_bytes()).hexdigest()
+                or set(expected)!=set(receipt['protected_before'])
+                or changed!=['reports/latest.html']
+                or external_review.get('changed_keys')!=changed
+                or expected!=protected or not publication_preserved):
+            raise ValueError('Concurrent protected change is not exactly independently accepted')
+        live_archive_key=external_review.get('live_archive_key')
+        if live_archive_key!='reports/archive/2026-11-04.html':
+            raise ValueError('Unexpected live refresh evidence route')
+        live_archive=pub.read(s3,live_archive_key)
+        latest_head=s3.head_object(Bucket=pub.BUCKET,Key='reports/latest.html')
+        latest_is_later=(latest_head['LastModified']>
+                         dt.datetime.fromisoformat(receipt['finished_utc']))
+        reviewed_external_update=(latest_is_later and live_archive is not None
+            and live_archive['sha256']==protected['reports/latest.html']['sha256']
+            and live_archive['sha256']==external_review.get('live_archive_sha256'))
+        if not reviewed_external_update:
+            raise ValueError('Later live refresh body/timestamp evidence failed')
+    reconciliation_path=ROOT/'checks/index_reconciliation.json'
+    reconciliation=None
+    expected_index_sha=receipt['index_sha256']
+    reconciliation_links_preserved=True
+    if reconciliation_path.exists():
+        reconciliation=json.loads(reconciliation_path.read_text())
+        plan_path=ROOT/'checks/index_reconciliation_plan.json'
+        review_path=ROOT/'audit/independent_index_reconciliation_review.json'
+        review=json.loads(review_path.read_text())
+        plan=json.loads(plan_path.read_text())
+        script_hash=hashlib.sha256((ROOT/'tools/reconcile_archive_index.py').read_bytes()).hexdigest()
+        plan_hash=hashlib.sha256(plan_path.read_bytes()).hexdigest()
+        if (reconciliation.get('passed') is not True or review.get('passed') is not True
+                or plan.get('publication_sha256')!=hashlib.sha256(pub.RECEIPT.read_bytes()).hexdigest()
+                or reconciliation.get('plan_sha256')!=plan_hash
+                or review.get('plan_sha256')!=plan_hash
+                or reconciliation.get('review_sha256')!=hashlib.sha256(review_path.read_bytes()).hexdigest()
+                or reconciliation.get('script_sha256')!=script_hash
+                or review.get('script_sha256')!=script_hash
+                or reconciliation.get('after',{}).get('sha256')!=plan.get('merged_sha256')
+                or reconciliation.get('conditional_etag_write') is not True
+                or reconciliation.get('report_or_latest_writes') is not False):
+            raise ValueError('Index reconciliation differs from exact independent review')
+        expected_index_sha=reconciliation['after']['sha256']
     idx=pub.read(s3,'reports/index.html')
     from bs4 import BeautifulSoup
     soup=BeautifulSoup(idx['body'],'html.parser')
     links={d:len(soup.find_all('a',href=f'archive/{d}.html')) for d in pub.DATES}
-    index_origin_pass=idx['sha256']==receipt['index_sha256']
+    index_origin_pass=idx['sha256']==expected_index_sha
     backup=pub.read(s3,receipt['index_backup']['key'])
     old_hrefs={a.get('href') for a in BeautifulSoup(backup['body'],'html.parser').find_all('a')}
     archive_links_preserved=(backup['sha256']==receipt['index_backup']['sha256'] and
                              old_hrefs <= {a.get('href') for a in soup.find_all('a')})
+    if reconciliation is not None:
+        reconciliation_links_preserved=(set(plan['prior_hrefs'])|set(plan['current_hrefs'])|
+            set(plan['expected_august_hrefs'])) <= {a.get('href') for a in soup.find_all('a')}
     index_error=None
     try:
         request=urllib.request.Request('https://zembihf.xyz/reports/index.html',
@@ -122,12 +177,22 @@ def main():
         index_error=type(exc).__name__+': '+str(exc)[:200]
     inv=session.client('cloudfront',config=config).get_invalidation(
         DistributionId=pub.DIST,Id=receipt['invalidation']['id'])['Invalidation']
+    reconciliation_invalidation_status=None
+    if reconciliation is not None:
+        reconciliation_invalidation_status=session.client('cloudfront',config=config).get_invalidation(
+            DistributionId=pub.DIST,Id=reconciliation['invalidation']['id'])['Invalidation']['Status']
     live=session.client('lambda',config=config).get_function_configuration(FunctionName='daily-trends-digest')
     original=json.loads((ROOT/'checks/code_discovery.json').read_text())['live_lambda_metadata']
     lambda_unchanged=all(live.get(k)==original.get(k) for k in ('CodeSha256','LastModified','Runtime'))
-    passed=all(x['origin_sha256_pass'] and x['public_sha256_pass'] for x in rows) and len(members)==66 and all(x['sha256_pass'] for x in members) and unchanged and lambda_unchanged and all(n==1 for n in links.values()) and inv['Status']=='Completed' and index_origin_pass and index_public_pass and archive_links_preserved
+    passed=all(x['origin_sha256_pass'] and x['public_sha256_pass'] for x in rows) and len(members)==66 and all(x['sha256_pass'] for x in members) and publication_preserved and (unchanged or reviewed_external_update) and lambda_unchanged and all(n==1 for n in links.values()) and inv['Status']=='Completed' and index_origin_pass and index_public_pass and archive_links_preserved and reconciliation_links_preserved and reconciliation_invalidation_status in (None,'Completed')
     result={'checked_at_utc':dt.datetime.now(dt.timezone.utc).isoformat(),
         'passed':passed,'objects':rows,'protected_objects_unchanged':unchanged,
+        'protected_objects_unchanged_during_publication':publication_preserved,
+        'later_live_refresh_independently_reviewed':reviewed_external_update,
+        'concurrent_update_review_sha256':hashlib.sha256(external_review_path.read_bytes()).hexdigest() if external_review else None,
+        'index_reconciliation_sha256':hashlib.sha256(reconciliation_path.read_bytes()).hexdigest() if reconciliation else None,
+        'index_reconciliation_all_links_preserved':reconciliation_links_preserved,
+        'index_reconciliation_invalidation_status':reconciliation_invalidation_status,
         'protected_checked':len(protected),'lambda_code_and_runtime_unchanged':lambda_unchanged,
         'archive_date_link_counts':links,'invalidation_status':inv['Status'],
         'archive_index_origin_sha256_pass':index_origin_pass,
