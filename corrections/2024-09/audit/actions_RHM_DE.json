@@ -1,0 +1,18 @@
+{
+ "ticker": "RHM.DE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RHM.DE?period1=1719792000&period2=1727654400&interval=1d&events=div,splits",
+   "sha256": "c1c5f20fc7144c65e5906e4add7d443c527c1337eb96e0b63734996cb8ca331c",
+   "fetched_at_utc": "2026-11-04T11:20:37.841099+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RHM.DE?period1=1727654400&period2=1793791229&interval=1d&events=div,splits",
+   "sha256": "2f32e324efd8a2d266814378292821150851a2f5a1aa7e21bd70a11de029921e",
+   "fetched_at_utc": "2026-11-04T11:20:38.280872+00:00"
+  }
+ ]
+}

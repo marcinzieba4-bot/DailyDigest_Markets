@@ -1,0 +1,44 @@
+{
+  "date": "2024-09-24",
+  "scope": "nonretail",
+  "status": "ready_for_retail_merge",
+  "nonretail_word_count": 8597,
+  "word_count_method": "tools/verify.py --nonretail",
+  "distinct_headline_sources": 135,
+  "max_citation_uses": 3,
+  "block_count": 36,
+  "paragraph_count": 136,
+  "china_body_words": 881,
+  "poland_body_words": 970,
+  "stances": {
+    "US": "Bullish",
+    "EU": "Bearish",
+    "CN": "Bearish",
+    "JP": "Mixed",
+    "AU": "Mixed",
+    "PL": "Mixed"
+  },
+  "main_thesis": "US easing supports selective risk; Europe and Chinese domestic activity remain weak. Prefer self-funded investment and demonstrated operating delivery to policy or financing extrapolation.",
+  "verification": {
+    "command": "python3 -I tools/verify.py 2024-09-24 --nonretail",
+    "result": "PASS",
+    "failures": 0,
+    "warnings": 0,
+    "citation_claim_review": "All 135 cited IDs checked against own-date headline, source metadata, age and actual-release status; no author-exclusion overlap.",
+    "nonretail_render": "All 36 blocks and 136 paragraphs rendered through the shared renderer Doc helper to scratch HTML; all 135 sources resolved.",
+    "preview_path": "/workspace/work/sep2024/sourceperiod_writer/2024-09-24_nonretail_preview.html",
+    "full_render": "Pending root retail merge; nonretail writer preserves existing retail keys and does not author retail."
+  },
+  "release_boundaries": [
+    "Omitted n0590: September 24 China stimulus package was announced after report UTC midnight.",
+    "Also omitted n0591 despite September 23 index timestamp: it describes reaction to the same September 24 China rate-cut package.",
+    "Australian rate decision remains pending; no September 24 RBA outcome.",
+    "September 23 European and UK PMIs are completed; Japan uses its actual latest completed exchange session, September 20.",
+    "September 20 BOJ and China lending-rate decisions are now completed; indexed-earlier actual-release advisories respected.",
+    "Nuclear restart remains proposed and requires permits; analyst price forecasts remain analyst forecasts.",
+    "US national election, proposed trade restrictions, Polish IPO and bank consolidation remain pending."
+  ],
+  "exclusions_review": "Read and obeyed own-date audit/author_exclusions/2024-09-24.json. No global acceptance receipts, later factual reports or later-date feed/card/spec read.",
+  "source_windows": "Company news and previews seven days, company results fourteen days, macro releases and current policy baselines thirty-five days, by meaning.",
+  "retail": "Not authored or selected by this nonretail writer."
+}

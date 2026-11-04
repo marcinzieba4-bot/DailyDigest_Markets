@@ -1,0 +1,56 @@
+{
+  "checked_at_utc": "2026-11-04T11:52:14.337480+00:00",
+  "status": "static_review_passed_complete_artifact_visual_pending",
+  "reviewer": "root independent of infrastructure tool adaptation",
+  "files_sha256": {
+    "tools/publish.py": "6662a1ca3ffe3dc00e2891dbc1ca61d094f3d82001ae02bfe2900b12657d8355",
+    "tools/verify_delivery.py": "5d989f473f821d49c1b327380388923cd7b6b728d807e5a5e83f6eb85bb4b9cf",
+    "tools/finalize_reviews.py": "cceb2cad7c19676d6bee68f73034fbb3364ed9453608e171238b056be1c09d69",
+    "tools/build_artifacts.py": "789b2c5ca8f15dc2ba1770d495e2ce210773a93027599b3b7444eb2987874ec6",
+    "tools/render.py": "7a846746a4ad6ff1518fcebfc046c09fc42ad5259296af91a7f36c06cf8b154c",
+    "tools/build_retail_page.py": "e494fb626542a1a772c07e6cce5b740abca512f1deed83e60b9f8a54a043cb6a",
+    "tools/merge_retail.py": "76b787ae5b29270cb98c04997681bda00ab08639d3e381bb0c5909b9578f1146",
+    "tools/build_source_inventory.py": "3e7732e7865bb80acc344304fbdc4eed117a532225795bf1d57bbdc1e87f7646",
+    "tools/check_block_ranges.py": "45339b9513c757657d8c13ff98930a8a61d8a1fe0cdc8cf7799e4818d8eada89"
+  },
+  "checks": [
+    "All 21 September weekday dates, including exchange holidays; no weekend creation",
+    "68 publication targets: 63 daily HTML/JSON/PDF and five collection artifacts",
+    "66 report ZIP members; offline download URLs remain absolute",
+    "Source archive requires exact hash-bound 15268-file replay inventory, includes author notes and retail drafts",
+    "PDF render expands full source ledger; desktop and mobile overflow checks required",
+    "Final editorial binding requires separate nonretail and retail reviews against current components and frozen inputs",
+    "Create-only historical writes, conditional archive-index merge with backup, protected latest/other-month/weekend bodies",
+    "Cache invalidation restricted to archive index and September report/Strategy paths",
+    "Direct public check for 26 HTML/collection artifacts and public ZIP native PDF/JSON SHA verification",
+    "Standalone retail collection keeps exact per-date prose, clickable citations and touch-readable dated source lists"
+  ],
+  "credential_value_scan": {
+    "inventory_files": 15268,
+    "current_AWS_credential_matches": 0,
+    "unsafe_secret_filenames": 0
+  },
+  "limits": "Static review does not replace independent semantic claim review, final rendered visual inspection or origin/public delivery verification.",
+  "retail_partial_preview": {
+    "date": "2024-09-02",
+    "desktop_width": 1440,
+    "mobile_width": 390,
+    "overflow": false,
+    "linked_citations": 16,
+    "dated_source_rows": 16,
+    "source_disclosure_opens": true,
+    "visual_assessment": "Wide readable lead card, clean hierarchy and comfortable mobile wrapping verified from screenshots. Complete final collection inspection remains pending."
+  },
+  "first_complete_report_preview": {
+    "date": "2024-09-02",
+    "desktop_width": 1440,
+    "mobile_width": 390,
+    "overflow": false,
+    "pdf_pages": 29,
+    "source_ledger_present": true,
+    "visual_assessment": "Desktop mainreport and retail section screenshots read: wide singlecolumn sections, clear headings, sourcechips and restrainedcolor hierarchy. Mobile width check passed. Complete final artifacts remain pending."
+  },
+  "final_editorial_review_sha256": "8bd0a7c3037da4119635dd9b80d44ba7df444ccd166950f4e4dc0c794968c541",
+  "retail_quality_sha256": "3a95f56d2b01f6e5d951d4668488b50117e5f92ac8b98ac956f1e49e12e26929",
+  "range_review_sha256": "3d59939e8c0e115b763f7c47903461695e1ad67ba89208ca075a0fa1a9ac96e6"
+}

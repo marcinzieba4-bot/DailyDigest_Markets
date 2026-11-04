@@ -1,0 +1,18 @@
+{
+ "ticker": "SO",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SO?period1=1719792000&period2=1727654400&interval=1d&events=div,splits",
+   "sha256": "bb9e1923f3d6cd83e8035f6675219be08ba1d6b340e656bbf116861d2436c690",
+   "fetched_at_utc": "2026-11-04T11:20:55.877383+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SO?period1=1727654400&period2=1793791229&interval=1d&events=div,splits",
+   "sha256": "f37c416437918e2ff18172ba7e1a51aa1b010ad091dc4bb0faddbb2a5f3c291a",
+   "fetched_at_utc": "2026-11-04T11:20:56.289885+00:00"
+  }
+ ]
+}

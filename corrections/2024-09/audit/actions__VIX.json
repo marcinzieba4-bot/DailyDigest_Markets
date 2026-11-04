@@ -1,0 +1,18 @@
+{
+ "ticker": "^VIX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1719792000&period2=1727654400&interval=1d&events=div,splits",
+   "sha256": "672deed55c875c6147a2cee340c723e19b3cbb0d075c5147ee810e04367a02d3",
+   "fetched_at_utc": "2026-11-04T11:20:31.293234+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1727654400&period2=1793791229&interval=1d&events=div,splits",
+   "sha256": "46ee253435a8dd82974836e577024efb6cba209c0ed64c596ccab5aedbf18860",
+   "fetched_at_utc": "2026-11-04T11:20:31.646462+00:00"
+  }
+ ]
+}

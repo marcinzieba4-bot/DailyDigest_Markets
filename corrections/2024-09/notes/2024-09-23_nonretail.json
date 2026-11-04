@@ -1,0 +1,24 @@
+{
+  "date": "2024-09-23",
+  "scope": "nonretail",
+  "body_words": 8541,
+  "distinct_sources": 101,
+  "max_nonretail_source_uses": 3,
+  "tone": "Selective US risk and contracted power; cautious China and European autos; Japan patient BOJ; Poland fiscal, flood and labor selection.",
+  "evidence_review": {
+    "own_date_only": true,
+    "cutoff": "2024-09-23T00:00:00Z",
+    "exclusions_observed": true,
+    "release_status": "BOJ hold and China lending-rate hold completed before cutoff; RBA decision and US PCE pending. No Monday flash-PMI, Polish retail or later policy actuals admitted. Reactor restart is prospective with permits outstanding.",
+    "source_age": "News/previews seven days; results fourteen days; macro/current policy thirty-five days.",
+    "headline_scope": "Forecasts, analyst views, management statements and intentions remain attributed; no article-body expansions.",
+    "units": "Own completed sessions; crypto September22 UTC; no numeric spot FX or uncertified nominal levels."
+  },
+  "deliberate_exclusions": [
+    "Own-date excluded dynamic/live pages",
+    "Report-date flash-PMI and other daytime actuals",
+    "Any later China stimulus outcome",
+    "No measured ownership or invented purchases"
+  ],
+  "validation": "verify.py --nonretail PASS:zero failures,zero warnings. Full render awaits retail merge."
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2024-09-19",
+  "scope": "nonretail",
+  "tone": "Selective easing transmission; cautious China and autos, constructive quality real estate and utilities.",
+  "evidence_review": {
+    "own_date_only": true,
+    "cutoff": "2024-09-19T00:00:00Z",
+    "author_exclusions_observed": true,
+    "boundary_actuals": "Fed September18 cut is completed before cutoff; BOJ decision remains pending. No report-date actuals used.",
+    "source_age": "Company news/previews seven days; results fourteen days; macro/current policy thirty-five days.",
+    "headline_scope": "Headline-only facts; conditional mechanics are distinguished from realized outcomes.",
+    "spot_fx": "No numeric spot FX; DXY only.",
+    "market_units": "Completed local sessions and UTC crypto; Treasury yields percent, changes/spreads bps; no WDC/CMCSA nominal levels."
+  },
+  "body_words": 8649,
+  "distinct_sources": 129,
+  "max_nonretail_source_uses": 2,
+  "deliberate_exclusions": [
+    "All excluded dynamic/live identifiers in own-date author_exclusions file",
+    "No current-day BOJ or Australian actuals",
+    "No inferred purchases, ownership, net flows or article-body detail",
+    "No unsupported numerical spot currencies or uncertified WDC/CMCSA levels"
+  ],
+  "validation": "verify.py --nonretail PASS:129 sources,8649 words,zero failures,zero warnings. Render awaits separate retail merge; current renderer requires retail_intro."
+}

@@ -1,0 +1,149 @@
+{
+  "accepted_archive_relative_inputs": [
+    {
+      "bytes": 4009,
+      "declared_by": "audit/independent_market_review.json:replay_tool_sha256",
+      "path": "tools/replay_snapshots/bind_source_freeze.py",
+      "sha256": "a701641e224745feb2ff0c59dfa3a98daec4d22b817e73d3b1cb697744f1f945",
+      "status": "verified_existing_archive_relative_input"
+    },
+    {
+      "bytes": 4009,
+      "declared_by": "audit/independent_source_review.json:replay_tool_sha256",
+      "path": "tools/replay_snapshots/bind_source_freeze.py",
+      "sha256": "a701641e224745feb2ff0c59dfa3a98daec4d22b817e73d3b1cb697744f1f945",
+      "status": "verified_existing_archive_relative_input"
+    },
+    {
+      "bytes": 6788,
+      "declared_by": "audit/independent_market_review.json:replay_tool_sha256",
+      "path": "tools/replay_snapshots/complete_receipts.py",
+      "sha256": "0782b42daff8837a9e9ca6fee96fee740d462561ed511d5bb1c3c49b9d1a4ee3",
+      "status": "verified_existing_archive_relative_input"
+    },
+    {
+      "bytes": 6788,
+      "declared_by": "audit/independent_source_review.json:replay_tool_sha256",
+      "path": "tools/replay_snapshots/complete_receipts.py",
+      "sha256": "0782b42daff8837a9e9ca6fee96fee740d462561ed511d5bb1c3c49b9d1a4ee3",
+      "status": "verified_existing_archive_relative_input"
+    },
+    {
+      "bytes": 14223,
+      "declared_by": "audit/independent_market_review.json:replay_tool_sha256",
+      "path": "tools/replay_snapshots/independent_treasury_2024_through_2024-09-27.csv",
+      "sha256": "fbc3bf33b5272c1fffca06cae7994beee22f8216170e89f79abcee818ba3300c",
+      "status": "verified_existing_archive_relative_input"
+    },
+    {
+      "bytes": 14223,
+      "declared_by": "audit/independent_source_review.json:replay_tool_sha256",
+      "path": "tools/replay_snapshots/independent_treasury_2024_through_2024-09-27.csv",
+      "sha256": "fbc3bf33b5272c1fffca06cae7994beee22f8216170e89f79abcee818ba3300c",
+      "status": "verified_existing_archive_relative_input"
+    },
+    {
+      "bytes": 586,
+      "declared_by": "audit/independent_market_review.json:replay_tool_sha256",
+      "path": "tools/replay_snapshots/independent_treasury_request.json",
+      "sha256": "1aa10c6083b043726ffd7dcb96bb416cc039ef4c10a6746e7caae8a31b201de7",
+      "status": "verified_existing_archive_relative_input"
+    },
+    {
+      "bytes": 586,
+      "declared_by": "audit/independent_source_review.json:replay_tool_sha256",
+      "path": "tools/replay_snapshots/independent_treasury_request.json",
+      "sha256": "1aa10c6083b043726ffd7dcb96bb416cc039ef4c10a6746e7caae8a31b201de7",
+      "status": "verified_existing_archive_relative_input"
+    },
+    {
+      "bytes": 22174,
+      "declared_by": "audit/independent_market_review.json:replay_tool_sha256",
+      "path": "tools/replay_snapshots/review_market.py",
+      "sha256": "b7292cc4e19f1f963dc96424cd93d366a6a659f346adecf3a5c48687a86a928e",
+      "status": "verified_existing_archive_relative_input"
+    },
+    {
+      "bytes": 22174,
+      "declared_by": "audit/independent_source_review.json:replay_tool_sha256",
+      "path": "tools/replay_snapshots/review_market.py",
+      "sha256": "b7292cc4e19f1f963dc96424cd93d366a6a659f346adecf3a5c48687a86a928e",
+      "status": "verified_existing_archive_relative_input"
+    },
+    {
+      "bytes": 20660,
+      "declared_by": "audit/independent_market_review.json:replay_tool_sha256",
+      "path": "tools/replay_snapshots/review_sources.py",
+      "sha256": "17b5f8a5ecdee83d6779ad685ebbdcff57522cd64b69b53a6656c1acb9cd74e1",
+      "status": "verified_existing_archive_relative_input"
+    },
+    {
+      "bytes": 20660,
+      "declared_by": "audit/independent_source_review.json:replay_tool_sha256",
+      "path": "tools/replay_snapshots/review_sources.py",
+      "sha256": "17b5f8a5ecdee83d6779ad685ebbdcff57522cd64b69b53a6656c1acb9cd74e1",
+      "status": "verified_existing_archive_relative_input"
+    },
+    {
+      "bytes": 13924,
+      "declared_by": "audit/independent_market_review.json:replay_tool_sha256",
+      "path": "tools/replay_snapshots/semantic_exclusions.py",
+      "sha256": "52ca16f614e394e8041845f7ae600fc5a701746a161a8a4453d43379c376bf54",
+      "status": "verified_existing_archive_relative_input"
+    },
+    {
+      "bytes": 13924,
+      "declared_by": "audit/independent_source_review.json:replay_tool_sha256",
+      "path": "tools/replay_snapshots/semantic_exclusions.py",
+      "sha256": "52ca16f614e394e8041845f7ae600fc5a701746a161a8a4453d43379c376bf54",
+      "status": "verified_existing_archive_relative_input"
+    }
+  ],
+  "bindings": [
+    {
+      "bytes": 22174,
+      "declared_by": "audit/independent_market_review.json:independent_replay_tool",
+      "original_declared_path": "/workspace/work/sep2024/audit_work/review_market.py",
+      "sha256": "b7292cc4e19f1f963dc96424cd93d366a6a659f346adecf3a5c48687a86a928e",
+      "snapshot_path": "tools/replay_snapshots/review_market.py",
+      "status": "verified_exact_byte_snapshot"
+    },
+    {
+      "bytes": 20660,
+      "declared_by": "audit/independent_source_review.json:independent_replay_tool",
+      "original_declared_path": "/workspace/work/sep2024/audit_work/review_sources.py",
+      "sha256": "17b5f8a5ecdee83d6779ad685ebbdcff57522cd64b69b53a6656c1acb9cd74e1",
+      "snapshot_path": "tools/replay_snapshots/review_sources.py",
+      "status": "verified_exact_byte_snapshot"
+    },
+    {
+      "bytes": 4898,
+      "declared_by": "audit/news_coverage.json:helper_tool_sha256",
+      "original_declared_path": "tools/digest.py",
+      "sha256": "7a775011744de4be6a820d635f11ca4f9ff3d3ee3562afd76c3e2413dcaa3951",
+      "snapshot_path": "tools/replay_snapshots/digest.py",
+      "status": "verified_exact_byte_snapshot"
+    }
+  ],
+  "limitations": [
+    "Snapshots retain the executed source bytes, including original absolute paths and write behavior; this packaging tool does not execute them.",
+    "The resolver and RSS transport declared not applicable by September coverage have no executed bytes to snapshot.",
+    "Original execution metadata and acceptance receipts remain unchanged; this mapping adds safe archive-relative locations."
+  ],
+  "not_applicable": [
+    {
+      "declared_by": "audit/news_coverage.json:helper_tool_sha256",
+      "declared_value": "not-applicable-september-2024",
+      "original_declared_path": "posthoc/resolve_news_url.py",
+      "status": "not_applicable_no_executed_bytes"
+    },
+    {
+      "declared_by": "audit/news_coverage.json:transport_tool_sha256",
+      "declared_value": "not-applicable-september-2024",
+      "original_declared_path": "tools/import_public_rss.py",
+      "status": "not_applicable_no_executed_bytes"
+    }
+  ],
+  "status": "verified_exact_byte_snapshots_no_tools_executed",
+  "version": "september-2024-replay-tool-snapshots-v1"
+}

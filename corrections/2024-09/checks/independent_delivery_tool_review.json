@@ -1,0 +1,137 @@
+{
+  "checked_at_utc": "2026-11-04T13:16:28.884198+00:00",
+  "reviewer": "independent_marketperiod_reviewer",
+  "status": "staticpassed_artifactspending",
+  "static_only": true,
+  "code_sha256": {
+    "tools/publish.py": "6662a1ca3ffe3dc00e2891dbc1ca61d094f3d82001ae02bfe2900b12657d8355",
+    "tools/verify_delivery.py": "5d989f473f821d49c1b327380388923cd7b6b728d807e5a5e83f6eb85bb4b9cf",
+    "tools/finalize_reviews.py": "cceb2cad7c19676d6bee68f73034fbb3364ed9453608e171238b056be1c09d69",
+    "tools/build_retail_page.py": "e494fb626542a1a772c07e6cce5b740abca512f1deed83e60b9f8a54a043cb6a",
+    "tools/build_artifacts.py": "789b2c5ca8f15dc2ba1770d495e2ce210773a93027599b3b7444eb2987874ec6",
+    "tools/render.py": "7a846746a4ad6ff1518fcebfc046c09fc42ad5259296af91a7f36c06cf8b154c",
+    "tools/merge_retail.py": "76b787ae5b29270cb98c04997681bda00ab08639d3e381bb0c5909b9578f1146",
+    "tools/check_block_ranges.py": "45339b9513c757657d8c13ff98930a8a61d8a1fe0cdc8cf7799e4818d8eada89"
+  },
+  "files_read": [
+    "tools/publish.py",
+    "tools/verify_delivery.py",
+    "tools/finalize_reviews.py",
+    "tools/build_retail_page.py",
+    "tools/build_artifacts.py",
+    "tools/render.py",
+    "tools/merge_retail.py",
+    "tools/check_block_ranges.py"
+  ],
+  "checks": [
+    {
+      "check": "September scope and targets",
+      "result": "pass",
+      "details": "All date constants restrict 2024-09 Monday-Friday:21 dates, 63 daily objects plus5 exactly allowed collection objects; complete build enforces68 targets and66 unique report-ZIP members."
+    },
+    {
+      "check": "Protected objects and writes",
+      "result": "pass",
+      "details": "Evaluated protected_keys without AWS:107 unique keys covering latest, October/November collections+weekdays, August2026dailyHTML and allSeptemberweekendHTML/JSON/PDF. Fresh target preflight refuses existing objects; target/backup uploads useIfNoneMatch; archive index re-read+href-preserving merge usesIfMatch. Exactly5September-scoped invalidation paths. No Lambda invocation/configuration writes, latest writes, email or Telegram calls."
+    },
+    {
+      "check": "Review, source and artifact gates",
+      "result": "pass_static",
+      "details": "Re-read both patched files in full. Publisher now checks all current component receipt/draft byte hashes against aggregate editorial rows, canonical nonretail digest against aggregate and current NR receipt, current review dates/status/feed/card hashes, retail reviewer draft binding and exact merged retail values. Delivery verifier binds current manifest bytes to publication.manifest_sha256 before ZIP use."
+    },
+    {
+      "check": "Source archive replay and supporting inputs",
+      "result": "pass_current_inventory_artifact_pending",
+      "details": "Read inventory metadata and path list only:15268unique declared files;7225cached logical news responses+7225physical raw responses,64staged source candidates,21author-exclusion files,21provenance files,21unreviewed comparison feeds,8safe replay snapshots, frozen feeds/market/actionproofs/tools. Builder hashes and size-checks each declared file, rejects absolute/traversal/outside-root paths and archives all notes, retail drafts and nested checkreceipts. No CLAUDE/credential-named path in declared inventory. FinalZIP actual membership/hash check remains pending."
+    },
+    {
+      "check": "Offline links and browser-PDF source ledger",
+      "result": "pass_static_sample_only",
+      "details": "ReportZIP useshtml/DATE.html,json/DATE_Market_Intelligence.json,pdf/DATE_Market_Intelligence.pdf plusindex/methodology/retail. Offline index day links targethtml/DATE.html; retail/methodology links target rootmembers; downloadable ZIPbuttons are absolute publicURLs. PDF generation opens everydetails element before printing and checks source-ledger marker; sampleSeptember2PDF has29pages and allrequired section/ledger labels."
+    },
+    {
+      "check": "Retail collection and wide layout",
+      "result": "pass_static_sample_only",
+      "details": "Retail builder loops fixedSeptemberweekdays chronologically; each edition cites its ownfeed and sectionintro+alltrade paragraphs are included in its datedsourceledger. Superscript URLs and datedledger are HTTP(S)links; native detailssummary works for touch. InlineCSS wide1240retail/1280daily layouts, responsive cards; noexternal assets/scripts. ExistingSeptember2/3/9/10/13HTML samples eachhave9sectionheadings, workingTOCtargets, sourceledgers and no removeddashboard classes. Full21filebodies and visualbrowserlayout inspection pending."
+    }
+  ],
+  "findings": [
+    {
+      "id": "T1",
+      "severity": "major_gate_gap",
+      "file": "tools/publish.py",
+      "location": "plan final_editorial_review report loop",
+      "finding": "The publisher accepts final_editorial_review.spec_sha256 but does not recheck recorded nonretail_review_sha256, retail_review_sha256 or retail_draft_sha256 against current review/draft files. A superseding component finding after finalization does not currently invalidate this publishing gate.",
+      "requested_fix": "Recheck each component receipt and retail draft hash/current unresolved-findings state, or equivalently bind the complete final component-approval chain immediately before publication.",
+      "status": "resolved",
+      "resolution": "Publisher now rechecks component receipt byte hashes, retail draft bytes, canonical nonretail content, current review dates/status/source hashes and reviewed retail merge values."
+    },
+    {
+      "id": "T2",
+      "severity": "major_binding_gap",
+      "file": "tools/verify_delivery.py",
+      "location": "current artifact manifest load before ZIP checks",
+      "finding": "The verifier uses current artifact_manifest.json for ZIPmembers without checking itsSHA against publication.json.manifest_sha256, and does not callpublish.plan(). The local manifest used for delivery checks can differ from the published reviewed plan.",
+      "requested_fix": "Require the current manifest digest and target plan to match the publication receipt before performing delivery verification.",
+      "status": "resolved",
+      "resolution": "Delivery verifier checks current artifact manifest bytes against publication.manifest_sha256 before using the manifest for public ZIP membership."
+    }
+  ],
+  "findings_remaining": 0,
+  "actual_artifacts_inspected": {
+    "sample_only": true,
+    "html_dates": [
+      "2024-09-02",
+      "2024-09-03",
+      "2024-09-09",
+      "2024-09-10",
+      "2024-09-13"
+    ],
+    "sample_html_ledger_counts": [
+      127,
+      130,
+      124,
+      110,
+      129
+    ],
+    "sample_pdf": "/workspace/work/sep2024/report_preview/2024-09-02.pdf",
+    "sample_pdf_pages": 29,
+    "complete_21_date_manifest_inspected": false,
+    "all_63_bodies_inspected": false
+  },
+  "limitations": [
+    "Static tool review used read-only code access; no publishing, AWS calls, invalidation, source mutation or tool edits. A separately authorized September 27 XLI trim is recorded in its nonretail review receipt.",
+    "All21 final artifacts are not yet built; no claim of complete artifact or public delivery verification.",
+    "Optional independent Chromium CLI screenshot attempt did not complete and was stopped; layout observations above are code/DOM/PDF-label checks, not visual screenshot signoff.",
+    "Complete 21-date artifact inspection remains pending and will be recorded only in checks/independent_artifact_review.json; this prebuild receipt will remain unchanged."
+  ],
+  "patch_recheck": {
+    "files_read_in_full": [
+      "tools/publish.py",
+      "tools/verify_delivery.py"
+    ],
+    "syntax_check": "ast.parse succeeded for all seven reviewed Python files; no program entry point or AWS call executed",
+    "T1": "resolved",
+    "T2": "resolved",
+    "full_artifact_inspection": "pending complete 21-date artifact manifest"
+  },
+  "prebuild_recheck": {
+    "files_read_in_full": [
+      "tools/finalize_reviews.py",
+      "tools/merge_retail.py",
+      "tools/check_block_ranges.py"
+    ],
+    "source_schema": "Both accepted source exclusion sections use by_date dictionaries, whose values contain feed_sha256 and exclusions lists. Finalizer requires all21 dates and checks both section feed hashes against current bytes.",
+    "canonical_digest": "Finalizer, merger and range checker all use UTF-8 json.dumps(nonretail,sort_keys=True,ensure_ascii=False,separators=(\",\",\":\")) matching independent NR receipts.",
+    "read_only_current_file_checks": {
+      "source_exclusion_bindings": 42,
+      "canonical_component_bindings": 21,
+      "merge_receipts": 21,
+      "aggregate_final_specs": 21
+    },
+    "range_tool": "Checks36 nonretail block ranges per date,756 total, and current independent NR canonical digest/fatal status; its entry point was not run because it writes the range receipt. Existing receipt reports756 checked,0 violations,0 pending.",
+    "new_or_remaining_findings": 0,
+    "artifact_review_destination": "checks/independent_artifact_review.json",
+    "receipt_freeze": "This prebuild static receipt is now final and will remain byte-stable for the source ZIP; later artifact inspection is recorded separately."
+  }
+}

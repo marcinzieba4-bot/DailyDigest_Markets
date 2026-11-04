@@ -1,0 +1,18 @@
+{
+ "ticker": "^TWII",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETWII?period1=1719792000&period2=1727654400&interval=1d&events=div,splits",
+   "sha256": "09267107d011ba91fd396ac51e0a47ad1a3e878f328cda5c56de1d96e6ac3b14",
+   "fetched_at_utc": "2026-11-04T11:20:39.875204+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETWII?period1=1727654400&period2=1793791229&interval=1d&events=div,splits",
+   "sha256": "485620a144d8493373411747df5dcd7688a20f50e52d09a334f84903c8341c66",
+   "fetched_at_utc": "2026-11-04T11:20:40.255463+00:00"
+  }
+ ]
+}

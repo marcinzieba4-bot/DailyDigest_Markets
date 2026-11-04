@@ -1,0 +1,533 @@
+{
+  "date": "2024-09-06",
+  "scope": "independent_nonretail_review",
+  "reviewer": "sep_sourceperiod_writer; different from original author",
+  "reviewed_at_utc": "2026-11-04T12:59:48.920812+00:00",
+  "feed_sha256": "8ccf8eb0cf133bbd206bfa3b0db4bc51ec9b4bedb10fba70e5543b59508c7ac3",
+  "card_sha256": "04d5dd657ccf9e005b2a23fa6bf550049366e18e593ab63d652d27237c196e1e",
+  "full_spec_sha256_at_review": "a4d53fd98d716dac33a50e9006643ff10ae94c6148713be1a1439c543d0142d2",
+  "nonretail_content_sha256": "571f09e6323d3c7a41a8875d6432b2361bd12aa1a4d2a6463bbc3bd9271943ee",
+  "fatal_or_major_remaining": 0,
+  "review_coverage": {
+    "nonretail_blocks_read": 36,
+    "nonretail_paragraphs_read": 136,
+    "paragraph_ids_reviewed": "P001–P136, in document order",
+    "distinct_final_cited_headlines_read": 124,
+    "final_citation_occurrences_reviewed": 134,
+    "all_final_cited_ids": [
+      "n0140",
+      "n0156",
+      "n0178",
+      "n0201",
+      "n0226",
+      "n0241",
+      "n0271",
+      "n0291",
+      "n0302",
+      "n0335",
+      "n0351",
+      "n0352",
+      "n0353",
+      "n0355",
+      "n0369",
+      "n0419",
+      "n0430",
+      "n0434",
+      "n0456",
+      "n0488",
+      "n0501",
+      "n0502",
+      "n0506",
+      "n0509",
+      "n0511",
+      "n0513",
+      "n0536",
+      "n0540",
+      "n0541",
+      "n0542",
+      "n0543",
+      "n0545",
+      "n0547",
+      "n0549",
+      "n0551",
+      "n0710",
+      "n0742",
+      "n0792",
+      "n0813",
+      "n0815",
+      "n0822",
+      "n0844",
+      "n0847",
+      "n0850",
+      "n0852",
+      "n0958",
+      "n1041",
+      "n1056",
+      "n1073",
+      "n1100",
+      "n1130",
+      "n1157",
+      "n1162",
+      "n1179",
+      "n1257",
+      "n1259",
+      "n1262",
+      "n1263",
+      "n1276",
+      "n1280",
+      "n1281",
+      "n1284",
+      "n1335",
+      "n1336",
+      "n1361",
+      "n1381",
+      "n1416",
+      "n1423",
+      "n1458",
+      "n1462",
+      "n1482",
+      "n1491",
+      "n1502",
+      "n1505",
+      "n1619",
+      "n1796",
+      "n1833",
+      "n1850",
+      "n1931",
+      "n1936",
+      "n1968",
+      "n1987",
+      "n1988",
+      "n2010",
+      "n2017",
+      "n2025",
+      "n2030",
+      "n2038",
+      "n2051",
+      "n2062",
+      "n2134",
+      "n2151",
+      "n2167",
+      "n2174",
+      "n2185",
+      "n2219",
+      "n2250",
+      "n2254",
+      "n2260",
+      "n2278",
+      "n2478",
+      "n2514",
+      "n2550",
+      "n2697",
+      "n2752",
+      "n2783",
+      "n2785",
+      "n2809",
+      "n2850",
+      "n2903",
+      "n2910",
+      "n3092",
+      "n3101",
+      "n3191",
+      "n3231",
+      "n3254",
+      "n3256",
+      "n3283",
+      "n3287",
+      "n3288",
+      "n3440",
+      "n3489",
+      "n3514",
+      "n3515"
+    ],
+    "max_nonretail_citation_uses": 3,
+    "review_method": "Actually read every nonretail paragraph and every cited exact frozen headline; compared quoted card values, currency/units, horizons and completed exchange-local/crypto UTC sessions; reviewed actual-release status, meaning-based age, company roles and attribution, conditional versus completed events, capital-flow assertions, call consistency and investment prose.",
+    "distinct_initial_cited_headlines_read": 126,
+    "all_final_cited_headlines_read": 124
+  },
+  "source_controls": {
+    "own_date_author_exclusions_read": true,
+    "excluded_citation_intersection": [],
+    "own_date_author_advisories_read_if_present": true,
+    "additional_release_exclusions_filtered_to_current_date_only": true,
+    "no_other_date_factual_sources_imported": true
+  },
+  "findings_and_fixes": [
+    {
+      "severity": "major",
+      "status": "fixed",
+      "issue": "Nvidia buyback approval appeared in a repackaged September4 headline despite being an older company action; the company-results14day window does not make the action fresh news.",
+      "fix": "Removed n1204 and its buyback discussion from nonretail flows. Retained eligible Nvidia earnings evidence n0822 as a company result. The reviewed retail component does not use n1204 and was preserved exactly."
+    },
+    {
+      "severity": "moderate",
+      "status": "fixed conservatively",
+      "issue": "The first BlackRock ETF outflow headline at the boundary of the7day window does not specify its actual observation day.",
+      "fix": "Omitted n0572 and replaced the flow-trend caveat with token-fund versus exchange-equity operating economics."
+    },
+    {
+      "severity": "minor",
+      "status": "fixed",
+      "issue": "US curve paragraph omitted its explicit twenty-observation spread change, and Broadcom's price sentence referred awkwardly to a completed after-hours reaction.",
+      "fix": "Added the exact card's +2bps widening and kept the September5 regular close explicitly prior to the after-close earnings announcement; no post-result price was invented."
+    },
+    {
+      "severity": "style",
+      "status": "fixed",
+      "issue": "Underowned endings and several capital-flow, China, materials and discretionary passages narrated ownership gaps, evidence rules or no-invention instructions.",
+      "fix": "Replaced named strings with connection capital economics, customer-budget constraints, procurement and contract risk, portfolio composition, currency transmission, valuation and reinvestment effects."
+    },
+    {
+      "severity": "verification",
+      "status": "reviewed",
+      "issue": "Actually read all136 nonretail paragraphs and all126 initially cited unique frozen headlines; all124 final sources covered. Every quoted current-card field checked directly.",
+      "fix": "All36 block word ranges remain inside the explicit author contract. Nonretail9113words/full10366words; both verifiers0fail/0warn. All final source exclusions, release boundaries, roles, units, market sessions, conditional calls and price horizons reviewed."
+    }
+  ],
+  "market_fields_reviewed": {
+    "symbols": [
+      "^GSPC",
+      "^VIX",
+      "DX-Y.NYB",
+      "VGK",
+      "000001.SS",
+      "^HSI",
+      "ASHR",
+      "KWEB",
+      "^N225",
+      "^AXJO",
+      "EPOL",
+      "ETFBW20TR.WA",
+      "PKO.WA",
+      "PEO.WA",
+      "DNP.WA",
+      "PGE.WA",
+      "PKN.WA",
+      "KGH.WA",
+      "ALE.WA",
+      "LPP.WA",
+      "CDR.WA",
+      "JSW.WA",
+      "XLK",
+      "XLC",
+      "NFLX",
+      "XLF",
+      "KRE",
+      "JPM",
+      "CL=F",
+      "BZ=F",
+      "XOM",
+      "OXY",
+      "GEV",
+      "CAT",
+      "XLY",
+      "TSLA",
+      "XLP",
+      "XLV",
+      "LLY",
+      "NVO",
+      "GC=F",
+      "HG=F",
+      "FCX",
+      "NEM",
+      "XLRE",
+      "XLU",
+      "NEE",
+      "CEG",
+      "ASML",
+      "TSM",
+      "DELL",
+      "BTC-USD",
+      "ETH-USD",
+      "SOL-USD",
+      "IBIT",
+      "COIN",
+      "TLT",
+      "LQD",
+      "HYG",
+      "AVGO",
+      "BA"
+    ],
+    "treasury": "Prior September5:2Y3.75%,10Y3.73%,spread−2bps;20-observation2Y−25bps/10Y−23bps/spread+2bps;exact inverted/bull-steepening labels.",
+    "coverage": "Every quoted close, comparable return/horizon and currency/index/commodity unit checked. Cash instruments use September5 completed exchange-local close; crypto uses September5 completed UTC daily close. No forbidden WDC/CMCSA nominal levels or numeric spot-FX quotes. No pre-split MSTR nominal reference trigger appears in nonretail."
+  },
+  "boundary_review": [
+    "September6 US payrolls are pending at00UTC; only eligible previews and previously completed labor/inflation signals support the report.",
+    "Japanese consumer-spending actual is the early-local release before UTC midnight, consistent with the September5 UTC23:30 boundary; not a report-day UTC actual.",
+    "Broadcom September5 after-US-close earnings are eligible before September6 UTC midnight; regular-session price is kept separate from the result and after-hours reaction.",
+    "Company news/previews7d,company results14d,current macro or policy35d applied by meaning; stale Nvidia corporate action omitted despite newer index date.",
+    "Powell/Fed adjustment, Tesla robotaxi event, USTR final determination and possible ASML service restrictions remain conditional or pending; no later outcome imported.",
+    "US election, BOJ additional tightening and any post-cutoff release outcome remain unresolved."
+  ],
+  "validation": {
+    "nonretail": "2024-09-06: PASS — 124 sources, 9113 words, 0 fail, 0 warn\n",
+    "full_if_retail_merged": {
+      "exit_code": 0,
+      "output": "2024-09-06: PASS — 135 sources, 10366 words, 0 fail, 0 warn\n"
+    },
+    "nonretail_render": "Shared renderer Doc helper rendered every paragraph and resolved every final citation.",
+    "preview_path": "/workspace/work/sep2024/sourceperiod_writer/review/2024-09-06_review_preview.html"
+  },
+  "preservation": "Only named nonretail strings changed by loading current spec. retail and retail_intro JSON values preserved exactly. No frozen source/card changes, publishing or git operations.",
+  "limits": [
+    "This is an AI editorial review of frozen headline-level evidence, not an independent audit of complete article bodies, private trading records or publisher archives.",
+    "Approximate indexed publication times do not certify original publication vintage. High-risk future outcomes are omitted; boundary-aged company-result references are omitted when their eligibility cannot be established confidently from the permitted evidence.",
+    "Retrospectively retrieved market cards may include vendor corrections; the review verifies the briefing against those frozen cards and does not certify an original unrevised price-history vintage.",
+    "The nonretail component hash binds this review. Later retail-only merges change the full-spec hash but do not invalidate unchanged nonretail content."
+  ],
+  "block_word_ranges": [
+    {
+      "block": "geo:US",
+      "words": 427,
+      "minimum": 400,
+      "maximum": 500,
+      "within_range": true
+    },
+    {
+      "block": "geo:EU",
+      "words": 318,
+      "minimum": 250,
+      "maximum": 350,
+      "within_range": true
+    },
+    {
+      "block": "geo:CN",
+      "words": 907,
+      "minimum": 800,
+      "maximum": 950,
+      "within_range": true
+    },
+    {
+      "block": "geo:JP",
+      "words": 308,
+      "minimum": 270,
+      "maximum": 350,
+      "within_range": true
+    },
+    {
+      "block": "geo:AU",
+      "words": 288,
+      "minimum": 200,
+      "maximum": 300,
+      "within_range": true
+    },
+    {
+      "block": "geo:PL",
+      "words": 950,
+      "minimum": 850,
+      "maximum": 1050,
+      "within_range": true
+    },
+    {
+      "block": "sector:XLK",
+      "words": 191,
+      "minimum": 150,
+      "maximum": 200,
+      "within_range": true
+    },
+    {
+      "block": "sector:XLC",
+      "words": 185,
+      "minimum": 150,
+      "maximum": 200,
+      "within_range": true
+    },
+    {
+      "block": "sector:XLF",
+      "words": 190,
+      "minimum": 150,
+      "maximum": 200,
+      "within_range": true
+    },
+    {
+      "block": "sector:XLE",
+      "words": 184,
+      "minimum": 150,
+      "maximum": 200,
+      "within_range": true
+    },
+    {
+      "block": "sector:XLI",
+      "words": 192,
+      "minimum": 150,
+      "maximum": 200,
+      "within_range": true
+    },
+    {
+      "block": "sector:XLY",
+      "words": 185,
+      "minimum": 150,
+      "maximum": 200,
+      "within_range": true
+    },
+    {
+      "block": "sector:XLP",
+      "words": 191,
+      "minimum": 150,
+      "maximum": 200,
+      "within_range": true
+    },
+    {
+      "block": "sector:XLV",
+      "words": 192,
+      "minimum": 150,
+      "maximum": 200,
+      "within_range": true
+    },
+    {
+      "block": "sector:XLB",
+      "words": 197,
+      "minimum": 150,
+      "maximum": 200,
+      "within_range": true
+    },
+    {
+      "block": "sector:XLRE",
+      "words": 200,
+      "minimum": 150,
+      "maximum": 200,
+      "within_range": true
+    },
+    {
+      "block": "sector:XLU",
+      "words": 188,
+      "minimum": 150,
+      "maximum": 200,
+      "within_range": true
+    },
+    {
+      "block": "sector:SXAP",
+      "words": 199,
+      "minimum": 150,
+      "maximum": 200,
+      "within_range": true
+    },
+    {
+      "block": "sector:SOXX",
+      "words": 188,
+      "minimum": 150,
+      "maximum": 200,
+      "within_range": true
+    },
+    {
+      "block": "earnings_pattern",
+      "words": 406,
+      "minimum": 350,
+      "maximum": 420,
+      "within_range": true
+    },
+    {
+      "block": "crypto",
+      "words": 315,
+      "minimum": 290,
+      "maximum": 360,
+      "within_range": true
+    },
+    {
+      "block": "flows",
+      "words": 660,
+      "minimum": 600,
+      "maximum": 750,
+      "within_range": true
+    },
+    {
+      "block": "underowned:0",
+      "words": 134,
+      "minimum": 110,
+      "maximum": 150,
+      "within_range": true
+    },
+    {
+      "block": "underowned:1",
+      "words": 140,
+      "minimum": 110,
+      "maximum": 150,
+      "within_range": true
+    },
+    {
+      "block": "underowned:2",
+      "words": 149,
+      "minimum": 110,
+      "maximum": 150,
+      "within_range": true
+    },
+    {
+      "block": "underowned:3",
+      "words": 147,
+      "minimum": 110,
+      "maximum": 150,
+      "within_range": true
+    },
+    {
+      "block": "anticipatory:0",
+      "words": 173,
+      "minimum": 140,
+      "maximum": 190,
+      "within_range": true
+    },
+    {
+      "block": "anticipatory:1",
+      "words": 165,
+      "minimum": 140,
+      "maximum": 190,
+      "within_range": true
+    },
+    {
+      "block": "anticipatory:2",
+      "words": 176,
+      "minimum": 140,
+      "maximum": 190,
+      "within_range": true
+    },
+    {
+      "block": "anticipatory:3",
+      "words": 171,
+      "minimum": 140,
+      "maximum": 190,
+      "within_range": true
+    },
+    {
+      "block": "catalysts:0",
+      "words": 130,
+      "minimum": 100,
+      "maximum": 140,
+      "within_range": true
+    },
+    {
+      "block": "catalysts:1",
+      "words": 135,
+      "minimum": 100,
+      "maximum": 140,
+      "within_range": true
+    },
+    {
+      "block": "catalysts:2",
+      "words": 135,
+      "minimum": 100,
+      "maximum": 140,
+      "within_range": true
+    },
+    {
+      "block": "catalysts:3",
+      "words": 134,
+      "minimum": 100,
+      "maximum": 140,
+      "within_range": true
+    },
+    {
+      "block": "catalysts:4",
+      "words": 134,
+      "minimum": 100,
+      "maximum": 140,
+      "within_range": true
+    },
+    {
+      "block": "catalysts:5",
+      "words": 129,
+      "minimum": 100,
+      "maximum": 140,
+      "within_range": true
+    }
+  ],
+  "retail_value_sha256_preserved": "a6f8ab303c49271fbe8cc67a3a21f54285da618cbca2520498ae0163a4cf8259"
+}

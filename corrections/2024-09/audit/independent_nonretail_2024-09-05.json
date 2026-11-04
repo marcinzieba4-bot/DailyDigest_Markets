@@ -1,0 +1,1342 @@
+{
+  "date": "2024-09-05",
+  "review_type": "independent_nonretail_full_review",
+  "reviewer": "sep_late_writer, separate from the Sep5 nonretail author",
+  "reviewed_at_utc": "2026-11-04T12:46:14.399325+00:00",
+  "fatal_or_major_remaining": 0,
+  "paragraph_count": 136,
+  "paragraphs_reviewed": 136,
+  "blocks_reviewed": 36,
+  "nonretail_body_words": 8977,
+  "citations_reviewed": 136,
+  "candidate_headlines_reviewed_including_removed": 139,
+  "citation_occurrences_reviewed": 167,
+  "citation_ids_reviewed": [
+    "n0048",
+    "n0148",
+    "n0155",
+    "n0171",
+    "n0204",
+    "n0219",
+    "n0237",
+    "n0258",
+    "n0268",
+    "n0269",
+    "n0285",
+    "n0304",
+    "n0356",
+    "n0391",
+    "n0417",
+    "n0420",
+    "n0423",
+    "n0452",
+    "n0460",
+    "n0462",
+    "n0463",
+    "n0465",
+    "n0472",
+    "n0478",
+    "n0491",
+    "n0504",
+    "n0505",
+    "n0509",
+    "n0510",
+    "n0513",
+    "n0515",
+    "n0517",
+    "n0519",
+    "n0527",
+    "n0531",
+    "n0626",
+    "n0687",
+    "n0706",
+    "n0712",
+    "n0714",
+    "n0777",
+    "n0801",
+    "n0818",
+    "n0840",
+    "n0912",
+    "n0915",
+    "n1121",
+    "n1135",
+    "n1157",
+    "n1187",
+    "n1188",
+    "n1189",
+    "n1190",
+    "n1195",
+    "n1201",
+    "n1207",
+    "n1211",
+    "n1215",
+    "n1218",
+    "n1230",
+    "n1258",
+    "n1270",
+    "n1313",
+    "n1331",
+    "n1411",
+    "n1415",
+    "n1435",
+    "n1444",
+    "n1454",
+    "n1457",
+    "n1485",
+    "n1562",
+    "n1563",
+    "n1689",
+    "n1779",
+    "n1791",
+    "n1805",
+    "n1828",
+    "n1848",
+    "n1865",
+    "n1868",
+    "n1880",
+    "n1903",
+    "n1906",
+    "n1908",
+    "n1917",
+    "n1955",
+    "n1967",
+    "n2030",
+    "n2054",
+    "n2109",
+    "n2141",
+    "n2148",
+    "n2157",
+    "n2164",
+    "n2169",
+    "n2220",
+    "n2223",
+    "n2234",
+    "n2241",
+    "n2246",
+    "n2254",
+    "n2255",
+    "n2256",
+    "n2261",
+    "n2262",
+    "n2439",
+    "n2480",
+    "n2489",
+    "n2627",
+    "n2646",
+    "n2686",
+    "n2687",
+    "n2731",
+    "n2745",
+    "n2746",
+    "n2754",
+    "n2756",
+    "n2757",
+    "n2758",
+    "n2760",
+    "n2772",
+    "n2776",
+    "n2781",
+    "n2807",
+    "n2809",
+    "n2819",
+    "n2820",
+    "n2981",
+    "n3023",
+    "n3058",
+    "n3067",
+    "n3068",
+    "n3079",
+    "n3121",
+    "n3159"
+  ],
+  "feed_sha256": "f3bf29e3f7301376c7af836acc3dc13e5997d90925f1e8b8f779cd6e1530c74f",
+  "card_sha256": "7be12e2b4ba73a12bf1ae39bdaf0746b4c59021df887dca018a6b73bfb38a062",
+  "full_spec_sha256_at_review": "2af0e8f6d4ede0cee0057cb521045d2a16e591159b947ec8a5a58b0c7ed9cbff",
+  "nonretail_content_sha256": "206bb78abc1d9054fe25db05a1a42a5e9f2ff141780cf908e012a27691d4f05e",
+  "retail_preserved": true,
+  "retail_value_sha256": "b0c0fd237069722bf831385fc964497c35f1724a56315bb98fb41500e90b9dae",
+  "findings_and_fixes": [
+    {
+      "severity": "minor",
+      "location": "geo[2].parts[3]",
+      "finding": "Hong Kong luxury-home headline was attributed to South China Morning Post, but n0527 names Bloomberg.",
+      "fix": "Corrected the source attribution to Bloomberg without changing the supported property fact."
+    },
+    {
+      "severity": "minor",
+      "location": "earnings_pattern.parts[0]",
+      "finding": "MongoDB sales/stock-jump headline was attributed to Bloomberg, but n3159 names Yahoo Finance.",
+      "fix": "Corrected attribution to Yahoo Finance; no after-hours percentage or later regular-close response invented."
+    },
+    {
+      "severity": "potential_major_resolved",
+      "location": "geo[4].parts[0]; flows.parts[0]",
+      "finding": "n0192 has a nominal Sep4 RSS timestamp but the underlying Bullock remarks may belong to Australian daytime Sep5, after the midnight cutoff; pre-cutoff actual release was not established.",
+      "fix": "Removed both uses of n0192. Replaced with the eligible Aug16 SMH monetary-policy baseline n0048, explicitly labelled as August guidance. Did not assert a new Sep5 speech outcome."
+    },
+    {
+      "severity": "vintage_uncertainty_resolved",
+      "location": "flows.parts[3]",
+      "finding": "Late-indexed Nvidia buyback headlines n1491/n1252 risk extending the age of an earlier company action merely through commentary and query dates.",
+      "fix": "Removed both buyback references and used timely own-date Reuters n0268 corporate bond issuance evidence instead. The paragraph distinguishes financing from value creation and retains specific XTB/AirTrunk capital actions."
+    },
+    {
+      "severity": "minor",
+      "location": "sectors[11].parts[3]",
+      "finding": "The Volkswagen quote did not distinguish preference shares from other share lines.",
+      "fix": "Identified Volkswagen preference shares and VOW3.DE; unchanged EUR quote and return."
+    },
+    {
+      "severity": "minor",
+      "location": "sectors[12].parts[0]; catalysts[5].parts[1]",
+      "finding": "ASML quotes lacked the explicit US share-line description.",
+      "fix": "Identified ASML US line in both paragraphs; unchanged USD values and horizons."
+    }
+  ],
+  "checks_performed": [
+    "Read every one of the 136 nonretail paragraphs in full, joined to each cited own-date headline, source, nominal timestamp and category. Re-read every corrected paragraph after narrow edits.",
+    "Read all 137 initially cited headlines and the two replacement headlines; all 136 final distinct citations were reviewed. Checked company news/previews against seven-day meaning, company results against fourteen-day meaning, and macro/current-policy baselines against thirty-five days, rather than relying on broad monthly category labels.",
+    "Compared every quoted market value to the own frozen card across 46 named market instruments, including signed percentage changes, explicit currency or index-point units, one/five/twenty-session horizons, and completed Sep4 exchange-local sessions. No numerical discrepancy remained.",
+    "Checked official Treasury 2Y 3.76%, 10Y 3.77%, positive 1 bps 10Y-minus-2Y spread, twenty-observation changes of -23/-13/+10 bps, and exact positive-but-very-flat / bull-steepening curve descriptions. Yield levels remain percent and yield changes/spreads remain bps.",
+    "Checked BTC/ETH/SOL against the completed Sep4 UTC candle, separately from IBIT/COIN/MSTR US exchange sessions. MSTR uses its current-unit quote and comparable returns; no old-unit reference price is used as a trigger. No numeric spot FX, suppressed CMCSA/WDC nominal prices, NBIS metrics or unlisted CRWV/SNDK metrics.",
+    "Compared all final cited IDs with current own author_exclusions: empty intersection. No Sep5 author_advisories file exists. Consulted only current-date-relevant additional-release quality metadata; did not use factual evidence from other report dates.",
+    "Checked actual-release status independently of nominal RSS: Australian GDP is completed by the Sep5 cutoff; HPE forecast is a completed Sep4 after-US-close announcement with no earlier regular-close reaction attributed to it. Broadcom, next US payrolls, next ECB decision and next Fed decision remain pending. No AeroVironment, Australian GDP or completed speech preview is left as a pending scenario. US election remains pending.",
+    "Reviewed named company roles, source attribution, management guidance versus forecasts/estimates, M&A agreements versus completed transactions, XTB shareholder placement versus operating finance, political-committee crypto donations versus candidate donations, clinical evidence versus approvals, and prospective ASML restrictions versus settled policy.",
+    "Read every Underowned ending and instrument expression for ordinary investment risks and observable action triggers. No invented measured ownership, unsupported fund holdings, absent-evidence narration or author-rule ending remains. LQD/XLI/XLU/KWEB exposures are described with their breadth and separate business/duration risks.",
+    "Reviewed cross-section consistency: selective quality and duration protection, cautious energy/autos/ASML, modest BABA/HPE exposure, conditional AVGO, and DLTR/XTB operating or supply distinctions. Price returns are not described as measured fund flows.",
+    "Independently checked all 36 block target ranges: China875, Poland953, earnings408, crypto290, flows637; all thirteen sectors, four themes, four pending scenarios and six single-name catalysts are within their specified ranges.",
+    "Confirmed retail_intro and retail values equal the pre-review merged snapshot exactly. Did not edit or substantively review retail; its independent reviewer is separate.",
+    "Ran verify.py --nonretail and full verify.py after all eight narrow paragraph changes: both PASS, zero failures and zero warnings."
+  ],
+  "quoted_market_instruments_reviewed": [
+    "^GSPC",
+    "^VIX",
+    "DX-Y.NYB",
+    "^STOXX",
+    "^GDAXI",
+    "000001.SS",
+    "^HSI",
+    "ASHR",
+    "KWEB",
+    "^N225",
+    "^AXJO",
+    "EPOL",
+    "ETFBW20TR.WA",
+    "PKO.WA",
+    "KGH.WA",
+    "XTB.WA",
+    "XLK",
+    "ZS",
+    "MDB",
+    "XLC",
+    "XLF",
+    "XLE",
+    "XLI",
+    "XLY",
+    "XLP",
+    "XLV",
+    "XLB",
+    "XLRE",
+    "XLU",
+    "EXV5.DE",
+    "VOW3.DE",
+    "SOXX",
+    "ASML",
+    "TSM",
+    "BABA",
+    "LQD",
+    "BTC-USD",
+    "ETH-USD",
+    "SOL-USD",
+    "IBIT",
+    "COIN",
+    "MSTR",
+    "TLT",
+    "HYG",
+    "AVGO",
+    "FEZ"
+  ],
+  "paragraph_review_log": [
+    {
+      "path": "geo[0].parts[0]",
+      "label": "Macro Stance",
+      "citation_ids": [
+        "n3079",
+        "n3067",
+        "n3058"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[0].parts[1]",
+      "label": "Rates & Curve",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "geo[0].parts[2]",
+      "label": "New / Most Important",
+      "citation_ids": [
+        "n0491",
+        "n1270"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[0].parts[3]",
+      "label": "Playbook ✓",
+      "citation_ids": [
+        "n3023",
+        "n0237"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[1].parts[0]",
+      "label": "Macro Stance",
+      "citation_ids": [
+        "n1457",
+        "n1411"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[1].parts[1]",
+      "label": "Activity & Inflation",
+      "citation_ids": [
+        "n1331",
+        "n1435"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[1].parts[2]",
+      "label": "New / Most Important",
+      "citation_ids": [
+        "n1415"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[1].parts[3]",
+      "label": "Playbook ✓",
+      "citation_ids": [
+        "n1313"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[2].parts[0]",
+      "label": "Macro Stance",
+      "citation_ids": [
+        "n0356",
+        "n0391"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[2].parts[1]",
+      "label": "PMIs & Activity",
+      "citation_ids": [
+        "n0420",
+        "n0515",
+        "n0510"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[2].parts[2]",
+      "label": "Credit Impulse",
+      "citation_ids": [
+        "n0304",
+        "n0285"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[2].parts[3]",
+      "label": "Property",
+      "citation_ids": [
+        "n0513",
+        "n0417",
+        "n0527"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[2].parts[4]",
+      "label": "Fiscal, Policy & Trade",
+      "citation_ids": [
+        "n0463",
+        "n0460",
+        "n0462",
+        "n0472",
+        "n0517"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[2].parts[5]",
+      "label": "Markets & Flows",
+      "citation_ids": [
+        "n0423"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[2].parts[6]",
+      "label": "New / Most Important",
+      "citation_ids": [
+        "n0505",
+        "n0504",
+        "n0452"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[2].parts[7]",
+      "label": "Playbook ✓",
+      "citation_ids": [
+        "n0465"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[3].parts[0]",
+      "label": "Macro Stance",
+      "citation_ids": [
+        "n1791",
+        "n1779",
+        "n1868"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[3].parts[1]",
+      "label": "Activity & Currency",
+      "citation_ids": [
+        "n0171",
+        "n1848",
+        "n1865"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[3].parts[2]",
+      "label": "Playbook ✓",
+      "citation_ids": [
+        "n1828",
+        "n1805"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[4].parts[0]",
+      "label": "Macro Stance",
+      "citation_ids": [
+        "n0148",
+        "n0048",
+        "n0204"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[4].parts[1]",
+      "label": "Demand & Financing",
+      "citation_ids": [
+        "n0219",
+        "n0155"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[4].parts[2]",
+      "label": "Playbook ✓",
+      "citation_ids": [
+        "n2756",
+        "n2757"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[5].parts[0]",
+      "label": "Macro Stance",
+      "citation_ids": [
+        "n2030",
+        "n2141",
+        "n2262",
+        "n1880",
+        "n1955"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[5].parts[1]",
+      "label": "Markets",
+      "citation_ids": [
+        "n2220",
+        "n2169"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[5].parts[2]",
+      "label": "Fiscal & Politics",
+      "citation_ids": [
+        "n1967",
+        "n2054",
+        "n2255",
+        "n2109"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[5].parts[3]",
+      "label": "Corporate & Sectors",
+      "citation_ids": [
+        "n2241",
+        "n2148",
+        "n2246",
+        "n2157",
+        "n2164"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[5].parts[4]",
+      "label": "Geopolitics & Security",
+      "citation_ids": [
+        "n1917",
+        "n1908",
+        "n2254",
+        "n1903"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[5].parts[5]",
+      "label": "New / Most Important",
+      "citation_ids": [
+        "n2234",
+        "n2223",
+        "n2261",
+        "n1906"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "geo[5].parts[6]",
+      "label": "Playbook ✓",
+      "citation_ids": [
+        "n2256"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[0].parts[0]",
+      "label": "Narrative",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[0].parts[1]",
+      "label": "Reported",
+      "citation_ids": [
+        "n1230",
+        "n0777"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[0].parts[2]",
+      "label": "EPS Upside Watch",
+      "citation_ids": [
+        "n0912"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[0].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[1].parts[0]",
+      "label": "Narrative",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[1].parts[1]",
+      "label": "Reported",
+      "citation_ids": [
+        "n1121",
+        "n1135"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[1].parts[2]",
+      "label": "EPS Upside Watch",
+      "citation_ids": [
+        "n1689"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[1].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "citation_ids": [
+        "n1187"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[2].parts[0]",
+      "label": "Narrative",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[2].parts[1]",
+      "label": "Reported",
+      "citation_ids": [
+        "n1258",
+        "n2772"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[2].parts[2]",
+      "label": "EPS Upside Watch",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[2].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "citation_ids": [
+        "n2731"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[3].parts[0]",
+      "label": "Narrative",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[3].parts[1]",
+      "label": "Reported",
+      "citation_ids": [
+        "n0519",
+        "n1201"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[3].parts[2]",
+      "label": "EPS Upside Watch",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[3].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "citation_ids": [
+        "n2627"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[4].parts[0]",
+      "label": "Narrative",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[4].parts[1]",
+      "label": "Reported",
+      "citation_ids": [
+        "n1189",
+        "n2746"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[4].parts[2]",
+      "label": "EPS Upside Watch",
+      "citation_ids": [
+        "n2776"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[4].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "citation_ids": [
+        "n1188"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[5].parts[0]",
+      "label": "Narrative",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[5].parts[1]",
+      "label": "Reported",
+      "citation_ids": [
+        "n1211",
+        "n2439"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[5].parts[2]",
+      "label": "EPS Upside Watch",
+      "citation_ids": [
+        "n0801"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[5].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "citation_ids": [
+        "n1190"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[6].parts[0]",
+      "label": "Narrative",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[6].parts[1]",
+      "label": "Reported",
+      "citation_ids": [
+        "n1215",
+        "n0818"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[6].parts[2]",
+      "label": "EPS Upside Watch",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[6].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "citation_ids": [
+        "n1207"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[7].parts[0]",
+      "label": "Narrative",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[7].parts[1]",
+      "label": "Reported",
+      "citation_ids": [
+        "n2646",
+        "n2687"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[7].parts[2]",
+      "label": "EPS Upside Watch",
+      "citation_ids": [
+        "n2820"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[7].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "citation_ids": [
+        "n2754"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[8].parts[0]",
+      "label": "Narrative",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[8].parts[1]",
+      "label": "Reported",
+      "citation_ids": [
+        "n1157",
+        "n0509"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[8].parts[2]",
+      "label": "EPS Upside Watch",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[8].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "citation_ids": [
+        "n2745"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[9].parts[0]",
+      "label": "Narrative",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[9].parts[1]",
+      "label": "Reported",
+      "citation_ids": [
+        "n2756",
+        "n2757"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[9].parts[2]",
+      "label": "EPS Upside Watch",
+      "citation_ids": [
+        "n2489"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[9].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "citation_ids": [
+        "n1195"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[10].parts[0]",
+      "label": "Narrative",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[10].parts[1]",
+      "label": "Reported",
+      "citation_ids": [
+        "n2809"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[10].parts[2]",
+      "label": "EPS Upside Watch",
+      "citation_ids": [
+        "n2686"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[10].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "citation_ids": [
+        "n2781"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[11].parts[0]",
+      "label": "Narrative",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[11].parts[1]",
+      "label": "Reported",
+      "citation_ids": [
+        "n1444",
+        "n1454"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[11].parts[2]",
+      "label": "EPS Upside Watch",
+      "citation_ids": [
+        "n2480"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[11].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[12].parts[0]",
+      "label": "Narrative",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[12].parts[1]",
+      "label": "Reported",
+      "citation_ids": [
+        "n2807",
+        "n2760"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[12].parts[2]",
+      "label": "EPS Upside Watch",
+      "citation_ids": [
+        "n0269"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "sectors[12].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "citation_ids": [
+        "n2981"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "earnings_pattern[0].parts[0]",
+      "label": "Rewarded",
+      "citation_ids": [
+        "n0915",
+        "n3159",
+        "n0777"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "earnings_pattern[0].parts[1]",
+      "label": "Punished",
+      "citation_ids": [
+        "n1215",
+        "n0840"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "earnings_pattern[0].parts[2]",
+      "label": "Pattern",
+      "citation_ids": [
+        "n1211",
+        "n1230"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "earnings_pattern[0].parts[3]",
+      "label": "Attention into EPS",
+      "citation_ids": [
+        "n0269"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "earnings_pattern[0].parts[4]",
+      "label": "Playbook",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "underowned[0].parts[0]",
+      "label": "Attention Gap",
+      "citation_ids": [
+        "n0531"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "underowned[0].parts[1]",
+      "label": "Exposure & Risk",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "underowned[0].parts[2]",
+      "label": "Trigger to Watch",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "underowned[1].parts[0]",
+      "label": "Attention Gap",
+      "citation_ids": [
+        "n2489"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "underowned[1].parts[1]",
+      "label": "Exposure & Risk",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "underowned[1].parts[2]",
+      "label": "Trigger to Watch",
+      "citation_ids": [
+        "n2776"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "underowned[2].parts[0]",
+      "label": "Attention Gap",
+      "citation_ids": [
+        "n2819",
+        "n1189"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "underowned[2].parts[1]",
+      "label": "Exposure & Risk",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "underowned[2].parts[2]",
+      "label": "Trigger to Watch",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "underowned[3].parts[0]",
+      "label": "Attention Gap",
+      "citation_ids": [
+        "n0706"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "underowned[3].parts[1]",
+      "label": "Exposure & Risk",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "underowned[3].parts[2]",
+      "label": "Trigger to Watch",
+      "citation_ids": [
+        "n1562"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "crypto[0].parts[0]",
+      "label": "Market Context",
+      "citation_ids": [
+        "n0687"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "crypto[0].parts[1]",
+      "label": "New / Most Important",
+      "citation_ids": [
+        "n0712",
+        "n0706",
+        "n0714"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "crypto[0].parts[2]",
+      "label": "Playbook",
+      "citation_ids": [
+        "n0626"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "flows[0].parts[0]",
+      "label": "Global Liquidity",
+      "citation_ids": [
+        "n3121",
+        "n0304",
+        "n0048"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "flows[0].parts[1]",
+      "label": "Rates & Dollar",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "flows[0].parts[2]",
+      "label": "Credit Check",
+      "citation_ids": [
+        "n3079",
+        "n0491",
+        "n1563",
+        "n1562"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "flows[0].parts[3]",
+      "label": "Equity & Fund Flows",
+      "citation_ids": [
+        "n2758",
+        "n2220",
+        "n2169",
+        "n0268",
+        "n1485",
+        "n0478"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "flows[0].parts[4]",
+      "label": "Portfolio Implication",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "anticipatory[0].parts[0]",
+      "label": "What Is Priced",
+      "citation_ids": [
+        "n3023",
+        "n3068",
+        "n1270"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "anticipatory[0].parts[1]",
+      "label": "Conditional Expression",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "anticipatory[0].parts[2]",
+      "label": "Risk",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "anticipatory[1].parts[0]",
+      "label": "What Is Priced",
+      "citation_ids": [
+        "n0258"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "anticipatory[1].parts[1]",
+      "label": "Conditional Expression",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "anticipatory[1].parts[2]",
+      "label": "Risk",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "anticipatory[2].parts[0]",
+      "label": "What Is Priced",
+      "citation_ids": [
+        "n1313",
+        "n1411"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "anticipatory[2].parts[1]",
+      "label": "Conditional Expression",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "anticipatory[2].parts[2]",
+      "label": "Risk",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "anticipatory[3].parts[0]",
+      "label": "What Is Priced",
+      "citation_ids": [
+        "n3121",
+        "n0237"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "anticipatory[3].parts[1]",
+      "label": "Conditional Expression",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "anticipatory[3].parts[2]",
+      "label": "Risk",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[0].parts[0]",
+      "label": "Catalyst & Thesis",
+      "citation_ids": [
+        "n0505"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[0].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[0].parts[2]",
+      "label": "Trade Expression",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[1].parts[0]",
+      "label": "Catalyst & Thesis",
+      "citation_ids": [
+        "n0269"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[1].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[1].parts[2]",
+      "label": "Trade Expression",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[2].parts[0]",
+      "label": "Catalyst & Thesis",
+      "citation_ids": [
+        "n1230"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[2].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[2].parts[2]",
+      "label": "Trade Expression",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[3].parts[0]",
+      "label": "Catalyst & Thesis",
+      "citation_ids": [
+        "n1218",
+        "n1215"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[3].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[3].parts[2]",
+      "label": "Trade Expression",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[4].parts[0]",
+      "label": "Catalyst & Thesis",
+      "citation_ids": [
+        "n2220",
+        "n2169"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[4].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[4].parts[2]",
+      "label": "Trade Expression",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[5].parts[0]",
+      "label": "Catalyst & Thesis",
+      "citation_ids": [
+        "n2981"
+      ],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[5].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "citation_ids": [],
+      "reviewed": true
+    },
+    {
+      "path": "catalysts[5].parts[2]",
+      "label": "Trade Expression",
+      "citation_ids": [],
+      "reviewed": true
+    }
+  ],
+  "limits": [
+    "Independent review by a separate AI agent, not human or external factual certification.",
+    "Evidence is limited to immutable own-date headline metadata and the market card. Article bodies, paywalled text, original publication/update vintages and unrevised contemporaneous vendor histories were not accessed or certified.",
+    "Nominal RSS timestamps alone were not treated as proof of actual release. Identified doubtful report-day remarks and company-action vintages were removed or replaced; the receipt does not certify every unseen article-body detail.",
+    "Full-spec hash binds the currently merged file. Retail was preserved and received only the full validator in this review; it was not substantively reviewed by this nonretail reviewer."
+  ],
+  "verification": {
+    "nonretail": "PASS — 136 sources, 8977 words, 0 fail, 0 warn",
+    "full": "PASS — 148 sources, 10230 words, 0 fail, 0 warn"
+  },
+  "unresolved_major_or_fatal_findings": []
+}

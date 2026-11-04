@@ -1,0 +1,18 @@
+{
+ "ticker": "ADBE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ADBE?period1=1719792000&period2=1727654400&interval=1d&events=div,splits",
+   "sha256": "ffb3b7ac18afea0b447d5b9a6992ccaf510d79206ecee9764144025de0fd7bd4",
+   "fetched_at_utc": "2026-11-04T11:20:48.770632+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ADBE?period1=1727654400&period2=1793791229&interval=1d&events=div,splits",
+   "sha256": "7223b676f1ab89ec04782f01c6ed7bf10e9c3da6503a1d28a9f63997fc95ec3d",
+   "fetched_at_utc": "2026-11-04T11:20:49.165514+00:00"
+  }
+ ]
+}

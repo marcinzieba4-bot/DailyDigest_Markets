@@ -1,0 +1,24 @@
+{
+  "date": "2024-09-20",
+  "scope": "nonretail",
+  "tone": "Constructive US risk after relief rally; selective Europe and Japan; cautious China and autos; Polish labor/flood risks.",
+  "body_words": 8506,
+  "distinct_sources": 109,
+  "max_nonretail_source_uses": 3,
+  "evidence_review": {
+    "own_date_only": true,
+    "cutoff": "2024-09-20T00:00:00Z",
+    "exclusions_observed": true,
+    "release_status": "Fed and BOE decisions completed; BOJ decision pending. FedEx,Lennar,Nike announcements on prior US evening eligible. Chinese lending-rate actual n0607 omitted because report-date release is after midnight UTC despite prior-date indexed timestamp.",
+    "source_age": "News seven days; results fourteen days; macro/current policy thirty-five days.",
+    "headline_scope": "Only title-established facts; forecasts/opinions/pending policies labeled accordingly.",
+    "market_units": "No numeric spotFX; no WDC/CMCSA levels; own session tags and exact card values."
+  },
+  "validation": "verify.py --nonretail PASS; final full render awaits separate retail merge.",
+  "deliberate_exclusions": [
+    "Own exclusion identifiers",
+    "n0607 Chinese report-date lending-rate outcome",
+    "Potentially report-date Mercedes earnings downgrade outcome",
+    "No invented flows or investor ownership"
+  ]
+}
