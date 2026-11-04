@@ -1,0 +1,78 @@
+{
+  "date": "2024-10-07",
+  "reviewer": "Independent AI nonretail reviewer; did not author the reviewed edition",
+  "actual_scope": {
+    "nonretail_blocks": 36,
+    "nonretail_paragraphs": 136,
+    "all_nonretail_blocks_and_paragraphs_read": true,
+    "distinct_nonretail_cited_headlines": 129,
+    "every_cited_nonretail_own_date_headline_read": true,
+    "own_card_numeric_fields_read_and_matched": true,
+    "retail_reviewed_or_edited": false
+  },
+  "concrete_findings_and_resolutions": [
+    {
+      "location": "geo.JP / Activity & Currency",
+      "finding": "The Sunday-indexed diplomat-warning headline did not independently establish a completed event before the Monday UTC cutoff.",
+      "resolution": "Removed n2835 and used own-date n5039, whose October 3 headline establishes dollar strength against the yen. No claim about a completed official warning remains.",
+      "new_evidence": [
+        "n5039"
+      ]
+    },
+    {
+      "location": "catalysts.NKE / Catalyst & Thesis",
+      "finding": "The incoming-leadership reference needed its own headline support in the paragraph.",
+      "resolution": "Added CNBC n1366, which explicitly reports the CEO change; kept the turnaround benefit conditional."
+    },
+    {
+      "location": "sectors.SOXX and catalysts.NVDA",
+      "finding": "Three sentences narrated evidentiary rules instead of investment mechanisms.",
+      "resolution": "Replaced them with delivery, cash-generation, valuation and customer-return conditions; no new numerical forecast or target introduced."
+    }
+  ],
+  "release_boundary_dispositions": [
+    {
+      "event": "September US payrolls",
+      "disposition": "Actual October 4 result retained via n4800/n4813; no old pending payroll preview."
+    },
+    {
+      "event": "US ports",
+      "disposition": "Completed strike suspension retained via n2485; durable settlement remains unresolved."
+    },
+    {
+      "event": "Tesla robotaxi",
+      "disposition": "Unveiling remains prospective; completed quarterly deliveries are distinct."
+    },
+    {
+      "event": "US inflation and bank reporting",
+      "disposition": "Pending previews remain conditional; no report-day actual results."
+    },
+    {
+      "event": "US election",
+      "disposition": "Outcome remains pending throughout."
+    }
+  ],
+  "semantic_checks": {
+    "company_news_and_previews_max_days": 7,
+    "company_results_max_days": 14,
+    "macro_and_policy_max_days": 35,
+    "current_date_known_semantic_and_release_exclusions_checked": true,
+    "spot_fx_numeric_quotes_absent": true,
+    "WDC_CMCSA_withheld_levels_not_used": true,
+    "SOXX_includes_ASML_and_TSMC": true,
+    "price_changes_not_reported_as_measured_flows_or_ownership": true,
+    "source_attribution_and_Polish_translation_checked": true,
+    "numbers_units_horizons_and_instrument_sessions_checked": true
+  },
+  "validation": {
+    "verify": "PASS; 0 fail, 0 warn",
+    "final_words": 10199
+  },
+  "limits": "AI review of actual current-edition prose against frozen own-date headline scope and relevant market-card fields. This is not article-body verification, original publication-vintage certification, or certification of unrevised historical vendor data. Doubtful event timing was omitted rather than resolved from other report dates.",
+  "fatal_or_major_remaining": 0,
+  "feed_sha256": "46796d7a2baadcb6b8be494527873dd82ed43e5f26c3be643cc40be665f59490",
+  "card_sha256": "e5862c182db36cd958ce3a06de3fc8f3c6e166c837cd814276b1ec12b4563e8a",
+  "full_spec_sha256_at_review": "e7b090ed7c9a104c1153dbc1217eb3b548dd6d2436d364037658b089528ae6e9",
+  "nonretail_content_sha256": "0be286ab685aa00a1253f21af84d8f87dc5f93e06d6ff38877a949dacbde630c",
+  "retail_content_preserved_exactly": true
+}

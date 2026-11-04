@@ -1,0 +1,2596 @@
+{
+  "status": "accepted_for_authoring_with_semantic_exclusions",
+  "passed": true,
+  "scope": "All23 October source acquisition/identity/immutability infrastructure only. Every physical raw RSS XML independently reparsed; catalogue jobs, capped daily refinements, own-cutoff merges, IDs and physical provenance independently reconstructed. Screening/semantic regex policy inspected and separately applied, not independently known article publication dates. No report narrative or retail-selection approval is conferred.",
+  "checks": 194978,
+  "checks_by_scope": {
+    "raw_transport": 38720,
+    "xml_reparse": 30976,
+    "plan": 7,
+    "merge": 69,
+    "screening": 33,
+    "freeze": 142,
+    "age": 125031
+  },
+  "errors": [],
+  "dates": [
+    {
+      "date": "2024-10-01",
+      "raw_items": 4870,
+      "ready_items": 4870,
+      "excluded": 0,
+      "feed_sha256": "f4396fd7c9b9471bce4b35dad1c1f85a7ea140436d75c47821aaad10de2e64a4",
+      "raw_sha256": "38315a3d106635f6376e00b11fa415acc2fa1a9022972768d8a9f2f79a5dc55c",
+      "provenance_sha256": "86c4319c840c452667f39d9ba25cf13eaf17fef310fd25cbb253f703e5e373b3",
+      "ready_receipt_sha256": "72a7600a61182730397a772b94277318b5bed8817be61515178adfeb5efa5d7e",
+      "qualifying_physical_requests": 687,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 0,
+      "later_parent_daily_contexts_excluded": 306
+    },
+    {
+      "date": "2024-10-02",
+      "raw_items": 5104,
+      "ready_items": 5104,
+      "excluded": 0,
+      "feed_sha256": "c8fd08500344b8d0f236f1098e0c510326b22a451091fe002b02d417a333d5c5",
+      "raw_sha256": "31b991549e61bed46fb3599dda5175e9201ee459b8d36cafd1bfdbe1e9447973",
+      "provenance_sha256": "790f8cd2af040db6a403bef518edb57b5812193630d1430d6e8811ea266adb83",
+      "ready_receipt_sha256": "cd8de46eb80e6a73ed5ecc87e17f58dfafa08f943fb4ef3e91aa62e4d03b641c",
+      "qualifying_physical_requests": 989,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 312,
+      "later_parent_daily_contexts_excluded": 306
+    },
+    {
+      "date": "2024-10-03",
+      "raw_items": 5299,
+      "ready_items": 5299,
+      "excluded": 0,
+      "feed_sha256": "117a180a5582b882443af419c31736122ac99597ee8a0e1f7d2a6a0d69bf4630",
+      "raw_sha256": "997016d306b656e4c9fa27a18507a095ed1baf56aa0418d9f14af1fc10175c67",
+      "provenance_sha256": "cd963b580e1dd6fc863c43a40d298059d35e4e30ea9cf241534d361b079a2a58",
+      "ready_receipt_sha256": "df222ef5b460db9a59ad8d965978b2fc07ab911caef7f06e51cdf90de43dfe13",
+      "qualifying_physical_requests": 1295,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 624,
+      "later_parent_daily_contexts_excluded": 298
+    },
+    {
+      "date": "2024-10-04",
+      "raw_items": 5200,
+      "ready_items": 5200,
+      "excluded": 0,
+      "feed_sha256": "1224120bac51276861f5bdbcce720e01cda365702724e6ccc9a3549a7b56d8b7",
+      "raw_sha256": "3ba6e3531e3c5f5f1178cefa084aa136f61280aae1b110ed5148a26da4b6b561",
+      "provenance_sha256": "917430967c0dd55b06625078bcc441c250e052fe1aa2d023bf8c99d51490f4f3",
+      "ready_receipt_sha256": "d78af530a6606c79e71a703b9c79fab339ee46770f14abc8dd838c318d3373c2",
+      "qualifying_physical_requests": 1600,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 936,
+      "later_parent_daily_contexts_excluded": 292
+    },
+    {
+      "date": "2024-10-07",
+      "raw_items": 5101,
+      "ready_items": 5101,
+      "excluded": 0,
+      "feed_sha256": "46796d7a2baadcb6b8be494527873dd82ed43e5f26c3be643cc40be665f59490",
+      "raw_sha256": "5d1d9f047ec70624240754c78b9502a33e26b67f2065cc9bff3b7613835ecc71",
+      "provenance_sha256": "bb8b6c9173a9e38455d53483b478f2ade7fdc59f2cde86f8e39f23aa28a933d2",
+      "ready_receipt_sha256": "0e63eb6df3bcabfcdc33b414866425a52886e8d064c29c97aea1a53f7ec5bf50",
+      "qualifying_physical_requests": 1899,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 1248,
+      "later_parent_daily_contexts_excluded": 268
+    },
+    {
+      "date": "2024-10-08",
+      "raw_items": 5148,
+      "ready_items": 5147,
+      "excluded": 1,
+      "feed_sha256": "ef29f49660058bb56970389a030d5058843b44c752de31ad10c339a862170e51",
+      "raw_sha256": "1627e04afd9cff5baa46af0611f79606eeda90522ba9dfc0b808e7ab772667f5",
+      "provenance_sha256": "525545e9f7530bd3e328b70866c6289991c1f58ac5857ae5d600ede8afed74d5",
+      "ready_receipt_sha256": "1654fd7c384033d8b364fdb78f626bba580ac8abf256decd9f858b1d8ab187ac",
+      "qualifying_physical_requests": 1914,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 0,
+      "later_parent_daily_contexts_excluded": 232
+    },
+    {
+      "date": "2024-10-09",
+      "raw_items": 4793,
+      "ready_items": 4792,
+      "excluded": 1,
+      "feed_sha256": "cb2bd17b95d71e5e7d8d28623757fc5cc7a92ff8720f35f76b10e62438cc825a",
+      "raw_sha256": "da2e7853d35e8d4c3c46681d443ac998bcaf55de02c8d7b43c5d785ceaa189c6",
+      "provenance_sha256": "1bec02f5e64de50097a5abbdfbaa3d481bda622bd14369339b6fa1202ef0771d",
+      "ready_receipt_sha256": "6c7dd15179d0bfb9204ee31167a2c34dd9bf7bbeaa51a573b1495940ba54c5f3",
+      "qualifying_physical_requests": 2030,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 312,
+      "later_parent_daily_contexts_excluded": 232
+    },
+    {
+      "date": "2024-10-10",
+      "raw_items": 4829,
+      "ready_items": 4822,
+      "excluded": 7,
+      "feed_sha256": "3ae2fe4621519c38ce562f474785fd19abe8cb22064e78d8ce0f3b97766c4b0b",
+      "raw_sha256": "6cccbd44055882b9a4dd800409a1af97b54fe39414a5cb9600f763c64e0a061b",
+      "provenance_sha256": "80a9574018eee8e186d069e011682aeea3474a411561fff3e35b3f4720e57245",
+      "ready_receipt_sha256": "f283745a8d37b38fa9dace52c5818db22463c4b6479db0e2a74c7000dcb22dc8",
+      "qualifying_physical_requests": 2139,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 624,
+      "later_parent_daily_contexts_excluded": 226
+    },
+    {
+      "date": "2024-10-11",
+      "raw_items": 5011,
+      "ready_items": 5001,
+      "excluded": 10,
+      "feed_sha256": "6912b6f95ac60d39b535928136c4c5551bd2a42330a2afeb2abedcb08372614c",
+      "raw_sha256": "08e45e71ed2bb3e0cab3f6475b14de4542301f1f4fc04a8289302d7ecdab8624",
+      "provenance_sha256": "bdf9d4eef88202d722d7012c0a9a1dc2b3cd0a61401cd8fb03fc3a72fa02920b",
+      "ready_receipt_sha256": "d88e6babf4adeebf9aef2926e53660ffe38420a7eb37ed2239f8b70abf0f0421",
+      "qualifying_physical_requests": 2249,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 936,
+      "later_parent_daily_contexts_excluded": 220
+    },
+    {
+      "date": "2024-10-14",
+      "raw_items": 5053,
+      "ready_items": 5051,
+      "excluded": 2,
+      "feed_sha256": "736a8a95e14c99b7e596e2b9deaa0bee19790f2f129db7dbd2ad5b9fb2c5da9d",
+      "raw_sha256": "48fa04c3170d22b6e815dd9400f74b6c2bd228039eca00b39680b280979406f2",
+      "provenance_sha256": "4ac1230474066e3356a2625329ed59f277ca7d162552476c309cb804bf54c09a",
+      "ready_receipt_sha256": "ce53108cdf51a6a6b18c112bcd6f39de68e13d99e8a891f131d190ea3e6a7766",
+      "qualifying_physical_requests": 2349,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 1248,
+      "later_parent_daily_contexts_excluded": 208
+    },
+    {
+      "date": "2024-10-15",
+      "raw_items": 5503,
+      "ready_items": 5500,
+      "excluded": 3,
+      "feed_sha256": "27324d84043bcb5f6799b67e6a006c762d9def992cbbbe990eb7aec16efcf8ea",
+      "raw_sha256": "413121f6bd9a114babaa824cae025832df426e7f0cd6e63bd95dee449c3148ea",
+      "provenance_sha256": "40bf579ce089d9dcb6ac93d64f4030599f1eaa1b7cef05c9c25f62ad017baae4",
+      "ready_receipt_sha256": "ffd60b652490a956197bb42baf0f08885a9de9e69cdf11b851469b227e9d6cd6",
+      "qualifying_physical_requests": 2372,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 0,
+      "later_parent_daily_contexts_excluded": 172
+    },
+    {
+      "date": "2024-10-16",
+      "raw_items": 5407,
+      "ready_items": 5404,
+      "excluded": 3,
+      "feed_sha256": "6d0175486f474776fae5b7b2ada0a01281067b75e29d162782a8b031397959c9",
+      "raw_sha256": "9acd351a621e145c53eca784769260669de0b19482fec16caf600f9caca5e4dc",
+      "provenance_sha256": "da6b4b59a62d0b3d813fb95ad648bfdeb7c71e127250d4aa6bfedad94c3a77b4",
+      "ready_receipt_sha256": "942d6e03c32fffa1d1504ceb077cdbf31e3d1dad98efcea7a2ece1009cf95213",
+      "qualifying_physical_requests": 2435,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 312,
+      "later_parent_daily_contexts_excluded": 172
+    },
+    {
+      "date": "2024-10-17",
+      "raw_items": 5348,
+      "ready_items": 5344,
+      "excluded": 4,
+      "feed_sha256": "d83d6821804aa9a63c1c87b77c08d55ec4e0a399ee670388b11e8b2ad494e530",
+      "raw_sha256": "e2ff2debcba5d568a3c3acef6212f589435f9a5869c8976c0f660abe9f8c9c0a",
+      "provenance_sha256": "3e03f95bf4505fe45d5dedf7ea8fc0a61714aebb9874e0ee892f6b30eb13b276",
+      "ready_receipt_sha256": "aed909256b030d2332f58d445c8fb11b1578109f2855d62b62271cf7e1d6ffd5",
+      "qualifying_physical_requests": 2493,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 624,
+      "later_parent_daily_contexts_excluded": 166
+    },
+    {
+      "date": "2024-10-18",
+      "raw_items": 5387,
+      "ready_items": 5384,
+      "excluded": 3,
+      "feed_sha256": "6f30ebc9653527415c756dc7598cac75ad00134377a9f8ebae5d2bfcc0cc7078",
+      "raw_sha256": "c8dda6da0e000d7d8474e0c74589fcec264130421050ad61566479ea8b368654",
+      "provenance_sha256": "6a08e77591f65cc606ef72cd083d2116348be5ffcebfdc33c0a07730cf21e703",
+      "ready_receipt_sha256": "cc4c2bb943ba40bc37f48da6974b2551707d11a8346585e055dfbbda229fb92e",
+      "qualifying_physical_requests": 2550,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 936,
+      "later_parent_daily_contexts_excluded": 163
+    },
+    {
+      "date": "2024-10-21",
+      "raw_items": 5671,
+      "ready_items": 5670,
+      "excluded": 1,
+      "feed_sha256": "cebdbcad38ce759ca27530a3a0a2526040f23b3c6df834a1de349577ba4bc848",
+      "raw_sha256": "07d2df1412549eb9fde21921eacde86465aeaf17c6f940d639933e59caf844c6",
+      "provenance_sha256": "f0b5fa7a9b1d918e07505a284bcb4bc2066f24c5d6a6d7ad3887f61cdbf7e9e0",
+      "ready_receipt_sha256": "4105022f0162da4cac09f8bfacb8cd15a74656d12ab4521d1bf98760b13a94b3",
+      "qualifying_physical_requests": 2613,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 1248,
+      "later_parent_daily_contexts_excluded": 133
+    },
+    {
+      "date": "2024-10-22",
+      "raw_items": 6046,
+      "ready_items": 6046,
+      "excluded": 0,
+      "feed_sha256": "a5c9ac0603e22bc5474dc7ef9c491031efd45d18f4416342ff2cf9e6b25ef118",
+      "raw_sha256": "2575cd8d76a7e681bcc5bc66e4eebc2931dbe2db0904d65e6d8f795a3fc5facd",
+      "provenance_sha256": "d16a64c1ae16d8b495e30a0f596062c262851f612e0c1233046549c9b180c1df",
+      "ready_receipt_sha256": "5e5ab6bc2bd006a5c43310bfba81c6084378fc6cb78512361b0fc4dd03f27a2e",
+      "qualifying_physical_requests": 2635,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 0,
+      "later_parent_daily_contexts_excluded": 85
+    },
+    {
+      "date": "2024-10-23",
+      "raw_items": 5813,
+      "ready_items": 5811,
+      "excluded": 2,
+      "feed_sha256": "f26aa35fd8a1f08dde57aa148098c00c3b63f9a0a6795e25e8503b4df794acc1",
+      "raw_sha256": "3b14f423e2482d8e135b8a7e3e45c60274cef3e14649a76ef9d519f4394bc0dd",
+      "provenance_sha256": "349839c8e94512b5f64136e7a6791a7192ebab91911000bebf014dc54733bb98",
+      "ready_receipt_sha256": "aa3f7400738f32dbb64ec12c7bb42c5e0edcd8cd23f09fd828d8ae5447bf0916",
+      "qualifying_physical_requests": 2698,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 312,
+      "later_parent_daily_contexts_excluded": 85
+    },
+    {
+      "date": "2024-10-24",
+      "raw_items": 5753,
+      "ready_items": 5752,
+      "excluded": 1,
+      "feed_sha256": "5d0b7ce357056ba646018a31b6e9807a4e5c7375262bfe99439d945a4eeb2f45",
+      "raw_sha256": "13fc46f31bf8a8deb2185f7b53e4219e92196493dcce742db1d501c820af48a3",
+      "provenance_sha256": "d10816eefdfc7a924fd1fafe04c15f25488a458270f7b0607539f9d2151521d1",
+      "ready_receipt_sha256": "4789c1d52fb5c1a3a68b7b597c96043acadddd3afef9b817abd57cb1b65bd98f",
+      "qualifying_physical_requests": 2752,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 624,
+      "later_parent_daily_contexts_excluded": 83
+    },
+    {
+      "date": "2024-10-25",
+      "raw_items": 5732,
+      "ready_items": 5730,
+      "excluded": 2,
+      "feed_sha256": "b8b2407dd67a042d5d62868d1410cf257d1a7449b5b2acb2e80ef286bf88d683",
+      "raw_sha256": "fad6570eceb1defa17ce72a11a3038de443adcc1e02e7a6fbd82b10e41925d7b",
+      "provenance_sha256": "862ffbaa639b8f3a4036b305287602dc91b052702c5cd97a26e8f7127c5af123",
+      "ready_receipt_sha256": "a357f1999e2024f6e01b2a82f446177e7b260f6ffc08bbaa0d842afd8231e8f8",
+      "qualifying_physical_requests": 2811,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 936,
+      "later_parent_daily_contexts_excluded": 74
+    },
+    {
+      "date": "2024-10-28",
+      "raw_items": 5914,
+      "ready_items": 5913,
+      "excluded": 1,
+      "feed_sha256": "eb7c4aa0e80dde333ecfd3ed678b80c9319fc77406ceda846aa2b2f1a889aecd",
+      "raw_sha256": "3b489bdaff6b852ae4bd6ddb4ab10ebd67e54f0d0f19c7af2de106d0a4c8e861",
+      "provenance_sha256": "20540b6db9ac4b763b14876f6aaec6872e9dababcb934137145cc451b2f2d88b",
+      "ready_receipt_sha256": "5f7430f1df0e10a9cf0df5dbe85fcd07b1d6c3623e551cd2b417ce50672548c6",
+      "qualifying_physical_requests": 2876,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 1248,
+      "later_parent_daily_contexts_excluded": 32
+    },
+    {
+      "date": "2024-10-29",
+      "raw_items": 6164,
+      "ready_items": 6162,
+      "excluded": 2,
+      "feed_sha256": "684044db289fcd7d75fa26a19c54293621d3497e6ad5dceddf7376f3d5d23898",
+      "raw_sha256": "4f1aef5b21c5b485a3227db12443d7238e1bc07677a3b76a495dabb3f32c2f99",
+      "provenance_sha256": "71cd16a66772953c3087078a1725bb97a82c81d3daebd62ce390a24f27c6eaa7",
+      "ready_receipt_sha256": "f4d7a2813ef228be9d10463d21b2c134fff34368daa93b242535908b0187a725",
+      "qualifying_physical_requests": 2878,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 0,
+      "later_parent_daily_contexts_excluded": 2
+    },
+    {
+      "date": "2024-10-30",
+      "raw_items": 5960,
+      "ready_items": 5956,
+      "excluded": 4,
+      "feed_sha256": "5d1defe85dbdd45b6cb800da77d25123446ed0f816f3df189e56acd51e1fcdf8",
+      "raw_sha256": "755d85924e5f2ee51339b66b8deac19fd7deef004610bae1e92e0331d6693186",
+      "provenance_sha256": "5c54c963868bfed865430fa199e3078411e32842151b899066316172aecee576",
+      "ready_receipt_sha256": "00a1ebdb9e06be526d0777b349e8684fcf006f18f5751acd7a1faf7c2691bb31",
+      "qualifying_physical_requests": 2941,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 312,
+      "later_parent_daily_contexts_excluded": 2
+    },
+    {
+      "date": "2024-10-31",
+      "raw_items": 5979,
+      "ready_items": 5972,
+      "excluded": 7,
+      "feed_sha256": "6f6ca2a9b29250e827d69249555a6c4dd8ab78de72f45fde8d7d5b4d8950c465",
+      "raw_sha256": "67850a932d4fcc2cf5de89741f66e60ff53436c48f00c86ec3fd137e687a3395",
+      "provenance_sha256": "7afe4352585cc30cb4489d2ede80956aa895c957e62b6ee06c7c1a0b47103fef",
+      "ready_receipt_sha256": "7f3e87c018a22410a5db0a69043dc2d58d5d18897cfb0040e5409bc2216c943e",
+      "qualifying_physical_requests": 2998,
+      "own_cutoff_prefix_contexts_whose_parent_ends_later": 0,
+      "later_parent_daily_contexts_excluded": 0
+    }
+  ],
+  "physical_requests": 7744,
+  "raw_xml_uncompressed_bytes": 119450793,
+  "independently_reparsed_items": 49465,
+  "failed_queries": 0,
+  "remaining_daily_caps": 29,
+  "remaining_daily_cap_signatures": [
+    "9e4471582678b02f8bd6b4ae45af4c5261e66a7042ebb437d1bebfb29c62dada",
+    "1795a3abe2995a95a7dcfbafce037ba4ed1cb4f6e762ed1f33d461c2b0adc5f0",
+    "19bbff1080d469ac0436d90ed0959b480cb74251ed3da53dc83c5c66df4386ae",
+    "2964eebdd92a31276a14c80a657f28e571bb42e43b4c0b375917846d07be25e4",
+    "a9e1ccdfac1214c0b912b5e54b0ca2ff7c32cfd0e907625eb3fbb9011e8b522c",
+    "666946cbaac4dc823f75917683ebbe137fae42fc0a88540524df99c3b206286d",
+    "9cf4b7b47cf680a4baed94710269641614bf0daa97f38f1c821e8f83cd6f9d14",
+    "1dbd9cee573d54afc631d83faf57a3abd51a16a3bc254573ad16e6c0360c302b",
+    "3b4502722d6f1ed3db68e81029cb2ebde003a4a9ddbbedc4dcafff10ec330941",
+    "d17484665efde86ee89d91d90e9e9391e393afb74e10e4ca440752da2da45353",
+    "0baf622cdb6f366ba62254f281901498dccf982eb68522360b99ccae291e5a0e",
+    "268fffe8fa3fbd428eaca275fe4c8a81ee911316731058d74aacdb3cf502ed9b",
+    "297e07bdaf9f6519f4eee09026943174d9ce04a93a0a679d034723897b65335a",
+    "492b5b4d31900a5fe4b08cee91e2698403d8d0f2a8c7cfd9e94b20e547d505ab",
+    "a77ebce7cb35517c7d05072179d22701f211074cd67e03bd5de4128f1f201489",
+    "744da083b23c417a15f42210832bad2f7d88f45b0fe9850b9abe929f63ef2ca4",
+    "02957316e817af8b82110f81efb76b4e9dc3a16960bf6ef5a607f0a72bc381f4",
+    "788004b3db3a2821f368a9fc01872a8c4c99f648d2baac08668ed22b925d4a13",
+    "cf45d0682de8c1d9ab2068875272280f06469fbb9f6e2baa2e624e959541ca7e",
+    "31d2db8e842293c405eb84632b191db316b51ca34fbb18d82ffbf43e75eaf821",
+    "f6eb088d248b90263acea46e3fe820548553ef5fbddf4393cd7d1d2a4be92e91",
+    "aedb5b46fe47c1330496df54e8395b4c34207bc4a405982c868a51d27aa57c7c",
+    "0fe39abff15b0d93a91fa9ccc61f47223f6884f72e56886924c072a7bdb5903b",
+    "e598e423648d4d749ec54f30089aa0ef7c2e84abdc24ce1037ae0dbf5152fb80",
+    "b0b4e5f15867e432d0bc7b5561a3363ad0235891add5ac28f2c1ef81f14b2110",
+    "05a70eb8d9f2a3d3ae952b2ff98e08e07eb9e76fd8abc9be6ac2fb0566469066",
+    "71f590857d759c08729c20a8ea275b60ecd88675d3f3bc5497da287400dfdac1",
+    "778eee7210888731a583fb5dcc2d42de1430b443eb2daeceefd402cce6cb022d",
+    "2c41fb1cb840b8f138a037fae9055b1281ea7e36c4830feb79930bf48f804744"
+  ],
+  "query_plan_sha256": "dab78b11ab9a05be79a10fa2781c781277a541065ec85d28cd25ce53f8780e2c",
+  "source_freeze_sha256": "66a3b4ea96250b1b2f8edc85ed4497d2000ec6801af944c424ad6de21741621f",
+  "card_sha256": {
+    "2024-10-01": "6b9111549a02c52d825b270d392430c8748afd174a65915b5855f42be9a70300",
+    "2024-10-02": "7ab0bf2770a9bcf0f8f6a242e88a6eed86bff7939e4d017f3bd0261e1ff98d8d",
+    "2024-10-03": "364075b4f952a87d2d93965204051e1c9a5f10bc1f6036f95b2c9a5e6afc50f7",
+    "2024-10-04": "7e687a833d7c4aad3185a1503ea6d61cf33c49605e12c78025984e67ad452c35",
+    "2024-10-07": "e5862c182db36cd958ce3a06de3fc8f3c6e166c837cd814276b1ec12b4563e8a",
+    "2024-10-08": "fd78e9dab1d46df07f8ac91adc386429cf7e1d8ccec945cae08dcf66d0b29d02",
+    "2024-10-09": "7259aa88011500c8d2cad5e2026dc2ef8220ce563fd3324d678386c0c235f007",
+    "2024-10-10": "43ff8a0b5a8bf39f0d8a086829cdbcf35f02176edf766377b4bd8e5498d1749a",
+    "2024-10-11": "442818bd72bf053f3413a3621926c0ce9190c6a8a4f2a4ee04dbef55a316c27c",
+    "2024-10-14": "e9b0067974137ec20ead3125a38cfba072665a9489dff81eaebd07337fcfcc41",
+    "2024-10-15": "38c4a45869bc35865d7e788f43442be9290d388cb28a6c5ef15afbf8bc626098",
+    "2024-10-16": "2f2e6dfb189e2e2caa27089f6e901718dbf430883ed8b8c6948acd1572fc471d",
+    "2024-10-17": "9864b9036207fc3355fae595ae4b47bde9e2694b7606d025ee719c4adcc72779",
+    "2024-10-18": "4762ec1e71687df4c5f1aa47683c44be934d8a630287c8d93a84c1a696208435",
+    "2024-10-21": "8113ccb014f1b5353ffb7728db69fa8f2cdd019294b3790456083a31578e0c79",
+    "2024-10-22": "c452d7bb2c80a80025b0d17888ba08b1cd596680cff7a3a46edb94611b44a921",
+    "2024-10-23": "2537dc7525a05e686463384023e80ea91380a54ef2695c753e1640edff43d3c6",
+    "2024-10-24": "215fa380240f1c02f9b9c8ff25a4fbe2a024986aebd23fadab1e9967adf4b0d8",
+    "2024-10-25": "f96555d593b73a7130a5defdaeef8ac1bbaebf294426f27321a4d6f341afbc05",
+    "2024-10-28": "890a9a4044caf6c64e249a87c5638add52de04d26577174c7d44ddc290e5c33b",
+    "2024-10-29": "f2e18562c6ddeee41ff73158bd36895a699d0a5c4563597da0bf07662923ff1c",
+    "2024-10-30": "9bf7344498447d1f19769cbfaefb6f212ebc25918b612a29c1e0573182f45527",
+    "2024-10-31": "8a15019cc69c278c29cf963d04a8f9546ebe61060bf309a181b1021f0f49dab1"
+  },
+  "tool_sha256": {
+    "fetch_news.py": "a87dba02b2be9b3d8d6e8d723f291cd65076009509bcc278d991cac70d46465a",
+    "expand_capped_news.py": "e40ad5269eaa8a65e0a6dcce0e85235fcfa78bb487d4df5bd6e71554a10b5ce6",
+    "ready_feeds.py": "d0a6b68d92cf60d28b7eab6f4e9d5001d0cf4e3c7727f1d67538f861e3c3d1e7",
+    "topics.py": "6692f857e938c3451e0729ccf73abc175ada0694c7ca516727537be48a2db31a",
+    "finalize_sources.py": "2fe1c8c3c4071b2fd3309e7d6f5166e36bb14162358670b406786b899f637524"
+  },
+  "contract_sha256": {
+    "AUTHORING.md": "11e7bd4137cad1b91f653c2e08a389b5374951d15b0c370cf51ef31b9a465f51",
+    "BRIEF.md": "476e3ed67b4437b977228d1d63cdb957c9fb66ff97c9a30acc7076b06d51721b"
+  },
+  "guard_regressions_tested": 10,
+  "age_policy": "Exact timestamp-window replay passes the stored category fields. Semantics are only partially tightened by finite regexes; manual review found residual violations. Category labels do not certify semantic eligibility. Every actual cited company news/preview must be at most7days old, company result14days, and only macro release/current policy baseline may use35days.",
+  "limits": [
+    "Retrieval-time historical Google search results are not original contemporaneous RSS vintages. Raw retrieval responses are archived and hash-bound.",
+    "Daily100result caps and search indexing/selection prevent exhaustive coverage; residual daily caps explicitly listed.",
+    "RSS pubDate can precede actual release; publisher canonical dates and article bodies were not independently resolved.",
+    "Finite headline semantics/release regexes may miss relevant names or conservatively remove previews; exact cited claims require own-date editorial timing/meaning review.",
+    "This infrastructure acceptance does not approve report prose, concrete numeric claims, causal interpretation or historical trade selection."
+  ],
+  "infrastructure_status": "accepted",
+  "semantic_status": "requires_own_claim_review",
+  "structural_errors": [],
+  "known_semantic_exclusions": {
+    "scope": "Manually identified stale company headline examples across own-date frozen feeds, not an exhaustive content review. Give authors only their own-date advice. Frozen IDs/bytes remain unchanged.",
+    "count": 223,
+    "by_date": {
+      "2024-10-01": [
+        {
+          "id": "n0001",
+          "published_at": "2024-08-27T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "Australia's Woolworths rises after special dividend, profit in line with forecast - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0002",
+          "published_at": "2024-08-27T07:00:00+00:00",
+          "src": "Inside Retail Australia",
+          "title": "Coles delivers higher net profit amid increase in sales - Inside Retail Australia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0021",
+          "published_at": "2024-08-29T07:00:00+00:00",
+          "src": "SMH.com.au",
+          "title": "Australia\u2019s love for Kmart\u2019s Anko drives profits higher for $85b giant - SMH.com.au",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0123",
+          "published_at": "2024-09-10T07:00:00+00:00",
+          "src": "Construction News",
+          "title": "Laing O\u2019Rourke bounces back to profit - Construction News",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0570",
+          "published_at": "2024-08-30T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "ICBC\u2019s Profit Slips as Low Rates Weigh - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n1657",
+          "published_at": "2024-09-02T07:00:00+00:00",
+          "src": "Knews, Kathimerini",
+          "title": "Hellenic Bank's profits surge amid higher lending rates - Knews, Kathimerini",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n2345",
+          "published_at": "2024-08-28T07:00:00+00:00",
+          "src": "Retail Dive",
+          "title": "Foot Locker to exit several international markets, move headquarters to Florida - Retail Dive",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-02": [
+        {
+          "id": "n0009",
+          "published_at": "2024-08-29T07:00:00+00:00",
+          "src": "SMH.com.au",
+          "title": "Australia\u2019s love for Kmart\u2019s Anko drives profits higher for $85b giant - SMH.com.au",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0111",
+          "published_at": "2024-09-10T07:00:00+00:00",
+          "src": "Construction News",
+          "title": "Laing O\u2019Rourke bounces back to profit - Construction News",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0547",
+          "published_at": "2024-08-30T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "ICBC\u2019s Profit Slips as Low Rates Weigh - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0788",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n1693",
+          "published_at": "2024-09-02T07:00:00+00:00",
+          "src": "Knews, Kathimerini",
+          "title": "Hellenic Bank's profits surge amid higher lending rates - Knews, Kathimerini",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n2499",
+          "published_at": "2024-08-28T07:00:00+00:00",
+          "src": "Retail Dive",
+          "title": "Foot Locker to exit several international markets, move headquarters to Florida - Retail Dive",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-03": [
+        {
+          "id": "n0002",
+          "published_at": "2024-08-29T07:00:00+00:00",
+          "src": "SMH.com.au",
+          "title": "Australia\u2019s love for Kmart\u2019s Anko drives profits higher for $85b giant - SMH.com.au",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0104",
+          "published_at": "2024-09-10T07:00:00+00:00",
+          "src": "Construction News",
+          "title": "Laing O\u2019Rourke bounces back to profit - Construction News",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0522",
+          "published_at": "2024-08-30T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "ICBC\u2019s Profit Slips as Low Rates Weigh - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0763",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n1719",
+          "published_at": "2024-09-02T07:00:00+00:00",
+          "src": "Knews, Kathimerini",
+          "title": "Hellenic Bank's profits surge amid higher lending rates - Knews, Kathimerini",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-04": [
+        {
+          "id": "n0097",
+          "published_at": "2024-09-10T07:00:00+00:00",
+          "src": "Construction News",
+          "title": "Laing O\u2019Rourke bounces back to profit - Construction News",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0479",
+          "published_at": "2024-08-30T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "ICBC\u2019s Profit Slips as Low Rates Weigh - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0720",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n1626",
+          "published_at": "2024-09-02T07:00:00+00:00",
+          "src": "Knews, Kathimerini",
+          "title": "Hellenic Bank's profits surge amid higher lending rates - Knews, Kathimerini",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4544",
+          "published_at": "2024-09-19T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "US homebuilder Lennar beats Q3 profit estimates on higher home deliveries - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-07": [
+        {
+          "id": "n0088",
+          "published_at": "2024-09-10T07:00:00+00:00",
+          "src": "Construction News",
+          "title": "Laing O\u2019Rourke bounces back to profit - Construction News",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0656",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0713",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n1616",
+          "published_at": "2024-09-02T07:00:00+00:00",
+          "src": "Knews, Kathimerini",
+          "title": "Hellenic Bank's profits surge amid higher lending rates - Knews, Kathimerini",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4443",
+          "published_at": "2024-09-19T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "US homebuilder Lennar beats Q3 profit estimates on higher home deliveries - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-08": [
+        {
+          "id": "n0080",
+          "published_at": "2024-09-10T07:00:00+00:00",
+          "src": "Construction News",
+          "title": "Laing O\u2019Rourke bounces back to profit - Construction News",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0625",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0682",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4439",
+          "published_at": "2024-09-19T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "US homebuilder Lennar beats Q3 profit estimates on higher home deliveries - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4686",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-09": [
+        {
+          "id": "n0063",
+          "published_at": "2024-09-10T07:00:00+00:00",
+          "src": "Construction News",
+          "title": "Laing O\u2019Rourke bounces back to profit - Construction News",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0176",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "Premier Investments Delays Smiggle Demerger as Annual Profit Drops - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0605",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0662",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4080",
+          "published_at": "2024-09-19T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "US homebuilder Lennar beats Q3 profit estimates on higher home deliveries - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4327",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-10": [
+        {
+          "id": "n0049",
+          "published_at": "2024-09-10T07:00:00+00:00",
+          "src": "Construction News",
+          "title": "Laing O\u2019Rourke bounces back to profit - Construction News",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0162",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "Premier Investments Delays Smiggle Demerger as Annual Profit Drops - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0602",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0659",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4087",
+          "published_at": "2024-09-19T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "US homebuilder Lennar beats Q3 profit estimates on higher home deliveries - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4334",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4626",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "The Motley Fool",
+          "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-11": [
+        {
+          "id": "n0035",
+          "published_at": "2024-09-10T07:00:00+00:00",
+          "src": "Construction News",
+          "title": "Laing O\u2019Rourke bounces back to profit - Construction News",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0148",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "Premier Investments Delays Smiggle Demerger as Annual Profit Drops - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0597",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0635",
+          "published_at": "2024-09-26T07:00:00+00:00",
+          "src": "Industrial Vehicle Technology International",
+          "title": "JCB reports rise in profits in 2023 - Industrial Vehicle Technology International",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0654",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4225",
+          "published_at": "2024-09-19T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "US homebuilder Lennar beats Q3 profit estimates on higher home deliveries - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4472",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4795",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "The Motley Fool",
+          "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-14": [
+        {
+          "id": "n0019",
+          "published_at": "2024-09-10T07:00:00+00:00",
+          "src": "Construction News",
+          "title": "Laing O\u2019Rourke bounces back to profit - Construction News",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0132",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "Premier Investments Delays Smiggle Demerger as Annual Profit Drops - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0588",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0626",
+          "published_at": "2024-09-26T07:00:00+00:00",
+          "src": "Industrial Vehicle Technology International",
+          "title": "JCB reports rise in profits in 2023 - Industrial Vehicle Technology International",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0645",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4244",
+          "published_at": "2024-09-19T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "US homebuilder Lennar beats Q3 profit estimates on higher home deliveries - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4491",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4862",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "The Motley Fool",
+          "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-15": [
+        {
+          "id": "n0008",
+          "published_at": "2024-09-10T07:00:00+00:00",
+          "src": "Construction News",
+          "title": "Laing O\u2019Rourke bounces back to profit - Construction News",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0121",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "Premier Investments Delays Smiggle Demerger as Annual Profit Drops - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0670",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0708",
+          "published_at": "2024-09-26T07:00:00+00:00",
+          "src": "Industrial Vehicle Technology International",
+          "title": "JCB reports rise in profits in 2023 - Industrial Vehicle Technology International",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0727",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0765",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "The Guardian",
+          "title": "Vauxhall owner warns on profits amid falling sales and tougher Chinese competition - The Guardian",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4620",
+          "published_at": "2024-09-19T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "US homebuilder Lennar beats Q3 profit estimates on higher home deliveries - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4867",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5290",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "The Motley Fool",
+          "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-16": [
+        {
+          "id": "n0108",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "Premier Investments Delays Smiggle Demerger as Annual Profit Drops - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0659",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0697",
+          "published_at": "2024-09-26T07:00:00+00:00",
+          "src": "Industrial Vehicle Technology International",
+          "title": "JCB reports rise in profits in 2023 - Industrial Vehicle Technology International",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0716",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0754",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "The Guardian",
+          "title": "Vauxhall owner warns on profits amid falling sales and tougher Chinese competition - The Guardian",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0848",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "The Motley Fool Australia",
+          "title": "Here's the earnings forecast out to 2029 for Fortescue shares - The Motley Fool Australia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n2841",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "Uniqlo owner seen posting 24% annual profit surge on brand's overseas push - Reuters",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4480",
+          "published_at": "2024-09-19T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "US homebuilder Lennar beats Q3 profit estimates on higher home deliveries - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4727",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5177",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "The Motley Fool",
+          "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-17": [
+        {
+          "id": "n0101",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "Premier Investments Delays Smiggle Demerger as Annual Profit Drops - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0651",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0689",
+          "published_at": "2024-09-26T07:00:00+00:00",
+          "src": "Industrial Vehicle Technology International",
+          "title": "JCB reports rise in profits in 2023 - Industrial Vehicle Technology International",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0708",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0746",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "The Guardian",
+          "title": "Vauxhall owner warns on profits amid falling sales and tougher Chinese competition - The Guardian",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0775",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Asian demand for factory robots powers Mitsubishi Electric profits - Nikkei Asia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0840",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "The Motley Fool Australia",
+          "title": "Here's the earnings forecast out to 2029 for Fortescue shares - The Motley Fool Australia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n2717",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "Uniqlo owner seen posting 24% annual profit surge on brand's overseas push - Reuters",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4423",
+          "published_at": "2024-09-19T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "US homebuilder Lennar beats Q3 profit estimates on higher home deliveries - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4670",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5140",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "The Motley Fool",
+          "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-18": [
+        {
+          "id": "n0091",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "Premier Investments Delays Smiggle Demerger as Annual Profit Drops - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0676",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0714",
+          "published_at": "2024-09-26T07:00:00+00:00",
+          "src": "Industrial Vehicle Technology International",
+          "title": "JCB reports rise in profits in 2023 - Industrial Vehicle Technology International",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0733",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0771",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "The Guardian",
+          "title": "Vauxhall owner warns on profits amid falling sales and tougher Chinese competition - The Guardian",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0800",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Asian demand for factory robots powers Mitsubishi Electric profits - Nikkei Asia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0865",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "The Motley Fool Australia",
+          "title": "Here's the earnings forecast out to 2029 for Fortescue shares - The Motley Fool Australia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n2708",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "Uniqlo owner seen posting 24% annual profit surge on brand's overseas push - Reuters",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4374",
+          "published_at": "2024-09-19T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "US homebuilder Lennar beats Q3 profit estimates on higher home deliveries - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4621",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5140",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "The Motley Fool",
+          "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-21": [
+        {
+          "id": "n0079",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "Premier Investments Delays Smiggle Demerger as Annual Profit Drops - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0659",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0697",
+          "published_at": "2024-09-26T07:00:00+00:00",
+          "src": "Industrial Vehicle Technology International",
+          "title": "JCB reports rise in profits in 2023 - Industrial Vehicle Technology International",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0716",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0754",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "The Guardian",
+          "title": "Vauxhall owner warns on profits amid falling sales and tougher Chinese competition - The Guardian",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0783",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Asian demand for factory robots powers Mitsubishi Electric profits - Nikkei Asia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0848",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "The Motley Fool Australia",
+          "title": "Here's the earnings forecast out to 2029 for Fortescue shares - The Motley Fool Australia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n2842",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "Uniqlo owner seen posting 24% annual profit surge on brand's overseas push - Reuters",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4624",
+          "published_at": "2024-09-19T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "US homebuilder Lennar beats Q3 profit estimates on higher home deliveries - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4871",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4998",
+          "published_at": "2024-10-04T07:00:00+00:00",
+          "src": "Porsche Newsroom",
+          "title": "Porsche reports U.S. retail sales for first quarter of 2024 - Porsche Newsroom",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5423",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "The Motley Fool",
+          "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-22": [
+        {
+          "id": "n0073",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "Premier Investments Delays Smiggle Demerger as Annual Profit Drops - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0621",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0659",
+          "published_at": "2024-09-26T07:00:00+00:00",
+          "src": "Industrial Vehicle Technology International",
+          "title": "JCB reports rise in profits in 2023 - Industrial Vehicle Technology International",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0678",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0716",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "The Guardian",
+          "title": "Vauxhall owner warns on profits amid falling sales and tougher Chinese competition - The Guardian",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0745",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Asian demand for factory robots powers Mitsubishi Electric profits - Nikkei Asia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0810",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "The Motley Fool Australia",
+          "title": "Here's the earnings forecast out to 2029 for Fortescue shares - The Motley Fool Australia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n3028",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "Uniqlo owner seen posting 24% annual profit surge on brand's overseas push - Reuters",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4886",
+          "published_at": "2024-09-19T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "US homebuilder Lennar beats Q3 profit estimates on higher home deliveries - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5133",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5260",
+          "published_at": "2024-10-04T07:00:00+00:00",
+          "src": "Porsche Newsroom",
+          "title": "Porsche reports U.S. retail sales for first quarter of 2024 - Porsche Newsroom",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5716",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "The Motley Fool",
+          "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-23": [
+        {
+          "id": "n0063",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "Premier Investments Delays Smiggle Demerger as Annual Profit Drops - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0587",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0625",
+          "published_at": "2024-09-26T07:00:00+00:00",
+          "src": "Industrial Vehicle Technology International",
+          "title": "JCB reports rise in profits in 2023 - Industrial Vehicle Technology International",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0644",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0682",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "The Guardian",
+          "title": "Vauxhall owner warns on profits amid falling sales and tougher Chinese competition - The Guardian",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0711",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Asian demand for factory robots powers Mitsubishi Electric profits - Nikkei Asia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0776",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "The Motley Fool Australia",
+          "title": "Here's the earnings forecast out to 2029 for Fortescue shares - The Motley Fool Australia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n2903",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "Uniqlo owner seen posting 24% annual profit surge on brand's overseas push - Reuters",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4640",
+          "published_at": "2024-09-19T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "US homebuilder Lennar beats Q3 profit estimates on higher home deliveries - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4887",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5014",
+          "published_at": "2024-10-04T07:00:00+00:00",
+          "src": "Porsche Newsroom",
+          "title": "Porsche reports U.S. retail sales for first quarter of 2024 - Porsche Newsroom",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5489",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "The Motley Fool",
+          "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-24": [
+        {
+          "id": "n0052",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "Premier Investments Delays Smiggle Demerger as Annual Profit Drops - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0598",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0636",
+          "published_at": "2024-09-26T07:00:00+00:00",
+          "src": "Industrial Vehicle Technology International",
+          "title": "JCB reports rise in profits in 2023 - Industrial Vehicle Technology International",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0655",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0693",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "The Guardian",
+          "title": "Vauxhall owner warns on profits amid falling sales and tougher Chinese competition - The Guardian",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0722",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Asian demand for factory robots powers Mitsubishi Electric profits - Nikkei Asia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0787",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "The Motley Fool Australia",
+          "title": "Here's the earnings forecast out to 2029 for Fortescue shares - The Motley Fool Australia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n2968",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "Uniqlo owner seen posting 24% annual profit surge on brand's overseas push - Reuters",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4582",
+          "published_at": "2024-09-19T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "US homebuilder Lennar beats Q3 profit estimates on higher home deliveries - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4829",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4956",
+          "published_at": "2024-10-04T07:00:00+00:00",
+          "src": "Porsche Newsroom",
+          "title": "Porsche reports U.S. retail sales for first quarter of 2024 - Porsche Newsroom",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5049",
+          "published_at": "2024-10-09T07:00:00+00:00",
+          "src": "Travel Weekly - Home",
+          "title": "Hays Travel annual profits soar to \u00a373.4m - Travel Weekly - Home",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5456",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "The Motley Fool",
+          "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-25": [
+        {
+          "id": "n0042",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "Premier Investments Delays Smiggle Demerger as Annual Profit Drops - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0566",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0604",
+          "published_at": "2024-09-26T07:00:00+00:00",
+          "src": "Industrial Vehicle Technology International",
+          "title": "JCB reports rise in profits in 2023 - Industrial Vehicle Technology International",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0623",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0661",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "The Guardian",
+          "title": "Vauxhall owner warns on profits amid falling sales and tougher Chinese competition - The Guardian",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0690",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Asian demand for factory robots powers Mitsubishi Electric profits - Nikkei Asia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0755",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "The Motley Fool Australia",
+          "title": "Here's the earnings forecast out to 2029 for Fortescue shares - The Motley Fool Australia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n2924",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "Uniqlo owner seen posting 24% annual profit surge on brand's overseas push - Reuters",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n2950",
+          "published_at": "2024-10-10T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Thrifty Chinese diners bring record profit for Japan's Saizeriya - Nikkei Asia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4729",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4856",
+          "published_at": "2024-10-04T07:00:00+00:00",
+          "src": "Porsche Newsroom",
+          "title": "Porsche reports U.S. retail sales for first quarter of 2024 - Porsche Newsroom",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4949",
+          "published_at": "2024-10-09T07:00:00+00:00",
+          "src": "Travel Weekly - Home",
+          "title": "Hays Travel annual profits soar to \u00a373.4m - Travel Weekly - Home",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4979",
+          "published_at": "2024-10-10T07:00:00+00:00",
+          "src": "Domino's",
+          "title": "Domino's Pizza\u00ae Announces Third Quarter 2024 Financial Results - Domino's",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5383",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "The Motley Fool",
+          "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-28": [
+        {
+          "id": "n0033",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "Premier Investments Delays Smiggle Demerger as Annual Profit Drops - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0589",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0627",
+          "published_at": "2024-09-26T07:00:00+00:00",
+          "src": "Industrial Vehicle Technology International",
+          "title": "JCB reports rise in profits in 2023 - Industrial Vehicle Technology International",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0646",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0684",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "The Guardian",
+          "title": "Vauxhall owner warns on profits amid falling sales and tougher Chinese competition - The Guardian",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0713",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Asian demand for factory robots powers Mitsubishi Electric profits - Nikkei Asia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0778",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "The Motley Fool Australia",
+          "title": "Here's the earnings forecast out to 2029 for Fortescue shares - The Motley Fool Australia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0844",
+          "published_at": "2024-10-11T07:00:00+00:00",
+          "src": "Upstox",
+          "title": "Reliance Industrial Infrastructure Q2 Results Highlights: Net profit declines 1.5% to \u20b93.12 crore, revenue down 15% - Upstox",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n3001",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "Uniqlo owner seen posting 24% annual profit surge on brand's overseas push - Reuters",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n3027",
+          "published_at": "2024-10-10T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Thrifty Chinese diners bring record profit for Japan's Saizeriya - Nikkei Asia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4841",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4968",
+          "published_at": "2024-10-04T07:00:00+00:00",
+          "src": "Porsche Newsroom",
+          "title": "Porsche reports U.S. retail sales for first quarter of 2024 - Porsche Newsroom",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5061",
+          "published_at": "2024-10-09T07:00:00+00:00",
+          "src": "Travel Weekly - Home",
+          "title": "Hays Travel annual profits soar to \u00a373.4m - Travel Weekly - Home",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5091",
+          "published_at": "2024-10-10T07:00:00+00:00",
+          "src": "Domino's",
+          "title": "Domino's Pizza\u00ae Announces Third Quarter 2024 Financial Results - Domino's",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5533",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "The Motley Fool",
+          "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-29": [
+        {
+          "id": "n0018",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "WSJ",
+          "title": "Premier Investments Delays Smiggle Demerger as Annual Profit Drops - WSJ",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0600",
+          "published_at": "2024-09-24T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0638",
+          "published_at": "2024-09-26T07:00:00+00:00",
+          "src": "Industrial Vehicle Technology International",
+          "title": "JCB reports rise in profits in 2023 - Industrial Vehicle Technology International",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0657",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0695",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "The Guardian",
+          "title": "Vauxhall owner warns on profits amid falling sales and tougher Chinese competition - The Guardian",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0724",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Asian demand for factory robots powers Mitsubishi Electric profits - Nikkei Asia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0789",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "The Motley Fool Australia",
+          "title": "Here's the earnings forecast out to 2029 for Fortescue shares - The Motley Fool Australia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0855",
+          "published_at": "2024-10-11T07:00:00+00:00",
+          "src": "Upstox",
+          "title": "Reliance Industrial Infrastructure Q2 Results Highlights: Net profit declines 1.5% to \u20b93.12 crore, revenue down 15% - Upstox",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n3124",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "Uniqlo owner seen posting 24% annual profit surge on brand's overseas push - Reuters",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n3150",
+          "published_at": "2024-10-10T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Thrifty Chinese diners bring record profit for Japan's Saizeriya - Nikkei Asia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5052",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5179",
+          "published_at": "2024-10-04T07:00:00+00:00",
+          "src": "Porsche Newsroom",
+          "title": "Porsche reports U.S. retail sales for first quarter of 2024 - Porsche Newsroom",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5272",
+          "published_at": "2024-10-09T07:00:00+00:00",
+          "src": "Travel Weekly - Home",
+          "title": "Hays Travel annual profits soar to \u00a373.4m - Travel Weekly - Home",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5302",
+          "published_at": "2024-10-10T07:00:00+00:00",
+          "src": "Domino's",
+          "title": "Domino's Pizza\u00ae Announces Third Quarter 2024 Financial Results - Domino's",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5772",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "The Motley Fool",
+          "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-30": [
+        {
+          "id": "n0574",
+          "published_at": "2024-09-26T07:00:00+00:00",
+          "src": "Industrial Vehicle Technology International",
+          "title": "JCB reports rise in profits in 2023 - Industrial Vehicle Technology International",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0593",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0631",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "The Guardian",
+          "title": "Vauxhall owner warns on profits amid falling sales and tougher Chinese competition - The Guardian",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0660",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Asian demand for factory robots powers Mitsubishi Electric profits - Nikkei Asia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0725",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "The Motley Fool Australia",
+          "title": "Here's the earnings forecast out to 2029 for Fortescue shares - The Motley Fool Australia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0791",
+          "published_at": "2024-10-11T07:00:00+00:00",
+          "src": "Upstox",
+          "title": "Reliance Industrial Infrastructure Q2 Results Highlights: Net profit declines 1.5% to \u20b93.12 crore, revenue down 15% - Upstox",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n2984",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "Uniqlo owner seen posting 24% annual profit surge on brand's overseas push - Reuters",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n3010",
+          "published_at": "2024-10-10T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Thrifty Chinese diners bring record profit for Japan's Saizeriya - Nikkei Asia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4836",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4963",
+          "published_at": "2024-10-04T07:00:00+00:00",
+          "src": "Porsche Newsroom",
+          "title": "Porsche reports U.S. retail sales for first quarter of 2024 - Porsche Newsroom",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5056",
+          "published_at": "2024-10-09T07:00:00+00:00",
+          "src": "Travel Weekly - Home",
+          "title": "Hays Travel annual profits soar to \u00a373.4m - Travel Weekly - Home",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5086",
+          "published_at": "2024-10-10T07:00:00+00:00",
+          "src": "Domino's",
+          "title": "Domino's Pizza\u00ae Announces Third Quarter 2024 Financial Results - Domino's",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5591",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "The Motley Fool",
+          "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ],
+      "2024-10-31": [
+        {
+          "id": "n0566",
+          "published_at": "2024-09-26T07:00:00+00:00",
+          "src": "Industrial Vehicle Technology International",
+          "title": "JCB reports rise in profits in 2023 - Industrial Vehicle Technology International",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0585",
+          "published_at": "2024-09-27T07:00:00+00:00",
+          "src": "ET Infra",
+          "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0623",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "The Guardian",
+          "title": "Vauxhall owner warns on profits amid falling sales and tougher Chinese competition - The Guardian",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0652",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Asian demand for factory robots powers Mitsubishi Electric profits - Nikkei Asia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0717",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "The Motley Fool Australia",
+          "title": "Here's the earnings forecast out to 2029 for Fortescue shares - The Motley Fool Australia",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0783",
+          "published_at": "2024-10-11T07:00:00+00:00",
+          "src": "Upstox",
+          "title": "Reliance Industrial Infrastructure Q2 Results Highlights: Net profit declines 1.5% to \u20b93.12 crore, revenue down 15% - Upstox",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n0855",
+          "published_at": "2024-10-16T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "LVMH shares hit by weak Q3 sales, dragging down luxury sector - Reuters",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n3068",
+          "published_at": "2024-10-08T07:00:00+00:00",
+          "src": "Reuters",
+          "title": "Uniqlo owner seen posting 24% annual profit surge on brand's overseas push - Reuters",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n3094",
+          "published_at": "2024-10-10T07:00:00+00:00",
+          "src": "Nikkei Asia",
+          "title": "Thrifty Chinese diners bring record profit for Japan's Saizeriya - Nikkei Asia",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n4877",
+          "published_at": "2024-09-30T07:00:00+00:00",
+          "src": "www.timothysykes.com",
+          "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5004",
+          "published_at": "2024-10-04T07:00:00+00:00",
+          "src": "Porsche Newsroom",
+          "title": "Porsche reports U.S. retail sales for first quarter of 2024 - Porsche Newsroom",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5097",
+          "published_at": "2024-10-09T07:00:00+00:00",
+          "src": "Travel Weekly - Home",
+          "title": "Hays Travel annual profits soar to \u00a373.4m - Travel Weekly - Home",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5127",
+          "published_at": "2024-10-10T07:00:00+00:00",
+          "src": "Domino's",
+          "title": "Domino's Pizza\u00ae Announces Third Quarter 2024 Financial Results - Domino's",
+          "maximum_age_days": 14,
+          "reason": "Stale company result",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        },
+        {
+          "id": "n5677",
+          "published_at": "2024-10-02T07:00:00+00:00",
+          "src": "The Motley Fool",
+          "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+          "maximum_age_days": 7,
+          "reason": "Stale company news or preview",
+          "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+        }
+      ]
+    }
+  },
+  "semantic_findings": [
+    {
+      "issue": "Finite company-name semantic classifier leaves genuine stale company results/news labelled monthly.",
+      "examples": [
+        "2024-10-01 n0001 Woolworths August27 result/dividend",
+        "2024-10-01 n0002 Coles August27 profit",
+        "2024-10-04 n4544 Lennar September19 Q3 result",
+        "2024-10-31 n0855 LVMH October16 Q3 result"
+      ],
+      "disposition": "Frozen feeds preserved. Known examples forbidden for current-event support; every cited item must receive real7/14/35day meaning review before publication.",
+      "status": "author_exclusion_required"
+    }
+  ],
+  "authoring_acceptance": "All23 immutable source inventories are structurally accepted for authoring, subject to known exclusions and own-claim semantic/release timing review. This receipt does not certify that every ready headline is factually or semantically eligible.",
+  "canonical_publisher_dates_resolved": false,
+  "raw_response_vintage": "Raw RSS responses were retrieved in2026 and archived; they are not original2024 server response vintages.",
+  "release_guard_findings": [
+    {
+      "issue": "Completed clause hidden by preview/modal in another clause",
+      "status": "corrected_before_any_freeze",
+      "checks": "10 independent synthetic regressions pass, including Microsoft beats + Meta set-to-report, China expands + could-boost, pure pending verbs, and Japanese early-local timing."
+    },
+    {
+      "issue": "Conservative preview loss",
+      "status": "documented_limit",
+      "examples": [
+        "2024-10-17 n1079 China Housing Minister Plans Thursday Briefing",
+        "2024-10-30/31 Apple set for biggest revenue jump preview",
+        "Conditional election analyses/options pricing sometimes excluded"
+      ],
+      "disposition": "Coverage loss accepted; no frozen-feed repair or synthesized substitute evidence."
+    },
+    {
+      "issue": "LPR guard omitted synonyms keylending and banks slash. Two October21 outcome headlines survived with October20RSS dates.",
+      "status": "author_exclusion_required",
+      "ids": [
+        "n1172",
+        "n1174"
+      ],
+      "scope": "October21 only",
+      "independent_evidence": [
+        "https://www.reuters.com/markets/rates-bonds/china-cuts-benchmark-loan-prime-rates-by-25-bps-2024-10-21/",
+        "https://english.www.gov.cn/english.www.gov.cn/news/202410/21/content_WS6715b6c8c6d0868f4e8ec235.html"
+      ],
+      "disposition": "Preserve frozenfeeds; forbid completed-event claims. Pending n1170 remains eligible for pending interpretation."
+    }
+  ],
+  "independently_checked_timing_advisories": [
+    {
+      "topic": "US payroll/CPI/PPI",
+      "url": "https://www.bls.gov/schedule/2024/10_sched_list.htm",
+      "finding": "September payrollOct4, CPI Oct10, PPI Oct11 at08:30Eastern=12:30UTC; same UTC-date midnight editions cannot use outcomes. First eligible weekday editions areOct7,Oct11,Oct14."
+    },
+    {
+      "topic": "FOMC",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "finding": "No October2024 decision. September17\u201318 meeting is a prior baseline; its minutes releasedOct9 and first eligible atOct10midnight. November6\u20137 decision remains future throughoutOctober."
+    },
+    {
+      "topic": "NBP versus RBNZ",
+      "url": "https://nbp.pl/wp-content/uploads/2024/10/Komunikat-RPP-pazdziernik-2024-ANG.pdf",
+      "finding": "Official NBP statement datedOct2; first eligible weekday cutoffOct3. Oct9 is RBNZ, not NBP.",
+      "additional_url": "https://www.rbnz.govt.nz/news-and-events/news/2024/10/ocr-4-75-monetary-restraint-reduced-as-inflation-converges-to-target"
+    },
+    {
+      "topic": "ECB October decision",
+      "url": "https://www.ecb.europa.eu/press/pr/date/2024/html/ecb.mp241017~aa366eaf20.en.html",
+      "finding": "Decision onOct17 duringEuropean day, afterOct17cutoff; first eligible editionOct18."
+    },
+    {
+      "topic": "BOJ final October decision",
+      "url": "https://www.boj.or.jp/en/mopo/mpmdeci/state_2024/k241031a.htm",
+      "finding": "Official statement releasedOct31 11:48JST=02:48UTC. No Octoberedition can describe that decision as completed."
+    },
+    {
+      "topic": "China October official PMI",
+      "url": "https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957214.html",
+      "finding": "Chinese primary page statesOct31 09:30Beijing=01:30UTC. Oct31n1205 Reuters outcome carrying earlyRSSdate is excluded. No Octoberedition may use the result."
+    },
+    {
+      "topic": "Japanese early-local industrial production",
+      "url": "https://www.meti.go.jp/english/statistics/tyo/iip/b2020_202409se.html",
+      "finding": "September preliminary production releasedOct31 08:50JST=Oct30 23:50UTC; eligible atOct31cutoff, subject to own-date headline support."
+    },
+    {
+      "topic": "Japanese early-local CPI",
+      "url": "https://www.stat.go.jp/data/cpi/4-1.htm",
+      "finding": "Statistics Bureau release convention08:30JST means previous UTC date23:30. NationalSeptember CPI releasedOct18local is eligibleOct18UTC; TokyoOctober CPI Oct25local is eligibleOct25UTC.",
+      "additional_urls": [
+        "https://www.jil.go.jp/english/estatis/esaikin/2024/e202410.html",
+        "https://www.reuters.com/markets/asia/tokyo-inflation-likely-miss-boj-target-first-time-five-months-2024-10-18/"
+      ]
+    },
+    {
+      "topic": "Late-US company earnings",
+      "urls": [
+        "https://ir.tesla.com/_flysystem/s3/sec/000162828024041816/tsla-20241002-gen.pdf",
+        "https://abc.xyz/investor/events/event-details/2024/2024-q3-earnings-call/",
+        "https://www.sec.gov/Archives/edgar/data/789019/000095017024118955/msft-20241030.htm",
+        "https://investor.atmeta.com/investor-news/press-release-details/2024/Meta-Reports-Third-Quarter-2024-Results/default.aspx",
+        "https://www.apple.com/newsroom/2024/10/apple-reports-fourth-quarter-results/",
+        "https://ir.aboutamazon.com/news-release/news-release-details/2024/Amazon-com-Announces-Third-Quarter-Results/"
+      ],
+      "finding": "Release-date/after-close timing checked independently from primary IR/SEC material: TeslaOct23 first eligibleOct24; AlphabetOct29 first eligibleOct30; Microsoft/MetaOct30 first eligibleOct31; Apple/AmazonOct31 results unavailable to everyOctoberedition. A next-day marketcard still contains the preceding regular cashsession; never describe an after-hours reaction as its prior-session return."
+    }
+  ],
+  "review_completed_at_utc": "2026-11-04T09:33:42.307624+00:00",
+  "independent_replay_tool": {
+    "path": "/workspace/work/oct2024/audit_work/review_sources.py",
+    "sha256": "7e319659780fda0c5f5ba1d8503af9711de1731c1d4ca95a33afddf0065e96ea"
+  },
+  "known_timing_exclusions": [
+    {
+      "id": "n1172",
+      "title": "China cuts key lending rates to support growth - Reuters",
+      "published_at": "2024-10-20T07:00:00+00:00",
+      "src": "Reuters",
+      "date": "2024-10-21",
+      "actual_event": "October21 loanprime rate decision after00:00UTC",
+      "disposition": "Do not cite as completed; outcome unavailable at reportcutoff",
+      "discovered_by": "Source owner, then independently confirmed from own-date feed and separate Reuters/gov.cn publication search"
+    },
+    {
+      "id": "n1174",
+      "title": "Chinese Banks Slash Lending Rates to Bolster Ailing Economy - Bloomberg.com",
+      "published_at": "2024-10-20T07:00:00+00:00",
+      "src": "Bloomberg.com",
+      "date": "2024-10-21",
+      "actual_event": "October21 loanprime rate decision after00:00UTC",
+      "disposition": "Do not cite as completed; outcome unavailable at reportcutoff",
+      "discovered_by": "Source owner, then independently confirmed from own-date feed and separate Reuters/gov.cn publication search"
+    }
+  ],
+  "timing_status": "Finite releaseguard replay passed but two known outcome misses require explicit author exclusion; every cited outcome requires own-date timing review."
+}

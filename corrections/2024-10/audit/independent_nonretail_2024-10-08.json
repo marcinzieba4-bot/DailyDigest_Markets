@@ -1,0 +1,203 @@
+{
+  "date": "2024-10-08",
+  "reviewer": "independent_nonretail_early",
+  "scope": {
+    "keys": [
+      "geo",
+      "sectors",
+      "underowned",
+      "anticipatory",
+      "catalysts",
+      "earnings_pattern",
+      "crypto",
+      "flows"
+    ],
+    "blocks": 36,
+    "paragraphs": 136,
+    "distinct_headlines": 81,
+    "headline_ids": [
+      "n0345",
+      "n0360",
+      "n0394",
+      "n0395",
+      "n0396",
+      "n0405",
+      "n0618",
+      "n0652",
+      "n0654",
+      "n0693",
+      "n0694",
+      "n0695",
+      "n0853",
+      "n0921",
+      "n0925",
+      "n0974",
+      "n0979",
+      "n0991",
+      "n0993",
+      "n0994",
+      "n1003",
+      "n1008",
+      "n1090",
+      "n1121",
+      "n1172",
+      "n1177",
+      "n1187",
+      "n1274",
+      "n1360",
+      "n1382",
+      "n1414",
+      "n1444",
+      "n1510",
+      "n1518",
+      "n1545",
+      "n1564",
+      "n1759",
+      "n1761",
+      "n1767",
+      "n1801",
+      "n1844",
+      "n1849",
+      "n1932",
+      "n1938",
+      "n1977",
+      "n2734",
+      "n2781",
+      "n2784",
+      "n2825",
+      "n2844",
+      "n2847",
+      "n2857",
+      "n3069",
+      "n3150",
+      "n3197",
+      "n3200",
+      "n3212",
+      "n3237",
+      "n3298",
+      "n3306",
+      "n3330",
+      "n3358",
+      "n3674",
+      "n3692",
+      "n3698",
+      "n3787",
+      "n3870",
+      "n3889",
+      "n3895",
+      "n3897",
+      "n3993",
+      "n4013",
+      "n4022",
+      "n4710",
+      "n4789",
+      "n4796",
+      "n4805",
+      "n4811",
+      "n4821",
+      "n4832",
+      "n5143"
+    ],
+    "all_nonretail_blocks_and_paragraphs_read": true,
+    "all_cited_nonretail_headlines_read": true,
+    "own_card_numeric_context_checked": true,
+    "retail_reviewed": false,
+    "retail_values_preserved": true
+  },
+  "findings_and_resolutions": [
+    {
+      "location": "geo.US.Rates & Curve",
+      "finding": "Twenty-observation curve description omitted exact spread change.",
+      "resolution": "Added widening by +2 bps from the own-date Treasury card, preserving positive-but-flat and bear-steepening wording."
+    },
+    {
+      "location": "earnings_pattern.Rewarded; catalysts.SMCI",
+      "finding": "Headline supported GPU shipments and share surge, but not the claimed company-disclosure sequence.",
+      "resolution": "Attributed the shipments/surge relationship directly to Reuters without inventing the disclosure actor or chronology."
+    },
+    {
+      "location": "underowned.Cooling; catalysts.SMCI.Price Hurdle",
+      "finding": "Sentences narrated ownership-evidence and historical-unit restrictions.",
+      "resolution": "Replaced with cooling capacity, financing, cash-generation and entry-price analysis; retained comparable current-unit figures."
+    },
+    {
+      "location": "catalysts.PFE/RIO.AX",
+      "finding": "Daily moves risked implying exact event reaction without headline linkage.",
+      "resolution": "Used daily gain/decline descriptions and prospective operating/deal economics."
+    },
+    {
+      "location": "catalysts titles",
+      "finding": "Titles used retail-style Name / TICKER format.",
+      "resolution": "Restored required $TICKER — thesis format for all six stock catalysts."
+    },
+    {
+      "location": "catalysts.SMCI",
+      "finding": "Initial patch duplicated a sentence from earnings_pattern.",
+      "resolution": "Varied the sentence while preserving exact headline scope; reverified with no warning."
+    }
+  ],
+  "release_boundary_dispositions": [
+    {
+      "ids": [
+        "n4805",
+        "n4821",
+        "n4710",
+        "n4789"
+      ],
+      "disposition": "October 4 payrolls and prior manufacturing/services ISM are completed actuals before report date; no old payroll preview retained as pending."
+    },
+    {
+      "ids": [
+        "n0991",
+        "n0993"
+      ],
+      "disposition": "October 8 mainland reopening remains pending at midnight; no opening outcome or report-date Chinese fiscal announcement used."
+    },
+    {
+      "ids": [
+        "n0394",
+        "n0405",
+        "n1545",
+        "n1187"
+      ],
+      "disposition": "CPI, corporate earnings, AMD product event, Tesla unveiling and HBO documentary are pending information points, with no completed report/event outcomes imported."
+    },
+    {
+      "ids": [
+        "n0921",
+        "n4832",
+        "n3897",
+        "n1274",
+        "n3692"
+      ],
+      "disposition": "EU divided tariff vote is completed; Rio talks, mining deal, PepsiCo acquisition plan and Lilly facility spending remain prospective transactions/investments rather than completed earnings benefits."
+    },
+    {
+      "disposition": "Read all current-date semantic exclusions: n0080,n0625,n0682,n4439,n4686 are not cited. Current-date known_timing_exclusions and additional_release_exclusions/advisories rows are empty. Older bank-capital/PBOC/property and policy comments are current macro baselines within the permitted macro window, not stale company news."
+    }
+  ],
+  "numeric_review": {
+    "checked": "All nonretail numerical paragraphs matched exact own-date Treasury and relevant named instrument fields, with currency, prior session, completed crypto day and return horizon checked. Headline numbers were present in same-paragraph citations.",
+    "restrictions": "No numerical spot-FX, WDC/CMCSA nominal level, raw pre-split trigger, computed ratio, return-implied measured flow, or election outcome."
+  },
+  "cross_section_review": "Measured China core and gradual additions, cautious rate-sensitive holdings, selective profitable growth, energy hedge, and unlevered event sizing remain consistent. Credit-spread reporting is distinguished from bond-ETF returns and fund flows; completed payrolls and port reopening are consistently updated.",
+  "validation": {
+    "command": "python tools/verify.py 2024-10-08",
+    "result": "PASS",
+    "words": 9958,
+    "sources": 88,
+    "fail": 0,
+    "warn": 0
+  },
+  "fatal_or_major_remaining": 0,
+  "feed_sha256": "ef29f49660058bb56970389a030d5058843b44c752de31ad10c339a862170e51",
+  "card_sha256": "fd78e9dab1d46df07f8ac91adc386429cf7e1d8ccec945cae08dcf66d0b29d02",
+  "full_spec_sha256_at_review": "d97b2f57843d2d118e5770c26a4d125537c77bd186424146455cd74e0b71ca1b",
+  "nonretail_content_sha256": "08898d7e20375ae779355af8e178e209b2353bac82472d8d4d06576a27982cb1",
+  "review_limits": [
+    "Reviewed headline scope and own-card fields; no article bodies or external original publications were accessed.",
+    "Source retrieval and market-card infrastructure accepted as previously audited; no inference that infrastructure certifies claim semantics.",
+    "Only the assigned current date was open during its review; no future feed/card/spec or November factual report was read.",
+    "Retail and retail_intro values were preserved and are outside this nonretail semantic-review scope."
+  ]
+}

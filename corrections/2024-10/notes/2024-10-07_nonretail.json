@@ -1,0 +1,124 @@
+{
+  "date": "2024-10-07",
+  "author_scope": "nonretail only; retail_intro empty and retail empty for separate merge",
+  "status": "author self-review complete; independent review pending",
+  "spec_sha256": "45d178a82642081d252d820539ece8e7f578d1f4b8e852253f1d9da3d6f372e4",
+  "feed_sha256": "46796d7a2baadcb6b8be494527873dd82ed43e5f26c3be643cc40be665f59490",
+  "card_sha256": "e5862c182db36cd958ce3a06de3fc8f3c6e166c837cd814276b1ec12b4563e8a",
+  "verification": {
+    "command": "python tools/verify.py --nonretail 2024-10-07",
+    "words": 8977,
+    "distinct_citations": 128,
+    "max_citation_uses": 2,
+    "failures": [],
+    "warnings": [],
+    "section_words": {
+      "geo:US": 426,
+      "geo:EU": 316,
+      "geo:CN": 861,
+      "geo:JP": 295,
+      "geo:AU": 268,
+      "geo:PL": 989,
+      "sector:XLK": 199,
+      "sector:XLC": 198,
+      "sector:XLF": 181,
+      "sector:XLE": 194,
+      "sector:XLI": 196,
+      "sector:XLY": 187,
+      "sector:XLP": 184,
+      "sector:XLV": 188,
+      "sector:XLB": 194,
+      "sector:XLRE": 188,
+      "sector:XLU": 189,
+      "sector:SXAP": 195,
+      "sector:SOXX": 188,
+      "earnings_pattern": 424,
+      "crypto": 304,
+      "flows": 678,
+      "underowned[0]": 150,
+      "underowned[1]": 148,
+      "underowned[2]": 144,
+      "underowned[3]": 150,
+      "anticipatory[0]": 165,
+      "anticipatory[1]": 165,
+      "anticipatory[2]": 163,
+      "anticipatory[3]": 170,
+      "catalysts[0]": 115,
+      "catalysts[1]": 110,
+      "catalysts[2]": 112,
+      "catalysts[3]": 115,
+      "catalysts[4]": 117,
+      "catalysts[5]": 111
+    }
+  },
+  "self_review": {
+    "method": "Author checked headline-bound wording, semantic source windows, actual versus preview status, card dates and units, investment triggers and consistency. This is not an independent review receipt.",
+    "timing": "All completed outcomes precede 00:00 UTC on October 7. US inflation, bank earnings, Tesla robotaxi presentation and the US election remain pending. Older previews with available results are not used as current pending results. Japanese and Chinese prior-month releases are baseline context, not report-day actuals.",
+    "market_discipline": "Own-session Yahoo source tags; Shanghai September 30 is separate from October 4 liquid ETFs and Hong Kong. Crypto uses October 6 completed UTC daily candle. Treasury percentages and bps from official curve. No numeric spot-FX quotes or returns; DXY allowed. No WDC or CMCSA nominal levels.",
+    "claims": "All cited facts limited to own-date headlines; analysis, scenarios and allocation mechanics stated conditionally. No invented ownership, measured flows, posts or article-body details.",
+    "citation_room": "Maximum two nonretail uses per citation leaves room for separate retail merger."
+  },
+  "exclusions": {
+    "known_semantic": [
+      {
+        "id": "n0088",
+        "published_at": "2024-09-10T07:00:00+00:00",
+        "src": "Construction News",
+        "title": "Laing O’Rourke bounces back to profit - Construction News",
+        "maximum_age_days": 14,
+        "reason": "Stale company result",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n0656",
+        "published_at": "2024-09-24T07:00:00+00:00",
+        "src": "Nikkei Asia",
+        "title": "Miniso shares plunge after surprise bet on Chinese supermarket chain - Nikkei Asia",
+        "maximum_age_days": 7,
+        "reason": "Stale company news or preview",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n0713",
+        "published_at": "2024-09-27T07:00:00+00:00",
+        "src": "ET Infra",
+        "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+        "maximum_age_days": 7,
+        "reason": "Stale company news or preview",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n1616",
+        "published_at": "2024-09-02T07:00:00+00:00",
+        "src": "Knews, Kathimerini",
+        "title": "Hellenic Bank's profits surge amid higher lending rates - Knews, Kathimerini",
+        "maximum_age_days": 14,
+        "reason": "Stale company result",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n4443",
+        "published_at": "2024-09-19T07:00:00+00:00",
+        "src": "Reuters",
+        "title": "US homebuilder Lennar beats Q3 profit estimates on higher home deliveries - Reuters",
+        "maximum_age_days": 14,
+        "reason": "Stale company result",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      }
+    ],
+    "known_timing_current_date": [],
+    "additional_release_current_date": [],
+    "excluded_ids": [
+      "n0088",
+      "n0656",
+      "n0713",
+      "n1616",
+      "n4443"
+    ],
+    "manual_disciplines": [
+      "Excluded stale company news regardless of broad monthly category. H&M and Micron September results are within fourteen days; older company news is not used.",
+      "No live or rolling market-update headline cited.",
+      "No report-day actual US or European data; no post-October election or policy outcome."
+    ]
+  }
+}

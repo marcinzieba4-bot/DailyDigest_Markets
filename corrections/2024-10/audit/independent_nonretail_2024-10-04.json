@@ -1,0 +1,194 @@
+{
+  "date": "2024-10-04",
+  "reviewer": "independent_nonretail_early",
+  "scope": {
+    "keys": [
+      "geo",
+      "sectors",
+      "earnings_pattern",
+      "underowned",
+      "crypto",
+      "flows",
+      "anticipatory",
+      "catalysts"
+    ],
+    "blocks": 36,
+    "paragraphs": 136,
+    "distinct_headlines": 84,
+    "headline_ids": [
+      "n0197",
+      "n0207",
+      "n0400",
+      "n0420",
+      "n0421",
+      "n0744",
+      "n0745",
+      "n0820",
+      "n0821",
+      "n0823",
+      "n0824",
+      "n0853",
+      "n0958",
+      "n0963",
+      "n0966",
+      "n1021",
+      "n1022",
+      "n1023",
+      "n1034",
+      "n1108",
+      "n1189",
+      "n1191",
+      "n1193",
+      "n1201",
+      "n1222",
+      "n1289",
+      "n1504",
+      "n1506",
+      "n1520",
+      "n1529",
+      "n1547",
+      "n1557",
+      "n1575",
+      "n1577",
+      "n1579",
+      "n1581",
+      "n1599",
+      "n1846",
+      "n1852",
+      "n1888",
+      "n1907",
+      "n2015",
+      "n2026",
+      "n2474",
+      "n2484",
+      "n2514",
+      "n2533",
+      "n2739",
+      "n2771",
+      "n2773",
+      "n2860",
+      "n2925",
+      "n2928",
+      "n2939",
+      "n2945",
+      "n3440",
+      "n3447",
+      "n3452",
+      "n3461",
+      "n3466",
+      "n3469",
+      "n3478",
+      "n3480",
+      "n3503",
+      "n3505",
+      "n3512",
+      "n3518",
+      "n3525",
+      "n3533",
+      "n3671",
+      "n3696",
+      "n3715",
+      "n3883",
+      "n4054",
+      "n4085",
+      "n4088",
+      "n4089",
+      "n4090",
+      "n4095",
+      "n4096",
+      "n4882",
+      "n4885",
+      "n4886",
+      "n4887"
+    ],
+    "all_nonretail_blocks_and_paragraphs_read": true,
+    "all_cited_nonretail_headlines_read": true,
+    "own_card_numeric_context_checked": true,
+    "retail_reviewed": false,
+    "retail_values_preserved": true
+  },
+  "findings_and_resolutions": [
+    {
+      "location": "catalysts.JOBY",
+      "finding": "Headline says Toyota to invest; prose could imply an already executed investment.",
+      "resolution": "Changed to planned investment and proposed financing support; retained future operating milestones."
+    },
+    {
+      "location": "geo.PL.Corporate & Sectors",
+      "finding": "XTB daily advance was described as event reaction without intraday linkage.",
+      "resolution": "Distinguished product launch and daily price advance without asserting causality."
+    },
+    {
+      "location": "underowned.0/3",
+      "finding": "Instrument expressions were generic.",
+      "resolution": "Named XLF and ASHR/KWEB, explaining broad exposure versus specialized credit/equity claims."
+    },
+    {
+      "location": "geo.AU.Playbook; sectors.SOXX.Reported; anticipatory.Robotaxi.Risk; catalysts.NVDA/LEVI",
+      "finding": "Several sentences narrated prohibitions on unsupported figures or outcomes.",
+      "resolution": "Replaced with ordinary investment mechanisms involving commercialization, unit economics, delivery, pricing, retained liabilities and recurring cash generation."
+    }
+  ],
+  "release_boundary_dispositions": [
+    {
+      "ids": [
+        "n4882",
+        "n4887",
+        "n4886"
+      ],
+      "disposition": "October 3 services and layoffs releases are completed before report date. October 4 payroll actual remains unavailable; n4885 is used only as a pending preview."
+    },
+    {
+      "ids": [
+        "n2533",
+        "n2484",
+        "n2514"
+      ],
+      "disposition": "October 3 port agreement is completed before midnight; suspension and continuing contract negotiations remain distinguished from complete settlement of all terms."
+    },
+    {
+      "ids": [
+        "n4095",
+        "n1289",
+        "n2474"
+      ],
+      "disposition": "European EV tariff decision, Tesla unveiling and potential Israeli action remain pending/conditional; no outcome imported."
+    },
+    {
+      "ids": [
+        "n1581",
+        "n3671",
+        "n0744",
+        "n1022"
+      ],
+      "disposition": "Exxon preliminary assessment, planned Joby funding, possible bank capital and planned offshore issuance retain prospective/preliminary statuses."
+    },
+    {
+      "disposition": "Read all current-date semantic exclusions, including stale September 19 Lennar n4544; none is cited. No Costco comparison remains in this date. Current-date known_timing_exclusions and additional_release_exclusions/advisories rows are empty."
+    }
+  ],
+  "numeric_review": {
+    "checked": "All nonretail numerical paragraphs matched exact own-date Treasury or named instrument/session/horizon fields, or numbers in the same-paragraph cited headline.",
+    "restrictions": "No numerical spot-FX, WDC/CMCSA nominal level, derived ratio, market-move-implied measured flow, or election outcome."
+  },
+  "cross_section_review": "The portfolio consistently balances selective profitable equities, intermediate Treasury protection, cash before payrolls, a measured energy hedge and cautious discretionary/autos exposure; port disruption expressions are unwound while backlog normalization remains prospective.",
+  "validation": {
+    "command": "python tools/verify.py 2024-10-04",
+    "result": "PASS",
+    "words": 10010,
+    "sources": 91,
+    "fail": 0,
+    "warn": 0
+  },
+  "fatal_or_major_remaining": 0,
+  "feed_sha256": "1224120bac51276861f5bdbcce720e01cda365702724e6ccc9a3549a7b56d8b7",
+  "card_sha256": "7e687a833d7c4aad3185a1503ea6d61cf33c49605e12c78025984e67ad452c35",
+  "full_spec_sha256_at_review": "f4b0782bcc18df1022012d02bbc871c62707b1161e44e8ed5302676649d4f623",
+  "nonretail_content_sha256": "f0e5fbacd2cf8ca1129c8ed18397c3340c319ddf2b3c0151b6c24db562ca3934",
+  "review_limits": [
+    "Reviewed headline scope and own-card fields; no article bodies or external original publications were accessed.",
+    "Source retrieval and market-card infrastructure accepted as previously audited; no inference that infrastructure certifies claim semantics.",
+    "Only the assigned current date was open during its review; no future feed/card/spec or November factual report was read.",
+    "Retail and retail_intro values were preserved and are outside this nonretail semantic-review scope."
+  ]
+}

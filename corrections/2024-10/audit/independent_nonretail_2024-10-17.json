@@ -1,0 +1,152 @@
+{
+  "reviewer": "independent_nonretail_middle (AI headline/card reviewer; did not author these reports)",
+  "date": "2024-10-17",
+  "reviewed_at_utc": "2026-11-04T10:33:28.991667+00:00",
+  "scope": {
+    "keys": [
+      "date",
+      "geo",
+      "sectors",
+      "underowned",
+      "anticipatory",
+      "catalysts",
+      "earnings_pattern",
+      "crypto",
+      "flows"
+    ],
+    "nonretail_blocks": 36,
+    "nonretail_paragraphs": 136,
+    "distinct_cited_sources": 70,
+    "source_ids": [
+      "n0450",
+      "n0457",
+      "n0458",
+      "n0730",
+      "n0940",
+      "n0986",
+      "n0988",
+      "n1010",
+      "n1081",
+      "n1082",
+      "n1083",
+      "n1084",
+      "n1100",
+      "n1127",
+      "n1136",
+      "n1137",
+      "n1138",
+      "n1139",
+      "n1146",
+      "n1292",
+      "n1297",
+      "n1327",
+      "n1331",
+      "n1699",
+      "n1733",
+      "n1767",
+      "n1770",
+      "n1772",
+      "n1777",
+      "n1790",
+      "n1791",
+      "n1796",
+      "n1802",
+      "n1805",
+      "n1807",
+      "n1823",
+      "n2029",
+      "n2110",
+      "n2122",
+      "n2140",
+      "n2260",
+      "n2262",
+      "n2273",
+      "n2794",
+      "n2825",
+      "n2827",
+      "n3365",
+      "n3374",
+      "n3379",
+      "n3411",
+      "n3414",
+      "n3417",
+      "n3430",
+      "n3435",
+      "n3441",
+      "n3456",
+      "n3460",
+      "n3463",
+      "n3466",
+      "n3478",
+      "n4019",
+      "n4102",
+      "n4123",
+      "n4124",
+      "n4140",
+      "n4141",
+      "n4158",
+      "n5069",
+      "n5070",
+      "n5077"
+    ],
+    "all_nonretail_prose_read": true,
+    "all_cited_own_date_headlines_read": true,
+    "relevant_own_card_numeric_fields_read_and_compared": true,
+    "retail_preserved_exactly": true,
+    "all_read": true
+  },
+  "concrete_findings_and_resolutions": [
+    {
+      "path": "geo[4].parts[1], sectors[8].parts[1]",
+      "finding": "BHP early-local operating update and Oct16 regular close were juxtaposed as an equity response, although the close can predate the update.",
+      "resolution": "Preserved exact card figures and recast the close as entry/starting-valuation context, with no claimed reaction."
+    },
+    {
+      "path": "crypto.parts[1]",
+      "finding": "Italy tax announcement was framed as an implemented legal increase.",
+      "resolution": "Made the proposed holder-economics change prospective and dependent on final legal terms/implementation; election remains unresolved."
+    },
+    {
+      "path": "catalysts[2].parts[0]",
+      "finding": "Accidental ASML disclosure descriptor exceeded cited Morningstar headline.",
+      "resolution": "Removed descriptor; focused on headline-supported guidance/orders and recovery timing."
+    },
+    {
+      "path": "geo[2].parts[0], geo[5].parts[5], earnings_pattern.parts[3], anticipatory[1].parts[0]",
+      "finding": "Input-rule narration interrupted analysis; ECB scenario repeated factual backdrop without its exact cites.",
+      "resolution": "Replaced narration with spending, refinancing and business-model implications; added own n1138/n2110 for luxury/bond background. Matched fiscal period to headline: firstthreequarters."
+    }
+  ],
+  "release_boundary_dispositions": [
+    {
+      "topic": "Oct17 ECB/US retail sales/Australia employment/China housing briefing",
+      "disposition": "No report-day actual outcome used. ECB stays pending with exact n2029Oct17 preview. AU household/labor comments remain forward-looking and do not quote the upcoming jobs result."
+    },
+    {
+      "topic": "Japan exports/BHP early-local releases",
+      "disposition": "Japan08:50JST trade release falls at23:50UTC Oct16, eligible atOct17midnight; JapaneseOct16 close predates it. BHP early-local company update is used as available news while regularOct16 close is only entrycontext, never reaction."
+    },
+    {
+      "topic": "TSMC/Netflix/Nestle",
+      "disposition": "All remain pending before Oct17day/evening releases. TSMC exact n1823Oct16tomorrow preview supports calendar and retains four merged uses, no more."
+    },
+    {
+      "topic": "China GDP/home prices/US election",
+      "disposition": "No future GDP/home-price actual used. Fiscal poll remains forecast, debt package prospective, US election unresolved."
+    },
+    {
+      "topic": "Crypto wallet",
+      "disposition": "Tesla transfer remains movement, not sale; RLUSD approval remains pending."
+    }
+  ],
+  "validation": {
+    "verify": "PASS, 0 fail, 0 warn",
+    "calendar_diagnostics": []
+  },
+  "fatal_or_major_remaining": 0,
+  "feed_sha256": "d83d6821804aa9a63c1c87b77c08d55ec4e0a399ee670388b11e8b2ad494e530",
+  "card_sha256": "9864b9036207fc3355fae595ae4b47bde9e2694b7606d025ee719c4adcc72779",
+  "full_spec_sha256_at_review": "ca11173c0d27e6b69d67814f633ea5546d91a39629cd44742e7badd4d25a5602",
+  "nonretail_content_sha256": "ba9e942c110c526038281e9d0f7d447561eab6aee36961782218a4aa3451322a",
+  "limits": "AI semantic and style review of frozen own-date headlines and market-card fields only. No original article body or original publication vintage certification; no later-date factual evidence or raw price history consulted. Infrastructure checks are not semantic certification."
+}

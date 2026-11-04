@@ -1,0 +1,89 @@
+{
+  "date": "2024-10-10",
+  "reviewer": "Independent AI nonretail reviewer; did not author the reviewed edition",
+  "actual_scope": {
+    "nonretail_blocks": 36,
+    "nonretail_paragraphs": 136,
+    "all_nonretail_blocks_and_paragraphs_read": true,
+    "distinct_nonretail_cited_headlines": 76,
+    "every_cited_nonretail_own_date_headline_read": true,
+    "own_card_numeric_fields_read_and_matched": true,
+    "retail_reviewed_or_edited": false
+  },
+  "concrete_findings_and_resolutions": [
+    {
+      "location": "sectors.SOXX / EPS Upside Watch",
+      "finding": "The semiconductor section discussed only AMD by name and omitted the required ASML/TSMC comparison.",
+      "resolution": "Added exact own-card US-line closes and twenty-session changes for TSMC and ASML, retaining delivery/cash confirmation as a conditional test."
+    },
+    {
+      "location": "geo.US and geo.CN",
+      "finding": "Two quoted index levels lacked an explicit unit next to the value, and the US block lacked DXY context.",
+      "resolution": "Added index-point units, exact own-card DXY context and the exact twenty-observation spread change."
+    },
+    {
+      "location": "geo.PL",
+      "finding": "Attribution used the expanded brand rather than the own-feed source label.",
+      "resolution": "Changed to pb.pl; Polish headline numbers and translations remain exact."
+    },
+    {
+      "location": "underowned themes and crypto",
+      "finding": "Several theme exposures were generic, and crypto omitted the Solana comparison.",
+      "resolution": "Named UPS, South Korean bonds, PKO/KGHM as the relevant instruments already established by cited headlines; added exact Solana close and prior-session return."
+    },
+    {
+      "location": "earnings_pattern.Pattern",
+      "finding": "One sentence narrated claim-verification rules.",
+      "resolution": "Replaced with a concrete cash-commitment mechanism."
+    }
+  ],
+  "release_boundary_dispositions": [
+    {
+      "event": "Fed minutes",
+      "disposition": "October 9 completed minutes retained via n4794/n4801; they describe the September decision."
+    },
+    {
+      "event": "US CPI",
+      "disposition": "October 10 actual remains after cutoff and unavailable; n4561 is used only as a pending preview."
+    },
+    {
+      "event": "HBO documentary",
+      "disposition": "After October 9 premiere, suggestion and Peter Todd denial are eligible via n1178/n1187/n1197; no verified identity claim."
+    },
+    {
+      "event": "Japan wholesale inflation",
+      "disposition": "Early October 10 local-morning release is before October 10 UTC midnight; own headline is eligible. No numeric wholesale print invented."
+    },
+    {
+      "event": "AMD Advancing AI",
+      "disposition": "Presentation and price reaction remain pending throughout."
+    },
+    {
+      "event": "US election",
+      "disposition": "No outcome or winner assumed."
+    }
+  ],
+  "semantic_checks": {
+    "company_news_and_previews_max_days": 7,
+    "company_results_max_days": 14,
+    "macro_and_policy_max_days": 35,
+    "current_date_known_semantic_and_release_exclusions_checked": true,
+    "spot_fx_numeric_quotes_absent": true,
+    "WDC_CMCSA_withheld_levels_not_used": true,
+    "SOXX_includes_ASML_and_TSMC": true,
+    "price_changes_not_reported_as_measured_flows_or_ownership": true,
+    "source_attribution_and_Polish_translation_checked": true,
+    "numbers_units_horizons_and_instrument_sessions_checked": true
+  },
+  "validation": {
+    "verify": "PASS; 0 fail, 0 warn",
+    "final_words": 9895
+  },
+  "limits": "AI review of all actual nonretail prose against own-date frozen headline scope and relevant market-card fields. This is not article-body verification, original article publication-vintage certification, or certification of unrevised vendor history. No other-date factual report was used.",
+  "fatal_or_major_remaining": 0,
+  "feed_sha256": "3ae2fe4621519c38ce562f474785fd19abe8cb22064e78d8ce0f3b97766c4b0b",
+  "card_sha256": "43ff8a0b5a8bf39f0d8a086829cdbcf35f02176edf766377b4bd8e5498d1749a",
+  "full_spec_sha256_at_review": "c0d5fce460fc19b60bba177007bd1585b68f04f75afcd95830c471fb8eaa1e69",
+  "nonretail_content_sha256": "9bacebd60b6f9185b4b0aea3f7f00f5d146367e164ab574fbd0a22c98b92be61",
+  "retail_content_preserved_exactly": true
+}

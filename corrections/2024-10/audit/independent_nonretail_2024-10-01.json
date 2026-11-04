@@ -1,0 +1,78 @@
+{
+  "date": "2024-10-01",
+  "reviewer": "root (separate from nonretail author oct_early)",
+  "reviewed_at_utc": "2026-11-04T10:06:22.141121+00:00",
+  "scope": {
+    "keys": [
+      "date",
+      "geo",
+      "sectors",
+      "earnings_pattern",
+      "underowned",
+      "crypto",
+      "flows",
+      "anticipatory",
+      "catalysts"
+    ],
+    "blocks": 36,
+    "paragraphs": 136,
+    "distinct_cited_headlines": 98,
+    "entire_nonretail_text_read": true,
+    "own_cited_headlines_read": true,
+    "market_prices_units_directions_horizons_checked": true,
+    "release_boundaries_reviewed": true,
+    "retail_outside_scope_preserved": true
+  },
+  "findings": [
+    {
+      "severity": "minor",
+      "location": "XLP/Reported and Earnings Pattern/Pattern",
+      "resolution": "Made the reporting-period distinction explicit: full-year EPS strength and the revenue comparison must not be collapsed into a same-period margin conclusion."
+    }
+  ],
+  "release_boundary_dispositions": [
+    {
+      "id": "n2624",
+      "disposition": "Japan October1 Tankan morning release at08:50JST is September30 23:50UTC, before cutoff. Official BOJ release convention and Reuters September20 preview corroborate timing. Current Reuters page has a later update; original article-body vintage is not certified. Only the own-headline business-mood fact is retained.",
+      "verification_urls": [
+        "https://www.boj.or.jp/en/statistics/outline/exp/tk/faqtk04.htm",
+        "https://www.reuters.com/markets/asia/boj-tankan-expected-show-big-manufacturers-mood-steady-2024-09-20/"
+      ]
+    },
+    {
+      "id": "n0440",
+      "disposition": "Bloomberg original home-price article dated September30 14:01UTC, before cutoff. Australian Octoberlocal date does not make the result late.",
+      "verification_url": "https://www.bloomberg.com/news/articles/2024-09-30/australia-s-home-price-growth-holds-steady-at-elevated-level"
+    },
+    {
+      "id": "n2313",
+      "disposition": "US EastCoast port strike remains pending at00UTC; localmidnight start follows reportcutoff."
+    },
+    {
+      "id": "n1600",
+      "disposition": "Nike release remains pending; no guidance-withdrawal outcome imported."
+    },
+    {
+      "id": "n0877",
+      "disposition": "China bankcapital injection remains a reported proposal, not executed funding."
+    },
+    {
+      "id": "n3798",
+      "disposition": "FTC clearance and JohnHessboardcondition are the stated regulatory step, without asserting all transaction risk resolved."
+    }
+  ],
+  "market_identity_checks": {
+    "symbols_checked": 75,
+    "treasury_official_levels_and_basis_points": true,
+    "crypto_utc_candles_separate_from_equity_sessions": true,
+    "spot_fx_numeric_claims_absent": true,
+    "WDC_CMCSA_nominal_levels_absent": true,
+    "ETF_price_changes_not_described_as_total_returns_or_measured_flows": true
+  },
+  "review_limits": "AI independent headline/card claim review, not a human review or independently archived original article-body vintage. External timing lookups adjudicate release boundaries only, without importing additional financial facts.",
+  "nonretail_content_sha256": "44296e7ae689cbdc21593c04d9c49dc9eccef89474b73c350e3195fade7da4b4",
+  "full_spec_sha256_at_review": "ad0dcbd7232072c6ac754fae4ce142a42f00bb2821c51c7bb345ca31e99a1e39",
+  "feed_sha256": "f4396fd7c9b9471bce4b35dad1c1f85a7ea140436d75c47821aaad10de2e64a4",
+  "card_sha256": "6b9111549a02c52d825b270d392430c8748afd174a65915b5855f42be9a70300",
+  "fatal_or_major_remaining": 0
+}

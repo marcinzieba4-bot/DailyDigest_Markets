@@ -1,0 +1,90 @@
+{
+  "date": "2024-10-11",
+  "reviewer": "Independent AI nonretail reviewer; did not author the reviewed edition",
+  "actual_scope": {
+    "nonretail_blocks": 36,
+    "nonretail_paragraphs": 136,
+    "all_nonretail_blocks_and_paragraphs_read": true,
+    "distinct_nonretail_cited_headlines": 102,
+    "every_cited_nonretail_own_date_headline_read": true,
+    "own_card_numeric_fields_read_and_matched": true,
+    "retail_reviewed_or_edited": false
+  },
+  "concrete_findings_and_resolutions": [
+    {
+      "location": "geo.US.Rates & Curve, underowned.cash management, anticipatory.bank earnings, flows.Rates & Dollar",
+      "finding": "Treasury figures matched their own card but several paragraphs omitted the official source/session tag.",
+      "resolution": "Added the exact US Treasury prior-close tag without changing any yield, spread, curve wording or return."
+    },
+    {
+      "location": "crypto.Market Context",
+      "finding": "The paragraph mixed UTC daily crypto closes with exchange-local equity closes under one regular-close tag and omitted Solana.",
+      "resolution": "Inserted the prior-completed-daily-close tag after the crypto figures, retained the regular equity tag for COIN/MSTR, and added exact own-card Solana context."
+    },
+    {
+      "location": "geo.CN.Playbook",
+      "finding": "Required final divergence statement was absent.",
+      "resolution": "Added the concrete conflict between securities-liquidity/equity strength and contractionary factories/cautious holiday consumption."
+    },
+    {
+      "location": "geo.AU.Macro Stance",
+      "finding": "The lobster wording treated access reopening as fully operational even though the headline set establishes a move toward ending the restriction without proving completed shipments.",
+      "resolution": "Described the move toward reopening and its industry opportunity; did not invent an implementation date or shipping result."
+    },
+    {
+      "location": "geo.PL.Markets and sectors.XLY.Narrative",
+      "finding": "Two sentences narrated spot-quote verification and UTC authoring rules.",
+      "resolution": "Replaced them with currency-risk management and pre-event anticipation language."
+    },
+    {
+      "location": "geo.PL.New / Most Important",
+      "finding": "Revolut comparison was awkwardly translated.",
+      "resolution": "Restated exact headline meaning: as many Polish customers as BNP Paribas, closing the gap with mBank."
+    }
+  ],
+  "release_boundary_dispositions": [
+    {
+      "event": "Tesla Cybercab unveiling",
+      "disposition": "Actual unveiling n3899 excluded. Scheduled 02:00 UTC October 11 is after cutoff. Quartz/TechCrunch previews and Reuters strategy discussion remain prospective across XLY, anticipatory and TSLA; prior regular close is anticipation, not reaction."
+    },
+    {
+      "event": "AMD and US CPI",
+      "disposition": "October 10 completed launch/CPI reporting is eligible, and AMD price comparison uses its October 10 completed session without claiming complete causal attribution."
+    },
+    {
+      "event": "Major US bank earnings and PPI",
+      "disposition": "Report-day bank results remain pending in the existing preview; no completed October 11 PPI result claimed."
+    },
+    {
+      "event": "Japan wholesale inflation",
+      "disposition": "Early-local morning release before UTC midnight remains eligible; no future BOJ decision or election result assumed."
+    },
+    {
+      "event": "US election",
+      "disposition": "No outcome or winner assumed."
+    }
+  ],
+  "semantic_checks": {
+    "company_news_and_previews_max_days": 7,
+    "company_results_max_days": 14,
+    "macro_and_policy_max_days": 35,
+    "current_date_known_semantic_and_release_exclusions_checked": true,
+    "spot_fx_numeric_quotes_absent": true,
+    "WDC_CMCSA_withheld_levels_not_used": true,
+    "SOXX_includes_ASML_and_TSMC": true,
+    "price_changes_not_reported_as_measured_flows_or_ownership": true,
+    "source_attribution_and_Polish_translation_checked": true,
+    "numbers_units_horizons_and_instrument_sessions_checked": true
+  },
+  "validation": {
+    "verify": "PASS; 0 fail, 0 warn",
+    "final_words": 10071
+  },
+  "limits": "AI review of all actual nonretail prose against frozen own-date headline scope and relevant market-card fields, including current-date semantic/release exclusions. This is not article-body verification, original publication-vintage certification, or certification of unrevised historical vendor data.",
+  "fatal_or_major_remaining": 0,
+  "feed_sha256": "6912b6f95ac60d39b535928136c4c5551bd2a42330a2afeb2abedcb08372614c",
+  "card_sha256": "442818bd72bf053f3413a3621926c0ce9190c6a8a4f2a4ee04dbef55a316c27c",
+  "full_spec_sha256_at_review": "49c83b1c0ddd2f5704609d46624ebf6894e185c7629b1099c439d7404277a6ac",
+  "nonretail_content_sha256": "bdf128c34d2321755bfe1f7883d64fd5de1aefd410060bcff60bb9a7749cdb51",
+  "retail_content_preserved_exactly": true
+}

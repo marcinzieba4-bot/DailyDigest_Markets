@@ -1,0 +1,147 @@
+{
+  "reviewer": "independent_nonretail_middle (AI headline/card reviewer; did not author these reports)",
+  "date": "2024-10-16",
+  "reviewed_at_utc": "2026-11-04T10:31:47.867626+00:00",
+  "scope": {
+    "keys": [
+      "date",
+      "geo",
+      "sectors",
+      "underowned",
+      "anticipatory",
+      "catalysts",
+      "earnings_pattern",
+      "crypto",
+      "flows"
+    ],
+    "nonretail_blocks": 36,
+    "nonretail_paragraphs": 136,
+    "distinct_cited_sources": 70,
+    "source_ids": [
+      "n0453",
+      "n0462",
+      "n0463",
+      "n0464",
+      "n0728",
+      "n0980",
+      "n1050",
+      "n1070",
+      "n1072",
+      "n1076",
+      "n1083",
+      "n1121",
+      "n1122",
+      "n1123",
+      "n1124",
+      "n1134",
+      "n1135",
+      "n1335",
+      "n1339",
+      "n1348",
+      "n1352",
+      "n1783",
+      "n1784",
+      "n1785",
+      "n1788",
+      "n1790",
+      "n1791",
+      "n1802",
+      "n1805",
+      "n1806",
+      "n1810",
+      "n1816",
+      "n1817",
+      "n1822",
+      "n1824",
+      "n1834",
+      "n2080",
+      "n2147",
+      "n2160",
+      "n2161",
+      "n2173",
+      "n2288",
+      "n2297",
+      "n2317",
+      "n2870",
+      "n2900",
+      "n2928",
+      "n2936",
+      "n2940",
+      "n2998",
+      "n3470",
+      "n3511",
+      "n3512",
+      "n3532",
+      "n3536",
+      "n3539",
+      "n3540",
+      "n3544",
+      "n3545",
+      "n3555",
+      "n3566",
+      "n3569",
+      "n3572",
+      "n3578",
+      "n4200",
+      "n4210",
+      "n4211",
+      "n4219",
+      "n4258",
+      "n5102"
+    ],
+    "all_nonretail_prose_read": true,
+    "all_cited_own_date_headlines_read": true,
+    "relevant_own_card_numeric_fields_read_and_compared": true,
+    "retail_preserved_exactly": true,
+    "all_read": true
+  },
+  "concrete_findings_and_resolutions": [
+    {
+      "path": "geo[5].parts[3]",
+      "finding": "Direct author instruction about unsupported beneficiaries interrupted the investor narrative.",
+      "resolution": "Replaced with market-access concentration and exporter-risk analysis."
+    },
+    {
+      "path": "geo[5].parts[2]",
+      "finding": "Fiscal period paraphrase was imprecise.",
+      "resolution": "Matched Money.pl headline exactly: first three quarters, over PLN100billion."
+    },
+    {
+      "path": "geo[3].parts[1], flows.parts[0], earnings_pattern.parts[3]",
+      "finding": "Several sentences described evidentiary rules rather than investment implications.",
+      "resolution": "Recast as Japanese overnight valuation risk, buyback execution/competing issuance and pending Netflix valuation tests; preserved factual boundaries."
+    }
+  ],
+  "release_boundary_dispositions": [
+    {
+      "topic": "ASML early Oct15 results",
+      "disposition": "Actual n1785/n1784/n1788 are eligible byOct16; all ASML passages treat result and cut as completed, with no surviving pending preview."
+    },
+    {
+      "topic": "ECB/Netflix",
+      "disposition": "Remain pending atOct16midnight; ECB calendar explicitly supported by own n2080Oct17 preview, Netflix by n1834."
+    },
+    {
+      "topic": "United/Rio company releases",
+      "disposition": "Oct15 USafterclose United update is eligible byOct16. Rio own dated operating update is used as already-released company information, with no same-day local market reaction inferred."
+    },
+    {
+      "topic": "Crypto wallet/election",
+      "disposition": "n1335 establishes transfer only, not sale; RLUSD approval remains pending; no US election outcome."
+    },
+    {
+      "topic": "Japanese trading order",
+      "disposition": "JapaneseOct15 close predates later US semiconductor selloff; prose expresses overnight exposure rather than attributing a later event to earlier close."
+    }
+  ],
+  "validation": {
+    "verify": "PASS, 0 fail, 0 warn",
+    "calendar_diagnostics": []
+  },
+  "fatal_or_major_remaining": 0,
+  "feed_sha256": "6d0175486f474776fae5b7b2ada0a01281067b75e29d162782a8b031397959c9",
+  "card_sha256": "2f2e6dfb189e2e2caa27089f6e901718dbf430883ed8b8c6948acd1572fc471d",
+  "full_spec_sha256_at_review": "52ff241c17f2252af65b9ef3e1522aae660cd32048d39a12048918d3752a5be9",
+  "nonretail_content_sha256": "054cada4b6157cab800ab160066738171464753e4833a2df4d36d7cf8d569384",
+  "limits": "AI semantic and style review of frozen own-date headlines and market-card fields only. No original article body or original publication vintage certification; no later-date factual evidence or raw price history consulted. Infrastructure checks are not semantic certification."
+}

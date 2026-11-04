@@ -1,0 +1,218 @@
+{
+  "date": "2024-10-31",
+  "author_scope": "nonretail only; retail_intro empty and retail empty for separate merge",
+  "status": "author self-review complete; independent review pending",
+  "spec_sha256": "87f3f8951de447a6ffbd20db4959b08e68d65c3bce47fe2d76c646441fddab2e",
+  "feed_sha256": "6f6ca2a9b29250e827d69249555a6c4dd8ab78de72f45fde8d7d5b4d8950c465",
+  "card_sha256": "8a15019cc69c278c29cf963d04a8f9546ebe61060bf309a181b1021f0f49dab1",
+  "verification": {
+    "command": "python tools/verify.py --nonretail 2024-10-31",
+    "words": 8915,
+    "distinct_citations": 136,
+    "max_citation_uses": 3,
+    "failures": [],
+    "warnings": [],
+    "section_words": {
+      "geo:US": 425,
+      "geo:EU": 284,
+      "geo:CN": 851,
+      "geo:JP": 287,
+      "geo:AU": 256,
+      "geo:PL": 976,
+      "sector:XLK": 196,
+      "sector:XLC": 192,
+      "sector:XLF": 187,
+      "sector:XLE": 192,
+      "sector:XLI": 186,
+      "sector:XLY": 193,
+      "sector:XLP": 189,
+      "sector:XLV": 185,
+      "sector:XLB": 194,
+      "sector:XLRE": 192,
+      "sector:XLU": 185,
+      "sector:SXAP": 197,
+      "sector:SOXX": 195,
+      "earnings_pattern": 408,
+      "crypto": 281,
+      "flows": 675,
+      "underowned[0]": 148,
+      "underowned[1]": 148,
+      "underowned[2]": 147,
+      "underowned[3]": 142,
+      "anticipatory[0]": 174,
+      "anticipatory[1]": 164,
+      "anticipatory[2]": 170,
+      "anticipatory[3]": 166,
+      "catalysts[0]": 118,
+      "catalysts[1]": 126,
+      "catalysts[2]": 122,
+      "catalysts[3]": 119,
+      "catalysts[4]": 120,
+      "catalysts[5]": 125
+    }
+  },
+  "self_review": {
+    "method": "Author checked headline-bound wording, semantic source windows, actual versus preview status, card dates and units, investment triggers and consistency. This is not an independent review receipt.",
+    "timing": "China October PMI, BOJ decision, Polish October flash CPI, US PCE and official US payroll outcome are not treated as actual. The US election remains pending. Microsoft, Meta, Coinbase and Carvana October 30 evening earnings are actual before midnight UTC, but no prior regular-close reaction is attributed to their evening results. Japan September production is an early-local October 31 release at 08:50 JST, or October 30 23:50 UTC, eligible strictly before cutoff.",
+    "market_discipline": "Every quoted market level/return is from October 30 completed own-session card. Crypto uses completed UTC daily candle. Treasury percentages/bps exactly match official curve and move labels. No numeric spot-FX, no WDC/CMCSA levels, no computed ratios or rescaled prices.",
+    "claims": "Concrete claims are confined to own-date headlines/card. Forecasts and plans remain prospective; lawsuits, requests for investigation and charges remain distinct from rulings or guilt. Flow claims rely on specific positioning or fund reports, not inferred from returns.",
+    "citation_room": "Maximum three nonretail uses for n2102; every other citation at most two. Separate retail one-use citations can fit combined cap4."
+  },
+  "exclusions": {
+    "known_semantic": [
+      {
+        "id": "n0566",
+        "published_at": "2024-09-26T07:00:00+00:00",
+        "src": "Industrial Vehicle Technology International",
+        "title": "JCB reports rise in profits in 2023 - Industrial Vehicle Technology International",
+        "maximum_age_days": 14,
+        "reason": "Stale company result",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n0585",
+        "published_at": "2024-09-27T07:00:00+00:00",
+        "src": "ET Infra",
+        "title": "Southwest Airlines to outline strategy to fix its profitability problem - ET Infra",
+        "maximum_age_days": 7,
+        "reason": "Stale company news or preview",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n0623",
+        "published_at": "2024-09-30T07:00:00+00:00",
+        "src": "The Guardian",
+        "title": "Vauxhall owner warns on profits amid falling sales and tougher Chinese competition - The Guardian",
+        "maximum_age_days": 14,
+        "reason": "Stale company result",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n0652",
+        "published_at": "2024-10-02T07:00:00+00:00",
+        "src": "Nikkei Asia",
+        "title": "Asian demand for factory robots powers Mitsubishi Electric profits - Nikkei Asia",
+        "maximum_age_days": 14,
+        "reason": "Stale company result",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n0717",
+        "published_at": "2024-10-08T07:00:00+00:00",
+        "src": "The Motley Fool Australia",
+        "title": "Here's the earnings forecast out to 2029 for Fortescue shares - The Motley Fool Australia",
+        "maximum_age_days": 7,
+        "reason": "Stale company news or preview",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n0783",
+        "published_at": "2024-10-11T07:00:00+00:00",
+        "src": "Upstox",
+        "title": "Reliance Industrial Infrastructure Q2 Results Highlights: Net profit declines 1.5% to ₹3.12 crore, revenue down 15% - Upstox",
+        "maximum_age_days": 14,
+        "reason": "Stale company result",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n0855",
+        "published_at": "2024-10-16T07:00:00+00:00",
+        "src": "Reuters",
+        "title": "LVMH shares hit by weak Q3 sales, dragging down luxury sector - Reuters",
+        "maximum_age_days": 14,
+        "reason": "Stale company result",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n3068",
+        "published_at": "2024-10-08T07:00:00+00:00",
+        "src": "Reuters",
+        "title": "Uniqlo owner seen posting 24% annual profit surge on brand's overseas push - Reuters",
+        "maximum_age_days": 7,
+        "reason": "Stale company news or preview",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n3094",
+        "published_at": "2024-10-10T07:00:00+00:00",
+        "src": "Nikkei Asia",
+        "title": "Thrifty Chinese diners bring record profit for Japan's Saizeriya - Nikkei Asia",
+        "maximum_age_days": 14,
+        "reason": "Stale company result",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n4877",
+        "published_at": "2024-09-30T07:00:00+00:00",
+        "src": "www.timothysykes.com",
+        "title": "Why PDD Stock Skyrocketed by 10% Today: Is It Time To Buy? - www.timothysykes.com",
+        "maximum_age_days": 7,
+        "reason": "Stale company news or preview",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n5004",
+        "published_at": "2024-10-04T07:00:00+00:00",
+        "src": "Porsche Newsroom",
+        "title": "Porsche reports U.S. retail sales for first quarter of 2024 - Porsche Newsroom",
+        "maximum_age_days": 14,
+        "reason": "Stale company result",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n5097",
+        "published_at": "2024-10-09T07:00:00+00:00",
+        "src": "Travel Weekly - Home",
+        "title": "Hays Travel annual profits soar to £73.4m - Travel Weekly - Home",
+        "maximum_age_days": 14,
+        "reason": "Stale company result",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n5127",
+        "published_at": "2024-10-10T07:00:00+00:00",
+        "src": "Domino's",
+        "title": "Domino's Pizza® Announces Third Quarter 2024 Financial Results - Domino's",
+        "maximum_age_days": 14,
+        "reason": "Stale company result",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      },
+      {
+        "id": "n5677",
+        "published_at": "2024-10-02T07:00:00+00:00",
+        "src": "The Motley Fool",
+        "title": "Why Zillow Group Stock Gained 15% in September - The Motley Fool",
+        "maximum_age_days": 7,
+        "reason": "Stale company news or preview",
+        "disposition": "Do not cite for a current company event/result; broad monthly label does not extend semantic age."
+      }
+    ],
+    "known_timing_current_date": [],
+    "additional_release_current_date": [],
+    "excluded_ids": [
+      "n0566",
+      "n0585",
+      "n0623",
+      "n0652",
+      "n0717",
+      "n0783",
+      "n0855",
+      "n3068",
+      "n3094",
+      "n4877",
+      "n5004",
+      "n5097",
+      "n5127",
+      "n5677",
+      "n2161",
+      "n0389"
+    ],
+    "manual_disciplines": [
+      "n0855 LVMH October 16 result excluded as outside fourteen-day results window.",
+      "n2161 Samsung headway following results excluded because Korean October 31 release is not demonstrably strictly before 00:00 UTC.",
+      "n0389 RBA crucial decision headline excluded as unreliable release-status framing.",
+      "No rolling/live market page cited; no post-October policy or national-election outcome.",
+      "Older company previews are not used to keep completed earnings pending; current Apple preview remains pending."
+    ]
+  }
+}

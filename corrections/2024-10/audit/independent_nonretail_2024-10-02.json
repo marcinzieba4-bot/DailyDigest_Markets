@@ -1,0 +1,123 @@
+{
+  "date": "2024-10-02",
+  "reviewer": "root (separate from nonretail author oct_early)",
+  "reviewed_at_utc": "2026-11-04T10:15:28.847246+00:00",
+  "scope": {
+    "keys": [
+      "date",
+      "geo",
+      "sectors",
+      "earnings_pattern",
+      "underowned",
+      "crypto",
+      "flows",
+      "anticipatory",
+      "catalysts"
+    ],
+    "blocks": 36,
+    "paragraphs": 136,
+    "distinct_cited_headlines": 88,
+    "entire_nonretail_text_read": true,
+    "own_cited_headlines_read": true,
+    "market_prices_units_directions_horizons_checked": true,
+    "release_boundaries_reviewed": true,
+    "retail_outside_scope_preserved": true
+  },
+  "findings": [
+    {
+      "severity": "major",
+      "locations": [
+        "PL/Corporate & Sectors",
+        "Underowned/Polish retail competition"
+      ],
+      "resolution": "Translated future Polish verbs precisely: Allegro plans to introduce alcohol sales, and AliExpress plans to offer local goods. Neither is asserted already operational."
+    },
+    {
+      "severity": "minor",
+      "location": "US/Macro Stance",
+      "resolution": "Changed remained47.2 to was47.2 because the cited ISM headline gives the current reading without establishing its prior value."
+    },
+    {
+      "severity": "minor",
+      "location": "PL/Markets",
+      "resolution": "Removed input-rule narration about numeric spot quotes; retained ordinary currency transmission and company financing analysis."
+    },
+    {
+      "severity": "minor",
+      "locations": [
+        "XLP/Reported",
+        "Earnings Pattern/Pattern"
+      ],
+      "resolution": "Made reporting-period separation explicit for the full-year Costco EPS comparison versus the revenue miss."
+    },
+    {
+      "severity": "minor",
+      "location": "NKE/Catalyst & Thesis",
+      "resolution": "Added direct same-paragraph EPS-beat citation n1629; combined final usage remains within the cap."
+    },
+    {
+      "severity": "minor",
+      "location": "PFE/Catalyst & Thesis",
+      "resolution": "Capital-flexibility benefit is conditional, avoiding an unsupported completed-cash-receipt implication."
+    },
+    {
+      "severity": "minor",
+      "location": "Underowned/Funding calendars",
+      "resolution": "Replaced a retrospective-sounding general clause with a direct prospective liquidity-buffer rule."
+    }
+  ],
+  "release_boundary_dispositions": [
+    {
+      "ids": [
+        "n1632",
+        "n1629",
+        "n1630"
+      ],
+      "disposition": "Nike October1 after-market release and21UTCcall were before October2cutoff; the89.13regularclose predates earnings, while the reported earnings decline is a distinct observation. Company schedule independently checked in root retail review for this date."
+    },
+    {
+      "id": "n3591",
+      "disposition": "Tesla deliveries remain pending at00UTC; no completed delivery miss imported."
+    },
+    {
+      "ids": [
+        "n2356",
+        "n2335"
+      ],
+      "disposition": "US port strike now actual afterOctober1localmidnight, beforeOctober2cutoff; its duration and quantified company losses remain unknown."
+    },
+    {
+      "ids": [
+        "n0515",
+        "n2406"
+      ],
+      "disposition": "Iran missile attack is reported actual; Israel response remains conditional."
+    },
+    {
+      "ids": [
+        "n1082",
+        "n1049"
+      ],
+      "disposition": "Early city luxury-home transactions and holiday travel concern are kept within headline scope, without inventing national consumption totals."
+    },
+    {
+      "id": "n2060",
+      "disposition": "StandardAero IPO is nearing pricing, not asserted completed at above-range terms."
+    }
+  ],
+  "market_identity_checks": {
+    "completed_mainland_and_HongKong_session": "2024-09-30",
+    "completed_US_Europe_Poland_Japan_Australia_sessions": "2024-10-01",
+    "crypto_completed_UTC_daily_close": "2024-10-01",
+    "treasury_prior_date": "2024-10-01",
+    "treasury_curve_shape_and_twenty_observation_move_checked": true,
+    "spot_fx_numbers_absent": true,
+    "price_changes_not_inferred_flows": true
+  },
+  "review_limits": "AI independent headline/card review, not human review or independently archived article-body vintage. Every cited headline and all136nonretailparagraphs read; external timing evidence only adjudicates release boundaries.",
+  "nonretail_content_sha256": "2423b8e7948cdb1298c359f0e71b6c3ab442d70242eda5e9e7dde1d58c2ff68b",
+  "full_spec_sha256_at_review": "addbd55f0d2f5cd6a2b1fa4c0db05be272dc502ebd0a69f817f8830d9949127f",
+  "feed_sha256": "c8fd08500344b8d0f236f1098e0c510326b22a451091fe002b02d417a333d5c5",
+  "card_sha256": "7ab0bf2770a9bcf0f8f6a242e88a6eed86bff7939e4d017f3bd0261e1ff98d8d",
+  "fatal_or_major_remaining": 0
+}

@@ -1,0 +1,211 @@
+{
+  "date": "2024-10-03",
+  "reviewer": "independent_nonretail_early",
+  "scope": {
+    "keys": [
+      "geo",
+      "sectors",
+      "earnings_pattern",
+      "underowned",
+      "crypto",
+      "flows",
+      "anticipatory",
+      "catalysts"
+    ],
+    "blocks": 36,
+    "paragraphs": 136,
+    "distinct_headlines": 84,
+    "headline_ids": [
+      "n0204",
+      "n0214",
+      "n0429",
+      "n0441",
+      "n0448",
+      "n0471",
+      "n0796",
+      "n0802",
+      "n0813",
+      "n0902",
+      "n0903",
+      "n0905",
+      "n0906",
+      "n0930",
+      "n0935",
+      "n0987",
+      "n1038",
+      "n1043",
+      "n1046",
+      "n1047",
+      "n1051",
+      "n1180",
+      "n1188",
+      "n1236",
+      "n1245",
+      "n1251",
+      "n1275",
+      "n1286",
+      "n1312",
+      "n1326",
+      "n1421",
+      "n1422",
+      "n1528",
+      "n1630",
+      "n1633",
+      "n1635",
+      "n1637",
+      "n1651",
+      "n1674",
+      "n1676",
+      "n1682",
+      "n1683",
+      "n1946",
+      "n1952",
+      "n1985",
+      "n1987",
+      "n2087",
+      "n2114",
+      "n2115",
+      "n2512",
+      "n2541",
+      "n2825",
+      "n2857",
+      "n2859",
+      "n2934",
+      "n2984",
+      "n2994",
+      "n2997",
+      "n2999",
+      "n3008",
+      "n3363",
+      "n3481",
+      "n3550",
+      "n3557",
+      "n3566",
+      "n3574",
+      "n3576",
+      "n3578",
+      "n3586",
+      "n3588",
+      "n3733",
+      "n3752",
+      "n4048",
+      "n4078",
+      "n4191",
+      "n4192",
+      "n4194",
+      "n4196",
+      "n4197",
+      "n4212",
+      "n4942",
+      "n4945",
+      "n4991",
+      "n5284"
+    ],
+    "all_nonretail_blocks_and_paragraphs_read": true,
+    "all_cited_nonretail_headlines_read": true,
+    "own_card_numeric_context_checked": true,
+    "retail_reviewed": false,
+    "retail_values_preserved": true
+  },
+  "findings_and_resolutions": [
+    {
+      "location": "geo.CN.Markets & Flows",
+      "finding": "Closing sentence narrated a prohibited numerical-FX rule.",
+      "resolution": "Replaced with investment analysis of dollar funding, local easing, and allocation size."
+    },
+    {
+      "location": "geo.JP.Activity & Currency",
+      "finding": "Daily setback could be read as reaction to political language that may follow the session.",
+      "resolution": "Described independent price and policy considerations without causal reaction attribution."
+    },
+    {
+      "location": "earnings_pattern.Pattern",
+      "finding": "Revenue miss and FY EPS beat risked collapsing reporting scopes.",
+      "resolution": "Attributed revenue account to Reuters and FY2024 EPS account to Yahoo Finance, explicitly preserving different measures and scopes."
+    },
+    {
+      "location": "underowned.0/1",
+      "finding": "Instrument expressions were too generic.",
+      "resolution": "Named XLP and BlackRock common shares; added no invented ownership or flow totals."
+    },
+    {
+      "location": "underowned.2",
+      "finding": "Paragraph narrated the absence of measured assets/client facts.",
+      "resolution": "Replaced with customer-duration and profitable-adoption mechanism."
+    },
+    {
+      "location": "catalysts.JOBY",
+      "finding": "Headline says Toyota to invest, while prose and title could imply completed funding.",
+      "resolution": "Used planned backing, conditional financing benefit, and retained operating milestones as investment test."
+    },
+    {
+      "location": "catalysts.XTB",
+      "finding": "Daily return was described as market reaction without event-time linkage.",
+      "resolution": "Changed to daily move, preserving exact card level and horizons."
+    }
+  ],
+  "release_boundary_dispositions": [
+    {
+      "ids": [
+        "n4991",
+        "n4945",
+        "n4942"
+      ],
+      "disposition": "ADP, job-openings and ISM actuals precede report date; next payroll result remains pending, supported by n0471 preview."
+    },
+    {
+      "ids": [
+        "n0905",
+        "n0906",
+        "n2857",
+        "n2859"
+      ],
+      "disposition": "Earlier China/Japan activity releases are completed baselines; no report-date Asian actual imported."
+    },
+    {
+      "ids": [
+        "n3752",
+        "n4192",
+        "n0802",
+        "n0813",
+        "n0903"
+      ],
+      "disposition": "Preserved investment/facility/capital/debt/mortgage plans as prospective, never completed financial or earnings outcomes."
+    },
+    {
+      "ids": [
+        "n1422",
+        "n0471",
+        "n2541"
+      ],
+      "disposition": "Robotaxi unveiling, payrolls and possible Iran retaliation retained as pending/conditional only."
+    },
+    {
+      "disposition": "Read current-date semantic exclusions; none of n0002,n0104,n0522,n0763,n1719 is cited. Current-date rows in known_timing_exclusions and additional_release_exclusions/advisories are empty."
+    }
+  ],
+  "numeric_review": {
+    "checked": "All nonretail numerical paragraphs against the same-date Treasury and relevant instrument fields or exact cited headline; instrument/currency/units/session/horizon preserved.",
+    "restrictions": "No numerical spot-FX, WDC/CMCSA nominal level, derived ratio, price-implied measured flow or election outcome."
+  },
+  "cross_section_review": "Selective profitable equities, restrained China/crypto/energy satellites, intermediate Treasury hedge, cautious discretionary/Nike/Tesla and implementation-based upgrades remain coherent across macro, sectors, earnings, flows, scenarios and catalysts.",
+  "validation": {
+    "command": "python tools/verify.py 2024-10-03",
+    "result": "PASS",
+    "words": 10030,
+    "sources": 90,
+    "fail": 0,
+    "warn": 0
+  },
+  "fatal_or_major_remaining": 0,
+  "feed_sha256": "117a180a5582b882443af419c31736122ac99597ee8a0e1f7d2a6a0d69bf4630",
+  "card_sha256": "364075b4f952a87d2d93965204051e1c9a5f10bc1f6036f95b2c9a5e6afc50f7",
+  "full_spec_sha256_at_review": "05cc8fccf99f1e5fb47cd03bfd34ebc01bd7537079c857243e7211dd654879c8",
+  "nonretail_content_sha256": "79aa402f9c8613cb72f2e574a9a1ea067cad02435b940a66455d1d1ddfcec9c7",
+  "review_limits": [
+    "Reviewed headline scope and own-card fields; no article bodies or external original publications were accessed.",
+    "Source retrieval and market-card infrastructure accepted as previously audited; no inference that infrastructure certifies claim semantics.",
+    "Only the assigned current date was open during its review; no future feed/card/spec or November factual report was read.",
+    "Retail and retail_intro values were preserved and are outside this nonretail semantic-review scope."
+  ]
+}

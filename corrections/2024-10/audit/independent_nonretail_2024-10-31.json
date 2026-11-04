@@ -1,0 +1,107 @@
+{
+  "date": "2024-10-31",
+  "reviewer": "Independent AI nonretail reviewer; did not author the reviewed edition",
+  "actual_scope": {
+    "nonretail_blocks": 36,
+    "nonretail_paragraphs": 136,
+    "all_nonretail_blocks_and_paragraphs_read": true,
+    "distinct_nonretail_cited_headlines": 135,
+    "every_cited_nonretail_own_date_headline_read": true,
+    "own_card_numeric_fields_read_and_matched": true,
+    "retail_reviewed_or_edited": false
+  },
+  "concrete_findings_and_resolutions": [
+    {
+      "location": "catalysts.RDDT.Catalyst & Thesis",
+      "finding": "The source-order word respectively reversed the forward holiday outlook and completed first-profit milestone.",
+      "resolution": "Removed the reversed mapping and stated the completed milestone and forward outlook as the two inputs to valuation."
+    },
+    {
+      "location": "sectors.XLU, underowned.issuance, crypto.New / Most Important",
+      "finding": "CEZ stake, BlackRock/CPPIB investment and Coinbase/Visa access language needed to remain planned, matching to-take/to-invest/to-allow headlines.",
+      "resolution": "Changed each to explicit prospective wording; did not claim a completed stake, allocation or launch."
+    },
+    {
+      "location": "crypto.New / Most Important",
+      "finding": "Two trading descriptions from different headlines were forced together with an explanation of their compatibility.",
+      "resolution": "Removed Reuters n1463 and grounded the operating analysis in CNBC n1464 quarterly miss and share fall. Kept prospective access distinct from profitability and customer trading."
+    },
+    {
+      "location": "sectors.XLY.EPS Upside Watch",
+      "finding": "The regular-sector gain could be mistaken for a reaction to Carvana's evening report.",
+      "resolution": "Explicitly placed the regular-session quote before that evening release; no next-session reaction inferred."
+    },
+    {
+      "location": "earnings_pattern.Attention into EPS and anticipatory.Apple",
+      "finding": "Completed Microsoft/Meta/Alphabet references needed direct nearby evidence and one sentence narrated preview handling.",
+      "resolution": "Added existing own-date result citations and replaced rule narration with the revenue-versus-committed-expense mechanism."
+    },
+    {
+      "location": "catalysts.LLY/SMCI.Price Hurdle & Risk, crypto.Market Context",
+      "finding": "Available own-card anchors were missing for Lilly, Super Micro and Solana.",
+      "resolution": "Added exact closes and supported horizons with source/session tags; no technical floor or target invented."
+    },
+    {
+      "location": "geo.US / geo.PL",
+      "finding": "GDP pace, budget-amendment stage and an FX sentence could be stated more precisely.",
+      "resolution": "Matched the GDP headline's pace wording, kept deficit under the amendment rather than assuming every legislative step complete, and replaced fabricated-target narration with investment-risk management."
+    }
+  ],
+  "release_boundary_dispositions": [
+    {
+      "event": "US GDP and Australian CPI",
+      "disposition": "October 30 completed actuals retained via n5660/n2947 and n0453."
+    },
+    {
+      "event": "Japan September production",
+      "disposition": "n3329 actual local October 31 08:50 JST equals October 30 23:50 UTC, before cutoff; retained without adding a numeric print absent from headline."
+    },
+    {
+      "event": "Microsoft, Meta, Coinbase and Carvana",
+      "disposition": "Prior-evening actuals eligible; regular-session card quotes precede those reports. No regular close falsely described as the evening-results reaction."
+    },
+    {
+      "event": "Apple, Amazon, Intel, US PCE/payrolls, BOJ decision, China October PMI and Polish October flash CPI",
+      "disposition": "No report-day actual outcomes claimed. Apple/US data/BOJ remain pending where discussed; September Chinese/Polish activity remains the completed baseline."
+    },
+    {
+      "event": "LVMH and ASML results",
+      "disposition": "LVMH n0855 October 16 and ASML October 15 results are outside the fourteen-day result window and are not cited. ASML current own-card price remains eligible."
+    },
+    {
+      "event": "Samsung October 31 earnings",
+      "disposition": "n2161 remains excluded because pre-midnight release was not established."
+    },
+    {
+      "event": "US election",
+      "disposition": "Winner and policy outcomes remain unresolved; attributed forecasts are conditional."
+    }
+  ],
+  "semantic_checks": {
+    "company_news_and_previews_max_days": 7,
+    "company_results_max_days": 14,
+    "macro_and_policy_max_days": 35,
+    "current_date_known_semantic_and_release_exclusions_checked": true,
+    "spot_fx_numeric_quotes_absent": true,
+    "WDC_CMCSA_withheld_levels_not_used": true,
+    "NBIS_missing_history_not_fabricated": true,
+    "SOXX_includes_ASML_and_TSMC": true,
+    "price_changes_not_reported_as_measured_flows_or_ownership": true,
+    "source_attribution_and_Polish_translation_checked": true,
+    "numbers_units_horizons_and_instrument_sessions_checked": true
+  },
+  "validation": {
+    "verify": "PASS; 0 fail, 0 warn",
+    "final_words": 10271,
+    "combined_distinct_citations": 140,
+    "combined_max_citation_uses": 3
+  },
+  "limits": "AI review of all actual current nonretail prose against its frozen own-date headline scope and relevant market-card fields, plus current-date semantic/release exclusions. This is not article-body verification, original publication-vintage certification, or certification of unrevised historical vendor data. Removed a contradictory-source construction rather than resolving it from later reports.",
+  "fatal_or_major_remaining": 0,
+  "feed_sha256": "6f6ca2a9b29250e827d69249555a6c4dd8ab78de72f45fde8d7d5b4d8950c465",
+  "card_sha256": "8a15019cc69c278c29cf963d04a8f9546ebe61060bf309a181b1021f0f49dab1",
+  "full_spec_sha256_at_review": "95e74c081501678a40e97ad31ab10f218cc81dd3159243ffd5fd1e93af7dccb5",
+  "nonretail_content_sha256": "2adfcb6c42ba4f4c014b638a0ec58f7b764c6ebbbd820fb9126622acb0027afb",
+  "retail_content_preserved_exactly": true,
+  "retail_content_sha256_preserved": "e62cb5036ab96a3f687b05c5fe2a213b4a1f2e27262ec829a55029ad0df26d55"
+}

@@ -1,0 +1,163 @@
+{
+  "checked_at_utc": "2026-11-04T10:50:07.595084+00:00",
+  "status": "accepted_for_static_delivery_tooling",
+  "passed": true,
+  "reviewer": "Independent AI delivery tooling reviewer /root/oct_delivery_audit; did not author reports, change implementation, build final artifacts or publish",
+  "dates": [
+    "2024-10-01",
+    "2024-10-02",
+    "2024-10-03",
+    "2024-10-04",
+    "2024-10-07",
+    "2024-10-08",
+    "2024-10-09",
+    "2024-10-10",
+    "2024-10-11",
+    "2024-10-14",
+    "2024-10-15",
+    "2024-10-16",
+    "2024-10-17",
+    "2024-10-18",
+    "2024-10-21",
+    "2024-10-22",
+    "2024-10-23",
+    "2024-10-24",
+    "2024-10-25",
+    "2024-10-28",
+    "2024-10-29",
+    "2024-10-30",
+    "2024-10-31"
+  ],
+  "reviewed_tool_sha256": {
+    "tools/build_artifacts.py": "d8c83de032785462e2247bc6aa853029b436735b2a7abb4e0d0e1de65eed0d9b",
+    "tools/render.py": "93642bd3250e0f45c25e45145960b643d608ade4eb1aac50834f3442d6e0e1af",
+    "tools/build_retail_page.py": "dd88cc8303dcc65d7f3e91c287f0d79cc2f4e873810fc3f7cd85380b938d8e57",
+    "tools/publish.py": "d8339baac30785a74bef26986d1c5375367c01f5cbee727d83815c4ba962c5b0",
+    "tools/verify_delivery.py": "9048728b64ca54508f24f8096b570deef9aaf48e227bff800b13fa9bb2182df9",
+    "tools/finalize_reviews.py": "96f7cd8fa8d96389849ec93fbd5fa440da44b89b9fa9654e678654f7c61a4e37",
+    "tools/merge_retail.py": "a40ff8c174f3cf8c5c70ac7e503f370e1941ca028c581b716bedf1698496943d",
+    "tools/verify.py": "b53b0ddf0956179096fd3d1801e3a91c4f8083190703fdf7fab63072215d9e62",
+    "tools/build_source_inventory.py": "06b981d417cca3ecfade791a48be189c38b0e4c17c94375099664e899fffc0a0"
+  },
+  "shared_retail_gate_sha256": "e8cc16cd2786c6f3364d0074cff391e84e4024b32b20db4da6db515d39a9ce18",
+  "control_sha256": {
+    "AUTHORING.md": "11e7bd4137cad1b91f653c2e08a389b5374951d15b0c370cf51ef31b9a465f51",
+    "BRIEF.md": "476e3ed67b4437b977228d1d63cdb957c9fb66ff97c9a30acc7076b06d51721b",
+    "audit/source_freeze.json": "66a3b4ea96250b1b2f8edc85ed4497d2000ec6801af944c424ad6de21741621f",
+    "audit/independent_source_review.json": "b3e8a2aa7c0eab9c52b44701b8ca738db9de9497f57856c815ed4a9ecca5147d",
+    "audit/independent_market_review.json": "4ca97f6ee327e0d5a94c7617ef4b279863cbbea0f2f058cfad63d7387bbb60ac",
+    "audit/news_replay_inventory.json": "34b79d46699c8030827ed24bdb93796d624970582c51e231a32cf299e6ed0edf",
+    "checks/replay_tool_snapshots.json": "fc0d08ada288647bf94d606346bcfb69176497c01c3c44d5c5fd206b3dac4554",
+    "checks/news_replay_inventory_build.json": "df8e6f4b655cfbd27195926f9e8b590a49fa90a766d550e81107f25491b30e5f"
+  },
+  "scope": [
+    "Static inspection of all nine listed delivery/verification/packaging tools, the shared retail review gate and the accepted source/market receipt schemas.",
+    "All 23 October Monday-Friday dates including exchange holidays; 69 daily HTML/PDF/JSON artifacts plus exactly five collection targets.",
+    "Final component review hashes, same-date source/card binding, merged retail identity, 9500-word minimum, distinct-citation minimum, citation-use warnings, known semantic/timing exclusions and retail chronology gate.",
+    "Source archive selection preserves notes and independent retail drafts, nested review/artifact receipts, exact applicable acquisition/replay tools, physical plan response files, provenance and staged source candidates.",
+    "Online/offline collection destinations, retail template layout and full PDF evidence-ledger expansion plumbing.",
+    "Create-only October object writes, conditional archive-index merge preserving existing hrefs, 79 protected object keys, and read-only final origin/public ZIP/index/Lambda verification logic."
+  ],
+  "checks_performed": {
+    "python_syntax_parse": {
+      "passed": true,
+      "tools": 9
+    },
+    "accepted_source_rows": {
+      "passed": true,
+      "date_count": 23,
+      "all_current_feed_and_card_hashes_match": true,
+      "accepted_acquisition_tool_and_contract_hashes_match": true
+    },
+    "source_inventory_independent_byte_check": {
+      "passed": true,
+      "files_hashed": 16295,
+      "bytes_hashed": 192764087,
+      "physical_plan_requests": 7744,
+      "plan_parsed_and_raw_paths_covered": 15488,
+      "all_23_provenance_unreviewed_ready_feeds_and_cards_covered": true,
+      "staged_candidates_covered": 69,
+      "candidate_manifest_bound": true,
+      "exact_replay_snapshots": 3,
+      "safe_relative_unique_paths": true,
+      "file_list_serialization_hash_and_build_receipt_bindings_match": true,
+      "inventory_sha256": "34b79d46699c8030827ed24bdb93796d624970582c51e231a32cf299e6ed0edf",
+      "raw_rss_semantic_replay_repeated": false
+    },
+    "index_merge_in_memory": {
+      "passed": true,
+      "prior_hrefs_preserved": true,
+      "weekday_links_unique": 23,
+      "idempotent": true,
+      "protected_keys_unique": 79
+    },
+    "offline_collection_in_memory": {
+      "passed": true,
+      "relative_hrefs_match_packaged_member_paths": 25,
+      "report_zip_and_source_zip_downloads_use_canonical_absolute_urls": true,
+      "synthetic_titles_only": true
+    },
+    "delegated_template_browser_checks": {
+      "passed": true,
+      "reviewer": "/root/oct_delivery_audit/offline_collection_check",
+      "synthetic_templates_only": true,
+      "viewport_widths_without_document_overflow": [
+        1440,
+        390,
+        320
+      ],
+      "synthetic_pdf_ledger_entries": 131,
+      "synthetic_pdf_pages": 4,
+      "final_ledger_entry_retained": true,
+      "not_a_final_artifact_visual_review": true
+    },
+    "installed_publication_sdk_model": {
+      "passed": true,
+      "s3_put_object_supports": [
+        "IfMatch",
+        "IfNoneMatch"
+      ],
+      "aws_requests_performed": false
+    }
+  },
+  "findings": [
+    {
+      "id": "delivery-01",
+      "status": "resolved",
+      "file": "tools/build_artifacts.py",
+      "finding": "Offline index originally linked to a relative report ZIP absent from the ZIP members.",
+      "resolution": "Root changed the offline download link to the canonical absolute public report ZIP URL; all relative offline links now match packaged members."
+    },
+    {
+      "id": "delivery-02",
+      "status": "resolved",
+      "file": "tools/publish.py",
+      "finding": "Publisher originally compared detailed accepted-source date rows with a list of date strings, rejecting the actual accepted schema.",
+      "resolution": "Root validates and normalizes the detailed date rows before the exact 23-date comparison."
+    },
+    {
+      "id": "delivery-03",
+      "status": "resolved",
+      "file": "tools/publish.py",
+      "finding": "Publisher needed an explicit current-feed hash comparison with each accepted-source date row.",
+      "resolution": "Root added direct accepted per-date feed SHA-256 binding alongside accepted card hash checks; all 23 currently match."
+    },
+    {
+      "id": "delivery-04",
+      "status": "resolved",
+      "file": "tools/build_artifacts.py / tools/build_source_inventory.py",
+      "finding": "Source archive selection originally omitted physical RSS/cache responses, nested provenance, original unreviewed/staged feeds and independent replay source files because its optional replay inventory did not exist.",
+      "resolution": "The packaging owner created a safe hash-bound 16295-file replay inventory and exact tool snapshots. Every inventory file and required physical plan reference was independently checked. Explicit not-applicable resolver/transport declarations are preserved without inventing tool bytes."
+    }
+  ],
+  "fatal_or_major_remaining": 0,
+  "limitations": [
+    "This is a static tooling review with narrow deterministic and synthetic-template checks. It is not final artifact, editorial, publication or public-delivery certification.",
+    "The complete 23-date artifact build, final PDFs/HTML/JSON/ZIPs, final browser screenshots, publication dry run, AWS writes and final origin/public delivery verification remain root-owned runtime steps.",
+    "No full raw-RSS acquisition/semantic replay or 194978-check source acceptance replay was repeated. Existing source/market acceptance remains subject to its recorded headline/index/vendor-vintage limitations.",
+    "No report prose was authored or substantively adjudicated here. Final component semantic reviews are recorded separately and must continue to bind the final specs.",
+    "Native /Strategies PDF/JSON URLs have the inherited fallback-HTML routing. The reviewed verifier treats the public report ZIP members as canonical PDF/JSON delivery and does not change routing.",
+    "No financial-source/public-delivery HTTP requests, AWS API requests, Lambda invocation/deployment, email, Telegram, Git push, specification edits, CLAUDE file reads or environment-value inspection were performed by this review. The receipt itself is the only intentionally authored review artifact; Python/browser tooling may create ordinary runtime caches.",
+    "Any subsequent change to a reviewed tool invalidates this tool-hash signoff for that tool and requires a narrow recheck."
+  ]
+}

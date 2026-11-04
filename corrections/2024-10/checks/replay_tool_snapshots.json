@@ -1,0 +1,49 @@
+{
+  "bindings": [
+    {
+      "bytes": 12016,
+      "declared_by": "audit/independent_market_review.json:independent_replay_tool",
+      "original_declared_path": "/workspace/work/oct2024/audit_work/review_market.py",
+      "sha256": "78d9647f28662e294f5e4709b30aab9f9f6178b141feed5d28f518b1cec8ad06",
+      "snapshot_path": "tools/replay_snapshots/review_market.py",
+      "status": "verified_exact_byte_snapshot"
+    },
+    {
+      "bytes": 16108,
+      "declared_by": "audit/independent_source_review.json:independent_replay_tool",
+      "original_declared_path": "/workspace/work/oct2024/audit_work/review_sources.py",
+      "sha256": "7e319659780fda0c5f5ba1d8503af9711de1731c1d4ca95a33afddf0065e96ea",
+      "snapshot_path": "tools/replay_snapshots/review_sources.py",
+      "status": "verified_exact_byte_snapshot"
+    },
+    {
+      "bytes": 4898,
+      "declared_by": "audit/news_coverage.json:helper_tool_sha256",
+      "original_declared_path": "tools/digest.py",
+      "sha256": "7a775011744de4be6a820d635f11ca4f9ff3d3ee3562afd76c3e2413dcaa3951",
+      "snapshot_path": "tools/replay_snapshots/digest.py",
+      "status": "verified_exact_byte_snapshot"
+    }
+  ],
+  "limitations": [
+    "Snapshots retain the executed source bytes, including original absolute paths and write behavior; this packaging tool does not execute them.",
+    "The resolver and RSS transport declared not applicable by October coverage have no executed bytes to snapshot.",
+    "Original execution metadata and acceptance receipts remain unchanged; this mapping adds safe archive-relative locations."
+  ],
+  "not_applicable": [
+    {
+      "declared_by": "audit/news_coverage.json:helper_tool_sha256",
+      "declared_value": "not-applicable-october-2024",
+      "original_declared_path": "posthoc/resolve_news_url.py",
+      "status": "not_applicable_no_executed_bytes"
+    },
+    {
+      "declared_by": "audit/news_coverage.json:transport_tool_sha256",
+      "declared_value": "not-applicable-october-2024",
+      "original_declared_path": "tools/import_public_rss.py",
+      "status": "not_applicable_no_executed_bytes"
+    }
+  ],
+  "status": "verified_exact_byte_snapshots_no_tools_executed",
+  "version": "october-2024-replay-tool-snapshots-v1"
+}
