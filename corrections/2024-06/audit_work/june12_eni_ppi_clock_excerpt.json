@@ -1,0 +1,36 @@
+{
+  "date": "2024-06-12",
+  "reviewer": "root own-date source adjudication",
+  "checked_at_utc": "2026-11-09T14:04:04.809389+00:00",
+  "evidence": [
+    {
+      "id": "n1518",
+      "decision": "exclude_completed_priced_sale_aftercut",
+      "primary_url": "https://www.eni.com/en-IT/media/press-release/2024/06/eni-completes-the-sale-of-10-of-saipem-share-capital.html",
+      "tool_reference": "turn337087search0",
+      "display_clock_excerpt": "12 June 2024 - 7:03 AM CEST",
+      "release_utc": "2024-06-12T05:03:00Z",
+      "distinction": "Sale launch on June11 preceded cutoff; completed/priced result is a distinct later announcement. No completed price/proceeds may be imported into June12."
+    },
+    {
+      "id": "n1795",
+      "decision": "conservative_omit_specific_uncertified_article_vintage",
+      "primary_event_url": "https://www.boj.or.jp/en/statistics/pi/cgpi_release/cgpi2405.pdf",
+      "primary_tool_reference": "turn550343search20",
+      "primary_clock_excerpt": "FOR RELEASE 8:50 A.M. Wednesday, June 12, 2024",
+      "event_release_utc": "2024-06-11T23:50:00Z",
+      "event_available_before_cutoff": true,
+      "specific_article_url": "https://www.investing.com/news/economic-indicators/japan-may-wholesale-inflation-jumps-complicates-boj-rate-hike-path-3480450",
+      "specific_tool_reference": "turn947436search0",
+      "specific_display_clock_excerpt": "Published 06/11/2024, 08:05 PM",
+      "display_timezone_certified": false,
+      "current_reuters_metadata_utc": "2024-06-12T02:12:48Z",
+      "distinction": "Actual BOJ price data were available ten minutes before cutoff. This exact expanded Reuters analysis headline has no certified before-cutoff original vintage; its displayed syndication clock appears after cutoff under US Eastern time but no exact first minute is asserted. Omit this retained article conservatively, not the underlying release as late."
+    }
+  ],
+  "source_cutoff_utc": "2024-06-12T00:00:00Z",
+  "limits": [
+    "Only timing/identity metadata retained; no article bodies or additional business/numeric facts enter prose.",
+    "Conservative article-vintage omission is distinct from declaring an underlying early-local release unavailable."
+  ]
+}

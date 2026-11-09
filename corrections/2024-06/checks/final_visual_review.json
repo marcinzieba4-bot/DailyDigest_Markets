@@ -1,0 +1,355 @@
+{
+  "status": "accepted",
+  "review_type": "independent_bounded_actual_artifact_visual_review",
+  "reviewed_at_utc": "2026-11-09T14:40:30.424538+00:00",
+  "fatal_or_major_remaining": 0,
+  "artifact_manifest_path": "checks/artifact_manifest.json",
+  "artifact_manifest_sha256": "0e51b06bdd5a0e0d1fbf13d4db413c8a5f672b1b2d2b4f904b8c1b42e2a64810",
+  "runtime_review_path": "checks/final_artifact_review.json",
+  "runtime_review_sha256": "21788099e5ec71233c4489c45c209d4dbebba92bcb3bf31feed432d1e6e55179",
+  "runtime_acceptance_predicate_independently_checked": true,
+  "runtime_artifacts_reviewed": true,
+  "runtime_totals": {
+    "report_dates": 20,
+    "paragraphs_preserved": 2980,
+    "ledger_headlines_preserved": 1892,
+    "PDF_pages_preserved": 568,
+    "layouts_checked": 44,
+    "monthly_retail_editions_checked": 20,
+    "report_ZIP_members": 63,
+    "frozen_source_members": 45716
+  },
+  "tool_sha256": {
+    "render.py": "17a8778b62dbe289033b053d333c1fc23087478824b6df4f9ffc1a45015001af",
+    "build_artifacts.py": "28206a8ac533cb102f046d3f5ca248460d3a8f44a59c75c1f3492e640dfc3eb0",
+    "build_retail_page.py": "851cb712a0c990fcc596331d30caa74617efed83a72518b71bbe38a8d00b30a1",
+    "build_source_inventory.py": "1abc3fad19e5ca53dc8712e50640c0b1a0d68e374b1962f0979763eef739f5c1",
+    "audit_work/review_final_artifacts.py": "f5f1041b0de96e9e08db285b867901e0a9caf28add269d4f0386be414e0aa6b1"
+  },
+  "capture_metadata_path": "work/final_visual_review/capture_metadata.json",
+  "capture_metadata_sha256": "51d0998c75534a24c96bd7dc25aea201cf5e9be14573f0506111eae3bc76435a",
+  "actual_HTML_viewports_inspected": 9,
+  "actual_native_PDF_pages_inspected": 7,
+  "visually_sampled_report_dates": [
+    "2024-06-03",
+    "2024-06-19",
+    "2024-06-28"
+  ],
+  "observed_presentation_defects": [],
+  "captures": [
+    {
+      "name": "desktop_2024-06-03_top",
+      "kind": "actual_HTML_viewport",
+      "source": "html/2024-06-03.html",
+      "source_sha256": "48359c045fa5be779cfa6f55e81e4bfa129e54530a32d26bd7b52f435638f21a",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "selector": null,
+      "measurement": {
+        "width": 1440,
+        "scroll": 1440,
+        "scrollY": 0
+      },
+      "image_path": "work/final_visual_review/desktop_2024-06-03_top.png",
+      "image_sha256": "5cf3c2429340a2d7f56ea1ce1a3c355472a1ecd32b7e68647f789dfa56aff22c",
+      "visually_inspected": true,
+      "presentation_result": "passed",
+      "observation": "Wide report heading, date, cutoff, navigation and macro card are legible, spaced and contained."
+    },
+    {
+      "name": "desktop_2024-06-03_retail",
+      "kind": "actual_HTML_viewport",
+      "source": "html/2024-06-03.html",
+      "source_sha256": "48359c045fa5be779cfa6f55e81e4bfa129e54530a32d26bd7b52f435638f21a",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "selector": "#retail",
+      "measurement": {
+        "width": 1440,
+        "scroll": 1440,
+        "scrollY": 20760
+      },
+      "image_path": "work/final_visual_review/desktop_2024-06-03_retail.png",
+      "image_sha256": "534e7a245d0a3615cddb651bbe1abdecc822e57490e70726dbb00e0786a5a248",
+      "visually_inspected": true,
+      "presentation_result": "passed",
+      "observation": "Retail heading and orange lead card are prominent; six-part lead labels, prose and citation markers are legible in the visible portion."
+    },
+    {
+      "name": "mobile_2024-06-19_top",
+      "kind": "actual_HTML_viewport",
+      "source": "html/2024-06-19.html",
+      "source_sha256": "6ebb2577113bc7daa699ee8dad093c568a4ec16816702e380ae54827507992e2",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "selector": null,
+      "measurement": {
+        "width": 390,
+        "scroll": 390,
+        "scrollY": 0
+      },
+      "image_path": "work/final_visual_review/mobile_2024-06-19_top.png",
+      "image_sha256": "9bc170fa217022b9eb35b2a83dff19a9d106483cb0f26d465083b04216f8a32f",
+      "visually_inspected": true,
+      "presentation_result": "passed",
+      "observation": "Report title, holiday-weekday date, cutoff, wrapped navigation and macro card fit the 390px viewport."
+    },
+    {
+      "name": "mobile_2024-06-19_retail",
+      "kind": "actual_HTML_viewport",
+      "source": "html/2024-06-19.html",
+      "source_sha256": "6ebb2577113bc7daa699ee8dad093c568a4ec16816702e380ae54827507992e2",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "selector": "#retail",
+      "measurement": {
+        "width": 390,
+        "scroll": 390,
+        "scrollY": 45672
+      },
+      "image_path": "work/final_visual_review/mobile_2024-06-19_retail.png",
+      "image_sha256": "bc6fe4e4a573b6641cb7809696905f4ede052aa9ce7e16e9507491bb25fd64cc",
+      "visually_inspected": true,
+      "presentation_result": "passed",
+      "observation": "Retail heading, introduction and lead title wrap cleanly; lead prose and citations remain legible at 390px."
+    },
+    {
+      "name": "desktop_2024-06-28_retail",
+      "kind": "actual_HTML_viewport",
+      "source": "html/2024-06-28.html",
+      "source_sha256": "d1cc2e31876f8ffc0cb7451d204ec3d215a7540a5e176fd45a6614948f35a009",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "selector": "#retail",
+      "measurement": {
+        "width": 1440,
+        "scroll": 1440,
+        "scrollY": 20570
+      },
+      "image_path": "work/final_visual_review/desktop_2024-06-28_retail.png",
+      "image_sha256": "aab6f270e0c1300203e0e899a4758dd9b5ff6e05eee7161f229fc31b0113af55",
+      "visually_inspected": true,
+      "presentation_result": "passed",
+      "observation": "Final-date retail heading and lead card retain the wide hierarchy and readable paragraphs."
+    },
+    {
+      "name": "mobile_collection_index",
+      "kind": "actual_HTML_viewport",
+      "source": "collection/2024-06.html",
+      "source_sha256": "401772349ac99d6c59ddf1d906e0c00691247dcaa1be527379c5c3e340d0b20b",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "selector": null,
+      "measurement": {
+        "width": 390,
+        "scroll": 390,
+        "scrollY": 0
+      },
+      "image_path": "work/final_visual_review/mobile_collection_index.png",
+      "image_sha256": "fad93ab539de30bbe6c598b0371343fb9d25bcbe06065a7c9926bdd1040522a7",
+      "visually_inspected": true,
+      "presentation_result": "passed",
+      "observation": "Collection title, description and four download/navigation buttons wrap and fit at 390px."
+    },
+    {
+      "name": "desktop_retail_collection",
+      "kind": "actual_HTML_viewport",
+      "source": "collection/What_Retail_Is_Playing_2024-06.html",
+      "source_sha256": "89e399fb8eac1099412b271e5554341bfda5ef82a3efb5a89ccac774d4d92196",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "selector": null,
+      "measurement": {
+        "width": 1440,
+        "scroll": 1440,
+        "scrollY": 0
+      },
+      "image_path": "work/final_visual_review/desktop_retail_collection.png",
+      "image_sha256": "72376231e10b1bd0c66ed68b4434d63b6e75fd3ea280f8ff8c010dd6302d51b0",
+      "visually_inspected": true,
+      "presentation_result": "passed",
+      "observation": "Monthly retail heading, dated navigation grid, first dated introduction and lead card have clear hierarchy."
+    },
+    {
+      "name": "mobile_retail_collection_2024-06-28",
+      "kind": "actual_HTML_viewport",
+      "source": "collection/What_Retail_Is_Playing_2024-06.html",
+      "source_sha256": "89e399fb8eac1099412b271e5554341bfda5ef82a3efb5a89ccac774d4d92196",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "selector": "section[id=\"2024-06-28\"]",
+      "measurement": {
+        "width": 390,
+        "scroll": 390,
+        "scrollY": 139231
+      },
+      "image_path": "work/final_visual_review/mobile_retail_collection_2024-06-28.png",
+      "image_sha256": "ca66360bd1ac260254260d1f6989f4f357ae91c3578f1a9ef2b4c2cced9fd71e",
+      "visually_inspected": true,
+      "presentation_result": "passed",
+      "observation": "Final-date cutoff, introduction, long lead title, part label and cited prose wrap within the 390px viewport."
+    },
+    {
+      "name": "pdf_2024-06-03_page_01",
+      "kind": "actual_native_PDF_page_raster",
+      "source": "pdf/2024-06-03_Market_Intelligence.pdf",
+      "source_sha256": "30ed705a97cc79f443ca913edfd21ba08d4cd68ae3c046d322281fa6e854782b",
+      "page_number": 1,
+      "total_pages": 29,
+      "image_path": "work/final_visual_review/pdf_2024-06-03_page_01.png",
+      "image_sha256": "851057b704d4c5f604683fcc20bb5451e00a8a8021b301523cece7401fb6d171",
+      "visually_inspected": true,
+      "presentation_result": "passed",
+      "observation": "Printed title/date/cutoff and macro card are readable, with clear margins and separated footer."
+    },
+    {
+      "name": "pdf_2024-06-03_page_22",
+      "kind": "actual_native_PDF_page_raster",
+      "source": "pdf/2024-06-03_Market_Intelligence.pdf",
+      "source_sha256": "30ed705a97cc79f443ca913edfd21ba08d4cd68ae3c046d322281fa6e854782b",
+      "page_number": 22,
+      "total_pages": 29,
+      "image_path": "work/final_visual_review/pdf_2024-06-03_page_22.png",
+      "image_sha256": "102510780569bde2f37a309f806186e511f85e01cea6184b85e8fbdcc0b826bd",
+      "visually_inspected": true,
+      "presentation_result": "passed",
+      "observation": "Retail section boundary and orange heading are prominent; preceding card continuation and retail introduction remain readable."
+    },
+    {
+      "name": "pdf_2024-06-03_page_25",
+      "kind": "actual_native_PDF_page_raster",
+      "source": "pdf/2024-06-03_Market_Intelligence.pdf",
+      "source_sha256": "30ed705a97cc79f443ca913edfd21ba08d4cd68ae3c046d322281fa6e854782b",
+      "page_number": 25,
+      "total_pages": 29,
+      "image_path": "work/final_visual_review/pdf_2024-06-03_page_25.png",
+      "image_sha256": "2d46684d0aae34cb2898479d8135475174f8ab3c43da1257d6c9efa3e8f09b99",
+      "visually_inspected": true,
+      "presentation_result": "passed",
+      "observation": "Retail continuation, market-method note and expanded dated ledger boundary are legible without overlap."
+    },
+    {
+      "name": "pdf_2024-06-03_page_29",
+      "kind": "actual_native_PDF_page_raster",
+      "source": "pdf/2024-06-03_Market_Intelligence.pdf",
+      "source_sha256": "30ed705a97cc79f443ca913edfd21ba08d4cd68ae3c046d322281fa6e854782b",
+      "page_number": 29,
+      "total_pages": 29,
+      "image_path": "work/final_visual_review/pdf_2024-06-03_page_29.png",
+      "image_sha256": "712a98adaabb5ed9a4322e94f623950e2ca0c78511c58d5ac0ac8fc64805747c",
+      "visually_inspected": true,
+      "presentation_result": "passed",
+      "observation": "Final numbered source-ledger lines and footer are readable and separated."
+    },
+    {
+      "name": "pdf_2024-06-19_page_22",
+      "kind": "actual_native_PDF_page_raster",
+      "source": "pdf/2024-06-19_Market_Intelligence.pdf",
+      "source_sha256": "7ca254a2aff02f150ab1cc8fbe457ad6f08abd3c2111dd6aed668e4e2cbb2fb5",
+      "page_number": 22,
+      "total_pages": 28,
+      "image_path": "work/final_visual_review/pdf_2024-06-19_page_22.png",
+      "image_sha256": "37e3c3fe365379b00e9f0441482c14d387336314f141e59b1e7f3a9128fb09c7",
+      "visually_inspected": true,
+      "presentation_result": "passed",
+      "observation": "Holiday-weekday retail boundary and card text print legibly, without clipping or footer collision."
+    },
+    {
+      "name": "pdf_2024-06-28_page_23",
+      "kind": "actual_native_PDF_page_raster",
+      "source": "pdf/2024-06-28_Market_Intelligence.pdf",
+      "source_sha256": "186381041cdcf4dbf2ea529c5d3085dd780e9b38c8e6cbeac080d2b5e8409e48",
+      "page_number": 23,
+      "total_pages": 29,
+      "image_path": "work/final_visual_review/pdf_2024-06-28_page_23.png",
+      "image_sha256": "69223087b02ac1239ba0aafdfe8e1d09af4b3d34c10f5f0ad3773b8ed58fc83b",
+      "visually_inspected": true,
+      "presentation_result": "passed",
+      "observation": "Final-date retail heading, introduction and lead card print with clear labels, citations and footer."
+    },
+    {
+      "name": "pdf_2024-06-28_page_29",
+      "kind": "actual_native_PDF_page_raster",
+      "source": "pdf/2024-06-28_Market_Intelligence.pdf",
+      "source_sha256": "186381041cdcf4dbf2ea529c5d3085dd780e9b38c8e6cbeac080d2b5e8409e48",
+      "page_number": 29,
+      "total_pages": 29,
+      "image_path": "work/final_visual_review/pdf_2024-06-28_page_29.png",
+      "image_sha256": "4b708160d3fe77fd86959b76ae8eeddf3a7a0be766b76b30d3393fe374c53099",
+      "visually_inspected": true,
+      "presentation_result": "passed",
+      "observation": "Final ledger page preserves readable numbered source lines and separated footer."
+    },
+    {
+      "name": "desktop_collection_index",
+      "kind": "actual_HTML_viewport",
+      "source": "collection/2024-06.html",
+      "source_sha256": "401772349ac99d6c59ddf1d906e0c00691247dcaa1be527379c5c3e340d0b20b",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "selector": null,
+      "measurement": {
+        "width": 1440,
+        "scroll": 1440,
+        "scrollY": 0
+      },
+      "image_path": "work/final_visual_review/desktop_collection_index.png",
+      "image_sha256": "474aaafd6c04563b7189d82d33158c0eb74412ae403fb11f7a695350404502b7",
+      "visually_inspected": true,
+      "presentation_result": "passed",
+      "observation": "Desktop collection heading, description, four download/navigation buttons and three-column edition cards are legible, separated and contained at1440px."
+    }
+  ],
+  "additional_independent_PDF_sample_review": {
+    "agent": "receipt_contract",
+    "actual_pages": [
+      {
+        "date": "2024-06-03",
+        "pages": [
+          1,
+          22,
+          29
+        ]
+      },
+      {
+        "date": "2024-06-19",
+        "pages": [
+          22
+        ]
+      },
+      {
+        "date": "2024-06-28",
+        "pages": [
+          29
+        ]
+      }
+    ],
+    "result": "passed",
+    "observations": "Legible headings, body, retail styling, ledger lines and separated footers; no visible overlap, clipping or glyph corruption in this bounded sample."
+  },
+  "limits": [
+    "Visual inspection is limited to the nine listed HTML viewports and seven listed native PDF pages; it is not visual inspection of every page.",
+    "The separate full default runtime audit preserved every saved paragraph and full dated ledger across all20 reports, every archive member and all44 layouts.",
+    "This review covers presentation and artifact engineering. Editorial acceptance and remote delivery verification are separate.",
+    "Only review evidence under work/final_visual_review and the auditor-produced checks/final_artifact_review.json were written by this review; report content, tools, source inputs, ZIPs and manifest were not modified.",
+    "No Git, S3, Lambda, external messaging or publication operation was performed."
+  ]
+}

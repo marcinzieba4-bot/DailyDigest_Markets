@@ -1,0 +1,185 @@
+{
+  "date": "2024-06-13",
+  "scope": "AUTHOR fragment only: complete XLP and SOXX replacement objects; current nonretail, spec and review receipts untouched.",
+  "fragment_path": "work/june13_sector_repair.json",
+  "fragment_sha256": "5c3f46a19f69f8f0bb0994295ff25fb2b85d884cc0b66ebdfd802f932d517fce",
+  "inputs_read": {
+    "structural": [
+      "AUTHORING.md",
+      "BRIEF.md",
+      "tools/verify.py (block_ranges function and schema/range locations)"
+    ],
+    "own_date": [
+      "feeds/2024-06-13.json.gz",
+      "cards/2024-06-13.json",
+      "exclusions/2024-06-13.json",
+      "audit/news_frozen_2024-06-13.json",
+      "audit/news_ready_2024-06-13.json"
+    ],
+    "other_date_factual_files_read": [],
+    "own_current_or_old_drafts_read": []
+  },
+  "input_sha256": {
+    "feeds/2024-06-13.json.gz": "26028cbcc1a1a0c7fd2649a23dbcedfbb50d88886fe2c980c4908019dfdc7209",
+    "cards/2024-06-13.json": "8a96f7ffbb123aab75fb9280643f3bc25d718cb30546033a13de5c16de4ed7eb",
+    "exclusions/2024-06-13.json": "6f31287bd866f9107edcd4d2e2d9e14aa5c58d60fb954dc05ae8608adf9f696e",
+    "AUTHORING.md": "409e95f04b8c0dbc8d0b719e51aea0279c7df1a0bd2227f4d3951c605543928e",
+    "BRIEF.md": "409e95f04b8c0dbc8d0b719e51aea0279c7df1a0bd2227f4d3951c605543928e"
+  },
+  "actual_checks": {
+    "exact_fragment_sector_keys": [
+      "XLP",
+      "SOXX"
+    ],
+    "exact_sector_object_keys": [
+      "key",
+      "stance",
+      "parts"
+    ],
+    "exact_labels": [
+      "Narrative",
+      "Reported",
+      "EPS Upside Watch",
+      "⚡ Breaking Convention"
+    ],
+    "word_count_method": "Imported tools/verify.py block_ranges; citations stripped and content strings split; labels excluded.",
+    "block_ranges": [
+      {
+        "section": "sectors",
+        "block": "XLP",
+        "words": 172,
+        "minimum": 150,
+        "maximum": 200,
+        "in_range": true
+      },
+      {
+        "section": "sectors",
+        "block": "SOXX",
+        "words": 176,
+        "minimum": 150,
+        "maximum": 200,
+        "in_range": true
+      }
+    ],
+    "own_feed_hash_matches_frozen_receipt": true,
+    "all_cited_ids_present_in_own_frozen_feed": true,
+    "all_cited_company_news_within_seven_days_and_strictly_before_2024_06_13_00UTC": true,
+    "all_cited_ids_absent_from_own_subsequent_exclusions": true,
+    "maximum_citation_uses_within_fragment": 1,
+    "royalty_4_5_pct_matches_n1200_title": true,
+    "ASML_card_fields_checked": {
+      "name": "ASML (ASML, US line)",
+      "session": "2024-06-12",
+      "close": "1,068.86",
+      "currency": "USD",
+      "chg_1s_pct": 3.17,
+      "chg_20s_pct": 16.81
+    },
+    "TSM_card_fields_checked": {
+      "name": "TSMC (TSM, US ADR)",
+      "session": "2024-06-12",
+      "close": "172.98",
+      "currency": "USD",
+      "chg_1s_pct": 4.39,
+      "chg_20s_pct": 13.84
+    },
+    "quoted_SOXX_market_fields": [
+      "ASML close/currency/session/one-session return",
+      "TSM close/currency/session/one-session return"
+    ],
+    "no_numeric_spot_FX": true,
+    "no_Starbucks_in_XLP": true,
+    "full_report_verifier_not_run": "This is a two-sector fragment; independent reviewer owns merge and full report validation."
+  },
+  "source_checks": [
+    {
+      "id": "n0661",
+      "published_at": "2024-06-07T07:00:00+00:00",
+      "src": "Barron's",
+      "title": "Walmart and Costco Soar Even as Consumer-Staples Stocks Lag - Barron's",
+      "cat": "news",
+      "semantic_window": "company news, seven days",
+      "within_window_and_before_cutoff": true,
+      "uses_in_fragment": 1
+    },
+    {
+      "id": "n0960",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "src": "Reuters",
+      "title": "Eindhoven city council votes in favor of ASML development plan - Reuters",
+      "cat": "news",
+      "semantic_window": "company news, seven days",
+      "within_window_and_before_cutoff": true,
+      "uses_in_fragment": 1
+    },
+    {
+      "id": "n1200",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "src": "Livemint",
+      "title": "Nestle India to pay royalty to Swiss parent at current rate of 4.5% - Livemint",
+      "cat": "news",
+      "semantic_window": "company news, seven days",
+      "within_window_and_before_cutoff": true,
+      "uses_in_fragment": 1
+    },
+    {
+      "id": "n1201",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "src": "Nestlé Global",
+      "title": "Nestlé meets growing air fryer demand with range of innovative meal solutions - Nestlé Global",
+      "cat": "news",
+      "semantic_window": "company news, seven days",
+      "within_window_and_before_cutoff": true,
+      "uses_in_fragment": 1
+    },
+    {
+      "id": "n1234",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "src": "Taipei Times",
+      "title": "TSMC’s Europe subsidiary to hire nearly 2,000 employees - Taipei Times",
+      "cat": "news",
+      "semantic_window": "company news, seven days",
+      "within_window_and_before_cutoff": true,
+      "uses_in_fragment": 1
+    },
+    {
+      "id": "n1391",
+      "published_at": "2024-06-06T21:14:57+00:00",
+      "src": "Quartz",
+      "title": "Costco is getting into the ad business to keep up with Walmart and Target - Quartz",
+      "cat": "news",
+      "semantic_window": "company news, seven days",
+      "within_window_and_before_cutoff": true,
+      "uses_in_fragment": 1
+    },
+    {
+      "id": "n1443",
+      "published_at": "2024-06-10T07:00:00+00:00",
+      "src": "CIO Dive",
+      "title": "Microsoft, playing the long game, invests billions globally to expand Azure empire - CIO Dive",
+      "cat": "news",
+      "semantic_window": "company news, seven days",
+      "within_window_and_before_cutoff": true,
+      "uses_in_fragment": 1
+    },
+    {
+      "id": "n2234",
+      "published_at": "2024-06-10T07:00:00+00:00",
+      "src": "CNBC",
+      "title": "Taiwan's energy crunch could 'throw a wrench' into the global semiconductor industry - CNBC",
+      "cat": "news",
+      "semantic_window": "company news, seven days",
+      "within_window_and_before_cutoff": true,
+      "uses_in_fragment": 1
+    }
+  ],
+  "claim_boundaries": {
+    "XLP": "Walmart/Costco divergence, Nestlé product initiative, current Nestlé India royalty and Costco ad business are attributed headline facts. Traffic, promotional pressure, advertising operating leverage, demand and margin invalidation are mechanisms/conditions, not observed quarterly results or new forecasts. The royalty sentence separates subsidiary expense from underlying group earnings; no royalty base or consolidated EPS effect is invented.",
+    "SOXX": "ASML development approval is reported as completed; TSMC Europe hiring remains planned. Microsoft global investment is used as a conditional chip-demand mechanism; no direct Microsoft supplier/customer relationship with ASML or TSMC is asserted. Taiwan energy risk retains could language. Equipment versus foundry economics and factory/customer/listing geography are qualitative comparisons; no customer names, revenue shares, order totals, capacity numbers or margin forecasts are invented."
+  },
+  "boundary_handling": {
+    "n0333": "Omitted after reviewer warned that normalized June 6 07UTC at an Asian outlet could cross the seven-day lower bound under original publisher time. No original clock adjudication attempted.",
+    "n1357": "Not used; Costco advertising is supported instead by own Quartz n1391, which has an explicit 2024-06-06T21:14:57+00:00 timestamp."
+  },
+  "handoff": "Independent reviewer should check the replacement objects against own-date evidence and merge only these two sectors, then validate the full current artifact and report-wide citation totals."
+}

@@ -1,0 +1,252 @@
+{
+  "date": "2024-06-21",
+  "reviewer": "/root/june_nonretail_b",
+  "status": "accepted",
+  "before_file": "/workspace/work/june2024/audit/review_history/nonretail_2024-06-21_before_186de93e540e204a2a1ba19786380c97d642480ff9d19b746f93002a9405c6a6.json",
+  "before_draft_sha256": "186de93e540e204a2a1ba19786380c97d642480ff9d19b746f93002a9405c6a6",
+  "named_minor_fixes": [
+    {
+      "path": [
+        "geo",
+        5,
+        "parts",
+        1,
+        1
+      ],
+      "old": "Keep currency levels out of the trade thesis and assess transmission through actual imported costs, export receipts and financing requirements.",
+      "new": "Assess company exposure through imported costs, export receipts and financing requirements, since these channels can respond differently to the same currency direction.",
+      "rationale": "Replace author restriction with ordinary company-level currency transmission; no numeric FX inserted."
+    },
+    {
+      "path": [
+        "geo",
+        5,
+        "parts",
+        5,
+        1
+      ],
+      "old": "Preserve those statuses and distinguish national need from a particular company's funded order book.",
+      "new": "Prospective deals, planned national spending and reported procurement priorities have different cash consequences for any particular supplier.",
+      "rationale": "Preserve prospective/attributed status without author-facing instruction."
+    },
+    {
+      "path": [
+        "sectors",
+        7,
+        "parts",
+        0,
+        1
+      ],
+      "old": "Gilead's long-acting HIV treatment",
+      "new": "Gilead's long-acting HIV drug",
+      "rationale": "Use exact drug description from n1040; the headline does not establish a treatment indication for the study."
+    },
+    {
+      "path": [
+        "catalysts",
+        1,
+        "parts",
+        1,
+        1
+      ],
+      "old": "a viable treatment offering",
+      "new": "a viable commercial offering",
+      "rationale": "Avoid importing an unsupported treatment-versus-prevention indication from a headline that only names an HIV drug study."
+    },
+    {
+      "path": [
+        "catalysts",
+        1,
+        "parts",
+        0,
+        1
+      ],
+      "old": "with approval, access and commercial execution remaining distinct future stages rather than already completed earnings.",
+      "new": "while any required regulatory, access and commercial steps remain distinct from a study outcome or already realized earnings.",
+      "rationale": "Do not infer the drug’s entire approval status from a study headline; keep subsequent steps conditional."
+    },
+    {
+      "path": [
+        "sectors",
+        3,
+        "parts",
+        0,
+        1
+      ],
+      "old": "Reuters reports BP buying Bunge's interest in their Brazilian biofuels venture.",
+      "new": "Reuters reports BP's planned buyout of Bunge's interest in their Brazilian biofuels venture.",
+      "rationale": "Preserve announced-deal stage from title to buy out; no completed ownership implied."
+    },
+    {
+      "path": [
+        "catalysts",
+        5,
+        "parts",
+        0,
+        1
+      ],
+      "old": "Reuters reports BP buying Bunge's stake in their Brazilian biofuels venture. The catalyst increases ownership in a specific business,",
+      "new": "Reuters reports BP's planned purchase of Bunge's stake in their Brazilian biofuels venture. The announced deal would increase ownership in a specific business,",
+      "rationale": "Preserve future ownership transfer rather than imply acquisition has closed."
+    },
+    {
+      "path": [
+        "sectors",
+        12,
+        "parts",
+        1,
+        1
+      ],
+      "old": "Use comparable returns across share-unit changes.",
+      "new": "The sharp session decline leaves substantial prior appreciation and a demanding operating hurdle.",
+      "rationale": "Keep exact comparable figures while replacing author-method instruction with investment interpretation."
+    },
+    {
+      "path": [
+        "crypto",
+        "parts",
+        1,
+        1
+      ],
+      "old": "Retain the company's attribution and the inquiry's limited scope rather than extending it to every token or product.",
+      "new": "Consensys’s account concerns that inquiry, leaving the status of other tokens and products as separate regulatory questions.",
+      "rationale": "State company attribution and limited legal scope directly."
+    },
+    {
+      "path": [
+        "crypto",
+        "parts",
+        2,
+        1
+      ],
+      "old": "Strategy's announcement of a completed convertible-note offering",
+      "new": "MicroStrategy's announcement of a completed convertible-note offering",
+      "rationale": "Use the issuer name in the own-date frozen headline; source metadata label Strategy is not the issuer identity stated by that title."
+    },
+    {
+      "path": [
+        "flows",
+        "parts",
+        0,
+        1
+      ],
+      "old": "Reuters reports the KKR-SingTel investment in data centers,",
+      "new": "Reuters reports the planned KKR-SingTel investment in data centers,",
+      "rationale": "Retain to-invest stage in title n0743; no completed funding or buildout asserted."
+    },
+    {
+      "path": [
+        "flows",
+        "parts",
+        2,
+        1
+      ],
+      "old": "while Reuters describes Citigroup facing a regulatory concern involving its living will.",
+      "new": "while Reuters, citing a source, describes Citigroup facing a regulatory concern involving its living will.",
+      "rationale": "Restore anonymous-source qualification from frozen n0531."
+    },
+    {
+      "path": [
+        "flows",
+        "parts",
+        3,
+        1
+      ],
+      "old": "[[n0678]] [[n0195]] [[n0571]]",
+      "new": "[[n0678]] [[n0195]] [[n0571]] [[n1515]]",
+      "rationale": "Add same-part support for postponed Golden Goose IPO contrast."
+    },
+    {
+      "path": [
+        "anticipatory",
+        0,
+        "parts",
+        0,
+        1
+      ],
+      "old": "[[n0131]]",
+      "new": "[[n0131]] [[n1458]]",
+      "rationale": "Add local full-title support for EU budget discipline alongside election process."
+    },
+    {
+      "path": [
+        "anticipatory",
+        2,
+        "parts",
+        0,
+        1
+      ],
+      "old": "[[n1644]]",
+      "new": "[[n1644]] [[n1661]]",
+      "rationale": "Add local source for slower demand-led inflation; actual June21 08:30JST release is June20 23:30UTC before cutoff."
+    },
+    {
+      "path": [
+        "underowned",
+        0,
+        "parts",
+        1,
+        1
+      ],
+      "old": "ACN offers project, staffing and execution exposure; XLK has a different technology mix.",
+      "new": "Accenture offers company execution exposure; XLK, the technology sector ETF quoted in USD, has a broader business mix.",
+      "rationale": "Make verified own-card instrument/wrapper/currency explicit without fabricating an ACN quote or exact project role."
+    },
+    {
+      "path": [
+        "underowned",
+        1,
+        "parts",
+        1,
+        1
+      ],
+      "old": "DANOY offers company execution risk; XLP provides a wider staples mix.",
+      "new": "XLP, the consumer-staples sector ETF quoted in USD, provides a broad instrument for the theme with a wider business mix.",
+      "rationale": "Use explicit own-card ETF rather than imply an unprovided DANOY ADR wrapper; thematic business risk remains."
+    },
+    {
+      "path": [
+        "underowned",
+        3,
+        "parts",
+        1,
+        1
+      ],
+      "old": "HTZ brings company financing, fleet and customer-demand exposure.",
+      "new": "Hertz brings company financing and customer-demand exposure; XLY, the consumer-discretionary sector ETF quoted in USD, provides a broader instrument with a different business mix.",
+      "rationale": "Verify named own-card instrument for fourth theme; do not assert the ETF holds Hertz or supply an unprovided HTZ quote."
+    },
+    {
+      "path": [
+        "geo",
+        5,
+        "parts",
+        4,
+        1
+      ],
+      "old": "Governance and market structure add separate risks. wnp.pl reports the largest Polish bank's supervisory board withdrawing approval of the former management's performance. Money.pl reports Energa seeking to withdraw its delisting application, and Reuters reports NatWest closing its Polish business. These developments concern different institutions and decisions. A governance review does not establish an immediate operating improvement, a listing request remains subject to process, and one employer's exit should not be generalized across all finance roles. Investors should identify the actual commercial consequences and avoid turning every personnel or regulatory development into a universal market signal. [[n1957]] [[n1889]] [[n1680]]",
+      "new": "Security demand remains substantial, but implementation and allocation matter. Reuters reports Poland likely to sign another arms agreement with South Korea, attributing the expectation to a minister. That is a prospective deal rather than a completed contract. Notes From Poland describes Poland's expected position as NATO's largest defense spender relative to GDP, while Money.pl reports media accounts of Ukraine receiving priority for Patriot deliveries. Prospective deals, planned national spending and reported procurement priorities have different cash consequences for any particular supplier. Defense activity can support suppliers while also increasing the importance of procurement discipline, labor availability and a sustainable fiscal plan. A larger requirement can create a larger delivery burden at the same time. [[n1688]] [[n1682]] [[n1951]] The better suppliers should be able to identify the resources required to fulfill actual commitments. Hiring, components and project management can become constraints when demand rises quickly. Investors should prefer commercially disciplined execution to an assumption that strategic importance guarantees favorable terms. More spending can increase opportunity while also raising the cost of securing the labor and inputs needed to deliver.",
+      "rationale": "Place existing security/procurement discussion under Geopolitics & Security without changing facts."
+    },
+    {
+      "path": [
+        "geo",
+        5,
+        "parts",
+        5,
+        1
+      ],
+      "old": "Security demand remains substantial, but implementation and allocation matter. Reuters reports Poland likely to sign another arms agreement with South Korea, attributing the expectation to a minister. That is a prospective deal rather than a completed contract. Notes From Poland describes Poland's expected position as NATO's largest defense spender relative to GDP, while Money.pl reports media accounts of Ukraine receiving priority for Patriot deliveries. Prospective deals, planned national spending and reported procurement priorities have different cash consequences for any particular supplier. Defense activity can support suppliers while also increasing the importance of procurement discipline, labor availability and a sustainable fiscal plan. A larger requirement can create a larger delivery burden at the same time. [[n1688]] [[n1682]] [[n1951]] The better suppliers should be able to identify the resources required to fulfill actual commitments. Hiring, components and project management can become constraints when demand rises quickly. Investors should prefer commercially disciplined execution to an assumption that strategic importance guarantees favorable terms. More spending can increase opportunity while also raising the cost of securing the labor and inputs needed to deliver.",
+      "new": "Governance and market structure add separate risks. wnp.pl reports the largest Polish bank's supervisory board withdrawing approval of the former management's performance. Money.pl reports Energa seeking to withdraw its delisting application, and Reuters reports NatWest closing its Polish business. These developments concern different institutions and decisions. A governance review does not establish an immediate operating improvement, a listing request remains subject to process, and one employer's exit should not be generalized across all finance roles. Investors should identify the actual commercial consequences and avoid turning every personnel or regulatory development into a universal market signal. [[n1957]] [[n1889]] [[n1680]]",
+      "rationale": "Place existing governance/listing-status update under New / Most Important; claims unchanged."
+    }
+  ],
+  "review_notes": [
+    "All36 blocks/136parts and every final cited full title reviewed; exact Treasury yields/spread/twenty-observation changes and all quoted market instrument/session/horizon/unit fields match own card.",
+    "Controlled exclusion n2174 is unused. Current exclusion hash is bound; no rolling technicals content or presumed exact late clock is used.",
+    "Japan inflation release June21 08:30JST equals June20 23:30UTC and is eligible despite indexed June20 date; Swiss/BoE June20 decisions and Australia ETF June20 launch are now completed before cutoff.",
+    "Corrected Gilead indication wording to exact drug-study scope; BP buyout remains announced/pending ownership transfer; MicroStrategy issuer name follows own frozen headline rather than provider metadata brand.",
+    "All four underowned parts name verified own-card instruments with appropriate exposure: XLK (technology ETF USD), XLP (staples ETF USD), XLI, XLY (discretionary ETF USD). Company cases remain separate; no undocumented issuer role or ETF holding is claimed.",
+    "Beforebytes and precise named rationales are archived in audit/review_history. No source/feed/exclusion registry mutation."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+ "ticker": "MC.PA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MC.PA?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "718165903d99b49cfd08539910037e467dfb143edaa85b1e0cb33b6394c8aa52",
+   "fetched_at_utc": "2026-11-09T09:47:41.420241+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MC.PA?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "7ebd44f223b97eb9a5418533511e305d0aadb565f11cfbfe87842d330316b622",
+   "fetched_at_utc": "2026-11-09T09:47:41.794561+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/MC.PA?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "718165903d99b49cfd08539910037e467dfb143edaa85b1e0cb33b6394c8aa52",
+    "fetched_at_utc": "2026-11-09T09:47:41.420241+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "EUR",
+    "symbol": "MC.PA",
+    "exchangeName": "PAR",
+    "fullExchangeName": "Paris",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 946886400,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Paris"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/MC.PA?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "7ebd44f223b97eb9a5418533511e305d0aadb565f11cfbfe87842d330316b622",
+    "fetched_at_utc": "2026-11-09T09:47:41.794561+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "EUR",
+    "symbol": "MC.PA",
+    "exchangeName": "PAR",
+    "fullExchangeName": "Paris",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 946886400,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Paris"
+   },
+   "discarded_price_observations": 605,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

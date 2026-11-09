@@ -1,0 +1,104 @@
+{
+ "ticker": "ALE.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALE.WA?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "fafae94240e0682500da49b172da2bd69043357126f834181a0f3ad0462e5a5c",
+   "fetched_at_utc": "2026-11-09T09:47:39.447332+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALE.WA?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "e0d49fecf7ebb1f44c28e23d04039fc42cc2fded0e0aa6f974e1bf227aad9925",
+   "fetched_at_utc": "2026-11-09T09:47:39.643880+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALE.WA?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "fafae94240e0682500da49b172da2bd69043357126f834181a0f3ad0462e5a5c",
+    "fetched_at_utc": "2026-11-09T09:47:39.447332+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "PLN",
+    "symbol": "ALE.WA",
+    "exchangeName": "WSE",
+    "fullExchangeName": "Warsaw",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1602572400,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Warsaw"
+   },
+   "discarded_price_observations": 60,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALE.WA?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "e0d49fecf7ebb1f44c28e23d04039fc42cc2fded0e0aa6f974e1bf227aad9925",
+    "fetched_at_utc": "2026-11-09T09:47:39.643880+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "PLN",
+    "symbol": "ALE.WA",
+    "exchangeName": "WSE",
+    "fullExchangeName": "Warsaw",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1602572400,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Warsaw"
+   },
+   "discarded_price_observations": 592,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

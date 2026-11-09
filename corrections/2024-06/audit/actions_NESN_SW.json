@@ -1,0 +1,104 @@
+{
+ "ticker": "NESN.SW",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NESN.SW?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "b46b0a6f1fd83853eddef05fbc1fd2c1ef8c060c2dd3ef4d748cb7539117629a",
+   "fetched_at_utc": "2026-11-09T09:47:41.412288+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NESN.SW?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "c30a5711b00cdca76dde2b7347885eb0b7c5bb51c4137f6a693545a6b37bef3f",
+   "fetched_at_utc": "2026-11-09T09:47:41.748123+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/NESN.SW?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "b46b0a6f1fd83853eddef05fbc1fd2c1ef8c060c2dd3ef4d748cb7539117629a",
+    "fetched_at_utc": "2026-11-09T09:47:41.412288+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "CHF",
+    "symbol": "NESN.SW",
+    "exchangeName": "EBS",
+    "fullExchangeName": "Swiss",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 631353600,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Zurich"
+   },
+   "discarded_price_observations": 60,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/NESN.SW?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "c30a5711b00cdca76dde2b7347885eb0b7c5bb51c4137f6a693545a6b37bef3f",
+    "fetched_at_utc": "2026-11-09T09:47:41.748123+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "CHF",
+    "symbol": "NESN.SW",
+    "exchangeName": "EBS",
+    "fullExchangeName": "Swiss",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 631353600,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Zurich"
+   },
+   "discarded_price_observations": 593,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

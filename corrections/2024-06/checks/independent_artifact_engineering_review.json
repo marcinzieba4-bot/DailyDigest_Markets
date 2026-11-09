@@ -1,0 +1,355 @@
+{
+  "checked_at_utc": "2026-11-09T11:30:16.747842+00:00",
+  "review_type": "independent_synthetic_artifact_engineering_review",
+  "tool_sha256": {
+    "tools/render.py": "17a8778b62dbe289033b053d333c1fc23087478824b6df4f9ffc1a45015001af",
+    "tools/build_artifacts.py": "28206a8ac533cb102f046d3f5ca248460d3a8f44a59c75c1f3492e640dfc3eb0",
+    "tools/build_retail_page.py": "851cb712a0c990fcc596331d30caa74617efed83a72518b71bbe38a8d00b30a1",
+    "tools/build_source_inventory.py": "1abc3fad19e5ca53dc8712e50640c0b1a0d68e374b1962f0979763eef739f5c1",
+    "audit_work/review_final_artifacts.py": "f5f1041b0de96e9e08db285b867901e0a9caf28add269d4f0386be414e0aa6b1"
+  },
+  "reviewer_sha256": "00ca6c693bd114cfaac191113ae9b74baad0b9d6a3f9c0b909cfbd84241f555a",
+  "owner_preservation_cases_executed": 55,
+  "owner_complete_suite_runs": [
+    {
+      "helper": "audit_work/review_final_artifacts.py",
+      "sha256": "f5f1041b0de96e9e08db285b867901e0a9caf28add269d4f0386be414e0aa6b1",
+      "arguments": [
+        "--static"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"static_checks_passed\",\n  \"runtime_artifacts_reviewed\": false\n}",
+      "stderr": ""
+    },
+    {
+      "helper": "audit_work/artifact_regression_groups.py",
+      "sha256": "f48e75592b5c2fb1e494db4b6abcbfe1a89effd540ab76540133724c4b49b8fa",
+      "arguments": [],
+      "returncode": 0,
+      "stdout": "{\"status\": \"synthetic_checks_passed\", \"synthetic_test_groups\": 24, \"preservation_matrix_cases\": 55, \"runtime_artifacts_reviewed\": false}",
+      "stderr": ""
+    },
+    {
+      "helper": "audit_work/test_artifact_unicode_layout.py",
+      "sha256": "1fc47a27b62fbb93aba0f4b2a6dffb4953b78f1db6d763d19008e6e5799d625f",
+      "arguments": [],
+      "returncode": 0,
+      "stdout": "{\"status\": \"synthetic_checks_passed\", \"checked_at_utc\": \"2026-11-09T11:27:00.502217+00:00\", \"scope\": \"Engineering self-QA of generic browser/PDF fixture only; no report facts read or report artifacts built.\", \"runtime_report_artifacts_reviewed\": false, \"synthetic_paragraphs_preserved\": 25, \"synthetic_pdf_pages\": 3, \"literal_U2011_mutation_rejected\": true, \"layouts\": [{\"width\": 1440, \"scroll\": 1440}, {\"width\": 390, \"scroll\": 390}], \"tool_sha256\": {\"tools/render.py\": \"17a8778b62dbe289033b053d333c1fc23087478824b6df4f9ffc1a45015001af\", \"tools/build_artifacts.py\": \"28206a8ac533cb102f046d3f5ca248460d3a8f44a59c75c1f3492e640dfc3eb0\", \"audit_work/review_final_artifacts.py\": \"f5f1041b0de96e9e08db285b867901e0a9caf28add269d4f0386be414e0aa6b1\", \"audit_work/test_artifact_unicode_layout.py\": \"1fc47a27b62fbb93aba0f4b2a6dffb4953b78f1db6d763d19008e6e5799d625f\"}}",
+      "stderr": ""
+    }
+  ],
+  "owner_group_count": 24,
+  "selected_July_code_delta_inspection": {
+    "tools/render.py": {
+      "july_selected_sha256": "1b69e7a5e589126c4b50581991e38b6d6ed6c90e8bebc4c2e81145e3e9c3e763",
+      "june_current_sha256": "17a8778b62dbe289033b053d333c1fc23087478824b6df4f9ffc1a45015001af",
+      "changed_functions": [
+        "render"
+      ],
+      "added_functions": [],
+      "removed_functions": [],
+      "unified_delta_lines": 22
+    },
+    "tools/build_artifacts.py": {
+      "july_selected_sha256": "b3465f666d0fb8f571fea1335cda3e0b2b3f1412265f0087105261a0d54213f9",
+      "june_current_sha256": "28206a8ac533cb102f046d3f5ca248460d3a8f44a59c75c1f3492e640dfc3eb0",
+      "changed_functions": [
+        "module",
+        "check_pdf_prose",
+        "accepted_components",
+        "require_retail_gates",
+        "collection",
+        "methodology",
+        "source_archive",
+        "main"
+      ],
+      "added_functions": [],
+      "removed_functions": [],
+      "unified_delta_lines": 262
+    },
+    "tools/build_retail_page.py": {
+      "july_selected_sha256": "7e5a7dd3fd5106cdafe8b18e07301d942c87d92b441fe2adaaf3ed8c086eaf17",
+      "june_current_sha256": "851cb712a0c990fcc596331d30caa74617efed83a72518b71bbe38a8d00b30a1",
+      "changed_functions": [
+        "build"
+      ],
+      "added_functions": [],
+      "removed_functions": [],
+      "unified_delta_lines": 63
+    },
+    "tools/build_source_inventory.py": {
+      "july_selected_sha256": "a1b5c7c31d856320f7cb312594eb9c71572daa135c1ef0414d7a7ba3204bda27",
+      "june_current_sha256": "1abc3fad19e5ca53dc8712e50640c0b1a0d68e374b1962f0979763eef739f5c1",
+      "changed_functions": [
+        "is_raw_web_response",
+        "assert_no_raw_web_candidates",
+        "scan_private_research",
+        "public_document_headers",
+        "public_clock_rows",
+        "validate_public_research_bundle",
+        "public_research_export",
+        "safe_path",
+        "collect_paths",
+        "require_ready_receipts",
+        "utc_clock",
+        "attempt_identity",
+        "transport_records",
+        "require_physical_ledger",
+        "main"
+      ],
+      "added_functions": [
+        "assert_no_raw_web_candidates",
+        "attempt_identity",
+        "is_raw_web_response",
+        "public_clock_rows",
+        "public_document_headers",
+        "public_research_export",
+        "require_physical_ledger",
+        "require_ready_receipts",
+        "scan_private_research",
+        "transport_records",
+        "utc_clock",
+        "validate_public_research_bundle"
+      ],
+      "removed_functions": [],
+      "unified_delta_lines": 531
+    },
+    "audit_work/review_final_artifacts.py": {
+      "july_selected_sha256": "d776e7b667f1c31202c7c00fb74c8be82e1c07c01daa8d8e386b5c5253060432",
+      "june_current_sha256": "f5f1041b0de96e9e08db285b867901e0a9caf28add269d4f0386be414e0aa6b1",
+      "changed_functions": [
+        "pdf_preservation",
+        "own_evidence",
+        "html_preservation",
+        "negative_fixtures",
+        "static_review",
+        "safe_member",
+        "physical_source_dependencies",
+        "coverage_phase_binding",
+        "current_source_dependencies",
+        "replay_archive",
+        "final_review"
+      ],
+      "added_functions": [
+        "coverage_phase_binding",
+        "physical_source_dependencies"
+      ],
+      "removed_functions": [],
+      "unified_delta_lines": 788
+    }
+  },
+  "independent_cases": [
+    {
+      "case": "reviewer_canonical_exclusion_alias_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Screening exclusion IDs changed: 2024-06-03"
+    },
+    {
+      "case": "inventory_canonical_exclusion_alias_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Current source screening exclusion IDs invalid: 2024-06-03"
+    },
+    {
+      "case": "reviewer_duplicate_excluded_ids_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Screening exclusion IDs changed: 2024-06-03"
+    },
+    {
+      "case": "inventory_duplicate_excluded_ids_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Current source screening exclusion IDs invalid: 2024-06-03"
+    },
+    {
+      "case": "reviewer_empty_excluded_id_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Screening exclusion IDs changed: 2024-06-03"
+    },
+    {
+      "case": "inventory_empty_excluded_id_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Current source screening exclusion IDs invalid: 2024-06-03"
+    },
+    {
+      "case": "complete_current_generic_components_accepted",
+      "expected_rejection": false,
+      "passed": true,
+      "observed": "accepted"
+    },
+    {
+      "case": "builder_nonretail_pending_status_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Independent component acceptance stale: 2024-06-03 nonretail"
+    },
+    {
+      "case": "builder_retail_rejected_status_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Independent component acceptance stale: 2024-06-03 retail"
+    },
+    {
+      "case": "builder_nonretail_stale_exclusions_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Independent component acceptance stale: 2024-06-03 nonretail"
+    },
+    {
+      "case": "builder_retail_missing_exclusions_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Independent component acceptance stale: 2024-06-03 retail"
+    },
+    {
+      "case": "builder_retail_legacy_hash_alias_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Retail changed after review: 2024-06-03"
+    },
+    {
+      "case": "physical_ledger_orphan_signature_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Current source/physical transport proof differs: physical_attempts"
+    },
+    {
+      "case": "truthful_exception_metadata_positive",
+      "expected_rejection": false,
+      "passed": true,
+      "observed": "accepted"
+    },
+    {
+      "case": "HTML_exception_reason_mutation_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "2024-06-03 timing evidence metadata changed"
+    },
+    {
+      "case": "HTML_exception_before_clock_mutation_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "2024-06-03 timing evidence metadata changed"
+    },
+    {
+      "case": "builder_PDF_exception_metadata_positive",
+      "expected_rejection": false,
+      "passed": true,
+      "observed": "accepted"
+    },
+    {
+      "case": "builder_PDF_exception_reason_mutation_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "2024-06-03 PDF source ledger lost/reordered occurrence n0001"
+    },
+    {
+      "case": "builder_PDF_exception_before_clock_mutation_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "2024-06-03 PDF source ledger lost/reordered occurrence n0001"
+    },
+    {
+      "case": "reviewer_PDF_exception_metadata_positive",
+      "expected_rejection": false,
+      "passed": true,
+      "observed": "accepted"
+    },
+    {
+      "case": "reviewer_PDF_exception_reason_mutation_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "2024-06-03 PDF ledger lost/reordered occurrence n0001"
+    },
+    {
+      "case": "reviewer_PDF_exception_before_clock_mutation_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "2024-06-03 PDF ledger lost/reordered occurrence n0001"
+    },
+    {
+      "case": "inventory_physical_ledger_positive",
+      "expected_rejection": false,
+      "passed": true,
+      "observed": "accepted"
+    },
+    {
+      "case": "inventory_physical_boolean_attempt_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Current source/physical transport proof differs: ledger_sha256"
+    },
+    {
+      "case": "inventory_physical_zero_attempt_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Current source/physical transport proof differs: ledger_sha256"
+    },
+    {
+      "case": "inventory_physical_fetched_without_body_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Current source/physical transport proof differs: ledger_sha256"
+    },
+    {
+      "case": "inventory_physical_orphan_body_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Physical immutable-body directory differs from ledger"
+    },
+    {
+      "case": "inventory_physical_boolean_request_count_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "Current source/physical transport proof differs: physical_requests"
+    },
+    {
+      "case": "own_evidence_valid_timing_exception_positive",
+      "expected_rejection": false,
+      "passed": true,
+      "observed": "accepted"
+    },
+    {
+      "case": "own_evidence_midnight_exception_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "2024-06-03 timing exception available only after cutoff: n0001"
+    },
+    {
+      "case": "own_evidence_after_cutoff_exception_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "2024-06-03 timing exception available only after cutoff: n0001"
+    },
+    {
+      "case": "own_evidence_naive_clock_exception_rejected",
+      "expected_rejection": true,
+      "passed": true,
+      "observed": "2024-06-03 timing exception available only after cutoff: n0001"
+    }
+  ],
+  "passed": true,
+  "failures": [],
+  "runtime_full20_accepted": false,
+  "facts_or_real_specs_read": false,
+  "publication_performed": false,
+  "limits": [
+    "Engineering/synthetic/current source transport/public research projection checks only.",
+    "Exact33 original raw MCP responses remain private; all144 original local source bindings remain strict.",
+    "No full20 report/artifact runtime acceptance, archive build, Git mutation or publication."
+  ],
+  "public_research_projection_engineering_review": {
+    "path": "audit/independent_public_research_projection_review.json",
+    "sha256": "8daad69ee298c29f4809088730522f8f85e9beaf9bb9f5c456614e6c1d410d19",
+    "private_originals": 33,
+    "independent_controls": 38,
+    "actual_strict_local_bindings": 144,
+    "actual_public_hash_bindings": 144,
+    "original_research_byte_replay": false,
+    "production_require_review_gate": "passed"
+  }
+}

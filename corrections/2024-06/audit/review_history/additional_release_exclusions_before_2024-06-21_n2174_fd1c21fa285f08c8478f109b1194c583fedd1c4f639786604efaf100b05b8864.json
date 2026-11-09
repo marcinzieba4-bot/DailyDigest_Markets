@@ -1,0 +1,119 @@
+{
+  "exclusions": [
+    {
+      "date": "2024-06-17",
+      "id": "n0298",
+      "feed_sha256": "064f0e18017bdf95650d04828ffa6b71daf7c87ca83c6d823a738f1d92e5e7a3",
+      "title": "China Home-Price Slump Accelerates Despite More Stimulus - Bloomberg.com",
+      "src": "Bloomberg.com",
+      "published_at": "2024-06-16T07:00:00+00:00",
+      "screen_kind": "timing",
+      "reason": "Headline describes a completed May China data outcome released after the June17 00:00UTC cutoff. Normalized June16 RSS timestamp cannot establish pre-release availability; omit this retained item only for June17.",
+      "release_event": "May2024 sales prices in70cities",
+      "release_local": "2024-06-17T09:30:00+08:00",
+      "release_utc": "2024-06-17T01:30:00+00:00",
+      "release_clock_evidence_url": "https://www.stats.gov.cn/sj/zxfb/202406/t20240617_1954705.html",
+      "release_clock_evidence_sha256": "313d247b4672a71f9c2e6292a7fab6e278cb663d0867217bb88d4de5e3d88f28",
+      "evidence_paths": [
+        "audit_work/june17_china_release_timing_search.json",
+        "audit_work/june17_nbs_primary_release_search.json",
+        "audit_work/june17_nbs_primary_release_pages.json"
+      ],
+      "source_cutoff_utc": "2024-06-17T00:00:00+00:00",
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    },
+    {
+      "date": "2024-06-17",
+      "id": "n0299",
+      "feed_sha256": "064f0e18017bdf95650d04828ffa6b71daf7c87ca83c6d823a738f1d92e5e7a3",
+      "title": "China's factory output disappoints, property sector stuck in doldrums - Reuters",
+      "src": "Reuters",
+      "published_at": "2024-06-16T07:00:00+00:00",
+      "screen_kind": "timing",
+      "reason": "Headline describes a completed May China data outcome released after the June17 00:00UTC cutoff. Normalized June16 RSS timestamp cannot establish pre-release availability; omit this retained item only for June17.",
+      "release_event": "May2024 industrialproduction",
+      "release_local": "2024-06-17T10:00:00+08:00",
+      "release_utc": "2024-06-17T02:00:00+00:00",
+      "release_clock_evidence_url": "https://www.stats.gov.cn/sj/zxfb/202406/t20240617_1954712.html",
+      "release_clock_evidence_sha256": "313d247b4672a71f9c2e6292a7fab6e278cb663d0867217bb88d4de5e3d88f28",
+      "evidence_paths": [
+        "audit_work/june17_china_release_timing_search.json",
+        "audit_work/june17_nbs_primary_release_search.json",
+        "audit_work/june17_nbs_primary_release_pages.json"
+      ],
+      "source_cutoff_utc": "2024-06-17T00:00:00+00:00",
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    },
+    {
+      "date": "2024-06-03",
+      "id": "n0776",
+      "feed_sha256": "07f27127c3f71cac7c83ed13d32ab12aa4c500f75acec651a825ff7407674d23",
+      "title": "AMD launches new AI chips to take on leader Nvidia - Reuters",
+      "src": "Reuters",
+      "published_at": "2024-06-02T07:00:00+00:00",
+      "screen_kind": "timing_uncertainty",
+      "reason": "CompletedAMDlaunchheadline is tied to an after-cutoffJune3Taipeikeynote and sameheadline Reuterssyndication aftercutoff; normalizedJune2RSSstamp does not certify a pre-June3 00UTC originalheadlinevintage. ConservativeomitthisretainedJune3item only.",
+      "scheduled_keynote_utc": "2024-06-03T01:30:00+00:00",
+      "syndicated_reuters_publication_utc": "2024-06-03T02:56:00+00:00",
+      "source_cutoff_utc": "2024-06-03T00:00:00+00:00",
+      "evidence_paths": [
+        "audit_work/june3_amd_clock_excerpt_review.json",
+        "audit_work/june3_amd_clock_independent_confirmation.json"
+      ],
+      "evidence_sha256": {
+        "audit_work/june3_amd_clock_excerpt_review.json": "65aea75d31dcf84b08c6b0dab7f1a5d0f51483cf4bdee746afa4e5e9abd6a454",
+        "audit_work/june3_amd_clock_independent_confirmation.json": "9e91ef55a67d938cb9ae894640cb14a71a0bd470da7358a4fcebd87b211d6899"
+      },
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    },
+    {
+      "date": "2024-06-04",
+      "id": "n1641",
+      "title": "'Roaring Kitty' post seems to show trader held on to giant GameStop stake after Monday's rally - CNBC",
+      "frozen_published_at": "2024-06-03T07:00:00+00:00",
+      "feed_sha256": "17fb8d2bead8c349452007168fbfdd2cb1f1a79e3b7932a9a08f743ea3219e1a",
+      "reason": "Conservative availability/vintage omission: apparent post-rally holdings update may be a late-US-evening item. The normalized prior-day RSS timestamp does not certify pre-June4 00UTC first publication. Direct publisher clock was inaccessible (robots); independent forum display lacked a certified timezone. No exact original minute or definitely late event is asserted.",
+      "disposition": "conservative_uncertified_original_availability"
+    },
+    {
+      "date": "2024-06-17",
+      "id": "n1458",
+      "feed_sha256": "064f0e18017bdf95650d04828ffa6b71daf7c87ca83c6d823a738f1d92e5e7a3",
+      "title": "ING bank targets 4%-5% growth by 2027 despite higher costs - Reuters",
+      "src": "Reuters",
+      "published_at": "2024-06-16T07:00:00+00:00",
+      "screen_kind": "timing",
+      "reason": "Completed ING2027growthtarget announcement belongs to June17 issuer release05UTC after June17 00UTC cutoff. Retained normalizedJune16stamp does not establish earlier publication. Omit ownJune17 only.",
+      "release_utc": "2024-06-17T05:00:00Z",
+      "source_cutoff_utc": "2024-06-17T00:00:00Z",
+      "evidence_paths": [
+        "audit_work/june17_ing_hk_clock_excerpt.json"
+      ],
+      "evidence_sha256": {
+        "audit_work/june17_ing_hk_clock_excerpt.json": "d28377fe50adec2944646065bf8ba0b2137c1f9a15bce7865007e75019984fb5"
+      },
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    },
+    {
+      "date": "2024-06-07",
+      "id": "n2327",
+      "feed_sha256": "2868fc14d4ab635e7874c58ddd704c94ae1d1aa414fce2646857c0454a125ce4",
+      "title": "Morning Bid: Global risk rally hinges on payrolls - Reuters",
+      "src": "Reuters",
+      "published_at": "2024-06-06T07:00:00+00:00",
+      "screen_kind": "timing_uncertainty",
+      "reason": "Actually cited Reuters MorningBid has June7 aftercut publisher/syndication clocks despite normalizedJune6RSS. Visible publisher04:36UTC and indexed04:34:11UTC both follow own00UTC; exactfirstminute not certified. Conservativeomit ownJune7 only.",
+      "source_cutoff_utc": "2024-06-07T00:00:00Z",
+      "evidence_paths": [
+        "audit_work/june7_n2327_clock_independent_review.json"
+      ],
+      "evidence_sha256": {
+        "audit_work/june7_n2327_clock_independent_review.json": "a386855d44116f532194eca1229dc0e9d00b33ef87ce0c4ccf855cbb38edf480"
+      },
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation",
+      "observed_publisher_clock_utc": "2024-06-07T04:36:00Z",
+      "observed_search_metadata_clock_utc": "2024-06-07T04:34:11Z"
+    }
+  ],
+  "scope": "Explicit own-date editorial omissions of retained frozen items, beyond source-screened removals. Any later append preserves prior bytes and records exact own-date reason/bindings; no feed/card mutation."
+}

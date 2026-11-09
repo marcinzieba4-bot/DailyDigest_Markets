@@ -1,0 +1,104 @@
+{
+ "ticker": "BMW.DE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BMW.DE?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "bb8cd72d31e1466715d185fad1bee06a58013b96abdf8b6954da0048072ced6d",
+   "fetched_at_utc": "2026-11-09T09:47:40.631758+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BMW.DE?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "86b3707fb42a3083f2db57a132f5e0ec8c2c184abfb47e758396cd478290fd42",
+   "fetched_at_utc": "2026-11-09T09:47:40.885452+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/BMW.DE?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "bb8cd72d31e1466715d185fad1bee06a58013b96abdf8b6954da0048072ced6d",
+    "fetched_at_utc": "2026-11-09T09:47:40.631758+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "EUR",
+    "symbol": "BMW.DE",
+    "exchangeName": "GER",
+    "fullExchangeName": "XETRA",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 847440000,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Berlin"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/BMW.DE?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "86b3707fb42a3083f2db57a132f5e0ec8c2c184abfb47e758396cd478290fd42",
+    "fetched_at_utc": "2026-11-09T09:47:40.885452+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "EUR",
+    "symbol": "BMW.DE",
+    "exchangeName": "GER",
+    "fullExchangeName": "XETRA",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 847440000,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Berlin"
+   },
+   "discarded_price_observations": 601,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

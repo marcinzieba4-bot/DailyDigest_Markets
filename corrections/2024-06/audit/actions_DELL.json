@@ -1,0 +1,104 @@
+{
+ "ticker": "DELL",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DELL?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "776321a3f0a94c92430ceaeeeaf9c7f2523c87b9877d83ba89aa0d96cfd1f964",
+   "fetched_at_utc": "2026-11-09T09:47:47.268872+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DELL?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "01a8ac63184c89867d7ce55e20dd70d97705869a98b452da1809de1aa6206f41",
+   "fetched_at_utc": "2026-11-09T09:47:47.427443+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/DELL?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "776321a3f0a94c92430ceaeeeaf9c7f2523c87b9877d83ba89aa0d96cfd1f964",
+    "fetched_at_utc": "2026-11-09T09:47:47.268872+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "DELL",
+    "exchangeName": "NYQ",
+    "fullExchangeName": "NYSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1471440600,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/DELL?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "01a8ac63184c89867d7ce55e20dd70d97705869a98b452da1809de1aa6206f41",
+    "fetched_at_utc": "2026-11-09T09:47:47.427443+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "DELL",
+    "exchangeName": "NYQ",
+    "fullExchangeName": "NYSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1471440600,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 593,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

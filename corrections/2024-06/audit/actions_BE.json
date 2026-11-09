@@ -1,0 +1,104 @@
+{
+ "ticker": "BE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BE?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "596072fe13c5c8fe5b66b5b788fb72aa6c24172f63c004c3cac333e2186c9277",
+   "fetched_at_utc": "2026-11-09T09:47:48.955722+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BE?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "b220d7daafb44635bcc3bd01198673c0f74eed5b6bc96a7bb6df6becfe2bbefe",
+   "fetched_at_utc": "2026-11-09T09:47:49.155792+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/BE?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "596072fe13c5c8fe5b66b5b788fb72aa6c24172f63c004c3cac333e2186c9277",
+    "fetched_at_utc": "2026-11-09T09:47:48.955722+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "BE",
+    "exchangeName": "NYQ",
+    "fullExchangeName": "NYSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1532525400,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/BE?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "b220d7daafb44635bcc3bd01198673c0f74eed5b6bc96a7bb6df6becfe2bbefe",
+    "fetched_at_utc": "2026-11-09T09:47:49.155792+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "BE",
+    "exchangeName": "NYQ",
+    "fullExchangeName": "NYSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1532525400,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 593,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+  "status": "independent_public_projection_controls_passed",
+  "checked_at_utc": "2026-11-09T11:26:25.361541+00:00",
+  "cases": [
+    {
+      "case": "exact_finite_public_bundle_positive",
+      "passed": true,
+      "expected_rejection": false,
+      "observed": "accepted"
+    },
+    {
+      "case": "duplicate_private_path",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Invalid or altered explicit private raw-response commitment"
+    },
+    {
+      "case": "private_path_traversal",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Invalid or altered explicit private raw-response commitment"
+    },
+    {
+      "case": "private_path_absolute",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Invalid or altered explicit private raw-response commitment"
+    },
+    {
+      "case": "private_body_count_boolean",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Public projection must list the exact reviewed raw web-response set"
+    },
+    {
+      "case": "private_size_boolean",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Invalid or altered explicit private raw-response commitment"
+    },
+    {
+      "case": "private_size_zero",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Invalid or altered explicit private raw-response commitment"
+    },
+    {
+      "case": "private_sha_uppercase",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Invalid or altered explicit private raw-response commitment"
+    },
+    {
+      "case": "private_guard_membership",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Invalid or altered explicit private raw-response commitment"
+    },
+    {
+      "case": "private_RSS_membership",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Invalid or altered explicit private raw-response commitment"
+    },
+    {
+      "case": "private_proof_membership",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Invalid or altered explicit private raw-response commitment"
+    },
+    {
+      "case": "private_path_removed",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Public projection must list the exact reviewed raw web-response set"
+    },
+    {
+      "case": "private_sorted_order_changed",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Public projection must list the exact reviewed raw web-response set"
+    },
+    {
+      "case": "unbound_source_hash_must_be_JSON_null_bool",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Invalid or altered explicit private raw-response commitment"
+    },
+    {
+      "case": "unbound_source_hash_must_be_JSON_null_int",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Invalid or altered explicit private raw-response commitment"
+    },
+    {
+      "case": "unbound_source_hash_must_be_JSON_null_str",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Invalid or altered explicit private raw-response commitment"
+    },
+    {
+      "case": "unbound_source_hash_must_be_JSON_null_list",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Invalid or altered explicit private raw-response commitment"
+    },
+    {
+      "case": "unbound_source_hash_must_be_JSON_null_dict",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Invalid or altered explicit private raw-response commitment"
+    },
+    {
+      "case": "public_claim_original_body_replay",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Public research hash/scope attestation changed"
+    },
+    {
+      "case": "public_claim_financial_data_omitted",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Public research hash/scope attestation changed"
+    },
+    {
+      "case": "public_claim_independent_acceptance",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Public research hash/scope attestation changed"
+    },
+    {
+      "case": "public_claim_body_word_count_boolean",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Public research hash/scope attestation changed"
+    },
+    {
+      "case": "raw_body_copy_rejected_audit_work/unregistered_raw.json",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Raw MCP web response is prohibited in public candidates: audit_work/unregistered_raw.json"
+    },
+    {
+      "case": "raw_body_copy_rejected_audit/unregistered_raw.json",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Raw MCP web response is prohibited in public candidates: audit/unregistered_raw.json"
+    },
+    {
+      "case": "raw_body_copy_rejected_audit/review_history/unregistered_raw.json",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Raw MCP web response is prohibited in public candidates: audit/review_history/unregistered_raw.json"
+    },
+    {
+      "case": "raw_body_copy_rejected_reference/unregistered_raw.txt",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Raw MCP web response is prohibited in public candidates: reference/unregistered_raw.txt"
+    },
+    {
+      "case": "raw_body_copy_rejected_audit_work/raw_nested_reference.json",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Raw MCP web response is prohibited in public candidates: audit_work/raw_nested_reference.json"
+    },
+    {
+      "case": "raw_body_copy_rejected_reference/raw_double_encoded.json",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Raw MCP web response is prohibited in public candidates: reference/raw_double_encoded.json"
+    },
+    {
+      "case": "raw_body_copy_rejected_audit_work/raw_with_extra_metadata.json",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Raw MCP web response is prohibited in public candidates: audit_work/raw_with_extra_metadata.json"
+    },
+    {
+      "case": "raw_MCP_JSONL_copy_rejected_reference_text",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Raw MCP web response is prohibited in public candidates: reference/raw_jsonl.txt"
+    },
+    {
+      "case": "registered_private_original_in_public_bundle",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Private raw web response entered public archive"
+    },
+    {
+      "case": "clock_guard_row_removed",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Public clock facts or declared compact scope changed"
+    },
+    {
+      "case": "clock_guard_release_changed",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Public clock facts or declared compact scope changed"
+    },
+    {
+      "case": "article_body_top_level",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Unexpected public evidence fields; raw research prose is prohibited"
+    },
+    {
+      "case": "article_body_source_field",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Public research prose/quote/URL metadata exceeded the finite projection"
+    },
+    {
+      "case": "nonempty_quote",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Public research prose/quote/URL metadata exceeded the finite projection"
+    },
+    {
+      "case": "unregistered_private_reference",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Public research prose/quote/URL metadata exceeded the finite projection"
+    },
+    {
+      "case": "javascript_source_URL",
+      "passed": true,
+      "expected_rejection": true,
+      "observed": "Public research prose/quote/URL metadata exceeded the finite projection"
+    }
+  ],
+  "case_count": 38,
+  "failures": [],
+  "passed": true,
+  "validator_sha256": "1abc3fad19e5ca53dc8712e50640c0b1a0d68e374b1962f0979763eef739f5c1",
+  "reviewer_sha256": "ea6cc1728ae4d09f1225a5d80eb70b3c06cd97be7f41f2bcbfc1cb1ce4379465",
+  "scope": "public_research_projection_engineering_only",
+  "archive_built": false,
+  "full20_report_runtime_accepted": false
+}

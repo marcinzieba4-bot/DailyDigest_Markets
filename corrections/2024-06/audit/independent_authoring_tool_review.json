@@ -1,0 +1,95 @@
+{
+  "status": "accepted",
+  "checked_at_utc": "2026-11-09T09:58:31.537454+00:00",
+  "review_type": "independent_authoring_tool_engineering_review",
+  "fatal_or_major_remaining": 0,
+  "tool_sha256": {
+    "tools/verify.py": "8121f637ed69081fbb932caa92172d2ff53b44b0b0034c8f4fc1292922f51e34",
+    "tools/digest.py": "099881a6e6cc5d513fe83b4b69e7f03a2063f3cdf9eaa5cd1d9f32171266bd56",
+    "tools/showcard.py": "d94367f24245ef36f7fcb785cb432e85a00412a0006349237f1be6d6250975b3",
+    "tools/cited_titles.py": "fe28ee35c35315ad9805e76da3399e6fb2d25326e03c8086bd9d897027c270f5",
+    "tools/check_block_ranges.py": "801db114d4bb8704fad90c37443ed6ee82b6970bf1635e06368f3414b52982ea",
+    "tools/merge_retail.py": "5a52fa2f1b67994d3659493692b2b022aecc49a45fdb14ab1ad3d2858af9b516",
+    "tools/stage_reviewed.py": "cee0b9d4675548360392de5217c9b095b99b832ecb4b846a4ce00279029792fc",
+    "tools/finalize_reviews.py": "8a825aa3798756e26b70303afd8d38e3ea8299aaeba26e0c0f2605d0046d16d3",
+    "tools/retail_quality_snapshot.py": "1c16c1010d5b4e454ca59a34dec0f000789aff1739f0dc93cf787142c904adb6"
+  },
+  "reviewer_sha256": "fee62d96eee767c972437e39d425a3c24e5b8c80859f108304e9e70697ef2867",
+  "owner_regression_helper_sha256": "9c1dab776164f335db3e9d1ae76c43405c7eefdfd5994e843249f6d3e6dc85a0",
+  "owner_synthetic_cases_rerun": 106,
+  "independent_cases": [
+    {
+      "case": "legacy_maps_cannot_override_current_screening",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "nonretail_missing_status",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "nonretail_pending_status",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "nonretail_stale_exclusions",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "retail_missing_status",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "retail_pending_status",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "retail_stale_exclusions",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "verifier_missing_exclusion_feed_binding",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "verifier_stale_exclusion_feed_binding",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "retail_gate_missing_exclusion_feed_binding",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "retail_gate_stale_exclusion_feed_binding",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "CLI_warning_prefix_cannot_replace_raw_diagnostic",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "screened_alias_with_rebound_hashes",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "screened_boolean_count_with_rebound_hashes",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "canonical_UTF8_compact_sorted_JSON_digest",
+      "result": "passed"
+    }
+  ],
+  "report_facts_read": false,
+  "runtime_full20_accepted": false,
+  "publication_performed": false,
+  "findings_resolved": [
+    "June legacy source maps could bypass current screening; they now reject.",
+    "Missing component status could pass; explicit accepted/passed is now required.",
+    "Missing exclusion-feed hashes could pass; both loaders now require exact frozen feed bytes."
+  ],
+  "limits": [
+    "Generic code, receipt schema and isolated synthetic checks only.",
+    "Actual20date source/feed/card/component/editorial integration remains pending.",
+    "Numeric membership checks do not establish instrument identity or headline claim meaning."
+  ]
+}

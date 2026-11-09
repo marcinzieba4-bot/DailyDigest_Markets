@@ -1,0 +1,478 @@
+{
+  "status": "external_complete_frozen_source_archive",
+  "archive": {
+    "path": "collection/June_2024_Frozen_Sources.zip",
+    "sha256": "24bdbee0f67ad01307a717fc9c743ff17e009ee04e7b43c30ff3c3b4ed69448f",
+    "bytes": 169485332
+  },
+  "public_url": "https://zembihf.xyz/reports/2024-06/June_2024_Frozen_Sources.zip",
+  "inventory_member": "source_inventory.json",
+  "inventory_member_sha256": "cfdd09cf632679e5d368c933308fbbdce0179ca373720d18728a2f498089651b",
+  "inventory_canonical_sha256": "e4ddda80203985691934ce9b289f43227e622d63f0102ebb94ced62d80853fb4",
+  "inventory_files": 45716,
+  "member_families": [
+    {
+      "family": "AUTHORING.md",
+      "files": 1,
+      "bytes": 15125
+    },
+    {
+      "family": "BRIEF.md",
+      "files": 1,
+      "bytes": 15125
+    },
+    {
+      "family": "audit",
+      "files": 574,
+      "bytes": 55111889
+    },
+    {
+      "family": "audit/market_raw",
+      "files": 576,
+      "bytes": 709015
+    },
+    {
+      "family": "audit_work",
+      "files": 109,
+      "bytes": 13164396
+    },
+    {
+      "family": "cache/news",
+      "files": 14497,
+      "bytes": 19830238
+    },
+    {
+      "family": "cache/rss_raw",
+      "files": 29292,
+      "bytes": 51241616
+    },
+    {
+      "family": "cards",
+      "files": 20,
+      "bytes": 5694635
+    },
+    {
+      "family": "checks",
+      "files": 65,
+      "bytes": 542886
+    },
+    {
+      "family": "code_provenance.json",
+      "files": 1,
+      "bytes": 7849
+    },
+    {
+      "family": "data",
+      "files": 289,
+      "bytes": 1313212
+    },
+    {
+      "family": "exclusions",
+      "files": 20,
+      "bytes": 16530
+    },
+    {
+      "family": "feeds",
+      "files": 20,
+      "bytes": 11548193
+    },
+    {
+      "family": "newest_lambda_function.py",
+      "files": 1,
+      "bytes": 97759
+    },
+    {
+      "family": "nonretail_drafts",
+      "files": 20,
+      "bytes": 1485431
+    },
+    {
+      "family": "notes",
+      "files": 40,
+      "bytes": 180056
+    },
+    {
+      "family": "reference",
+      "files": 5,
+      "bytes": 32175
+    },
+    {
+      "family": "retail_drafts",
+      "files": 20,
+      "bytes": 189482
+    },
+    {
+      "family": "specs",
+      "files": 20,
+      "bytes": 1674373
+    },
+    {
+      "family": "tools",
+      "files": 24,
+      "bytes": 339547
+    },
+    {
+      "family": "work/acquisition_feeds",
+      "files": 20,
+      "bytes": 11558064
+    },
+    {
+      "family": "work/source_candidates",
+      "files": 81,
+      "bytes": 25896802
+    },
+    {
+      "family": "work/unreviewed_feeds",
+      "files": 20,
+      "bytes": 11558064
+    }
+  ],
+  "restore": "Verify archive and inventory digests before extracting the missing raw/replay families to an isolated working June ROOT. The Git checkpoint deliberately omits raw caches and binary delivery artifacts.",
+  "externalized_selected_proof": [
+    {
+      "path": "audit/news_query_plan.json",
+      "reason": "Large replay/transport proof retained in external frozen-source ZIP",
+      "sha256": "7842caf181ca25ed427275290387965fb4e29a8538ee491671b6f6e0c84af5bf",
+      "bytes": 15670248,
+      "external_inventory_match": true,
+      "private_commitment_match": false
+    },
+    {
+      "path": "audit/news_base_query_plan.json",
+      "reason": "Large replay/transport proof retained in external frozen-source ZIP",
+      "sha256": "de7d439672cf74801246c98b61f96c8b5417bafb0c5d359036ca3b663dac1c4a",
+      "bytes": 5981884,
+      "external_inventory_match": true,
+      "private_commitment_match": false
+    },
+    {
+      "path": "audit/news_replay_inventory.json",
+      "reason": "Large replay/transport proof retained in external frozen-source ZIP",
+      "sha256": "6dae1fd1577e3b42ef036c77e4bba2685cbc74cdc5522333a25e38b314d146e3",
+      "bytes": 10271117,
+      "external_inventory_match": true,
+      "private_commitment_match": false
+    },
+    {
+      "path": "audit_work/provenance_calendar_japan_clocks.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "7603c9d2f1f28f635437eff6ab26910cb45d9d625f1d31806967e1ca37544049",
+      "bytes": 28909,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_observed_livestream_milestone_search.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "6d64004f96ad2a9f441104c7cff0b6f012156d499b551abeedfc1d2bbf083dbd",
+      "bytes": 33845,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/june_company_calendar_web_1.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "ecd8dce716fc8b22c915e7d2ffe028f171045ce6dfe9a240e6b3b72a5f1b1c6d",
+      "bytes": 32603,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_calendar_japan_date_clock.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "a8ef294bbbf7cc613107b9de5ca5229c280be932fee238e34edb7375857050a0",
+      "bytes": 26561,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_calendar_japan_precise_search.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "b272bd5da02e0d9ea64f94e6566bd8773391e87b72c45d238c10b4bba3307458",
+      "bytes": 26141,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/old_monthly_for_manual_review.json",
+      "reason": "Large replay/transport proof retained in external frozen-source ZIP",
+      "sha256": "03405a191a0c393de0e6187290869f1f50c51d98e4fe2427db5d3d85ab639f4c",
+      "bytes": 1258675,
+      "external_inventory_match": true,
+      "private_commitment_match": false
+    },
+    {
+      "path": "audit_work/june17_china_release_timing_search.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "d36da553615a25a6411abcdb250448e63f80855fbb8f51969bafd94e750d9682",
+      "bytes": 28985,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_calendar_gus_exact_dates.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "8dbd7d09bc75ae28645c8a1bf57ce47bfd1b3a67a727328c9e8d81725f4b46a3",
+      "bytes": 26078,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/june_company_calendar_web_6.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "1c1ed54eb4cfc230fdeee821f69f14fe2c18a84dad06e176cd251fa370c528d4",
+      "bytes": 33952,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/physical_source_inventory.json",
+      "reason": "Large replay/transport proof retained in external frozen-source ZIP",
+      "sha256": "1aa61e5b02ec0b5ce8f058599096b2e33e2a9036981b38d9c8d510951a66a81b",
+      "bytes": 10395508,
+      "external_inventory_match": true,
+      "private_commitment_match": false
+    },
+    {
+      "path": "audit_work/june_company_calendar_web_5.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "c184e5a8e653c2bfc3def021f3e3268393642fe8e9d7b3b3e95ff3295b6cf9bb",
+      "bytes": 31597,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/june_pending_calendar_evidence.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "5e26442c5b26b214d9956cf946dd528e1de2b6a8674f7f7cd4470a322a96bd1d",
+      "bytes": 29898,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/june_calendar_web_releases.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "27bfb8bce3abb17144e82c183be6f0dc9cafb601485ca31493d709f261832afb",
+      "bytes": 28887,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_gme_june3_boundary_search.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "78fac965a68c712f0ac06785ecad8e5002e3385dec796ead32de2ca1910c426c",
+      "bytes": 31889,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_observed_livestream_milestone_pages.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "fcf2e6ddf07cb422e1e461c97617ab198a91391c1f9a1d3312d5c7253c837584",
+      "bytes": 27225,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_calendar_historic_exact.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "0b7346251d7b97e56871c27bcbb0e58e5df905aa0613603e8b1ac77a6ed7ccdb",
+      "bytes": 26277,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_gme_june3_primary_posts.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "393b4388a9d54db1d75620719db837ed7648f4cf5976ec2296e89332b0b13fb9",
+      "bytes": 21302,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_calendar_final_clock_check.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "40a5692ec550f0a830daf6a1ef47fb6898352e141a217807f05144ead9612cf1",
+      "bytes": 21715,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/june_calendar_web_initial.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "93321eab9320c23a1dda014308723f838c2db01cf3bc86ab796b8ca8cb09c881",
+      "bytes": 26089,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/june17_nbs_primary_release_search.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "1817214f2a6d130d3ef6fc1d194df63b887ea10f2ff21dcb96078a61084e1366",
+      "bytes": 29658,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_calendar_official_crosschecks.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "00f33538ffc949aed12fd6761af9c001246f8dc9d0d0f260f98c12de231359de",
+      "bytes": 22628,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/june_company_calendar_web_3.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "77a925d42a8985d95a4682cb1e1bc3a4ed87d60f070b62eee33130fbcc2ebffe",
+      "bytes": 29436,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_gme_june3_original_pages.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "f9350b5b8ace200e3fc1072292022e4a2fb7b67f02cd02e9b97efb4afb86f8b9",
+      "bytes": 26957,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/june_company_calendar_web_4.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "6399c6a7c250fd07ff08cf8b0e8c1e51c8d27455e427cb258029d1041607d5d4",
+      "bytes": 35988,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_calendar_clock_final_details.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "b130681b6f8fc35983846684e537d2401828f336dc4b3580e29ccfee9e7d5e89",
+      "bytes": 22946,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/june_calendar_web_policy.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "ec2e47c3b8c8f4758a51391030a25132794eb0dd6e37dc8f17305be6b7c26bd3",
+      "bytes": 31101,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/june17_nbs_primary_release_pages.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "313d247b4672a71f9c2e6292a7fab6e278cb663d0867217bb88d4de5e3d88f28",
+      "bytes": 23550,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_calendar_poland_nbp.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "73b72729f1e2589c4fc24e2fdcb130c28f171e975ef8699cb15d371564aafea4",
+      "bytes": 29608,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_calendar_japan_official_details.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "dd336e8a7eb5b33d400f6d5669f23b0f235137ac8780ba83f2bd82042fd273ae",
+      "bytes": 20859,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_calendar_primary_opens.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "ee496915703dec070ead94774cf8165a37574cde04d3e03e898358efcb5f0773",
+      "bytes": 12860,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_calendar_poland_details.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "d9afde733ff673b8f147cb4f5f105511c43912b25dcfca2af22fa2d33a40d352",
+      "bytes": 26126,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_calendar_japan_schedule_search.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "978d2fb0188b3e13a9369ae64a3e72652bdcd61e225dbcced1dd39ab50c7149e",
+      "bytes": 21592,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_calendar_corporate_clocks.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "4f880231673d5ad6c7942238f69f3b0a7af654156b5c25f175ed3ebb344d54f1",
+      "bytes": 32936,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/provenance_calendar_poland_calendar.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "371ec230aabd420cc1aa4a0a67f7a475c400b428e1cede588a9df43a318d522c",
+      "bytes": 27709,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    },
+    {
+      "path": "audit_work/june_company_calendar_web_2.json",
+      "reason": "Private original fullresearch response; publiccompactclockevidence and exacthashcommitment retained",
+      "private_research": true,
+      "sha256": "82688593e81fa150963a8cfe5ad074b603cd7e1692c40c681897b12c9ff800de",
+      "bytes": 31631,
+      "external_inventory_match": false,
+      "private_commitment_match": true
+    }
+  ],
+  "public_research_scope": {
+    "manifest": "audit/public_research_manifest.json",
+    "manifest_sha256": "3184477bde1040690ef7c04c6c4a74402ad1cce4bbd0f0a1027362de81e2418f",
+    "private_response_count": 33,
+    "public_original_research_byte_replay": false,
+    "original33_private_responses_omitted_from_Git_and_public_ZIP": true,
+    "financial_source_replay": "All financial RSS/market/feeds/guards/proofs remain public and strict. Complete144-binding local replay additionally requires retained private original research responses; public metadata is not replacement source bytes."
+  }
+}

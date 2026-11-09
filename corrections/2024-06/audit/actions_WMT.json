@@ -1,0 +1,104 @@
+{
+ "ticker": "WMT",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/WMT?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "b7bbedc6b932c69b33d287c58fe3ca6fc27b3d7f8b4d3121bb348ebd2be90c25",
+   "fetched_at_utc": "2026-11-09T09:47:51.418667+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/WMT?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "940392678e2a664a4fb35983e768b47c357639656e04bf6e04ea33eca767b213",
+   "fetched_at_utc": "2026-11-09T09:47:51.662877+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/WMT?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "b7bbedc6b932c69b33d287c58fe3ca6fc27b3d7f8b4d3121bb348ebd2be90c25",
+    "fetched_at_utc": "2026-11-09T09:47:51.418667+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "WMT",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 83597400,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/WMT?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "940392678e2a664a4fb35983e768b47c357639656e04bf6e04ea33eca767b213",
+    "fetched_at_utc": "2026-11-09T09:47:51.662877+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "WMT",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 83597400,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 593,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

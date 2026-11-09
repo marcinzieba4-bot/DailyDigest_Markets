@@ -1,0 +1,354 @@
+{
+  "checked_at_utc": "2026-11-09T10:07:29.384852+00:00",
+  "reviewer_tool_sha256": "5daa7f9bd56b25159612f185dbceca0ce5deb7d952e5f62fdc313810451a0b89",
+  "expected_scope": {
+    "dates": [
+      "2024-06-03",
+      "2024-06-04",
+      "2024-06-05",
+      "2024-06-06",
+      "2024-06-07",
+      "2024-06-10",
+      "2024-06-11",
+      "2024-06-12",
+      "2024-06-13",
+      "2024-06-14",
+      "2024-06-17",
+      "2024-06-18",
+      "2024-06-19",
+      "2024-06-20",
+      "2024-06-21",
+      "2024-06-24",
+      "2024-06-25",
+      "2024-06-26",
+      "2024-06-27",
+      "2024-06-28"
+    ],
+    "editions": 20,
+    "native_artifacts": 60,
+    "collection_artifacts": 5,
+    "targets": 65,
+    "reportZIP_members": 63,
+    "protected_objects": 182
+  },
+  "selected_July_code_delta": {
+    "publish.py": {
+      "selected_July_code_sha256": "0e568d4d197aa374d569ee7ae4c3aee2d6d2bd787f03fbf0cca518c228dc146a",
+      "added_functions": [
+        "require_artifact_review"
+      ],
+      "changed_function_AST": [
+        "main",
+        "merge_index",
+        "plan",
+        "protected_keys",
+        "snapshot"
+      ]
+    },
+    "verify_delivery.py": {
+      "selected_July_code_sha256": "e2df5303e40d5f1f7262da48e5484cc42d043d10fb679e3ee1eda888365ba282",
+      "added_functions": [],
+      "changed_function_AST": [
+        "main"
+      ]
+    }
+  },
+  "limits": [
+    "Generic code inspection, extracted pure functions and synthetic predicates only. Neither SDK entrypoint nor the actual publication plan was executed.",
+    "No factual report input, real financial/source feed, AWS client, network read or remote mutation was used.",
+    "This review accepts code only; real20report inputs, final artifacts, publication and public delivery still require their current gates.",
+    "Protected changes remain strict failures with no inherited concurrency waiver."
+  ],
+  "passed": true,
+  "script_sha256": "09ae1481b618b73cb2e1fda5d37328c23ef0dbebb33191715b91e6e43987c347",
+  "publisher_sha256": "09ae1481b618b73cb2e1fda5d37328c23ef0dbebb33191715b91e6e43987c347",
+  "delivery_verifier_sha256": "844798599f5f3112da329da2b3c77773d8930e9b31f2f55194f2fa7677cc5cb9",
+  "checks": [
+    {
+      "check": "exact20June weekdays including exchange holiday",
+      "passed": true
+    },
+    {
+      "check": "exact182 protected keys:latest,July–Nov2024HTML,Aug2026andJuneweekends",
+      "passed": true
+    },
+    {
+      "check": "index merge adds only20daily+2Junecollection links and preserves every old href",
+      "passed": true
+    },
+    {
+      "check": "one June daily link each",
+      "passed": true
+    },
+    {
+      "check": "no June weekend link created",
+      "passed": true
+    },
+    {
+      "check": "June collection label says20editions",
+      "passed": true
+    },
+    {
+      "check": "index pure-function fixture: already-present June holiday",
+      "passed": true
+    },
+    {
+      "check": "index pure-function fixture: duplicate June date",
+      "passed": true
+    },
+    {
+      "check": "index pure-function fixture: missing archive list",
+      "passed": true
+    },
+    {
+      "check": "publisher requires65unique targets",
+      "passed": true
+    },
+    {
+      "check": "publisher requires60native format entries",
+      "passed": true
+    },
+    {
+      "check": "complete20 source/manifest gates",
+      "passed": true
+    },
+    {
+      "check": "independent source/market/precision/editorial/retail gates",
+      "passed": true
+    },
+    {
+      "check": "final component and input hash bindings",
+      "passed": true
+    },
+    {
+      "check": "every local artifact hash/size checked before write",
+      "passed": true
+    },
+    {
+      "check": "artifact path confined to June root",
+      "passed": true
+    },
+    {
+      "check": "only June target names admitted",
+      "passed": true
+    },
+    {
+      "check": "default dry-run reaches no S3 writes; only backup,daily,index put paths",
+      "passed": true
+    },
+    {
+      "check": "backup and daily objects are create-only",
+      "passed": true
+    },
+    {
+      "check": "index write conditional on fresh ETag",
+      "passed": true
+    },
+    {
+      "check": "June-specific index backup namespace",
+      "passed": true
+    },
+    {
+      "check": "backup and merged index full-body hashes verified",
+      "passed": true
+    },
+    {
+      "check": "strict protected preservation during publication and resume",
+      "passed": true
+    },
+    {
+      "check": "resume binds original exact artifact plan",
+      "passed": true
+    },
+    {
+      "check": "invalidation scoped to index and June paths",
+      "passed": true
+    },
+    {
+      "check": "no Lambda deployment/invocation,sends,or remote delete calls",
+      "passed": true
+    },
+    {
+      "check": "publisher unchanged during review",
+      "passed": true
+    },
+    {
+      "check": "current full20 runtime artifact audit accepted",
+      "passed": true
+    },
+    {
+      "check": "runtime artifact gate rejects static-only receipt",
+      "passed": true
+    },
+    {
+      "check": "runtime artifact gate rejects missing runtime flag",
+      "passed": true
+    },
+    {
+      "check": "runtime artifact gate rejects numeric runtime flag",
+      "passed": true
+    },
+    {
+      "check": "runtime artifact gate rejects boolean fatal count",
+      "passed": true
+    },
+    {
+      "check": "runtime artifact gate rejects missing fatal count",
+      "passed": true
+    },
+    {
+      "check": "runtime artifact gate rejects remaining major issue",
+      "passed": true
+    },
+    {
+      "check": "runtime artifact gate rejects partial dates",
+      "passed": true
+    },
+    {
+      "check": "runtime artifact gate rejects reordered dates",
+      "passed": true
+    },
+    {
+      "check": "runtime artifact gate rejects partial report rows",
+      "passed": true
+    },
+    {
+      "check": "runtime artifact gate rejects duplicate report date",
+      "passed": true
+    },
+    {
+      "check": "runtime artifact gate rejects stale manifest hash",
+      "passed": true
+    },
+    {
+      "check": "runtime artifact gate rejects missing reviewer hash",
+      "passed": true
+    },
+    {
+      "check": "runtime artifact gate rejects changed renderer hash",
+      "passed": true
+    },
+    {
+      "check": "runtime artifact gate rejects extra tool binding",
+      "passed": true
+    },
+    {
+      "check": "publisher plan actually calls mandatory runtime artifact gate",
+      "passed": true
+    },
+    {
+      "check": "publisher plan detects manifest changes before returning",
+      "passed": true
+    },
+    {
+      "check": "actual final manifest hash predicate stable",
+      "passed": true
+    },
+    {
+      "check": "actual final manifest hash predicate changed",
+      "passed": true
+    },
+    {
+      "check": "current component predicate accepted",
+      "passed": true
+    },
+    {
+      "check": "current component predicate passed",
+      "passed": true
+    },
+    {
+      "check": "current component predicate missing status",
+      "passed": true
+    },
+    {
+      "check": "current component predicate pending status",
+      "passed": true
+    },
+    {
+      "check": "current component predicate boolean fatal",
+      "passed": true
+    },
+    {
+      "check": "current component predicate string fatal",
+      "passed": true
+    },
+    {
+      "check": "current component predicate nonzero fatal",
+      "passed": true
+    },
+    {
+      "check": "canonical component status integer-zero and retail hash remain mandatory",
+      "passed": true
+    },
+    {
+      "check": "every current component independently binds exclusions bytes",
+      "passed": true
+    },
+    {
+      "check": "concurrent snapshot retains all182 ordered keys and exact absent/etag/hash/size metadata",
+      "passed": true
+    },
+    {
+      "check": "protected snapshot actually overlaps eight independent reads",
+      "passed": true
+    },
+    {
+      "check": "concurrent protected snapshot propagates worker read failure",
+      "passed": true
+    },
+    {
+      "check": "isolate only target absence reads and existing-target guard",
+      "passed": true
+    },
+    {
+      "check": "concurrent target absence fixture all absent",
+      "passed": true
+    },
+    {
+      "check": "all65 target absence reads complete without dropped results and preserve input order",
+      "passed": true
+    },
+    {
+      "check": "concurrent target absence fixture first exists",
+      "passed": true
+    },
+    {
+      "check": "concurrent target absence fixture last exists",
+      "passed": true
+    },
+    {
+      "check": "concurrent target absence fixture worker read failed",
+      "passed": true
+    },
+    {
+      "check": "absent optional registry matches explicit null precision binding",
+      "passed": true
+    },
+    {
+      "check": "present optional registry matches exact precision hash",
+      "passed": true
+    },
+    {
+      "check": "new registry after review rejects former null binding",
+      "passed": true
+    },
+    {
+      "check": "removed reviewed registry rejects old hash binding",
+      "passed": true
+    },
+    {
+      "check": "changed registry bytes/hash rejected",
+      "passed": true
+    },
+    {
+      "check": "optional registry rule cannot waive source or market acceptance",
+      "passed": true
+    },
+    {
+      "check": "publisher bytes stable through all concurrency and gate fixtures",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "scope": "June publisher code: exact65targets/182protected objects,20date gates, full current runtime artifact audit, optional registry hashes, conditional sequential writes, pure index merge and concurrent read fail propagation."
+}

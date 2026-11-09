@@ -1,0 +1,104 @@
+{
+ "ticker": "TGT",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TGT?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "802fdb59a9549d0e76bb0ddb8b283a70f949a15d279834969f78fb0e43d17a97",
+   "fetched_at_utc": "2026-11-09T09:47:51.599868+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TGT?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "c7e8bf6eb1010508330b63e446af14c745fc2b50e602428a4b51fb5d429b9fcb",
+   "fetched_at_utc": "2026-11-09T09:47:51.778699+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/TGT?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "802fdb59a9549d0e76bb0ddb8b283a70f949a15d279834969f78fb0e43d17a97",
+    "fetched_at_utc": "2026-11-09T09:47:51.599868+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "TGT",
+    "exchangeName": "NYQ",
+    "fullExchangeName": "NYSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 99153000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/TGT?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "c7e8bf6eb1010508330b63e446af14c745fc2b50e602428a4b51fb5d429b9fcb",
+    "fetched_at_utc": "2026-11-09T09:47:51.778699+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "TGT",
+    "exchangeName": "NYQ",
+    "fullExchangeName": "NYSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 99153000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 593,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

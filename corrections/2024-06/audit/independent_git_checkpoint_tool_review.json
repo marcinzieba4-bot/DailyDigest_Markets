@@ -1,0 +1,107 @@
+{
+  "status": "accepted",
+  "passed": true,
+  "fatal_or_major_remaining": 0,
+  "scope": "git_checkpoint_public_projection_engineering_only",
+  "checked_at_utc": "2026-11-09T11:30:16.937702+00:00",
+  "script_path": "work/prepare_git_checkpoint.py",
+  "script_sha256": "b3c62402f855fbd036709e5821e876075b58d986128ab1f206c3602a7defb16e",
+  "validator_sha256": "1abc3fad19e5ca53dc8712e50640c0b1a0d68e374b1962f0979763eef739f5c1",
+  "public_projection_review_sha256": "8daad69ee298c29f4809088730522f8f85e9beaf9bb9f5c456614e6c1d410d19",
+  "cases": [
+    {
+      "case": "raw_MCP_candidate_rejected_audit/leaked.json",
+      "passed": true
+    },
+    {
+      "case": "raw_MCP_candidate_rejected_audit/review_history/leaked.json",
+      "passed": true
+    },
+    {
+      "case": "raw_MCP_candidate_rejected_reference/leaked.json",
+      "passed": true
+    },
+    {
+      "case": "raw_MCP_candidate_rejected_audit_work/leaked.json",
+      "passed": true
+    },
+    {
+      "case": "raw_MCP_candidate_rejected_audit/news_provenance/leaked.json.gz",
+      "passed": true
+    },
+    {
+      "case": "raw_MCP_candidate_rejected_reference/leaked.txt",
+      "passed": true
+    },
+    {
+      "case": "raw_MCP_candidate_rejected_audit/treasury_retained.csv",
+      "passed": true
+    },
+    {
+      "case": "raw_MCP_candidate_rejected_reference/nested.txt",
+      "passed": true
+    },
+    {
+      "case": "raw_MCP_candidate_rejected_reference/double_encoded.json",
+      "passed": true
+    },
+    {
+      "case": "raw_MCP_candidate_rejected_audit_work/extra_metadata.json",
+      "passed": true
+    },
+    {
+      "case": "raw_MCP_JSONL_in_text_candidate_rejected",
+      "passed": true
+    },
+    {
+      "case": "ordinary_metadata_remains_selected",
+      "passed": true
+    },
+    {
+      "case": "exact_registered_private_original_explicitly_omitted",
+      "passed": true
+    },
+    {
+      "case": "unsafe_or_forbidden_path_rejected_../outside.json",
+      "passed": true
+    },
+    {
+      "case": "unsafe_or_forbidden_path_rejected_/outside.json",
+      "passed": true
+    },
+    {
+      "case": "unsafe_or_forbidden_path_rejected_CLAUDE.md",
+      "passed": true
+    },
+    {
+      "case": "unsafe_or_forbidden_path_rejected_claude.md",
+      "passed": true
+    },
+    {
+      "case": "candidate_symlink_rejected",
+      "passed": true
+    },
+    {
+      "case": "copy_requires_exact_reviewed_plan_before_any_Git",
+      "passed": true
+    },
+    {
+      "case": "synthetic_configured_value_hits_detected_in_gzip_and_JSON",
+      "passed": true
+    },
+    {
+      "case": "exact_month_target_counts",
+      "passed": true
+    }
+  ],
+  "case_count": 21,
+  "actual_git_commands_executed": false,
+  "repository_mutated": false,
+  "plan_or_copy_executed": false,
+  "configured_credentials_read": false,
+  "commit_or_push_performed": false,
+  "limits": [
+    "Candidate/path/plan-before-copy/secret-scanner engineering controls only.",
+    "Actual postdelivery plan, copy/stage and checkpoint commit/push remain root operations; no deployment or report acceptance."
+  ]
+}

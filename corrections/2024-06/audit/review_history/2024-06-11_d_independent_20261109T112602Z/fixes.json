@@ -1,0 +1,151 @@
+{
+  "date": "2024-06-11",
+  "reviewer": "/root/june_nonretail_d",
+  "before_file_sha256": "f977a95d61d079a9488fc3954b90e479e35ad6edef309813d4f95219b9be201f",
+  "after_file_sha256": "4044d50304eb4f7b02f2f088a4e0c190ebd579e03303b9557f5f0de7cc366793",
+  "changes": [
+    {
+      "path": [
+        "geo",
+        0,
+        "parts",
+        1,
+        1
+      ],
+      "before": "The 2Y Treasury yield is 4.87%, the 10Y is 4.47% and the 10Y–2Y spread is -40 bps. Over twenty observations the 2Y was unchanged, the 10Y fell 3 bps and the spread narrowed 3 bps: the curve is inverted and its twenty-observation move is little changed. The S&P 500 ended at 5,360.79 index points, VIX at 12.74 index points and DXY at 105.15 index points (US Treasury, prior close 2024-06-10; Yahoo Finance, prior close 2024-06-10). These references describe a market still willing to own equities despite a restrictive front end. They do not demonstrate that inflation risk or financing pressure has disappeared.",
+      "after": "The 2Y Treasury yield is 4.87%, the 10Y is 4.47% and the 10Y–2Y spread is -40 bps. Over twenty observations the 2Y was unchanged, the 10Y fell 3 bps and the spread fell 3 bps: the curve is inverted and its twenty-observation move is little changed. The S&P 500 ended at 5,360.79 index points, VIX at 12.74 index points and DXY at 105.15 index points (US Treasury, prior close 2024-06-10; Yahoo Finance, prior close 2024-06-10). These references describe a market still willing to own equities despite a restrictive front end. They do not demonstrate that inflation risk or financing pressure has disappeared.",
+      "reason": "Exact signed Treasury spread direction; curve becomes marginally more inverted."
+    },
+    {
+      "path": [
+        "geo",
+        0,
+        "parts",
+        2,
+        1
+      ],
+      "before": "Corporate catalysts are creating dispersion inside that calm benchmark. CNBC reports CrowdStrike reaching a record following its inclusion in the S&P 500, while Reuters reports Apple unveiling Apple Intelligence and bringing ChatGPT to the iPhone. Index membership and product development are different routes to attention and should be valued differently. The former can affect demand for a security; the latter must eventually change customer economics. Neither removes the need to examine price, cash generation and concentration when choosing technology exposure. Treat benchmark strength as a starting condition, with individual operating evidence determining where to add risk. [[n1179]] [[n0181]]",
+      "after": "Corporate catalysts are creating dispersion inside that calm benchmark. CNBC reports CrowdStrike reaching a record following its announced inclusion in the S&P 500, while Reuters reports Apple unveiling Apple Intelligence and bringing ChatGPT to the iPhone. Index membership and product development are different routes to attention and should be valued differently. The former can affect demand for a security; the latter must eventually change customer economics. Neither removes the need to examine price, cash generation and concentration when choosing technology exposure. Treat benchmark strength as a starting condition, with individual operating evidence determining where to add risk. [[n1179]] [[n0181]]",
+      "reason": "Membership announcement is available; effective index inclusion remains pending."
+    },
+    {
+      "path": [
+        "catalysts",
+        0,
+        "parts",
+        0,
+        1
+      ],
+      "before": "CNBC reports CrowdStrike rallying to a record after S&P 500 inclusion. The membership catalyst can affect security demand, while the operating thesis still depends on customers and profitable execution. Do not treat an index-related price response as a substitute for a new earnings result. [[n1179]]",
+      "after": "CNBC reports CrowdStrike rallying to a record after its announced S&P 500 inclusion. The membership catalyst can affect security demand, while the operating thesis still depends on customers and profitable execution. Do not treat an index-related price response as a substitute for a new earnings result. [[n1179]]",
+      "reason": "Same announcement-versus-effective-membership clarification."
+    },
+    {
+      "path": [
+        "geo",
+        2,
+        "parts",
+        3,
+        1
+      ],
+      "before": "The property policy also has distributional consequences. The New York Times reports homeowners angry at the bailout, while Reuters' current de-stocking account questions the cheer available to developers. Those perspectives can coexist: an intervention may stabilize the system without satisfying every household or restoring every developer's economics. Watch whether transactions become easier, projects complete and cash reaches counterparties. Avoid equating a smaller risk of systemic disruption with a renewed speculative building cycle. The more useful constructive position is exposure to demand that remains viable without a rapid return of housing-price expectations. A fragile borrower may need much more than general policy support to become an attractive equity investment. [[n0281]]",
+      "after": "The property policy also has distributional consequences. The New York Times reports homeowners angry at the bailout. Different participants can experience the policy differently: an intervention may stabilize the system without satisfying every household or restoring every developer's economics. Watch whether transactions become easier, projects complete and cash reaches counterparties. Avoid equating a smaller risk of systemic disruption with a renewed speculative building cycle. The more useful constructive position is exposure to demand that remains viable without a rapid return of housing-price expectations. A fragile borrower may need much more than general policy support to become an attractive equity investment. [[n0281]]",
+      "reason": "Remove repeated de-stocking factual clause without local attribution; preserve existing NYT premise and avoid excessive citation reuse."
+    },
+    {
+      "path": [
+        "sectors",
+        11,
+        "parts",
+        0,
+        1
+      ],
+      "before": "European autos face a fresh market-access decision. The BBC expects tariffs on Chinese electric vehicles, while Reuters reports Volvo moving production toward Belgium to avoid such barriers. The expected EU action is still pending, but the footprint response illustrates the investment pressure created by a more fragmented trading system. [[n0316]]",
+      "after": "European autos face a fresh market-access decision. The BBC expects tariffs on Chinese electric vehicles. The EU action is still pending, while the uncertainty requires producers to assess how production footprints and investment could adapt to a more fragmented trading system. [[n0316]]",
+      "reason": "Keep specific Times-qualified Volvo fact in Reported paragraph; narrative now uses only its locally cited pending-tariff evidence."
+    },
+    {
+      "path": [
+        "underowned",
+        0,
+        "parts",
+        1,
+        1
+      ],
+      "before": "Morgan Stanley is a named exposure to investigate. The benefit could appear through service capacity or costs, but implementation, supervision and customer trust are part of the economics. A time-saving claim is not automatically an expense reduction, particularly if the firm reinvests the capacity in more service.",
+      "after": "Morgan Stanley shares are a named exposure to investigate. The benefit could appear through service capacity or costs, but implementation, supervision and customer trust are part of the economics. A time-saving claim is not automatically an expense reduction, particularly if the firm reinvests the capacity in more service.",
+      "reason": "Make explicit named share instrument in Exposure & Risk."
+    },
+    {
+      "path": [
+        "underowned",
+        1,
+        "parts",
+        1,
+        1
+      ],
+      "before": "Lululemon provides a focused exposure to examine against a broader discretionary fund. The company carries brand, regional and execution risk, while the fund includes businesses serving different customer budgets. Strong regional demand cannot establish that margins or customer loyalty will remain equally durable everywhere.",
+      "after": "Lululemon shares provide a focused exposure to examine against a broader discretionary fund. The company carries brand, regional and execution risk, while the fund includes businesses serving different customer budgets. Strong regional demand cannot establish that margins or customer loyalty will remain equally durable everywhere.",
+      "reason": "Make explicit named share instrument in Exposure & Risk."
+    },
+    {
+      "path": [
+        "underowned",
+        2,
+        "parts",
+        1,
+        1
+      ],
+      "before": "GE Vernova is a named supplier exposure; a broad industrial fund spreads project and company risk. Orders can create working-capital needs before cash collection, and a busy project pipeline is valuable only when contract execution preserves margins. The end-market need cannot establish the supplier's economics by itself.",
+      "after": "GE Vernova shares are a named supplier exposure; a broad industrial fund spreads project and company risk. Orders can create working-capital needs before cash collection, and a busy project pipeline is valuable only when contract execution preserves margins. The end-market need cannot establish the supplier's economics by itself.",
+      "reason": "Make explicit named share instrument in Exposure & Risk."
+    },
+    {
+      "path": [
+        "underowned",
+        3,
+        "parts",
+        1,
+        1
+      ],
+      "before": "Direct Treasuries or a short-duration Treasury fund offer named instrument types to compare. Duration, maturity and the need for ready cash determine suitability; market-function improvement cannot remove inflation or fiscal risk. A longer bond can still fall in price while trading conditions improve.",
+      "after": "The SHY Treasury ETF provides a named short-duration instrument to examine alongside direct Treasuries. Duration, maturity and the need for ready cash determine suitability; market-function improvement cannot remove inflation or fiscal risk. A longer bond can still fall in price while trading conditions improve.",
+      "reason": "Satisfy explicit named instrument requirement with own-card SHY; no new price claim."
+    },
+    {
+      "path": [
+        "sectors",
+        9,
+        "parts",
+        1,
+        1
+      ],
+      "before": "Yahoo Finance highlights tower REITs with a history of growing dividends. The title identifies a distribution-oriented investment discussion; it does not establish that current cash coverage or refinancing conditions have improved. Property subsectors with different tenants and capital needs should not share a single valuation argument. [[n0456]]",
+      "after": "Yahoo Finance highlights tower REITs with a history of growing dividends. A distribution-oriented position still needs current cash coverage and manageable refinancing. Property subsectors with different tenants and capital needs should not share a single valuation argument. [[n0456]]",
+      "reason": "Remove source-input aside; retain ordinary investment risk and no unsupported recovery claim."
+    },
+    {
+      "path": [
+        "crypto",
+        "parts",
+        1,
+        1
+      ],
+      "before": "Investopedia asks why Bitcoin remains below its cited threshold despite large ETF flows. The title establishes a reported tension between fund demand and price, without supplying a complete account of every buyer and seller. The Financial Times reports Robinhood agreeing to acquire Bitstamp, a distribution and corporate-development catalyst. Neither fact guarantees a rise in token value. ETF purchases can be offset by other selling, while an exchange acquisition has costs, integration risks and business objectives that differ from direct exposure to Bitcoin. Keep the asset-demand and corporate-transaction discussions separate. [[n1180]] [[n1327]]",
+      "after": "Investopedia describes tension between Bitcoin's price and large ETF flows. Fund demand need not determine the price when other buyers and sellers are active, so the investment case still requires persistent demand capable of absorbing competing supply. The Financial Times reports Robinhood agreeing to acquire Bitstamp, a distribution and corporate-development catalyst. Neither fact guarantees a rise in token value. ETF purchases can be offset by other selling, while an exchange acquisition has costs, integration risks and business objectives that differ from direct exposure to Bitcoin. Keep the asset-demand and corporate-transaction discussions separate. [[n1180]] [[n1327]]",
+      "reason": "Remove input narration while preserving supported flow-price tension and general mechanism."
+    },
+    {
+      "path": [
+        "catalysts",
+        3,
+        "parts",
+        0,
+        1
+      ],
+      "before": "The Guardian reports Apple bringing ChatGPT to Siri as it introduces Apple Intelligence. The product announcement is complete, shifting the catalyst toward implementation and customer response. The title establishes the integration, not an incremental revenue estimate or a guarantee of a device-upgrade cycle. [[n0183]]",
+      "after": "The Guardian reports Apple bringing ChatGPT to Siri as it introduces Apple Intelligence. The product announcement is complete, shifting the catalyst toward implementation and customer response. The integration still needs adoption and useful customer economics before an incremental revenue stream or device-upgrade cycle can be established. [[n0183]]",
+      "reason": "Ordinary commercial interpretation rather than source-title narration."
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+ "ticker": "DNP.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2025-07-31",
+   "factor": 10.0,
+   "ratio": "10:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DNP.WA?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "019fb1467ccdc9a879889fff0d43eeb6e4ef14671e79ce41ce7517c8aa7410fe",
+   "fetched_at_utc": "2026-11-09T09:47:39.577553+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DNP.WA?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "055a2837fc82d60fe6c6d48a20732b163ca7023bbd3d5e616b1c5aa355f4fa72",
+   "fetched_at_utc": "2026-11-09T09:47:39.745353+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/DNP.WA?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "019fb1467ccdc9a879889fff0d43eeb6e4ef14671e79ce41ce7517c8aa7410fe",
+    "fetched_at_utc": "2026-11-09T09:47:39.577553+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "PLN",
+    "symbol": "DNP.WA",
+    "exchangeName": "WSE",
+    "fullExchangeName": "Warsaw",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1492585200,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Warsaw"
+   },
+   "discarded_price_observations": 60,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/DNP.WA?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "055a2837fc82d60fe6c6d48a20732b163ca7023bbd3d5e616b1c5aa355f4fa72",
+    "fetched_at_utc": "2026-11-09T09:47:39.745353+00:00"
+   },
+   "retained_exact_split_events": {
+    "1753945200": {
+     "date": 1753945200,
+     "numerator": 10.0,
+     "denominator": 1.0,
+     "splitRatio": "10:1"
+    }
+   },
+   "retained_identity_meta": {
+    "currency": "PLN",
+    "symbol": "DNP.WA",
+    "exchangeName": "WSE",
+    "fullExchangeName": "Warsaw",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1492585200,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Warsaw"
+   },
+   "discarded_price_observations": 592,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

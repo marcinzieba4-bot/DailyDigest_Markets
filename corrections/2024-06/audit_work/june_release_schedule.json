@@ -1,0 +1,1302 @@
+{
+  "month": "2024-06",
+  "status": "draft_requires_independent_schedule_and_guard_review",
+  "scope": "Safety screen only, never author factual evidence. No original publisher vintage certified. Unknown early-local clocks conservatively omitted pending evidence.",
+  "guards": [
+    {
+      "label": "Japan May final manufacturing PMI",
+      "release_utc": "2024-06-03T00:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-03",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-04",
+      "earliest_pub_date": "2024-05-27",
+      "pattern": "^(?=.*(?:Japan|Japanese|\\bBOJ\\b))(?=.*(?:manufactur|factory|PMI))(?=.*(?:May|final|PMI))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China May Caixin manufacturing PMI",
+      "release_utc": "2024-06-03T01:45:00+00:00",
+      "calendar_release_utc_date": "2024-06-03",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-04",
+      "earliest_pub_date": "2024-05-27",
+      "pattern": "^(?=.*(?:China|Chinese|Caixin|PBOC))(?=.*(?:manufactur|factory|PMI))(?=.*(?:Caixin|private survey))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Poland May manufacturing PMI",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-03",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-04",
+      "earliest_pub_date": "2024-05-27",
+      "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|\\bGUS\\b))(?=.*(?:PMI|manufactur|przemysł\\w*))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US May ISM manufacturing",
+      "release_utc": "2024-06-03T14:00:00+00:00",
+      "calendar_release_utc_date": "2024-06-03",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-04",
+      "earliest_pub_date": "2024-05-27",
+      "pattern": "^(?=.*(?:\\bISM\\b|Institute for Supply Management))(?=.*manufactur)",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US April JOLTS",
+      "release_utc": "2024-06-04T14:00:00+00:00",
+      "calendar_release_utc_date": "2024-06-04",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-05",
+      "earliest_pub_date": "2024-05-28",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|JOLTS|American))(?=.*(?:JOLTS|job openings|job vacancies))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_releases.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Japan April wages early local",
+      "release_utc": "2024-06-04T23:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-04",
+      "timing_precision": "historical date and exact clock, evidence types stated in notes",
+      "eligible_edition": "2024-06-05",
+      "earliest_pub_date": "2024-05-28",
+      "pattern": "^(?=.*(?:Japan|Japanese|\\bBOJ\\b))(?=.*(?:wages|real pay|labor earnings|labour earnings))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/provenance_calendar_final_clock_check.json"
+      ],
+      "notes": "Dated MHLW release Jun5 plus contemporaneous Monex 08:30JST calendar; timing corroboration, not original article certification."
+    },
+    {
+      "label": "Japan May final services PMI",
+      "release_utc": "2024-06-05T00:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-05",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-06",
+      "earliest_pub_date": "2024-05-29",
+      "pattern": "^(?=.*(?:Japan|Japanese|\\bBOJ\\b))(?=.*(?:services|service sector))(?=.*(?:PMI|May))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Australia Q1 GDP",
+      "release_utc": "2024-06-05T01:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-05",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-06",
+      "earliest_pub_date": "2024-05-29",
+      "pattern": "^(?=.*(?:Australia|Australian|\\bRBA\\b))(?=.*(?:GDP|gross domestic product|economic growth))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China May Caixin services PMI",
+      "release_utc": "2024-06-05T01:45:00+00:00",
+      "calendar_release_utc_date": "2024-06-05",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-06",
+      "earliest_pub_date": "2024-05-29",
+      "pattern": "^(?=.*(?:China|Chinese|Caixin|PBOC))(?=.*(?:services|service sector))(?=.*(?:Caixin|private survey))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US May ADP employment",
+      "release_utc": "2024-06-05T12:15:00+00:00",
+      "calendar_release_utc_date": "2024-06-05",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-06",
+      "earliest_pub_date": "2024-05-29",
+      "pattern": "^(?=.*\\bADP\\b)(?=.*(?:payroll|private.sector|employment|job growth))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Bank of Canada June decision",
+      "release_utc": "2024-06-05T13:45:00+00:00",
+      "calendar_release_utc_date": "2024-06-05",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-06",
+      "earliest_pub_date": "2024-05-29",
+      "pattern": "^(?=.*(?:Bank of Canada|Canadian central bank))(?=.*(?:rates?|policy|decision))",
+      "kind": "policy",
+      "evidence": [
+        "audit_work/june_calendar_web_releases.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Poland June RPP decision",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-05",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-06",
+      "earliest_pub_date": "2024-05-29",
+      "pattern": "^(?=.*(?:\\bNBP\\b|\\bRPP\\b|Glapi\\w*|Polish central bank|Poland.*interest rates|Rada Polityki Pieniężnej))(?=.*(?:\\brates?\\b|stopy|stóp|stopach|decyzj\\w*|polityk\\w* pieniężn\\w*))",
+      "kind": "policy",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US May ISM services",
+      "release_utc": "2024-06-05T14:00:00+00:00",
+      "calendar_release_utc_date": "2024-06-05",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-06",
+      "earliest_pub_date": "2024-05-29",
+      "pattern": "^(?=.*(?:\\bISM\\b|Institute for Supply Management))(?=.*(?:services|non.manufacturing))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "ECB June decision",
+      "release_utc": "2024-06-06T12:15:00+00:00",
+      "calendar_release_utc_date": "2024-06-06",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-07",
+      "earliest_pub_date": "2024-05-30",
+      "pattern": "^(?!.*bank interest rate statistics)(?=.*(?:\\bECB\\b|European Central Bank|Lagarde))(?=.*(?:rates?|policy|decision|cuts?|holds?|keeps?|leaves?))",
+      "kind": "policy",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US April trade",
+      "release_utc": "2024-06-06T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-06",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-07",
+      "earliest_pub_date": "2024-05-30",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|American|United States))(?=.*(?:trade deficit|trade balance|trade data))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Japan April household spending early local",
+      "release_utc": "2024-06-06T23:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-06",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-07",
+      "earliest_pub_date": "2024-05-30",
+      "pattern": "^(?=.*(?:Japan|Japanese|\\bBOJ\\b))(?=.*(?:household spending|household expenditure))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": "Westpac June calendar states Jun7 09:30 AEST, equivalent to Jun6 23:30UTC; Jun7 edition may use released actual."
+    },
+    {
+      "label": "China May trade",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-07",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-10",
+      "earliest_pub_date": "2024-05-31",
+      "pattern": "^(?=.*(?:China|Chinese|Caixin|PBOC))(?=.*(?:exports|imports|trade surplus|trade data))(?=.*(?:May|trade data))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US May employment report",
+      "release_utc": "2024-06-07T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-07",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-10",
+      "earliest_pub_date": "2024-05-31",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|American|payroll|nonfarm|non-farm))(?=.*(?:jobs report|payroll|nonfarm|non-farm|employment report|unemployment rate))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_releases.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Japan Q1 GDP revision early local",
+      "release_utc": "2024-06-09T23:50:00+00:00",
+      "calendar_release_utc_date": "2024-06-09",
+      "timing_precision": "historical date and exact clock, evidence types stated in notes",
+      "eligible_edition": "2024-06-10",
+      "earliest_pub_date": "2024-06-02",
+      "pattern": "^(?=.*(?:Japan|Japanese|\\bBOJ\\b))(?=.*(?:GDP|gross domestic product|economic growth))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/provenance_calendar_japan_clocks.json"
+      ],
+      "notes": "Historical ESRI/eStat release Jun10 08:50JST, beforeJun10 UTC cutoff."
+    },
+    {
+      "label": "UK April employment",
+      "release_utc": "2024-06-11T06:00:00+00:00",
+      "calendar_release_utc_date": "2024-06-11",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-12",
+      "earliest_pub_date": "2024-06-04",
+      "pattern": "^(?=.*(?:\\bUK\\b|British|Britain))(?=.*(?:wages|earnings|unemployment|jobs report|employment))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China May CPI PPI",
+      "release_utc": "2024-06-12T01:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-12",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-13",
+      "earliest_pub_date": "2024-06-05",
+      "pattern": "^(?=.*(?:China|Chinese|Caixin|PBOC))(?=.*(?:\\bCPI\\b|\\bPPI\\b|consumer prices|producer prices|consumer inflation|producer inflation|May.*inflation|inflation.*May))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "UK April monthly GDP",
+      "release_utc": "2024-06-12T06:00:00+00:00",
+      "calendar_release_utc_date": "2024-06-12",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-13",
+      "earliest_pub_date": "2024-06-05",
+      "pattern": "^(?=.*(?:\\bUK\\b|British|Britain))(?=.*(?:GDP|economic growth|gross domestic product|monthly output))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US May CPI",
+      "release_utc": "2024-06-12T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-12",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-13",
+      "earliest_pub_date": "2024-06-05",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|American|United States))(?=.*(?:\\bCPI\\b|consumer prices|inflation))(?=.*(?:May|CPI|consumer price))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_releases.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "FOMC June decision and projections",
+      "release_utc": "2024-06-12T18:00:00+00:00",
+      "calendar_release_utc_date": "2024-06-12",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-13",
+      "earliest_pub_date": "2024-06-05",
+      "pattern": "^(?=.*(?:\\bFed\\b|FOMC|Federal Reserve|Powell))(?=.*(?:rates?|policy (?:decision|meeting)|decision|dot.plot|projections|rate.cuts?))",
+      "kind": "policy",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Australia May employment",
+      "release_utc": "2024-06-13T01:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-13",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-14",
+      "earliest_pub_date": "2024-06-06",
+      "pattern": "^(?=.*(?:Australia|Australian|\\bRBA\\b))(?=.*(?:jobs|employment|unemployment|labour|labor))(?=.*(?:May|jobs report|jobs data|unemployment|employment data|employment report))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US May PPI",
+      "release_utc": "2024-06-13T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-13",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-14",
+      "earliest_pub_date": "2024-06-06",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|American|United States))(?=.*(?:\\bPPI\\b|producer prices|producer inflation))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_releases.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "BOJ June decision",
+      "release_utc": "2024-06-14T03:23:00+00:00",
+      "calendar_release_utc_date": "2024-06-14",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-17",
+      "earliest_pub_date": "2024-06-07",
+      "pattern": "^(?=.*(?:\\bBOJ\\b|Bank of Japan|Ueda))(?=.*(?:rates?|policy (?:decision|meeting)|decision|bond.buying|bond purchases|taper|hikes?|raises?|cuts?|keeps?|holds?))",
+      "kind": "policy",
+      "evidence": [
+        "audit_work/june_calendar_web_policy.json"
+      ],
+      "notes": "BOJ own search extraction reports statement Jun14 12:23 Japan-local; converts03:23UTC. Jun14 cutoff precedes outcome."
+    },
+    {
+      "label": "US June preliminary Michigan sentiment",
+      "release_utc": "2024-06-14T14:00:00+00:00",
+      "calendar_release_utc_date": "2024-06-14",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-17",
+      "earliest_pub_date": "2024-06-07",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|Michigan|American))(?=.*(?:consumer sentiment|Michigan))(?=.*(?:June|preliminary|Michigan))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China May lending and money supply",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-14",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-17",
+      "earliest_pub_date": "2024-06-07",
+      "pattern": "^(?=.*(?:China|Chinese|Caixin|PBOC))(?=.*(?:new loans|yuan loans|bank loans|\\bM2\\b|money supply|total social financing|credit data))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": "Variable-time release requires independent June date confirmation."
+    },
+    {
+      "label": "China May activity and property",
+      "release_utc": "2024-06-17T02:00:00+00:00",
+      "calendar_release_utc_date": "2024-06-17",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-18",
+      "earliest_pub_date": "2024-06-10",
+      "pattern": "^(?=.*(?:China|Chinese|Caixin|PBOC))(?=.*(?:retail sales|industrial output|industrial production|fixed.asset|property investment|home prices|house prices))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China June MLF decision",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-17",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-18",
+      "earliest_pub_date": "2024-06-10",
+      "pattern": "^(?=.*(?:China|Chinese|Caixin|PBOC))(?=.*(?:\\bMLF\\b|medium.term lending|medium.term policy))",
+      "kind": "policy",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "RBA June decision",
+      "release_utc": "2024-06-18T04:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-18",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-19",
+      "earliest_pub_date": "2024-06-11",
+      "pattern": "^(?=.*(?:\\bRBA\\b|Reserve Bank of Australia|Australian central bank))(?=.*(?:rates?|policy|decision|cash rate))",
+      "kind": "policy",
+      "evidence": [
+        "audit_work/june_calendar_web_policy.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Germany June ZEW",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-18",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-19",
+      "earliest_pub_date": "2024-06-11",
+      "pattern": "^(?=.*(?:Germany|German|ZEW))(?=.*\\bZEW\\b)",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US May retail sales",
+      "release_utc": "2024-06-18T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-18",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-19",
+      "earliest_pub_date": "2024-06-11",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|American|United States))(?=.*retail sales)",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US May industrial production",
+      "release_utc": "2024-06-18T13:15:00+00:00",
+      "calendar_release_utc_date": "2024-06-18",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-19",
+      "earliest_pub_date": "2024-06-11",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|American|United States))(?=.*(?:industrial output|industrial production|factory output))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "BOJ April meeting minutes early local",
+      "release_utc": "2024-06-18T23:50:00+00:00",
+      "calendar_release_utc_date": "2024-06-18",
+      "timing_precision": "historical date and exact clock, evidence types stated in notes",
+      "eligible_edition": "2024-06-19",
+      "earliest_pub_date": "2024-06-11",
+      "pattern": "^(?=.*(?:\\bBOJ\\b|Bank of Japan))(?=.*minutes)",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/provenance_calendar_japan_schedule_search.json"
+      ],
+      "notes": "BOJ historical release schedule Jun19 08:50JST; minutes are distinct from Jun14 decision."
+    },
+    {
+      "label": "UK May CPI",
+      "release_utc": "2024-06-19T06:00:00+00:00",
+      "calendar_release_utc_date": "2024-06-19",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-20",
+      "earliest_pub_date": "2024-06-12",
+      "pattern": "^(?=.*(?:\\bUK\\b|British|Britain))(?=.*(?:inflation|\\bCPI\\b|consumer prices))(?=.*(?:May|CPI|inflation))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China June LPR",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-20",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-21",
+      "earliest_pub_date": "2024-06-13",
+      "pattern": "^(?=.*(?:China|Chinese|Caixin|PBOC))(?=.*(?:loan prime|\\bLPR\\b|benchmark lending))",
+      "kind": "policy",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Bank of England June decision",
+      "release_utc": "2024-06-20T11:00:00+00:00",
+      "calendar_release_utc_date": "2024-06-20",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-21",
+      "earliest_pub_date": "2024-06-13",
+      "pattern": "^(?=.*(?:Bank of England|\\bBOE\\b|British central bank))(?=.*(?:rates?|policy|decision|cuts?|holds?|keeps?|unchanged))",
+      "kind": "policy",
+      "evidence": [
+        "audit_work/june_calendar_web_policy.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US May housing starts",
+      "release_utc": "2024-06-20T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-20",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-21",
+      "earliest_pub_date": "2024-06-13",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|American|United States))(?=.*(?:housing starts|building permits))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Japan May national CPI early local",
+      "release_utc": "2024-06-20T23:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-20",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-21",
+      "earliest_pub_date": "2024-06-13",
+      "pattern": "^(?!.*Tokyo)(?=.*(?:Japan|Japanese|\\bBOJ\\b))(?=.*(?:inflation|\\bCPI\\b|consumer prices))(?=.*(?:May|national|nationwide|core))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": "Westpac June21 09:30 AEST convertsJun20 23:30UTC; no blanket report-date block."
+    },
+    {
+      "label": "Japan June flash PMI",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-21",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-24",
+      "earliest_pub_date": "2024-06-14",
+      "pattern": "^(?=.*(?:Japan|Japanese|\\bBOJ\\b))(?=.*(?:\\bPMI\\b|purchasing managers|business activity))(?=.*(?:June|flash|preliminary))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "UK May retail sales",
+      "release_utc": "2024-06-21T06:00:00+00:00",
+      "calendar_release_utc_date": "2024-06-21",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-24",
+      "earliest_pub_date": "2024-06-14",
+      "pattern": "^(?=.*(?:\\bUK\\b|British|Britain))(?=.*retail sales)",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Europe US June flash PMIs",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-21",
+      "timing_precision": "all relevant regional releases after this UTC midnight; exact minute unasserted",
+      "eligible_edition": "2024-06-24",
+      "earliest_pub_date": "2024-06-14",
+      "pattern": "^(?=.*(?:eurozone|euro zone|Germany|German|France|French|\\bUS\\b|U\\.S\\.))(?=.*(?:\\bPMI\\b|purchasing managers|business activity))(?=.*(?:June|flash|preliminary))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US May existing home sales",
+      "release_utc": "2024-06-21T14:00:00+00:00",
+      "calendar_release_utc_date": "2024-06-21",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-24",
+      "earliest_pub_date": "2024-06-14",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|American|United States))(?=.*existing home sales)",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "BOJ June summary of opinions early local",
+      "release_utc": "2024-06-23T23:50:00+00:00",
+      "calendar_release_utc_date": "2024-06-23",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-24",
+      "earliest_pub_date": "2024-06-16",
+      "pattern": "^(?=.*(?:\\bBOJ\\b|Bank of Japan))(?=.*summary of opinions)",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_policy.json"
+      ],
+      "notes": "BOJ own snippet lists June24 08:50 Japan-local, convertsJun23 23:50UTC."
+    },
+    {
+      "label": "Germany June Ifo",
+      "release_utc": "2024-06-24T08:00:00+00:00",
+      "calendar_release_utc_date": "2024-06-24",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-25",
+      "earliest_pub_date": "2024-06-17",
+      "pattern": "^(?=.*(?:Germany|German|Ifo))(?=.*\\bIfo\\b)",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US June consumer confidence",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-25",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-26",
+      "earliest_pub_date": "2024-06-18",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|American|United States))(?=.*(?:consumer confidence|Conference Board))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_initial.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Australia May monthly CPI",
+      "release_utc": "2024-06-26T01:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-26",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-27",
+      "earliest_pub_date": "2024-06-19",
+      "pattern": "^(?=.*(?:Australia|Australian|\\bRBA\\b))(?=.*(?:inflation|\\bCPI\\b|consumer prices))(?=.*(?:May|monthly))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_releases.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US May new home sales",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-26",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-27",
+      "earliest_pub_date": "2024-06-19",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|American|United States))(?=.*new home sales)",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_releases.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US Q1 GDP third estimate",
+      "release_utc": "2024-06-27T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-27",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-28",
+      "earliest_pub_date": "2024-06-20",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|American|United States))(?=.*(?:GDP|gross domestic product|economic growth))(?=.*(?:Q1|first.quarter|January.March|third.estimate|revis))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_releases.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US May durable goods",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-27",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-28",
+      "earliest_pub_date": "2024-06-20",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|American|United States))(?=.*durable goods)",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_releases.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Japan May retail sales clock unverified",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-27",
+      "timing_precision": "conservative omission: historical pre-midnight clock awaiting independent evidence",
+      "eligible_edition": "2024-06-28",
+      "earliest_pub_date": "2024-06-20",
+      "pattern": "^(?=.*(?:Japan|Japanese|\\bBOJ\\b))(?=.*retail sales)",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_releases.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Japan June Tokyo CPI early local",
+      "release_utc": "2024-06-27T23:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-27",
+      "timing_precision": "historical date and exact clock, evidence types stated in notes",
+      "eligible_edition": "2024-06-28",
+      "earliest_pub_date": "2024-06-20",
+      "pattern": "^(?=.*Tokyo)(?=.*(?:inflation|\\bCPI\\b|consumer prices))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/provenance_calendar_japan_date_clock.json"
+      ],
+      "notes": "HistoricalJun28date plus official08:30JST CPI rule; publication clock corroborated by dated calendar."
+    },
+    {
+      "label": "Japan May industrial output early local",
+      "release_utc": "2024-06-27T23:50:00+00:00",
+      "calendar_release_utc_date": "2024-06-27",
+      "timing_precision": "historical date and exact clock, evidence types stated in notes",
+      "eligible_edition": "2024-06-28",
+      "earliest_pub_date": "2024-06-20",
+      "pattern": "^(?=.*(?:Japan|Japanese|\\bBOJ\\b))(?=.*(?:industrial output|industrial production|factory output))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/provenance_calendar_japan_clocks.json"
+      ],
+      "notes": "Historical METI Jun28 08:50JST, beforeJun28cutoff."
+    },
+    {
+      "label": "US May PCE",
+      "release_utc": "2024-06-28T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-28",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-07-01",
+      "earliest_pub_date": "2024-06-21",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|American|\\bFed\\b|\\bPCE\\b))(?=.*(?:\\bPCE\\b|personal consumption expenditures|preferred.*inflation|inflation.*preferred))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_releases.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China June official PMI pending",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-30",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-07-01",
+      "earliest_pub_date": "2024-06-23",
+      "pattern": "^(?=.*(?:China|Chinese|Caixin|PBOC))(?=.*(?:manufactur|factory|\\bPMI\\b))(?=.*(?:June|official|NBS))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_calendar_web_releases.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US presidential debate completed event",
+      "release_utc": "2024-06-28T01:00:00+00:00",
+      "calendar_release_utc_date": "2024-06-28",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-07-01",
+      "earliest_pub_date": "2024-06-21",
+      "pattern": "^(?=.*(?:Trump|Biden|presidential))(?=.*debate)",
+      "kind": "staged_event",
+      "evidence": [
+        "audit_work/june_event_schedule_evidence.json"
+      ],
+      "notes": "A completed debate is unavailableJun28midnight; plans/previews remain eligible. Primary issuer/broadcaster schedule retained; independent implementation review still required."
+    },
+    {
+      "label": "Apple WWDC keynote disclosures",
+      "release_utc": "2024-06-10T17:00:00+00:00",
+      "calendar_release_utc_date": "2024-06-10",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-11",
+      "earliest_pub_date": "2024-06-03",
+      "pattern": "^(?=.*(?:Apple|AAPL|WWDC))(?=.*(?:WWDC|developer conference|Apple Intelligence|iOS 18|Siri|OpenAI|ChatGPT))",
+      "kind": "staged_event",
+      "evidence": [
+        "audit_work/june_event_schedule_evidence.json"
+      ],
+      "notes": "Earlier announcements of conference schedule/plans differ from completed keynote disclosures. Primary issuer/broadcaster schedule retained; independent implementation review still required."
+    },
+    {
+      "label": "Nvidia split distribution completed",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-07",
+      "timing_precision": "scheduled after-close distribution stage; exact execution minute unasserted",
+      "eligible_edition": "2024-06-10",
+      "earliest_pub_date": "2024-05-31",
+      "pattern": "^(?=.*(?:Nvidia|NVDA))(?=.*split)",
+      "kind": "split_distribution",
+      "evidence": [
+        "audit_work/june_event_schedule_evidence.json"
+      ],
+      "notes": "Announcement and scheduled split are eligible earlier; completed distribution requires actual stage. Primary issuer/broadcaster schedule retained; independent implementation review still required. No claim of execution exactly20:00UTC."
+    },
+    {
+      "label": "Nvidia split adjusted trading began",
+      "release_utc": "2024-06-10T13:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-10",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-11",
+      "earliest_pub_date": "2024-06-03",
+      "pattern": "^(?=.*(?:Nvidia|NVDA))(?=.*split)",
+      "kind": "split_trading",
+      "evidence": [
+        "audit_work/june_event_schedule_evidence.json"
+      ],
+      "notes": "Jun10cutoff precedes regular-session split-adjusted trading. Primary issuer/broadcaster schedule retained; independent implementation review still required."
+    },
+    {
+      "label": "Chipotle split distribution completed",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-25",
+      "timing_precision": "scheduled after-close distribution stage; exact execution minute unasserted",
+      "eligible_edition": "2024-06-26",
+      "earliest_pub_date": "2024-06-18",
+      "pattern": "^(?=.*(?:Chipotle|CMG))(?=.*split)",
+      "kind": "split_distribution",
+      "evidence": [
+        "audit_work/june_event_schedule_evidence.json"
+      ],
+      "notes": "Scheduled split and shareholder vote differ from distribution. Primary issuer/broadcaster schedule retained; independent implementation review still required. No claim of execution exactly20:00UTC."
+    },
+    {
+      "label": "Chipotle split adjusted trading began",
+      "release_utc": "2024-06-26T13:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-26",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-27",
+      "earliest_pub_date": "2024-06-19",
+      "pattern": "^(?=.*(?:Chipotle|CMG))(?=.*split)",
+      "kind": "split_trading",
+      "evidence": [
+        "audit_work/june_event_schedule_evidence.json"
+      ],
+      "notes": "Jun26cutoff precedes regular-session split-adjusted trading. Primary issuer/broadcaster schedule retained; independent implementation review still required."
+    },
+    {
+      "label": "GitLab June3 quarterly outcome",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-03",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-04",
+      "earliest_pub_date": "2024-05-20",
+      "pattern": "^(?=.*(?<!\\w)(?:GitLab)(?!\\w))(?=.*\\b(?:earnings|results|revenue|sales|profits?|EPS|guidance|forecasts?|bookings)\\b)",
+      "kind": "company_result",
+      "evidence": [
+        "audit_work/june_company_calendar_evidence.json"
+      ],
+      "notes": "Dated historical issuer/SEC release retained in June company calendar evidence; conservative next-cutoff eligibility. Exact announcement minute unasserted."
+    },
+    {
+      "label": "HPE CrowdStrike quarterly outcome",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-04",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-05",
+      "earliest_pub_date": "2024-05-21",
+      "pattern": "^(?=.*(?<!\\w)(?:Hewlett Packard Enterprise|\\bHPE\\b|CrowdStrike)(?!\\w))(?=.*\\b(?:earnings|results|revenue|sales|profits?|EPS|guidance|forecasts?|bookings)\\b)",
+      "kind": "company_result",
+      "evidence": [
+        "audit_work/june_company_calendar_evidence.json"
+      ],
+      "notes": "Dated historical issuer/SEC release retained in June company calendar evidence; conservative next-cutoff eligibility. Exact announcement minute unasserted."
+    },
+    {
+      "label": "Lululemon DollarTree Campbell quarterly outcome",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-05",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-06",
+      "earliest_pub_date": "2024-05-22",
+      "pattern": "^(?=.*(?<!\\w)(?:Lululemon|Dollar Tree|Campbell Soup|Five Below|Smartsheet)(?!\\w))(?=.*\\b(?:earnings|results|revenue|sales|profits?|EPS|guidance|forecasts?|bookings)\\b)",
+      "kind": "company_result",
+      "evidence": [
+        "audit_work/june_company_calendar_evidence.json"
+      ],
+      "notes": "Dated historical issuer/SEC release retained in June company calendar evidence; conservative next-cutoff eligibility. Exact announcement minute unasserted."
+    },
+    {
+      "label": "Nio DocuSign quarterly outcome",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-06",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-07",
+      "earliest_pub_date": "2024-05-23",
+      "pattern": "^(?=.*(?<!\\w)(?:\\bNio\\b|DocuSign)(?!\\w))(?=.*\\b(?:earnings|results|revenue|sales|profits?|EPS|guidance|forecasts?|bookings)\\b)",
+      "kind": "company_result",
+      "evidence": [
+        "audit_work/june_company_calendar_evidence.json"
+      ],
+      "notes": "Dated historical issuer/SEC release retained in June company calendar evidence; conservative next-cutoff eligibility. Exact announcement minute unasserted."
+    },
+    {
+      "label": "GameStop surprise June7 result quarterly outcome",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-07",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-10",
+      "earliest_pub_date": "2024-05-24",
+      "pattern": "^(?=.*(?<!\\w)(?:GameStop|\\bGME\\b)(?!\\w))(?=.*\\b(?:earnings|results|revenue|sales|profits?|EPS|guidance|forecasts?|bookings)\\b)",
+      "kind": "company_result",
+      "evidence": [
+        "audit_work/june_company_calendar_evidence.json"
+      ],
+      "notes": "Dated historical issuer/SEC release retained in June company calendar evidence; conservative next-cutoff eligibility. Exact announcement minute unasserted."
+    },
+    {
+      "label": "Oracle June11 quarterly outcome",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-11",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-12",
+      "earliest_pub_date": "2024-05-28",
+      "pattern": "^(?=.*(?<!\\w)(?:Oracle|\\bORCL\\b)(?!\\w))(?=.*\\b(?:earnings|results|revenue|sales|profits?|EPS|guidance|forecasts?|bookings)\\b)",
+      "kind": "company_result",
+      "evidence": [
+        "audit_work/june_company_calendar_evidence.json"
+      ],
+      "notes": "Dated historical issuer/SEC release retained in June company calendar evidence; conservative next-cutoff eligibility. Exact announcement minute unasserted."
+    },
+    {
+      "label": "Broadcom June12 quarterly outcome",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-12",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-13",
+      "earliest_pub_date": "2024-05-29",
+      "pattern": "^(?=.*(?<!\\w)(?:Broadcom|\\bAVGO\\b)(?!\\w))(?=.*\\b(?:earnings|results|revenue|sales|profits?|EPS|guidance|forecasts?|bookings)\\b)",
+      "kind": "company_result",
+      "evidence": [
+        "audit_work/june_company_calendar_evidence.json"
+      ],
+      "notes": "Dated historical issuer/SEC release retained in June company calendar evidence; conservative next-cutoff eligibility. Exact announcement minute unasserted."
+    },
+    {
+      "label": "Adobe RH June13 quarterly outcome",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-13",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-14",
+      "earliest_pub_date": "2024-05-30",
+      "pattern": "^(?=.*(?<!\\w)(?:Adobe|\\bADBE\\b|\\bRH\\b)(?!\\w))(?=.*\\b(?:earnings|results|revenue|sales|profits?|EPS|guidance|forecasts?|bookings)\\b)",
+      "kind": "company_result",
+      "evidence": [
+        "audit_work/june_company_calendar_evidence.json"
+      ],
+      "notes": "Dated historical issuer/SEC release retained in June company calendar evidence; conservative next-cutoff eligibility. Exact announcement minute unasserted."
+    },
+    {
+      "label": "Lennar June17 quarterly outcome",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-17",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-18",
+      "earliest_pub_date": "2024-06-03",
+      "pattern": "^(?=.*(?<!\\w)(?:Lennar)(?!\\w))(?=.*\\b(?:earnings|results|revenue|sales|profits?|EPS|guidance|forecasts?|bookings)\\b)",
+      "kind": "company_result",
+      "evidence": [
+        "audit_work/june_company_calendar_evidence.json"
+      ],
+      "notes": "Dated historical issuer/SEC release retained in June company calendar evidence; conservative next-cutoff eligibility. Exact announcement minute unasserted."
+    },
+    {
+      "label": "KB Home June18 quarterly outcome",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-18",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-19",
+      "earliest_pub_date": "2024-06-04",
+      "pattern": "^(?=.*(?<!\\w)(?:KB Home)(?!\\w))(?=.*\\b(?:earnings|results|revenue|sales|profits?|EPS|guidance|forecasts?|bookings)\\b)",
+      "kind": "company_result",
+      "evidence": [
+        "audit_work/june_company_calendar_evidence.json"
+      ],
+      "notes": "Dated historical issuer/SEC release retained in June company calendar evidence; conservative next-cutoff eligibility. Exact announcement minute unasserted."
+    },
+    {
+      "label": "Accenture Kroger Darden June20 quarterly outcome",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-20",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-21",
+      "earliest_pub_date": "2024-06-06",
+      "pattern": "^(?=.*(?<!\\w)(?:Accenture|Kroger|Darden|Jabil)(?!\\w))(?=.*\\b(?:earnings|results|revenue|sales|profits?|EPS|guidance|forecasts?|bookings)\\b)",
+      "kind": "company_result",
+      "evidence": [
+        "audit_work/june_company_calendar_evidence.json"
+      ],
+      "notes": "Dated historical issuer/SEC release retained in June company calendar evidence; conservative next-cutoff eligibility. Exact announcement minute unasserted."
+    },
+    {
+      "label": "CarMax June21 quarterly outcome",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-21",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-24",
+      "earliest_pub_date": "2024-06-07",
+      "pattern": "^(?=.*(?<!\\w)(?:CarMax)(?!\\w))(?=.*\\b(?:earnings|results|revenue|sales|profits?|EPS|guidance|forecasts?|bookings)\\b)",
+      "kind": "company_result",
+      "evidence": [
+        "audit_work/june_company_calendar_evidence.json"
+      ],
+      "notes": "Dated historical issuer/SEC release retained in June company calendar evidence; conservative next-cutoff eligibility. Exact announcement minute unasserted."
+    },
+    {
+      "label": "Carnival FedEx June25 quarterly outcome",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-25",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-26",
+      "earliest_pub_date": "2024-06-11",
+      "pattern": "^(?=.*(?<!\\w)(?:Carnival|FedEx)(?!\\w))(?=.*\\b(?:earnings|results|revenue|sales|profits?|EPS|guidance|forecasts?|bookings)\\b)",
+      "kind": "company_result",
+      "evidence": [
+        "audit_work/june_company_calendar_evidence.json"
+      ],
+      "notes": "Dated historical issuer/SEC release retained in June company calendar evidence; conservative next-cutoff eligibility. Exact announcement minute unasserted."
+    },
+    {
+      "label": "Micron GeneralMills Paychex June26 quarterly outcome",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-26",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-27",
+      "earliest_pub_date": "2024-06-12",
+      "pattern": "^(?=.*(?<!\\w)(?:Micron|General Mills|Paychex|Levi Strauss)(?!\\w))(?=.*\\b(?:earnings|results|revenue|sales|profits?|EPS|guidance|forecasts?|bookings)\\b)",
+      "kind": "company_result",
+      "evidence": [
+        "audit_work/june_company_calendar_evidence.json"
+      ],
+      "notes": "Dated historical issuer/SEC release retained in June company calendar evidence; conservative next-cutoff eligibility. Exact announcement minute unasserted."
+    },
+    {
+      "label": "Nike Walgreens McCormick H&M June27 quarterly outcome",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-27",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-06-28",
+      "earliest_pub_date": "2024-06-13",
+      "pattern": "^(?=.*(?<!\\w)(?:Nike|Walgreens|McCormick|H&M|Hennes.Mauritz)(?!\\w))(?=.*\\b(?:earnings|results|revenue|sales|profits?|EPS|guidance|forecasts?|bookings)\\b)",
+      "kind": "company_result",
+      "evidence": [
+        "audit_work/june_company_calendar_evidence.json"
+      ],
+      "notes": "Dated historical issuer/SEC release retained in June company calendar evidence; conservative next-cutoff eligibility. Exact announcement minute unasserted."
+    },
+    {
+      "label": "Chipotle shareholder split approval",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-06",
+      "timing_precision": "dated primary UTC-day bound; exact historical vote minute unasserted",
+      "eligible_edition": "2024-06-07",
+      "earliest_pub_date": "2024-05-30",
+      "pattern": "^(?=.*(?:Chipotle|CMG))(?=.*(?:shareholder|annual meeting))(?=.*(?:approv|authoriz|vote))",
+      "kind": "staged_event",
+      "evidence": [
+        "audit_work/june_event_schedule_evidence.json"
+      ],
+      "notes": "June6 shareholder authorization is distinct from June25 distribution and June26 trading."
+    },
+    {
+      "label": "Japan May unemployment early local",
+      "release_utc": "2024-06-27T23:30:00+00:00",
+      "calendar_release_utc_date": "2024-06-27",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-06-28",
+      "earliest_pub_date": "2024-06-20",
+      "pattern": "^(?=.*(?:Japan|Japanese|\\bBOJ\\b))(?=.*(?:unemployment|jobless|job.to.applicant|jobs.to.applicants))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/provenance_calendar_historic_exact.json"
+      ],
+      "notes": "Historical eStat2024-06-28 08:30JST metadata; actual available beforeJun28 UTC cutoff."
+    },
+    {
+      "label": "Poland May wages and enterprise employment",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-20",
+      "timing_precision": "dated primary UTC-day bound; exact historical minute unasserted",
+      "eligible_edition": "2024-06-21",
+      "earliest_pub_date": "2024-06-13",
+      "pattern": "^(?!.*(?:minimum wage|minimaln\\w*.*(?:wynagrodz\\w*|płac\\w*)|(?:wynagrodz\\w*|płac\\w*).*minimaln\\w*))(?=.*(?:Poland|Polish|Polsk\\w*|GUS|wynagrodz\\w*|zatrudnien\\w*))(?=.*(?:wages|wage growth|wynagrodz\\w*|zatrudnien\\w*))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/provenance_calendar_gus_exact_dates.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Poland May industry and producer prices",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-20",
+      "timing_precision": "dated primary UTC-day bound; exact historical minute unasserted",
+      "eligible_edition": "2024-06-21",
+      "earliest_pub_date": "2024-06-13",
+      "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|GUS|produkcj\\w*.*przemysł\\w*|ceny produkcji))(?=.*(?:industrial production|industrial output|producer prices|produkcj\\w*.*przemysł\\w*|ceny produkcji))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/provenance_calendar_gus_exact_dates.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Poland May retail sales",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-24",
+      "timing_precision": "dated primary UTC-day bound; exact historical minute unasserted",
+      "eligible_edition": "2024-06-25",
+      "earliest_pub_date": "2024-06-17",
+      "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|GUS|sprzedaż.*detalicz))(?=.*(?:retail sales|sprzedaż.*detalicz))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/provenance_calendar_gus_exact_dates.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Poland May unemployment",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-25",
+      "timing_precision": "dated primary UTC-day bound; exact historical minute unasserted",
+      "eligible_edition": "2024-06-26",
+      "earliest_pub_date": "2024-06-18",
+      "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|GUS|bezroboci\\w*))(?=.*(?:unemployment|bezroboci\\w*))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/provenance_calendar_gus_exact_dates.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Poland June flash CPI",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-06-28",
+      "timing_precision": "dated primary UTC-day bound; exact historical minute unasserted",
+      "eligible_edition": "2024-07-01",
+      "earliest_pub_date": "2024-06-21",
+      "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|inflacja))(?=.*(?:inflation|CPI|inflacj\\w*))(?=.*(?:June|czerw\\w*|flash|wstępn\\w*))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/provenance_calendar_gus_exact_dates.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China June Caixin manufacturing pending July1",
+      "release_utc": "2024-07-01T01:45:00+00:00",
+      "calendar_release_utc_date": "2024-07-01",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-07-02",
+      "earliest_pub_date": "2024-06-24",
+      "pattern": "^(?=.*(?:China|Chinese|Caixin|PBOC))(?=.*(?:manufactur|factory|PMI))(?=.*(?:Caixin|private survey))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_pending_calendar_evidence.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Poland June PMI pending July1",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-07-01",
+      "timing_precision": "dated calendar day-only bound; exact minute unasserted",
+      "eligible_edition": "2024-07-02",
+      "earliest_pub_date": "2024-06-24",
+      "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|\\bGUS\\b))(?=.*(?:PMI|manufactur|przemysł\\w*))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_pending_calendar_evidence.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US June ISM manufacturing pending July1",
+      "release_utc": "2024-07-01T14:00:00+00:00",
+      "calendar_release_utc_date": "2024-07-01",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-07-02",
+      "earliest_pub_date": "2024-06-24",
+      "pattern": "^(?=.*(?:\\bISM\\b|Institute for Supply Management))(?=.*manufactur)",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_pending_calendar_evidence.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Eurozone June flash inflation pending July2",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-07-02",
+      "timing_precision": "dated calendar day-only bound; exact minute unasserted",
+      "eligible_edition": "2024-07-03",
+      "earliest_pub_date": "2024-06-25",
+      "pattern": "^(?=.*(?:eurozone|euro zone|euro area))(?=.*(?:inflation|CPI|HICP|consumer prices))(?=.*(?:June|flash|preliminary))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_pending_calendar_evidence.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US May JOLTS pending July2",
+      "release_utc": "2024-07-02T14:00:00+00:00",
+      "calendar_release_utc_date": "2024-07-02",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-07-03",
+      "earliest_pub_date": "2024-06-25",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|JOLTS|American))(?=.*(?:JOLTS|job openings|job vacancies))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_pending_calendar_evidence.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "FOMC June meeting minutes pending July3",
+      "release_utc": "2024-07-03T18:00:00+00:00",
+      "calendar_release_utc_date": "2024-07-03",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-07-04",
+      "earliest_pub_date": "2024-06-26",
+      "pattern": "^(?=.*(?:\\bFed\\b|FOMC|Federal Reserve))(?=.*minutes)",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_pending_calendar_evidence.json"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US June employment report pending July5",
+      "release_utc": "2024-07-05T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-07-05",
+      "timing_precision": "scheduled release time",
+      "eligible_edition": "2024-07-08",
+      "earliest_pub_date": "2024-06-28",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|American|payroll|nonfarm|non-farm))(?=.*(?:jobs report|payroll|nonfarm|non-farm|employment report|unemployment rate))",
+      "kind": "macro",
+      "evidence": [
+        "audit_work/june_pending_calendar_evidence.json"
+      ],
+      "notes": ""
+    }
+  ],
+  "review_required": [
+    "Primary early-local Japan clocks",
+    "Poland GUS/RPP June release dates",
+    "Company actual result calendar including surprise GameStop release",
+    "WWDC/debate/split stage chronology",
+    "Observed staged-headline screen and preview/actual regressions"
+  ]
+}

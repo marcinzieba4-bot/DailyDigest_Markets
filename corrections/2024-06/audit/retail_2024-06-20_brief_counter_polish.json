@@ -1,0 +1,42 @@
+{
+  "date": "2024-06-20",
+  "reviewer": "/root/june_nonretail_a",
+  "scope": "Named secondary brevity polish only; original independent review preserved and refreshed",
+  "counter_rule": "len(re.findall(r'\\b\\w+\\b', CITE.sub('', text))) <= 160 plus whitespace count <=160",
+  "before": {
+    "whitespace": 158,
+    "shared_regex": 162
+  },
+  "after": {
+    "whitespace": 158,
+    "shared_regex": 159
+  },
+  "retail_draft_sha256": "9da353170ccd0328c2891f998e7dc52438c296d5207bfc4733000b191dcc46c2",
+  "body_words": 1205,
+  "evidence_ids": [
+    "n1255",
+    "n0473"
+  ],
+  "named_fixes": [
+    {
+      "path": [
+        "retail",
+        3,
+        "parts",
+        0,
+        1
+      ],
+      "old": "Adobe remains an earnings-backed adaptation trade after its repricing. ET BrandEquity reports the higher full-year revenue forecast, while CNBC describes the strong rally. [[n1255]] [[n0473]] The attraction is an incumbent participating in a technology shift rather than merely being threatened by it. This continues the result-and-outlook story, rather than introducing a new operating catalyst. The investment needs customers to find enough value in the software to support the more constructive forecast and the expectations reflected in the equity.",
+      "new": "Adobe remains an earnings-backed adaptation trade after its repricing. ET BrandEquity reports the higher annual revenue forecast, while CNBC describes the strong rally. [[n1255]] [[n0473]] The attraction is an incumbent participating in a technology shift rather than merely being threatened by it. This continues the earnings story, rather than introducing a new operating catalyst. The investment needs customers to find enough value in the software to support the more constructive forecast and the expectations reflected in the equity.",
+      "reason": "Root requested precise brevity polish to satisfy both whitespace and shared retail-quality regex counters; facts, citations and thesis unchanged.",
+      "before_sha256": "953936e6c8e5b532695b690229f7c1beb4a0ea1fdd71365f8d33eda209cf69b3",
+      "after_sha256": "9da353170ccd0328c2891f998e7dc52438c296d5207bfc4733000b191dcc46c2",
+      "preserved_before_bytes": "audit/review_history/retail_review_a/2024-06-20_953936e6c8e5b532695b690229f7c1beb4a0ea1fdd71365f8d33eda209cf69b3.json"
+    }
+  ],
+  "current_verification": {
+    "passed": true,
+    "warnings": 0,
+    "failures": 0
+  }
+}

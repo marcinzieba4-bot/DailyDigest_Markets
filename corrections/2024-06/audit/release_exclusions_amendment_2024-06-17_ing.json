@@ -1,0 +1,77 @@
+{
+  "schema": "controlled-retained-item-editorial-omission-amendment-v1",
+  "recorded_at_utc": "2026-11-09T11:12:52.683930+00:00",
+  "status": "applied_controlled_own_date_timing_exclusion",
+  "affected_date": "2024-06-17",
+  "new_excluded_ids": [
+    "n1458"
+  ],
+  "feed_sha256": "064f0e18017bdf95650d04828ffa6b71daf7c87ca83c6d823a738f1d92e5e7a3",
+  "card_sha256": "24df3209cd86f7a62e4e7cc7f014fe4c41687e7b1b141bbeca2c876fba00da9e",
+  "original_source_review_sha256": "28c6fc6470cd3376055f6f447774509f3b6f863f550ce82858889ea4d85be170",
+  "original_source_freeze_sha256": "a5a0a4936f5feba69e66665ac61e2bdd5c50af295a6dabe99498f14f293bb578",
+  "original_authoring_acceptance_sha256": "009b79a51b710f9a8b0b69f749e8e8483578ed14c952d6da77fee2bcf0751ff6",
+  "previous_registry_amendment_path": "audit/retail_2024-06-04_root_clock_cleanup.json",
+  "previous_registry_amendment_sha256": "de8d27ee3c147f32e24e8f1ca981ce7ae0b2eb45fce9ff451571e7cc677dc671",
+  "original_records_preserved": [
+    {
+      "path": "audit/additional_release_exclusions.json",
+      "sha256": "271916ca7027b2b16a948541f2e3d27534aad2714fe8b5971eb8d5a5d5446455",
+      "backup_path": "audit/review_history/additional_release_exclusions_before_ing_271916ca7027b2b16a948541f2e3d27534aad2714fe8b5971eb8d5a5d5446455.json",
+      "backup_sha256": "271916ca7027b2b16a948541f2e3d27534aad2714fe8b5971eb8d5a5d5446455"
+    },
+    {
+      "path": "exclusions/2024-06-17.json",
+      "sha256": "504c2dc57dc845b3fe202d71323f240af1c90da6232aa9c027d99bac97a4da12",
+      "backup_path": "audit/review_history/2024-06-17_before_ing_504c2dc57dc845b3fe202d71323f240af1c90da6232aa9c027d99bac97a4da12.json",
+      "backup_sha256": "504c2dc57dc845b3fe202d71323f240af1c90da6232aa9c027d99bac97a4da12"
+    }
+  ],
+  "current_records": {
+    "audit/additional_release_exclusions.json": "12b698dcaa6cbfaea918da68c5826cd3ea76d5fc2fbc59341636a01eacd871c9",
+    "exclusions/2024-06-17.json": "d2f09afa52fbafd33da6c3af979e7239fd1c61fee17bad454d2b49801e7c0395"
+  },
+  "effective_authoring_input_delta": {
+    "date": "2024-06-17",
+    "supersedes_only_field": "exclusions_sha256",
+    "original_value": "504c2dc57dc845b3fe202d71323f240af1c90da6232aa9c027d99bac97a4da12",
+    "current_value": "d2f09afa52fbafd33da6c3af979e7239fd1c61fee17bad454d2b49801e7c0395",
+    "feed_and_card_unchanged": true,
+    "other_date_input_rows_not_modified": true,
+    "prior_amendments_remain_in_effect": true,
+    "original_authoring_gate_file_not_rewritten": true
+  },
+  "new_rows": [
+    {
+      "date": "2024-06-17",
+      "id": "n1458",
+      "feed_sha256": "064f0e18017bdf95650d04828ffa6b71daf7c87ca83c6d823a738f1d92e5e7a3",
+      "title": "ING bank targets 4%-5% growth by 2027 despite higher costs - Reuters",
+      "src": "Reuters",
+      "published_at": "2024-06-16T07:00:00+00:00",
+      "screen_kind": "timing",
+      "reason": "Completed ING2027growthtarget announcement belongs to June17 issuer release05UTC after June17 00UTC cutoff. Retained normalizedJune16stamp does not establish earlier publication. Omit ownJune17 only.",
+      "release_utc": "2024-06-17T05:00:00Z",
+      "source_cutoff_utc": "2024-06-17T00:00:00Z",
+      "evidence_paths": [
+        "audit_work/june17_ing_hk_clock_excerpt.json"
+      ],
+      "evidence_sha256": {
+        "audit_work/june17_ing_hk_clock_excerpt.json": "d28377fe50adec2944646065bf8ba0b2137c1f9a15bce7865007e75019984fb5"
+      },
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    }
+  ],
+  "proof_bindings": {
+    "audit_work/june17_ing_hk_clock_excerpt.json": "d28377fe50adec2944646065bf8ba0b2137c1f9a15bce7865007e75019984fb5"
+  },
+  "checks": {
+    "all144_immutable_source_bindings_unchanged": true,
+    "prior_registry_rows_preserved_exactly": true,
+    "per_date_registry_agree": true
+  },
+  "limits": [
+    "No automatic contentfix or acceptance; independent own-date reviewer must remove unsafe targetpremise and bind final currentexclusions.",
+    "Only June17 exclusion registry changed; all frozenfinancialinputs remain immutable."
+  ]
+}

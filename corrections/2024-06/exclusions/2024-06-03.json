@@ -1,0 +1,29 @@
+{
+  "date": "2024-06-03",
+  "feed_sha256": "07f27127c3f71cac7c83ed13d32ab12aa4c500f75acec651a825ff7407674d23",
+  "exclusions": [
+    {
+      "date": "2024-06-03",
+      "id": "n0776",
+      "feed_sha256": "07f27127c3f71cac7c83ed13d32ab12aa4c500f75acec651a825ff7407674d23",
+      "title": "AMD launches new AI chips to take on leader Nvidia - Reuters",
+      "src": "Reuters",
+      "published_at": "2024-06-02T07:00:00+00:00",
+      "screen_kind": "timing_uncertainty",
+      "reason": "CompletedAMDlaunchheadline is tied to an after-cutoffJune3Taipeikeynote and sameheadline Reuterssyndication aftercutoff; normalizedJune2RSSstamp does not certify a pre-June3 00UTC originalheadlinevintage. ConservativeomitthisretainedJune3item only.",
+      "scheduled_keynote_utc": "2024-06-03T01:30:00+00:00",
+      "syndicated_reuters_publication_utc": "2024-06-03T02:56:00+00:00",
+      "source_cutoff_utc": "2024-06-03T00:00:00+00:00",
+      "evidence_paths": [
+        "audit_work/june3_amd_clock_excerpt_review.json",
+        "audit_work/june3_amd_clock_independent_confirmation.json"
+      ],
+      "evidence_sha256": {
+        "audit_work/june3_amd_clock_excerpt_review.json": "65aea75d31dcf84b08c6b0dab7f1a5d0f51483cf4bdee746afa4e5e9abd6a454",
+        "audit_work/june3_amd_clock_independent_confirmation.json": "9e91ef55a67d938cb9ae894640cb14a71a0bd470da7358a4fcebd87b211d6899"
+      },
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    }
+  ],
+  "scope": "Known pre-release/unsafe records were removed before freeze and remain in the ready receipt; this file records subsequent own-date editorial exclusions only."
+}

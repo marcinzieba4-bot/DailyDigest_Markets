@@ -1,0 +1,76 @@
+{
+  "schema": "controlled-retained-item-editorial-omission-amendment-v1",
+  "recorded_at_utc": "2026-11-09T11:19:06.507318+00:00",
+  "status": "applied_controlled_own_date_timing_exclusion",
+  "affected_date": "2024-06-21",
+  "new_excluded_ids": [
+    "n2174"
+  ],
+  "feed_sha256": "4fde581b83d179326541873c25c824164a98b96b70244fb9153740329d6f67f6",
+  "card_sha256": "88573c0866a0e1cd4d5ae4e5f4b3c58984890b89f8ec308fcf9e90b93f6dd711",
+  "original_source_review_sha256": "28c6fc6470cd3376055f6f447774509f3b6f863f550ce82858889ea4d85be170",
+  "original_source_freeze_sha256": "a5a0a4936f5feba69e66665ac61e2bdd5c50af295a6dabe99498f14f293bb578",
+  "original_authoring_acceptance_sha256": "009b79a51b710f9a8b0b69f749e8e8483578ed14c952d6da77fee2bcf0751ff6",
+  "previous_registry_amendment_path": "audit/release_exclusions_amendment_2024-06-07_n2327.json",
+  "previous_registry_amendment_sha256": "7ce5a2380ae102c056f72c7f46729dfcc1d78635232a1c5d3616af25bb6ef2ca",
+  "original_records_preserved": [
+    {
+      "path": "audit/additional_release_exclusions.json",
+      "sha256": "fd1c21fa285f08c8478f109b1194c583fedd1c4f639786604efaf100b05b8864",
+      "backup_path": "audit/review_history/additional_release_exclusions_before_2024-06-21_n2174_fd1c21fa285f08c8478f109b1194c583fedd1c4f639786604efaf100b05b8864.json",
+      "backup_sha256": "fd1c21fa285f08c8478f109b1194c583fedd1c4f639786604efaf100b05b8864"
+    },
+    {
+      "path": "exclusions/2024-06-21.json",
+      "sha256": "3dc5c91e20a0932436f44ecdae20931b1ca8c3f37024daefd9e12c2f6a9e2b20",
+      "backup_path": "audit/review_history/2024-06-21_before_2024-06-21_n2174_3dc5c91e20a0932436f44ecdae20931b1ca8c3f37024daefd9e12c2f6a9e2b20.json",
+      "backup_sha256": "3dc5c91e20a0932436f44ecdae20931b1ca8c3f37024daefd9e12c2f6a9e2b20"
+    }
+  ],
+  "current_records": {
+    "audit/additional_release_exclusions.json": "ba77ccdb966f6510b17b0833a59df527a3764ddd3545639d8f5e530a7e513b29",
+    "exclusions/2024-06-21.json": "1005db21085c44dba9d6f7f88b515ddf8e92d0588baed4c4d0006ddf4d2f733f"
+  },
+  "effective_authoring_input_delta": {
+    "date": "2024-06-21",
+    "supersedes_only_field": "exclusions_sha256",
+    "original_value": "3dc5c91e20a0932436f44ecdae20931b1ca8c3f37024daefd9e12c2f6a9e2b20",
+    "current_value": "1005db21085c44dba9d6f7f88b515ddf8e92d0588baed4c4d0006ddf4d2f733f",
+    "feed_and_card_unchanged": true,
+    "other_date_input_rows_not_modified": true,
+    "prior_amendments_remain_in_effect": true,
+    "original_authoring_gate_file_not_rewritten": true
+  },
+  "new_rows": [
+    {
+      "date": "2024-06-21",
+      "id": "n2174",
+      "feed_sha256": "4fde581b83d179326541873c25c824164a98b96b70244fb9153740329d6f67f6",
+      "title": "Technical Analysis of Nano Nuclear Energy Inc. (NASDAQ:NNE) - TradingView",
+      "src": "TradingView",
+      "published_at": "2024-06-20T15:46:56+00:00",
+      "screen_kind": "semantic_rolling_page",
+      "reason": "Rolling technicals endpoint cannot certify a dated historical news/attention observation; normalized RSS timestamp is insufficient. Conservative omit ownJune21 only, no currentpagefacts imported.",
+      "source_cutoff_utc": "2024-06-21T00:00:00Z",
+      "evidence_paths": [
+        "audit_work/june21_n2174_dynamic_identity_review.json"
+      ],
+      "evidence_sha256": {
+        "audit_work/june21_n2174_dynamic_identity_review.json": "44cb10202bb48f6d4b2006acf75c25834c73d7522402d608264256d947463608"
+      },
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    }
+  ],
+  "proof_bindings": {
+    "audit_work/june21_n2174_dynamic_identity_review.json": "44cb10202bb48f6d4b2006acf75c25834c73d7522402d608264256d947463608"
+  },
+  "checks": {
+    "all144_immutable_source_bindings_unchanged": true,
+    "prior_registry_rows_preserved_exactly": true,
+    "per_date_registry_agree": true
+  },
+  "limits": [
+    "No automatic contentfix or acceptance. Independent own-date reviewer must separately bind current content/exclusions.",
+    "Only named own-date retained ID is excluded; frozenfinancialinputs stay immutable."
+  ]
+}

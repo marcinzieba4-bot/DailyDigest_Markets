@@ -1,0 +1,83 @@
+{
+  "schema": "controlled-retained-item-editorial-omission-amendment-v1",
+  "recorded_at_utc": "2026-11-09T10:36:31.120157+00:00",
+  "status": "applied_controlled_own_date_timing_exclusion",
+  "affected_date": "2024-06-03",
+  "new_excluded_ids": [
+    "n0776"
+  ],
+  "feed_sha256": "07f27127c3f71cac7c83ed13d32ab12aa4c500f75acec651a825ff7407674d23",
+  "card_sha256": "dc09b055a1952956f787d24fe327c8cd8090e9c5b1eacb3ff037faedb86f45c1",
+  "original_source_review_sha256": "28c6fc6470cd3376055f6f447774509f3b6f863f550ce82858889ea4d85be170",
+  "original_source_freeze_sha256": "a5a0a4936f5feba69e66665ac61e2bdd5c50af295a6dabe99498f14f293bb578",
+  "original_authoring_acceptance_sha256": "009b79a51b710f9a8b0b69f749e8e8483578ed14c952d6da77fee2bcf0751ff6",
+  "previous_registry_amendment_path": "audit/release_exclusions_amendment_2024-06-17_china_actuals.json",
+  "previous_registry_amendment_sha256": "193a72b5f0f54f299baf3c62977d6a720b33d199d01bed91c03c148232ba4885",
+  "original_records_preserved": [
+    {
+      "path": "audit/additional_release_exclusions.json",
+      "sha256": "ae6ecb01f7aef01f31972e28d03287ecfc4626005076a9869a74401dcb7d5a25",
+      "backup_path": "audit/review_history/additional_release_exclusions_before_2024-06-03_amd_20261109T103631Z.json",
+      "backup_sha256": "ae6ecb01f7aef01f31972e28d03287ecfc4626005076a9869a74401dcb7d5a25"
+    },
+    {
+      "path": "exclusions/2024-06-03.json",
+      "sha256": "610fc27027777be830c382e3bfaf9c59d509a47c33ff4fe92a1291443d81ce77",
+      "backup_path": "audit/review_history/exclusions_2024-06-03_before_amd_20261109T103631Z.json",
+      "backup_sha256": "610fc27027777be830c382e3bfaf9c59d509a47c33ff4fe92a1291443d81ce77"
+    }
+  ],
+  "current_records": {
+    "audit/additional_release_exclusions.json": "362a765e04a1dbeece422a649df33f20f12b46405b6d8a4241c9b24f1b67d944",
+    "exclusions/2024-06-03.json": "2b794c968d5b4f258e8d9b943b441a36d2b3c7cdf9f644d9671b263f62f0c7ee"
+  },
+  "effective_authoring_input_delta": {
+    "date": "2024-06-03",
+    "supersedes_only_field": "exclusions_sha256",
+    "original_value": "610fc27027777be830c382e3bfaf9c59d509a47c33ff4fe92a1291443d81ce77",
+    "current_value": "2b794c968d5b4f258e8d9b943b441a36d2b3c7cdf9f644d9671b263f62f0c7ee",
+    "feed_and_card_unchanged": true,
+    "other_date_input_rows_not_modified": true,
+    "previous_June17_delta_remains_in_effect": true,
+    "original_authoring_gate_file_not_rewritten": true
+  },
+  "new_rows": [
+    {
+      "date": "2024-06-03",
+      "id": "n0776",
+      "feed_sha256": "07f27127c3f71cac7c83ed13d32ab12aa4c500f75acec651a825ff7407674d23",
+      "title": "AMD launches new AI chips to take on leader Nvidia - Reuters",
+      "src": "Reuters",
+      "published_at": "2024-06-02T07:00:00+00:00",
+      "screen_kind": "timing_uncertainty",
+      "reason": "CompletedAMDlaunchheadline is tied to an after-cutoffJune3Taipeikeynote and sameheadline Reuterssyndication aftercutoff; normalizedJune2RSSstamp does not certify a pre-June3 00UTC originalheadlinevintage. ConservativeomitthisretainedJune3item only.",
+      "scheduled_keynote_utc": "2024-06-03T01:30:00+00:00",
+      "syndicated_reuters_publication_utc": "2024-06-03T02:56:00+00:00",
+      "source_cutoff_utc": "2024-06-03T00:00:00+00:00",
+      "evidence_paths": [
+        "audit_work/june3_amd_clock_excerpt_review.json",
+        "audit_work/june3_amd_clock_independent_confirmation.json"
+      ],
+      "evidence_sha256": {
+        "audit_work/june3_amd_clock_excerpt_review.json": "65aea75d31dcf84b08c6b0dab7f1a5d0f51483cf4bdee746afa4e5e9abd6a454",
+        "audit_work/june3_amd_clock_independent_confirmation.json": "9e91ef55a67d938cb9ae894640cb14a71a0bd470da7358a4fcebd87b211d6899"
+      },
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    }
+  ],
+  "proof_bindings": {
+    "audit_work/june3_amd_clock_excerpt_review.json": "65aea75d31dcf84b08c6b0dab7f1a5d0f51483cf4bdee746afa4e5e9abd6a454",
+    "audit_work/june3_amd_clock_independent_confirmation.json": "9e91ef55a67d938cb9ae894640cb14a71a0bd470da7358a4fcebd87b211d6899"
+  },
+  "checks": {
+    "all144_immutable_source_bindings_unchanged": true,
+    "original_source_receipt_and_gate_unchanged": true,
+    "prior_registry_rows_preserved_exactly": true,
+    "per_date_registry_agree": true
+  },
+  "limits": [
+    "Timing/vintage omission only; root separately edits existingJune3retaildraft.",
+    "Exactprimarypressreleasefirstpublicationminute remainsuncertified; no newarticlebodyfactis suppliedtoauthors.",
+    "OnlyJune3n0776and mutableeditorial registry change; frozenfinancialinputs/guards/sourceacceptance remain immutable."
+  ]
+}

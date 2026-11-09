@@ -1,0 +1,76 @@
+{
+  "schema": "controlled-retained-item-editorial-omission-amendment-v1",
+  "recorded_at_utc": "2026-11-09T14:04:05.842324+00:00",
+  "status": "applied_controlled_own_date_timing_exclusion",
+  "affected_date": "2024-06-12",
+  "new_excluded_ids": [
+    "n1518"
+  ],
+  "feed_sha256": "a29b7aea5b2498d7b55efa9a6b1f753786644ef3b014fbc7163c3e164bdbe571",
+  "card_sha256": "c1fa2644ee978cb656c285f2d1ac7bf78435626c2cee23767e1af5bfce28d4c2",
+  "original_source_review_sha256": "28c6fc6470cd3376055f6f447774509f3b6f863f550ce82858889ea4d85be170",
+  "original_source_freeze_sha256": "a5a0a4936f5feba69e66665ac61e2bdd5c50af295a6dabe99498f14f293bb578",
+  "original_authoring_acceptance_sha256": "009b79a51b710f9a8b0b69f749e8e8483578ed14c952d6da77fee2bcf0751ff6",
+  "previous_registry_amendment_path": "audit/release_exclusions_amendment_2024-06-21_n2174.json",
+  "previous_registry_amendment_sha256": "cca041f6430ade59ba38628a4c7a073788396e9824ddf63c3f6c5f25dd6df566",
+  "original_records_preserved": [
+    {
+      "path": "audit/additional_release_exclusions.json",
+      "sha256": "ba77ccdb966f6510b17b0833a59df527a3764ddd3545639d8f5e530a7e513b29",
+      "backup_path": "audit/review_history/additional_release_exclusions_before_2024-06-12_n1518_ba77ccdb966f6510b17b0833a59df527a3764ddd3545639d8f5e530a7e513b29.json",
+      "backup_sha256": "ba77ccdb966f6510b17b0833a59df527a3764ddd3545639d8f5e530a7e513b29"
+    },
+    {
+      "path": "exclusions/2024-06-12.json",
+      "sha256": "24c5ee4f9105d0d4efec01e898deff3b218dd45fcc7df9dcde7d16ec3c936f61",
+      "backup_path": "audit/review_history/2024-06-12_before_2024-06-12_n1518_24c5ee4f9105d0d4efec01e898deff3b218dd45fcc7df9dcde7d16ec3c936f61.json",
+      "backup_sha256": "24c5ee4f9105d0d4efec01e898deff3b218dd45fcc7df9dcde7d16ec3c936f61"
+    }
+  ],
+  "current_records": {
+    "audit/additional_release_exclusions.json": "533141108a971bdb97903df38c8fc64f58485719cde20dd01ec693bb758aa972",
+    "exclusions/2024-06-12.json": "43ad894caf856fac0c6c209c7279e8b67848df83fc097b4f78c953f18e04a476"
+  },
+  "effective_authoring_input_delta": {
+    "date": "2024-06-12",
+    "supersedes_only_field": "exclusions_sha256",
+    "original_value": "24c5ee4f9105d0d4efec01e898deff3b218dd45fcc7df9dcde7d16ec3c936f61",
+    "current_value": "43ad894caf856fac0c6c209c7279e8b67848df83fc097b4f78c953f18e04a476",
+    "feed_and_card_unchanged": true,
+    "other_date_input_rows_not_modified": true,
+    "prior_amendments_remain_in_effect": true,
+    "original_authoring_gate_file_not_rewritten": true
+  },
+  "new_rows": [
+    {
+      "date": "2024-06-12",
+      "id": "n1518",
+      "feed_sha256": "a29b7aea5b2498d7b55efa9a6b1f753786644ef3b014fbc7163c3e164bdbe571",
+      "title": "Eni sells 10% of Saipem at 1.970 euros per share - Reuters",
+      "src": "Reuters",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "screen_kind": "timing",
+      "reason": "Specific completed/priced Eni/Saipem sale is announcedJune12 07:03CEST=05:03UTC after own00UTCcut. Earlier sale launch is distinct and cannot certify completed pricing.",
+      "source_cutoff_utc": "2024-06-12T00:00:00Z",
+      "evidence_paths": [
+        "audit_work/june12_eni_ppi_clock_excerpt.json"
+      ],
+      "evidence_sha256": {
+        "audit_work/june12_eni_ppi_clock_excerpt.json": "daadee7dcfa910113f8bfec9884a00b6a3f1c8eb7454b0794c77340aa126fbec"
+      },
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    }
+  ],
+  "proof_bindings": {
+    "audit_work/june12_eni_ppi_clock_excerpt.json": "daadee7dcfa910113f8bfec9884a00b6a3f1c8eb7454b0794c77340aa126fbec"
+  },
+  "checks": {
+    "all144_immutable_source_bindings_unchanged": true,
+    "prior_registry_rows_preserved_exactly": true,
+    "per_date_registry_agree": true
+  },
+  "limits": [
+    "No automatic contentfix or acceptance. Independent own-date reviewer must separately bind current content/exclusions.",
+    "Only named own-date retained ID is excluded; frozenfinancialinputs stay immutable."
+  ]
+}

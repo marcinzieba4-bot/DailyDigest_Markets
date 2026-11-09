@@ -1,0 +1,105 @@
+{
+  "status": "independent_transport_delta_passed",
+  "checked_at_utc": "2026-11-09T10:43:47.783127+00:00",
+  "passed": true,
+  "tool_sha256": {
+    "tools/build_source_inventory.py": "6ba4e724a4d17d8f60e196182aec50d87319ad72b62b6c3a2e0ccf7c80e79766",
+    "tools/build_artifacts.py": "d0b7ce0d4de67d61ae809ffcc745265c7c3e8b99274ad2d7c3dae346a47aa706",
+    "audit_work/review_final_artifacts.py": "0afe6f2b491d12a7300f48f08db920da1b6b4fed12286a467785952ec3f5824b"
+  },
+  "reviewer_sha256": "5cf83eb3b5cae28ba4df08bf42de51e8f839ea5b8c1f248e2451edc5eab96d02",
+  "independent_cases": [
+    {
+      "case": "independently_captured_current_transport_positive",
+      "passed": true
+    },
+    {
+      "case": "boolean_interrupted_bound",
+      "passed": true
+    },
+    {
+      "case": "negative_interrupted_bound",
+      "passed": true
+    },
+    {
+      "case": "expanded_interrupted_bound",
+      "passed": true
+    },
+    {
+      "case": "invented_exact_interrupted_count",
+      "passed": true
+    },
+    {
+      "case": "false_completeness_claim",
+      "passed": true
+    },
+    {
+      "case": "boolean_attempt_count",
+      "passed": true
+    },
+    {
+      "case": "boolean_body_count",
+      "passed": true
+    },
+    {
+      "case": "fabricated_positive_authoring_acceptance",
+      "passed": true
+    },
+    {
+      "case": "unresolved_physical_errors",
+      "passed": true
+    },
+    {
+      "case": "incomplete_physical_date_scope",
+      "passed": true
+    },
+    {
+      "case": "missing_historical_collision_disclosure",
+      "passed": true
+    }
+  ],
+  "owner_runs": [
+    {
+      "helper": "audit_work/test_artifact_transport_regressions.py",
+      "helper_sha256": "c6d48ec2506074e76b3b4b95bc51a1bddc0c4840346111f511827fba336680e5",
+      "returncode": 0,
+      "stdout": "{\"status\": \"synthetic_transport_checks_passed\", \"case_count\": 50}",
+      "stderr": ""
+    },
+    {
+      "helper": "audit_work/test_artifact_source_transport.py",
+      "helper_sha256": "1a068dc41a0061b6d7ff4d91b25b70fe294c487928d87cd78c5805ea04453ac9",
+      "returncode": 0,
+      "stdout": "{\"status\": \"actual_physical_consumer_integration_passed\", \"physical_attempts\": 14853, \"received_attempt_bodies\": 14795, \"canonical_physical_requests\": 14497, \"recorded_missing_response_bodies\": 58, \"runtime_full20_report_artifacts_accepted\": false}",
+      "stderr": ""
+    }
+  ],
+  "actual_immutable_boundary_sha256": {
+    "audit/independent_physical_source_review.json": "5b509c1a3c8da3a448eb87ae68c320c7c0ce4208887562c22e38329643511057",
+    "audit_work/acquisition_capture_limitation.json": "a9f8f8c02fffee225491929d8fa7c69dbe692266acb6b6fbab30878b0cb44beb",
+    "audit/news_physical_requests.jsonl": "178e120fa1067d6d18a297d2fe91180fe2efbd434c6d495ce663e8f8c02744ce",
+    "audit/news_query_plan.json": "7842caf181ca25ed427275290387965fb4e29a8538ee491671b6f6e0c84af5bf",
+    "audit_work/physical_source_inventory.json": "1aa61e5b02ec0b5ce8f058599096b2e33e2a9036981b38d9c8d510951a66a81b",
+    "audit/independent_source_review.json": "28c6fc6470cd3376055f6f447774509f3b6f863f550ce82858889ea4d85be170",
+    "audit/independent_market_review.json": "4be828aab6c94bcb317ec7a1ffa72a6152d777f7c7e488aec64df3f6c440ff8e",
+    "audit/source_freeze.json": "a5a0a4936f5feba69e66665ac61e2bdd5c50af295a6dabe99498f14f293bb578",
+    "audit/news_coverage.json": "cccf30076434fd6b8657c438885c0525651fcf5e641dd6bf295c36da43cdff53",
+    "audit_work/news_policy_lock.json": "495fee05d9a69cbb332b9d263acc50907ef13aecc2758e2372d5203f3a43c57b"
+  },
+  "coverage_phase_bindings": {
+    "original_physical_proof": "cb6f592aa1d6bee4bea305ef41b077ab88d55ff448203368c8901b0e9adcfad2",
+    "original_policy_lock": "ad856911ceb65923a8764342b47ebb8bb96338d796a7989b7a7776f3cd42e398",
+    "current_final_source": "cccf30076434fd6b8657c438885c0525651fcf5e641dd6bf295c36da43cdff53",
+    "current_source_freeze": "cccf30076434fd6b8657c438885c0525651fcf5e641dd6bf295c36da43cdff53",
+    "retained_current_bytes": "cccf30076434fd6b8657c438885c0525651fcf5e641dd6bf295c36da43cdff53"
+  },
+  "runtime_full20_report_artifacts_accepted": false,
+  "facts_or_specs_read": false,
+  "archive_built": false,
+  "publication_performed": false,
+  "limits": [
+    "Transport schema/actual retained-byte integration only; no report acceptance.",
+    "Original historical coverage phase bytes are not reconstructed or asserted retained.",
+    "The exact independent physical proof and source boundary hashes above remain authoritative."
+  ]
+}

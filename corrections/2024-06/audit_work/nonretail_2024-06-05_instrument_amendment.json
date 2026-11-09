@@ -1,0 +1,18 @@
+{
+  "date": "2024-06-05",
+  "scope": "Explicit instrument name in existing China allocation theme; no new premise or numeric claim",
+  "before_draft_path": "audit/review_history/independent_nonretail_2024-06-05_before_instrument_27ff0a497dafd092.json",
+  "before_file_sha256": "27ff0a497dafd09224c81184e9e23be6e3d8ab7596dc1200668a9bb9bb5a39c6",
+  "after_file_sha256": "0685585576a2a5a0b7614a00f4226701895f09435db1ec46de9df7b1065c7bdd",
+  "superseded_receipt_path": "audit/review_history/independent_nonretail_2024-06-05_accepted_before_instrument_cb34c363d1f0d48a.json",
+  "superseded_receipt_sha256": "cb34c363d1f0d48ac0f043272eabac8960c114b522db37786fa07f4f42450c26",
+  "fixes": [
+    {
+      "block": "underowned[2]",
+      "label": "Exposure & Risk",
+      "old": "A China equity allocation is broader than autos, while a single manufacturer adds pricing and execution concentration.",
+      "new": "FXI offers China large-cap exposure broader than autos, while a single manufacturer adds pricing and execution concentration.",
+      "reason": "Contract requires named instruments; own-date card identifies FXI as China large-cap ETF. Original generic China allocation becomes a named broad expression, retaining all existing risks and triggers."
+    }
+  ]
+}

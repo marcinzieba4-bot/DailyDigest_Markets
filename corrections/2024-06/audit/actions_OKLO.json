@@ -1,0 +1,104 @@
+{
+ "ticker": "OKLO",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/OKLO?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "214831f08d1f7f2d9bacdc9893e85850f84c10fe2d8225117f6bbb41861a4d51",
+   "fetched_at_utc": "2026-11-09T09:47:48.957647+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/OKLO?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "cec95bbb5068b91d7d4935055f887b84bacbb3d38ca2aa4482a493a20d738061",
+   "fetched_at_utc": "2026-11-09T09:47:49.121694+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/OKLO?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "214831f08d1f7f2d9bacdc9893e85850f84c10fe2d8225117f6bbb41861a4d51",
+    "fetched_at_utc": "2026-11-09T09:47:48.957647+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "OKLO",
+    "exchangeName": "NYQ",
+    "fullExchangeName": "NYSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1625751000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/OKLO?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "cec95bbb5068b91d7d4935055f887b84bacbb3d38ca2aa4482a493a20d738061",
+    "fetched_at_utc": "2026-11-09T09:47:49.121694+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "OKLO",
+    "exchangeName": "NYQ",
+    "fullExchangeName": "NYSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1625751000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 593,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

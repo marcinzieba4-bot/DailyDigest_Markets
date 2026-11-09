@@ -1,0 +1,104 @@
+{
+ "ticker": "VZ",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VZ?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "0bcf9ebf605c3fb651724971c175095349a89a4ee0b4b1cce4257d52ec1634d9",
+   "fetched_at_utc": "2026-11-09T09:47:52.191064+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VZ?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "1c6248fe702607f201202f3964c2a2924cf3812a83009e38f3a4d9316974cdaf",
+   "fetched_at_utc": "2026-11-09T09:47:52.353730+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/VZ?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "0bcf9ebf605c3fb651724971c175095349a89a4ee0b4b1cce4257d52ec1634d9",
+    "fetched_at_utc": "2026-11-09T09:47:52.191064+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "VZ",
+    "exchangeName": "NYQ",
+    "fullExchangeName": "NYSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 438273000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/VZ?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "1c6248fe702607f201202f3964c2a2924cf3812a83009e38f3a4d9316974cdaf",
+    "fetched_at_utc": "2026-11-09T09:47:52.353730+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "VZ",
+    "exchangeName": "NYQ",
+    "fullExchangeName": "NYSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 438273000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 593,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

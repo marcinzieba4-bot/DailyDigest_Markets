@@ -1,0 +1,25 @@
+{
+  "date": "2024-06-14",
+  "feed_sha256": "0aff8f69e55464ac9bab9295d6cd832653547802450f9e5f7f72fb8e0ac277c0",
+  "exclusions": [
+    {
+      "date": "2024-06-14",
+      "id": "n1096",
+      "feed_sha256": "0aff8f69e55464ac9bab9295d6cd832653547802450f9e5f7f72fb8e0ac277c0",
+      "title": "Adobe Stock Jumps 15% After AI-Fueled Earnings Beat—Watch This Key Level - Investopedia",
+      "src": "Investopedia",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "screen_kind": "timing_uncertainty",
+      "reason": "Specific Investopedia earnings/technicalanalysisarticle observedJune14 02:18:02UTC afterown00UTCcut; normalizedJune13RSSdoesnotcertifypriorvintage. Adobeissuerresultsitselfbeforecut, distinguishsourcearticlefromevent.",
+      "source_cutoff_utc": "2024-06-14T00:00:00Z",
+      "evidence_paths": [
+        "audit_work/june14_adobe_article_vintage_review.json"
+      ],
+      "evidence_sha256": {
+        "audit_work/june14_adobe_article_vintage_review.json": "50dc1f3e926d08b1e7646a853c4461af9258e4d8a19b37770d4f4fd52a9b3152"
+      },
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    }
+  ],
+  "scope": "Known pre-release/unsafe records were removed before freeze and remain in the ready receipt; this file records subsequent own-date editorial exclusions only."
+}

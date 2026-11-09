@@ -1,0 +1,73 @@
+{
+  "date": "2024-06-07",
+  "scope": "Named source/role/stage/instrument wording corrections only; existing own-date themes and conditional analysis retained",
+  "before_path": "audit/review_history/independent_nonretail_2024-06-07_before_precision_c6350a5fd2aa920f.json",
+  "before_file_sha256": "c6350a5fd2aa920f95f3a7daf5f56b22845927adf64a87e6eb647e5571abf1df",
+  "after_file_sha256": "9e7f1812213fc9af9d8b8e0546a6f77477dff448543f6fdedb30b50ae1236472",
+  "clock_proof_path": "audit_work/june7_n2327_clock_independent_review.json",
+  "clock_proof_sha256": "a386855d44116f532194eca1229dc0e9d00b33ef87ce0c4ccf855cbb38edf480",
+  "root_controlled_exclusion_amendment": "audit/release_exclusions_amendment_2024-06-07_n2327.json",
+  "root_controlled_exclusion_amendment_sha256": "7ce5a2380ae102c056f72c7f46729dfcc1d78635232a1c5d3616af25bb6ef2ca",
+  "fixes": [
+    {
+      "label": "Macro Stance",
+      "old": "Reuters reports the S&P 500 and Nasdaq slipping slightly ahead of payrolls, while its Morning Bid frames the global rally as dependent on that pending release. The completed fact is market positioning around an event; the payroll outcome is not yet known.",
+      "new": "Reuters reports the S&P 500 and Nasdaq slipping slightly ahead of payrolls. The pending release presents a test of the balance between growth and inflation. The completed observation is a pre-release market session; the payroll outcome is not yet known.",
+      "reason": "n2327 publisher clock is after own cutoff; use only already-cited eligible n0144 pre-release US-close fact. Preserve the same pending-payroll conditional theme and remove unsupported holdings/positioning interpretation."
+    },
+    {
+      "label": "Macro Stance",
+      "old": "[[n0144]] [[n2327]]",
+      "new": "[[n0144]]",
+      "reason": "Remove now-controlled excluded n2327; original n0144 supports the remaining exact market/pending-event premise."
+    },
+    {
+      "label": "What Is Priced",
+      "old": "Reuters frames the global rally as dependent on the pending payroll report.",
+      "new": "Reuters reports the S&P 500 and Nasdaq closing slightly lower ahead of payrolls.",
+      "reason": "Use already-cited pre-cutoff own n0144 instead of post-cutoff Morning Bid. This is the identical previously known pending labor event; no new theme, later market data or payroll outcome."
+    },
+    {
+      "label": "What Is Priced",
+      "old": "[[n2327]]",
+      "new": "[[n0144]]",
+      "reason": "Bound the unchanged conditional scenario to the own-date eligible pre-release US-close headline; n0144 final use count is three."
+    },
+    {
+      "label": "Rewarded",
+      "old": "Barron's reports HPE beating earnings expectations and improving guidance on AI-server sales.",
+      "new": "Barron's reports HPE beating earnings expectations on strong AI-server sales.",
+      "reason": "Headline earnings topped estimates and guidance is ambiguous; retain unambiguous earnings-beat/demand fact without asserting raised guidance."
+    },
+    {
+      "label": "Attention into EPS",
+      "old": "CNBC reports Salesforce opening a London AI center as part of its UK investment.",
+      "new": "CNBC reports Salesforce planning a London AI center as part of its UK investment.",
+      "reason": "Own headline is to open; keep center prospective rather than treating the opening as already completed."
+    },
+    {
+      "label": "Exposure & Risk",
+      "old": "Listed alternative-asset exposure includes fundraising, fees and market sensitivities beyond a single portfolio.",
+      "new": "MS and XLF offer broad financial exposure with fundraising, fee and market sensitivities beyond a single portfolio.",
+      "reason": "Name broad instruments explicitly without implying direct ownership of a private-equity portfolio."
+    },
+    {
+      "label": "Exposure & Risk",
+      "old": "A direct position concentrates operating and financing risk; broader crypto-related exposure introduces different businesses rather than replicating the same opportunity.",
+      "new": "Core Scientific shares concentrate operating and financing risk; broader crypto-related exposure introduces different businesses rather than replicating the same opportunity.",
+      "reason": "Identify the actual direct equity instrument by issuer; no unavailable quote, share-unit rescaling or numeric claim introduced."
+    },
+    {
+      "label": "Exposure & Risk",
+      "old": "A broad China allocation dilutes the exposure, while an individual platform concentrates execution and regulatory risk.",
+      "new": "FXI dilutes the theme across China large-cap businesses, while an individual platform concentrates execution and regulatory risk.",
+      "reason": "Own-date card identifies FXI as China large-cap ETF; explicitly name the original broad allocation, without claiming pure payment-provider exposure."
+    },
+    {
+      "label": "Price Hurdle & Risk",
+      "old": "Do not infer an unsupported profit or margin figure from a sales headline.",
+      "new": "The investment case weakens if customer incentives or service costs absorb the benefit of stronger sales.",
+      "reason": "Replace input-process aside with the same conditional sales-to-profit risk, without a numeric profit or margin invention."
+    }
+  ]
+}

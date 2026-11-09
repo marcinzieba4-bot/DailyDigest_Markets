@@ -1,0 +1,189 @@
+{
+  "checked_at_utc": "2026-11-09T10:07:29.384852+00:00",
+  "reviewer_tool_sha256": "5daa7f9bd56b25159612f185dbceca0ce5deb7d952e5f62fdc313810451a0b89",
+  "expected_scope": {
+    "dates": [
+      "2024-06-03",
+      "2024-06-04",
+      "2024-06-05",
+      "2024-06-06",
+      "2024-06-07",
+      "2024-06-10",
+      "2024-06-11",
+      "2024-06-12",
+      "2024-06-13",
+      "2024-06-14",
+      "2024-06-17",
+      "2024-06-18",
+      "2024-06-19",
+      "2024-06-20",
+      "2024-06-21",
+      "2024-06-24",
+      "2024-06-25",
+      "2024-06-26",
+      "2024-06-27",
+      "2024-06-28"
+    ],
+    "editions": 20,
+    "native_artifacts": 60,
+    "collection_artifacts": 5,
+    "targets": 65,
+    "reportZIP_members": 63,
+    "protected_objects": 182
+  },
+  "selected_July_code_delta": {
+    "publish.py": {
+      "selected_July_code_sha256": "0e568d4d197aa374d569ee7ae4c3aee2d6d2bd787f03fbf0cca518c228dc146a",
+      "added_functions": [
+        "require_artifact_review"
+      ],
+      "changed_function_AST": [
+        "main",
+        "merge_index",
+        "plan",
+        "protected_keys",
+        "snapshot"
+      ]
+    },
+    "verify_delivery.py": {
+      "selected_July_code_sha256": "e2df5303e40d5f1f7262da48e5484cc42d043d10fb679e3ee1eda888365ba282",
+      "added_functions": [],
+      "changed_function_AST": [
+        "main"
+      ]
+    }
+  },
+  "limits": [
+    "Generic code inspection, extracted pure functions and synthetic predicates only. Neither SDK entrypoint nor the actual publication plan was executed.",
+    "No factual report input, real financial/source feed, AWS client, network read or remote mutation was used.",
+    "This review accepts code only; real20report inputs, final artifacts, publication and public delivery still require their current gates.",
+    "Protected changes remain strict failures with no inherited concurrency waiver."
+  ],
+  "passed": true,
+  "script_sha256": "844798599f5f3112da329da2b3c77773d8930e9b31f2f55194f2fa7677cc5cb9",
+  "publisher_sha256": "09ae1481b618b73cb2e1fda5d37328c23ef0dbebb33191715b91e6e43987c347",
+  "checks": [
+    {
+      "check": "isolate65-target predicate without executing network entrypoint",
+      "passed": true
+    },
+    {
+      "check": "delivery exact-target fixture: valid",
+      "passed": true
+    },
+    {
+      "check": "delivery exact-target fixture: missing",
+      "passed": true
+    },
+    {
+      "check": "delivery exact-target fixture: duplicate",
+      "passed": true
+    },
+    {
+      "check": "delivery exact-target fixture: foreign August route",
+      "passed": true
+    },
+    {
+      "check": "delivery exact-target fixture: wrong dates",
+      "passed": true
+    },
+    {
+      "check": "isolate63-member publicZIP predicate",
+      "passed": true
+    },
+    {
+      "check": "publicZIP exact-members fixture: valid",
+      "passed": true
+    },
+    {
+      "check": "publicZIP exact-members fixture: missing",
+      "passed": true
+    },
+    {
+      "check": "publicZIP exact-members fixture: duplicate",
+      "passed": true
+    },
+    {
+      "check": "publicZIP exact-members fixture: unsafe/foreign",
+      "passed": true
+    },
+    {
+      "check": "canonical June public report ZIP route",
+      "passed": true
+    },
+    {
+      "check": "ZIP CRC and all60native report members required",
+      "passed": true
+    },
+    {
+      "check": "origin/public full body hash/size checks",
+      "passed": true
+    },
+    {
+      "check": "40PDF/JSON public downloads verified through ZIP rather than fallback route",
+      "passed": true
+    },
+    {
+      "check": "strict preservation with no inherited Nov4 concurrency waiver",
+      "passed": true
+    },
+    {
+      "check": "index origin/public hash and original href preservation",
+      "passed": true
+    },
+    {
+      "check": "live Lambda metadata unchanged requirement",
+      "passed": true
+    },
+    {
+      "check": "strict final delivery gate accepts all verified conditions",
+      "passed": true
+    },
+    {
+      "check": "final delivery gate rejects protected latest change",
+      "passed": true
+    },
+    {
+      "check": "final delivery gate rejects one origin mismatch",
+      "passed": true
+    },
+    {
+      "check": "final delivery gate rejects one public mismatch",
+      "passed": true
+    },
+    {
+      "check": "final delivery gate rejects missing nativeZIP member",
+      "passed": true
+    },
+    {
+      "check": "final delivery gate rejects archive href loss",
+      "passed": true
+    },
+    {
+      "check": "final delivery gate rejects Lambda change",
+      "passed": true
+    },
+    {
+      "check": "final delivery gate rejects index public mismatch",
+      "passed": true
+    },
+    {
+      "check": "final delivery gate rejects pending invalidation",
+      "passed": true
+    },
+    {
+      "check": "delivery verifier has no remote mutation or send calls",
+      "passed": true
+    },
+    {
+      "check": "delivery verifier unchanged during review",
+      "passed": true
+    },
+    {
+      "check": "delivery verifier bytes stable through final independent review",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "scope": "June delivery verifier code: exact65targets/63ZIP members/60native body checks,40PDFJSON bundle delivery, full-body origin/public hashes, strict182protected preservation/index hrefs/liveLambda metadata."
+}

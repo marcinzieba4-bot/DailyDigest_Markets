@@ -1,0 +1,25 @@
+{
+  "date": "2024-06-21",
+  "feed_sha256": "4fde581b83d179326541873c25c824164a98b96b70244fb9153740329d6f67f6",
+  "exclusions": [
+    {
+      "date": "2024-06-21",
+      "id": "n2174",
+      "feed_sha256": "4fde581b83d179326541873c25c824164a98b96b70244fb9153740329d6f67f6",
+      "title": "Technical Analysis of Nano Nuclear Energy Inc. (NASDAQ:NNE) - TradingView",
+      "src": "TradingView",
+      "published_at": "2024-06-20T15:46:56+00:00",
+      "screen_kind": "semantic_rolling_page",
+      "reason": "Rolling technicals endpoint cannot certify a dated historical news/attention observation; normalized RSS timestamp is insufficient. Conservative omit ownJune21 only, no currentpagefacts imported.",
+      "source_cutoff_utc": "2024-06-21T00:00:00Z",
+      "evidence_paths": [
+        "audit_work/june21_n2174_dynamic_identity_review.json"
+      ],
+      "evidence_sha256": {
+        "audit_work/june21_n2174_dynamic_identity_review.json": "44cb10202bb48f6d4b2006acf75c25834c73d7522402d608264256d947463608"
+      },
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    }
+  ],
+  "scope": "Known pre-release/unsafe records were removed before freeze and remain in the ready receipt; this file records subsequent own-date editorial exclusions only."
+}

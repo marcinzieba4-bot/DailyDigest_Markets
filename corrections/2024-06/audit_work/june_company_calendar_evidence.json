@@ -1,0 +1,42 @@
+{
+  "status": "owner_collected_historical_company_release_date_evidence_pending_independent_review",
+  "evidence": [
+    {
+      "path": "audit_work/june_company_calendar_web_1.json",
+      "sha256": "ecd8dce716fc8b22c915e7d2ffe028f171045ce6dfe9a240e6b3b72a5f1b1c6d",
+      "scope": "Search/open excerpts of historical issuer/SEC dates, safety schedule only; no briefing actual numbers imported."
+    },
+    {
+      "path": "audit_work/june_company_calendar_web_2.json",
+      "sha256": "82688593e81fa150963a8cfe5ad074b603cd7e1692c40c681897b12c9ff800de",
+      "scope": "Search/open excerpts of historical issuer/SEC dates, safety schedule only; no briefing actual numbers imported."
+    },
+    {
+      "path": "audit_work/june_company_calendar_web_3.json",
+      "sha256": "77a925d42a8985d95a4682cb1e1bc3a4ed87d60f070b62eee33130fbcc2ebffe",
+      "scope": "Search/open excerpts of historical issuer/SEC dates, safety schedule only; no briefing actual numbers imported."
+    },
+    {
+      "path": "audit_work/june_company_calendar_web_4.json",
+      "sha256": "6399c6a7c250fd07ff08cf8b0e8c1e51c8d27455e427cb258029d1041607d5d4",
+      "scope": "Search/open excerpts of historical issuer/SEC dates, safety schedule only; no briefing actual numbers imported."
+    },
+    {
+      "path": "audit_work/june_company_calendar_web_5.json",
+      "sha256": "c184e5a8e653c2bfc3def021f3e3268393642fe8e9d7b3b3e95ff3295b6cf9bb",
+      "scope": "Search/open excerpts of historical issuer/SEC dates, safety schedule only; no briefing actual numbers imported."
+    },
+    {
+      "path": "audit_work/june_company_calendar_web_6.json",
+      "sha256": "1c1ed54eb4cfc230fdeee821f69f14fe2c18a84dad06e176cd251fa370c528d4",
+      "scope": "Search/open excerpts of historical issuer/SEC dates, safety schedule only; no briefing actual numbers imported."
+    }
+  ],
+  "corrections_from_initial_owner_draft": [
+    "GitLabactualJune3,notJune4",
+    "SmartsheetactualJune5,notJune6",
+    "GameStopactualsurpriseJune7,notpreviouslyscheduledJune11"
+  ],
+  "timing_scope": "US preopen/afterclose results use known UTC-day dates and next weekday cutoff. Full minute precision unasserted except retained issuer timing, since sameUTCday before/afterregularsession is always after00UTC. H&MJun27 08:00CEST converts06UTC.",
+  "unverified_limit": "RH June13 release is datedsecondarySEC-disclosure excerpt; originalissuerclock unasserted. No publisher article version is certified by these calendar references."
+}

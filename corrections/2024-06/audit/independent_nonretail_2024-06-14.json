@@ -1,0 +1,3477 @@
+{
+  "schema": "independent-nonretail-complete-semantic-review-v1",
+  "date": "2024-06-14",
+  "component": "nonretail",
+  "status": "accepted",
+  "fatal_or_major_remaining": 0,
+  "reviewer": "june14_final_review; separate from original author",
+  "reviewed_at_utc": "2026-11-09T14:19:10.180497+00:00",
+  "cutoff_utc": "2024-06-14T00:00:00Z",
+  "feed_sha256": "0aff8f69e55464ac9bab9295d6cd832653547802450f9e5f7f72fb8e0ac277c0",
+  "card_sha256": "b09c1ee6e2ff93a8400106500ec4b907f886b0dc3e281b465efbe0e4e71daa79",
+  "exclusions_sha256": "32388df348e6e9c74a55151118e5e03f0a4bb37208ad2859f97f8e31d9d14a75",
+  "nonretail_content_sha256": "8a89b0f29f831da79926ba1e3aa4a2802c85d8990a4ef43184f4b86a71262314",
+  "review_scope": {
+    "own_date_only": true,
+    "read_other_date_factual_content": false,
+    "full_blocks_reviewed": 36,
+    "full_paragraphs_reviewed": 136,
+    "body_words": 8597,
+    "distinct_cited_headlines": 88,
+    "maximum_nonretail_citation_uses": 3,
+    "author_scripts_replayed": false,
+    "checks": [
+      "claim meaning against every full cited own-date headline",
+      "publisher attribution",
+      "named company role and instrument",
+      "announced/planned/tested versus completed",
+      "preview and future outcome boundaries",
+      "numbers exact instrument/session/horizon/currency/unit/as-traded units",
+      "macro release availability rather than normalized Google clock",
+      "all four Underowned Exposure & Risk exact own-card instruments",
+      "source windows by meaning",
+      "cross-section playbook and stance consistency",
+      "wide narrative style, no input asides or unsupported historical episodes"
+    ]
+  },
+  "block_reviews": [
+    {
+      "path": "geo[0]",
+      "key_or_title": "US",
+      "status": "accepted",
+      "paragraph_count": 4,
+      "evidence_ids": [
+        "n0198",
+        "n0851",
+        "n2441",
+        "n2445",
+        "n2466"
+      ],
+      "review": "Disinflation from completed consumer/producer releases is distinguished from the Fed projected one-cut path and completed equity closing record. Treasury maturities, signed spread and twenty-observation changes support inverted bull flattening. Homeownership costs are a household cash constraint, not a measured demand collapse. Conditional broadening and duration calls remain consistent with selective equity risk.",
+      "paragraphs": [
+        {
+          "path": "geo[0].parts[0]",
+          "label": "Macro Stance",
+          "paragraph_sha256": "175677911bdbc65f2c3df0f1ea7bcc67e7fc13c9c6fc8608f9dca4394014d6a9",
+          "evidence_ids": [
+            "n0198",
+            "n2445",
+            "n2466"
+          ]
+        },
+        {
+          "path": "geo[0].parts[1]",
+          "label": "Rates & Curve",
+          "paragraph_sha256": "2b2cd587d9f3c4da7b3c4ecaf94c6633fb88a0a3c97a3e49a02fc42d804647d2",
+          "evidence_ids": []
+        },
+        {
+          "path": "geo[0].parts[2]",
+          "label": "New / Most Important",
+          "paragraph_sha256": "f0a4f142cd6b20b6151a98440e167e8ea6c1db6354e9d66eddf49122a3f0637e",
+          "evidence_ids": [
+            "n0851",
+            "n2441"
+          ]
+        },
+        {
+          "path": "geo[0].parts[3]",
+          "label": "Playbook ✓",
+          "paragraph_sha256": "ffc90691ede9309c9152c642bbab3e6e7abef35ba79c49452e67bfc1320d8d37",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "geo[1]",
+      "key_or_title": "EU",
+      "status": "accepted",
+      "paragraph_count": 4,
+      "evidence_ids": [
+        "n0303",
+        "n1577",
+        "n1578",
+        "n1597",
+        "n1611"
+      ],
+      "review": "Reuters auto weakness is linked to uncertainty over the response, without assuming retaliation completed. Lane/Lagarde patience is attributed correctly; unsupported first-cut completion language was made conditional. French national vote remains pending, and no enacted fiscal program or later outcome is asserted. Playbook separates valuation relief from commercial earnings.",
+      "paragraphs": [
+        {
+          "path": "geo[1].parts[0]",
+          "label": "Macro Stance",
+          "paragraph_sha256": "4e49ed4fdfeaa4f681d2e996196580a88b9fb8495dd5a6081e6916742bbec40c",
+          "evidence_ids": [
+            "n0303"
+          ]
+        },
+        {
+          "path": "geo[1].parts[1]",
+          "label": "Activity & Inflation",
+          "paragraph_sha256": "a2ee6fb82e036ddb9098f7414cbb17b230cca0d1d7a009b345c6b2847207de15",
+          "evidence_ids": [
+            "n1577",
+            "n1578"
+          ]
+        },
+        {
+          "path": "geo[1].parts[2]",
+          "label": "New / Most Important",
+          "paragraph_sha256": "762904f93b7b46a7c66f48e8d1fb3760c21dec445fbe2b51186813fe1fc588cc",
+          "evidence_ids": [
+            "n1597",
+            "n1611"
+          ]
+        },
+        {
+          "path": "geo[1].parts[3]",
+          "label": "Playbook ✓",
+          "paragraph_sha256": "12648a13118e91a67aa55c27daf31205313b0ed9cbe87fca6f31d7489f5f56b1",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "geo[2]",
+      "key_or_title": "CN",
+      "status": "accepted",
+      "paragraph_count": 8,
+      "evidence_ids": [
+        "n0232",
+        "n0252",
+        "n0253",
+        "n0254",
+        "n0257",
+        "n0269",
+        "n0272",
+        "n0274",
+        "n0291",
+        "n0295",
+        "n0297",
+        "n0298",
+        "n0300",
+        "n0303",
+        "n0304"
+      ],
+      "review": "All eight China parts checked: slow housing sales and destocking policy; exports versus imports; overseas app demand; credit-cycle commentary; inventory and bank analysis; company localization views; own-session Shanghai/Hang Seng marks; inflation and competitive pricing. CNN BYD statement is attributed analysis. Policy tools, factories and relending are not described as completed earnings recovery; divergence and cash tests are specific.",
+      "paragraphs": [
+        {
+          "path": "geo[2].parts[0]",
+          "label": "Macro Stance",
+          "paragraph_sha256": "6e498f46cba4964dd5b34e9decfb7f4731b09a3fc27116dfb0dcdf5406607bd8",
+          "evidence_ids": [
+            "n0298",
+            "n0300",
+            "n0304"
+          ]
+        },
+        {
+          "path": "geo[2].parts[1]",
+          "label": "PMIs & Activity",
+          "paragraph_sha256": "822adc3bba44d81c57a49f385e6842c8c54324191ddef20b38e2c40ef451effa",
+          "evidence_ids": [
+            "n0232",
+            "n0274"
+          ]
+        },
+        {
+          "path": "geo[2].parts[2]",
+          "label": "Credit Impulse",
+          "paragraph_sha256": "0952d461ec3c4054c32ef4f721ca9627ac49eca552f76bb4c63a6207b8bfba42",
+          "evidence_ids": [
+            "n0269",
+            "n0272"
+          ]
+        },
+        {
+          "path": "geo[2].parts[3]",
+          "label": "Property",
+          "paragraph_sha256": "42e4b08219e0d20d9003ba63288c6511fc2084fad94dad6e1d84e5b4163b0e79",
+          "evidence_ids": [
+            "n0257",
+            "n0295"
+          ]
+        },
+        {
+          "path": "geo[2].parts[4]",
+          "label": "Fiscal, Policy & Trade",
+          "paragraph_sha256": "c263616e831b25f7629fc8fb7f0d919963dd7249bd6223f0517458b08d2cfca3",
+          "evidence_ids": [
+            "n0291",
+            "n0297",
+            "n0298"
+          ]
+        },
+        {
+          "path": "geo[2].parts[5]",
+          "label": "Markets & Flows",
+          "paragraph_sha256": "41c1c9f0ef0ce7bc85b638901457f53d8691db96b8d8c0e09d7bd36e815d95bb",
+          "evidence_ids": [
+            "n0303"
+          ]
+        },
+        {
+          "path": "geo[2].parts[6]",
+          "label": "New / Most Important",
+          "paragraph_sha256": "88fd04fff2661105220197d5509d150f69a3965eee76e1160a8bccff9ced2c0f",
+          "evidence_ids": [
+            "n0252",
+            "n0253",
+            "n0254"
+          ]
+        },
+        {
+          "path": "geo[2].parts[7]",
+          "label": "Playbook ✓",
+          "paragraph_sha256": "08bd522543b2ca423c8bbcb070447fed50f1a3dc2e452ecadebbfd7f7f00d0b2",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "geo[3]",
+      "key_or_title": "JP",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n1651",
+        "n1739",
+        "n1741",
+        "n1751",
+        "n1754"
+      ],
+      "review": "BOJ decision remains pending and the Reuters preview is not converted to an outcome. Bond purchases and rates remain distinct policy instruments. GDP revision, service sentiment and wholesale inflation are completed earlier releases. Nikkei marks use own completed session. Currency discussion explains conditional transmission without prohibited spot FX levels.",
+      "paragraphs": [
+        {
+          "path": "geo[3].parts[0]",
+          "label": "Macro Stance",
+          "paragraph_sha256": "e92d31555ae250e813b5218af12b58c39702e0ceeff4434c3c6d6cba84cd2fa5",
+          "evidence_ids": [
+            "n1651",
+            "n1751"
+          ]
+        },
+        {
+          "path": "geo[3].parts[1]",
+          "label": "Activity & Currency",
+          "paragraph_sha256": "953cda6dbcb4d1049ae61719f35f7490850f6d38d2a9222fc5fd76383f61e34c",
+          "evidence_ids": [
+            "n1739",
+            "n1741",
+            "n1754"
+          ]
+        },
+        {
+          "path": "geo[3].parts[2]",
+          "label": "Playbook ✓",
+          "paragraph_sha256": "63dee5b86f6d945ab56bbe147e3f81ae721093758460d34a8203ecaffe74f42e",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "geo[4]",
+      "key_or_title": "AU",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n0045",
+        "n0051",
+        "n0059",
+        "n0068"
+      ],
+      "review": "AFR forecast of iron-ore pressure is kept separate from Reuters import/output commentary and from domestic household evidence. ABC and AFR attribution matches metadata. No commodity-price ratio is used as growth evidence. Miner and consumer additions have separate operational triggers and invalidations.",
+      "paragraphs": [
+        {
+          "path": "geo[4].parts[0]",
+          "label": "Macro Stance",
+          "paragraph_sha256": "4d98cd8f54e3127ebe86146643ea03e7efbea4763c0004fb5d6d3776db3b236f",
+          "evidence_ids": [
+            "n0059",
+            "n0068"
+          ]
+        },
+        {
+          "path": "geo[4].parts[1]",
+          "label": "Demand & Financing",
+          "paragraph_sha256": "cc5dd35b631926bc64cebd1781bb3debebc77f319305b5c0c7c27dd33e3bd737",
+          "evidence_ids": [
+            "n0045",
+            "n0051"
+          ]
+        },
+        {
+          "path": "geo[4].parts[2]",
+          "label": "Playbook ✓",
+          "paragraph_sha256": "67f87d0aae808e925821eb13d1702835bb4754a2d177d55baa0f1976bd43d057",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "geo[5]",
+      "key_or_title": "PL",
+      "status": "accepted",
+      "paragraph_count": 7,
+      "evidence_ids": [
+        "n0307",
+        "n1775",
+        "n1776",
+        "n1779",
+        "n1924",
+        "n1933",
+        "n1951",
+        "n1975",
+        "n1980",
+        "n1996",
+        "n2007",
+        "n2008",
+        "n2015",
+        "n2021",
+        "n2022",
+        "n2026",
+        "n2027"
+      ],
+      "review": "Seven Poland parts checked against all Polish and regional titles. WIG20TR tracker is not presented as an index point level or measured outflow. Labor revival and banker optimism are attributed assessments; future public pay decision is distinct from realized spending. LPP completed sales/inventory/margin evidence is differentiated from Pepco withdrawal, Orlen appointments, KGHM affordability and PKO Leasing ambition. Patriots report/response, G7 agreement and defense preparation are not treated as completed deployments, contracts or conflict outcomes.",
+      "paragraphs": [
+        {
+          "path": "geo[5].parts[0]",
+          "label": "Macro Stance",
+          "paragraph_sha256": "751f310d569a548df02bbeda3f33527d5afed04d141e5ba36bbb17372293d736",
+          "evidence_ids": [
+            "n1996"
+          ]
+        },
+        {
+          "path": "geo[5].parts[1]",
+          "label": "Markets",
+          "paragraph_sha256": "d42a857775364bcf3692397fa19fd36227ff1efd399f5d86be6b22e14c5d4c4a",
+          "evidence_ids": [
+            "n2008",
+            "n2015"
+          ]
+        },
+        {
+          "path": "geo[5].parts[2]",
+          "label": "Fiscal & Politics",
+          "paragraph_sha256": "d87d9c2b6ef85478c793113c1df6835b80cedfcb4005b797b6b0a030f4dbec83",
+          "evidence_ids": [
+            "n1924",
+            "n1951",
+            "n2022"
+          ]
+        },
+        {
+          "path": "geo[5].parts[3]",
+          "label": "Corporate & Sectors",
+          "paragraph_sha256": "f606c2d5793a17728dd7beab8232aed7ee620c2d853ed2a7ac82dd2a6a8bdded",
+          "evidence_ids": [
+            "n2007",
+            "n2021",
+            "n2026"
+          ]
+        },
+        {
+          "path": "geo[5].parts[4]",
+          "label": "Geopolitics & Security",
+          "paragraph_sha256": "2a64381a748b06ada84ed44292ae767fb9bdee6b1519afb642ba3ab34911378a",
+          "evidence_ids": [
+            "n1933",
+            "n1975",
+            "n1980"
+          ]
+        },
+        {
+          "path": "geo[5].parts[5]",
+          "label": "New / Most Important",
+          "paragraph_sha256": "dbb70e3d99796b721c5758b7bb3520678f7d2e1cdfac780895aa52ae6637e4bd",
+          "evidence_ids": [
+            "n0307",
+            "n1775",
+            "n1776",
+            "n1779",
+            "n2027"
+          ]
+        },
+        {
+          "path": "geo[5].parts[6]",
+          "label": "Playbook ✓",
+          "paragraph_sha256": "e45ba5c9c98b5773f69345592e7a764397d86fda8c75880bef88eb17a27cbf27",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "sectors[0]",
+      "key_or_title": "XLK",
+      "status": "accepted",
+      "paragraph_count": 4,
+      "evidence_ids": [
+        "n1117",
+        "n1469"
+      ],
+      "review": "Broadcom forecast and completed share response are supported by Reuters. After root clock adjudication, n1096 Adobe beat/reaction was removed; Yahoo n1469 establishes only completed quarterly reporting. Software cash/adoption statements are prospective mechanisms. No Adobe beat, guidance increase or after-hours percentage survives.",
+      "paragraphs": [
+        {
+          "path": "sectors[0].parts[0]",
+          "label": "Narrative",
+          "paragraph_sha256": "ce4ede1c3cef009c5a878fed4b9771784dc016bc27c29d5e6884a00259e8ae7a",
+          "evidence_ids": [
+            "n1117"
+          ]
+        },
+        {
+          "path": "sectors[0].parts[1]",
+          "label": "Reported",
+          "paragraph_sha256": "20364a6c3efe90e118796a442240c28f0b253a31ae931be41bf7fe681fbb25bb",
+          "evidence_ids": [
+            "n1469"
+          ]
+        },
+        {
+          "path": "sectors[0].parts[2]",
+          "label": "EPS Upside Watch",
+          "paragraph_sha256": "bb2b4bdb6be54ccc51b31ddaf456205ad63661c4647c81500425d0978f44ed59",
+          "evidence_ids": []
+        },
+        {
+          "path": "sectors[0].parts[3]",
+          "label": "⚡ Breaking Convention",
+          "paragraph_sha256": "eddf17276caa103a332152ebb37c02f59a60c5dd6ddc8824f3df9d5753e3c408",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "sectors[1]",
+      "key_or_title": "XLC",
+      "status": "accepted",
+      "paragraph_count": 4,
+      "evidence_ids": [
+        "n1487",
+        "n2271"
+      ],
+      "review": "Spotify creative agency and AI voiceover test remain announced/test-stage; adoption, revenue and delivery economics remain conditional. Meta senior-rank efficiency is an organizational initiative, not realized savings. Playbook requires commercial cash and preserved capability.",
+      "paragraphs": [
+        {
+          "path": "sectors[1].parts[0]",
+          "label": "Narrative",
+          "paragraph_sha256": "4a8001c6a50958178c57cc99d015cce5fa74272dc25df95b90999f0d96f3c733",
+          "evidence_ids": [
+            "n2271"
+          ]
+        },
+        {
+          "path": "sectors[1].parts[1]",
+          "label": "Reported",
+          "paragraph_sha256": "21f0c14a668148316ccbcc205a3799466ec1917f937820b7f0a25b8e0c86992e",
+          "evidence_ids": [
+            "n1487"
+          ]
+        },
+        {
+          "path": "sectors[1].parts[2]",
+          "label": "EPS Upside Watch",
+          "paragraph_sha256": "a42ea3858eb8e2edc47e0f9d8ab84861da07d74420ac516e0295396a8cf2caec",
+          "evidence_ids": []
+        },
+        {
+          "path": "sectors[1].parts[3]",
+          "label": "⚡ Breaking Convention",
+          "paragraph_sha256": "34e2da02b09873bca876833f6a482aef2ca89af7e1dd1d8a8b824b196ab0a0d3",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "sectors[2]",
+      "key_or_title": "XLF",
+      "status": "accepted",
+      "paragraph_count": 4,
+      "evidence_ids": [
+        "n1140",
+        "n1248"
+      ],
+      "review": "Goldman planned private-bank lending expansion is not completed balance growth; Visa/Mastercard settlement remains in peril, not a final judgment. The comparison distinguishes underwriting from legal economics without claiming either company is a proxy for the other.",
+      "paragraphs": [
+        {
+          "path": "sectors[2].parts[0]",
+          "label": "Narrative",
+          "paragraph_sha256": "9140a7bd6372725be5d94103d6defb5d57984a101774d6093cbfe7057526745c",
+          "evidence_ids": [
+            "n1140"
+          ]
+        },
+        {
+          "path": "sectors[2].parts[1]",
+          "label": "Reported",
+          "paragraph_sha256": "e3b427e808fcd1581dddc412b0f9617e6f7a947b96c0640212bff30b5c542a6a",
+          "evidence_ids": [
+            "n1248"
+          ]
+        },
+        {
+          "path": "sectors[2].parts[2]",
+          "label": "EPS Upside Watch",
+          "paragraph_sha256": "564bc6e3c6ce7390f526e8f4dfe0683d6c53aab2e67d0010412181c9ad11b30d",
+          "evidence_ids": []
+        },
+        {
+          "path": "sectors[2].parts[3]",
+          "label": "⚡ Breaking Convention",
+          "paragraph_sha256": "7dbb488fdf0c4e1262677cfd4c6f1c851a03bc64bdc53991ff93cd790dc6f777",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "sectors[3]",
+      "key_or_title": "XLE",
+      "status": "accepted",
+      "paragraph_count": 4,
+      "evidence_ids": [
+        "n1491",
+        "n2249"
+      ],
+      "review": "OMV longer-term management guidance is an outlook, while IEA surplus is a future industry forecast. No realized surplus, guaranteed commodity path or fulfilled guidance is stated. Earnings watch uses asset economics and funding rather than unsupported quantities.",
+      "paragraphs": [
+        {
+          "path": "sectors[3].parts[0]",
+          "label": "Narrative",
+          "paragraph_sha256": "deca7d66ddcb7c0f472e8ca8984d433e6a30222d5ee05a666397ba3bbbb3f4cf",
+          "evidence_ids": [
+            "n1491"
+          ]
+        },
+        {
+          "path": "sectors[3].parts[1]",
+          "label": "Reported",
+          "paragraph_sha256": "3a1285ba7aaa9b98e05f5d55742913eeb91725bf036082a6ba8b1569e482f552",
+          "evidence_ids": [
+            "n2249"
+          ]
+        },
+        {
+          "path": "sectors[3].parts[2]",
+          "label": "EPS Upside Watch",
+          "paragraph_sha256": "151724a62989eb6edf40a554c702d7049fefe8e9d66a68f8122957cddc8ee28e",
+          "evidence_ids": []
+        },
+        {
+          "path": "sectors[3].parts[3]",
+          "label": "⚡ Breaking Convention",
+          "paragraph_sha256": "dd0c58e10eb5bb869ec6f62b3bffda9a3519fddc30f30509c9b07b45c4f5c166",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "sectors[4]",
+      "key_or_title": "XLI",
+      "status": "accepted",
+      "paragraph_count": 4,
+      "evidence_ids": [
+        "n0909",
+        "n1149"
+      ],
+      "review": "FedEx cuts are a planned demand response; Airbus overtime is sought to address delayed A220 production. This supports the comparison of weak freight demand with output constraints. No intended saving, completed staffing reduction or production catch-up is assumed.",
+      "paragraphs": [
+        {
+          "path": "sectors[4].parts[0]",
+          "label": "Narrative",
+          "paragraph_sha256": "bbb08dc01af0e369ed6ca0d6f120b7261842fd22dcd4c8a9aa3c1f9ef0d2638d",
+          "evidence_ids": [
+            "n1149"
+          ]
+        },
+        {
+          "path": "sectors[4].parts[1]",
+          "label": "Reported",
+          "paragraph_sha256": "6fb2c55dd0a0eb70db08a1758a44897c98c62c6d19037cee643a2a6f8ae385e8",
+          "evidence_ids": [
+            "n0909"
+          ]
+        },
+        {
+          "path": "sectors[4].parts[2]",
+          "label": "EPS Upside Watch",
+          "paragraph_sha256": "21bde0c229dc245dcbffc20ff4c60bb037c386eba6d460b6f6450059a414be32",
+          "evidence_ids": []
+        },
+        {
+          "path": "sectors[4].parts[3]",
+          "label": "⚡ Breaking Convention",
+          "paragraph_sha256": "b87fc111202d50672f1fc3be754257e31305032089640368613e9a35da877720",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "sectors[5]",
+      "key_or_title": "XLY",
+      "status": "accepted",
+      "paragraph_count": 4,
+      "evidence_ids": [
+        "n1148",
+        "n1217",
+        "n1430"
+      ],
+      "review": "Shein price increase and prospective IPO are Reuters-supported; Stellantis CEO intended correction now has its own CNBC n1217 citation in the same paragraph. DFS warning is attributed to Red Sea disruption. Demand, delivery and pricing outcomes remain conditional.",
+      "paragraphs": [
+        {
+          "path": "sectors[5].parts[0]",
+          "label": "Narrative",
+          "paragraph_sha256": "1bb8888fa11b451e1ad216d6e1d5795cdda5991733f99cdb5ca6359d4cfbb8b4",
+          "evidence_ids": [
+            "n1148",
+            "n1217"
+          ]
+        },
+        {
+          "path": "sectors[5].parts[1]",
+          "label": "Reported",
+          "paragraph_sha256": "65202da17e4acfc4a43e0069bff414b960f696fb7035ad53bcc8ef74c45793aa",
+          "evidence_ids": [
+            "n1430"
+          ]
+        },
+        {
+          "path": "sectors[5].parts[2]",
+          "label": "EPS Upside Watch",
+          "paragraph_sha256": "3e93f429ef98b70e068a38afedafeb980985a948a9060154f43be0fa7d34f192",
+          "evidence_ids": []
+        },
+        {
+          "path": "sectors[5].parts[3]",
+          "label": "⚡ Breaking Convention",
+          "paragraph_sha256": "f6eea825989bd5539c9d0fa2454829ef4c9a479d3309388f1d9359fa51eb80e0",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "sectors[6]",
+      "key_or_title": "XLP",
+      "status": "accepted",
+      "paragraph_count": 4,
+      "evidence_ids": [
+        "n1472",
+        "n2231"
+      ],
+      "review": "Dollarama sales-growth miss is supported by Bloomberg.com; Le Monde regional boycott pressure is not generalized to all brands or measured as a universal collapse. The block uses the companies as everyday-purchase comparisons without claiming ETF membership or invented sales totals.",
+      "paragraphs": [
+        {
+          "path": "sectors[6].parts[0]",
+          "label": "Narrative",
+          "paragraph_sha256": "f5a0f7a87dd285ed124861744e29564e159474faf9b67fe1fabb5362f7715872",
+          "evidence_ids": [
+            "n2231"
+          ]
+        },
+        {
+          "path": "sectors[6].parts[1]",
+          "label": "Reported",
+          "paragraph_sha256": "ac52cf2cd89a679b72f959bf9f2e7e9b5a4a7e242f947e474ec84e646930ad77",
+          "evidence_ids": [
+            "n1472"
+          ]
+        },
+        {
+          "path": "sectors[6].parts[2]",
+          "label": "EPS Upside Watch",
+          "paragraph_sha256": "77f211bae248929587a9903eba5db6bacbb2f3fb1a6d59902526af40bcd210e9",
+          "evidence_ids": []
+        },
+        {
+          "path": "sectors[6].parts[3]",
+          "label": "⚡ Breaking Convention",
+          "paragraph_sha256": "e30d4eba41d9d92cdc1d2e1bf251304185bf37cf2c568a3e6972717f2ed9d4a0",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "sectors[7]",
+      "key_or_title": "XLV",
+      "status": "accepted",
+      "paragraph_count": 4,
+      "evidence_ids": [
+        "n1486",
+        "n2174"
+      ],
+      "review": "WSJ Lilly success and desire for a successor are differentiated from an approved replacement. Reuters doctors view of potential broader male demand is prospective, with no measured patient count. Product evidence, access and safety are explicit triggers and risks.",
+      "paragraphs": [
+        {
+          "path": "sectors[7].parts[0]",
+          "label": "Narrative",
+          "paragraph_sha256": "c891348de339f5aee0ea61ba60f8f8627e10d4533375953b1185a65acadf6ffc",
+          "evidence_ids": [
+            "n1486"
+          ]
+        },
+        {
+          "path": "sectors[7].parts[1]",
+          "label": "Reported",
+          "paragraph_sha256": "2af253d2273011bfb64546cf7a2f2e2799e784c2d69a69b5ecbf328bb1d0a8b3",
+          "evidence_ids": [
+            "n2174"
+          ]
+        },
+        {
+          "path": "sectors[7].parts[2]",
+          "label": "EPS Upside Watch",
+          "paragraph_sha256": "8ccb49dff960bf19456c9113a19168067443f364c4fb0aae29fe05b65492e9bc",
+          "evidence_ids": []
+        },
+        {
+          "path": "sectors[7].parts[3]",
+          "label": "⚡ Breaking Convention",
+          "paragraph_sha256": "8c23f3fa3a75bcba384dbccd4207108beb429505f3568470344439a0f659f5f9",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "sectors[8]",
+      "key_or_title": "XLB",
+      "status": "accepted",
+      "paragraph_count": 4,
+      "evidence_ids": [
+        "n0059",
+        "n0252"
+      ],
+      "review": "Reuters iron-ore imports versus steel output is commentary about downstream-demand quality; solar price freefall and request for government action are current company/industry news. No inventory amount, completed policy support or immediate margin floor is invented.",
+      "paragraphs": [
+        {
+          "path": "sectors[8].parts[0]",
+          "label": "Narrative",
+          "paragraph_sha256": "914adb5cf03736fb6e79118e61fb1bb867a57215901f06cd98f9d7f954bbfb85",
+          "evidence_ids": [
+            "n0059"
+          ]
+        },
+        {
+          "path": "sectors[8].parts[1]",
+          "label": "Reported",
+          "paragraph_sha256": "8177ddfebb7c4b3e18ce1fa41f15e8958868fadddf66755850402d0d46897490",
+          "evidence_ids": [
+            "n0252"
+          ]
+        },
+        {
+          "path": "sectors[8].parts[2]",
+          "label": "EPS Upside Watch",
+          "paragraph_sha256": "f4b18c94d1f4ede0d66aabc4240f5f2c88f1079146a0adaac756e73fd2d3537e",
+          "evidence_ids": []
+        },
+        {
+          "path": "sectors[8].parts[3]",
+          "label": "⚡ Breaking Convention",
+          "paragraph_sha256": "e48c7b9f8a7ee106a77a4cf941720e5035aae4ec0ed540a1eb610329be726db9",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "sectors[9]",
+      "key_or_title": "XLRE",
+      "status": "accepted",
+      "paragraph_count": 4,
+      "evidence_ids": [
+        "n0300",
+        "n1502"
+      ],
+      "review": "Crest Nicholson completed loss is a company result; Chinese destocking support and slow sales are policy/activity context in a separate market. No rate rally is treated as completed property recovery. Cash collections and financing obligations ground the conditional stance.",
+      "paragraphs": [
+        {
+          "path": "sectors[9].parts[0]",
+          "label": "Narrative",
+          "paragraph_sha256": "e1f0812219b4b5b818b72d6fe537b59d0774d08946bba53454d18b80730b06c9",
+          "evidence_ids": [
+            "n1502"
+          ]
+        },
+        {
+          "path": "sectors[9].parts[1]",
+          "label": "Reported",
+          "paragraph_sha256": "4bfd38ce431388a91ab2766772f6a1bdf31404724188d43aa7810074d1edf57e",
+          "evidence_ids": [
+            "n0300"
+          ]
+        },
+        {
+          "path": "sectors[9].parts[2]",
+          "label": "EPS Upside Watch",
+          "paragraph_sha256": "89d94e810ea7a4e48ef7105d7cb6c09dc0fde743707a0fa8d9d314a684ea95d0",
+          "evidence_ids": []
+        },
+        {
+          "path": "sectors[9].parts[3]",
+          "label": "⚡ Breaking Convention",
+          "paragraph_sha256": "4ae0a53e4d8c31e0d61850e271e192584d5171b98217b5e2ae0f7df9e4d3ac24",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "sectors[10]",
+      "key_or_title": "XLU",
+      "status": "accepted",
+      "paragraph_count": 4,
+      "evidence_ids": [
+        "n0821",
+        "n0977"
+      ],
+      "review": "Google/Nevada geothermal partnership and NextEra Energy Resources/Entergy development deal are announced commercial channels, not operating capacity. Company roles are preserved, with funded milestones and cash return conditional; no invented ownership stakes or realized utility earnings.",
+      "paragraphs": [
+        {
+          "path": "sectors[10].parts[0]",
+          "label": "Narrative",
+          "paragraph_sha256": "768c146dd14c4d763d82dd1c437fb05c671d356af5cf7d0527c80718797f9dab",
+          "evidence_ids": [
+            "n0977"
+          ]
+        },
+        {
+          "path": "sectors[10].parts[1]",
+          "label": "Reported",
+          "paragraph_sha256": "f95481151f19d5523ebf71ef87a457dc905b0d5edeff130792f70a57cb135a4e",
+          "evidence_ids": [
+            "n0821"
+          ]
+        },
+        {
+          "path": "sectors[10].parts[2]",
+          "label": "EPS Upside Watch",
+          "paragraph_sha256": "56eac7778add6a00d72c3f34532fe54e15b30665dd375fe04dda6c0552bb51ab",
+          "evidence_ids": []
+        },
+        {
+          "path": "sectors[10].parts[3]",
+          "label": "⚡ Breaking Convention",
+          "paragraph_sha256": "9b8d40c1f810ca197dfa3fdadd4b52600b79932abd1c45d5b972fd2eb73a11e3",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "sectors[11]",
+      "key_or_title": "SXAP",
+      "status": "accepted",
+      "paragraph_count": 4,
+      "evidence_ids": [
+        "n0298",
+        "n0303"
+      ],
+      "review": "Reuters regional auto-stock reaction is completed; Chery factory mitigation remains the company assessment. Retaliation, localization profitability and a manageable settlement are future alternatives. Selective stance has cash-based triggers and no announced tariff treated as guaranteed protection.",
+      "paragraphs": [
+        {
+          "path": "sectors[11].parts[0]",
+          "label": "Narrative",
+          "paragraph_sha256": "6fe0a267a06bf798d4fae6c9bc989653e3be78d9e12dd89fd88e63ea2ed9ebe5",
+          "evidence_ids": [
+            "n0303"
+          ]
+        },
+        {
+          "path": "sectors[11].parts[1]",
+          "label": "Reported",
+          "paragraph_sha256": "bf9d301754692cedb7463cc60da4852f9b735799cf1f0f53f301f4282c12e69a",
+          "evidence_ids": [
+            "n0298"
+          ]
+        },
+        {
+          "path": "sectors[11].parts[2]",
+          "label": "EPS Upside Watch",
+          "paragraph_sha256": "710120fdd52dea8af1c007846dff38deb40b182f43f1ced8bd092eeffda3a32a",
+          "evidence_ids": []
+        },
+        {
+          "path": "sectors[11].parts[3]",
+          "label": "⚡ Breaking Convention",
+          "paragraph_sha256": "4e846813e154f2c89f87db2da2d68a968d1b20ab286d09b458c398486213e01e",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "sectors[12]",
+      "key_or_title": "SOXX",
+      "status": "accepted",
+      "paragraph_count": 4,
+      "evidence_ids": [
+        "n1117",
+        "n1172"
+      ],
+      "review": "Broadcom completed June13 regular-session response is distinguished from its June12 result/guidance. AVGO 1678.99 USD and +12.27% are exact as-traded card values. Intel/AMD performance statements remain vendor claims. Conditional comparisons explicitly name TSMC US ADR TSM and ASML US line ASML without invented company orders or results.",
+      "paragraphs": [
+        {
+          "path": "sectors[12].parts[0]",
+          "label": "Narrative",
+          "paragraph_sha256": "fc3f4001be1b1d41dea10a622c9f3958b74289cc820dd1d2789209797f9c992a",
+          "evidence_ids": [
+            "n1117"
+          ]
+        },
+        {
+          "path": "sectors[12].parts[1]",
+          "label": "Reported",
+          "paragraph_sha256": "00a615d2b346e45ea9575a58aa73a9dc6831034d5c32d9f90051bd27b75f19c3",
+          "evidence_ids": [
+            "n1172"
+          ]
+        },
+        {
+          "path": "sectors[12].parts[2]",
+          "label": "EPS Upside Watch",
+          "paragraph_sha256": "5b7547502ed058d25df7ab170d8c3a8843d9909f1799711a5be951591c7ff0c8",
+          "evidence_ids": []
+        },
+        {
+          "path": "sectors[12].parts[3]",
+          "label": "⚡ Breaking Convention",
+          "paragraph_sha256": "1533ceb22ad48e6fe089c10971abd922b39152120c74d7354d3ae43eee95f6e6",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "earnings_pattern",
+      "key_or_title": "AI-chip outlooks face the test of commercial conversion",
+      "status": "accepted",
+      "paragraph_count": 5,
+      "evidence_ids": [
+        "n0932",
+        "n1117",
+        "n1429",
+        "n1469",
+        "n1502",
+        "n2231"
+      ],
+      "review": "Rewarded anchor is Reuters Broadcom forecast and completed response; Adobe Yahoo headline establishes only quarterly reporting, with no beat/reaction claim. Punished Dollarama/Crest results have eligible titles. Citi executive view is correctly attributed through CNBC. Pattern separates revenue, inventory, cash, guidance, price recognition and commercial outcomes; playbook does not import later earnings.",
+      "paragraphs": [
+        {
+          "path": "earnings_pattern.parts[0]",
+          "label": "Rewarded",
+          "paragraph_sha256": "c21527cc0f32c0ba011a302de7aba4bc7e3c6c0c9e504dd94e3765447427e35d",
+          "evidence_ids": [
+            "n0932",
+            "n1117",
+            "n1469"
+          ]
+        },
+        {
+          "path": "earnings_pattern.parts[1]",
+          "label": "Punished",
+          "paragraph_sha256": "1e6066e8a0b5a4642eb5e884248dac47df806208d95d50d241e948e6f4edd14a",
+          "evidence_ids": [
+            "n1502",
+            "n2231"
+          ]
+        },
+        {
+          "path": "earnings_pattern.parts[2]",
+          "label": "Pattern",
+          "paragraph_sha256": "65df71d14ede42d7edf6521ce38c4a647f2ab53ed37d4f916b25894bfe73f93a",
+          "evidence_ids": []
+        },
+        {
+          "path": "earnings_pattern.parts[3]",
+          "label": "Attention into EPS",
+          "paragraph_sha256": "4da23d16ef96b918c71768df8525b5c5c24f0569cce63287b391c97403cb1f3b",
+          "evidence_ids": [
+            "n1429"
+          ]
+        },
+        {
+          "path": "earnings_pattern.parts[4]",
+          "label": "Playbook",
+          "paragraph_sha256": "69ba10843eee74f4d0abe0cc422f2848c98b606f35d1acfc1458ebe4e4e55dc8",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "underowned[0]",
+      "key_or_title": "Customer relationships beyond pure rate exposure",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n2014"
+      ],
+      "review": "Rzeczpospolita customer-service interview supports the attention mechanism, not measured holdings. Exposure explicitly identifies XLF and Beta ETF WIG20TR ETFBW20TR.WA with different sector/country risks. Retention and profitable lending are conditional economic tests.",
+      "paragraphs": [
+        {
+          "path": "underowned[0].parts[0]",
+          "label": "Attention Gap",
+          "paragraph_sha256": "7bd173fca4c476b20b49d5c9ffbd17a0ea671885dea4e410f937d0253b9cfb41",
+          "evidence_ids": [
+            "n2014"
+          ]
+        },
+        {
+          "path": "underowned[0].parts[1]",
+          "label": "Exposure & Risk",
+          "paragraph_sha256": "1bec15a58d5d408a3ea9e0521263f847263b22bdb272867354a9a9908a3f9e4b",
+          "evidence_ids": []
+        },
+        {
+          "path": "underowned[0].parts[2]",
+          "label": "Trigger to Watch",
+          "paragraph_sha256": "764bbbd08f9deaa3cb27f50f2807f312f533d75ac951825f8a801bd736f01b6f",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "underowned[1]",
+      "key_or_title": "Gas infrastructure at a concrete startup hurdle",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n1064"
+      ],
+      "review": "Reuters preparation for Mountain Valley startup remains pending. Exposure now explicitly names XLE as broad indirect energy-sector exposure, with no precise claim on pipeline cash or unsupported ownership. Commissioning, utilization and contract economics make the trigger and implementation risk specific.",
+      "paragraphs": [
+        {
+          "path": "underowned[1].parts[0]",
+          "label": "Attention Gap",
+          "paragraph_sha256": "05c25a3965d4a901c53816cf73931cbb01804e387f26d9a9ae8345e08e71a9a5",
+          "evidence_ids": [
+            "n1064"
+          ]
+        },
+        {
+          "path": "underowned[1].parts[1]",
+          "label": "Exposure & Risk",
+          "paragraph_sha256": "b3cfdeb0b1703d0917c8dd20ae54c0c7d91f973075e3cdab806dce32f493f687",
+          "evidence_ids": []
+        },
+        {
+          "path": "underowned[1].parts[2]",
+          "label": "Trigger to Watch",
+          "paragraph_sha256": "0581c5dc7ad2c4baf47f13e52bec9155b6e4817bbcd859481d74218a8f9e546b",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "underowned[2]",
+      "key_or_title": "Audio advertising tests practical generative AI",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n2271"
+      ],
+      "review": "TechCrunch supports Spotify agency and AI voiceover tests, not advertiser uptake or new profit. SPOT and XLC are correctly named own-card instruments; commercial monetization and governance costs remain conditional. No measured underownership is claimed.",
+      "paragraphs": [
+        {
+          "path": "underowned[2].parts[0]",
+          "label": "Attention Gap",
+          "paragraph_sha256": "7c91e5b257d093c87db6c3f00d68a6527cd6f6aeb5fcee6bc958ff7df5739b9d",
+          "evidence_ids": [
+            "n2271"
+          ]
+        },
+        {
+          "path": "underowned[2].parts[1]",
+          "label": "Exposure & Risk",
+          "paragraph_sha256": "417ba723402aeaa9f233aee6e92e1c4b6368bde6e4448df7a0f1d38abee2dbb4",
+          "evidence_ids": []
+        },
+        {
+          "path": "underowned[2].parts[2]",
+          "label": "Trigger to Watch",
+          "paragraph_sha256": "a5b0c1af9cefc900c4bc83b9bc8d140dbaf9a50b72c22ab142c52b5e3095a1c9",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "underowned[3]",
+      "key_or_title": "Broader access in a successful therapeutic category",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n2174"
+      ],
+      "review": "Reuters doctors prospective view supports possible broader demand. LLY, Novo Nordisk US ADR NVO and XLV are exact own-card exposure types; no patient figures, clinical approval or measured ownership is invented. Safety, access and profitable delivery determine the trigger.",
+      "paragraphs": [
+        {
+          "path": "underowned[3].parts[0]",
+          "label": "Attention Gap",
+          "paragraph_sha256": "b9f6377f325fea3718079587b9e1de2b5bc8c210db43b66c760c5e41720a0c34",
+          "evidence_ids": [
+            "n2174"
+          ]
+        },
+        {
+          "path": "underowned[3].parts[1]",
+          "label": "Exposure & Risk",
+          "paragraph_sha256": "324d6fc3beebb99fb39a7853495ffd72329a041dd936cc5144400df78c5e0a5f",
+          "evidence_ids": []
+        },
+        {
+          "path": "underowned[3].parts[2]",
+          "label": "Trigger to Watch",
+          "paragraph_sha256": "1d7cf0c9ffcbf36aee1fdee046e029c5abc6ac55c8cb67dc88d04386f9d70957",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "crypto",
+      "key_or_title": "Financing and politics do not prevent renewed token weakness",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n0925",
+        "n1110",
+        "n1193"
+      ],
+      "review": "BTC/ETH marks and one/twenty-session returns use the prior completed UTC daily close. Unsupported rebound wording was removed. MicroStrategy financing remains planned, miner political account is attributed to attendees rather than enacted policy, and Riot/Bitfarms remains a takeover-defense dispute. Spot tokens and operating-company exposures have separate risks.",
+      "paragraphs": [
+        {
+          "path": "crypto.parts[0]",
+          "label": "Market Context",
+          "paragraph_sha256": "067a0df9e0e3355cc76b3e2c0a5c3d79c420d056b3e7408c98853f2ddca07236",
+          "evidence_ids": []
+        },
+        {
+          "path": "crypto.parts[1]",
+          "label": "New / Most Important",
+          "paragraph_sha256": "e39f74ab802c9d40bbd3dadfdc41f36c050fadd12b00c438a85fbf430f929c7f",
+          "evidence_ids": [
+            "n0925",
+            "n1110",
+            "n1193"
+          ]
+        },
+        {
+          "path": "crypto.parts[2]",
+          "label": "Playbook",
+          "paragraph_sha256": "b43805f8363f948286181fe42dd376533ff6d0b147595f24b967befd0fc1f1fa",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "flows",
+      "key_or_title": "Lower yields coexist with selective financing and access risk",
+      "status": "accepted",
+      "paragraph_count": 5,
+      "evidence_ids": [
+        "n0941",
+        "n0972",
+        "n1062",
+        "n1148",
+        "n1593",
+        "n1631",
+        "n1650",
+        "n1651",
+        "n2441",
+        "n2496"
+      ],
+      "review": "Five parts checked: BOJ prospective purchase policy versus completed Fed hold; exact UST/DXY session and curve; TC Energy project bond financing versus Coach bankruptcy; GameStop issuance, Caterpillar authorization and Golden Goose prospective IPO terms; Shein commercial pricing; sanctions-related Russia exchange access. Announced authorization is not actual repurchases, prices are not fund flows, and successful project financing is not universal credit access.",
+      "paragraphs": [
+        {
+          "path": "flows.parts[0]",
+          "label": "Global Liquidity",
+          "paragraph_sha256": "99fb2b4bf9214834e0d195346764b2d6daf27a3455d297c3b08fc6dfbae72936",
+          "evidence_ids": [
+            "n1651",
+            "n2441"
+          ]
+        },
+        {
+          "path": "flows.parts[1]",
+          "label": "Rates & Dollar",
+          "paragraph_sha256": "c8982a0a6d1271509516af7200bf421a12c30ff4aa47837bf480dc298b45b3d9",
+          "evidence_ids": [
+            "n2496"
+          ]
+        },
+        {
+          "path": "flows.parts[2]",
+          "label": "Credit Check",
+          "paragraph_sha256": "1854eee9c6628716a36816d8292719fcf889a25cafe72ef9ccbc76bdbb739e2c",
+          "evidence_ids": [
+            "n1062",
+            "n1650"
+          ]
+        },
+        {
+          "path": "flows.parts[3]",
+          "label": "Equity & Fund Flows",
+          "paragraph_sha256": "8c1e74355fd4a68b5810ce9be864ffd5a677bb2689213f07c0c089608588903c",
+          "evidence_ids": [
+            "n0941",
+            "n0972",
+            "n1148",
+            "n1631"
+          ]
+        },
+        {
+          "path": "flows.parts[4]",
+          "label": "Portfolio Implication",
+          "paragraph_sha256": "27e415ad7984dfa18f57f33706f7d01f712d1d3960a47251f1e71ed6026d7870",
+          "evidence_ids": [
+            "n1593"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "anticipatory[0]",
+      "key_or_title": "BOJ purchase policy and domestic demand",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n1651",
+        "n1751"
+      ],
+      "review": "Reuters preview and QT explainer each now have same-paragraph citations. BOJ decision stays pending; purchase adjustment and rate change remain separate alternatives. Conditional company exposure depends on real demand and financing rather than a known later decision.",
+      "paragraphs": [
+        {
+          "path": "anticipatory[0].parts[0]",
+          "label": "What Is Priced",
+          "paragraph_sha256": "c4214b9062426833cafaa69fdd2c1da946ecbac5e8325bd61449fc59b5f8bbf3",
+          "evidence_ids": [
+            "n1651",
+            "n1751"
+          ]
+        },
+        {
+          "path": "anticipatory[0].parts[1]",
+          "label": "Conditional Expression",
+          "paragraph_sha256": "0069565b0194a7152168ce36f80200df66b5003dd9244ec23cd6825c0071861f",
+          "evidence_ids": []
+        },
+        {
+          "path": "anticipatory[0].parts[2]",
+          "label": "Risk",
+          "paragraph_sha256": "079b739aec33e472258d22a7432ad6a06bf346d2669153a7c4fed28f62f890b9",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "anticipatory[1]",
+      "key_or_title": "France election and the required equity premium",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n1597",
+        "n1611"
+      ],
+      "review": "Financial Times market concern and Reuters Macron dissolution context each now have same-paragraph citations. French national election and policy remain pending, with no later result or enacted platform. Risk distinguishes valuation relief from realized business recovery.",
+      "paragraphs": [
+        {
+          "path": "anticipatory[1].parts[0]",
+          "label": "What Is Priced",
+          "paragraph_sha256": "2a6993b36d68a16178387401f3ac011c0f909ba8ffe71d612de854cf7eaf7ab6",
+          "evidence_ids": [
+            "n1597",
+            "n1611"
+          ]
+        },
+        {
+          "path": "anticipatory[1].parts[1]",
+          "label": "Conditional Expression",
+          "paragraph_sha256": "7d934b03b59ae472e7128443e425921b97e0436d62c79cdce6517c41b3dd4375",
+          "evidence_ids": []
+        },
+        {
+          "path": "anticipatory[1].parts[2]",
+          "label": "Risk",
+          "paragraph_sha256": "532bd7057c48078e1e7dc6084632bbcad040865dcc039eab87fb289049cbbf95",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "anticipatory[2]",
+      "key_or_title": "UK election and market-sensitive pledges",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n1300",
+        "n1599"
+      ],
+      "review": "Reuters Labour market pledges and Fortune industry outreach support an upcoming UK vote. Campaign proposals remain proposals, and no later result or implementation is imported. Companies must support demand/funding under several possible frameworks.",
+      "paragraphs": [
+        {
+          "path": "anticipatory[2].parts[0]",
+          "label": "What Is Priced",
+          "paragraph_sha256": "c36241444521550c6164b02b92d8f384359e2bee1262e5c2b92145e802a021c9",
+          "evidence_ids": [
+            "n1300",
+            "n1599"
+          ]
+        },
+        {
+          "path": "anticipatory[2].parts[1]",
+          "label": "Conditional Expression",
+          "paragraph_sha256": "790b3a2ca8fbb10cd3f65a16845daffb66010ed2aab3eb0034c610426efb1b93",
+          "evidence_ids": []
+        },
+        {
+          "path": "anticipatory[2].parts[2]",
+          "label": "Risk",
+          "paragraph_sha256": "5509c33d616df50d780968df1e6b8e98143380ef4ba01978eaad9cf8f8ea0930",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "anticipatory[3]",
+      "key_or_title": "Gas pipeline startup and operating cash",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n1064"
+      ],
+      "review": "Reuters Mountain Valley preparation supports a pending startup scenario. No commissioning, utilization or completed cash generation is claimed. Expression requires a verified commercial role and explains broad-fund imprecision; risks concern delivery, costs and reliable service.",
+      "paragraphs": [
+        {
+          "path": "anticipatory[3].parts[0]",
+          "label": "What Is Priced",
+          "paragraph_sha256": "3274826311720ff52170931138911d4e3580bb669e16fe761c8de12605794100",
+          "evidence_ids": [
+            "n1064"
+          ]
+        },
+        {
+          "path": "anticipatory[3].parts[1]",
+          "label": "Conditional Expression",
+          "paragraph_sha256": "b25aeb7908656aa69e6ce255b040f36cd6c735dd8b654ec66d99039950624328",
+          "evidence_ids": []
+        },
+        {
+          "path": "anticipatory[3].parts[2]",
+          "label": "Risk",
+          "paragraph_sha256": "339879d4de7eb1bdf9590479cee6a85fd6789f2f36549143c3b510816ad9fae4",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "catalysts[0]",
+      "key_or_title": "Goldman Sachs / GS — private-bank lending needs underwriting",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n1140"
+      ],
+      "review": "Reuters supports Goldman lending ambition for wealthy private-bank clients. Title repaired from potentially misleading private-credit terminology to private-bank lending. No realized loan growth, credit return or company-specific balance figures are invented; underwriting and funding govern entry/exit.",
+      "paragraphs": [
+        {
+          "path": "catalysts[0].parts[0]",
+          "label": "Catalyst & Thesis",
+          "paragraph_sha256": "89d6886f0151c61facecd88661e62909a78397453d81fc25952b753b9bbdda82",
+          "evidence_ids": [
+            "n1140"
+          ]
+        },
+        {
+          "path": "catalysts[0].parts[1]",
+          "label": "Price Hurdle & Risk",
+          "paragraph_sha256": "7638fb118152a8d8c932866695ecaf73f8b911539148e78d51e70856987045fa",
+          "evidence_ids": []
+        },
+        {
+          "path": "catalysts[0].parts[2]",
+          "label": "Trade Expression",
+          "paragraph_sha256": "dfc68e3aa870c12e548ef48902fd7902ea874b06069cae606f78ded8b778ec49",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "catalysts[1]",
+      "key_or_title": "Eli Lilly / LLY — success still requires the next generation",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n1486"
+      ],
+      "review": "WSJ supports Lilly current drug success and CEO replacement ambition. No successor approval or guaranteed new revenue is inferred. Future product evidence, safety, supply and execution are conditional investment hurdles.",
+      "paragraphs": [
+        {
+          "path": "catalysts[1].parts[0]",
+          "label": "Catalyst & Thesis",
+          "paragraph_sha256": "9e7e111bcfd7b86929abedd5a4df5bebc67d6dd4e818ea341ec5758367ad546b",
+          "evidence_ids": [
+            "n1486"
+          ]
+        },
+        {
+          "path": "catalysts[1].parts[1]",
+          "label": "Price Hurdle & Risk",
+          "paragraph_sha256": "cf818765831f7bcf1d44baed2769543ffbad61f8c1634ca2258bdfbfda7cb42e",
+          "evidence_ids": []
+        },
+        {
+          "path": "catalysts[1].parts[2]",
+          "label": "Trade Expression",
+          "paragraph_sha256": "8a90934a9f71cc8acc5830664cb9f3147973c35d873d238e955f29193b49b568",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "catalysts[2]",
+      "key_or_title": "Meta / META — efficiency needs preserved capability",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n1487"
+      ],
+      "review": "Fortune supports senior-management efficiency extension at Meta. Savings and execution consequences remain prospective, with retained capability and advertiser value assessed conditionally. No layoff count, current margin increase or realized cash saving is claimed.",
+      "paragraphs": [
+        {
+          "path": "catalysts[2].parts[0]",
+          "label": "Catalyst & Thesis",
+          "paragraph_sha256": "ef0dba9c0b9fffc9810080cbb13bf74a0c67907489bd74b2efe3065b75572096",
+          "evidence_ids": [
+            "n1487"
+          ]
+        },
+        {
+          "path": "catalysts[2].parts[1]",
+          "label": "Price Hurdle & Risk",
+          "paragraph_sha256": "73757c943806b10910031cca5bba8ad31f9e065b099597d95adf602c74245d7c",
+          "evidence_ids": []
+        },
+        {
+          "path": "catalysts[2].parts[2]",
+          "label": "Trade Expression",
+          "paragraph_sha256": "db5b070b498fe82c172fec4fa1ab367411da557871a1787ec88e9aa189fc7141",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "catalysts[3]",
+      "key_or_title": "OMV / OMV.VI — guidance needs resilience across conditions",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n1491"
+      ],
+      "review": "Reuters supports OMV increased long-term guidance. The horizon is management expectation rather than a future realized result. Funding, spending and market conditions remain risks, with no invented share target or commodity path.",
+      "paragraphs": [
+        {
+          "path": "catalysts[3].parts[0]",
+          "label": "Catalyst & Thesis",
+          "paragraph_sha256": "b8058c7f13c38c72adc604658a3f782d2b443ef408f70df87ff5d94dfdc30f64",
+          "evidence_ids": [
+            "n1491"
+          ]
+        },
+        {
+          "path": "catalysts[3].parts[1]",
+          "label": "Price Hurdle & Risk",
+          "paragraph_sha256": "bb960e9bd71e1195ba81bf604137f590810ec7a8e282066521cd3f74f3fc52d6",
+          "evidence_ids": []
+        },
+        {
+          "path": "catalysts[3].parts[2]",
+          "label": "Trade Expression",
+          "paragraph_sha256": "28d3348b9b1dc6f9681824ec8b86a755898da63720c77ce38250642a6b4013dc",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "catalysts[4]",
+      "key_or_title": "Stellantis / STLA — correcting the offer takes execution",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n1217"
+      ],
+      "review": "CNBC CEO account supports intended correction of US-market mistakes, not completed demand/margin recovery. Purchases, pricing and cash are explicit confirmation triggers; no later restructuring or performance outcome is imported.",
+      "paragraphs": [
+        {
+          "path": "catalysts[4].parts[0]",
+          "label": "Catalyst & Thesis",
+          "paragraph_sha256": "c15ba97761ae74cef7329d5d1e07cfd285d7b7453fb71474d68a55b761045cbb",
+          "evidence_ids": [
+            "n1217"
+          ]
+        },
+        {
+          "path": "catalysts[4].parts[1]",
+          "label": "Price Hurdle & Risk",
+          "paragraph_sha256": "a88fa4b794906cb819e39db9b5ac26ad67c266efae45b99d6fdea8f3828f1a22",
+          "evidence_ids": []
+        },
+        {
+          "path": "catalysts[4].parts[2]",
+          "label": "Trade Expression",
+          "paragraph_sha256": "6eecfcf6e3bb9ec9138f245b2f1411b4b96f13bf913977a3fe456514690a8db0",
+          "evidence_ids": []
+        }
+      ]
+    },
+    {
+      "path": "catalysts[5]",
+      "key_or_title": "Microsoft / MSFT — security enters the incentive system",
+      "status": "accepted",
+      "paragraph_count": 3,
+      "evidence_ids": [
+        "n1489"
+      ],
+      "review": "CNBC supports cybersecurity contributions entering employee pay at Microsoft. Incentive change is separate from security outcomes and customer trust. Operational improvement and incident/cost risk remain conditional, without claiming immediate resolution of security problems.",
+      "paragraphs": [
+        {
+          "path": "catalysts[5].parts[0]",
+          "label": "Catalyst & Thesis",
+          "paragraph_sha256": "4a7f6a3403cf73d5ea2aa9230c17be399203b136309bf1466384be6d3bd9afb1",
+          "evidence_ids": [
+            "n1489"
+          ]
+        },
+        {
+          "path": "catalysts[5].parts[1]",
+          "label": "Price Hurdle & Risk",
+          "paragraph_sha256": "d3ef3b2870cb153b60d627689301cf0587890dbd1dff6a232f0af23dbcde981f",
+          "evidence_ids": []
+        },
+        {
+          "path": "catalysts[5].parts[2]",
+          "label": "Trade Expression",
+          "paragraph_sha256": "9ab268ba248a9a5d4f3ddcb8f62ee0a6f5bd2e9806e8a90e607f1be7df652e40",
+          "evidence_ids": []
+        }
+      ]
+    }
+  ],
+  "paragraph_hashes": [
+    {
+      "path": "geo[0].parts[0]",
+      "label": "Macro Stance",
+      "paragraph_sha256": "175677911bdbc65f2c3df0f1ea7bcc67e7fc13c9c6fc8608f9dca4394014d6a9",
+      "evidence_ids": [
+        "n0198",
+        "n2445",
+        "n2466"
+      ]
+    },
+    {
+      "path": "geo[0].parts[1]",
+      "label": "Rates & Curve",
+      "paragraph_sha256": "2b2cd587d9f3c4da7b3c4ecaf94c6633fb88a0a3c97a3e49a02fc42d804647d2",
+      "evidence_ids": []
+    },
+    {
+      "path": "geo[0].parts[2]",
+      "label": "New / Most Important",
+      "paragraph_sha256": "f0a4f142cd6b20b6151a98440e167e8ea6c1db6354e9d66eddf49122a3f0637e",
+      "evidence_ids": [
+        "n0851",
+        "n2441"
+      ]
+    },
+    {
+      "path": "geo[0].parts[3]",
+      "label": "Playbook ✓",
+      "paragraph_sha256": "ffc90691ede9309c9152c642bbab3e6e7abef35ba79c49452e67bfc1320d8d37",
+      "evidence_ids": []
+    },
+    {
+      "path": "geo[1].parts[0]",
+      "label": "Macro Stance",
+      "paragraph_sha256": "4e49ed4fdfeaa4f681d2e996196580a88b9fb8495dd5a6081e6916742bbec40c",
+      "evidence_ids": [
+        "n0303"
+      ]
+    },
+    {
+      "path": "geo[1].parts[1]",
+      "label": "Activity & Inflation",
+      "paragraph_sha256": "a2ee6fb82e036ddb9098f7414cbb17b230cca0d1d7a009b345c6b2847207de15",
+      "evidence_ids": [
+        "n1577",
+        "n1578"
+      ]
+    },
+    {
+      "path": "geo[1].parts[2]",
+      "label": "New / Most Important",
+      "paragraph_sha256": "762904f93b7b46a7c66f48e8d1fb3760c21dec445fbe2b51186813fe1fc588cc",
+      "evidence_ids": [
+        "n1597",
+        "n1611"
+      ]
+    },
+    {
+      "path": "geo[1].parts[3]",
+      "label": "Playbook ✓",
+      "paragraph_sha256": "12648a13118e91a67aa55c27daf31205313b0ed9cbe87fca6f31d7489f5f56b1",
+      "evidence_ids": []
+    },
+    {
+      "path": "geo[2].parts[0]",
+      "label": "Macro Stance",
+      "paragraph_sha256": "6e498f46cba4964dd5b34e9decfb7f4731b09a3fc27116dfb0dcdf5406607bd8",
+      "evidence_ids": [
+        "n0298",
+        "n0300",
+        "n0304"
+      ]
+    },
+    {
+      "path": "geo[2].parts[1]",
+      "label": "PMIs & Activity",
+      "paragraph_sha256": "822adc3bba44d81c57a49f385e6842c8c54324191ddef20b38e2c40ef451effa",
+      "evidence_ids": [
+        "n0232",
+        "n0274"
+      ]
+    },
+    {
+      "path": "geo[2].parts[2]",
+      "label": "Credit Impulse",
+      "paragraph_sha256": "0952d461ec3c4054c32ef4f721ca9627ac49eca552f76bb4c63a6207b8bfba42",
+      "evidence_ids": [
+        "n0269",
+        "n0272"
+      ]
+    },
+    {
+      "path": "geo[2].parts[3]",
+      "label": "Property",
+      "paragraph_sha256": "42e4b08219e0d20d9003ba63288c6511fc2084fad94dad6e1d84e5b4163b0e79",
+      "evidence_ids": [
+        "n0257",
+        "n0295"
+      ]
+    },
+    {
+      "path": "geo[2].parts[4]",
+      "label": "Fiscal, Policy & Trade",
+      "paragraph_sha256": "c263616e831b25f7629fc8fb7f0d919963dd7249bd6223f0517458b08d2cfca3",
+      "evidence_ids": [
+        "n0291",
+        "n0297",
+        "n0298"
+      ]
+    },
+    {
+      "path": "geo[2].parts[5]",
+      "label": "Markets & Flows",
+      "paragraph_sha256": "41c1c9f0ef0ce7bc85b638901457f53d8691db96b8d8c0e09d7bd36e815d95bb",
+      "evidence_ids": [
+        "n0303"
+      ]
+    },
+    {
+      "path": "geo[2].parts[6]",
+      "label": "New / Most Important",
+      "paragraph_sha256": "88fd04fff2661105220197d5509d150f69a3965eee76e1160a8bccff9ced2c0f",
+      "evidence_ids": [
+        "n0252",
+        "n0253",
+        "n0254"
+      ]
+    },
+    {
+      "path": "geo[2].parts[7]",
+      "label": "Playbook ✓",
+      "paragraph_sha256": "08bd522543b2ca423c8bbcb070447fed50f1a3dc2e452ecadebbfd7f7f00d0b2",
+      "evidence_ids": []
+    },
+    {
+      "path": "geo[3].parts[0]",
+      "label": "Macro Stance",
+      "paragraph_sha256": "e92d31555ae250e813b5218af12b58c39702e0ceeff4434c3c6d6cba84cd2fa5",
+      "evidence_ids": [
+        "n1651",
+        "n1751"
+      ]
+    },
+    {
+      "path": "geo[3].parts[1]",
+      "label": "Activity & Currency",
+      "paragraph_sha256": "953cda6dbcb4d1049ae61719f35f7490850f6d38d2a9222fc5fd76383f61e34c",
+      "evidence_ids": [
+        "n1739",
+        "n1741",
+        "n1754"
+      ]
+    },
+    {
+      "path": "geo[3].parts[2]",
+      "label": "Playbook ✓",
+      "paragraph_sha256": "63dee5b86f6d945ab56bbe147e3f81ae721093758460d34a8203ecaffe74f42e",
+      "evidence_ids": []
+    },
+    {
+      "path": "geo[4].parts[0]",
+      "label": "Macro Stance",
+      "paragraph_sha256": "4d98cd8f54e3127ebe86146643ea03e7efbea4763c0004fb5d6d3776db3b236f",
+      "evidence_ids": [
+        "n0059",
+        "n0068"
+      ]
+    },
+    {
+      "path": "geo[4].parts[1]",
+      "label": "Demand & Financing",
+      "paragraph_sha256": "cc5dd35b631926bc64cebd1781bb3debebc77f319305b5c0c7c27dd33e3bd737",
+      "evidence_ids": [
+        "n0045",
+        "n0051"
+      ]
+    },
+    {
+      "path": "geo[4].parts[2]",
+      "label": "Playbook ✓",
+      "paragraph_sha256": "67f87d0aae808e925821eb13d1702835bb4754a2d177d55baa0f1976bd43d057",
+      "evidence_ids": []
+    },
+    {
+      "path": "geo[5].parts[0]",
+      "label": "Macro Stance",
+      "paragraph_sha256": "751f310d569a548df02bbeda3f33527d5afed04d141e5ba36bbb17372293d736",
+      "evidence_ids": [
+        "n1996"
+      ]
+    },
+    {
+      "path": "geo[5].parts[1]",
+      "label": "Markets",
+      "paragraph_sha256": "d42a857775364bcf3692397fa19fd36227ff1efd399f5d86be6b22e14c5d4c4a",
+      "evidence_ids": [
+        "n2008",
+        "n2015"
+      ]
+    },
+    {
+      "path": "geo[5].parts[2]",
+      "label": "Fiscal & Politics",
+      "paragraph_sha256": "d87d9c2b6ef85478c793113c1df6835b80cedfcb4005b797b6b0a030f4dbec83",
+      "evidence_ids": [
+        "n1924",
+        "n1951",
+        "n2022"
+      ]
+    },
+    {
+      "path": "geo[5].parts[3]",
+      "label": "Corporate & Sectors",
+      "paragraph_sha256": "f606c2d5793a17728dd7beab8232aed7ee620c2d853ed2a7ac82dd2a6a8bdded",
+      "evidence_ids": [
+        "n2007",
+        "n2021",
+        "n2026"
+      ]
+    },
+    {
+      "path": "geo[5].parts[4]",
+      "label": "Geopolitics & Security",
+      "paragraph_sha256": "2a64381a748b06ada84ed44292ae767fb9bdee6b1519afb642ba3ab34911378a",
+      "evidence_ids": [
+        "n1933",
+        "n1975",
+        "n1980"
+      ]
+    },
+    {
+      "path": "geo[5].parts[5]",
+      "label": "New / Most Important",
+      "paragraph_sha256": "dbb70e3d99796b721c5758b7bb3520678f7d2e1cdfac780895aa52ae6637e4bd",
+      "evidence_ids": [
+        "n0307",
+        "n1775",
+        "n1776",
+        "n1779",
+        "n2027"
+      ]
+    },
+    {
+      "path": "geo[5].parts[6]",
+      "label": "Playbook ✓",
+      "paragraph_sha256": "e45ba5c9c98b5773f69345592e7a764397d86fda8c75880bef88eb17a27cbf27",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[0].parts[0]",
+      "label": "Narrative",
+      "paragraph_sha256": "ce4ede1c3cef009c5a878fed4b9771784dc016bc27c29d5e6884a00259e8ae7a",
+      "evidence_ids": [
+        "n1117"
+      ]
+    },
+    {
+      "path": "sectors[0].parts[1]",
+      "label": "Reported",
+      "paragraph_sha256": "20364a6c3efe90e118796a442240c28f0b253a31ae931be41bf7fe681fbb25bb",
+      "evidence_ids": [
+        "n1469"
+      ]
+    },
+    {
+      "path": "sectors[0].parts[2]",
+      "label": "EPS Upside Watch",
+      "paragraph_sha256": "bb2b4bdb6be54ccc51b31ddaf456205ad63661c4647c81500425d0978f44ed59",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[0].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "paragraph_sha256": "eddf17276caa103a332152ebb37c02f59a60c5dd6ddc8824f3df9d5753e3c408",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[1].parts[0]",
+      "label": "Narrative",
+      "paragraph_sha256": "4a8001c6a50958178c57cc99d015cce5fa74272dc25df95b90999f0d96f3c733",
+      "evidence_ids": [
+        "n2271"
+      ]
+    },
+    {
+      "path": "sectors[1].parts[1]",
+      "label": "Reported",
+      "paragraph_sha256": "21f0c14a668148316ccbcc205a3799466ec1917f937820b7f0a25b8e0c86992e",
+      "evidence_ids": [
+        "n1487"
+      ]
+    },
+    {
+      "path": "sectors[1].parts[2]",
+      "label": "EPS Upside Watch",
+      "paragraph_sha256": "a42ea3858eb8e2edc47e0f9d8ab84861da07d74420ac516e0295396a8cf2caec",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[1].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "paragraph_sha256": "34e2da02b09873bca876833f6a482aef2ca89af7e1dd1d8a8b824b196ab0a0d3",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[2].parts[0]",
+      "label": "Narrative",
+      "paragraph_sha256": "9140a7bd6372725be5d94103d6defb5d57984a101774d6093cbfe7057526745c",
+      "evidence_ids": [
+        "n1140"
+      ]
+    },
+    {
+      "path": "sectors[2].parts[1]",
+      "label": "Reported",
+      "paragraph_sha256": "e3b427e808fcd1581dddc412b0f9617e6f7a947b96c0640212bff30b5c542a6a",
+      "evidence_ids": [
+        "n1248"
+      ]
+    },
+    {
+      "path": "sectors[2].parts[2]",
+      "label": "EPS Upside Watch",
+      "paragraph_sha256": "564bc6e3c6ce7390f526e8f4dfe0683d6c53aab2e67d0010412181c9ad11b30d",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[2].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "paragraph_sha256": "7dbb488fdf0c4e1262677cfd4c6f1c851a03bc64bdc53991ff93cd790dc6f777",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[3].parts[0]",
+      "label": "Narrative",
+      "paragraph_sha256": "deca7d66ddcb7c0f472e8ca8984d433e6a30222d5ee05a666397ba3bbbb3f4cf",
+      "evidence_ids": [
+        "n1491"
+      ]
+    },
+    {
+      "path": "sectors[3].parts[1]",
+      "label": "Reported",
+      "paragraph_sha256": "3a1285ba7aaa9b98e05f5d55742913eeb91725bf036082a6ba8b1569e482f552",
+      "evidence_ids": [
+        "n2249"
+      ]
+    },
+    {
+      "path": "sectors[3].parts[2]",
+      "label": "EPS Upside Watch",
+      "paragraph_sha256": "151724a62989eb6edf40a554c702d7049fefe8e9d66a68f8122957cddc8ee28e",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[3].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "paragraph_sha256": "dd0c58e10eb5bb869ec6f62b3bffda9a3519fddc30f30509c9b07b45c4f5c166",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[4].parts[0]",
+      "label": "Narrative",
+      "paragraph_sha256": "bbb08dc01af0e369ed6ca0d6f120b7261842fd22dcd4c8a9aa3c1f9ef0d2638d",
+      "evidence_ids": [
+        "n1149"
+      ]
+    },
+    {
+      "path": "sectors[4].parts[1]",
+      "label": "Reported",
+      "paragraph_sha256": "6fb2c55dd0a0eb70db08a1758a44897c98c62c6d19037cee643a2a6f8ae385e8",
+      "evidence_ids": [
+        "n0909"
+      ]
+    },
+    {
+      "path": "sectors[4].parts[2]",
+      "label": "EPS Upside Watch",
+      "paragraph_sha256": "21bde0c229dc245dcbffc20ff4c60bb037c386eba6d460b6f6450059a414be32",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[4].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "paragraph_sha256": "b87fc111202d50672f1fc3be754257e31305032089640368613e9a35da877720",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[5].parts[0]",
+      "label": "Narrative",
+      "paragraph_sha256": "1bb8888fa11b451e1ad216d6e1d5795cdda5991733f99cdb5ca6359d4cfbb8b4",
+      "evidence_ids": [
+        "n1148",
+        "n1217"
+      ]
+    },
+    {
+      "path": "sectors[5].parts[1]",
+      "label": "Reported",
+      "paragraph_sha256": "65202da17e4acfc4a43e0069bff414b960f696fb7035ad53bcc8ef74c45793aa",
+      "evidence_ids": [
+        "n1430"
+      ]
+    },
+    {
+      "path": "sectors[5].parts[2]",
+      "label": "EPS Upside Watch",
+      "paragraph_sha256": "3e93f429ef98b70e068a38afedafeb980985a948a9060154f43be0fa7d34f192",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[5].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "paragraph_sha256": "f6eea825989bd5539c9d0fa2454829ef4c9a479d3309388f1d9359fa51eb80e0",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[6].parts[0]",
+      "label": "Narrative",
+      "paragraph_sha256": "f5a0f7a87dd285ed124861744e29564e159474faf9b67fe1fabb5362f7715872",
+      "evidence_ids": [
+        "n2231"
+      ]
+    },
+    {
+      "path": "sectors[6].parts[1]",
+      "label": "Reported",
+      "paragraph_sha256": "ac52cf2cd89a679b72f959bf9f2e7e9b5a4a7e242f947e474ec84e646930ad77",
+      "evidence_ids": [
+        "n1472"
+      ]
+    },
+    {
+      "path": "sectors[6].parts[2]",
+      "label": "EPS Upside Watch",
+      "paragraph_sha256": "77f211bae248929587a9903eba5db6bacbb2f3fb1a6d59902526af40bcd210e9",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[6].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "paragraph_sha256": "e30d4eba41d9d92cdc1d2e1bf251304185bf37cf2c568a3e6972717f2ed9d4a0",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[7].parts[0]",
+      "label": "Narrative",
+      "paragraph_sha256": "c891348de339f5aee0ea61ba60f8f8627e10d4533375953b1185a65acadf6ffc",
+      "evidence_ids": [
+        "n1486"
+      ]
+    },
+    {
+      "path": "sectors[7].parts[1]",
+      "label": "Reported",
+      "paragraph_sha256": "2af253d2273011bfb64546cf7a2f2e2799e784c2d69a69b5ecbf328bb1d0a8b3",
+      "evidence_ids": [
+        "n2174"
+      ]
+    },
+    {
+      "path": "sectors[7].parts[2]",
+      "label": "EPS Upside Watch",
+      "paragraph_sha256": "8ccb49dff960bf19456c9113a19168067443f364c4fb0aae29fe05b65492e9bc",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[7].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "paragraph_sha256": "8c23f3fa3a75bcba384dbccd4207108beb429505f3568470344439a0f659f5f9",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[8].parts[0]",
+      "label": "Narrative",
+      "paragraph_sha256": "914adb5cf03736fb6e79118e61fb1bb867a57215901f06cd98f9d7f954bbfb85",
+      "evidence_ids": [
+        "n0059"
+      ]
+    },
+    {
+      "path": "sectors[8].parts[1]",
+      "label": "Reported",
+      "paragraph_sha256": "8177ddfebb7c4b3e18ce1fa41f15e8958868fadddf66755850402d0d46897490",
+      "evidence_ids": [
+        "n0252"
+      ]
+    },
+    {
+      "path": "sectors[8].parts[2]",
+      "label": "EPS Upside Watch",
+      "paragraph_sha256": "f4b18c94d1f4ede0d66aabc4240f5f2c88f1079146a0adaac756e73fd2d3537e",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[8].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "paragraph_sha256": "e48c7b9f8a7ee106a77a4cf941720e5035aae4ec0ed540a1eb610329be726db9",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[9].parts[0]",
+      "label": "Narrative",
+      "paragraph_sha256": "e1f0812219b4b5b818b72d6fe537b59d0774d08946bba53454d18b80730b06c9",
+      "evidence_ids": [
+        "n1502"
+      ]
+    },
+    {
+      "path": "sectors[9].parts[1]",
+      "label": "Reported",
+      "paragraph_sha256": "4bfd38ce431388a91ab2766772f6a1bdf31404724188d43aa7810074d1edf57e",
+      "evidence_ids": [
+        "n0300"
+      ]
+    },
+    {
+      "path": "sectors[9].parts[2]",
+      "label": "EPS Upside Watch",
+      "paragraph_sha256": "89d94e810ea7a4e48ef7105d7cb6c09dc0fde743707a0fa8d9d314a684ea95d0",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[9].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "paragraph_sha256": "4ae0a53e4d8c31e0d61850e271e192584d5171b98217b5e2ae0f7df9e4d3ac24",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[10].parts[0]",
+      "label": "Narrative",
+      "paragraph_sha256": "768c146dd14c4d763d82dd1c437fb05c671d356af5cf7d0527c80718797f9dab",
+      "evidence_ids": [
+        "n0977"
+      ]
+    },
+    {
+      "path": "sectors[10].parts[1]",
+      "label": "Reported",
+      "paragraph_sha256": "f95481151f19d5523ebf71ef87a457dc905b0d5edeff130792f70a57cb135a4e",
+      "evidence_ids": [
+        "n0821"
+      ]
+    },
+    {
+      "path": "sectors[10].parts[2]",
+      "label": "EPS Upside Watch",
+      "paragraph_sha256": "56eac7778add6a00d72c3f34532fe54e15b30665dd375fe04dda6c0552bb51ab",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[10].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "paragraph_sha256": "9b8d40c1f810ca197dfa3fdadd4b52600b79932abd1c45d5b972fd2eb73a11e3",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[11].parts[0]",
+      "label": "Narrative",
+      "paragraph_sha256": "6fe0a267a06bf798d4fae6c9bc989653e3be78d9e12dd89fd88e63ea2ed9ebe5",
+      "evidence_ids": [
+        "n0303"
+      ]
+    },
+    {
+      "path": "sectors[11].parts[1]",
+      "label": "Reported",
+      "paragraph_sha256": "bf9d301754692cedb7463cc60da4852f9b735799cf1f0f53f301f4282c12e69a",
+      "evidence_ids": [
+        "n0298"
+      ]
+    },
+    {
+      "path": "sectors[11].parts[2]",
+      "label": "EPS Upside Watch",
+      "paragraph_sha256": "710120fdd52dea8af1c007846dff38deb40b182f43f1ced8bd092eeffda3a32a",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[11].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "paragraph_sha256": "4e846813e154f2c89f87db2da2d68a968d1b20ab286d09b458c398486213e01e",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[12].parts[0]",
+      "label": "Narrative",
+      "paragraph_sha256": "fc3f4001be1b1d41dea10a622c9f3958b74289cc820dd1d2789209797f9c992a",
+      "evidence_ids": [
+        "n1117"
+      ]
+    },
+    {
+      "path": "sectors[12].parts[1]",
+      "label": "Reported",
+      "paragraph_sha256": "00a615d2b346e45ea9575a58aa73a9dc6831034d5c32d9f90051bd27b75f19c3",
+      "evidence_ids": [
+        "n1172"
+      ]
+    },
+    {
+      "path": "sectors[12].parts[2]",
+      "label": "EPS Upside Watch",
+      "paragraph_sha256": "5b7547502ed058d25df7ab170d8c3a8843d9909f1799711a5be951591c7ff0c8",
+      "evidence_ids": []
+    },
+    {
+      "path": "sectors[12].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "paragraph_sha256": "1533ceb22ad48e6fe089c10971abd922b39152120c74d7354d3ae43eee95f6e6",
+      "evidence_ids": []
+    },
+    {
+      "path": "earnings_pattern.parts[0]",
+      "label": "Rewarded",
+      "paragraph_sha256": "c21527cc0f32c0ba011a302de7aba4bc7e3c6c0c9e504dd94e3765447427e35d",
+      "evidence_ids": [
+        "n0932",
+        "n1117",
+        "n1469"
+      ]
+    },
+    {
+      "path": "earnings_pattern.parts[1]",
+      "label": "Punished",
+      "paragraph_sha256": "1e6066e8a0b5a4642eb5e884248dac47df806208d95d50d241e948e6f4edd14a",
+      "evidence_ids": [
+        "n1502",
+        "n2231"
+      ]
+    },
+    {
+      "path": "earnings_pattern.parts[2]",
+      "label": "Pattern",
+      "paragraph_sha256": "65df71d14ede42d7edf6521ce38c4a647f2ab53ed37d4f916b25894bfe73f93a",
+      "evidence_ids": []
+    },
+    {
+      "path": "earnings_pattern.parts[3]",
+      "label": "Attention into EPS",
+      "paragraph_sha256": "4da23d16ef96b918c71768df8525b5c5c24f0569cce63287b391c97403cb1f3b",
+      "evidence_ids": [
+        "n1429"
+      ]
+    },
+    {
+      "path": "earnings_pattern.parts[4]",
+      "label": "Playbook",
+      "paragraph_sha256": "69ba10843eee74f4d0abe0cc422f2848c98b606f35d1acfc1458ebe4e4e55dc8",
+      "evidence_ids": []
+    },
+    {
+      "path": "underowned[0].parts[0]",
+      "label": "Attention Gap",
+      "paragraph_sha256": "7bd173fca4c476b20b49d5c9ffbd17a0ea671885dea4e410f937d0253b9cfb41",
+      "evidence_ids": [
+        "n2014"
+      ]
+    },
+    {
+      "path": "underowned[0].parts[1]",
+      "label": "Exposure & Risk",
+      "paragraph_sha256": "1bec15a58d5d408a3ea9e0521263f847263b22bdb272867354a9a9908a3f9e4b",
+      "evidence_ids": []
+    },
+    {
+      "path": "underowned[0].parts[2]",
+      "label": "Trigger to Watch",
+      "paragraph_sha256": "764bbbd08f9deaa3cb27f50f2807f312f533d75ac951825f8a801bd736f01b6f",
+      "evidence_ids": []
+    },
+    {
+      "path": "underowned[1].parts[0]",
+      "label": "Attention Gap",
+      "paragraph_sha256": "05c25a3965d4a901c53816cf73931cbb01804e387f26d9a9ae8345e08e71a9a5",
+      "evidence_ids": [
+        "n1064"
+      ]
+    },
+    {
+      "path": "underowned[1].parts[1]",
+      "label": "Exposure & Risk",
+      "paragraph_sha256": "b3cfdeb0b1703d0917c8dd20ae54c0c7d91f973075e3cdab806dce32f493f687",
+      "evidence_ids": []
+    },
+    {
+      "path": "underowned[1].parts[2]",
+      "label": "Trigger to Watch",
+      "paragraph_sha256": "0581c5dc7ad2c4baf47f13e52bec9155b6e4817bbcd859481d74218a8f9e546b",
+      "evidence_ids": []
+    },
+    {
+      "path": "underowned[2].parts[0]",
+      "label": "Attention Gap",
+      "paragraph_sha256": "7c91e5b257d093c87db6c3f00d68a6527cd6f6aeb5fcee6bc958ff7df5739b9d",
+      "evidence_ids": [
+        "n2271"
+      ]
+    },
+    {
+      "path": "underowned[2].parts[1]",
+      "label": "Exposure & Risk",
+      "paragraph_sha256": "417ba723402aeaa9f233aee6e92e1c4b6368bde6e4448df7a0f1d38abee2dbb4",
+      "evidence_ids": []
+    },
+    {
+      "path": "underowned[2].parts[2]",
+      "label": "Trigger to Watch",
+      "paragraph_sha256": "a5b0c1af9cefc900c4bc83b9bc8d140dbaf9a50b72c22ab142c52b5e3095a1c9",
+      "evidence_ids": []
+    },
+    {
+      "path": "underowned[3].parts[0]",
+      "label": "Attention Gap",
+      "paragraph_sha256": "b9f6377f325fea3718079587b9e1de2b5bc8c210db43b66c760c5e41720a0c34",
+      "evidence_ids": [
+        "n2174"
+      ]
+    },
+    {
+      "path": "underowned[3].parts[1]",
+      "label": "Exposure & Risk",
+      "paragraph_sha256": "324d6fc3beebb99fb39a7853495ffd72329a041dd936cc5144400df78c5e0a5f",
+      "evidence_ids": []
+    },
+    {
+      "path": "underowned[3].parts[2]",
+      "label": "Trigger to Watch",
+      "paragraph_sha256": "1d7cf0c9ffcbf36aee1fdee046e029c5abc6ac55c8cb67dc88d04386f9d70957",
+      "evidence_ids": []
+    },
+    {
+      "path": "crypto.parts[0]",
+      "label": "Market Context",
+      "paragraph_sha256": "067a0df9e0e3355cc76b3e2c0a5c3d79c420d056b3e7408c98853f2ddca07236",
+      "evidence_ids": []
+    },
+    {
+      "path": "crypto.parts[1]",
+      "label": "New / Most Important",
+      "paragraph_sha256": "e39f74ab802c9d40bbd3dadfdc41f36c050fadd12b00c438a85fbf430f929c7f",
+      "evidence_ids": [
+        "n0925",
+        "n1110",
+        "n1193"
+      ]
+    },
+    {
+      "path": "crypto.parts[2]",
+      "label": "Playbook",
+      "paragraph_sha256": "b43805f8363f948286181fe42dd376533ff6d0b147595f24b967befd0fc1f1fa",
+      "evidence_ids": []
+    },
+    {
+      "path": "flows.parts[0]",
+      "label": "Global Liquidity",
+      "paragraph_sha256": "99fb2b4bf9214834e0d195346764b2d6daf27a3455d297c3b08fc6dfbae72936",
+      "evidence_ids": [
+        "n1651",
+        "n2441"
+      ]
+    },
+    {
+      "path": "flows.parts[1]",
+      "label": "Rates & Dollar",
+      "paragraph_sha256": "c8982a0a6d1271509516af7200bf421a12c30ff4aa47837bf480dc298b45b3d9",
+      "evidence_ids": [
+        "n2496"
+      ]
+    },
+    {
+      "path": "flows.parts[2]",
+      "label": "Credit Check",
+      "paragraph_sha256": "1854eee9c6628716a36816d8292719fcf889a25cafe72ef9ccbc76bdbb739e2c",
+      "evidence_ids": [
+        "n1062",
+        "n1650"
+      ]
+    },
+    {
+      "path": "flows.parts[3]",
+      "label": "Equity & Fund Flows",
+      "paragraph_sha256": "8c1e74355fd4a68b5810ce9be864ffd5a677bb2689213f07c0c089608588903c",
+      "evidence_ids": [
+        "n0941",
+        "n0972",
+        "n1148",
+        "n1631"
+      ]
+    },
+    {
+      "path": "flows.parts[4]",
+      "label": "Portfolio Implication",
+      "paragraph_sha256": "27e415ad7984dfa18f57f33706f7d01f712d1d3960a47251f1e71ed6026d7870",
+      "evidence_ids": [
+        "n1593"
+      ]
+    },
+    {
+      "path": "anticipatory[0].parts[0]",
+      "label": "What Is Priced",
+      "paragraph_sha256": "c4214b9062426833cafaa69fdd2c1da946ecbac5e8325bd61449fc59b5f8bbf3",
+      "evidence_ids": [
+        "n1651",
+        "n1751"
+      ]
+    },
+    {
+      "path": "anticipatory[0].parts[1]",
+      "label": "Conditional Expression",
+      "paragraph_sha256": "0069565b0194a7152168ce36f80200df66b5003dd9244ec23cd6825c0071861f",
+      "evidence_ids": []
+    },
+    {
+      "path": "anticipatory[0].parts[2]",
+      "label": "Risk",
+      "paragraph_sha256": "079b739aec33e472258d22a7432ad6a06bf346d2669153a7c4fed28f62f890b9",
+      "evidence_ids": []
+    },
+    {
+      "path": "anticipatory[1].parts[0]",
+      "label": "What Is Priced",
+      "paragraph_sha256": "2a6993b36d68a16178387401f3ac011c0f909ba8ffe71d612de854cf7eaf7ab6",
+      "evidence_ids": [
+        "n1597",
+        "n1611"
+      ]
+    },
+    {
+      "path": "anticipatory[1].parts[1]",
+      "label": "Conditional Expression",
+      "paragraph_sha256": "7d934b03b59ae472e7128443e425921b97e0436d62c79cdce6517c41b3dd4375",
+      "evidence_ids": []
+    },
+    {
+      "path": "anticipatory[1].parts[2]",
+      "label": "Risk",
+      "paragraph_sha256": "532bd7057c48078e1e7dc6084632bbcad040865dcc039eab87fb289049cbbf95",
+      "evidence_ids": []
+    },
+    {
+      "path": "anticipatory[2].parts[0]",
+      "label": "What Is Priced",
+      "paragraph_sha256": "c36241444521550c6164b02b92d8f384359e2bee1262e5c2b92145e802a021c9",
+      "evidence_ids": [
+        "n1300",
+        "n1599"
+      ]
+    },
+    {
+      "path": "anticipatory[2].parts[1]",
+      "label": "Conditional Expression",
+      "paragraph_sha256": "790b3a2ca8fbb10cd3f65a16845daffb66010ed2aab3eb0034c610426efb1b93",
+      "evidence_ids": []
+    },
+    {
+      "path": "anticipatory[2].parts[2]",
+      "label": "Risk",
+      "paragraph_sha256": "5509c33d616df50d780968df1e6b8e98143380ef4ba01978eaad9cf8f8ea0930",
+      "evidence_ids": []
+    },
+    {
+      "path": "anticipatory[3].parts[0]",
+      "label": "What Is Priced",
+      "paragraph_sha256": "3274826311720ff52170931138911d4e3580bb669e16fe761c8de12605794100",
+      "evidence_ids": [
+        "n1064"
+      ]
+    },
+    {
+      "path": "anticipatory[3].parts[1]",
+      "label": "Conditional Expression",
+      "paragraph_sha256": "b25aeb7908656aa69e6ce255b040f36cd6c735dd8b654ec66d99039950624328",
+      "evidence_ids": []
+    },
+    {
+      "path": "anticipatory[3].parts[2]",
+      "label": "Risk",
+      "paragraph_sha256": "339879d4de7eb1bdf9590479cee6a85fd6789f2f36549143c3b510816ad9fae4",
+      "evidence_ids": []
+    },
+    {
+      "path": "catalysts[0].parts[0]",
+      "label": "Catalyst & Thesis",
+      "paragraph_sha256": "89d6886f0151c61facecd88661e62909a78397453d81fc25952b753b9bbdda82",
+      "evidence_ids": [
+        "n1140"
+      ]
+    },
+    {
+      "path": "catalysts[0].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "paragraph_sha256": "7638fb118152a8d8c932866695ecaf73f8b911539148e78d51e70856987045fa",
+      "evidence_ids": []
+    },
+    {
+      "path": "catalysts[0].parts[2]",
+      "label": "Trade Expression",
+      "paragraph_sha256": "dfc68e3aa870c12e548ef48902fd7902ea874b06069cae606f78ded8b778ec49",
+      "evidence_ids": []
+    },
+    {
+      "path": "catalysts[1].parts[0]",
+      "label": "Catalyst & Thesis",
+      "paragraph_sha256": "9e7e111bcfd7b86929abedd5a4df5bebc67d6dd4e818ea341ec5758367ad546b",
+      "evidence_ids": [
+        "n1486"
+      ]
+    },
+    {
+      "path": "catalysts[1].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "paragraph_sha256": "cf818765831f7bcf1d44baed2769543ffbad61f8c1634ca2258bdfbfda7cb42e",
+      "evidence_ids": []
+    },
+    {
+      "path": "catalysts[1].parts[2]",
+      "label": "Trade Expression",
+      "paragraph_sha256": "8a90934a9f71cc8acc5830664cb9f3147973c35d873d238e955f29193b49b568",
+      "evidence_ids": []
+    },
+    {
+      "path": "catalysts[2].parts[0]",
+      "label": "Catalyst & Thesis",
+      "paragraph_sha256": "ef0dba9c0b9fffc9810080cbb13bf74a0c67907489bd74b2efe3065b75572096",
+      "evidence_ids": [
+        "n1487"
+      ]
+    },
+    {
+      "path": "catalysts[2].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "paragraph_sha256": "73757c943806b10910031cca5bba8ad31f9e065b099597d95adf602c74245d7c",
+      "evidence_ids": []
+    },
+    {
+      "path": "catalysts[2].parts[2]",
+      "label": "Trade Expression",
+      "paragraph_sha256": "db5b070b498fe82c172fec4fa1ab367411da557871a1787ec88e9aa189fc7141",
+      "evidence_ids": []
+    },
+    {
+      "path": "catalysts[3].parts[0]",
+      "label": "Catalyst & Thesis",
+      "paragraph_sha256": "b8058c7f13c38c72adc604658a3f782d2b443ef408f70df87ff5d94dfdc30f64",
+      "evidence_ids": [
+        "n1491"
+      ]
+    },
+    {
+      "path": "catalysts[3].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "paragraph_sha256": "bb960e9bd71e1195ba81bf604137f590810ec7a8e282066521cd3f74f3fc52d6",
+      "evidence_ids": []
+    },
+    {
+      "path": "catalysts[3].parts[2]",
+      "label": "Trade Expression",
+      "paragraph_sha256": "28d3348b9b1dc6f9681824ec8b86a755898da63720c77ce38250642a6b4013dc",
+      "evidence_ids": []
+    },
+    {
+      "path": "catalysts[4].parts[0]",
+      "label": "Catalyst & Thesis",
+      "paragraph_sha256": "c15ba97761ae74cef7329d5d1e07cfd285d7b7453fb71474d68a55b761045cbb",
+      "evidence_ids": [
+        "n1217"
+      ]
+    },
+    {
+      "path": "catalysts[4].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "paragraph_sha256": "a88fa4b794906cb819e39db9b5ac26ad67c266efae45b99d6fdea8f3828f1a22",
+      "evidence_ids": []
+    },
+    {
+      "path": "catalysts[4].parts[2]",
+      "label": "Trade Expression",
+      "paragraph_sha256": "6eecfcf6e3bb9ec9138f245b2f1411b4b96f13bf913977a3fe456514690a8db0",
+      "evidence_ids": []
+    },
+    {
+      "path": "catalysts[5].parts[0]",
+      "label": "Catalyst & Thesis",
+      "paragraph_sha256": "4a7f6a3403cf73d5ea2aa9230c17be399203b136309bf1466384be6d3bd9afb1",
+      "evidence_ids": [
+        "n1489"
+      ]
+    },
+    {
+      "path": "catalysts[5].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "paragraph_sha256": "d3ef3b2870cb153b60d627689301cf0587890dbd1dff6a232f0af23dbcde981f",
+      "evidence_ids": []
+    },
+    {
+      "path": "catalysts[5].parts[2]",
+      "label": "Trade Expression",
+      "paragraph_sha256": "9ab268ba248a9a5d4f3ddcb8f62ee0a6f5bd2e9806e8a90e607f1be7df652e40",
+      "evidence_ids": []
+    }
+  ],
+  "full_cited_headlines": [
+    {
+      "id": "n0045",
+      "title": "There's a 'great divide' in Australia's economy, and it's complicating the inflation challenge - ABC News & Headlines – Australian Broadcasting Corporation",
+      "source": "ABC News & Headlines – Australian Broadcasting Corporation",
+      "published_at": "2024-06-08T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0051",
+      "title": "Australia’s cost-of-living crisis has reached a critical juncture - AFR",
+      "source": "AFR",
+      "published_at": "2024-06-10T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0059",
+      "title": "COMMENTARY: China's strong iron ore imports contrast with weak steel output - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0068",
+      "title": "More pain tipped for iron ore as BHP, mining stocks sink - AFR",
+      "source": "AFR",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0198",
+      "title": "Nasdaq, S&P 500 post all-time closing highs for 4th day as tech boosts - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0232",
+      "title": "China's exports rise solidly, but slower imports temper outlook - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-07T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0252",
+      "title": "China solar panel manufacturers seek government action to halt freefall in prices - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0253",
+      "title": "China's discount wars risk cementing frugal consumer mindset - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0254",
+      "title": "China's inflation steady, maintains pressure for more stimulus - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0257",
+      "title": "China’s glut of idle property causes headache for the government - The Guardian",
+      "source": "The Guardian",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0269",
+      "title": "China central bank promotes relending to speed up sales of housing stock - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0272",
+      "title": "China’s Once-Mighty Credit Cycle Is a Fading Force on World Markets - Bloomberg",
+      "source": "Bloomberg",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0274",
+      "title": "Chinese AI social media apps see growing demand in overseas markets - South China Morning Post",
+      "source": "South China Morning Post",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0291",
+      "title": "Analysis: Europe’s electric car tariffs sting China but won’t halt BYD’s advance | CNN Business - CNN",
+      "source": "CNN",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0295",
+      "title": "Breakingviews - COMMENTARY: China banks walk narrow path past property crisis - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0297",
+      "title": "China urges EU to reverse EV tariffs, Chery undeterred - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0298",
+      "title": "China's Chery Auto: EU factory will help mitigate EV tariffs - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0300",
+      "title": "China’s central bank backs Beijing’s property destocking plan as housing sales crawl - South China Morning Post",
+      "source": "South China Morning Post",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0303",
+      "title": "European auto stocks fall on uncertainty over China's tariff response - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0304",
+      "title": "Falling bond yields leave China's central bank facing tough call - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0307",
+      "title": "G7 agrees on loan deal to support Ukraine with Russian assets - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0821",
+      "title": "NextEra Energy Resources, Entergy strike 4.5 GW solar and storage development deal - Utility Dive",
+      "source": "Utility Dive",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0851",
+      "title": "The hidden costs of owning a home are surging for Americans - CNN",
+      "source": "CNN",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0909",
+      "title": "Airbus seeks mandatory weekend overtime to catch up on delayed A220 production - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0925",
+      "title": "Bitcoin miner Riot Platforms attacks takeover target Bitfarms over poison pill - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0932",
+      "title": "Broadcom boosts revenue forecast from AI chips, unveils stock split - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 14,
+      "meaning_class": "company_result",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0941",
+      "title": "Caterpillar boosts buyback authorization by $20 bln, raises dividend - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0972",
+      "title": "GameStop raises $2.14 bln amid Roaring Kitty-fueled retail trading frenzy - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n0977",
+      "title": "Google partners with Nevada utility for geothermal to power data centers - Yahoo Finance",
+      "source": "Yahoo Finance",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1062",
+      "title": "US bus company Coach files for bankruptcy to sell its business - CNN",
+      "source": "CNN",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1064",
+      "title": "US natural gas pipeline Mountain Valley prepares for start-up - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1110",
+      "title": "Bitcoin miners at Donald Trump's closed-door event say he thinks bitcoin can help win AI arms race - CNBC",
+      "source": "CNBC",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1117",
+      "title": "Broadcom soars as demand for AI chips powers forecast raise - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1140",
+      "title": "EXCLUSIVE: Goldman Sachs aims to double lending to wealthy private bank clients - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1148",
+      "title": "Fast fashion retailer Shein hikes prices ahead of IPO - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1149",
+      "title": "FedEx to cut up to 2,000 back-office jobs in Europe amid weak freight demand - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1172",
+      "title": "Intel fires back at AMD's AI benchmarks, shares results claiming current-gen Xeon chips are faster at AI than AMD's next-gen 128-core EPYC Turin - Tom's Hardware",
+      "source": "Tom's Hardware",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1193",
+      "title": "MicroStrategy To Buy More Bitcoin, Plans to Raise $500 Million - Investopedia",
+      "source": "Investopedia",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1217",
+      "title": "Stellantis aims to correct 'arrogant' mistakes in U.S. market, CEO says - CNBC",
+      "source": "CNBC",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1248",
+      "title": "Visa, Mastercard $30 billion fee settlement in peril - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1300",
+      "title": "Snap U.K. election sends crypto industry scrambling to court Labour allies - Fortune",
+      "source": "Fortune",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1429",
+      "title": "Corporate performance more about earnings growth than Fed rates, says Citi's John Chirico - CNBC",
+      "source": "CNBC",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1430",
+      "title": "DFS furniture chain blames Red Sea crisis for profit warning - The Guardian",
+      "source": "The Guardian",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1469",
+      "title": "Adobe (ADBE) Reports Q2 Earnings: What Key Metrics Have to Say - Yahoo Finance",
+      "source": "Yahoo Finance",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 14,
+      "meaning_class": "company_result",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1472",
+      "title": "American brands in Middle East under pressure from Israel boycotts - Le Monde.fr",
+      "source": "Le Monde.fr",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1486",
+      "title": "Lilly’s Weight-Loss Drug Is a Huge Hit. Its CEO Wants to Replace It ASAP. - WSJ",
+      "source": "WSJ",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1487",
+      "title": "Mark Zuckerberg’s ‘year of efficiency’ at Meta has spread to the company’s upper ranks and incompetent VPs are next to be culled - Fortune",
+      "source": "Fortune",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1489",
+      "title": "Microsoft employees' cybersecurity contributions will factor into their pay - CNBC",
+      "source": "CNBC",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1491",
+      "title": "OMV raises 2030 guidance on favorable energy markets - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1502",
+      "title": "UK housebuilder Crest Nicholson slides into loss amid property market woes - The Guardian",
+      "source": "The Guardian",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 14,
+      "meaning_class": "company_result",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1577",
+      "title": "ECB should wait with next rate move until uncertainty recedes, Lane says - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1578",
+      "title": "ECB’s Lagarde Sees Multi-Meeting Rate Holds a Possibility - WSJ",
+      "source": "WSJ",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1593",
+      "title": "Russia, hit by new US sanctions, halts dollar and euro trade on main bourse - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1597",
+      "title": "At G7, Macron in foreign policy limbo after dissolution gamble - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1599",
+      "title": "How Labour's election pledges stack up for UK markets - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1611",
+      "title": "Why France’s far right is spooking markets - Financial Times",
+      "source": "Financial Times",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1631",
+      "title": "Golden Goose targets $2 billion market cap in IPO, below expectations - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1650",
+      "title": "Coastal GasLink completes largest corporate bond offering in Canadian history - TC Energy",
+      "source": "TC Energy",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1651",
+      "title": "Explainer: What will BOJ's quantitative tightening look like? - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1739",
+      "title": "Japan's Q1 GDP fell less than first reported on revised capex - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-09T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1741",
+      "title": "Japan's service sector mood hits nearly 2-year low in May - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-09T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1751",
+      "title": "BOJ to keep ultra-low rates, debate fate of huge bond buying - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1754",
+      "title": "Japan May wholesale inflation jumps, complicates BOJ rate hike path - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1775",
+      "title": "Baltic auditors say Rail Baltica faces €19 billion cost overruns and delays - LRT",
+      "source": "LRT",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1776",
+      "title": "The renewed Poland-Belarus border crisis explained - Notes From Poland",
+      "source": "Notes From Poland",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1779",
+      "title": "Warsaw responds to reports US will redeploy Patriots from Poland to Ukraine - Notes From Poland",
+      "source": "Notes From Poland",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1924",
+      "title": "Budżet na 2025 r., przyszłość podatku bankowego i co dalej z giełdą. Minister finansów Andrzej Domański dla „Parkietu” - Parkiet",
+      "source": "Parkiet",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1933",
+      "title": "Nici z atomowych planów KGHM. \"Nikogo w Polsce na to nie stać\" - WNP.PL",
+      "source": "WNP.PL",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1951",
+      "title": "Tusk w butach Morawieckiego. Inflacja \"pożera\" progi podatkowe - Bankier.pl",
+      "source": "Bankier.pl",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1975",
+      "title": "Nowi członkowie zarządu Orlenu. Kim są? - TVN24",
+      "source": "TVN24",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1980",
+      "title": "Prezes PKO Leasing: chcemy finansować transformację gospodarki - Rzeczpospolita",
+      "source": "Rzeczpospolita",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n1996",
+      "title": "Cofnięcie indeksów w Warszawie po środowym rajdzie - Parkiet",
+      "source": "Parkiet",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n2007",
+      "title": "James C.F. Huang: Polski biznes musi mocniej promować się na Tajwanie - Rzeczpospolita",
+      "source": "Rzeczpospolita",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n2008",
+      "title": "Jest sygnał ożywienia na rynku pracy. Ale czy na pewno jest się z czego cieszyć? [ANALIZA] - Money.pl",
+      "source": "Money.pl",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n2014",
+      "title": "Magdalena Proga-Stępień: Jakość obsługi i relacja z klientem dają przewagę - Rzeczpospolita",
+      "source": "Rzeczpospolita",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n2015",
+      "title": "Marcin Gadomski: Branża bankowa gorszy okres ma za sobą - Rzeczpospolita",
+      "source": "Rzeczpospolita",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n2021",
+      "title": "Pepco wycofuje produkt dla dzieci - TVN24",
+      "source": "TVN24",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n2022",
+      "title": "Podwyżki w budżetówce. Jest decyzja rządu ws. przyszłego roku - Money.pl",
+      "source": "Money.pl",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n2026",
+      "title": "Sprzedaż LPP dynamicznie rośnie. Gigantowi odzieżowemu udało się zmniejszyć zapasy i zwiększyć marże - Strefa Inwestorów",
+      "source": "Strefa Inwestorów",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 14,
+      "meaning_class": "company_result",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n2027",
+      "title": "Spółki z GPW szykują się na rządowy wzrost wydatków w projektach zbrojeniowych - Strefa Inwestorów",
+      "source": "Strefa Inwestorów",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n2174",
+      "title": "Added health benefits of Wegovy, Zepbound could attract more men, doctors say - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-10T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n2231",
+      "title": "Dollarama Misses on Sales Growth as Consumer Spending Weakens - Bloomberg.com",
+      "source": "Bloomberg.com",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 14,
+      "meaning_class": "company_result",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n2249",
+      "title": "Slowing demand growth and surging supply put global oil markets on course for major surplus this decade - IEA - International Energy Agency",
+      "source": "IEA - International Energy Agency",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n2271",
+      "title": "Spotify announces an in-house creative agency, tests generative AI voiceover ads - TechCrunch",
+      "source": "TechCrunch",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 7,
+      "meaning_class": "company_or_market_political_news_or_preview",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n2441",
+      "title": "Fed leaves rates unchanged, sees only one 2024 cut despite inflation progress - Reuters",
+      "source": "Reuters",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n2445",
+      "title": "Inflation slows in May, with consumer prices up 3.3% from a year ago - CNBC",
+      "source": "CNBC",
+      "published_at": "2024-06-12T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n2466",
+      "title": "US Producer Prices Surprise With Biggest Decline Since October - Bloomberg.com",
+      "source": "Bloomberg.com",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    },
+    {
+      "id": "n2496",
+      "title": "A strong dollar is great news for most of us — but not everybody is a winner - NPR",
+      "source": "NPR",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "meaning_window_days": 35,
+      "meaning_class": "macro_release_or_current_policy_activity_baseline",
+      "eligibility": "eligible before own UTC cutoff; release status independently checked by meaning"
+    }
+  ],
+  "numeric_checks": [
+    {
+      "path": "geo[0].parts[1]",
+      "source": "cards/2024-06-14.json treasury and ^GSPC/^VIX/DX-Y.NYB",
+      "checked": "June13 prior close: UST2Y 4.68%,10Y 4.24%,10Y-2Y -44bps;20obs changes -5/-12/-7bps, inverted bull flattening; SPX5433.74,VIX11.94,DXY105.20 index points. Firmer dollar has +0.53% own latest-session direction. No FX pair quotes."
+    },
+    {
+      "path": "geo[2].parts[5]",
+      "source": "cards/2024-06-14.json 000001.SS and ^HSI",
+      "checked": "June13 completed local sessions: Shanghai3028.92 index points, latest -0.28%,own20s -2.92%; Hang Seng18112.63 index points,latest +0.97%,own20s -5.04%. Opposite latest directions preserved and no flows inferred."
+    },
+    {
+      "path": "geo[3].parts[1]",
+      "source": "cards/2024-06-14.json ^N225",
+      "checked": "Nikkei225 June13 completed session38720.47 index points,latest -0.40%,own20s -0.51%; no numeric yen FX."
+    },
+    {
+      "path": "geo[5].parts[0]",
+      "source": "cards/2024-06-14.json ETFBW20TR.WA",
+      "checked": "Beta ETF WIG20TR June13 44.58PLN,latest -1.56%,own20s -5.80%; tracker share price not WIG20 index points, no measured outflow."
+    },
+    {
+      "path": "sectors[12].parts[0]",
+      "source": "cards/2024-06-14.json AVGO",
+      "checked": "June13 AVGO1678.99USD,latest +12.27%; exact as-traded pre-split share level,split-adjusted comparable return,no rescaling."
+    },
+    {
+      "path": "crypto.parts[0]",
+      "source": "cards/2024-06-14.json BTC-USD and ETH-USD",
+      "checked": "Prior completed UTC daily June13: BTC66756.40USD,latest -2.18%,20s -2.58%;ETH3469.28USD,latest -2.54%,20s -6.91%. Crypto source tag uses prior completed daily close."
+    },
+    {
+      "path": "flows.parts[1]",
+      "source": "cards/2024-06-14.json treasury and DX-Y.NYB",
+      "checked": "June13 UST2Y4.68%,10Y4.24%,spread-44bps,inverted,20obs bull flattening and DXY105.20 index points; yield/index units and sources distinct."
+    },
+    {
+      "path": "geo[0].parts[2]",
+      "source": "n2441",
+      "checked": "Only one cut this year is the exact Reuters projected2024 path,not a completed cut or new numerical forecast."
+    }
+  ],
+  "release_status_review": [
+    {
+      "ids": [
+        "n2441",
+        "n2445",
+        "n2466"
+      ],
+      "decision": "Completed June12 Fed/CPI and June13 PPI releases precede report cutoff; projected one-cut path not realized easing."
+    },
+    {
+      "ids": [
+        "n1739",
+        "n1741",
+        "n1754"
+      ],
+      "decision": "Earlier Japanese GDP revision, services mood and wholesale inflation completed before report cutoff, regardless of normalized June9/11 clocks."
+    },
+    {
+      "ids": [
+        "n1751",
+        "n1651"
+      ],
+      "decision": "BOJ rate/bond-purchase decision remains pending; preview and QT explainer never support completed June14 decision."
+    },
+    {
+      "ids": [
+        "n1096"
+      ],
+      "decision": "Excluded by root specific-article clock adjudication; no final citation or Adobe beat/reaction fact retained. Article observed June14 02:18:02UTC after cutoff. Issuer result timing is distinct.",
+      "evidence_path": "audit_work/june14_adobe_article_vintage_review.json",
+      "evidence_sha256": "50dc1f3e926d08b1e7646a853c4461af9258e4d8a19b37770d4f4fd52a9b3152"
+    },
+    {
+      "ids": [
+        "n1469"
+      ],
+      "decision": "Eligible own-date Yahoo Finance quarterly-report title used only for completed Adobe quarterly reporting, no figures, beat, guidance or price reaction imported."
+    },
+    {
+      "ids": [
+        "n1611",
+        "n1597",
+        "n1599",
+        "n1300"
+      ],
+      "decision": "French and UK national votes and resulting policy implementation remain future; campaign pledges and market concerns are current evidence only."
+    },
+    {
+      "ids": [
+        "n1064",
+        "n0821",
+        "n0977",
+        "n1140",
+        "n1489",
+        "n1193",
+        "n1491",
+        "n2271"
+      ],
+      "decision": "Pipeline startup preparation, development/partnership, lending ambition, incentive change, planned financing, future guidance and AI-ad tests remain at exact announced/planned status."
+    }
+  ],
+  "reviewed_validation_warnings": [],
+  "validation": {
+    "command": "python tools/verify.py --nonretail --counts 2024-06-14",
+    "result": "PASS",
+    "fails": [],
+    "warnings": [],
+    "sources": 88,
+    "body_words": 8597,
+    "all_36_block_ranges_pass": true,
+    "all_136_parts_present": true
+  },
+  "repair_history": {
+    "original_before_bytes_path": "audit/review_history/nonretail_2024-06-14_588e6b8002daf6bb58718f5e3206cfbbe4493e72b7ca380542718cb9d1e04a5c/before_nonretail.json",
+    "named_repairs_path": "audit/review_history/nonretail_2024-06-14_588e6b8002daf6bb58718f5e3206cfbbe4493e72b7ca380542718cb9d1e04a5c/named_repairs.json",
+    "intermediate_before_bytes_paths": [
+      "audit/review_history/nonretail_2024-06-14_faab506c11dd2c4f1df220e4d981f9144e4953113e6feaafcd6368d48018eaeb/before_nonretail.json",
+      "audit/review_history/nonretail_2024-06-14_69b594aa6a0dac25c567172607e9f260882f06f8df626bd938748ef60c01a065/before_nonretail.json"
+    ],
+    "prior_receipt_existed": false,
+    "root_controlled_exclusion_amendment": "audit/release_exclusions_amendment_2024-06-14_n1096.json"
+  },
+  "specific_limits": [
+    "Review certifies the current nonretail draft and exact current own-date feed/card/exclusions only. Retail and merged edition require their separate acceptance and citation-use checks.",
+    "Headlines are not article bodies: no body details, invented forecasts, positions, historical episodes or later outcomes were imported."
+  ]
+}

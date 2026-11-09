@@ -1,0 +1,63 @@
+{
+  "schema": "june-own-cited-clock-review-v1",
+  "date": "2024-06-07",
+  "reviewed_at_utc": "2026-11-09T11:13:58.652914+00:00",
+  "scope": "Timing/identity adjudication of actually cited own-date n2327 only. No publisher-body news facts imported into report prose. No source or editorial registry mutation by this reviewer.",
+  "cutoff_utc": "2024-06-07T00:00:00+00:00",
+  "feed_sha256": "2868fc14d4ab635e7874c58ddd704c94ae1d1aa414fce2646857c0454a125ce4",
+  "frozen_row": {
+    "published_at": "2024-06-06T07:00:00+00:00",
+    "src": "Reuters",
+    "source_url": "https://www.reuters.com",
+    "title": "Morning Bid: Global risk rally hinges on payrolls - Reuters",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPd28zeUFVUGR1cFlwRDYwbzBtUzUtcGJlYmJnQm0yV1JUWGg5NmRlQkc0ZkVFZC1kVlVjakFPUHo4QVg1clp2cWRqX3RiNEttUU1VX2pMdS1kaHliNmhFOEl6RGNGODR6RzFpLWU4Z1VSeWNxaE1BNDBMSmY2dXFNWGxuTQ?oc=5",
+    "cat": "news",
+    "topics": [
+      "us_data"
+    ],
+    "q": "nonfarm payrolls",
+    "queries": [
+      "nonfarm payrolls"
+    ],
+    "lang": "en-US",
+    "id": "n2327"
+  },
+  "frozen_row_canonical_sha256": "55175a8d6859fce83b398ebbf4ac60885ab1b34a49280d572ed86ef292f4da2d",
+  "evidence": [
+    {
+      "url": "https://www.reuters.com/markets/europe/global-markets-view-europe-2024-06-07/",
+      "tool_reference": "turn251494view0",
+      "lines": [
+        151,
+        155
+      ],
+      "identity_matches_frozen_headline": true,
+      "short_quote": "June 7, 2024 4:36 AM UTC Updated June 7, 2024",
+      "clock_interpretation": "Visible publisher clock is June 7 04:36 UTC, after report cutoff.",
+      "retained_quote_word_count": 13
+    },
+    {
+      "url": "https://ca.finance.yahoo.com/news/morning-bid-global-risk-rally-043411047.html",
+      "tool_reference": "turn244751search1",
+      "identity_matches_frozen_headline": true,
+      "displayed_date": "2024-06-07",
+      "url_clock_component": "043411047",
+      "note": "Reuters syndication search result dated June 7; URL clock component is corroborative, not an independently certified first-publication instant. Direct open returned HTTP429.",
+      "retained_quote_word_count": 0
+    }
+  ],
+  "search_original_metadata": {
+    "tool_reference": "turn244751news12",
+    "primary_url": "https://www.reuters.com/markets/europe/global-markets-view-europe-2024-06-07/",
+    "search_timestamp_utc": "2024-06-07T04:34:11+00:00",
+    "note": "Differs from current visible publisher clock by about two minutes; no assertion that the exact original first minute has been certified."
+  },
+  "adjudication": "Exclude the own June7 record: publisher clock and corroborating indexed syndication date are after the cutoff; normalized prior-day RSS time cannot certify earlier availability. Exact first-publication minute is not asserted.",
+  "disposition": "conservative_original_availability_after_cutoff",
+  "affected_draft_parts": [
+    "geo:US / Macro Stance",
+    "anticipatory[0] / What Is Priced"
+  ],
+  "permitted_bounded_repair": "Use already cited eligible own n0144 Reuters US-close headline for same known pending-payroll premise; remove Morning Bid/global-rally attribution. Conditional valuation mechanics remain conditional.",
+  "copyright_scope": "Only identity/time metadata and a 13-word publisher timestamp retained; full article/tool body not exported."
+}

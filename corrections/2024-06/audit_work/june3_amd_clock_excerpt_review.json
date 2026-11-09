@@ -1,0 +1,29 @@
+{
+  "date": "2024-06-03",
+  "id": "n0776",
+  "feed_sha256": "07f27127c3f71cac7c83ed13d32ab12aa4c500f75acec651a825ff7407674d23",
+  "source_item_sha256": "e99fd586f20096b709420fecbbe912ea1f4247030fdc82617547ac572cb43b5d",
+  "scope": "Clock adjudication only, not importing later article-body facts. Exact original Reuters pre-cutoff version is not certified.",
+  "observed_frozen_title": "AMD launches new AI chips to take on leader Nvidia - Reuters",
+  "frozen_index_timestamp": "2024-06-02T07:00:00+00:00",
+  "cutoff_utc": "2024-06-03T00:00:00Z",
+  "evidence": [
+    {
+      "label": "Company dated keynote schedule",
+      "url": "https://www.amd.com/en/newsroom/press-releases/2024-5-28-amd-chair-and-chief-executive-officer-dr-lisa-su-.html",
+      "tool_ref": "turn483645search4",
+      "publication_date": "2024-05-28",
+      "quote": "Monday, June 3, at 9.30 a.m. Taipei Local Time / Sunday, June 2 at 9.30 p.m. ET",
+      "schedule_utc": "2024-06-03T01:30:00Z"
+    },
+    {
+      "label": "Dated Reuters syndication clock",
+      "url": "https://ca.marketscreener.com/quote/stock/NVIDIA-CORPORATION-57355629/news/AMD-launches-new-AI-chips-to-take-on-leader-Nvidia-46883137/",
+      "tool_ref": "turn893406search10",
+      "quote": "Published on 06/02/2024 at 10:56 pm EDT",
+      "clock_utc": "2024-06-03T02:56:00Z"
+    }
+  ],
+  "decision": "Conservative June3 omission: completed-launch headline is tied to an after-cutoff keynote and later dated Reuters reporting; prior-day normalized RSS date does not establish pre-cutoff availability. No precise primary press-release first-publication clock is asserted.",
+  "later_dates": "No conclusion about another report date or another own-date ID."
+}

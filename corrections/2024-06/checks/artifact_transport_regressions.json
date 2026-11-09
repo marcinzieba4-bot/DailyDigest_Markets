@@ -1,0 +1,265 @@
+{
+  "status": "synthetic_transport_checks_passed",
+  "checked_at_utc": "2026-11-09T11:26:54.432815+00:00",
+  "cases": [
+    {
+      "case": "archive_current_schema_positive",
+      "accepted": true,
+      "passed": true
+    },
+    {
+      "case": "filesystem_current_schema_positive",
+      "accepted": true,
+      "passed": true
+    },
+    {
+      "case": "archive_legacy_reused_ordinal_distinct_actual_starts_and_error_body",
+      "accepted": true,
+      "passed": true
+    },
+    {
+      "case": "filesystem_legacy_reused_ordinal_distinct_actual_starts_and_error_body",
+      "accepted": true,
+      "passed": true
+    },
+    {
+      "case": "archive_exact_original_disclosed_missing_HTTP503_row",
+      "accepted": true,
+      "passed": true
+    },
+    {
+      "case": "filesystem_exact_original_disclosed_missing_HTTP503_row",
+      "accepted": true,
+      "passed": true
+    },
+    {
+      "case": "archive_rebound_whitelist_cannot_change_original_row",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_rebound_whitelist_cannot_change_original_row",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_unlisted_failed_missing_body",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_unlisted_failed_missing_body",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_missing_start",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_missing_start",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_naive_start",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_naive_start",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_nonUTC_start",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_nonUTC_start",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_finish_before_start",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_finish_before_start",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_boolean_ordinal",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_boolean_ordinal",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_unknown_status",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_unknown_status",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_same_full_start_identity_even_with_new_body_path",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_same_full_start_identity_even_with_new_body_path",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_fetched_missing_body_never_waived",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_fetched_missing_body_never_waived",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_historical_ledger_signature_outside_canonical_inventory",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_historical_ledger_signature_outside_canonical_inventory",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_empty_current_cache_attempts",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_empty_current_cache_attempts",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_cache_attempt_URL_changed",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_cache_attempt_URL_changed",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_modern_start_completion_exact_positive",
+      "accepted": true,
+      "passed": true
+    },
+    {
+      "case": "filesystem_modern_start_completion_exact_positive",
+      "accepted": true,
+      "passed": true
+    },
+    {
+      "case": "archive_duplicate_modern_start_id",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_duplicate_modern_start_id",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_orphan_modern_started_id",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_orphan_modern_started_id",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_modern_start_clock_mismatch",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_modern_start_clock_mismatch",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_modern_start_ledger_missing",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_modern_start_ledger_missing",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_fabricated_unused_empty_start_ledger",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_fabricated_unused_empty_start_ledger",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_named_historical_coverage_with_current_final_binding",
+      "accepted": true,
+      "passed": true
+    },
+    {
+      "case": "filesystem_named_historical_coverage_with_current_final_binding",
+      "accepted": true,
+      "passed": true
+    },
+    {
+      "case": "archive_historical_coverage_does_not_waive_current_final_binding",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_historical_coverage_does_not_waive_current_final_binding",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "archive_immutable_query_plan_still_exact",
+      "accepted": false,
+      "passed": true
+    },
+    {
+      "case": "filesystem_immutable_query_plan_still_exact",
+      "accepted": false,
+      "passed": true
+    }
+  ],
+  "case_count": 50,
+  "runtime_full20_report_artifacts_accepted": false,
+  "scope": "Generic synthetic current-schema transport controls only; no actual source inputs or report facts read.",
+  "tool_sha256": {
+    "tools/build_source_inventory.py": "1abc3fad19e5ca53dc8712e50640c0b1a0d68e374b1962f0979763eef739f5c1",
+    "tools/build_artifacts.py": "28206a8ac533cb102f046d3f5ca248460d3a8f44a59c75c1f3492e640dfc3eb0",
+    "audit_work/review_final_artifacts.py": "f5f1041b0de96e9e08db285b867901e0a9caf28add269d4f0386be414e0aa6b1",
+    "audit_work/test_artifact_transport_regressions.py": "c6d48ec2506074e76b3b4b95bc51a1bddc0c4840346111f511827fba336680e5"
+  }
+}

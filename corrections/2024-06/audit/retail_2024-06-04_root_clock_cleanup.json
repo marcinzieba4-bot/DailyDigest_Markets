@@ -1,0 +1,34 @@
+{
+  "date": "2024-06-04",
+  "checked_at_utc": "2026-11-09T10:44:54.825259+00:00",
+  "scope": "Controlled retained-item omission plus two named current-retail edits only; immutable feed/card/freeze/source acceptance unchanged.",
+  "exclusion": {
+    "date": "2024-06-04",
+    "id": "n1641",
+    "title": "'Roaring Kitty' post seems to show trader held on to giant GameStop stake after Monday's rally - CNBC",
+    "frozen_published_at": "2024-06-03T07:00:00+00:00",
+    "feed_sha256": "17fb8d2bead8c349452007168fbfdd2cb1f1a79e3b7932a9a08f743ea3219e1a",
+    "reason": "Conservative availability/vintage omission: apparent post-rally holdings update may be a late-US-evening item. The normalized prior-day RSS timestamp does not certify pre-June4 00UTC first publication. Direct publisher clock was inaccessible (robots); independent forum display lacked a certified timezone. No exact original minute or definitely late event is asserted.",
+    "disposition": "conservative_uncertified_original_availability"
+  },
+  "per_date_before": {
+    "path": "audit/review_history/exclusions_2024-06-04_before_root_cnbc_clock_omission.json",
+    "sha256": "efaad322d25d7192251699bd35b6a90705a791503418335857ee26977761b35f"
+  },
+  "per_date_after_sha256": "42b29107c44286f35707e8487d3881b22c8348fdd9978b0615f53bdfacd1e6fa",
+  "registry_before": {
+    "path": "audit/review_history/additional_release_exclusions_before_2024-06-04_cnbc_clock_omission.json",
+    "sha256": "362a765e04a1dbeece422a649df33f20f12b46405b6d8a4241c9b24f1b67d944"
+  },
+  "registry_after_sha256": "271916ca7027b2b16a948541f2e3d27534aad2714fe8b5971eb8d5a5d5446455",
+  "authoring_gate_preserved_sha256": "009b79a51b710f9a8b0b69f749e8e8483578ed14c952d6da77fee2bcf0751ff6",
+  "before_draft_sha256": "7a44c46d18f6a57d0c9cb47daeec42fa4dead8f918d24c8414c69b1e33b68a05",
+  "after_draft_sha256": "9da9f47d413a72d9882d32c69091b5382abed1fd338237d7215b3ab0901c0b52",
+  "before_notes_sha256": "e2ccf6c2972998fa000bd11fd5e9b83965ac6bbd6f57b12fd41b84f5c5d46dd0",
+  "after_notes_sha256": "28b964edf4a6d26d85296ae70cb8b7a54390d77985bf784090f0f7fee10a8b55",
+  "prose_changes": [
+    "Lead social paragraph drops uncertified later-holdings report; earlier eligible Reuters public-post coordination remains.",
+    "HIMS removes the headline shorthand generic without adding an unsupported regulatory or clinical equivalence claim."
+  ],
+  "all_other_prose_unchanged": true
+}

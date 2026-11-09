@@ -1,0 +1,78 @@
+{
+  "schema": "controlled-retained-item-editorial-omission-amendment-v1",
+  "recorded_at_utc": "2026-11-09T11:14:55.939633+00:00",
+  "status": "applied_controlled_own_date_timing_exclusion",
+  "affected_date": "2024-06-07",
+  "new_excluded_ids": [
+    "n2327"
+  ],
+  "feed_sha256": "2868fc14d4ab635e7874c58ddd704c94ae1d1aa414fce2646857c0454a125ce4",
+  "card_sha256": "c51a5216b5cb032be0e0ff5728a15e8637190fdbab20f55dd754ef9990a98fe7",
+  "original_source_review_sha256": "28c6fc6470cd3376055f6f447774509f3b6f863f550ce82858889ea4d85be170",
+  "original_source_freeze_sha256": "a5a0a4936f5feba69e66665ac61e2bdd5c50af295a6dabe99498f14f293bb578",
+  "original_authoring_acceptance_sha256": "009b79a51b710f9a8b0b69f749e8e8483578ed14c952d6da77fee2bcf0751ff6",
+  "previous_registry_amendment_path": "audit/release_exclusions_amendment_2024-06-17_ing.json",
+  "previous_registry_amendment_sha256": "a28a6ede0543d291e96688397dac456c29ae19185bd281d0510ac2acaa516f2e",
+  "original_records_preserved": [
+    {
+      "path": "audit/additional_release_exclusions.json",
+      "sha256": "12b698dcaa6cbfaea918da68c5826cd3ea76d5fc2fbc59341636a01eacd871c9",
+      "backup_path": "audit/review_history/additional_release_exclusions_before_2024-06-07_n2327_12b698dcaa6cbfaea918da68c5826cd3ea76d5fc2fbc59341636a01eacd871c9.json",
+      "backup_sha256": "12b698dcaa6cbfaea918da68c5826cd3ea76d5fc2fbc59341636a01eacd871c9"
+    },
+    {
+      "path": "exclusions/2024-06-07.json",
+      "sha256": "3c84272d210f7874e9e54e88bf610ba9c0fc6c73b16f4d243dc5fd212247899e",
+      "backup_path": "audit/review_history/2024-06-07_before_2024-06-07_n2327_3c84272d210f7874e9e54e88bf610ba9c0fc6c73b16f4d243dc5fd212247899e.json",
+      "backup_sha256": "3c84272d210f7874e9e54e88bf610ba9c0fc6c73b16f4d243dc5fd212247899e"
+    }
+  ],
+  "current_records": {
+    "audit/additional_release_exclusions.json": "fd1c21fa285f08c8478f109b1194c583fedd1c4f639786604efaf100b05b8864",
+    "exclusions/2024-06-07.json": "67711578b2a865866ba23e10afe1bf8295bff83e70f8ea561f02184d88c7eca0"
+  },
+  "effective_authoring_input_delta": {
+    "date": "2024-06-07",
+    "supersedes_only_field": "exclusions_sha256",
+    "original_value": "3c84272d210f7874e9e54e88bf610ba9c0fc6c73b16f4d243dc5fd212247899e",
+    "current_value": "67711578b2a865866ba23e10afe1bf8295bff83e70f8ea561f02184d88c7eca0",
+    "feed_and_card_unchanged": true,
+    "other_date_input_rows_not_modified": true,
+    "prior_amendments_remain_in_effect": true,
+    "original_authoring_gate_file_not_rewritten": true
+  },
+  "new_rows": [
+    {
+      "date": "2024-06-07",
+      "id": "n2327",
+      "feed_sha256": "2868fc14d4ab635e7874c58ddd704c94ae1d1aa414fce2646857c0454a125ce4",
+      "title": "Morning Bid: Global risk rally hinges on payrolls - Reuters",
+      "src": "Reuters",
+      "published_at": "2024-06-06T07:00:00+00:00",
+      "screen_kind": "timing_uncertainty",
+      "reason": "Actually cited Reuters MorningBid has June7 aftercut publisher/syndication clocks despite normalizedJune6RSS. Visible publisher04:36UTC and indexed04:34:11UTC both follow own00UTC; exactfirstminute not certified. Conservativeomit ownJune7 only.",
+      "source_cutoff_utc": "2024-06-07T00:00:00Z",
+      "evidence_paths": [
+        "audit_work/june7_n2327_clock_independent_review.json"
+      ],
+      "evidence_sha256": {
+        "audit_work/june7_n2327_clock_independent_review.json": "a386855d44116f532194eca1229dc0e9d00b33ef87ce0c4ccf855cbb38edf480"
+      },
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation",
+      "observed_publisher_clock_utc": "2024-06-07T04:36:00Z",
+      "observed_search_metadata_clock_utc": "2024-06-07T04:34:11Z"
+    }
+  ],
+  "proof_bindings": {
+    "audit_work/june7_n2327_clock_independent_review.json": "a386855d44116f532194eca1229dc0e9d00b33ef87ce0c4ccf855cbb38edf480"
+  },
+  "checks": {
+    "all144_immutable_source_bindings_unchanged": true,
+    "prior_registry_rows_preserved_exactly": true,
+    "per_date_registry_agree": true
+  },
+  "limits": [
+    "No automatic contentfix or acceptance. Independent own-date reviewer must separately bind current content/exclusions.",
+    "Only named own-date retained ID is excluded; frozenfinancialinputs stay immutable."
+  ]
+}

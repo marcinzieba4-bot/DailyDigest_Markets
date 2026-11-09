@@ -1,0 +1,76 @@
+{
+  "schema": "controlled-retained-item-editorial-omission-amendment-v1",
+  "recorded_at_utc": "2026-11-09T14:13:25.383935+00:00",
+  "status": "applied_controlled_own_date_timing_exclusion",
+  "affected_date": "2024-06-14",
+  "new_excluded_ids": [
+    "n1096"
+  ],
+  "feed_sha256": "0aff8f69e55464ac9bab9295d6cd832653547802450f9e5f7f72fb8e0ac277c0",
+  "card_sha256": "b09c1ee6e2ff93a8400106500ec4b907f886b0dc3e281b465efbe0e4e71daa79",
+  "original_source_review_sha256": "28c6fc6470cd3376055f6f447774509f3b6f863f550ce82858889ea4d85be170",
+  "original_source_freeze_sha256": "a5a0a4936f5feba69e66665ac61e2bdd5c50af295a6dabe99498f14f293bb578",
+  "original_authoring_acceptance_sha256": "009b79a51b710f9a8b0b69f749e8e8483578ed14c952d6da77fee2bcf0751ff6",
+  "previous_registry_amendment_path": "audit/release_exclusions_amendment_2024-06-12_n1795.json",
+  "previous_registry_amendment_sha256": "744fd44d420f5e2022d70077630a576e17145aeabd4534be5d0c4a6c0774bb0a",
+  "original_records_preserved": [
+    {
+      "path": "audit/additional_release_exclusions.json",
+      "sha256": "b817ca8e29dad811bb393aaca5d83acfbf5eddc7eeb7067fa090cd20ba88e340",
+      "backup_path": "audit/review_history/additional_release_exclusions_before_2024-06-14_n1096_b817ca8e29dad811bb393aaca5d83acfbf5eddc7eeb7067fa090cd20ba88e340.json",
+      "backup_sha256": "b817ca8e29dad811bb393aaca5d83acfbf5eddc7eeb7067fa090cd20ba88e340"
+    },
+    {
+      "path": "exclusions/2024-06-14.json",
+      "sha256": "eeafea94f6dee40804b15c0bd19f3977b6959b592b7cc9d633a45848da09a844",
+      "backup_path": "audit/review_history/2024-06-14_before_2024-06-14_n1096_eeafea94f6dee40804b15c0bd19f3977b6959b592b7cc9d633a45848da09a844.json",
+      "backup_sha256": "eeafea94f6dee40804b15c0bd19f3977b6959b592b7cc9d633a45848da09a844"
+    }
+  ],
+  "current_records": {
+    "audit/additional_release_exclusions.json": "d6adc20f347b3d24c15413e93c50a1be4151ea10c4ade37f3a486258d45a50c0",
+    "exclusions/2024-06-14.json": "32388df348e6e9c74a55151118e5e03f0a4bb37208ad2859f97f8e31d9d14a75"
+  },
+  "effective_authoring_input_delta": {
+    "date": "2024-06-14",
+    "supersedes_only_field": "exclusions_sha256",
+    "original_value": "eeafea94f6dee40804b15c0bd19f3977b6959b592b7cc9d633a45848da09a844",
+    "current_value": "32388df348e6e9c74a55151118e5e03f0a4bb37208ad2859f97f8e31d9d14a75",
+    "feed_and_card_unchanged": true,
+    "other_date_input_rows_not_modified": true,
+    "prior_amendments_remain_in_effect": true,
+    "original_authoring_gate_file_not_rewritten": true
+  },
+  "new_rows": [
+    {
+      "date": "2024-06-14",
+      "id": "n1096",
+      "feed_sha256": "0aff8f69e55464ac9bab9295d6cd832653547802450f9e5f7f72fb8e0ac277c0",
+      "title": "Adobe Stock Jumps 15% After AI-Fueled Earnings Beat\u2014Watch This Key Level - Investopedia",
+      "src": "Investopedia",
+      "published_at": "2024-06-13T07:00:00+00:00",
+      "screen_kind": "timing_uncertainty",
+      "reason": "Specific Investopedia earnings/technicalanalysisarticle observedJune14 02:18:02UTC afterown00UTCcut; normalizedJune13RSSdoesnotcertifypriorvintage. Adobeissuerresultsitselfbeforecut, distinguishsourcearticlefromevent.",
+      "source_cutoff_utc": "2024-06-14T00:00:00Z",
+      "evidence_paths": [
+        "audit_work/june14_adobe_article_vintage_review.json"
+      ],
+      "evidence_sha256": {
+        "audit_work/june14_adobe_article_vintage_review.json": "50dc1f3e926d08b1e7646a853c4461af9258e4d8a19b37770d4f4fd52a9b3152"
+      },
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    }
+  ],
+  "proof_bindings": {
+    "audit_work/june14_adobe_article_vintage_review.json": "50dc1f3e926d08b1e7646a853c4461af9258e4d8a19b37770d4f4fd52a9b3152"
+  },
+  "checks": {
+    "all144_immutable_source_bindings_unchanged": true,
+    "prior_registry_rows_preserved_exactly": true,
+    "per_date_registry_agree": true
+  },
+  "limits": [
+    "No automatic contentfix or acceptance. Independent own-date reviewer must separately bind current content/exclusions.",
+    "Only named own-date retained ID is excluded; frozenfinancialinputs stay immutable."
+  ]
+}

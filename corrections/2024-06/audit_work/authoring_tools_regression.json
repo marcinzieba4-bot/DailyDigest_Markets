@@ -1,0 +1,445 @@
+{
+  "purpose": "Synthetic toolkit regression; no financial report authoring or production source reads.",
+  "checks": [
+    {
+      "check": "valid complete synthetic report",
+      "pass": true
+    },
+    {
+      "check": "all 20 weekdays including June 19",
+      "pass": true
+    },
+    {
+      "check": "August date rejected",
+      "pass": true
+    },
+    {
+      "check": "valid isolated nonretail draft",
+      "pass": true
+    },
+    {
+      "check": "valid isolated retail draft",
+      "pass": true
+    },
+    {
+      "check": "missing citation membership",
+      "pass": true
+    },
+    {
+      "check": "unresolved citation alias",
+      "pass": true
+    },
+    {
+      "check": "overused citation hard failure",
+      "pass": true
+    },
+    {
+      "check": "exact geography labels",
+      "pass": true
+    },
+    {
+      "check": "required top-level keys",
+      "pass": true
+    },
+    {
+      "check": "hard body number provenance",
+      "pass": true
+    },
+    {
+      "check": "numeric spot FX mark",
+      "pass": true
+    },
+    {
+      "check": "forbidden FX ticker",
+      "pass": true
+    },
+    {
+      "check": "exact sector lower bound",
+      "pass": true
+    },
+    {
+      "check": "retail title hook length",
+      "pass": true
+    },
+    {
+      "check": "ordinary nonnumeric FX direction and JPY equity price allowed",
+      "pass": true
+    },
+    {
+      "check": "midnight actual rejected",
+      "pass": true
+    },
+    {
+      "check": "stale news rejected",
+      "pass": true
+    },
+    {
+      "check": "narrow semantic window enforced",
+      "pass": true
+    },
+    {
+      "check": "number supported only in another paragraph hard fails",
+      "pass": true
+    },
+    {
+      "check": "semantic exclusion hard failure",
+      "pass": true
+    },
+    {
+      "check": "retail gate also excludes own-date semantic source",
+      "pass": true
+    },
+    {
+      "check": "conflicting loose source rejected",
+      "pass": true
+    },
+    {
+      "check": "digest includes secondary topic and full headline/outlet",
+      "pass": true
+    },
+    {
+      "check": "cited titles prints full exact own-date headline",
+      "pass": true
+    },
+    {
+      "check": "showcard uses own card and suppresses FX row",
+      "pass": true
+    },
+    {
+      "check": "stage all20 current accepted components",
+      "pass": true
+    },
+    {
+      "check": "all720 exact block ranges",
+      "pass": true
+    },
+    {
+      "check": "stale review prevents any spec write",
+      "pass": true
+    },
+    {
+      "check": "accepted hashes with invalid candidate still prevent spec write",
+      "pass": true
+    },
+    {
+      "check": "complete20 final acceptance with current source hashes",
+      "pass": true
+    },
+    {
+      "check": "separate local June retail quality receipt",
+      "pass": true
+    },
+    {
+      "check": "stale market acceptance rejected at final binding",
+      "pass": true
+    },
+    {
+      "check": "current screening schema binds all20 real receipt byte hashes",
+      "pass": true
+    },
+    {
+      "check": "missing current bindings cannot become empty exclusions",
+      "pass": true
+    },
+    {
+      "check": "malformed input_bindings rejected",
+      "pass": true
+    },
+    {
+      "check": "missing screening binding rejected",
+      "pass": true
+    },
+    {
+      "check": "stale accepted screening receipt hash rejected",
+      "pass": true
+    },
+    {
+      "check": "receipt byte edits require both current bindings",
+      "pass": true
+    },
+    {
+      "check": "wrong screening date rejected after rebind",
+      "pass": true
+    },
+    {
+      "check": "pending screening state rejected after rebind",
+      "pass": true
+    },
+    {
+      "check": "wrong ready feed hash rejected after rebind",
+      "pass": true
+    },
+    {
+      "check": "wrong raw feed hash rejected after rebind",
+      "pass": true
+    },
+    {
+      "check": "missing excluded list rejected",
+      "pass": true
+    },
+    {
+      "check": "object excluded payload rejected",
+      "pass": true
+    },
+    {
+      "check": "duplicate screened identity rejected",
+      "pass": true
+    },
+    {
+      "check": "alias screened identity rejected",
+      "pass": true
+    },
+    {
+      "check": "empty screened identity rejected",
+      "pass": true
+    },
+    {
+      "check": "boolean ready count rejected",
+      "pass": true
+    },
+    {
+      "check": "negative raw count rejected",
+      "pass": true
+    },
+    {
+      "check": "string excluded count rejected",
+      "pass": true
+    },
+    {
+      "check": "boolean accepted count rejected",
+      "pass": true
+    },
+    {
+      "check": "negative accepted count rejected",
+      "pass": true
+    },
+    {
+      "check": "accepted and receipt counts must match",
+      "pass": true
+    },
+    {
+      "check": "matching counts still must balance",
+      "pass": true
+    },
+    {
+      "check": "matching excluded counts still equal actual removed rows",
+      "pass": true
+    },
+    {
+      "check": "injected legacy maps cannot override current screening exclusions",
+      "pass": true
+    },
+    {
+      "check": "legacy maps cannot substitute missing current screening bindings",
+      "pass": true
+    },
+    {
+      "check": "canonical nonretail digest is ordered UTF8 JSON with compact separators",
+      "pass": true
+    },
+    {
+      "check": "legacy nonretail field cannot substitute canonical content hash",
+      "pass": true
+    },
+    {
+      "check": "legacy nonretail field cannot substitute canonical content hash preserves staged spec",
+      "pass": true
+    },
+    {
+      "check": "legacy retail field cannot substitute canonical draft hash",
+      "pass": true
+    },
+    {
+      "check": "legacy retail field cannot substitute canonical draft hash preserves staged spec",
+      "pass": true
+    },
+    {
+      "check": "stale nonretail exclusions binding rejected",
+      "pass": true
+    },
+    {
+      "check": "stale nonretail exclusions binding rejected preserves staged spec",
+      "pass": true
+    },
+    {
+      "check": "missing retail exclusions binding rejected",
+      "pass": true
+    },
+    {
+      "check": "missing retail exclusions binding rejected preserves staged spec",
+      "pass": true
+    },
+    {
+      "check": "boolean component zero is not accepted",
+      "pass": true
+    },
+    {
+      "check": "boolean component zero is not accepted preserves staged spec",
+      "pass": true
+    },
+    {
+      "check": "missing nonretail status is not accepted",
+      "pass": true
+    },
+    {
+      "check": "missing nonretail status is not accepted preserves staged spec",
+      "pass": true
+    },
+    {
+      "check": "missing retail status is not accepted",
+      "pass": true
+    },
+    {
+      "check": "missing retail status is not accepted preserves staged spec",
+      "pass": true
+    },
+    {
+      "check": "verifier rejects missing exclusions feed hash",
+      "pass": true
+    },
+    {
+      "check": "local retail gate rejects missing exclusions feed hash",
+      "pass": true
+    },
+    {
+      "check": "exact raw warning receipt accepted",
+      "pass": true
+    },
+    {
+      "check": "message field cannot substitute warning key",
+      "pass": true
+    },
+    {
+      "check": "CLI WARN date prefix is not raw warning",
+      "pass": true
+    },
+    {
+      "check": "short warning rationale rejected",
+      "pass": true
+    },
+    {
+      "check": "uncited warning evidence rejected",
+      "pass": true
+    },
+    {
+      "check": "empty warning evidence rejected",
+      "pass": true
+    },
+    {
+      "check": "string warning evidence rejected",
+      "pass": true
+    },
+    {
+      "check": "duplicate warning evidence rejected",
+      "pass": true
+    },
+    {
+      "check": "noncanonical warning evidence rejected",
+      "pass": true
+    },
+    {
+      "check": "malformed warning decision array rejected",
+      "pass": true
+    },
+    {
+      "check": "numeric spot FX lexical form rejected: Dollar/yen at 100.00.",
+      "pass": true
+    },
+    {
+      "check": "numeric spot FX lexical form rejected: USDJPY rose 4.00%.",
+      "pass": true
+    },
+    {
+      "check": "numeric spot FX lexical form rejected: The yen fell 4.00%.",
+      "pass": true
+    },
+    {
+      "check": "DXY index number and currency direction remain allowed",
+      "pass": true
+    },
+    {
+      "check": "noncanonical own-date feed identity rejected",
+      "pass": true
+    },
+    {
+      "check": "duplicate own-date feed identity rejected",
+      "pass": true
+    },
+    {
+      "check": "cited titles fails unresolved aliases instead of silently omitting them",
+      "pass": true
+    },
+    {
+      "check": "material repeat update accepts newly eligible cited evidence",
+      "pass": true
+    },
+    {
+      "check": "material repeat update rejects old evidence",
+      "pass": true
+    },
+    {
+      "check": "generic reviewed selection cannot clear repeated full lead",
+      "pass": true
+    },
+    {
+      "check": "brief carryover cannot clear full lead",
+      "pass": true
+    },
+    {
+      "check": "brief secondary carryover with specific cited rationale accepted",
+      "pass": true
+    },
+    {
+      "check": "long secondary carryover rejected",
+      "pass": true
+    },
+    {
+      "check": "retail update evidence must be cited in actual entry",
+      "pass": true
+    },
+    {
+      "check": "generic short retail repeat rationale rejected",
+      "pass": true
+    },
+    {
+      "check": "retail evidence rejects noncanonical aliases",
+      "pass": true
+    },
+    {
+      "check": "local retail receipt binds all20 specs feeds cards exclusions",
+      "pass": true
+    },
+    {
+      "check": "local retail gate rejects incomplete20 chronology",
+      "pass": true
+    },
+    {
+      "check": "finalizer rejects missing source acceptance date",
+      "pass": true
+    },
+    {
+      "check": "finalizer rejects out-of-scope market acceptance date",
+      "pass": true
+    },
+    {
+      "check": "all20 current-schema finalizer still passes after adversarial inputs restored",
+      "pass": true
+    }
+  ],
+  "passed": 106,
+  "failed": 0,
+  "dates": 20,
+  "nonretail_blocks": 720,
+  "fixture_scope": "Temporary synthetic inputs only, automatically removed; no factual reports read.",
+  "tool_sha256": {
+    "verify.py": "8121f637ed69081fbb932caa92172d2ff53b44b0b0034c8f4fc1292922f51e34",
+    "digest.py": "099881a6e6cc5d513fe83b4b69e7f03a2063f3cdf9eaa5cd1d9f32171266bd56",
+    "showcard.py": "d94367f24245ef36f7fcb785cb432e85a00412a0006349237f1be6d6250975b3",
+    "cited_titles.py": "fe28ee35c35315ad9805e76da3399e6fb2d25326e03c8086bd9d897027c270f5",
+    "check_block_ranges.py": "801db114d4bb8704fad90c37443ed6ee82b6970bf1635e06368f3414b52982ea",
+    "merge_retail.py": "5a52fa2f1b67994d3659493692b2b022aecc49a45fdb14ab1ad3d2858af9b516",
+    "stage_reviewed.py": "cee0b9d4675548360392de5217c9b095b99b832ecb4b846a4ce00279029792fc",
+    "finalize_reviews.py": "8a825aa3798756e26b70303afd8d38e3ea8299aaeba26e0c0f2605d0046d16d3",
+    "retail_quality_snapshot.py": "1c16c1010d5b4e454ca59a34dec0f000789aff1739f0dc93cf787142c904adb6"
+  }
+}

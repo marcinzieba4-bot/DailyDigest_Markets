@@ -1,0 +1,589 @@
+{
+  "recorded_at_utc": "2026-11-09T09:48:38.252357+00:00",
+  "status": "disclosed_capture_limitation",
+  "reason": "Inherited HTTPError handler discarded error response bodies before correction. Original base process terminated to reload the corrected handler; up to16 in-flight network attempts at that interruption may be unrecorded. Successful canonical XML/cache and recorded attempts remain retained; no full byte-completeness claim covers these discarded error responses or interrupted attempts.",
+  "recorded_failed_attempts_missing_bodies": 58,
+  "affected_attempts": [
+    {
+      "signature": "26935a1f2e086b7ee28f4f80b391102af312414cfb1c04f8da022ab8bb729de5",
+      "request_url": "https://news.google.com/rss/search?q=BHP+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:30.597474+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:39.387051+00:00"
+    },
+    {
+      "signature": "603fcf55f05360c6d197a8ba7ecacc94778678ba48e1911f43db82265b0af079",
+      "request_url": "https://news.google.com/rss/search?q=ConocoPhillips+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:32.534258+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:39.982467+00:00"
+    },
+    {
+      "signature": "60823d182b55ceeab60b04b141a306cb47b2cc7bc5c48c442e41f33c89eb777e",
+      "request_url": "https://news.google.com/rss/search?q=China+bond+yields+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:31.783423+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:40.205036+00:00"
+    },
+    {
+      "signature": "a22179a33ebf33235764e7476b11edd95788099c34eddd716cd79e05fe48e3fd",
+      "request_url": "https://news.google.com/rss/search?q=China+CPI+PPI+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:31.755909+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:41.097070+00:00"
+    },
+    {
+      "signature": "cef130c92151898ef17c9ec486761bd4c056162f6430c42bed77f67a28571c7a",
+      "request_url": "https://news.google.com/rss/search?q=Australia+jobs+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:30.491809+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:41.298236+00:00"
+    },
+    {
+      "signature": "c75e4bd1e26e43a2804a8e597ebfdef1b35efb039f67538497ecbbf4bf7c2f9d",
+      "request_url": "https://news.google.com/rss/search?q=Celsius+Holdings+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:31.595156+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:41.639373+00:00"
+    },
+    {
+      "signature": "8126499ce8bf8605de7fd7c7ec0889c469870a3ffd4d385e9462585002bb3bd9",
+      "request_url": "https://news.google.com/rss/search?q=Intel+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:35.932392+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:42.059580+00:00"
+    },
+    {
+      "signature": "78d21d361489c9a59bace1f132d770c4aa77ee989d02e3d072a21bac0bce9c9c",
+      "request_url": "https://news.google.com/rss/search?q=Germany+economy+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:35.118263+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:42.297237+00:00"
+    },
+    {
+      "signature": "a5345045950703def4a2c8db1173228eaab5704741762c31a6585169cbb8a810",
+      "request_url": "https://news.google.com/rss/search?q=Enphase+earnings+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:33.849143+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:42.345654+00:00"
+    },
+    {
+      "signature": "0c0499a2b506fba3166ff2c4903528e57a0c767c4fc979464cdda654a7368f0f",
+      "request_url": "https://news.google.com/rss/search?q=German+politics+coalition+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:34.948509+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:43.427067+00:00"
+    },
+    {
+      "signature": "5d6b978aad17facd89a939f577b31017d32ae259bd49fff1e5a7c5bff31229a0",
+      "request_url": "https://news.google.com/rss/search?q=Kering+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:37.230488+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:44.423689+00:00"
+    },
+    {
+      "signature": "4f407aa0856dc17a600b989e8f05b5c4d48c78b39aed6cb7d07705ac65cf8dab",
+      "request_url": "https://news.google.com/rss/search?q=Japan+earnings+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:36.408429+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:46.595282+00:00"
+    },
+    {
+      "signature": "f61a820c18dafd072e950a78b2903f27cc23f1460e173a19b9b740acbe530f64",
+      "request_url": "https://news.google.com/rss/search?q=KLA+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:37.117667+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:47.029908+00:00"
+    },
+    {
+      "signature": "2305c7a64748423482a1a507643735c98afe5bbe2f2ff12de709ee2ffb2cb379",
+      "request_url": "https://news.google.com/rss/search?q=Lam+Research+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:37.941138+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:47.433988+00:00"
+    },
+    {
+      "signature": "ec4cb14a781677715aa2b2392addfa329c8181f65504ddbbdd27c82c6f928ff1",
+      "request_url": "https://news.google.com/rss/search?q=Nike+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:42.183673+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:49.338278+00:00"
+    },
+    {
+      "signature": "39c86330cc617c302f50f76c7e5fdd7063cd565244a1024beafa2df90602d667",
+      "request_url": "https://news.google.com/rss/search?q=PMI+Polska+after%3A2024-06-02+before%3A2024-06-06&hl=pl&gl=PL&ceid=PL%3Apl",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:43.498860+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:49.898932+00:00"
+    },
+    {
+      "signature": "aa70ce36c524fddda5c1626c7afcdaad06853d1525f1784db97197a44425c15b",
+      "request_url": "https://news.google.com/rss/search?q=Nvidia+stock+split+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:42.805386+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:50.316568+00:00"
+    },
+    {
+      "signature": "fd26ec1c451992b3c6e4fe0a5769adcbd549b03b33a3922c6f714daa83efb64b",
+      "request_url": "https://news.google.com/rss/search?q=Poland+Russia+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:44.599493+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:50.759220+00:00"
+    },
+    {
+      "signature": "b5f918d816faad241a001fa550e8838e9c8d39d54371e8f72bcc7315041b5815",
+      "request_url": "https://news.google.com/rss/search?q=PKB+GUS+after%3A2024-06-02+before%3A2024-06-06&hl=pl&gl=PL&ceid=PL%3Apl",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:43.399403+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:52.400479+00:00"
+    },
+    {
+      "signature": "a84b7f13544c713b2c7b660731c03e27acb12cd36c26a37f0f6c54d63e3ae36a",
+      "request_url": "https://news.google.com/rss/search?q=RBNZ+interest+rates+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:45.609908+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:53.087542+00:00"
+    },
+    {
+      "signature": "dd71aba80f23ce53b2afa43bbea4658ace000b84768bc9bc22c01f37d49bb704",
+      "request_url": "https://news.google.com/rss/search?q=Orlen+after%3A2024-06-02+before%3A2024-06-06&hl=pl&gl=PL&ceid=PL%3Apl",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:43.222273+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:53.624418+00:00"
+    },
+    {
+      "signature": "0b2bb5bdf2e3e32fa59cbc38c2b8108e3abd4d411dad161bacf11ca9c3e98925",
+      "request_url": "https://news.google.com/rss/search?q=Oracle+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:43.199240+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:54.029910+00:00"
+    },
+    {
+      "signature": "3260af93a206c437d13694552d660d7775edbf246764e9c055a7b5528d79ae18",
+      "request_url": "https://news.google.com/rss/search?q=Rocket+Lab+AST+SpaceMobile+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:47.372357+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:54.294166+00:00"
+    },
+    {
+      "signature": "f61a820c18dafd072e950a78b2903f27cc23f1460e173a19b9b740acbe530f64",
+      "request_url": "https://news.google.com/rss/search?q=KLA+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 2,
+      "started_at_utc": "2026-11-09T09:47:47.030445+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:54.336873+00:00"
+    },
+    {
+      "signature": "8e15a643dd18ce485246e49cbc8b0faf0989feb96d9062cb08afaba928a9a947",
+      "request_url": "https://news.google.com/rss/search?q=Rigetti+Computing+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:46.556690+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:55.312673+00:00"
+    },
+    {
+      "signature": "d5d59fd7ed2f19fda8f92c995fb0c37d220c180ec62d148c099651df5605c090",
+      "request_url": "https://news.google.com/rss/search?q=SQM+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:49.262820+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:56.123401+00:00"
+    },
+    {
+      "signature": "4f1a72a2536367d8be7e7ce61a517f5a5ce8ac409e5ddf62dfeefcf3efa6a7a2",
+      "request_url": "https://news.google.com/rss/search?q=RBA+rate+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:45.558580+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:56.472090+00:00"
+    },
+    {
+      "signature": "14bedcd4b147eb1a515f388548b8f5846b042b10b6dba0649519d8774ea10b33",
+      "request_url": "https://news.google.com/rss/search?q=Safran+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:50.236418+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:57.174627+00:00"
+    },
+    {
+      "signature": "d7e27380a063828abf1a12975f943e7ea511a2ccc6b5987110b9cc7aeda1cf62",
+      "request_url": "https://news.google.com/rss/search?q=Rockwell+Automation+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:47.505344+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:57.770473+00:00"
+    },
+    {
+      "signature": "bd72e2aefe38413f5d5dfc427bde4d5fdd3a86c2cd1e3c01e2753bc16c6e8a91",
+      "request_url": "https://news.google.com/rss/search?q=Rolls-Royce+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:47.696529+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:58.057924+00:00"
+    },
+    {
+      "signature": "aa70ce36c524fddda5c1626c7afcdaad06853d1525f1784db97197a44425c15b",
+      "request_url": "https://news.google.com/rss/search?q=Nvidia+stock+split+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 2,
+      "started_at_utc": "2026-11-09T09:47:50.316747+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:58.499100+00:00"
+    },
+    {
+      "signature": "2a331b9160beda7e27c7189df49a3e7d535893b1f681fa988b4ebb806a587262",
+      "request_url": "https://news.google.com/rss/search?q=SK+Hynix+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:48.529232+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:47:59.192769+00:00"
+    },
+    {
+      "signature": "936097d19de8d2cb48e2389b90a873b3171f7be3d8d7c71ecdf0d9653e705764",
+      "request_url": "https://news.google.com/rss/search?q=Santander+Bank+Polska+after%3A2024-06-02+before%3A2024-06-06&hl=pl&gl=PL&ceid=PL%3Apl",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:51.720143+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:00.911480+00:00"
+    },
+    {
+      "signature": "59e01d413056706d81881a1aa2282a7e05a8f52ace1e7fc55ede4ca5104e95b8",
+      "request_url": "https://news.google.com/rss/search?q=Salesforce+earnings+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:50.317797+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:01.213261+00:00"
+    },
+    {
+      "signature": "7d259da2aa03bc48fc67ecb0b30898fd530890f7d40ac5dac989a7c0da296912",
+      "request_url": "https://news.google.com/rss/search?q=Spirit+Airlines+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:55.632328+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:02.876264+00:00"
+    },
+    {
+      "signature": "c64d2da305599ebe8e387d334e685ca9e0382d459df1a4961465f8ce3b440869",
+      "request_url": "https://news.google.com/rss/search?q=Spotify+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:55.729429+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:03.055312+00:00"
+    },
+    {
+      "signature": "b5f918d816faad241a001fa550e8838e9c8d39d54371e8f72bcc7315041b5815",
+      "request_url": "https://news.google.com/rss/search?q=PKB+GUS+after%3A2024-06-02+before%3A2024-06-06&hl=pl&gl=PL&ceid=PL%3Apl",
+      "attempt": 2,
+      "started_at_utc": "2026-11-09T09:47:52.400660+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:03.288982+00:00"
+    },
+    {
+      "signature": "b449d9578e80670cd8b2104530440e731b3986509180a5c79e1bc82158403cd1",
+      "request_url": "https://news.google.com/rss/search?q=SoFi+earnings+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:54.804781+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:03.510543+00:00"
+    },
+    {
+      "signature": "420d88e7d4ca9afd3d7ed29f9baa573f05ef9a01d05bf9e79e7426569f8de9e2",
+      "request_url": "https://news.google.com/rss/search?q=ServiceNow+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:53.949942+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:03.529173+00:00"
+    },
+    {
+      "signature": "dd592fb58a159e893ac9d4c31b332f6da4f6e961f6d3a42f0da4bf9821b06295",
+      "request_url": "https://news.google.com/rss/search?q=Sherwin-Williams+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:54.493087+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:04.693362+00:00"
+    },
+    {
+      "signature": "563ea07a68fdc9335f991ef8372292ed599c70d1a805f71a8de4df70c68692fd",
+      "request_url": "https://news.google.com/rss/search?q=Taiwan+China+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:57.477621+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:05.003692+00:00"
+    },
+    {
+      "signature": "48bafe17d509ce4804cd0219bfe724292311efbf701cd42303c9d703327d0986",
+      "request_url": "https://news.google.com/rss/search?q=Tether+Binance+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:58.688930+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:05.414249+00:00"
+    },
+    {
+      "signature": "28bea36905a35f7d8650dd3197275e0c3de89f316dad4bc17deaa581140ef473",
+      "request_url": "https://news.google.com/rss/search?q=Tesla+retail+investors+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:58.287054+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:05.450805+00:00"
+    },
+    {
+      "signature": "fda333ce6f9e09e60577da1b2a55b3c15cc765aa50d0381627d0ce3b839915c0",
+      "request_url": "https://news.google.com/rss/search?q=Swiss+National+Bank+interest+rates+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:57.091180+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:06.409438+00:00"
+    },
+    {
+      "signature": "2a331b9160beda7e27c7189df49a3e7d535893b1f681fa988b4ebb806a587262",
+      "request_url": "https://news.google.com/rss/search?q=SK+Hynix+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 2,
+      "started_at_utc": "2026-11-09T09:47:59.192958+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:07.551815+00:00"
+    },
+    {
+      "signature": "0a65439f97f4c1226a606a27c028e5845d7ef89331ffa1113a1ae89eb6f2d330",
+      "request_url": "https://news.google.com/rss/search?q=Tesla+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:57.974847+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:07.989764+00:00"
+    },
+    {
+      "signature": "c5fd65ebc36dc9057c3fd28897d1c7e2b73a12162cb74b6af083b5ec0e5136b0",
+      "request_url": "https://news.google.com/rss/search?q=Tencent+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:47:57.877726+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:08.047851+00:00"
+    },
+    {
+      "signature": "936097d19de8d2cb48e2389b90a873b3171f7be3d8d7c71ecdf0d9653e705764",
+      "request_url": "https://news.google.com/rss/search?q=Santander+Bank+Polska+after%3A2024-06-02+before%3A2024-06-06&hl=pl&gl=PL&ceid=PL%3Apl",
+      "attempt": 2,
+      "started_at_utc": "2026-11-09T09:48:00.911646+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:08.649297+00:00"
+    },
+    {
+      "signature": "aa70ce36c524fddda5c1626c7afcdaad06853d1525f1784db97197a44425c15b",
+      "request_url": "https://news.google.com/rss/search?q=Nvidia+stock+split+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 3,
+      "started_at_utc": "2026-11-09T09:47:58.499244+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:08.880064+00:00"
+    },
+    {
+      "signature": "557c80be7ae83102e22ab21f23ce241c8d71b7fead2f445a91e98be26a418a55",
+      "request_url": "https://news.google.com/rss/search?q=UPS+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:48:04.052471+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:10.155539+00:00"
+    },
+    {
+      "signature": "2578a6f2b78130ca9f29ccf679f174872f596d8e3f00e9ce2fbbb7a4e72dcfed",
+      "request_url": "https://news.google.com/rss/search?q=Texas+Instruments+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:48:01.449774+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:10.698734+00:00"
+    },
+    {
+      "signature": "040fc0d3200f60941b565199c200c903e55ec5d5806a7e9b49728b6f3b826a2f",
+      "request_url": "https://news.google.com/rss/search?q=US+jobs+report+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:48:04.899072+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:11.402924+00:00"
+    },
+    {
+      "signature": "a646be506c47287ad96312ba53d8e43e6d70c34581c7e2b5ddac98b010c086f5",
+      "request_url": "https://news.google.com/rss/search?q=Ulta+Beauty+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:48:05.660765+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:12.825879+00:00"
+    },
+    {
+      "signature": "84231940f0e2aea972bc809d8754ebf860d83ca2c596bfe19a203d020ba8067b",
+      "request_url": "https://news.google.com/rss/search?q=Uber+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:48:05.579362+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:13.304218+00:00"
+    },
+    {
+      "signature": "afdbb3b9a68263de42b3c11801dc51049c9e9c2e4d0ac166a5fc10219b0b570e",
+      "request_url": "https://news.google.com/rss/search?q=Uber+earnings+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:48:05.476349+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:13.759625+00:00"
+    },
+    {
+      "signature": "c320af688c2a01908c4fc054efcc35749e00d43e3acca87667169fcc5520beee",
+      "request_url": "https://news.google.com/rss/search?q=Unilever+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 1,
+      "started_at_utc": "2026-11-09T09:48:05.700975+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:14.433724+00:00"
+    },
+    {
+      "signature": "0a65439f97f4c1226a606a27c028e5845d7ef89331ffa1113a1ae89eb6f2d330",
+      "request_url": "https://news.google.com/rss/search?q=Tesla+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 2,
+      "started_at_utc": "2026-11-09T09:48:07.989961+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:15.788734+00:00"
+    },
+    {
+      "signature": "c5fd65ebc36dc9057c3fd28897d1c7e2b73a12162cb74b6af083b5ec0e5136b0",
+      "request_url": "https://news.google.com/rss/search?q=Tencent+stock+after%3A2024-06-02+before%3A2024-06-06&hl=en-US&gl=US&ceid=US%3Aen",
+      "attempt": 2,
+      "started_at_utc": "2026-11-09T09:48:08.048105+00:00",
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 503: Service Unavailable",
+      "finished_at_utc": "2026-11-09T09:48:18.322566+00:00"
+    }
+  ],
+  "correction": "fetch_news.py retains immutable HTTPError bodies for subsequent physical attempts; request-level completeness is established by all plan signatures having successful retained RSS responses."
+}

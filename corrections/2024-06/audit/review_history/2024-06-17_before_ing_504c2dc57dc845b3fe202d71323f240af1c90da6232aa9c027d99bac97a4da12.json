@@ -1,0 +1,51 @@
+{
+  "date": "2024-06-17",
+  "feed_sha256": "064f0e18017bdf95650d04828ffa6b71daf7c87ca83c6d823a738f1d92e5e7a3",
+  "exclusions": [
+    {
+      "date": "2024-06-17",
+      "id": "n0298",
+      "feed_sha256": "064f0e18017bdf95650d04828ffa6b71daf7c87ca83c6d823a738f1d92e5e7a3",
+      "title": "China Home-Price Slump Accelerates Despite More Stimulus - Bloomberg.com",
+      "src": "Bloomberg.com",
+      "published_at": "2024-06-16T07:00:00+00:00",
+      "screen_kind": "timing",
+      "reason": "Headline describes a completed May China data outcome released after the June17 00:00UTC cutoff. Normalized June16 RSS timestamp cannot establish pre-release availability; omit this retained item only for June17.",
+      "release_event": "May2024 sales prices in70cities",
+      "release_local": "2024-06-17T09:30:00+08:00",
+      "release_utc": "2024-06-17T01:30:00+00:00",
+      "release_clock_evidence_url": "https://www.stats.gov.cn/sj/zxfb/202406/t20240617_1954705.html",
+      "release_clock_evidence_sha256": "313d247b4672a71f9c2e6292a7fab6e278cb663d0867217bb88d4de5e3d88f28",
+      "evidence_paths": [
+        "audit_work/june17_china_release_timing_search.json",
+        "audit_work/june17_nbs_primary_release_search.json",
+        "audit_work/june17_nbs_primary_release_pages.json"
+      ],
+      "source_cutoff_utc": "2024-06-17T00:00:00+00:00",
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    },
+    {
+      "date": "2024-06-17",
+      "id": "n0299",
+      "feed_sha256": "064f0e18017bdf95650d04828ffa6b71daf7c87ca83c6d823a738f1d92e5e7a3",
+      "title": "China's factory output disappoints, property sector stuck in doldrums - Reuters",
+      "src": "Reuters",
+      "published_at": "2024-06-16T07:00:00+00:00",
+      "screen_kind": "timing",
+      "reason": "Headline describes a completed May China data outcome released after the June17 00:00UTC cutoff. Normalized June16 RSS timestamp cannot establish pre-release availability; omit this retained item only for June17.",
+      "release_event": "May2024 industrialproduction",
+      "release_local": "2024-06-17T10:00:00+08:00",
+      "release_utc": "2024-06-17T02:00:00+00:00",
+      "release_clock_evidence_url": "https://www.stats.gov.cn/sj/zxfb/202406/t20240617_1954712.html",
+      "release_clock_evidence_sha256": "313d247b4672a71f9c2e6292a7fab6e278cb663d0867217bb88d4de5e3d88f28",
+      "evidence_paths": [
+        "audit_work/june17_china_release_timing_search.json",
+        "audit_work/june17_nbs_primary_release_search.json",
+        "audit_work/june17_nbs_primary_release_pages.json"
+      ],
+      "source_cutoff_utc": "2024-06-17T00:00:00+00:00",
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    }
+  ],
+  "scope": "Known pre-release/unsafe records were removed before freeze and remain in the ready receipt; this file records subsequent own-date editorial exclusions only."
+}

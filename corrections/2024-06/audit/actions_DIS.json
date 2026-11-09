@@ -1,0 +1,104 @@
+{
+ "ticker": "DIS",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DIS?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "53a2756d97fac6f7dba5b4d15fe137aee7e82fd0402a38893a24bb9205b62f57",
+   "fetched_at_utc": "2026-11-09T09:47:52.026228+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DIS?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "2b5a4dd1bf2643f9c71dfa0d3b500f09e03c9b0f6854f22563ebd1adcfd9b0e1",
+   "fetched_at_utc": "2026-11-09T09:47:52.301399+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/DIS?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "53a2756d97fac6f7dba5b4d15fe137aee7e82fd0402a38893a24bb9205b62f57",
+    "fetched_at_utc": "2026-11-09T09:47:52.026228+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "DIS",
+    "exchangeName": "NYQ",
+    "fullExchangeName": "NYSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": -252322200,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/DIS?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "2b5a4dd1bf2643f9c71dfa0d3b500f09e03c9b0f6854f22563ebd1adcfd9b0e1",
+    "fetched_at_utc": "2026-11-09T09:47:52.301399+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "DIS",
+    "exchangeName": "NYQ",
+    "fullExchangeName": "NYSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": -252322200,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 593,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

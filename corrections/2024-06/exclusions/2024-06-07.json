@@ -1,0 +1,27 @@
+{
+  "date": "2024-06-07",
+  "feed_sha256": "2868fc14d4ab635e7874c58ddd704c94ae1d1aa414fce2646857c0454a125ce4",
+  "exclusions": [
+    {
+      "date": "2024-06-07",
+      "id": "n2327",
+      "feed_sha256": "2868fc14d4ab635e7874c58ddd704c94ae1d1aa414fce2646857c0454a125ce4",
+      "title": "Morning Bid: Global risk rally hinges on payrolls - Reuters",
+      "src": "Reuters",
+      "published_at": "2024-06-06T07:00:00+00:00",
+      "screen_kind": "timing_uncertainty",
+      "reason": "Actually cited Reuters MorningBid has June7 aftercut publisher/syndication clocks despite normalizedJune6RSS. Visible publisher04:36UTC and indexed04:34:11UTC both follow own00UTC; exactfirstminute not certified. Conservativeomit ownJune7 only.",
+      "source_cutoff_utc": "2024-06-07T00:00:00Z",
+      "evidence_paths": [
+        "audit_work/june7_n2327_clock_independent_review.json"
+      ],
+      "evidence_sha256": {
+        "audit_work/june7_n2327_clock_independent_review.json": "a386855d44116f532194eca1229dc0e9d00b33ef87ce0c4ccf855cbb38edf480"
+      },
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation",
+      "observed_publisher_clock_utc": "2024-06-07T04:36:00Z",
+      "observed_search_metadata_clock_utc": "2024-06-07T04:34:11Z"
+    }
+  ],
+  "scope": "Known pre-release/unsafe records were removed before freeze and remain in the ready receipt; this file records subsequent own-date editorial exclusions only."
+}

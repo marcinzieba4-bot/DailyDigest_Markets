@@ -1,0 +1,81 @@
+{
+  "date": "2024-06-06",
+  "scope": "Exact current strings only, same own-date themes; no source/exclusion changes",
+  "before_path": "audit/review_history/independent_nonretail_2024-06-06_before_precision_36e2ccb981871b52.json",
+  "before_file_sha256": "36e2ccb981871b52e2e866299fb390d07fa2b49120b68797d1cc6177bba61f20",
+  "after_file_sha256": "0d2310013b5397f189710d71ce42cc2a03bc9377e8914346a4c75ecf02b678d8",
+  "fixes": [
+    {
+      "label": "Reported",
+      "old": "[[n0835]]",
+      "new": "[[n0694]]",
+      "reason": "Exact own-date identifier correction: n0835 is CarExpert/Mercedes; own June 6 n0694 is WSJ Spotify Shares Jump on Price Hikes. Prose fact unchanged."
+    },
+    {
+      "label": "Narrative",
+      "old": "Barron's reports HP Enterprise beating estimates and providing stronger guidance on AI-server sales",
+      "new": "Barron's reports HP Enterprise beating earnings estimates on strong AI-server sales",
+      "reason": "Ambiguous headline says earnings topped estimates and guidance; it does not unambiguously establish a raised forward outlook. Retain only clear earnings-beat premise."
+    },
+    {
+      "label": "⚡ Breaking Convention",
+      "old": "add when operating confirmation follows the stronger outlook.",
+      "new": "add when operating confirmation follows the earnings beat.",
+      "reason": "Avoid reading an unambiguous raised outlook into the ambiguous Barrons headline."
+    },
+    {
+      "label": "Catalyst & Thesis",
+      "old": "Barron's reports HP Enterprise beating estimates and improving guidance on strong AI-server sales. The catalyst is an operating result and outlook, rather than a product announcement alone.",
+      "new": "Barron's reports HP Enterprise beating earnings estimates on strong AI-server sales. The catalyst is an operating result, rather than a product announcement alone.",
+      "reason": "Narrow the HPE premise to exact unambiguous headline-supported earnings, without asserting raised guidance."
+    },
+    {
+      "label": "Trade Expression",
+      "old": "Favor measured exposure tied to maintained guidance and cash conversion.",
+      "new": "Favor measured exposure tied to sustained demand and cash conversion.",
+      "reason": "Match the conditional trade expression to the supported AI-demand/earnings premise."
+    },
+    {
+      "label": "Markets & Flows",
+      "old": "The exit should not be assigned an invented financial cause, but it establishes a strategic withdrawal from a particular activity.",
+      "new": "The withdrawal changes participation in that activity without resolving the wider demand outlook.",
+      "reason": "Remove input-process aside and retain the same specific strategic-withdrawal risk without attributing a cause."
+    },
+    {
+      "label": "Exposure & Risk",
+      "old": "Listed alternative-asset exposure is broader than a single private-equity portfolio and adds fee, fundraising and market sensitivities.",
+      "new": "MS and XLF offer broad financial exposure, with fee, fundraising and market sensitivities rather than a direct claim on any particular private-equity portfolio.",
+      "reason": "Name actual instruments as required; make breadth and indirect nature explicit without inventing private portfolio ownership or returns."
+    },
+    {
+      "label": "Exposure & Risk",
+      "old": "Broader equity exposure includes businesses with very different funding needs; an established cash-generating issuer has a different risk from one dependent on a new market transaction.",
+      "new": "A broad public-equity allocation such as SPY includes businesses with different funding needs; an established cash-generating issuer has a different risk from one dependent on a new market transaction.",
+      "reason": "Name broad instrument explicitly without implying Novelis is listed or is held by that vehicle."
+    },
+    {
+      "label": "Exposure & Risk",
+      "old": "GEV is broader than this tool, while XLU provides operating utilities with different financing and regulatory exposures. The return depends on implementation, customer willingness to pay and the cost of delivering a dependable solution.",
+      "new": "XLU expresses the broader reliability theme through utility operations, with financing and regulatory exposures. For the technology provider, returns depend instead on implementation, customer willingness to pay and the cost of delivering a dependable solution.",
+      "reason": "Spinoff headline does not certify GEV ownership or direct participation in ThinkLabs revenue; distinguish utility expression from developer commercial risk."
+    },
+    {
+      "label": "Catalyst & Thesis",
+      "old": "A favorable order narrative should not be expanded into an invented amount of booked revenue or completed deployment.",
+      "new": "Delivery timing, utilization and cash collection remain the next tests of whether that attention supports sustainable earnings.",
+      "reason": "Replace input-process aside with direct conditional investment tests, no order amount or completed deployment asserted."
+    },
+    {
+      "label": "Price Hurdle & Risk",
+      "old": "Do not infer a quantified earnings gain from the acquisition headline alone.",
+      "new": "The acquisition must earn an attractive return after the additional capital committed.",
+      "reason": "Replace writing instruction with direct investment hurdle; no quantified gain added."
+    },
+    {
+      "label": "New / Most Important",
+      "old": "That supports a strong earnings-and-expectations story in a leader, but also places greater weight on whether the operating improvement broadens.",
+      "new": "That places greater weight on whether one leader can meet earnings expectations and whether operating strength broadens.",
+      "reason": "Concentration/price headline supports market weight and future expectations, not a new realized earnings fact. Keep the breadth question conditional."
+    }
+  ]
+}

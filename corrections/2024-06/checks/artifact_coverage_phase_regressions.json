@@ -1,0 +1,87 @@
+{
+  "status": "coverage_phase_binding_checks_passed",
+  "checked_at_utc": "2026-11-09T11:26:54.790825+00:00",
+  "cases": [
+    {
+      "case": "actual_independently_bound_three_phase_amendment",
+      "passed": true
+    },
+    {
+      "case": "wrong_amendment_status",
+      "passed": true
+    },
+    {
+      "case": "amendment_not_passed",
+      "passed": true
+    },
+    {
+      "case": "wrong_auxiliary_path",
+      "passed": true
+    },
+    {
+      "case": "wrong_historical_map_scope",
+      "passed": true
+    },
+    {
+      "case": "wrong_policy_phase_map",
+      "passed": true
+    },
+    {
+      "case": "wrong_staged_phase_hash",
+      "passed": true
+    },
+    {
+      "case": "wrong_current_freeze_bind",
+      "passed": true
+    },
+    {
+      "case": "invented_old_coverage_bytes",
+      "passed": true
+    },
+    {
+      "case": "wrong_original_source_hash",
+      "passed": true
+    },
+    {
+      "case": "pinned_amendment_digest_changed",
+      "passed": true
+    },
+    {
+      "case": "other_policy_dependency_changed",
+      "passed": true
+    },
+    {
+      "case": "other_physical_dependency_changed",
+      "passed": true
+    },
+    {
+      "case": "current_coverage_changed",
+      "passed": true
+    },
+    {
+      "case": "original_proof_backup_changed",
+      "passed": true
+    },
+    {
+      "case": "original_passed_staged_receipt_changed",
+      "passed": true
+    },
+    {
+      "case": "passed_guard_evidence_changed",
+      "passed": true
+    },
+    {
+      "case": "completed_semantic_evidence_changed",
+      "passed": true
+    }
+  ],
+  "case_count": 18,
+  "amendment_sha256": "bc3e4f27dda483666be7f1e9e622a5d552dd613645d893e45415cff77ec68c37",
+  "source_and_original_proofs_unchanged": true,
+  "runtime_full20_report_artifacts_accepted": false,
+  "scope": "Actual metadata proof binding and in-memory negative overrides only; no source/report/card/guard mutation or publication.",
+  "tool_sha256": {
+    "audit_work/review_final_artifacts.py": "f5f1041b0de96e9e08db285b867901e0a9caf28add269d4f0386be414e0aa6b1",
+    "audit_work/test_coverage_phase_binding.py": "b4287356af3ff25cfe44d6231a52cae583cb1d2e1afad73dd7e148ba159e781f"
+  }
+}

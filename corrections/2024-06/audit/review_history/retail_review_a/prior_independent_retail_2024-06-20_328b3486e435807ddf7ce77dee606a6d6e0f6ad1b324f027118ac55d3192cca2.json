@@ -1,0 +1,97 @@
+{
+  "date": "2024-06-20",
+  "status": "accepted",
+  "reviewer": "/root/june_nonretail_a, independent of the original retail author",
+  "checked_at_utc": "2026-11-09T11:16:54.754807+00:00",
+  "fatal_or_major_remaining": 0,
+  "retail_draft_sha256": "953936e6c8e5b532695b690229f7c1beb4a0ea1fdd71365f8d33eda209cf69b3",
+  "feed_sha256": "e577a8d10e0c36044b821ae4fbbb8fa0c7bb716987d13e5c57b1aaef51ef192e",
+  "card_sha256": "98ff9fd57b6699db589924eda9f106eb0a987b9632ff340b6fc920d9b6f20b24",
+  "exclusions_sha256": "bc93a814e2305f1fa37ab62d9415311945d8e6c487e268b05b793575a632955d",
+  "paragraphs_reviewed": 13,
+  "distinct_cited_headlines_reviewed": [
+    "n1042",
+    "n1041",
+    "n1131",
+    "n1071",
+    "n1180",
+    "n0885",
+    "n1466",
+    "n1255",
+    "n0473"
+  ],
+  "findings": [],
+  "named_fixes": [
+    {
+      "path": [
+        "retail",
+        0,
+        "parts",
+        4,
+        1
+      ],
+      "old": "Nikkei Asia reports HPE supplying Nvidia-powered servers for a Japanese AI supercomputer.",
+      "new": "Nikkei Asia reports plans for HPE to supply Nvidia-powered servers for a Japanese AI supercomputer.",
+      "reason": "Preserve prospective to-supply stage in the exact cited Nikkei title rather than imply already supplied systems.",
+      "before_sha256": "f383c26e89a2dc78c1dfd33323ccc93ae36f05f30e409f9b359e01bb5e16bdc8",
+      "after_sha256": "d8d554d99e4c7e891df895f820a25663efe7dff5ef716cbf9f6390593e98a3e6",
+      "preserved_before_bytes": "audit/review_history/retail_review_a/2024-06-20_f383c26e89a2dc78c1dfd33323ccc93ae36f05f30e409f9b359e01bb5e16bdc8.json"
+    },
+    {
+      "path": [
+        "retail",
+        3,
+        "parts",
+        0,
+        1
+      ],
+      "old": "CNBC describes the strong earnings rally.",
+      "new": "CNBC describes the strong rally.",
+      "reason": "Keep attribution to CNBC confined to its price-rally headline; ET BrandEquity separately supports the raised full-year outlook.",
+      "before_sha256": "d8d554d99e4c7e891df895f820a25663efe7dff5ef716cbf9f6390593e98a3e6",
+      "after_sha256": "953936e6c8e5b532695b690229f7c1beb4a0ea1fdd71365f8d33eda209cf69b3",
+      "preserved_before_bytes": "audit/review_history/retail_review_a/2024-06-20_d8d554d99e4c7e891df895f820a25663efe7dff5ef716cbf9f6390593e98a3e6.json"
+    }
+  ],
+  "claim_checks": [
+    "Read intro/all 12 parts, all nine full cited headlines, own DELL/DOGE/SMR/ADBE metrics and current exclusions; compared earlier retail notes through June 19. No cited ID is excluded; all source dates fit own cutoff/window.",
+    "DELL 149.15 USD/+5.01% session/+13.30% five is June 18 completed cash baseline before June 19 announcement and US holiday, explicitly not announcement reaction. Reuters racks/Yahoo collaboration establishes Dell and Super Micro project roles without revenue, margin, timetable or ownership-of-customer-benefit inference.",
+    "Moomoo rally question is actual trading-attention coverage only. General supplier analogy and hypothetical professional approaches invent no flow, post, institutional trade or analyst target. HPE Japanese project is expressly separate from Dell; named fix preserves to-supply prospective stage.",
+    "DOGE 0.12 USD/-9.36% five/-23.32% twenty is June 19 completed UTC day, with daily horizons exact. CoinMarketCap liquidation surge is stress evidence, not exhaustion, bottom or every-account identification; no invented numerical liquidation estimate imported.",
+    "SMR 9.54 USD/+12.24% is June 18 cash close. S&P/Utility Dive possible deals concern Constellation, Vistra and PSEG, expressly not NuScale. Greenpeace nuclear-finance criticism is attributed assessment, not an established verdict on every project.",
+    "ADBE remains an explicitly unchanged forecast/recovery continuation, 158 words after removal of unsupported earnings modifier from CNBC attribution. Full-year revenue forecast remains forward expectation; customer and operating invalidation stays conditional.",
+    "No numerical FX, synthetic return, fabricated customer contract, social count, institution-wide consensus or later regular-session reaction. All 13 paragraph-level claims checked against headline/card scope."
+  ],
+  "chronology": {
+    "earlier_notes_reviewed": [
+      "2024-06-03",
+      "2024-06-04",
+      "2024-06-05",
+      "2024-06-06",
+      "2024-06-07",
+      "2024-06-10",
+      "2024-06-11",
+      "2024-06-12",
+      "2024-06-13",
+      "2024-06-14",
+      "2024-06-17",
+      "2024-06-18",
+      "2024-06-19"
+    ],
+    "notes_match_current_selection": true,
+    "material_change": "Dell newly eligible June 19 xAI rack-provider role materially changes June 3 margin-secondary memory and supplies a named customer/project lead; prior cash price is clearly separated. DOGE liquidation stress is distinct. Nuclear-family SMR is brief 153-word secondary, uses new critical financing coverage and expressly disclaims incumbents deal attribution. Adobe is unchanged brief carryover, 158 words, after June 17 lead.",
+    "selection_rationale": "New June19 rack-provider xAI announcement n1042/n1041 and Moomoo n1131 explicit rally attention; own priorcompletedJune18+5.01%/+13.3%five is preannouncement baseline, no holiday session fabricated. New commercial specificity changes June3 secondary margin-theme memory. No contract terms invented."
+  },
+  "reviewed_validation_warnings": [],
+  "verification": {
+    "passed": true,
+    "sources": 9,
+    "body_words": 1205,
+    "failures": 0,
+    "warnings": 0
+  },
+  "limitations": [
+    "Independent headline/card review; article-body details and measured cross-market retail popularity are not asserted.",
+    "Crowd motivation and hypothetical professional approaches are editorial interpretation rather than fabricated flow, position or social-count evidence."
+  ]
+}

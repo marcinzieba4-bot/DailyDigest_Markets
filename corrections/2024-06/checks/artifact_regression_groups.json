@@ -1,0 +1,369 @@
+{
+  "status": "synthetic_checks_passed",
+  "scope": "Artifact engineer self-QA using generic code and synthetic fixtures only; requires separate independent review.",
+  "checked_at_utc": "2026-11-09T11:26:56.168387+00:00",
+  "tool_sha256": {
+    "tools/render.py": "17a8778b62dbe289033b053d333c1fc23087478824b6df4f9ffc1a45015001af",
+    "tools/build_artifacts.py": "28206a8ac533cb102f046d3f5ca248460d3a8f44a59c75c1f3492e640dfc3eb0",
+    "tools/build_retail_page.py": "851cb712a0c990fcc596331d30caa74617efed83a72518b71bbe38a8d00b30a1",
+    "tools/build_source_inventory.py": "1abc3fad19e5ca53dc8712e50640c0b1a0d68e374b1962f0979763eef739f5c1",
+    "audit_work/review_final_artifacts.py": "f5f1041b0de96e9e08db285b867901e0a9caf28add269d4f0386be414e0aa6b1"
+  },
+  "helper_sha256": "f48e75592b5c2fb1e494db4b6abcbfe1a89effd540ab76540133724c4b49b8fa",
+  "static_receipt_sha256": "ec74f8355b16788c36f84c9651d968a6bfad6a63b226332a10db5d02274ea2c6",
+  "runtime_artifacts_reviewed": false,
+  "report_facts_read": false,
+  "artifact_build_performed": false,
+  "fatal_or_major_remaining": 0,
+  "dates": [
+    "2024-06-03",
+    "2024-06-04",
+    "2024-06-05",
+    "2024-06-06",
+    "2024-06-07",
+    "2024-06-10",
+    "2024-06-11",
+    "2024-06-12",
+    "2024-06-13",
+    "2024-06-14",
+    "2024-06-17",
+    "2024-06-18",
+    "2024-06-19",
+    "2024-06-20",
+    "2024-06-21",
+    "2024-06-24",
+    "2024-06-25",
+    "2024-06-26",
+    "2024-06-27",
+    "2024-06-28"
+  ],
+  "expected_counts": {
+    "native_artifacts": 60,
+    "all_targets": 65,
+    "report_ZIP_members": 63
+  },
+  "synthetic_tests": [
+    {
+      "case": "replayed55_engineering_preservation_cases",
+      "result": "passed"
+    },
+    {
+      "case": "synthetic_literal_numeric_boundary_minus_Polish_and_NFC_checks",
+      "result": "passed"
+    },
+    {
+      "case": "shared_retail_gate_rejection_propagates",
+      "result": "passed"
+    },
+    {
+      "case": "local_retail_gate_rejection_propagates",
+      "result": "passed"
+    },
+    {
+      "case": "shared_original_byte_mismatch_rejected",
+      "result": "passed"
+    },
+    {
+      "case": "partial_collection_main_rejected_before_author_reads",
+      "result": "passed"
+    },
+    {
+      "case": "synthetic_citation_text_attribute_escaping",
+      "result": "passed"
+    },
+    {
+      "case": "unresolved_alias_rejected",
+      "result": "passed"
+    },
+    {
+      "case": "unknown_own_id_rejected",
+      "result": "passed"
+    },
+    {
+      "case": "explicit_replay_root_positive",
+      "result": "passed"
+    },
+    {
+      "case": "source_path_../outside.json",
+      "result": "passed"
+    },
+    {
+      "case": "source_path_/tmp/outside.json",
+      "result": "passed"
+    },
+    {
+      "case": "source_path_audit_work/.private/proof.json",
+      "result": "passed"
+    },
+    {
+      "case": "source_path_audit_work/secret.json",
+      "result": "passed"
+    },
+    {
+      "case": "source_path_audit_work/link.json",
+      "result": "passed"
+    },
+    {
+      "case": "source_path_audit_work/repo/proof.json",
+      "result": "passed"
+    },
+    {
+      "case": "source_path_work/authoring/proof.py",
+      "result": "passed"
+    },
+    {
+      "case": "source_path_work/artifact_dependencies/proof.py",
+      "result": "passed"
+    },
+    {
+      "case": "synthetic_monthly_full_positive_Unicode_literal_citation_ledger",
+      "result": "passed"
+    },
+    {
+      "case": "monthly_intro_number_deleted",
+      "result": "passed"
+    },
+    {
+      "case": "monthly_source_chip_hover_changed",
+      "result": "passed"
+    },
+    {
+      "case": "monthly_literal_minus_changed",
+      "result": "passed"
+    },
+    {
+      "case": "monthly_full_ledger_removed",
+      "result": "passed"
+    },
+    {
+      "case": "scope_native_target_ZIP_counts_and_current_selfQA_hashes",
+      "result": "passed"
+    }
+  ],
+  "engineering_preservation_matrix": [
+    {
+      "case": "builder_literal_bracket_preserved",
+      "result": "distinct_as_required"
+    },
+    {
+      "case": "builder_word_boundary_preserved",
+      "result": "distinct_as_required"
+    },
+    {
+      "case": "reviewer_literal_bracket_preserved",
+      "result": "distinct_as_required"
+    },
+    {
+      "case": "reviewer_word_boundary_preserved",
+      "result": "distinct_as_required"
+    },
+    {
+      "case": "builder_literal_bracket_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_word_boundary_corrupted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_paragraphs_reordered",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_repeated_occurrence_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_ledger_outlet_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_ledger_timestamp_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_ledger_missing_body_title_present",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_literal_bracket_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_word_boundary_corrupted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_paragraphs_reordered",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_repeated_occurrence_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_ledger_outlet_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_ledger_timestamp_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_ledger_missing_body_title_present",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "html_reordered_paragraphs",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "html_wrong_source_href",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "html_ledger_metadata_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "exact_own_feed_record_metadata",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "replay_hidden_parent_existing_file",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "local_hidden_parent_existing_file",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "native_wrong_exact_kind_path",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "collection_wrong_exact_path",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "zip_path_audit_work/.private/proof.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "zip_path_../outside.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "zip_path_/outside.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "zip_path_audit_work//proof.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "renderer_invalid_date_before_read_../2024-06-03",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "renderer_invalid_date_before_read_2024-08-01",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "renderer_invalid_date_before_read_2024-06-08",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "renderer_invalid_date_before_read_20240603",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "partial_collection_scope",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "replay_acceptance_digest_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "replay_raw_input_bytes_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "source_acceptance_feed_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "source_acceptance_card_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_AUTHORING.md",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_tools/fetch_news.py",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_audit_work/independent_guard_policy.py",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_audit/news_ready_2024-06-03.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_audit/news_physical_requests.jsonl",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_cache/rss_raw/attempts/synthetic.1.xml.gz",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_cache/rss_raw/synthetic.xml.gz",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_newest_lambda_function.py",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_input_bindings_missing",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_physical_attempt_body_missing",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_introduction_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_label_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_chip_href_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_dated_ledger_removed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_ledger_timestamp_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_bracketed_number_deleted",
+      "result": "rejected_as_required"
+    }
+  ],
+  "limitations": [
+    "Synthetic code checks only; no real June artifact, archive or delivery acceptance.",
+    "A separate reviewer must review the code and run runtime checks after all real accepted components exist."
+  ]
+}

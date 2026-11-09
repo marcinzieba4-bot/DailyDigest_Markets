@@ -1,0 +1,65 @@
+{
+  "checked_at_utc": "2026-11-09T10:02:18.631225+00:00",
+  "status": "independently_checked_primary_event_schedule_metadata",
+  "events": [
+    {
+      "event": "Apple WWDC keynote",
+      "published_schedule_date": "2024-05-28",
+      "scheduled_local": "2024-06-10T10:00:00-07:00",
+      "scheduled_utc": "2024-06-10T17:00:00+00:00",
+      "first_eligible_edition": "2024-06-11",
+      "url": "https://www.apple.com/newsroom/2024/05/apples-worldwide-developers-conference-to-kick-off-june-10-with-keynote-address/",
+      "proof_path": "audit_work/provenance_calendar_japan_official_details.json",
+      "precision": "exact announced schedule, not proof every product/service became available then"
+    },
+    {
+      "event": "CNN first presidential debate",
+      "scheduled_local": "2024-06-27T21:00:00-04:00",
+      "scheduled_utc": "2024-06-28T01:00:00+00:00",
+      "first_eligible_edition": "2024-07-01",
+      "url": "https://cnnpressroom.blogs.cnn.com/2024/05/15/cnn-to-host-2024-election-presidential-debate-between-president-joe-biden-and-former-president-donald-j-trump-on-june-27/",
+      "proof_path": "audit_work/provenance_calendar_corporate_clocks.json",
+      "precision": "exact announced schedule; allJuneweekdaycutoffs precede event outcomes"
+    },
+    {
+      "event": "Nvidia split share distribution",
+      "published_schedule_date": "2024-05-22",
+      "scheduled_stage": "after USmarket close June7; recordholdersasofJune6close",
+      "first_eligible_edition": "2024-06-10",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2025",
+      "proof_path": "audit_work/provenance_calendar_clock_final_details.json",
+      "precision": "announced after-close stage, not exact distribution execution minute"
+    },
+    {
+      "event": "Nvidia first split-adjusted trading",
+      "scheduled_stage": "market open June10",
+      "first_eligible_edition": "2024-06-11",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2025",
+      "proof_path": "audit_work/provenance_calendar_clock_final_details.json",
+      "precision": "announced market-open stage; distribution differs from first completed split-adjusted trading session"
+    },
+    {
+      "event": "Chipotle split share distribution",
+      "published_schedule_date": "2024-06-06",
+      "scheduled_stage": "after market closeJune25; recordholdersJune18",
+      "first_eligible_edition": "2024-06-26",
+      "url": "https://newsroom.chipotle.com/2024-06-06-CHIPOTLE-SHAREHOLDER-APPROVAL-PAVES-WAY-FOR-HISTORIC-50-FOR-1-STOCK-SPLIT",
+      "proof_path": "audit_work/provenance_calendar_clock_final_details.json",
+      "precision": "announced after-close stage, not exact distribution execution minute"
+    },
+    {
+      "event": "Chipotle first split-adjusted trading",
+      "scheduled_stage": "market openJune26",
+      "first_eligible_edition": "2024-06-27",
+      "url": "https://newsroom.chipotle.com/2024-06-06-CHIPOTLE-SHAREHOLDER-APPROVAL-PAVES-WAY-FOR-HISTORIC-50-FOR-1-STOCK-SPLIT",
+      "proof_path": "audit_work/provenance_calendar_clock_final_details.json",
+      "precision": "announced market-open stage; shareholder approval/distribution/trading are distinct"
+    }
+  ],
+  "proof_sha256": {
+    "audit_work/provenance_calendar_clock_final_details.json": "b130681b6f8fc35983846684e537d2401828f336dc4b3580e29ccfee9e7d5e89",
+    "audit_work/provenance_calendar_corporate_clocks.json": "4f880231673d5ad6c7942238f69f3b0a7af654156b5c25f175ed3ebb344d54f1",
+    "audit_work/provenance_calendar_japan_official_details.json": "dd336e8a7eb5b33d400f6d5669f23b0f235137ac8780ba83f2bd82042fd273ae"
+  },
+  "scope": "Source-screen timing only, never factual author evidence. Original published schedules distinguish planned disclosure, actual event, availability and market-session stages; a schedule does not itself certify completion."
+}

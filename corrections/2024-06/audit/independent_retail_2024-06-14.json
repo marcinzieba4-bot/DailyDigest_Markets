@@ -1,0 +1,84 @@
+{
+  "date": "2024-06-14",
+  "status": "accepted",
+  "reviewer": "root, independent of original retail author",
+  "checked_at_utc": "2026-11-09T14:17:23.154339+00:00",
+  "fatal_or_major_remaining": 0,
+  "retail_draft_sha256": "3672aa79dec4355af464228bf31808adaa296ff8ef3659affd862d9e740062ec",
+  "feed_sha256": "0aff8f69e55464ac9bab9295d6cd832653547802450f9e5f7f72fb8e0ac277c0",
+  "card_sha256": "b09c1ee6e2ff93a8400106500ec4b907f886b0dc3e281b465efbe0e4e71daa79",
+  "exclusions_sha256": "32388df348e6e9c74a55151118e5e03f0a4bb37208ad2859f97f8e31d9d14a75",
+  "paragraphs_reviewed": 13,
+  "distinct_cited_headlines_reviewed": [
+    "n1233",
+    "n2139",
+    "n1232",
+    "n1231",
+    "n1229",
+    "n1141",
+    "n1469",
+    "n0908",
+    "n1117",
+    "n1116",
+    "n1204",
+    "n2143",
+    "n2144"
+  ],
+  "findings": [],
+  "named_fixes": [
+    {
+      "receipt": "audit/retail_2024-06-14_gme_clock_clarity.json",
+      "receipt_sha256": "875b2c47a9300c3676cdcece0c8276f3e3ba91a5ebd8b6ac9059a637f2b664f8",
+      "scope": "One GME secondary sentence clarifies price/post sequencing; other prose preserved."
+    },
+    {
+      "receipt": "audit/retail_2024-06-14_adobe_vintage_fix.json",
+      "receipt_sha256": "f9587ab1c819f4154a0e726fa1d3b2c1bca0dc51fcc0b24517b56b32e8ffbd86",
+      "scope": "Adobe secondary title and confined source/status phrases, current notes; all other retail prose unchanged."
+    }
+  ],
+  "claim_checks": [
+    "Read intro/all13paragraphs, all13 full cited titles, exact own TSLA/ADBE/AVGO/GME cardfields and earlierretailnotes. Inspected actualclockmetadata for Tesla fanbase story and GME accountpost; kept compact clock excerpts, no fullarticlebody imported.",
+    "TSLA182.47USD/+2.92% June13 regularclose explicitly precedes final annualmeetingvote. CNBC/PBS completedapproval versus earlier Investopedia MUSKSAYSexpectedapproval kept separate; no claim vote resolves legalcompensation/governance questions.",
+    "Reutersfanbaseapproval title is actual attentionevidence; webtool Reutersmetadata June13 23:59:05UTC places it beforeJune14cut. Current body has later additions; no later votingpercentages, socialquotes/counts or legaloutcomes imported. NYT personality/sharepricereferendum supports discussion, no inferred retailflow.",
+    "CNBCOptimuspotentialvalue is expressly Muskaspiration, no achieved valuation/independentforecast. General leader-identity analogy invents no named episode; professional valuation/operatingstance hypothetical.",
+    "AVGO1678.99USD/+12.27% June13 uses presplitas-tradedquote; Reutersactualforecastreaction and InvestopediaAIattention support brief153wordcontinuation after priorlead, future split not actual valuecreation.",
+    "GME29.12USD/+14.38% June13 regularbaseline; ownReutersRedditpost9mshares/CNBCchangedoptionsaccount noweligible. SyndicationclockJune13 21UTC confirms postclose, beforecut; replaced onesentence to state distinction explicitly. Reportedaccount not promise never to sell, Reuterscritique attributed, no laterholdingsassertion.",
+    "All cited June13companysources fit7daywindow; no numericspotFX, fabricatedcrowdcount/institutionalposition/target or unsupportedcalendarforecast.",
+    "Reread both current Adobe paragraphs/title/notes after specific n1096 after-cutarticle omission. Eligible own n1469 Yahoo supports completedQ2report existence only, no beat/guidance/jump asserted; n0908 Malwarebytes reports companycustomer-content clarification as companyclaim.458.74USD/-0.25%session/-5.48%twenty June13 exact baseline explicitly before results; forward cash/customerdemand/trust tests conditional. Other11retailparagraphs/quotes/citations unchanged from fullreview."
+  ],
+  "chronology": {
+    "earlier_notes_reviewed": [
+      "2024-06-03",
+      "2024-06-04",
+      "2024-06-05",
+      "2024-06-06",
+      "2024-06-07",
+      "2024-06-10",
+      "2024-06-11",
+      "2024-06-12",
+      "2024-06-13"
+    ],
+    "notes_match_current_selection": true,
+    "material_change": "Tesla moves from pendingvotesecondary to actualapproval/explicitfanbase fulllead, distinct leader-loyalty/accountability mechanism. AVGO153w actualcompletedreaction and GME153w materially changed reportedinstrument remain brief updates.",
+    "selection_rationale": "New material change from June13 pending-vote secondary: actual completed pay-vote approval n1233/n1232 and Reuters n2139 explicit fan-base response. Own regular+2.92% is pre-outcome baseline, not claimed reaction. Leader-loyalty/operating accountability distinct from previous crowd coordination or AI supplier leads."
+  },
+  "reviewed_validation_warnings": [],
+  "verification": {
+    "passed": true,
+    "sources": 13,
+    "body_words": 1200,
+    "failures": 0,
+    "warnings": 0
+  },
+  "limitations": [
+    "Independent AI headline/card review; original complete article-body vintages are not certified.",
+    "Lead selection and crowd motivations are editorial interpretation, not measured cross-market retail popularity."
+  ],
+  "source_exclusion_rebinding": {
+    "amendment_path": "audit/release_exclusions_amendment_2024-06-14_n1096.json",
+    "amendment_sha256": "1cbeec084f8165f5611b574f1c43aa2b1716c159d8afe1260f99bed4555f72df",
+    "reason": "Specific Adobe technicalarticle omitted; actual fresh quarter/report source and separate own eligible customertrust headline independently checked. Prior receipt/body/notes preserved in namedfixhistory."
+  },
+  "current_notes_sha256": "6131b70a66f75cdf6ee7cb0867719f851b30317fe02653d89565f35c2ba454e8"
+}

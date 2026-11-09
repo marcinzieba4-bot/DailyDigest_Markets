@@ -1,0 +1,104 @@
+{
+ "ticker": "ARKK",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ARKK?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "6a5c0e15a8cd96a6aae16fe3ad35a89c2693a55a13a88aca64c9c131d21055e8",
+   "fetched_at_utc": "2026-11-09T09:47:45.562185+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ARKK?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "64534197c8d8c47c55f28aae0200421222cbf138741089ff54e7629d3fb6fc8c",
+   "fetched_at_utc": "2026-11-09T09:47:45.798923+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/ARKK?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "6a5c0e15a8cd96a6aae16fe3ad35a89c2693a55a13a88aca64c9c131d21055e8",
+    "fetched_at_utc": "2026-11-09T09:47:45.562185+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "ARKK",
+    "exchangeName": "BTS",
+    "fullExchangeName": "Cboe US",
+    "instrumentType": "ETF",
+    "firstTradeDate": 1414762200,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/ARKK?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "64534197c8d8c47c55f28aae0200421222cbf138741089ff54e7629d3fb6fc8c",
+    "fetched_at_utc": "2026-11-09T09:47:45.798923+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "ARKK",
+    "exchangeName": "BTS",
+    "fullExchangeName": "Cboe US",
+    "instrumentType": "ETF",
+    "firstTradeDate": 1414762200,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 593,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

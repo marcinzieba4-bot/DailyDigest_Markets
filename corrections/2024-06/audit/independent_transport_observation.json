@@ -1,0 +1,44 @@
+{
+  "checked_at_utc": "2026-11-09T09:55:25.262813+00:00",
+  "status": "interim_transport_snapshot",
+  "passed_observed_checks": true,
+  "ledger_snapshot_sha256": "178e120fa1067d6d18a297d2fe91180fe2efbd434c6d495ce663e8f8c02744ce",
+  "ledger_snapshot_bytes": 10793341,
+  "ledger_snapshot_records": 14853,
+  "ledger_first_started_at": "2026-11-09T09:46:38.967345+00:00",
+  "ledger_last_finished_at": "2026-11-09T09:54:44.909592+00:00",
+  "recorded_status_counts": {
+    "fetched": 14497,
+    "failed": 356
+  },
+  "retained_bodies_rehashed_by_status": {
+    "fetched": 14497,
+    "failed": 298
+  },
+  "recorded_missing_body_count": 58,
+  "recorded_missing_bodies_match_disclosed_initial58": true,
+  "duplicate_signature_attempt_number_groups": [
+    {
+      "signature": "c5fd65ebc36dc9057c3fd28897d1c7e2b73a12162cb74b6af083b5ec0e5136b0",
+      "attempt": 1,
+      "ledger_rows": [
+        3053,
+        3078
+      ]
+    }
+  ],
+  "physical_tuple_unique": true,
+  "retained_body_paths_unique": true,
+  "new_attempt_ids_finished": 0,
+  "new_attempt_starts": 0,
+  "new_pending_start_ids_observed": 0,
+  "limitation_receipt_sha256": "a9f8f8c02fffee225491929d8fa7c69dbe692266acb6b6fbab30878b0cb44beb",
+  "errors": [],
+  "limits": [
+    "Acquisition was still running while this stable ledger prefix was read; later completions are outside this snapshot.",
+    "The first58 recorded HTTP503 error bodies were discarded before the handler correction and are unrecoverable; they are explicitly excluded from retained-byte completeness.",
+    "Up to16 interrupted in-flight attempts may have no ledger rows, bodies or known outcomes. Their exact count/identity cannot be proved from this snapshot.",
+    "Legacy signature+attempt integers may repeat on restart. Actual started_at timestamps and unique immutable raw paths distinguish retained physical records; old rows are not renumbered.",
+    "A successful logical-query census and complete independent canonical RSS reconstruction require the final declared refinement plan and settled ledgers."
+  ]
+}

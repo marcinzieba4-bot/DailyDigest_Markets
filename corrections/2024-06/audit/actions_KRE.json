@@ -1,0 +1,104 @@
+{
+ "ticker": "KRE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KRE?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "5f1099b9c3c1573852d3ea71f35600d5fed83ee3d273b6b30bb9e99b4d309eab",
+   "fetched_at_utc": "2026-11-09T09:47:45.623722+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KRE?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "086f96ab68476c563f76fd818010c3ce1268f75a1cae099108b59b4a651288ea",
+   "fetched_at_utc": "2026-11-09T09:47:45.864887+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/KRE?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "5f1099b9c3c1573852d3ea71f35600d5fed83ee3d273b6b30bb9e99b4d309eab",
+    "fetched_at_utc": "2026-11-09T09:47:45.623722+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "KRE",
+    "exchangeName": "PCX",
+    "fullExchangeName": "NYSEArca",
+    "instrumentType": "ETF",
+    "firstTradeDate": 1150983000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/KRE?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "086f96ab68476c563f76fd818010c3ce1268f75a1cae099108b59b4a651288ea",
+    "fetched_at_utc": "2026-11-09T09:47:45.864887+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "KRE",
+    "exchangeName": "PCX",
+    "fullExchangeName": "NYSEArca",
+    "instrumentType": "ETF",
+    "firstTradeDate": 1150983000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 593,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

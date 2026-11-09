@@ -1,0 +1,115 @@
+{
+  "date": "2024-06-12",
+  "reviewer": "/root/june_nonretail_d",
+  "before_file_sha256": "a8d743adc245ee99dc5160d45e1a91cf7b1ad281cecfcc48fab0325587702f29",
+  "after_file_sha256": "685315d133d2aa95b23c26fa14ea4cab8f55640d18319675917904e9c70a4cd6",
+  "changes": [
+    {
+      "path": [
+        "geo",
+        0,
+        "parts",
+        1,
+        1
+      ],
+      "before": "The Treasury 2Y closed at 4.81%, the 10Y at 4.39% and the 10Y–2Y spread at -42 bps. Over twenty observations the 2Y fell 4 bps, the 10Y fell 9 bps and the spread narrowed 5 bps. The curve is inverted, with bull flattening (both down, 10Y down more). The S&P 500 is at 5,375.32 index points, VIX at 12.85 index points and DXY at 105.23 index points (US Treasury, prior close 2024-06-11; Yahoo Finance, prior close 2024-06-11). Lower yields on that horizon do not themselves establish an imminent policy change or a fresh flow into bonds.",
+      "after": "The Treasury 2Y closed at 4.81%, the 10Y at 4.39% and the 10Y–2Y spread at -42 bps. Over twenty observations the 2Y fell 4 bps, the 10Y fell 9 bps and the spread fell 5 bps. The curve is inverted, with bull flattening (both down, 10Y down more). The S&P 500 is at 5,375.32 index points, VIX at 12.85 index points and DXY at 105.23 index points (US Treasury, prior close 2024-06-11; Yahoo Finance, prior close 2024-06-11). Lower yields on that horizon do not themselves establish an imminent policy change or a fresh flow into bonds.",
+      "reason": "Exact card change is -5bps; avoid ambiguous inversion description."
+    },
+    {
+      "path": [
+        "geo",
+        5,
+        "parts",
+        2,
+        1
+      ],
+      "before": "Fiscal and financial-sector questions remain active. Parkiet's interview with finance minister Andrzej Domański addresses the next budget, the bank tax and the future of the exchange. The title establishes the subjects under discussion, not decisions on their eventual form. Reuters quotes a minister arguing Poland should avoid EU action over its defense-driven deficit. Investors should distinguish a policy argument from a completed European judgment. The funding environment will be more credible when priorities and implementation are transparent. Until then, avoid capitalizing an assumed tax concession or infrastructure windfall into company earnings merely because it is part of a political discussion. Predictable rules matter to private investment as much as the ambition of public programs. [[n2037]] [[n1802]]",
+      "after": "Fiscal and financial-sector questions remain active. Parkiet's interview with finance minister Andrzej Domański addresses the next budget, the bank tax and the future of the exchange. Those subjects remain under discussion, with their eventual policy form unresolved. Reuters quotes a minister arguing Poland should avoid EU action over its defense-driven deficit. Investors should distinguish a policy argument from a completed European judgment. The funding environment will be more credible when priorities and implementation are transparent. Until then, avoid capitalizing an assumed tax concession or infrastructure windfall into company earnings merely because it is part of a political discussion. Predictable rules matter to private investment as much as the ambition of public programs. [[n2037]] [[n1802]]",
+      "reason": "Ordinary asof policy language instead of source-input narration."
+    },
+    {
+      "path": [
+        "sectors",
+        0,
+        "parts",
+        0,
+        1
+      ],
+      "before": "Technology has a fresh commercial signal in cloud demand. Bloomberg reports strong Oracle bookings, while CNBC reports shares jumping on Google and OpenAI deals despite an earnings miss. Demand visibility and reported earnings are giving different signals, requiring investors to identify which part of the business has improved. [[n1227]]",
+      "after": "Technology has a fresh commercial signal in cloud demand. Bloomberg reports strong Oracle bookings. That strengthens demand visibility while leaving the economics of delivery and the timing of earnings as separate investment questions. [[n1227]]",
+      "reason": "Keep locally cited bookings fact; remove repeated CNBC fact explained and cited in Reported, avoiding citation overuse."
+    },
+    {
+      "path": [
+        "earnings_pattern",
+        "parts",
+        0,
+        1
+      ],
+      "before": "The most useful favorable evidence now separates contracted demand from reported profit. Bloomberg reports strong Oracle bookings, while Reuters says the company expects revenue growth on AI demand in its next fiscal year. The bookings are a commercial signal and the growth statement is the company's outlook, not an independently guaranteed result. Reuters' Lululemon report provides a different form of support: an actual estimate beat tied to Chinese demand. Compare these stages carefully before assuming they deserve the same valuation response. [[n1526]] [[n0435]]",
+      "after": "The most useful favorable evidence now separates contracted demand from reported profit. Reuters reports Oracle expecting revenue growth on AI demand in its next fiscal year. The growth statement is the company's outlook, with commercial conversion still needed before it becomes a delivered result. Reuters' Lululemon report provides a different form of support: an actual estimate beat tied to Chinese demand. Compare these stages carefully before assuming they deserve the same valuation response. [[n1526]] [[n0435]]",
+      "reason": "Keep locally cited Reuters company outlook; remove uncited duplicate Bloomberg fact already supported in XLK and underowned."
+    },
+    {
+      "path": [
+        "sectors",
+        11,
+        "parts",
+        0,
+        1
+      ],
+      "before": "European autos face both market-access uncertainty and a demand warning from outside the region. The BBC expects EU tariffs on Chinese electric cars, while CNBC reports GM trimming its EV outlook because demand is slower than expected. Trade protection and customer acceptance are separate constraints; resolving one does not remove the other. [[n0295]]",
+      "after": "European autos face both market-access uncertainty and a demand warning from outside the region. The BBC expects EU tariffs on Chinese electric cars, while CNBC reports GM trimming its EV outlook because demand is slower than expected. Trade protection and customer acceptance are separate constraints; resolving one does not remove the other. [[n0295]] [[n1177]]",
+      "reason": "Add same-paragraph citation for GM demand/EV forecast comparison, full own-date title read."
+    },
+    {
+      "path": [
+        "sectors",
+        10,
+        "parts",
+        1,
+        1
+      ],
+      "before": "The New York Times discusses efforts to make nuclear development easier. The title identifies an investment ambition and the difficulty of the technology, not an approved project or a guaranteed solution to power demand. Compare proven development pathways with earlier-stage proposals rather than pricing all capacity themes alike. [[n1226]]",
+      "after": "The New York Times discusses efforts to make nuclear development easier. The investment ambition still faces technical difficulty, with approvals and commercially useful output yet to be established. Compare proven development pathways with earlier-stage proposals rather than pricing all capacity themes alike. [[n1226]]",
+      "reason": "Remove source-title narration while retaining development-stage distinction."
+    },
+    {
+      "path": [
+        "underowned",
+        0,
+        "parts",
+        1,
+        1
+      ],
+      "before": "Oracle is a named exposure to examine against a diversified technology fund. Capacity spending, customer concentration and timing can create a funding gap before demand produces profit. The relevant risk is not simply whether AI grows, but whether this supplier earns adequate returns while supporting it.",
+      "after": "Oracle shares are a named exposure to examine against a diversified technology fund. Capacity spending, customer concentration and timing can create a funding gap before demand produces profit. The relevant risk is not simply whether AI grows, but whether this supplier earns adequate returns while supporting it.",
+      "reason": "Explicit named share instrument."
+    },
+    {
+      "path": [
+        "underowned",
+        1,
+        "parts",
+        1,
+        1
+      ],
+      "before": "First Solar is explicitly named in the headline as a petitioner to investigate; a broad solar fund includes companies with different sourcing and policy exposures. A tariff process may alter competition, but customer demand, input cost and implementation still determine whether suppliers capture profitable growth.",
+      "after": "First Solar shares provide a named exposure to the petitioner; a broad solar fund includes companies with different sourcing and policy exposures. A tariff process may alter competition, but customer demand, input cost and implementation still determine whether suppliers capture profitable growth.",
+      "reason": "Explicit named share instrument and no source-input aside."
+    },
+    {
+      "path": [
+        "underowned",
+        3,
+        "parts",
+        1,
+        1
+      ],
+      "before": "A broad Polish equity tracker provides one diversified instrument for regional exposure, with substantial businesses unrelated to ports. A focused contractor would need its own supported role and contract economics. Development progress should be assessed through funding, execution and eventual utilization rather than a general infrastructure premium.",
+      "after": "The EPOL Poland ETF provides one diversified instrument for regional exposure, with substantial businesses unrelated to ports. A focused contractor would need its own supported role and contract economics. Development progress should be assessed through funding, execution and eventual utilization rather than a general infrastructure premium.",
+      "reason": "Own-card named instrument instead of generic tracker."
+    }
+  ]
+}

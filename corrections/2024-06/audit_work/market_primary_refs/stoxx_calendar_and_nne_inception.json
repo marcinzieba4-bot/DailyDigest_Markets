@@ -1,0 +1,29 @@
+{
+  "reviewer": "/root/june_markets/market_replay",
+  "retrieved_at_utc": "2026-11-09T09:55:09.794130+00:00",
+  "retrieval_method": "search_service_web_run primary-source PDF/page parsing; extraction retained, original network bytes not downloaded",
+  "stoxx": {
+    "url": "https://www.stoxx.com/document/News/2023/December/stoxx_calculation_guide_20231215.pdf",
+    "source_version": "December 2023",
+    "web_reference": "turn107823view0",
+    "source_locations": "page7, sections3.1.1,3.1.3 and3.2; parsed lines344–389",
+    "short_exact_excerpt": "Monday through Friday between 0:00 and 22:15 CET",
+    "paraphrase": "The default STOXX Europe calendar excludes New Year, Good Friday, Easter Monday, Christmas and Boxing Day. The Target and Eurex variants also exclude May1; Eurex excludes December24. May9 and May20 are not excluded in any of those calendars. Index-specific exceptions require explicit methodology. Dissemination ends after the last trading system in the regional universe closes.",
+    "independently_confirmed_dates": [
+      "2024-05-09",
+      "2024-05-20"
+    ],
+    "conclusion": "These are expected index calculation dates under the administrator regional/default and relevant European variants, independently of XETR venue assignment. Yahoo retained identity metadata calls both ^STOXX and ^STOXX50E Zurich. Missing observations stay missing; the precise provider omission cause is not established.",
+    "timing_gate": "Use the source maximum22:15CET at fixedUTC+01 as a conservative upper-bound21:15UTC on each prior observation date. This is later than22:15CEST in June and still before nextUTCmidnight. It establishes eligibility, not the exact index close or Yahoo print time.",
+    "xetr_role": "Matching session-date proxy for the observed April–June cash dates; not claimed as the physical index venue or exact index close source. For May9/20 the index-calendar expectation is independently source-supported."
+  },
+  "nne": {
+    "url": "https://ir.nanonuclearenergy.com/news-releases/news-release-details/nano-nuclear-energy-announces-closing-10250000-initial-public",
+    "publication_date": "2024-05-13",
+    "web_reference": "turn465076view2",
+    "source_locations": "parsedlines19,27",
+    "short_exact_excerpt": "began trading on the Nasdaq Capital Market under the symbol “NNE” on May 8, 2024.",
+    "conclusion": "Completed trading-start statement, not the earlier May7 preview; fresh Yahoo firstTradeDate and first bounded daily observation are checked independently."
+  },
+  "writer_use": "Audit-only calendar and inception verification; no report prose or later market facts authorized."
+}

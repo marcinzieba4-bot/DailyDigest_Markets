@@ -1,0 +1,56 @@
+{
+  "date": "2024-06-12",
+  "reviewer": "independent final June12 nonretail reviewer",
+  "before_file_sha256": "685315d133d2aa95b23c26fa14ea4cab8f55640d18319675917904e9c70a4cd6",
+  "before_content_sha256": "223aebeeba91c1c92ea767b7eb7410885c423db421c7e0fa64d467bc1cf31f68",
+  "before_artifact": "audit/review_history/nonretail_2024-06-12_before_independent_final_timing_instrument_repairs_685315d133d2aa95b23c26fa14ea4cab8f55640d18319675917904e9c70a4cd6.json",
+  "prior_receipt_preserved": null,
+  "changes": [
+    {
+      "section": "geo",
+      "index": 3,
+      "block": "JP",
+      "part": "Macro Stance",
+      "before": "Japan faces a sharper price-versus-demand tension. Reuters reports wholesale inflation accelerating and complicating the BOJ's rate path, while another Reuters report previews unchanged ultra-low rates and debate over bond purchases. Wholesale-price pressure is already evident, while the policy decision remains pending. Higher upstream prices can pressure margins or consumers, but the transmission depends on firms' ability to pass costs through without losing volumes. Avoid treating a stronger price measure as proof of healthy domestic demand. [[n1795]] [[n1792]]",
+      "after": "Japan faces a difficult income-versus-policy balance. Reuters previews unchanged ultra-low rates and debate over the BOJ's bond purchases, while its wage baseline shows real wages still falling but improving. The policy decision remains pending; the household-income constraint is already visible. A cautious financing stance can help borrowers without ensuring stronger consumption. The investment test is whether household purchasing power strengthens enough to support volumes and margins together, rather than whether a policy headline sounds favorable. Avoid treating debate over bond purchases as proof of healthy domestic demand. [[n1792]] [[n1754]]",
+      "rationale": "Remove excluded n1795 specific uncertified Reuters article; retain the pending BOJ preview and eligible macro wage baseline. Do not call the underlying early-local BOJ release late."
+    },
+    {
+      "section": "sectors",
+      "index": 3,
+      "block": "XLE",
+      "part": "Narrative",
+      "before": "Energy should be judged on capital allocation as well as commodity exposure. Reuters reports Eni selling a stake in Saipem. That is a specific portfolio action, with implications for corporate exposure and funding; it does not establish that the entire service cycle or producer outlook has changed. [[n1518]]",
+      "after": "Energy should be judged on capital allocation as well as commodity exposure. Reuters reports Glencore is to supply crude to the UK's Lindsey refinery. That is a specific prospective commercial arrangement, with implications for counterparties and execution; it does not establish that the entire service cycle or producer outlook has changed. [[n2247]]",
+      "rationale": "Replace after-cut completed/priced Eni sale source n1518 with eligible June10 prospective Glencore refinery-supply headline; no sale price or proceeds retained."
+    },
+    {
+      "section": "underowned",
+      "index": 1,
+      "block": "Solar market access rather than indiscriminate solar growth",
+      "part": "Exposure & Risk",
+      "before": "First Solar shares provide a named exposure to the petitioner; a broad solar fund includes companies with different sourcing and policy exposures. A tariff process may alter competition, but customer demand, input cost and implementation still determine whether suppliers capture profitable growth.",
+      "after": "The XLU utilities ETF provides diversified customer-side exposure, rather than a position in the petitioner. Solar trade policy can affect project sourcing and costs; regulated returns, financing and execution still determine whether utilities earn attractive cash from development.",
+      "rationale": "Replace absent FSLR named share exposure with actual own-card XLU and make its diversified utility/customer-side role explicit; petition theme and procedural stage preserved."
+    },
+    {
+      "section": "anticipatory",
+      "index": 1,
+      "block": "BOJ decision and bond-purchase policy",
+      "part": "What Is Priced",
+      "before": "Reuters previews the BOJ keeping ultra-low rates while debating the future of large bond purchases. The decision is pending; the preview is evidence of the policy question, not its answer. The market must balance upstream price pressure with an incomplete domestic-demand recovery. [[n1792]]",
+      "after": "Reuters previews the BOJ keeping ultra-low rates while debating the future of large bond purchases. The decision is pending; the preview is evidence of the policy question, not its answer. The market must balance the financing implications of either path with the effect on company cash and demand. [[n1792]]",
+      "rationale": "Remove residual concrete upstream-price-pressure premise dependent on omitted n1795; pending policy decision and general mechanism remain unchanged."
+    },
+    {
+      "section": "sectors",
+      "index": 12,
+      "block": "SOXX",
+      "part": "EPS Upside Watch",
+      "before": "Watch orders, delivery and the economics of capacity additions. Scarce technology can create a durable advantage, but legal constraints and customers' investment decisions determine the rate at which it becomes cash. Compare foundries, equipment and designers according to their commercial role rather than their shared narrative.",
+      "after": "Watch orders, delivery and the economics of capacity additions. Bloomberg reports planned ASML equipment shipments to TSMC; expected delivery is distinct from completed installation or cash. [[n0326]] Compare foundries, equipment and designers according to their commercial role rather than their shared narrative.",
+      "rationale": "Explicitly cover TSMC alongside ASML using eligible June5 Bloomberg shipment preview, retaining the distinction between expected delivery and completed installation/revenue; rest of SOXX unchanged."
+    }
+  ],
+  "scope": "Five bounded paragraph/string/citation/instrument repairs only; no source, card, guard or exclusion mutation."
+}

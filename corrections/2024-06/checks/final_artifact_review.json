@@ -1,0 +1,924 @@
+{
+  "status": "accepted",
+  "dates": [
+    "2024-06-03",
+    "2024-06-04",
+    "2024-06-05",
+    "2024-06-06",
+    "2024-06-07",
+    "2024-06-10",
+    "2024-06-11",
+    "2024-06-12",
+    "2024-06-13",
+    "2024-06-14",
+    "2024-06-17",
+    "2024-06-18",
+    "2024-06-19",
+    "2024-06-20",
+    "2024-06-21",
+    "2024-06-24",
+    "2024-06-25",
+    "2024-06-26",
+    "2024-06-27",
+    "2024-06-28"
+  ],
+  "tool_sha256": {
+    "render.py": "17a8778b62dbe289033b053d333c1fc23087478824b6df4f9ffc1a45015001af",
+    "build_artifacts.py": "28206a8ac533cb102f046d3f5ca248460d3a8f44a59c75c1f3492e640dfc3eb0",
+    "build_retail_page.py": "851cb712a0c990fcc596331d30caa74617efed83a72518b71bbe38a8d00b30a1",
+    "build_source_inventory.py": "1abc3fad19e5ca53dc8712e50640c0b1a0d68e374b1962f0979763eef739f5c1",
+    "audit_work/review_final_artifacts.py": "f5f1041b0de96e9e08db285b867901e0a9caf28add269d4f0386be414e0aa6b1"
+  },
+  "artifact_targets_expected": 65,
+  "report_zip_members_expected": 63,
+  "runtime_artifacts_reviewed": true,
+  "negative_fixtures": [
+    {
+      "case": "builder_literal_bracket_preserved",
+      "result": "distinct_as_required"
+    },
+    {
+      "case": "builder_word_boundary_preserved",
+      "result": "distinct_as_required"
+    },
+    {
+      "case": "reviewer_literal_bracket_preserved",
+      "result": "distinct_as_required"
+    },
+    {
+      "case": "reviewer_word_boundary_preserved",
+      "result": "distinct_as_required"
+    },
+    {
+      "case": "builder_literal_bracket_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_word_boundary_corrupted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_paragraphs_reordered",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_repeated_occurrence_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_ledger_outlet_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_ledger_timestamp_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_ledger_missing_body_title_present",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_literal_bracket_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_word_boundary_corrupted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_paragraphs_reordered",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_repeated_occurrence_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_ledger_outlet_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_ledger_timestamp_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_ledger_missing_body_title_present",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "html_reordered_paragraphs",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "html_wrong_source_href",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "html_ledger_metadata_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "exact_own_feed_record_metadata",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "replay_hidden_parent_existing_file",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "local_hidden_parent_existing_file",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "native_wrong_exact_kind_path",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "collection_wrong_exact_path",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "zip_path_audit_work/.private/proof.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "zip_path_../outside.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "zip_path_/outside.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "zip_path_audit_work//proof.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "renderer_invalid_date_before_read_../2024-06-03",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "renderer_invalid_date_before_read_2024-08-01",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "renderer_invalid_date_before_read_2024-06-08",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "renderer_invalid_date_before_read_20240603",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "partial_collection_scope",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "replay_acceptance_digest_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "replay_raw_input_bytes_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "source_acceptance_feed_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "source_acceptance_card_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_AUTHORING.md",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_tools/fetch_news.py",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_audit_work/independent_guard_policy.py",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_audit/news_ready_2024-06-03.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_audit/news_physical_requests.jsonl",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_cache/rss_raw/attempts/synthetic.1.xml.gz",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_cache/rss_raw/synthetic.xml.gz",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_newest_lambda_function.py",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_input_bindings_missing",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_physical_attempt_body_missing",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_introduction_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_label_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_chip_href_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_dated_ledger_removed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_ledger_timestamp_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_bracketed_number_deleted",
+      "result": "rejected_as_required"
+    }
+  ],
+  "negative_fixture_count": 55,
+  "scope": "Generic June date/naming/shape/layout/escaping and code-compile checks only. No report data read, built, published or factually accepted.",
+  "fatal_or_major_remaining": 0,
+  "reviewed_at_utc": "2026-11-09T14:35:02.070532+00:00",
+  "artifact_manifest_sha256": "0e51b06bdd5a0e0d1fbf13d4db413c8a5f672b1b2d2b4f904b8c1b42e2a64810",
+  "reports": [
+    {
+      "date": "2024-06-03",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 112,
+      "pdf_pages": 29,
+      "spec_sha256": "2e82d8f7288ce06da5abf1a9ac66809b82f3e28acbc5edbb7bb8e44bbf333866"
+    },
+    {
+      "date": "2024-06-04",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 98,
+      "pdf_pages": 28,
+      "spec_sha256": "ce77ffb1ff2f78fc6c6eb5c7f1af06f1f1a2a148606db687205e2dd28c89fa53"
+    },
+    {
+      "date": "2024-06-05",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 91,
+      "pdf_pages": 28,
+      "spec_sha256": "cd92ccf61cda2d331a983c54715df5cf062c9bfced6388665c830760adf0dff3"
+    },
+    {
+      "date": "2024-06-06",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 80,
+      "pdf_pages": 28,
+      "spec_sha256": "0e3c4e7420c26c1c531036e2be3120b9f234cf428c79aa40f25d39609f5c2802"
+    },
+    {
+      "date": "2024-06-07",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 84,
+      "pdf_pages": 28,
+      "spec_sha256": "94ba1c4083f41a1e7c1227c09b82439defb74563244280f94e991c1080892c50"
+    },
+    {
+      "date": "2024-06-10",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 97,
+      "pdf_pages": 28,
+      "spec_sha256": "20733eac24aa313d6cd8dda61a384bdd82a216880521da524d5abf1271ea784e"
+    },
+    {
+      "date": "2024-06-11",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 93,
+      "pdf_pages": 29,
+      "spec_sha256": "2c8b882138751140a26a45160bd71984c1eea06fda9e02c3f0345a6354ea6d50"
+    },
+    {
+      "date": "2024-06-12",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 87,
+      "pdf_pages": 28,
+      "spec_sha256": "9e959648e3fff2af4db81e45ffc5154b70d4bf814fc7f161762de322cba54c3c"
+    },
+    {
+      "date": "2024-06-13",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 96,
+      "pdf_pages": 28,
+      "spec_sha256": "6fd4381441a52ffd53c99c67a90012959fafe441da9ce9089824ddf16754b2e3"
+    },
+    {
+      "date": "2024-06-14",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 99,
+      "pdf_pages": 29,
+      "spec_sha256": "bb5221412da7b0ece08ecf63ccaa4918cffdc8b661c498dd7131f291aa34cf11"
+    },
+    {
+      "date": "2024-06-17",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 102,
+      "pdf_pages": 28,
+      "spec_sha256": "598d538e2637679b77b35bfd09e25d1dd61355b4e499b5357f62e4632d3ac76e"
+    },
+    {
+      "date": "2024-06-18",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 94,
+      "pdf_pages": 28,
+      "spec_sha256": "98f91b97eeee6a4382f1856eddf83be1c27bcd3769947f5db4a4d0bae137ea68"
+    },
+    {
+      "date": "2024-06-19",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 95,
+      "pdf_pages": 28,
+      "spec_sha256": "39812562ce62c3e4aa4cfed8ee509b649f7051b92ab3e9fc0e82883198596bf6"
+    },
+    {
+      "date": "2024-06-20",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 91,
+      "pdf_pages": 29,
+      "spec_sha256": "0291783c3e89ba9172e2fe83ed74c1e728e28cd5b8909a0f7f049c86c2cf094d"
+    },
+    {
+      "date": "2024-06-21",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 104,
+      "pdf_pages": 29,
+      "spec_sha256": "272e35ce93b75217a0273d2c0200d8de6f6bf104f96183cef43674bfc357d300"
+    },
+    {
+      "date": "2024-06-24",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 108,
+      "pdf_pages": 29,
+      "spec_sha256": "fb52099403094e7ce67db17c72a48868edbeb4f5902821772f21728c594c207d"
+    },
+    {
+      "date": "2024-06-25",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 97,
+      "pdf_pages": 28,
+      "spec_sha256": "58170c25bb2a32a7435eab290eaf2dc44a8fb94c5cdb0f1fd631216f9c879e05"
+    },
+    {
+      "date": "2024-06-26",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 90,
+      "pdf_pages": 29,
+      "spec_sha256": "216275a89bcce85e1d20e95ee02b94a77d8de55dfbbf0b65d842945a7a313c21"
+    },
+    {
+      "date": "2024-06-27",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 84,
+      "pdf_pages": 28,
+      "spec_sha256": "37f168a867a77048673ae45c73b45cb00982abdacbba38265321aaec90362b06"
+    },
+    {
+      "date": "2024-06-28",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 90,
+      "pdf_pages": 29,
+      "spec_sha256": "23e62f02476f952d328625495a61601c11e53bb8167b14e3bb0c4e2b5f753729"
+    }
+  ],
+  "monthly_retail_checks": [
+    {
+      "date": "2024-06-03",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 12,
+      "ledger_records": 11,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-04",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 11,
+      "ledger_records": 9,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-05",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 12,
+      "ledger_records": 10,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-06",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 12,
+      "ledger_records": 10,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-07",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 13,
+      "ledger_records": 11,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-10",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 14,
+      "ledger_records": 13,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-11",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 13,
+      "ledger_records": 12,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-12",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 12,
+      "ledger_records": 11,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-13",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 12,
+      "ledger_records": 10,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-14",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 14,
+      "ledger_records": 13,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-17",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 13,
+      "ledger_records": 10,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-18",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 11,
+      "ledger_records": 9,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-19",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 13,
+      "ledger_records": 10,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-20",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 10,
+      "ledger_records": 9,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-21",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 14,
+      "ledger_records": 12,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-24",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 15,
+      "ledger_records": 14,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-25",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 12,
+      "ledger_records": 10,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-26",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 13,
+      "ledger_records": 13,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-27",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 14,
+      "ledger_records": 12,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-06-28",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 17,
+      "ledger_records": 15,
+      "intro_labels_links_and_ledger_preserved": true
+    }
+  ],
+  "layouts": [
+    {
+      "artifact": "2024-06-03",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-03",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-04",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-04",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-05",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-05",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-06",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-06",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-07",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-07",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-10",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-10",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-11",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-11",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-12",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-12",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-13",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-13",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-14",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-14",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-17",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-17",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-18",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-18",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-19",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-19",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-20",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-20",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-21",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-21",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-24",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-24",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-25",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-25",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-26",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-26",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-27",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-27",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-06-28",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-06-28",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "collection",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "collection",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "retail_collection",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "retail_collection",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    }
+  ],
+  "report_zip_members": 63,
+  "frozen_source_members": 45716,
+  "source_replay_verification": {
+    "replay_inputs_verified": 45183,
+    "source_input_bindings": 144,
+    "source_dependency_hash_checks": 215,
+    "physical_dependency_hash_checks": 43800,
+    "physical_attempts": 14853,
+    "received_attempt_bodies": 14795,
+    "canonical_physical_requests": 14497,
+    "recorded_missing_response_bodies": 58,
+    "modern_attempt_ids": 0,
+    "physical_review_only": false,
+    "historical_superseded_cache_attempts": 2,
+    "all_physical_network_attempts_complete": false,
+    "unlogged_interrupted_attempts_maximum": 16,
+    "unlogged_interrupted_attempts_actual_count": null,
+    "physical_proof_historical_context_only": {
+      "audit/news_coverage.json": {
+        "earlier_physical_review_sha256": "cb6f592aa1d6bee4bea305ef41b077ab88d55ff448203368c8901b0e9adcfad2",
+        "current_sha256": "cccf30076434fd6b8657c438885c0525651fcf5e641dd6bf295c36da43cdff53",
+        "original_bytes_retained": false,
+        "status": "original_coverage_bytes_unreplayable_auxiliary_phase_metadata",
+        "reason": "Coverage changes during semantic projection by design; only this named historical phase context differs. Current coverage requires fresh final source/freeze replay."
+      }
+    },
+    "current_source_schema_checked": true,
+    "source_phase_binding_amendment": {
+      "amendment_path": "audit/source_phase_binding_amendment.json",
+      "amendment_sha256": "bc3e4f27dda483666be7f1e9e622a5d552dd613645d893e45415cff77ec68c37",
+      "affected_auxiliary_path": "audit/news_coverage.json",
+      "phases": [
+        {
+          "name": "physical_infrastructure_replay",
+          "proof_path": "audit/independent_physical_source_review.json",
+          "proof_sha256": "5b509c1a3c8da3a448eb87ae68c320c7c0ce4208887562c22e38329643511057",
+          "map": "input_bindings",
+          "path": "audit/news_coverage.json",
+          "expected_sha256": "cb6f592aa1d6bee4bea305ef41b077ab88d55ff448203368c8901b0e9adcfad2",
+          "original_auxiliary_bytes_retained": false,
+          "retained_matching_paths": [],
+          "status": "historical_auxiliary_bytes_unreplayable"
+        },
+        {
+          "name": "independently_verified_staged_semantic_projection",
+          "proof_path": "audit_work/news_policy_lock.json",
+          "proof_sha256": "495fee05d9a69cbb332b9d263acc50907ef13aecc2758e2372d5203f3a43c57b",
+          "map": "files",
+          "path": "audit/news_coverage.json",
+          "expected_sha256": "ad856911ceb65923a8764342b47ebb8bb96338d796a7989b7a7776f3cd42e398",
+          "independent_stage_proof_path": "audit_work/independent_staged_source_review.json",
+          "independent_stage_proof_sha256": "4e11d52df4db3e6d1ccf6f6d19be13318f70d3f0613bfeffaa29c1584699c933",
+          "independent_stage_expected_sha256": "ad856911ceb65923a8764342b47ebb8bb96338d796a7989b7a7776f3cd42e398",
+          "original_auxiliary_bytes_retained": false,
+          "retained_matching_paths": [],
+          "status": "historical_auxiliary_bytes_unreplayable"
+        },
+        {
+          "name": "actual_final_frozen_source_acceptance",
+          "proof_path": "audit/independent_source_review.json",
+          "proof_sha256": "28c6fc6470cd3376055f6f447774509f3b6f863f550ce82858889ea4d85be170",
+          "map": "input_bindings",
+          "path": "audit/news_coverage.json",
+          "expected_sha256": "cccf30076434fd6b8657c438885c0525651fcf5e641dd6bf295c36da43cdff53",
+          "source_freeze_path": "audit/source_freeze.json",
+          "source_freeze_sha256": "a5a0a4936f5feba69e66665ac61e2bdd5c50af295a6dabe99498f14f293bb578",
+          "source_freeze_expected_sha256": "cccf30076434fd6b8657c438885c0525651fcf5e641dd6bf295c36da43cdff53",
+          "current_auxiliary_backup_path": "audit/review_history/phase_amendment_current_coverage_20261109T103319Z.json",
+          "current_auxiliary_backup_sha256": "cccf30076434fd6b8657c438885c0525651fcf5e641dd6bf295c36da43cdff53",
+          "status": "current_bytes_replayed_and_accepted"
+        }
+      ],
+      "all_original_proofs_and_backups_preserved": true,
+      "all_current_source_bindings_verified": 144,
+      "report_editorial_or_publication_acceptance": false
+    },
+    "original_research_bytes_checked": false,
+    "public_research_projection": {
+      "manifest_sha256": "3184477bde1040690ef7c04c6c4a74402ad1cce4bbd0f0a1027362de81e2418f",
+      "private_response_count": 33,
+      "public_clock_rows": 92,
+      "public_document_URLs": 1065,
+      "original_research_byte_replay": false,
+      "local_originals_verified": false,
+      "independent_review_required": true
+    },
+    "private_research_hash_commitments_verified": 33
+  },
+  "limits": [
+    "Technical preservation, Unicode, chronology, local bytes and layout review only; editorial/source-claim acceptance is separate.",
+    "No publication or public-domain routing/network verification performed; root verifies remote ZIP/native content separately."
+  ]
+}

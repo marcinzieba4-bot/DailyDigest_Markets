@@ -1,0 +1,104 @@
+{
+ "ticker": "ETFBW20TR.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETFBW20TR.WA?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "c29c7092cc0993c78916c6e6b70e971375f934abb6395c295b601abd0450a709",
+   "fetched_at_utc": "2026-11-09T09:47:39.191653+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETFBW20TR.WA?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "f790b1b43996ee3598363306702f7abb8f02596fc07277cc99411b9ffb1af7d7",
+   "fetched_at_utc": "2026-11-09T09:47:39.417565+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETFBW20TR.WA?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "c29c7092cc0993c78916c6e6b70e971375f934abb6395c295b601abd0450a709",
+    "fetched_at_utc": "2026-11-09T09:47:39.191653+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "PLN",
+    "symbol": "ETFBW20TR.WA",
+    "exchangeName": "WSE",
+    "fullExchangeName": "Warsaw",
+    "instrumentType": "ETF",
+    "firstTradeDate": 1546848000,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Warsaw"
+   },
+   "discarded_price_observations": 60,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/ETFBW20TR.WA?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "f790b1b43996ee3598363306702f7abb8f02596fc07277cc99411b9ffb1af7d7",
+    "fetched_at_utc": "2026-11-09T09:47:39.417565+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "PLN",
+    "symbol": "ETFBW20TR.WA",
+    "exchangeName": "WSE",
+    "fullExchangeName": "Warsaw",
+    "instrumentType": "ETF",
+    "firstTradeDate": 1546848000,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Warsaw"
+   },
+   "discarded_price_observations": 592,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

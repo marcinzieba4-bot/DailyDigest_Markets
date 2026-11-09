@@ -1,0 +1,104 @@
+{
+ "ticker": "^VIX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "1ef0564c77a7fa7a4d43ad3850862e760e68f54a9b9f61dc77956c3816340d02",
+   "fetched_at_utc": "2026-11-09T09:47:37.589367+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "20e7680403e1a408155daf22aabea0f8d75b5d1f4dcca36b31213b04ad4178e1",
+   "fetched_at_utc": "2026-11-09T09:47:37.732455+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "1ef0564c77a7fa7a4d43ad3850862e760e68f54a9b9f61dc77956c3816340d02",
+    "fetched_at_utc": "2026-11-09T09:47:37.589367+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "^VIX",
+    "exchangeName": "CXI",
+    "fullExchangeName": "Cboe Indices",
+    "instrumentType": "INDEX",
+    "firstTradeDate": 631267200,
+    "timezone": "CST",
+    "exchangeTimezoneName": "America/Chicago"
+   },
+   "discarded_price_observations": 64,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "20e7680403e1a408155daf22aabea0f8d75b5d1f4dcca36b31213b04ad4178e1",
+    "fetched_at_utc": "2026-11-09T09:47:37.732455+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "^VIX",
+    "exchangeName": "CXI",
+    "fullExchangeName": "Cboe Indices",
+    "instrumentType": "INDEX",
+    "firstTradeDate": 631267200,
+    "timezone": "CST",
+    "exchangeTimezoneName": "America/Chicago"
+   },
+   "discarded_price_observations": 617,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

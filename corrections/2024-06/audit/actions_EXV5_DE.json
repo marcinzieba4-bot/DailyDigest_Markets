@@ -1,0 +1,104 @@
+{
+ "ticker": "EXV5.DE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXV5.DE?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "ffd83a0dc3fa6cac0d740403374181251752aa8388e1ead3a386574740b355a0",
+   "fetched_at_utc": "2026-11-09T09:47:40.377875+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXV5.DE?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "39172cd638d033af2346e5b2d2e15df62094d0f25e3087c200d95437c26f69f4",
+   "fetched_at_utc": "2026-11-09T09:47:40.519978+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXV5.DE?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "ffd83a0dc3fa6cac0d740403374181251752aa8388e1ead3a386574740b355a0",
+    "fetched_at_utc": "2026-11-09T09:47:40.377875+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "EUR",
+    "symbol": "EXV5.DE",
+    "exchangeName": "GER",
+    "fullExchangeName": "XETRA",
+    "instrumentType": "ETF",
+    "firstTradeDate": 1199260800,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Berlin"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/EXV5.DE?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "39172cd638d033af2346e5b2d2e15df62094d0f25e3087c200d95437c26f69f4",
+    "fetched_at_utc": "2026-11-09T09:47:40.519978+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "EUR",
+    "symbol": "EXV5.DE",
+    "exchangeName": "GER",
+    "fullExchangeName": "XETRA",
+    "instrumentType": "ETF",
+    "firstTradeDate": 1199260800,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Berlin"
+   },
+   "discarded_price_observations": 601,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

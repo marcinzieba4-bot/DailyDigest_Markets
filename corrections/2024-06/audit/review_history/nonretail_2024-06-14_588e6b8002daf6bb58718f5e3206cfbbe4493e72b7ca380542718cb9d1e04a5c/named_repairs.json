@@ -1,0 +1,119 @@
+{
+  "date": "2024-06-14",
+  "reviewer": "june14_final_review",
+  "before_actual_bytes_sha256": "588e6b8002daf6bb58718f5e3206cfbbe4493e72b7ca380542718cb9d1e04a5c",
+  "after_actual_bytes_sha256": "7512da8ed5ea8d261283b486112c796ef47c1fa007eed2893d3a4306e06118f8",
+  "after_nonretail_content_sha256": "8a89b0f29f831da79926ba1e3aa4a2802c85d8990a4ef43184f4b86a71262314",
+  "prior_receipt_existed": false,
+  "changes": [
+    {
+      "path": "geo[1].parts[1][1]",
+      "before": "The monetary backdrop remains patient. Reuters quotes Lane saying the ECB should wait for uncertainty to recede, while the Wall Street Journal reports holds across several meetings as a possibility. Lower policy rates have not guaranteed rapid relief. Credit spreads, demand and political risk can still determine the effective cost of capital, especially for businesses whose earnings depend on domestic decisions. Look for actual customer activity before treating the first cut as a complete cyclical upgrade. [[n1577]] [[n1578]]",
+      "after": "The monetary backdrop remains patient. Reuters quotes Lane saying the ECB should wait for uncertainty to recede, while the Wall Street Journal reports holds across several meetings as a possibility. A lower policy rate would not by itself guarantee rapid relief. Credit spreads, demand and political risk can still determine the effective cost of capital, especially for businesses whose earnings depend on domestic decisions. Look for actual customer activity before treating an easier policy path as a complete cyclical upgrade. [[n1577]] [[n1578]]",
+      "rationale": "Conditional ECB easing transmission replaces unsupported first-cut completion language."
+    },
+    {
+      "path": "sectors[0].parts[1][1]",
+      "before": "Investopedia reports Adobe shares jumping after an AI-related earnings beat. The result provides a commercial software counterpoint to infrastructure demand, while the cost of delivering new functionality and the durability of customer adoption remain important. The preceding regular cash session does not measure the after-hours result response. [[n1096]]",
+      "after": "Yahoo Finance reports Adobe's second-quarter earnings. Quarterly performance provides a software reporting checkpoint alongside infrastructure demand. Adoption must improve profitable revenue after development and delivery costs, with customer willingness to pay for useful functionality determining whether the commercial proposition can sustain attractive cash generation. [[n1469]]",
+      "rationale": "Root found n1096 specific article aftercut; n1469 now establishes only quarterly-report completion, not beat or price reaction."
+    },
+    {
+      "path": "sectors[5].parts[0][1]",
+      "before": "Consumer discretionary is testing pricing and operating humility. Reuters reports Shein increasing prices ahead of its prospective offering, while CNBC quotes Stellantis seeking to correct mistakes in the US market. These are different responses to customer economics, and neither establishes that buyers will accept the new proposition or that margins have recovered. [[n1148]]",
+      "after": "Consumer discretionary is testing pricing and operating humility. Reuters reports Shein increasing prices ahead of its prospective offering, while CNBC quotes Stellantis seeking to correct mistakes in the US market. These are different responses to customer economics, and neither establishes that buyers will accept the new proposition or that margins have recovered. [[n1148]] [[n1217]]",
+      "rationale": "Add same-paragraph CNBC n1217 for Stellantis claim."
+    },
+    {
+      "path": "sectors[12].parts[2][1]",
+      "before": "Watch orders, customer investment and retained margins across designers, foundries and equipment. A favorable AI cycle can reward differentiated capacity while leaving other chip categories exposed to normal inventory and pricing pressures. Avoid assuming every company benefits on the same timetable or through the same commercial mechanism.",
+      "after": "Watch orders, customer investment and retained margins across designers, TSMC's US ADR (TSM), ASML's US line (ASML) and the wider foundry-and-equipment chain. A favorable AI cycle can reward differentiated capacity while leaving other chip categories exposed to normal inventory and pricing pressures. Avoid assuming every company benefits on the same timetable or through the same commercial mechanism.",
+      "rationale": "Explicit own-card TSMC US ADR and ASML US line conditional comparison satisfies US-Asia semiconductor coverage."
+    },
+    {
+      "path": "earnings_pattern.title",
+      "before": "Software proof broadens AI earnings; weak customers still matter",
+      "after": "AI-chip outlooks face the test of commercial conversion",
+      "rationale": "Remove unsupported software-beat premise; name commercially testable AI-chip outlook instead."
+    },
+    {
+      "path": "earnings_pattern.parts[0][1]",
+      "before": "The favorable pattern has a more concrete software component. Investopedia reports Adobe shares jumping after an AI-related earnings beat, while Reuters reports Broadcom raising its revenue forecast on chip demand. These are different business models with commercially relevant evidence, not merely the same technology slogan. The earnings beat is completed; the revenue outlook is management's expectation. Both still need future conversion to justify a valuation that may already reflect greater confidence in the theme. [[n1096]] [[n0932]]",
+      "after": "The favorable pattern centers on an outlook backed by identified demand. Reuters reports Broadcom shares rising as AI-chip demand powers a forecast increase. The price response is completed, while the revenue outlook is management's expectation. Yahoo Finance reports Adobe's second-quarter earnings, providing a separate software reporting checkpoint. Compare the business models by demand, delivery cost and retained cash rather than treating AI exposure as an earnings result in itself. The optimistic forecast still requires commercial conversion to support a valuation that may already reflect greater confidence. [[n1117]] [[n0932]] [[n1469]]",
+      "rationale": "Remove excluded n1096; Broadcom n1117 anchors completed favorable share reaction and n1469 only quarterly-report status."
+    },
+    {
+      "path": "underowned[0].parts[0][1]",
+      "before": "Rzeczpospolita quotes Magdalena Proga-Stępień emphasizing service quality and customer relationships as a competitive advantage. This highlights a financial-services mechanism beyond the direction of rates. The attention comparison does not establish measured ownership or guarantee that a particular lender has already realized the advantage. [[n2014]]",
+      "after": "Rzeczpospolita quotes Magdalena Proga-Stępień emphasizing service quality and customer relationships as a competitive advantage. This highlights a financial-services mechanism beyond the direction of rates. Strong service can support demand through a changing policy cycle, but the case still needs customer retention and profitable lending. [[n2014]]",
+      "rationale": "Replace editorial ownership disclaimer with commercial customer-retention mechanism."
+    },
+    {
+      "path": "underowned[0].parts[1][1]",
+      "before": "XLF and a broad Polish equity tracker provide different instruments to examine, with different country, credit and business exposures. A durable customer relationship can support retention and useful cross-selling, but the economics still depend on pricing, service costs, underwriting and the products customers actually need.",
+      "after": "XLF and Beta ETF WIG20TR (ETFBW20TR.WA) offer financial-sector and broad Polish equity exposure, respectively, with different country, credit and business risks. A durable customer relationship can support retention and useful cross-selling, but the economics still depend on pricing, service costs, underwriting and the products customers actually need.",
+      "rationale": "Name exact XLF and Beta ETF WIG20TR instruments and exposure differences."
+    },
+    {
+      "path": "underowned[1].parts[0][1]",
+      "before": "Reuters reports the Mountain Valley gas pipeline preparing to start. This is a specific implementation catalyst behind the broader energy discussion, with startup still pending in the report. The opportunity concerns the movement from construction toward operation rather than a claim about low institutional ownership. [[n1064]]",
+      "after": "Reuters reports the Mountain Valley gas pipeline preparing to start. Startup remains pending in that account. Moving from construction toward operation brings commissioning and commercial delivery into focus, with the cash benefit depending on reliable service and the contract terms customers accept. [[n1064]]",
+      "rationale": "Replace editorial ownership disclaimer with startup/commissioning/cash mechanism."
+    },
+    {
+      "path": "underowned[1].parts[1][1]",
+      "before": "A diversified energy-infrastructure fund offers an instrument type to examine, with indirect exposure and other assets. A focused issuer would require a supported ownership role and contract economics. Commissioning, utilization and financing determine whether a completed asset produces the cash expected of it.",
+      "after": "XLE offers broad energy-sector exposure, with risks that extend well beyond pipeline operation; it provides no precise claim on Mountain Valley's cash. A focused project investment would need confirmed ownership and contract economics. Commissioning, utilization and financing determine whether an asset produces the cash expected of it.",
+      "rationale": "Repair unnamed infrastructure fund to eligible XLE broad sector exposure; explicitly reject precise pipeline-cash claim."
+    },
+    {
+      "path": "underowned[2].parts[1][1]",
+      "before": "Spotify is a named exposure to investigate against a diversified communication-services fund. The initiative must create value advertisers will pay for while controlling production, platform and governance costs. Useful functionality may strengthen the existing service before generating separately visible incremental earnings.",
+      "after": "Spotify (SPOT) offers direct company exposure, while XLC spreads risk across communication services. The initiative must create value advertisers will pay for while controlling production, platform and governance costs. Useful functionality may strengthen the existing service before generating separately visible incremental earnings.",
+      "rationale": "Name exact SPOT and XLC instruments and direct versus diversified exposure."
+    },
+    {
+      "path": "underowned[3].parts[0][1]",
+      "before": "Reuters reports doctors seeing additional benefits of weight-loss therapies as a possible way to attract more men. This is a prospective clinical-commercial assessment, with demand broadening still conditional. The theme compares attention across customer groups rather than claiming that the exposure is statistically underowned. [[n2174]]",
+      "after": "Reuters reports doctors seeing additional benefits of weight-loss therapies as a possible way to attract more men. This is a prospective clinical-commercial assessment, with demand broadening still conditional. A wider potential customer base improves the opportunity only if access, safety and profitable delivery support sustained treatment. [[n2174]]",
+      "rationale": "Replace editorial ownership disclaimer with conditional access/safety/profitability test."
+    },
+    {
+      "path": "underowned[3].parts[1][1]",
+      "before": "Lilly and Novo Nordisk are named instruments to examine, with product, valuation and execution risks that differ from a diversified health-care fund. Customer access, prescribing, supply and competition determine whether a broader potential market creates profitable revenue rather than only a larger strategic narrative.",
+      "after": "Eli Lilly (LLY) and Novo Nordisk's US ADR (NVO) carry product, valuation and execution risks that differ from diversified health-care exposure through XLV. Customer access, prescribing, supply and competition determine whether a broader potential market creates profitable revenue rather than only a larger strategic narrative.",
+      "rationale": "Name exact LLY,US ADR NVO and XLV exposure types."
+    },
+    {
+      "path": "crypto.parts[0][1]",
+      "before": "Crypto has given back part of its rebound while equity technology leadership remains strong. Bitcoin closed at 66,756.40 USD, down 2.18% in its latest completed UTC daily session, and Ether at 3,469.28 USD, down 2.54%. Their twenty-session changes are -2.58% and -6.91%, respectively (Yahoo Finance, prior completed daily close 2024-06-13). These spot moves should be assessed on the crypto calendar, with no assumption that they measure the same funding or earnings mechanism as a semiconductor share rally.",
+      "after": "Crypto prices have weakened while equity technology leadership remains strong. Bitcoin closed at 66,756.40 USD, down 2.18% in its latest completed UTC daily session, and Ether at 3,469.28 USD, down 2.54%. Their twenty-session changes are -2.58% and -6.91%, respectively (Yahoo Finance, prior completed daily close 2024-06-13). These spot moves should be assessed on the crypto calendar, with no assumption that they measure the same funding or earnings mechanism as a semiconductor share rally.",
+      "rationale": "Remove unsupported rebound path; retain own-card observed weakness."
+    },
+    {
+      "path": "crypto.parts[1][1]",
+      "before": "Investopedia reports MicroStrategy planning to raise money to buy more Bitcoin. That is a proposed financing-and-treasury action, not a completed purchase or proof of market-wide institutional demand. CNBC reports miners who attended Trump's meeting saying he viewed Bitcoin as useful to an AI competition strategy. Preserve the attribution to participants and the distinction between political statements and enacted rules. Reuters' report of Riot challenging Bitfarms' takeover defense adds a separate governance issue. The ecosystem contains financing, policy and corporate-control catalysts, but they do not form a single measure of token demand or guarantee that every business benefits. [[n1193]] [[n1110]] [[n0925]]",
+      "after": "Investopedia reports MicroStrategy planning to raise money to buy more Bitcoin. That is a proposed financing-and-treasury action, not a completed purchase or proof of market-wide institutional demand. CNBC reports miners who attended Trump's meeting saying he viewed Bitcoin as useful to an AI competition strategy. Participants' characterization of the meeting does not establish an enacted policy change. Reuters' report of Riot challenging Bitfarms' takeover defense adds a separate governance issue. The ecosystem contains financing, policy and corporate-control catalysts, but they do not form a single measure of token demand or guarantee that every business benefits. [[n1193]] [[n1110]] [[n0925]]",
+      "rationale": "Replace editorial attribution instruction with direct distinction between participants account and enacted policy."
+    },
+    {
+      "path": "anticipatory[0].parts[0][1]",
+      "before": "Reuters explains what prospective BOJ quantitative tightening might look like, while its preview has ultra-low rates staying in place and bond buying debated. The decision remains pending. Investors should distinguish the instrument and its market transmission rather than precommit to a uniform tightening or easing label. [[n1751]]",
+      "after": "Reuters explains what prospective BOJ quantitative tightening might look like, while its preview has ultra-low rates staying in place and bond buying debated. The decision remains pending. Investors should distinguish the instrument and its market transmission rather than precommit to a uniform tightening or easing label. [[n1651]] [[n1751]]",
+      "rationale": "Add same-paragraph n1651 for Reuters QT explainer."
+    },
+    {
+      "path": "anticipatory[1].parts[0][1]",
+      "before": "The Financial Times examines why the French far right is unsettling markets, while Reuters describes Macron's position after dissolving parliament. The national vote and resulting policy choices remain ahead. The investment variable is uncertainty about the future framework, not a fiscal program that has already been enacted. [[n1611]]",
+      "after": "The Financial Times examines why the French far right is unsettling markets, while Reuters describes Macron's position after dissolving parliament. The national vote and resulting policy choices remain ahead. The investment variable is uncertainty about the future framework, not a fiscal program that has already been enacted. [[n1611]] [[n1597]]",
+      "rationale": "Add same-paragraph n1597 for Reuters Macron dissolution context."
+    },
+    {
+      "path": "catalysts[0].title",
+      "before": "Goldman Sachs / GS — private credit growth needs underwriting",
+      "after": "Goldman Sachs / GS — private-bank lending needs underwriting",
+      "rationale": "Clarify private-bank lending rather than potentially misleading private-credit asset-class terminology."
+    }
+  ],
+  "source_disposition": "Root alone amended own-date exclusions for n1096; reviewer changed no source, card, feed, guard or exclusion registry."
+}

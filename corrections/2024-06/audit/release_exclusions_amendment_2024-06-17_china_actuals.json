@@ -1,0 +1,120 @@
+{
+  "schema": "controlled-retained-item-editorial-omission-amendment-v1",
+  "recorded_at_utc": "2026-11-09T10:31:28.752887+00:00",
+  "status": "applied_controlled_own_date_timing_exclusions",
+  "authorizing_scope": "Root delegated narrow independent June17 timing adjudication and editorial exclusions; no author messages or prose changes.",
+  "affected_date": "2024-06-17",
+  "new_excluded_ids": [
+    "n0298",
+    "n0299"
+  ],
+  "immutable_source_review_sha256": "28c6fc6470cd3376055f6f447774509f3b6f863f550ce82858889ea4d85be170",
+  "immutable_source_freeze_sha256": "a5a0a4936f5feba69e66665ac61e2bdd5c50af295a6dabe99498f14f293bb578",
+  "feed_sha256": "064f0e18017bdf95650d04828ffa6b71daf7c87ca83c6d823a738f1d92e5e7a3",
+  "card_sha256": "24df3209cd86f7a62e4e7cc7f014fe4c41687e7b1b141bbeca2c876fba00da9e",
+  "original_authoring_acceptance": {
+    "path": "audit/authoring_inputs_acceptance.json",
+    "sha256": "009b79a51b710f9a8b0b69f749e8e8483578ed14c952d6da77fee2bcf0751ff6",
+    "backup_path": "audit/review_history/authoring_inputs_acceptance_original_before_2024-06-17_china_actuals_20261109T103128Z.json",
+    "backup_sha256": "009b79a51b710f9a8b0b69f749e8e8483578ed14c952d6da77fee2bcf0751ff6",
+    "bytes": 8386
+  },
+  "original_records_preserved": [
+    {
+      "path": "exclusions/2024-06-17.json",
+      "sha256": "bf16f9365e3d63d339e8fbd5f5379a4a2e4992ebd75bbddb174191376bec949c",
+      "backup_path": "audit/review_history/exclusions_2024-06-17_before_china_actuals_20261109T103128Z.json",
+      "backup_sha256": "bf16f9365e3d63d339e8fbd5f5379a4a2e4992ebd75bbddb174191376bec949c",
+      "bytes": 286
+    },
+    {
+      "path": "audit/additional_release_exclusions.json",
+      "sha256": "266ca105305a31fe532d2a9b7e92d773636d42ee2c79c3b8cbc5607f4ee05950",
+      "backup_path": "audit/review_history/additional_release_exclusions_before_2024-06-17_china_actuals_20261109T103128Z.json",
+      "backup_sha256": "266ca105305a31fe532d2a9b7e92d773636d42ee2c79c3b8cbc5607f4ee05950",
+      "bytes": 240
+    },
+    {
+      "path": "audit/authoring_inputs_acceptance.json",
+      "sha256": "009b79a51b710f9a8b0b69f749e8e8483578ed14c952d6da77fee2bcf0751ff6",
+      "backup_path": "audit/review_history/authoring_inputs_acceptance_original_before_2024-06-17_china_actuals_20261109T103128Z.json",
+      "backup_sha256": "009b79a51b710f9a8b0b69f749e8e8483578ed14c952d6da77fee2bcf0751ff6",
+      "bytes": 8386
+    }
+  ],
+  "current_records": {
+    "exclusions/2024-06-17.json": "504c2dc57dc845b3fe202d71323f240af1c90da6232aa9c027d99bac97a4da12",
+    "audit/additional_release_exclusions.json": "ae6ecb01f7aef01f31972e28d03287ecfc4626005076a9869a74401dcb7d5a25"
+  },
+  "effective_authoring_input_delta": {
+    "date": "2024-06-17",
+    "supersedes_only_field": "exclusions_sha256",
+    "original_value": "bf16f9365e3d63d339e8fbd5f5379a4a2e4992ebd75bbddb174191376bec949c",
+    "current_value": "504c2dc57dc845b3fe202d71323f240af1c90da6232aa9c027d99bac97a4da12",
+    "feed_and_card_unchanged": true,
+    "all_other_original_authoring_input_rows_unchanged": true,
+    "original_authoring_acceptance_file_not_rewritten": true
+  },
+  "new_rows": [
+    {
+      "date": "2024-06-17",
+      "id": "n0298",
+      "feed_sha256": "064f0e18017bdf95650d04828ffa6b71daf7c87ca83c6d823a738f1d92e5e7a3",
+      "title": "China Home-Price Slump Accelerates Despite More Stimulus - Bloomberg.com",
+      "src": "Bloomberg.com",
+      "published_at": "2024-06-16T07:00:00+00:00",
+      "screen_kind": "timing",
+      "reason": "Headline describes a completed May China data outcome released after the June17 00:00UTC cutoff. Normalized June16 RSS timestamp cannot establish pre-release availability; omit this retained item only for June17.",
+      "release_event": "May2024 sales prices in70cities",
+      "release_local": "2024-06-17T09:30:00+08:00",
+      "release_utc": "2024-06-17T01:30:00+00:00",
+      "release_clock_evidence_url": "https://www.stats.gov.cn/sj/zxfb/202406/t20240617_1954705.html",
+      "release_clock_evidence_sha256": "313d247b4672a71f9c2e6292a7fab6e278cb663d0867217bb88d4de5e3d88f28",
+      "evidence_paths": [
+        "audit_work/june17_china_release_timing_search.json",
+        "audit_work/june17_nbs_primary_release_search.json",
+        "audit_work/june17_nbs_primary_release_pages.json"
+      ],
+      "source_cutoff_utc": "2024-06-17T00:00:00+00:00",
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    },
+    {
+      "date": "2024-06-17",
+      "id": "n0299",
+      "feed_sha256": "064f0e18017bdf95650d04828ffa6b71daf7c87ca83c6d823a738f1d92e5e7a3",
+      "title": "China's factory output disappoints, property sector stuck in doldrums - Reuters",
+      "src": "Reuters",
+      "published_at": "2024-06-16T07:00:00+00:00",
+      "screen_kind": "timing",
+      "reason": "Headline describes a completed May China data outcome released after the June17 00:00UTC cutoff. Normalized June16 RSS timestamp cannot establish pre-release availability; omit this retained item only for June17.",
+      "release_event": "May2024 industrialproduction",
+      "release_local": "2024-06-17T10:00:00+08:00",
+      "release_utc": "2024-06-17T02:00:00+00:00",
+      "release_clock_evidence_url": "https://www.stats.gov.cn/sj/zxfb/202406/t20240617_1954712.html",
+      "release_clock_evidence_sha256": "313d247b4672a71f9c2e6292a7fab6e278cb663d0867217bb88d4de5e3d88f28",
+      "evidence_paths": [
+        "audit_work/june17_china_release_timing_search.json",
+        "audit_work/june17_nbs_primary_release_search.json",
+        "audit_work/june17_nbs_primary_release_pages.json"
+      ],
+      "source_cutoff_utc": "2024-06-17T00:00:00+00:00",
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    }
+  ],
+  "proof_bindings": {
+    "audit_work/june17_china_release_timing_search.json": "d36da553615a25a6411abcdb250448e63f80855fbb8f51969bafd94e750d9682",
+    "audit_work/june17_nbs_primary_release_search.json": "1817214f2a6d130d3ef6fc1d194df63b887ea10f2ff21dcb96078a61084e1366",
+    "audit_work/june17_nbs_primary_release_pages.json": "313d247b4672a71f9c2e6292a7fab6e278cb663d0867217bb88d4de5e3d88f28"
+  },
+  "current_component_check": {
+    "exists": false,
+    "status": "not_yet_written",
+    "no_prose_approval": true
+  },
+  "all_144_immutable_source_bindings_unchanged": true,
+  "limits": [
+    "China-local NBS display clocks are interpreted in Asia/Shanghai UTC+08:00. No original earlier article/headline vintage is certified.",
+    "Only exactJune17 retaineditemIDs n0298/n0299 are omitted. Frozenfeeds/cards/guards/sourcefreeze/sourceacceptance remain byte-identical.",
+    "This amends mutableeditorial exclusions and the effectiveJune17 authoring-input exclusionbinding only; it is not factual/prose acceptance."
+  ]
+}

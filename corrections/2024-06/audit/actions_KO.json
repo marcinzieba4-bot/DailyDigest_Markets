@@ -1,0 +1,104 @@
+{
+ "ticker": "KO",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KO?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "3ff31eabe404e2af31148f1381ce33f09980faf5fa3eda30ae1ebfb4bc4c2891",
+   "fetched_at_utc": "2026-11-09T09:47:51.949669+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KO?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "fa17cd515c689f948aba18c4e5dccf1b8bb3b80c36f554ea6b8e29ebd8c7c3d6",
+   "fetched_at_utc": "2026-11-09T09:47:52.092625+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/KO?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "3ff31eabe404e2af31148f1381ce33f09980faf5fa3eda30ae1ebfb4bc4c2891",
+    "fetched_at_utc": "2026-11-09T09:47:51.949669+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "KO",
+    "exchangeName": "NYQ",
+    "fullExchangeName": "NYSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": -252322200,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/KO?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "fa17cd515c689f948aba18c4e5dccf1b8bb3b80c36f554ea6b8e29ebd8c7c3d6",
+    "fetched_at_utc": "2026-11-09T09:47:52.092625+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "KO",
+    "exchangeName": "NYQ",
+    "fullExchangeName": "NYSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": -252322200,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 593,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

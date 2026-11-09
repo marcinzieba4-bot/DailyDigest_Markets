@@ -1,0 +1,11 @@
+# Preserve exact frozen bytes; exempt only blank-at-eol on these reviewed paths.
+# All other whitespace checks remain enabled.
+html/2024-06-03.html whitespace=blank-at-eof,space-before-tab,-blank-at-eol,cr-at-eol
+html/2024-06-04.html whitespace=blank-at-eof,space-before-tab,-blank-at-eol,cr-at-eol
+html/2024-06-05.html whitespace=blank-at-eof,space-before-tab,-blank-at-eol,cr-at-eol
+html/2024-06-06.html whitespace=blank-at-eof,space-before-tab,-blank-at-eol,cr-at-eol
+html/2024-06-07.html whitespace=blank-at-eof,space-before-tab,-blank-at-eol,cr-at-eol
+html/2024-06-17.html whitespace=blank-at-eof,space-before-tab,-blank-at-eol,cr-at-eol
+html/2024-06-28.html whitespace=blank-at-eof,space-before-tab,-blank-at-eol,cr-at-eol
+# Frozen acquisition input: accepted market review binds this exact file hash.
+tools/build_cards.py whitespace=blank-at-eof,space-before-tab,-blank-at-eol,cr-at-eol

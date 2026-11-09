@@ -1,0 +1,38 @@
+{
+  "status": "news_frozen_after_independent_guards_and_staged_projection_accepted_waiting_root_market_binding_and_postfreeze_source_acceptance",
+  "completed_at_utc": "2026-11-09T10:21:15.805708+00:00",
+  "root": "/workspace/work/june2024",
+  "dates": 20,
+  "catalogue_contexts": 709,
+  "logical_query_urls": 14497,
+  "raw_own_date_records": 47508,
+  "ready_own_date_records": 47421,
+  "screened_omissions": 87,
+  "observed_capped_requests": 0,
+  "maximum_observed_raw_response_items": 47,
+  "physical_attempt_counts": {
+    "recorded_finished_attempts": 14853,
+    "successful_attempts": 14497,
+    "failed_attempts": 356,
+    "retained_response_bodies": 14795,
+    "recorded_failed_attempts_without_bodies": 58
+  },
+  "source_freeze": "audit/source_freeze.json",
+  "news_freeze_sha256_before_market_binding": "a5a0a4936f5feba69e66665ac61e2bdd5c50af295a6dabe99498f14f293bb578",
+  "release_guard_review": "audit/independent_release_guard_review.json",
+  "release_guard_review_sha256": "f18c844ce5f6741a883d51097655dc3526d2b1e6b0434cf24e6d59c1dcf4545a",
+  "independent_staged_review": "audit_work/independent_staged_source_review.json",
+  "independent_staged_review_sha256": "4e11d52df4db3e6d1ccf6f6d19be13318f70d3f0613bfeffaa29c1584699c933",
+  "independent_physical_review": "audit/independent_physical_source_review.json",
+  "capture_limitation": "audit_work/acquisition_capture_limitation.json",
+  "physical_evidence_scope": "All14497logicalquerysignatures have retained successful canonical XML/cache and recorded successful physical attempts. Recorded14853finishedattempts include356failedattempts;14795responsebodies retained.58initialHTTPErrorbodieslost and<=16possibleunloggedinterruptedattempts explicitly disclosed. No full physical-attempt byte completeness or exhaustive/no-truncation reporting claim.",
+  "source_only_changes": [
+    "tools/topics.py",
+    "tools/fetch_news.py",
+    "tools/expand_capped_news.py",
+    "tools/ready_feeds.py",
+    "tools/finalize_sources.py",
+    "source-only audit_work helpers/evidence"
+  ],
+  "authoring": "No factual report/spec/retail narrative was authored. Fresh authors must wait for root post-freeze independent source acceptance, then read only own-date frozen feed/card."
+}

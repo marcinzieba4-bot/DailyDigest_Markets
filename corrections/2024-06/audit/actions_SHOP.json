@@ -1,0 +1,104 @@
+{
+ "ticker": "SHOP",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SHOP?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+   "sha256": "7ea2eeac2f8b47842706599a139db630abb94e461a73366f1fc1bb0c3cb97fa5",
+   "fetched_at_utc": "2026-11-09T09:47:48.349711+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SHOP?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+   "sha256": "bc33ca0f19bf14ab112431bce71669f19b2da9b87ccef1fb26cefcfe70a4c0fc",
+   "fetched_at_utc": "2026-11-09T09:47:48.479827+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/SHOP?period1=1711929600&period2=1719532800&interval=1d&events=div,splits",
+    "sha256": "7ea2eeac2f8b47842706599a139db630abb94e461a73366f1fc1bb0c3cb97fa5",
+    "fetched_at_utc": "2026-11-09T09:47:48.349711+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "SHOP",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1432128600,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/SHOP?period1=1719532800&period2=1794217656&interval=1d&events=div,splits",
+    "sha256": "bc33ca0f19bf14ab112431bce71669f19b2da9b87ccef1fb26cefcfe70a4c0fc",
+    "fetched_at_utc": "2026-11-09T09:47:48.479827+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "SHOP",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1432128600,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 593,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

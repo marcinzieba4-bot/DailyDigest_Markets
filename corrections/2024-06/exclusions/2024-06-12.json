@@ -1,0 +1,43 @@
+{
+  "date": "2024-06-12",
+  "feed_sha256": "a29b7aea5b2498d7b55efa9a6b1f753786644ef3b014fbc7163c3e164bdbe571",
+  "exclusions": [
+    {
+      "date": "2024-06-12",
+      "id": "n1518",
+      "feed_sha256": "a29b7aea5b2498d7b55efa9a6b1f753786644ef3b014fbc7163c3e164bdbe571",
+      "title": "Eni sells 10% of Saipem at 1.970 euros per share - Reuters",
+      "src": "Reuters",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "screen_kind": "timing",
+      "reason": "Specific completed/priced Eni/Saipem sale is announcedJune12 07:03CEST=05:03UTC after own00UTCcut. Earlier sale launch is distinct and cannot certify completed pricing.",
+      "source_cutoff_utc": "2024-06-12T00:00:00Z",
+      "evidence_paths": [
+        "audit_work/june12_eni_ppi_clock_excerpt.json"
+      ],
+      "evidence_sha256": {
+        "audit_work/june12_eni_ppi_clock_excerpt.json": "daadee7dcfa910113f8bfec9884a00b6a3f1c8eb7454b0794c77340aa126fbec"
+      },
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    },
+    {
+      "date": "2024-06-12",
+      "id": "n1795",
+      "feed_sha256": "a29b7aea5b2498d7b55efa9a6b1f753786644ef3b014fbc7163c3e164bdbe571",
+      "title": "Japan May wholesale inflation jumps, complicates BOJ rate hike path - Reuters",
+      "src": "Reuters",
+      "published_at": "2024-06-11T07:00:00+00:00",
+      "screen_kind": "timing_uncertainty",
+      "reason": "Conservative specific Reutersarticle-vintage omission: actualBOJPPIreleaseJune11 23:50UTC was BEFOREcut, but expandedanalysisheadline lacks certified pre-cut originalavailability. Do not misclassify underlying release as late.",
+      "source_cutoff_utc": "2024-06-12T00:00:00Z",
+      "evidence_paths": [
+        "audit_work/june12_eni_ppi_clock_excerpt.json"
+      ],
+      "evidence_sha256": {
+        "audit_work/june12_eni_ppi_clock_excerpt.json": "daadee7dcfa910113f8bfec9884a00b6a3f1c8eb7454b0794c77340aa126fbec"
+      },
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation"
+    }
+  ],
+  "scope": "Known pre-release/unsafe records were removed before freeze and remain in the ready receipt; this file records subsequent own-date editorial exclusions only."
+}
