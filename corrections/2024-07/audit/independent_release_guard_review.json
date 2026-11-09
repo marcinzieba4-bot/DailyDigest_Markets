@@ -1,0 +1,466 @@
+{
+  "review_type": "independent_fixed_scope_release_guard_review",
+  "reviewer": "/root/writer_late",
+  "reviewed_at_utc": "2026-11-05T11:41:08.488650+00:00",
+  "status": "passed_fixed_scope_with_named_conservative_omissions",
+  "passed": true,
+  "authoring_acceptance": false,
+  "fatal_or_major_remaining": 0,
+  "errors": [],
+  "release_schedule_sha256": "ec0affb8cf6d2e518d655e9fafd76c6d5b7ac56db1548962b1d6e95be7f2ec7d",
+  "screening_tool_sha256": "17ba7efe7b6bf89d67899b605f5507d3cfebc21227473103b29b33600ff8a5e4",
+  "named_exclusions_sha256": "06aba4eb3f84a714a7d429cf46641cd01c4b2b6245ec39a5a8010e87f9de6888",
+  "bound_schedule_guard_count": 90,
+  "owner_policy_lock_sha256": "7d2660a7a5a4546f6779d8ed9d122a4adfa42fc8ef70a607c91425775647dfc4",
+  "timing_reference_path": "audit_work/release_guard_refs/official_timing_excerpts.json",
+  "timing_reference_sha256": "b98455f9bd93aa998afaebcd365dcbba8158f17b921f4515a94e6ac21ff27085",
+  "timing_reference_count": 20,
+  "named_omission_recommendations_path": "audit_work/release_guard_refs/named_omission_recommendations.json",
+  "named_omission_recommendations_sha256": "af73ce32a8768a7fc6aed5b8e9f0ae5152b3f5daf89f0bb2798737a6f6aeb0e0",
+  "independent_tests_path": "audit_work/release_guard_refs/independent_guard_cases.json",
+  "independent_tests_sha256": "dc06640b6ae65c2226d018e31ff0e5ae04c25633f2340b9e9784c2637c9bfddc",
+  "checks": {
+    "independently_designed_synthetic_cases": 49,
+    "exact_named_omission_records": 2,
+    "observed_preview_positive_controls": 4,
+    "owner_regressions_independently_replayed": 96,
+    "all_passed": true
+  },
+  "bounded_actual_headline_scan": {
+    "path": "audit_work/release_guard_refs/focused_staged_headline_scan.json",
+    "sha256": "d1cab62ad96db0e237428b8a5a81ef4fd456e161ce648712d5e965acccf1d28d",
+    "distinct_headlines_read": 82,
+    "provisional_candidate_count": 23,
+    "finding": "No additional pre-release actual admission identified in this fixed focused set. Three observed preview overblocks were corrected; two exact version uncertainties are conservatively removed. Tax-election and commercial-store PMI lexical matches were not treated as economic or political release evidence."
+  },
+  "clock_conversions": [
+    {
+      "event": "Tankan",
+      "local": "2024-07-01T08:50:00",
+      "timezone": "Asia/Tokyo",
+      "utc": "2024-06-30T23:50:00+00:00",
+      "edition_cutoff_utc": "2024-07-01T00:00:00+00:00",
+      "release_is_strictly_before_this_upper_bound": false,
+      "relation_to_cutoff": "before"
+    },
+    {
+      "event": "Japan final manufacturing PMI",
+      "local": "2024-07-01T09:30:00",
+      "timezone": "Asia/Tokyo",
+      "utc": "2024-07-01T00:30:00+00:00",
+      "edition_cutoff_utc": "2024-07-01T00:00:00+00:00",
+      "release_is_strictly_before_this_upper_bound": false,
+      "relation_to_cutoff": "after"
+    },
+    {
+      "event": "Japan May preliminary wages",
+      "local": "2024-07-08T08:30:00",
+      "timezone": "Asia/Tokyo",
+      "utc": "2024-07-07T23:30:00+00:00",
+      "edition_cutoff_utc": "2024-07-08T00:00:00+00:00",
+      "release_is_strictly_before_this_upper_bound": false,
+      "relation_to_cutoff": "before"
+    },
+    {
+      "event": "SK hynix press-release strict upper bound",
+      "local": "2024-07-25T09:00:00",
+      "timezone": "Asia/Seoul",
+      "utc": "2024-07-25T00:00:00+00:00",
+      "edition_cutoff_utc": "2024-07-25T00:00:00+00:00",
+      "release_is_strictly_before_this_upper_bound": true,
+      "relation_to_cutoff": "strict upper bound equals cutoff, so an on-schedule release is earlier"
+    },
+    {
+      "event": "UK exit-poll publication",
+      "local": "2024-07-04T22:00:00",
+      "timezone": "Europe/London",
+      "utc": "2024-07-04T21:00:00+00:00",
+      "edition_cutoff_utc": "2024-07-05T00:00:00+00:00",
+      "release_is_strictly_before_this_upper_bound": false,
+      "relation_to_cutoff": "before"
+    }
+  ],
+  "findings_and_dispositions": [
+    {
+      "id": "RG01",
+      "area": "UK projection versus completed acts",
+      "finding": "An exit-poll phrase previously allowed named/sworn-in PM and concession claims, including an intervening country adjective or Downing Street entry, to escape the settled-result guard.",
+      "disposition": "Owner added focused actual-clause controls. All six reproduced mixed-status negatives reject; a pure eligible July 4 exit-poll projection remains permitted in the July 5 edition. The arbitrary settled-result 09:00 UTC minute was replaced by an explicit conservative day-only bound.",
+      "evidence_keys": [
+        "uk_exit_poll_preview"
+      ],
+      "resolved": true
+    },
+    {
+      "id": "RG02",
+      "area": "Company-result trigger and mixed clauses",
+      "finding": "The narrow third trigger lookahead missed top-estimates, profit-soars/doubles, Q4-disappoints, earnings-surprise and better-than-expected-comparison forms.",
+      "disposition": "The reproduced actual-result forms now reject before their release eligibility. Explicit previews remain eligible and an actual first clause is not cleared by a later forecast clause. The complete owner regression set was replayed against the locked bytes.",
+      "resolved": true
+    },
+    {
+      "id": "RG03",
+      "area": "TSMC separate disclosures",
+      "finding": "The July 10 monthly revenue disclosure and revenue-only quarter aggregate are not the July 18 EPS/profit/outlook release.",
+      "disposition": "Separate conservative day-only guards allow eligible revenue-only reporting from July 11 and full earnings/profit/outlook from July 19. The observed profit-seen-jumping preview remains a preview.",
+      "evidence_keys": [
+        "tsmc_revenue_operation",
+        "tsmc_full_result"
+      ],
+      "resolved": true
+    },
+    {
+      "id": "RG04",
+      "area": "Early-local Japan and Korea",
+      "finding": "A single local-calendar-day rule cannot distinguish Japan 08:30/08:50 releases from Japan 09:30 PMI releases, or a Korean press release explicitly scheduled before 09:00 Seoul.",
+      "disposition": "Primary Tankan and PMI embargo headers and the dated MHLW wage schedule support the listed UTC conversions. SK hynix has a strict-before-midnight bound and July 25 eligibility; its July 24 synthetic actual rejects. No July 25 cash-session reaction is inferred from the earlier earnings clock.",
+      "evidence_keys": [
+        "japan_tankan",
+        "japan_manufacturing_pmi",
+        "japan_services_pmi",
+        "japan_flash_pmi",
+        "japan_may_wages",
+        "skhynix_early_local"
+      ],
+      "resolved": true
+    },
+    {
+      "id": "RG05",
+      "area": "GUS dates and clock precision",
+      "finding": "June wages/employment and industrial-output/producer-price releases are dated July 18, retail July 22, and official registered unemployment July 23. A current-page 2026 release-hour banner is not 2024 evidence.",
+      "disposition": "The four guards use conservative next-cutoff eligibility July 19, July 23 and July 24, with release_utc null and no invented exact hour. Earlier ministry estimates must remain distinct from the later GUS release.",
+      "evidence_keys": [
+        "gus_wages_employment",
+        "gus_industry",
+        "gus_retail",
+        "gus_unemployment"
+      ],
+      "resolved": true
+    },
+    {
+      "id": "RG06",
+      "area": "Samsung clock uncertainty",
+      "finding": "A July 31 Korean local date alone does not prove whether the full result preceded UTC midnight. The preliminary July 5 article has a separate original-version uncertainty.",
+      "disposition": "Samsung full results have their own explicitly uncertain conservative August 1 bound rather than the claim that every Korean morning release follows midnight. Only the exact doubtful July 5 Reuters record is removed by the named policy; other eligible company news and later own-date evidence remain available.",
+      "evidence_keys": [
+        "samsung_full_uncertain_clock"
+      ],
+      "resolved": true
+    },
+    {
+      "id": "RG07",
+      "area": "Exact publisher-version uncertainties",
+      "finding": "The current Reuters retrieval dates for July 5 n1053 and July 31 n1915 are after their respective cutoffs, while RSS dates are earlier. The displayed retrieval Date is not certified as first publication.",
+      "disposition": "Both exact own-date records, including their raw IDs, titles, RSS URLs/pubDates and current raw-source identities, are bound in the recommendation artifact. Current screening removes both through the owner-controlled named table. Release-event timing is not substituted for article-vintage evidence.",
+      "resolved": true
+    },
+    {
+      "id": "RG08",
+      "area": "Observed eligible previews",
+      "finding": "The bounded actual-headline scan found three genuine pending Microsoft/multi-company previews conservatively excluded: Await Earnings for Clarity, report will offer a new gauge, and biggest test yet: earnings from the named companies.",
+      "disposition": "Only those three observed titles received focused positive controls. They are reclassified as company news with a seven-day age limit; stale instances are removed rather than promoted by a broad monthly category. All three fresh observed controls and the existing TSMC preview control pass.",
+      "resolved": true
+    }
+  ],
+  "supported_and_uncertain_timing_decisions": [
+    {
+      "key": "japan_tankan",
+      "url": "https://www.boj.or.jp/en/statistics/tk/gaiyo/2021/tka2406.pdf",
+      "document_date": "2024-07-01",
+      "timing_decision": "Japan-local08:50 onJul1 converts toJun30 23:50UTC; an actual can be known byJul1 cutoff. This does not establish every article version existed by cutoff.",
+      "precision": "dated primary source",
+      "limits": [
+        "Current connected-web extraction of a historical source, not an independently archived original publisher version."
+      ]
+    },
+    {
+      "key": "japan_manufacturing_pmi",
+      "url": "https://www.pmi.spglobal.com/Public/Home/PressRelease/c20f0e9ab663488185a0fa10abd04ae2",
+      "document_date": "2024-07-01",
+      "timing_decision": "AfterJul1 midnight; actual outcome excludedJul1, eligibleJul2.",
+      "precision": "dated primary source",
+      "limits": [
+        "Current connected-web extraction of a historical source, not an independently archived original publisher version."
+      ]
+    },
+    {
+      "key": "japan_services_pmi",
+      "url": "https://www.pmi.spglobal.com/Public/Home/PressRelease/c0c61448281b481485ace9b071ba271f",
+      "document_date": "2024-07-03",
+      "timing_decision": "AfterJul3 midnight; actual excludedJul3, eligibleJul4.",
+      "precision": "dated primary source",
+      "limits": [
+        "Current connected-web extraction of a historical source, not an independently archived original publisher version."
+      ]
+    },
+    {
+      "key": "japan_flash_pmi",
+      "url": "https://www.pmi.spglobal.com/Public/Home/PressRelease/9ea026296738494b8bc56f70afa8b9e1",
+      "document_date": "2024-07-24",
+      "timing_decision": "AfterJul24 midnight; actual excludedJul24, eligibleJul25.",
+      "precision": "dated primary source",
+      "limits": [
+        "Current connected-web extraction of a historical source, not an independently archived original publisher version."
+      ]
+    },
+    {
+      "key": "japan_may_wages",
+      "url": "https://www.mhlw.go.jp/toukei/itiran/roudou/monthly/r06/2404p/dl/pdf2404p.pdf",
+      "document_date": "2024-06-05",
+      "timing_decision": "June5 document states preliminary/final releases generally08:30 and May preliminaryJul8. ScheduledJul8 08:30JST converts toJul7 23:30UTC; Jul8 is the first weekday cutoff after it.",
+      "precision": "dated primary source",
+      "limits": [
+        "Japanese excerpt translated for timing only; July25 is the final May estimate and must not be substituted for the July8 preliminary vintage.",
+        "A schedule is not proof that a particular current article/headline version existed at the cutoff."
+      ]
+    },
+    {
+      "key": "japan_national_cpi_secondary",
+      "url": "https://masvn.com/api/attachment/file/1720969430048-Weekly_20240715.pdf",
+      "document_date": "2024-07-15",
+      "timing_decision": "Vietnam localUTC+7 makes thisJul18 23:30UTC, supportingJul19 eligibility.",
+      "precision": "dated secondary calendar",
+      "limits": [
+        "Used only as timing corroboration; no forecast or realised value imported into a report.",
+        "Primary June-CPI release header was not retained in this review."
+      ]
+    },
+    {
+      "key": "japan_tokyo_cpi_secondary",
+      "url": "https://grapevinesix.s3.amazonaws.com/pdf/pdf_Dswap.pdf",
+      "document_date": "2024-07-19",
+      "timing_decision": "Eastern daylight timeUTC-4 convertsJul25 19:30 toJul25 23:30UTC, consistent withJul26 eligibility.",
+      "precision": "dated secondary calendar excerpt only",
+      "limits": [
+        "Mutable PDF URL and current cached extraction are not a retained original PDF vintage.",
+        "Primary Tokyo-CPI release header was not retained; do not certify a particular article was pre-cutoff.",
+        "No Tokyo-CPI actual headline was found in the currentJul26 near-release raw-source scan."
+      ]
+    },
+    {
+      "key": "gus_wages_employment",
+      "url": "https://stat.gov.pl/files/gfx/portalinformacyjny/pl/defaultaktualnosci/5474/3/151/1/przecietne_zatrudnienie_i_wynagrodzenie_w_sektorze_przedsiebiorstw_w_czerwcu_2024_r..pdf",
+      "document_date": "2024-07-18",
+      "timing_decision": "Conservatively omit current-release actuals throughJul18 cutoff; allow fromJul19. Exact2024 hour not certified.",
+      "precision": "dated primary day-only bound",
+      "limits": [
+        "Current connected-web extraction of a historical source, not an independently archived original publisher version."
+      ]
+    },
+    {
+      "key": "gus_industry",
+      "url": "https://stat.gov.pl/kalendarium/18-07-2024.html",
+      "document_date": "2024-07-18",
+      "timing_decision": "June industrial output/producer prices belong toJul18 calendar; conservative actual eligibilityJul19.",
+      "precision": "dated primary calendar day-only bound",
+      "limits": [
+        "Current page contains a2026changed-release-hour banner; that banner was deliberately excluded from the timing decision.",
+        "No2024intraday minute is asserted."
+      ]
+    },
+    {
+      "key": "gus_retail",
+      "url": "https://stat.gov.pl/download/gfx/portalinformacyjny/pl/defaultaktualnosci/5466/14/115/1/dynamika_sprzedazy_detalicznej_w_czerwcu_2024_r..pdf",
+      "document_date": "2024-07-22",
+      "timing_decision": "Conservative actual eligibilityJul23; exact minute unasserted.",
+      "precision": "dated primary day-only bound",
+      "limits": [
+        "Connected-web indexed PDF excerpt retained; direct open timed out."
+      ]
+    },
+    {
+      "key": "gus_unemployment",
+      "url": "https://stat.gov.pl/obszary-tematyczne/rynek-pracy/bezrobocie-rejestrowane/bezrobotni-zarejestrowani-i-stopa-bezrobocia-stan-w-koncu-czerwca-2024-r-%2C2%2C143.html?pdf=1",
+      "document_date": "2024-07-23",
+      "timing_decision": "Conservative GUS actual eligibilityJul24; earlier ministry estimates are not this official release.",
+      "precision": "dated primary day-only bound",
+      "limits": [
+        "Current connected-web extraction of a historical source, not an independently archived original publisher version."
+      ]
+    },
+    {
+      "key": "skhynix_early_local",
+      "url": "https://news.skhynix.com/en/q2-2024-earnings-conference-call-invitation/",
+      "document_date": "2024-07-11",
+      "timing_decision": "The announced press-release interval ends strictly beforeJul25 00UTC. Guard premature actuals throughJul24; Jul25 may be eligible if the release occurred as scheduled and the own article has no later reaction.",
+      "precision": "dated primary strict-before-midnight bound",
+      "limits": [
+        "Exact minute unasserted; do not treat the09:00conference-call boundary as the actual release minute.",
+        "A subsequent Korean cash-session reaction remains later than the Jul25 cutoff even if the earnings press release is earlier."
+      ]
+    },
+    {
+      "key": "samsung_full_uncertain_clock",
+      "url": "https://news.samsung.com/global/samsung-electronics-announces-results-for-second-quarter-of-2024",
+      "document_date": "2024-07-31",
+      "timing_decision": "Exact Korean morning clock not established here. Conservative omission of the actual fromJul31 remains appropriate; no claim that it necessarily occurred after00UTC.",
+      "precision": "dated primary date only; clock uncertain",
+      "limits": [
+        "Current connected-web extraction of a historical source, not an independently archived original publisher version."
+      ]
+    },
+    {
+      "key": "uk_exit_poll_preview",
+      "url": "https://www.skygroup.sky/en-gb/article/how-to-follow-the-uk-election-results-with-sky-news",
+      "document_date": "2024-07-03",
+      "timing_decision": "Scheduled22:00British daylight time equals21:00UTCJul4. Jul5 may state the projection; it cannot turn that projection into counted settled results or aPM appointment.",
+      "precision": "dated primary pre-event broadcaster schedule",
+      "limits": [
+        "Current connected-web extraction of a historical source, not an independently archived original publisher version."
+      ]
+    },
+    {
+      "key": "asml_regular_day",
+      "url": "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu6.2-billion-total-net-sales-and-eu1.6-billion-net-income-q2-2024",
+      "document_date": "2024-07-17",
+      "timing_decision": "European pre-open still follows theJul17UTCmidnight cutoff. Conservative eligible editionJul18.",
+      "precision": "dated primary regular-day timestamp",
+      "limits": [
+        "The displayed07:00clock timezone is not independently certified here; no minute conversion is needed for the conservative next-cutoff disposition."
+      ]
+    },
+    {
+      "key": "microsoft_postclose",
+      "url": "https://news.microsoft.com/source/2024/07/16/microsoft-announces-quarterly-earnings-release-date-60/",
+      "document_date": "2024-07-16",
+      "timing_decision": "Scheduled US post-close outcome is unavailableJul30cutoff and can be eligibleJul31. TheJul30regular cash close precedes the outcome.",
+      "precision": "dated primary pre-event schedule",
+      "limits": [
+        "Current connected-web extraction of a historical source, not an independently archived original publisher version."
+      ]
+    },
+    {
+      "key": "amd_postclose",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1207/amd-to-report-fiscal-second-quarter-2024-financial-results",
+      "document_date": "2024-07-16",
+      "timing_decision": "Same eligibility distinction asMicrosoft; prior regular close cannot be labelled the earnings reaction.",
+      "precision": "dated primary pre-event schedule",
+      "limits": [
+        "Current connected-web extraction of a historical source, not an independently archived original publisher version."
+      ]
+    },
+    {
+      "key": "meta_after_july31_cutoff",
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2024/Meta-to-Announce-Second-Quarter-2024-Results/default.aspx",
+      "document_date": "2024-07-01",
+      "timing_decision": "All completedMetaJul31earnings claims are afterJul31report cutoff. The July31 edition can use a preview only.",
+      "precision": "dated primary pre-event schedule",
+      "limits": [
+        "Current connected-web extraction of a historical source, not an independently archived original publisher version."
+      ]
+    },
+    {
+      "key": "tsmc_revenue_operation",
+      "url": "https://pr.tsmc.com/english/news/3157",
+      "document_date": "2024-07-10",
+      "timing_decision": "Conservative monthly/aggregate-revenue outcome eligibilityJul11; not a full EPS/profit/guidance result.",
+      "precision": "dated primary day-only bound",
+      "limits": [
+        "Current connected-web extraction of a historical source, not an independently archived original publisher version."
+      ]
+    },
+    {
+      "key": "tsmc_full_result",
+      "url": "https://pr.tsmc.com/english/news/3160",
+      "document_date": "2024-07-18",
+      "timing_decision": "Full earnings/EPS/profit/guidance outcome remains unavailableJul18cutoff; conservative eligibilityJul19.",
+      "precision": "dated primary day-only bound",
+      "limits": [
+        "Current connected-web extraction of a historical source, not an independently archived original publisher version."
+      ]
+    }
+  ],
+  "named_record_checks": [
+    {
+      "date": "2024-07-05",
+      "id": "n1053",
+      "raw_identity_matches_recommendation": true,
+      "unreviewed_sha256": "b134761b18904abab63b1dd60a2a234265841bbd4751ee099a394bc9fb6c7aad",
+      "excluded_by_current_screen": true,
+      "guard": "Uncertain original publisher version before own cutoff",
+      "pass": true
+    },
+    {
+      "date": "2024-07-31",
+      "id": "n1915",
+      "raw_identity_matches_recommendation": true,
+      "unreviewed_sha256": "6855b074973201f9686ccc5b12fc723790de78ac2f69281ba023ad652c0b87b9",
+      "excluded_by_current_screen": true,
+      "guard": "Uncertain original publisher version before own cutoff",
+      "pass": true
+    }
+  ],
+  "observed_preview_controls": [
+    {
+      "case": "Observed pending preview preserved",
+      "title": "Microsoft (MSFT) Analysis: Volatile Trading Day Signals Resistance, Await Earnings for Clarity - StockInvest.us",
+      "date": "2024-07-17",
+      "id": "n1340",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOanVTS3dsZmVSSnFMd3h5WkpxQThmYkh1c3lwcWlOS1BPSXpNWlRLMUl2RkhXQUMzV0RCcHNqenVtYTgxNmt5N19vY0NYVWhTNE9udDdKYUF2SE1qazUxR3p1eE1xVjBMNTNfeU5raWt5c1F3b203SlFKY2lNRzJydktzYlIwY2J5RzJvQ2RIUDcxeC1IOF9PZDJDWmNKUGlIYUlJOTdoTm5MZ0VXODhxNlVhMWpGazVjeE9rY1d3MXpWUQ?oc=5",
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "Observed pending preview preserved",
+      "title": "The 'great rotation' faces its biggest test yet: earnings from Microsoft, Meta, Apple and Amazon - CNBC",
+      "date": "2024-07-29",
+      "id": "n1577",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQU0RLd21yU2dVaGxabTVLaDBiQWUxSkxZZDdFWkcwTmsxeUFLWDZvMDBEME85a0t4YmdaYXE1a0hoSElGaDBBWUwxSlFrc0FJOXFUWTRISjhKbE43czBJczdsTmJfbFVHRFNEZklrRE5vRmVUM08ycHJ5MG5mWnAxa01NMnlENWI3T0FfUER6VXE2eFY3ZVdZRmNBaG43YVpaT3dhYkZkd3dadDNwenJ0ZnVRdXE?oc=5",
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "Observed pending preview preserved",
+      "title": "Microsoft’s earnings report will offer a new gauge for AI demand and cloud investments - GeekWire",
+      "date": "2024-07-30",
+      "id": "n0093",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNY1BvWURERFdVcV9FRTZSb2dJVnR2SmI4RGdlcmNUWWhLVHY4YmlXY2p0MW9YWGpmZ2JFNlVoRktVNWdhS0FBb2tUaFlLX0tCSzNFSXd2R0xqdEFUbENVYVBzVkNKak5GSDJ3RFVHbDVqZ09CZVdTa2dtVXJnbkhRejFpRW91cUFtekZiUHpteHZsUVUzY2JOZmFnS0dTblNOLTJIaGYtbFB1U1ZwYXJuaWVneFRPZGxU?oc=5",
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "Observed pending preview preserved",
+      "title": "TSMC second-quarter profit seen jumping 30% on surging AI chip demand - Reuters",
+      "date": "2024-07-15",
+      "id": "n1077",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbmxjMWpFRmhGSzZMSVlFdEdwNTlXN3AtYXNBdVdWNnN6YlViekJZZW9qZUpzV0VmRnZxXzVHWGlGeXhiRS1JZjY1ZDRmR2owaVNMM09HNzRDZll2MDlRdmVpMWctNDBkTGNYNE8yVmhtZUNpWnNiUWpBWHZPdzNuZnFtSWl3cHdqenJxLVpEX1FuUHhIUzUzN25VZVpKLWk2WmpvbUdSUHBaa1VnZnVQd05n?oc=5",
+      "actual_guard": null,
+      "pass": true
+    }
+  ],
+  "remaining_uncertain_versions": [
+    {
+      "date": "2024-07-05",
+      "id": "n1053",
+      "disposition": "exact record omitted, uncertainty not guessed",
+      "basis": {
+        "url": "https://www.reuters.com/technology/samsung-flags-15-fold-rise-second-quarter-profit-chip-prices-climb-2024-07-04/",
+        "tool_date": "2024-07-05T04:33:38+00:00",
+        "web_reference": "turn544088news9",
+        "limitation": "Displayed retrieval Date may be an update time; no archived pre-cutoff original headline version was established."
+      }
+    },
+    {
+      "date": "2024-07-31",
+      "id": "n1915",
+      "disposition": "exact record omitted, uncertainty not guessed",
+      "basis": {
+        "url": "https://www.reuters.com/markets/asia/japan-june-retail-sales-rise-37-year-on-year-better-than-forecasts-2024-07-31/",
+        "tool_date": "2024-07-31T00:01:14+00:00",
+        "web_reference": "turn852899news0",
+        "limitation": "A genuine pre-midnight government release would not by itself establish this article existed before the cutoff."
+      }
+    }
+  ],
+  "review_limits": [
+    "This is a fixed-scope independent AI release-guard review, not authoring acceptance, source freeze, human review, original article-body-vintage verification or a certification of every exact minute in the 90-entry table.",
+    "Regex coverage is not complete natural-language understanding. A finite known-schedule screen cannot prove every retained headline contemporaneous, relevant, correctly attributed or semantically safe.",
+    "Every later authored concrete claim still requires independent review against its own date headline/card, including actual versus preview, period and company role, market-session versus after-hours reaction, instrument, horizon, unit and split context.",
+    "The single bounded actual scan read 82 distinct matching June/July headlines across 23 provisional staged candidates. Those provisional files were not final locked-source acceptance. The source owner must restage all 69 current candidates, and recover_context must replay the locked inputs separately.",
+    "Twenty selected historical timing references are retained as connected-web excerpts and URLs. Original full publisher/PDF bytes were not retrieved; direct urllib requests received tunnel403. Later sidebars and irrelevant search results were not used as evidence.",
+    "National/Tokyo CPI timing has dated secondary-calendar corroboration in this review, with explicit primary-header and mutable-URL limits. The Japan household-spending exact clock was not independently certified here; no applicable actual headline appeared before its release in the bounded July 5 scan. Omit a doubtful actual rather than infer a clock from memory.",
+    "An eligible early-local earnings release does not make a later local cash-session reaction available. A US after-close result can be known at the following midnight while that day’s regular-session close still precedes the result.",
+    "The displayed current Reuters dates are not asserted to be original publication dates; conservative exact-record omissions resolve their uncertainty without a guessed original vintage."
+  ],
+  "source_ownership": "No source-owned guard code, feed, schedule, named exclusion table or author report was edited by this reviewer."
+}

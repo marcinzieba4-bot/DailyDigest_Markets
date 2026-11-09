@@ -1,0 +1,30 @@
+{
+  "checked_at_utc": "2026-11-05T12:15:11.925980+00:00",
+  "status": "resolved_independently_accepted",
+  "reason": "Actual producer/consumer integration revealed new source review schema and JSONL request ledger after static engineering review.",
+  "changed_files": {
+    "tools/finalize_reviews.py": "65e48f173b53d18f288c0eecfc3a22b86c0983e5c4b7bec01dc028feaaf2f33c",
+    "tools/build_source_inventory.py": "d3ac9b5d6ab3f840e58baca9f2b96c0753fd82b13cb6e3fec2bc4dd3e35df47e",
+    "tools/build_artifacts.py": "5cf891df7acc5193abcb854619e1d792485221cd8c605c439fe577075844fba4"
+  },
+  "changes": [
+    "Finalizer supports actual hash-bound per-date news_ready receipts while preserving strict legacy fixture branch; no missing-exclusion fallback.",
+    "Source archive/inventory include exact top-level auditJSONL ledger; safe path rules retained.",
+    "Source bundle now also includes two empty referenceJSON schema templates."
+  ],
+  "required_before_build_publish": "Independent review of these deltas/current-data compatibility and audit checker current input_bindings coverage; rebind prior tool reviews.",
+  "financial_inputs_or_authored_text_changed": false,
+  "resolved_at_utc": "2026-11-05T13:05:45.681542+00:00",
+  "accepted_current_tools": {
+    "tools/finalize_reviews.py": "bd00eb001b493ac594ad9f13278719317efdff75f83c4627ba1f3dcd2b823e01",
+    "tools/build_source_inventory.py": "a1b5c7c31d856320f7cb312594eb9c71572daa135c1ef0414d7a7ba3204bda27",
+    "tools/build_artifacts.py": "b3465f666d0fb8f571fea1335cda3e0b2b3f1412265f0087105261a0d54213f9"
+  },
+  "independent_acceptance_bindings": {
+    "audit/independent_finalizer_integration_review.json": "bbf2040fc7d583fc16ac10daba5336fca6a6ea6297d5cc783e8c3d6ae4ea2ca6",
+    "audit/independent_finalizer_hardening_recheck.json": "5371683b1fe30a8e51a45aeaa9fac7c7f3ee026a5a63d34bea094bc016332349",
+    "audit/independent_artifact_integration_review.json": "52e7ad694eb5673e47cb43bb763ef2c8f0639f377596fe7803c2faf1ab60c479",
+    "audit/independent_authoring_tool_review.json": "9112cf6dd04ddb83c9556c388705c0384d50cdcd68c165da7b66744ba4c2bbc5",
+    "audit/independent_artifact_tool_review.json": "d708ea94f2ee8d2dc174f09007de09921e102816460bd10f5c6ec4c873a2ab16"
+  }
+}

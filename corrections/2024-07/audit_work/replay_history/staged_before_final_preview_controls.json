@@ -1,0 +1,956 @@
+{
+  "status": "staged_infrastructure_verified",
+  "passed": true,
+  "infrastructure_status": "accepted",
+  "semantic_status": "requires_own_claim_review",
+  "authoring_acceptance": false,
+  "checked_at_utc": "2026-11-05T11:34:38.983408+00:00",
+  "scope": "Independent July physical acquisition/parser/attempt-ledger/refinement/own-cutoff merge/IDs/provenance and finite semantic-screen projection replay. No factual report, retail selection or original publisher-vintage approval.",
+  "checks": 432361,
+  "checks_by_scope": {
+    "declaration": 5,
+    "base_plan": 2,
+    "plan": 2,
+    "attempt_ledger": 65750,
+    "paths": 49312,
+    "raw_transport": 115059,
+    "xml_reparse": 49311,
+    "attempt_bodies": 49311,
+    "physical_inventory": 3,
+    "cap_plan": 49315,
+    "named_exclusions": 8,
+    "merge": 92,
+    "screening": 138,
+    "byte_bindings": 46,
+    "age": 53774,
+    "staging": 99,
+    "guard_regressions": 64,
+    "guard_schedule": 56,
+    "concurrency": 14
+  },
+  "errors": [],
+  "structural_errors": 0,
+  "pending_dates": 0,
+  "dates": [
+    {
+      "date": "2024-07-01",
+      "raw_items": 2407,
+      "ready_items": 2407,
+      "excluded": 0,
+      "feed_sha256": "7d719adb86c66e3daf7b0c78b42d44dd7c02537cce0c30fceb20622061d717ee",
+      "raw_sha256": "6569a7173ecec5dfea0c3a8a5d3ac26237b9ef8773b7e271b245ce277445a32a",
+      "provenance_sha256": "f3e81581c8c5466ab67b31d5091b68e8c6607d07a944b19b51614f288ea04a2f",
+      "ready_receipt_sha256": "f32c1705164fc0dc16b9c47d14548417eec77698a678585a74ca40c9aefd9be2",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 994,
+        "duplicate_query_matches": 940,
+        "refinement_parent_extends_beyond_report_cutoff": 15400,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 1037,
+      "later_refinement_root_contexts_excluded": 15400
+    },
+    {
+      "date": "2024-07-02",
+      "raw_items": 2452,
+      "ready_items": 2451,
+      "excluded": 1,
+      "feed_sha256": "9a333120ebb8cdf925f1629c66fbee03c3a829a7516ff8b6ff296ffe8ca33d94",
+      "raw_sha256": "0627e943551126faf38de18940f8b06143ffd61eb937bbcd11f158b5963b9bd8",
+      "provenance_sha256": "d8a6d07d3d19636933b243f96b47d100056b1f76609d0576e5ccf5be1c1478ef",
+      "ready_receipt_sha256": "1dd91c9bfa9870af635406992586de7821e0270cf43f1b7eb773dcaf8435350b",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 1462,
+        "duplicate_query_matches": 989,
+        "refinement_parent_extends_beyond_report_cutoff": 14700,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 1737,
+      "later_refinement_root_contexts_excluded": 14700
+    },
+    {
+      "date": "2024-07-03",
+      "raw_items": 2441,
+      "ready_items": 2439,
+      "excluded": 2,
+      "feed_sha256": "e54a68d8d73c9d09bf8eb995f7c6c389e2b54a916d3ba3b44cdf15ef2c8b6792",
+      "raw_sha256": "45568684ebc84e4ba75e218ffa9665236f0df69313e958b09f7a0d04fafd52ca",
+      "provenance_sha256": "a9d8e9138c828775f5ff728e4132d440ac6a3b5c648bcc986eed26ce11846b66",
+      "ready_receipt_sha256": "646164e84f9843fe9d0f138ea30f5686c9eacdc81fdecd54f6934ea3f2905cc1",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 1989,
+        "duplicate_query_matches": 1512,
+        "refinement_parent_extends_beyond_report_cutoff": 14000,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 2437,
+      "later_refinement_root_contexts_excluded": 14000
+    },
+    {
+      "date": "2024-07-04",
+      "raw_items": 2396,
+      "ready_items": 2396,
+      "excluded": 0,
+      "feed_sha256": "332ab652b1a798278a516534c9936762e71008842043c55b9b80dd29f07dbf8d",
+      "raw_sha256": "adeae13a23d0a601414f5f8ec135c29ae72fcd83677f07c2d73c53c432d6233d",
+      "provenance_sha256": "120f1297095da96a4d4a3a41d336fc17e429cddc1d680b024c33d4522087381c",
+      "ready_receipt_sha256": "aa8bb42cbf278bdbbdae970dd847122d6eef5a09b1b20003498640fc464f6a22",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 2623,
+        "duplicate_query_matches": 2512,
+        "refinement_parent_extends_beyond_report_cutoff": 13300,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 3137,
+      "later_refinement_root_contexts_excluded": 13300
+    },
+    {
+      "date": "2024-07-05",
+      "raw_items": 2230,
+      "ready_items": 2227,
+      "excluded": 3,
+      "feed_sha256": "78704a58469f6ff274b985e120fe0531f7bca1443af8a8a2f33c4d1030d37899",
+      "raw_sha256": "b134761b18904abab63b1dd60a2a234265841bbd4751ee099a394bc9fb6c7aad",
+      "provenance_sha256": "46b24a26ba18c5f1f2053d5d4e92e56c94a64f0917bbf83c690a4b243411303f",
+      "ready_receipt_sha256": "910b2f204b4b0f2ff870f3ff2c881002f82f95e053549ce408da32dfd361e91f",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 3213,
+        "duplicate_query_matches": 3970,
+        "refinement_parent_extends_beyond_report_cutoff": 12600,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 3837,
+      "later_refinement_root_contexts_excluded": 12600
+    },
+    {
+      "date": "2024-07-08",
+      "raw_items": 2118,
+      "ready_items": 2118,
+      "excluded": 0,
+      "feed_sha256": "5ade9a219b007c07117dc80dff39ae28b04bb240d763bee8a28aa73bb8c60b3d",
+      "raw_sha256": "6791cb0c9e1055f11e420ecc1b553272caa302341ce241e788498b7508d1114b",
+      "provenance_sha256": "3df00c71373453a0e4368de7c687308dae8df43956ec176edb5466c0a5784591",
+      "ready_receipt_sha256": "7fd083ec77f5c21c8d439d0906191e692881840e0ffdcd2d5c6e212ff923449a",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 1185,
+        "duplicate_query_matches": 5731,
+        "refinement_parent_extends_beyond_report_cutoff": 11900,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 3837,
+      "later_refinement_root_contexts_excluded": 11900
+    },
+    {
+      "date": "2024-07-09",
+      "raw_items": 2094,
+      "ready_items": 2093,
+      "excluded": 1,
+      "feed_sha256": "796f2c16cb69b7f2df6ecea6819c81b501553f7b60b699a535fd696e3eb520fb",
+      "raw_sha256": "9ae4b2a52b2dfe6ebf1ba9232f24047a86f097974603f68d05a55c9464e83ea8",
+      "provenance_sha256": "d34abb3877292051c5223e23a2145cd7791ce236539c4b08d275ab214151672d",
+      "ready_receipt_sha256": "9ada24f7651b911df32d993bedfa29f044e08320e40be43bf4bd30fada9740cf",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 3453,
+        "duplicate_query_matches": 3568,
+        "refinement_parent_extends_beyond_report_cutoff": 11200,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 3979,
+      "later_refinement_root_contexts_excluded": 11200
+    },
+    {
+      "date": "2024-07-10",
+      "raw_items": 2155,
+      "ready_items": 2151,
+      "excluded": 4,
+      "feed_sha256": "88162c86aaebcaf0ffddb4fd21ebc417b81a878663d054a465ea7d8d15d8b606",
+      "raw_sha256": "9f16d5aaef4f35f153b507ec94e26c1ba1336fec843b92b85a712207e27109db",
+      "provenance_sha256": "6527333501bdd05d1a0a96b1a69721f21bea024be55c705cbc2c97cc3e5f2afd",
+      "ready_receipt_sha256": "f3dd1bbb32380080c52d1b806ffee093edf3e75e552e4579984541da1115126a",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 4510,
+        "duplicate_query_matches": 2747,
+        "refinement_parent_extends_beyond_report_cutoff": 10500,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 4121,
+      "later_refinement_root_contexts_excluded": 10500
+    },
+    {
+      "date": "2024-07-11",
+      "raw_items": 2192,
+      "ready_items": 2189,
+      "excluded": 3,
+      "feed_sha256": "5803c073fb645e846524ffe56f6f6d2a683724173c20411be2e3eaeedc89d0d3",
+      "raw_sha256": "bce467d06891b7893b0630ea399564c34ebc1791abb515b24a58dc0bc115c99b",
+      "provenance_sha256": "49eb72a9ef927513a07c515da6d6756da42e4c7995a588a7892ed2fc2f171a37",
+      "ready_receipt_sha256": "19ca0613b746e57d8281776dde8cb8b785aa0ce43a7fabdef3f88499ee52119b",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 4886,
+        "duplicate_query_matches": 2727,
+        "refinement_parent_extends_beyond_report_cutoff": 9800,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 4263,
+      "later_refinement_root_contexts_excluded": 9800
+    },
+    {
+      "date": "2024-07-12",
+      "raw_items": 2350,
+      "ready_items": 2349,
+      "excluded": 1,
+      "feed_sha256": "9d110e947ebda5dc6a83fb0195c9304f7d6ff16adae7544cfc28f9068f6b5a4e",
+      "raw_sha256": "fc3208c515bc77d8b59ea6a88b9a614ce2cebc302c785b059c44b06ce4aedf97",
+      "provenance_sha256": "ff5e11699bed2f428fd58346ec050da8021686f800a2c74fb25b0f967aeda5b1",
+      "ready_receipt_sha256": "665fab7afaa6f025b805dff3cf5e02142b8caa41fcec5a8ea9ef1d6551b901be",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 4045,
+        "duplicate_query_matches": 4068,
+        "refinement_parent_extends_beyond_report_cutoff": 9100,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 4405,
+      "later_refinement_root_contexts_excluded": 9100
+    },
+    {
+      "date": "2024-07-15",
+      "raw_items": 2273,
+      "ready_items": 2267,
+      "excluded": 6,
+      "feed_sha256": "7ff30bd10440e9a7c9f374645b9504427e5da4c3ed246f884f4fa0b3017f32b8",
+      "raw_sha256": "075b13fe63062b2079278563d212973d5ad55dbe5a349e90a05a0f20097f9930",
+      "provenance_sha256": "eb8aa6e7afadfd8d33a3e7827afaa558d929682e81a906381230b6da24992c51",
+      "ready_receipt_sha256": "7d4dd2145bca62534c65deec48ce044af64d739d8c94278ebc06d0217d46d6c6",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 2056,
+        "duplicate_query_matches": 5264,
+        "refinement_parent_extends_beyond_report_cutoff": 8400,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 4405,
+      "later_refinement_root_contexts_excluded": 8400
+    },
+    {
+      "date": "2024-07-16",
+      "raw_items": 2254,
+      "ready_items": 2252,
+      "excluded": 2,
+      "feed_sha256": "a9fb6e488878651ff5b8877164efb099866da058d077099e6317947c9da47fe5",
+      "raw_sha256": "cd064104ed8a4458dc457f3c382beb12d9030a9ee880080cd7f79d8ccc9e7ca5",
+      "provenance_sha256": "e6bd09890b58312c5fe41df581ecbe715c9db414a37d32b4fbad262dcd56b881",
+      "ready_receipt_sha256": "718e103b692330f1f8c52c9d198652b3dafb6c5c11b006b7e72524f000d36316",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 3861,
+        "duplicate_query_matches": 3554,
+        "refinement_parent_extends_beyond_report_cutoff": 7700,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 4470,
+      "later_refinement_root_contexts_excluded": 7700
+    },
+    {
+      "date": "2024-07-17",
+      "raw_items": 2235,
+      "ready_items": 2230,
+      "excluded": 5,
+      "feed_sha256": "d28eb6f6ab0a9d9043ec2b54203dbd6f90d7a0b82cf51007529d2b81f332dbcf",
+      "raw_sha256": "1972db26b362dbfd874eae1cbc595703792820bd107feaf79483a1a1b93da0e6",
+      "provenance_sha256": "faf73d1d168daa53db0978e11d169be62b3742058988b81d378b9b79c460de73",
+      "ready_receipt_sha256": "f47286ed90a1a41476418ea45b30d4d99edb874d858ed1cac4ac9388b2d1e7ea",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 4846,
+        "duplicate_query_matches": 2724,
+        "refinement_parent_extends_beyond_report_cutoff": 7000,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 4535,
+      "later_refinement_root_contexts_excluded": 7000
+    },
+    {
+      "date": "2024-07-18",
+      "raw_items": 2224,
+      "ready_items": 2218,
+      "excluded": 6,
+      "feed_sha256": "c3613aee7f2613861a362822be392fdbf98cfa50c54836b1030f3c0940325b37",
+      "raw_sha256": "714af1482f5fe83efe182d79f68456d9b623c44bb712c8f1745a647256615e6e",
+      "provenance_sha256": "1ba45b430a5ed35c4c3b07b479b3bc68e429986bffc8ae5c4e981baca88b7534",
+      "ready_receipt_sha256": "20e7409b453b6542f1d02becf1b5dafd04e0054d18c63398f96b75c6fb394051",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 4791,
+        "duplicate_query_matches": 3035,
+        "refinement_parent_extends_beyond_report_cutoff": 6300,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 4600,
+      "later_refinement_root_contexts_excluded": 6300
+    },
+    {
+      "date": "2024-07-19",
+      "raw_items": 2264,
+      "ready_items": 2255,
+      "excluded": 9,
+      "feed_sha256": "87557a88178c228b8a1353226ecb648816830adad11559027e1dd6eed26f694f",
+      "raw_sha256": "3ab30f3c9fbba6cde906142fb82dc045b5e756901610b1fbd0a4f425cb0dd8a7",
+      "provenance_sha256": "6f10d0362b633fbef22effc162ccf02b1157ebc690c693f39b97b62612530ffb",
+      "ready_receipt_sha256": "87476dbb68be340cb3ff815cbf2599babfc8205780c869c7b5996f6fa767d075",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 3769,
+        "duplicate_query_matches": 4445,
+        "refinement_parent_extends_beyond_report_cutoff": 5600,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 4665,
+      "later_refinement_root_contexts_excluded": 5600
+    },
+    {
+      "date": "2024-07-22",
+      "raw_items": 2469,
+      "ready_items": 2454,
+      "excluded": 15,
+      "feed_sha256": "59b11454ec8b41ac1da1db055f1c23c5333d1966035c5f59add9e3c1bf14ac33",
+      "raw_sha256": "cda2b3a9f9f5bc976a2ff05533f6b30e65a28b6d2acb1248bfcf55fd78e3d7f3",
+      "provenance_sha256": "19baee9192d44c3ddee646ed08fb21ca812456d4a8949a9d8c66f1a562579171",
+      "ready_receipt_sha256": "aeb4dead8a71b4073b62739b7cd95bad2a72dbcb14208a324b7b9e5a9596b3c7",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 2354,
+        "duplicate_query_matches": 6719,
+        "refinement_parent_extends_beyond_report_cutoff": 4900,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 4665,
+      "later_refinement_root_contexts_excluded": 4900
+    },
+    {
+      "date": "2024-07-23",
+      "raw_items": 2413,
+      "ready_items": 2398,
+      "excluded": 15,
+      "feed_sha256": "38237167353b27a64527ca7d44584451ecba30d3a2c5e2fa4eda19559dd4eaf9",
+      "raw_sha256": "b87da720036243371c0b11d35b947c9fd964c7043b7024a9dda558ce32071b55",
+      "provenance_sha256": "0069fcb2fbbc0df0072274b10bbf2fcd19eea8579dddf0906c6295954f9d77d6",
+      "ready_receipt_sha256": "824fd64b486d3fd7b46f5d441f40c7d48a43bccffdd28f01f1f942bb363e280b",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 4414,
+        "duplicate_query_matches": 4715,
+        "refinement_parent_extends_beyond_report_cutoff": 4200,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 4730,
+      "later_refinement_root_contexts_excluded": 4200
+    },
+    {
+      "date": "2024-07-24",
+      "raw_items": 2384,
+      "ready_items": 2376,
+      "excluded": 8,
+      "feed_sha256": "040be39ccc64ad280039f0b3afc2d0c6f004304a913ffe9a31f6c872d7a1e9f0",
+      "raw_sha256": "cb4a4ae64e0cd659f7eb0ed6941b7487aac561d2a3f156fe1040b24941c3c2a3",
+      "provenance_sha256": "66f04b3851a3ebb854457befb61e9217b0dd070527f584c078983ba16cdcc604",
+      "ready_receipt_sha256": "754d6ae980eeaeed828e37303d18f5f8db5b047e1229ff8fb033c393d419a945",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 5619,
+        "duplicate_query_matches": 3639,
+        "refinement_parent_extends_beyond_report_cutoff": 3500,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 4795,
+      "later_refinement_root_contexts_excluded": 3500
+    },
+    {
+      "date": "2024-07-25",
+      "raw_items": 2429,
+      "ready_items": 2421,
+      "excluded": 8,
+      "feed_sha256": "bd53ea387f8d5d73d8ddfa85b257ed8dbce386eb0e0e1b87c69b67dbd1cd4005",
+      "raw_sha256": "75af9c04d1b8bfb9e6926e68bc8c51084b260db8fc8c29cd98642d808f80ecd1",
+      "provenance_sha256": "d5512c3b8eea880e9219ce69a9aabe6d42257e63eba71ebf9123b9a9ad294538",
+      "ready_receipt_sha256": "3fd6f4f0415400b27e4cc9b7eeee22a3b973255f9e50fe1e7f7e0c9ed067d641",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 5832,
+        "duplicate_query_matches": 3587,
+        "refinement_parent_extends_beyond_report_cutoff": 2800,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 4860,
+      "later_refinement_root_contexts_excluded": 2800
+    },
+    {
+      "date": "2024-07-26",
+      "raw_items": 2489,
+      "ready_items": 2485,
+      "excluded": 4,
+      "feed_sha256": "791a4193a9af334d9b904da6c0fde9b32fa37a2906ad31bb37da4aeff081e8eb",
+      "raw_sha256": "4ecf179688a074a7c913ad24976d6123ecd6fb56de555ddf39435d35e0a9667b",
+      "provenance_sha256": "a944f4504125bb119bd4a13ae6fb42a28cac4c002b2a3dd8361654ab42681873",
+      "ready_receipt_sha256": "4d2a2d8b345b718e1aea28b94b03a515abc380efc5f0603727b69083dddd8030",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 5011,
+        "duplicate_query_matches": 4692,
+        "refinement_parent_extends_beyond_report_cutoff": 2100,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 4925,
+      "later_refinement_root_contexts_excluded": 2100
+    },
+    {
+      "date": "2024-07-29",
+      "raw_items": 2503,
+      "ready_items": 2493,
+      "excluded": 10,
+      "feed_sha256": "e8e08776b37344916b7ef9691280caf2a923363083ad5c56da8ef5a2822fc98f",
+      "raw_sha256": "3be4a898e44fd180902291db6d0f1fdf37da2efe051cbb6cbe7b65d560ab660e",
+      "provenance_sha256": "bd3d99542c5c440039b16d6dbf8ca1312a789b3befaa873349a54a37e1cf0828",
+      "ready_receipt_sha256": "b4e912a7751614b8fef542bc97dcaa5b17b6bb248268ff3088c3d143af5070a8",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 2939,
+        "duplicate_query_matches": 6959,
+        "refinement_parent_extends_beyond_report_cutoff": 1400,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 4925,
+      "later_refinement_root_contexts_excluded": 1400
+    },
+    {
+      "date": "2024-07-30",
+      "raw_items": 2533,
+      "ready_items": 2520,
+      "excluded": 13,
+      "feed_sha256": "738794482737cfbb3cea6f87e0f34a1d1d66c98ba94a59b45a81285ae91d8e0c",
+      "raw_sha256": "b30aa6f76793cc845606a38016a73d2d9db87358f41e2c3d870657754d27d020",
+      "provenance_sha256": "91f050ff64b3ed46aa9f2853e68dbd1f9eb363f705d094dcfb21d76acbc911b6",
+      "ready_receipt_sha256": "1aac81666565cd363090f2e0646ea0a61b7f2088c833c5e33d1fbdfce61b1684",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 4696,
+        "duplicate_query_matches": 5236,
+        "refinement_parent_extends_beyond_report_cutoff": 700,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 4990,
+      "later_refinement_root_contexts_excluded": 700
+    },
+    {
+      "date": "2024-07-31",
+      "raw_items": 2602,
+      "ready_items": 2585,
+      "excluded": 17,
+      "feed_sha256": "779651f9b889d30e9e0218129bd628af40c477b72eb6a675eb6d050896161449",
+      "raw_sha256": "6855b074973201f9686ccc5b12fc723790de78ac2f69281ba023ad652c0b87b9",
+      "provenance_sha256": "b0d8cb3702ec3da77bfd4c161c7fdc89e6a8db7c6dadcc0765797c2c4a3367ef",
+      "ready_receipt_sha256": "07cc5a3dfdf17888bd7138d3eafb9eb6865315d3717bac4eb10857ebe6069313",
+      "independent_merge_excluded": {
+        "outside_own_date_window": 5904,
+        "duplicate_query_matches": 4140,
+        "post_dedup_age_mismatch": 0
+      },
+      "qualifying_physical_requests": 5055,
+      "later_refinement_root_contexts_excluded": 0
+    }
+  ],
+  "physical_requests": 16437,
+  "raw_xml_uncompressed_bytes": 86484128,
+  "independently_reparsed_items": 37516,
+  "physical_attempts": 16437,
+  "received_attempt_bodies": 16437,
+  "failed_attempts": 0,
+  "ledger_sha256": "b6fe5ca6782421e42c324635bbc219ffaaabd5439bffb55a8aa9828027434083",
+  "observed_capped_requests": 0,
+  "refinement_contexts": 0,
+  "remaining_daily_caps": 0,
+  "remaining_daily_cap_signatures": [],
+  "failed_queries": 0,
+  "physical_source_inventory_sha256": "6f1989b44d2c12a294422372c5c4f9b0d28a2cb31e6400ad5595707d0ef66014",
+  "query_plan_sha256": "6a1d6ff30a3254f10650ec4139dda09a8bf5d844778abcec0148d655a4538ccc",
+  "source_freeze_sha256": null,
+  "card_sha256": {},
+  "independent_market_review_sha256": null,
+  "tool_sha256": {
+    "fetch_news.py": "804ea8e9f6c4013e5c04241225310e8837403774a8b40a73dcd9389ba8e34427",
+    "expand_capped_news.py": "adf1fde3fd9f1d9ac27810be93b25e6d68ef33b664798d9b71656b078627d946",
+    "ready_feeds.py": "25dc223cf8dca01bab6ffd587dc97f169660998167d56292ec0fcdd805292c9a",
+    "topics.py": "6068fd834ecbec4fe8cd0477100800843a741dc61974ec59faad5f3894de6d74",
+    "finalize_sources.py": "24ee9ef16176ca83a5b67e600670b1d4bb0fb80843882100f2fc0656b3329fe5"
+  },
+  "contract_sha256": {
+    "AUTHORING.md": "f0ffe6ce49d0ce7d82324199647c324ca3275c4116bc8905dba91ffc5fb02d78",
+    "BRIEF.md": "f0ffe6ce49d0ce7d82324199647c324ca3275c4116bc8905dba91ffc5fb02d78"
+  },
+  "declared_release_guards_extracted": 90,
+  "guard_regressions_tested": 64,
+  "guard_regressions": [
+    {
+      "title": "China June Caixin manufacturing PMI expands",
+      "published_date": "2024-06-30",
+      "report_date": "2024-07-01",
+      "expected_excluded": true,
+      "actual_guard": "China June Caixin manufacturing"
+    },
+    {
+      "title": "China June Caixin manufacturing PMI expected to rise",
+      "published_date": "2024-06-30",
+      "report_date": "2024-07-01",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "US June ISM manufacturing contracts as payrolls could rise",
+      "published_date": "2024-06-30",
+      "report_date": "2024-07-01",
+      "expected_excluded": true,
+      "actual_guard": "US June ISM manufacturing"
+    },
+    {
+      "title": "US June ISM manufacturing expected to contract",
+      "published_date": "2024-06-30",
+      "report_date": "2024-07-01",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "US June ISM manufacturing contracts",
+      "published_date": "2024-07-01",
+      "report_date": "2024-07-02",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "US June payrolls rise, could boost equities",
+      "published_date": "2024-07-04",
+      "report_date": "2024-07-05",
+      "expected_excluded": true,
+      "actual_guard": "US June employment report"
+    },
+    {
+      "title": "US June payrolls expected to rise",
+      "published_date": "2024-07-04",
+      "report_date": "2024-07-05",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "US June payrolls rise",
+      "published_date": "2024-07-05",
+      "report_date": "2024-07-08",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "US June consumer prices rise less than expected",
+      "published_date": "2024-07-10",
+      "report_date": "2024-07-11",
+      "expected_excluded": true,
+      "actual_guard": "US June CPI"
+    },
+    {
+      "title": "US June CPI expected to rise less than forecast",
+      "published_date": "2024-07-10",
+      "report_date": "2024-07-11",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Japan June consumer prices rose more than expected",
+      "published_date": "2024-07-18",
+      "report_date": "2024-07-19",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Japan June consumer prices rose more than expected",
+      "published_date": "2024-07-17",
+      "report_date": "2024-07-18",
+      "expected_excluded": true,
+      "actual_guard": "Japan June national CPI early local"
+    },
+    {
+      "title": "Tokyo July consumer prices rise",
+      "published_date": "2024-07-25",
+      "report_date": "2024-07-26",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Tokyo July consumer prices rise",
+      "published_date": "2024-07-24",
+      "report_date": "2024-07-25",
+      "expected_excluded": true,
+      "actual_guard": "Japan July Tokyo CPI early local"
+    },
+    {
+      "title": "Samsung quarterly preliminary profit jumps",
+      "published_date": "2024-07-04",
+      "report_date": "2024-07-05",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "UK exit poll projects Labour landslide election win",
+      "published_date": "2024-07-04",
+      "report_date": "2024-07-05",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Labour wins UK election and Starmer becomes prime minister",
+      "published_date": "2024-07-04",
+      "report_date": "2024-07-05",
+      "expected_excluded": true,
+      "actual_guard": "UK settled election result and PM appointment"
+    },
+    {
+      "title": "Labour wins UK election and Starmer becomes prime minister",
+      "published_date": "2024-07-05",
+      "report_date": "2024-07-08",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Global IT outage hits CrowdStrike and Windows systems",
+      "published_date": "2024-07-18",
+      "report_date": "2024-07-19",
+      "expected_excluded": true,
+      "actual_guard": "Global July19 IT outage"
+    },
+    {
+      "title": "Could a global IT outage hit CrowdStrike and Windows systems?",
+      "published_date": "2024-07-18",
+      "report_date": "2024-07-19",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Global IT outage hits CrowdStrike and Windows systems",
+      "published_date": "2024-07-19",
+      "report_date": "2024-07-22",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Biden withdraws from presidential race as Trump could win",
+      "published_date": "2024-07-20",
+      "report_date": "2024-07-22",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Biden withdraws from presidential race",
+      "published_date": "2024-07-19",
+      "report_date": "2024-07-22",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Biden withdraws from presidential race",
+      "published_date": "2024-07-18",
+      "report_date": "2024-07-19",
+      "expected_excluded": true,
+      "actual_guard": "Biden presidential campaign withdrawal"
+    },
+    {
+      "title": "Biden could withdraw from presidential race",
+      "published_date": "2024-07-18",
+      "report_date": "2024-07-19",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Democrats urge Biden to withdraw from presidential race",
+      "published_date": "2024-07-18",
+      "report_date": "2024-07-19",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Microsoft quarterly earnings beat estimates",
+      "published_date": "2024-07-29",
+      "report_date": "2024-07-30",
+      "expected_excluded": true,
+      "actual_guard": "Microsoft AMD Starbucks Pinterest Pfizer Merck P&G quarterly outcome"
+    },
+    {
+      "title": "Microsoft expected to beat quarterly earnings estimates",
+      "published_date": "2024-07-29",
+      "report_date": "2024-07-30",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Microsoft shares rise before earnings",
+      "published_date": "2024-07-29",
+      "report_date": "2024-07-30",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "TSMC quarterly profit jumps, analysts expect more growth",
+      "published_date": "2024-07-17",
+      "report_date": "2024-07-18",
+      "expected_excluded": true,
+      "actual_guard": "TSMC Q2 profit and full-year outlook"
+    },
+    {
+      "title": "FOMC holds rates at July decision as stocks could rise",
+      "published_date": "2024-07-30",
+      "report_date": "2024-07-31",
+      "expected_excluded": true,
+      "actual_guard": "FOMC July decision"
+    },
+    {
+      "title": "FOMC expected to hold rates at July decision",
+      "published_date": "2024-07-30",
+      "report_date": "2024-07-31",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "China July official manufacturing PMI contracts",
+      "published_date": "2024-07-30",
+      "report_date": "2024-07-31",
+      "expected_excluded": true,
+      "actual_guard": "China July official PMI"
+    },
+    {
+      "title": "Meta quarterly profits rise",
+      "published_date": "2024-07-30",
+      "report_date": "2024-07-31",
+      "expected_excluded": true,
+      "actual_guard": "Meta Qualcomm Arm Boeing Mastercard quarterly outcome"
+    },
+    {
+      "title": "UK exit poll projects Labour victory; Starmer named prime minister",
+      "published_date": "2024-07-04",
+      "report_date": "2024-07-05",
+      "expected_excluded": true,
+      "actual_guard": "UK settled election result and PM appointment"
+    },
+    {
+      "title": "UK exit poll projects Labour victory; Sunak concedes defeat",
+      "published_date": "2024-07-04",
+      "report_date": "2024-07-05",
+      "expected_excluded": true,
+      "actual_guard": "UK settled election result and PM appointment"
+    },
+    {
+      "title": "Meta earnings top estimates",
+      "published_date": "2024-07-30",
+      "report_date": "2024-07-31",
+      "expected_excluded": true,
+      "actual_guard": "Meta Qualcomm Arm Boeing Mastercard quarterly outcome"
+    },
+    {
+      "title": "Meta profit soars as revenue doubles",
+      "published_date": "2024-07-30",
+      "report_date": "2024-07-31",
+      "expected_excluded": true,
+      "actual_guard": "Meta Qualcomm Arm Boeing Mastercard quarterly outcome"
+    },
+    {
+      "title": "Microsoft Q4 earnings: Azure growth disappoints",
+      "published_date": "2024-07-29",
+      "report_date": "2024-07-30",
+      "expected_excluded": true,
+      "actual_guard": "Microsoft AMD Starbucks Pinterest Pfizer Merck P&G quarterly outcome"
+    },
+    {
+      "title": "ASML Q2 earnings top forecasts",
+      "published_date": "2024-07-16",
+      "report_date": "2024-07-17",
+      "expected_excluded": true,
+      "actual_guard": "ASML Johnson Johnson United Airlines quarterly outcome"
+    },
+    {
+      "title": "SK Hynix Q2 quarterly profit beats estimates",
+      "published_date": "2024-07-24",
+      "report_date": "2024-07-25",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "SK Hynix Q2 quarterly profit beats estimates",
+      "published_date": "2024-07-23",
+      "report_date": "2024-07-24",
+      "expected_excluded": true,
+      "actual_guard": "SK hynix Q2 early-local earnings"
+    },
+    {
+      "title": "Poland June industrial output rises",
+      "published_date": "2024-07-17",
+      "report_date": "2024-07-18",
+      "expected_excluded": true,
+      "actual_guard": "Poland June industry and producer prices"
+    },
+    {
+      "title": "Poland June industrial output rises",
+      "published_date": "2024-07-18",
+      "report_date": "2024-07-19",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Poland June wages rise",
+      "published_date": "2024-07-17",
+      "report_date": "2024-07-18",
+      "expected_excluded": true,
+      "actual_guard": "Poland June enterprise wages and employment"
+    },
+    {
+      "title": "Poland June retail sales fall",
+      "published_date": "2024-07-21",
+      "report_date": "2024-07-22",
+      "expected_excluded": true,
+      "actual_guard": "Poland June retail sales"
+    },
+    {
+      "title": "Poland June retail sales fall",
+      "published_date": "2024-07-22",
+      "report_date": "2024-07-23",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Poland June unemployment rate falls",
+      "published_date": "2024-07-22",
+      "report_date": "2024-07-23",
+      "expected_excluded": true,
+      "actual_guard": "Poland June unemployment"
+    },
+    {
+      "title": "Poland June unemployment rate falls",
+      "published_date": "2024-07-23",
+      "report_date": "2024-07-24",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "TSMC June monthly revenue soars",
+      "published_date": "2024-07-10",
+      "report_date": "2024-07-11",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "TSMC June monthly revenue soars",
+      "published_date": "2024-07-09",
+      "report_date": "2024-07-10",
+      "expected_excluded": true,
+      "actual_guard": "TSMC June monthly revenue and Q2 aggregate"
+    },
+    {
+      "title": "TSMC Q2 aggregate revenue rises",
+      "published_date": "2024-07-10",
+      "report_date": "2024-07-11",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "TSMC Q2 profit rises and raises full-year outlook",
+      "published_date": "2024-07-17",
+      "report_date": "2024-07-18",
+      "expected_excluded": true,
+      "actual_guard": "TSMC Q2 profit and full-year outlook"
+    },
+    {
+      "title": "Australian June CPI rises",
+      "published_date": "2024-07-10",
+      "report_date": "2024-07-11",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "US shopping trends disappoint retailers",
+      "published_date": "2024-07-10",
+      "report_date": "2024-07-11",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Affordable electric cars gain market share",
+      "published_date": "2024-07-23",
+      "report_date": "2024-07-24",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Samsung Biologics profit doubles",
+      "published_date": "2024-07-30",
+      "report_date": "2024-07-31",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Could global IT outage hit Windows systems? Global IT outage hits CrowdStrike",
+      "published_date": "2024-07-18",
+      "report_date": "2024-07-19",
+      "expected_excluded": true,
+      "actual_guard": "Global July19 IT outage"
+    },
+    {
+      "title": "UK exit poll projects Labour victory; Starmer could be named prime minister",
+      "published_date": "2024-07-04",
+      "report_date": "2024-07-05",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Can the Fed cut rates at its July decision?",
+      "published_date": "2024-07-30",
+      "report_date": "2024-07-31",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Fed cuts rates at July decision, could boost stocks",
+      "published_date": "2024-07-30",
+      "report_date": "2024-07-31",
+      "expected_excluded": true,
+      "actual_guard": "FOMC July decision"
+    },
+    {
+      "title": "Meta shares surge ahead of quarterly earnings",
+      "published_date": "2024-07-30",
+      "report_date": "2024-07-31",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Microsoft announces date for quarterly earnings webcast",
+      "published_date": "2024-07-29",
+      "report_date": "2024-07-30",
+      "expected_excluded": false,
+      "actual_guard": null
+    },
+    {
+      "title": "Tesla shares rise before Q2 earnings",
+      "published_date": "2024-07-22",
+      "report_date": "2024-07-23",
+      "expected_excluded": false,
+      "actual_guard": null
+    }
+  ],
+  "input_bindings": {
+    "audit/news_query_plan.json": "6a1d6ff30a3254f10650ec4139dda09a8bf5d844778abcec0148d655a4538ccc",
+    "audit/news_coverage.json": "c0aabc56b8b898ef72ddd4573559ed3450936e4e855ecfb6188510c87d2daab2",
+    "audit/news_physical_requests.jsonl": "b6fe5ca6782421e42c324635bbc219ffaaabd5439bffb55a8aa9828027434083",
+    "audit_work/news_catalogue_declaration.json": "56bccee09965f38f339fffbfa0ba1e088d5aa929c9cb9914d5e0103703d902a2",
+    "audit_work/july_release_schedule.json": "422952ccd13ed7e3c61ed19772c038c77f791b08ef509e1a045014f4af9a7099",
+    "audit_work/july_named_source_exclusions.json": "06aba4eb3f84a714a7d429cf46641cd01c4b2b6245ec39a5a8010e87f9de6888",
+    "audit_work/release_guard_refs/named_omission_recommendations.json": "af73ce32a8768a7fc6aed5b8e9f0ae5152b3f5daf89f0bb2798737a6f6aeb0e0",
+    "audit_work/independent_guard_policy.py": "535ea99867406600902f3eacbfa097194c7c0201ff0dc36ceae4b098cdb99591",
+    "tools/fetch_news.py": "804ea8e9f6c4013e5c04241225310e8837403774a8b40a73dcd9389ba8e34427",
+    "tools/expand_capped_news.py": "adf1fde3fd9f1d9ac27810be93b25e6d68ef33b664798d9b71656b078627d946",
+    "tools/ready_feeds.py": "25dc223cf8dca01bab6ffd587dc97f169660998167d56292ec0fcdd805292c9a",
+    "tools/finalize_sources.py": "24ee9ef16176ca83a5b67e600670b1d4bb0fb80843882100f2fc0656b3329fe5",
+    "tools/topics.py": "6068fd834ecbec4fe8cd0477100800843a741dc61974ec59faad5f3894de6d74",
+    "work/source_candidates/comparison_manifest.json": "45fc63a0e4b953adb1d2abb81a7c61ca7340e09ce01c816c7d30919b247e7fb1"
+  },
+  "reviewer_tool_sha256": "b016426bdb7149f26664ca4b18ebf18f5c7499226e974dd308695b3badc0f1aa",
+  "reviewer_dependency_sha256": {
+    "independent_guard_policy.py": "535ea99867406600902f3eacbfa097194c7c0201ff0dc36ceae4b098cdb99591"
+  },
+  "age_policy": "Headline semantics cap company news/previews7days,company results14days,macro/current-policy35days; actual versus preview is separately screened.",
+  "limits": [
+    "Retrieval-time historical Google RSS/search bytes are archived, not original contemporaneous publisher or full-article vintages.",
+    "Finite semantic/release guard coverage and headline-only meaning still require exact own-date editorial review.",
+    "Observed response caps are resolved through deterministic daily/complementary branches, but historical indexing/selection does not prove exhaustive reporting coverage.",
+    "Any subsequent change to frozen feed/card/provenance or guarded policy requires a separately reviewed revision; no unrecorded amendment is accepted."
+  ]
+}

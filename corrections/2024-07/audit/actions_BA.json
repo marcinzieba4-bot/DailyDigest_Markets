@@ -1,0 +1,18 @@
+{
+ "ticker": "BA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BA?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "0e312b3e994249c92129fafbe2314d5111e40831d2269644bc291ef9bcd75994",
+   "fetched_at_utc": "2026-11-05T10:38:57.243342+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BA?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "949c97ec9b8e63196b0ca99853f633fdc83355b1579dd51161566f5e4a0123ec",
+   "fetched_at_utc": "2026-11-05T10:38:57.579102+00:00"
+  }
+ ]
+}

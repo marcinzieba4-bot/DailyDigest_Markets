@@ -1,0 +1,18 @@
+{
+ "ticker": "ALE.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALE.WA?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "9236b915de2a3d5090ad8c79f0ccd5c70fc339aa2bf2125da978ce5f573bd135",
+   "fetched_at_utc": "2026-11-05T10:38:38.212051+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALE.WA?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "4932ab74775b4254602cd53b68d372a32adfc7679008db52405f6687e116db44",
+   "fetched_at_utc": "2026-11-05T10:38:38.619769+00:00"
+  }
+ ]
+}

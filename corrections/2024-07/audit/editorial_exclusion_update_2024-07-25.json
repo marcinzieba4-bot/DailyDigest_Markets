@@ -1,0 +1,32 @@
+{
+  "date": "2024-07-25",
+  "checked_at_utc": "2026-11-05T12:46:41.015972+00:00",
+  "before_exclusions_sha256": "939c6a307e4f667e20855fc928eb237a7d64938a17ad6d610d7b3355a350748c",
+  "after_exclusions_sha256": "5cb8adf60d7a1eba49dc6d8fd1f9d6612db1a40889868efb1a86024a7894ac0d",
+  "preserved_before": "audit/review_history/exclusions_2024-07-25_before_editorial_update.json",
+  "feed_sha256": "ced4b1cc10244a827136c7724055b25db42c875fe35997159c5db9b7623bf11a",
+  "entries": [
+    {
+      "date": "2024-07-25",
+      "id": "n0185",
+      "title": "China central bank surprises by lending again at lower rates - Reuters",
+      "reason": "Appears to describe theJuly25MLFoutcome; accepted calendar schedules that decision at01:20UTC, after00UTCcut. IndexedJuly24timestamp does not establish original pre-cut availability; conservatively omit this completed-outcome headline.",
+      "disposition": "conservative timing/vintage omission",
+      "relevant_schedule": "China July MLF decision,2024-07-25T01:20:00+00:00",
+      "first_eligible_edition_conservative": "2024-07-26",
+      "reported_by": "july_nonretail_d; root checked exact title and accepted schedule"
+    },
+    {
+      "date": "2024-07-25",
+      "id": "n0188",
+      "title": "Chinese banks cut deposit rates to relieve squeezed margins - Reuters",
+      "reason": "Original public timing of this completed deposit-rate outcome cannot be certified beforeJuly25 00UTC from the indexedJuly24headline. Omit conservatively; no exact announcement clock or legal effective date is asserted.",
+      "disposition": "conservative original-vintage/timing omission",
+      "first_eligible_edition_conservative": "2024-07-26",
+      "reported_by": "july_nonretail_d; root checked own headline and retained timing uncertainty"
+    }
+  ],
+  "frozen_feed_card_or_policy_changed": false,
+  "draft_used_excluded_ids": false,
+  "initial_authoring_gate_preserved": true
+}

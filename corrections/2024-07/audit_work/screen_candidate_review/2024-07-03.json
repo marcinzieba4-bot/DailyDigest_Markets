@@ -1,0 +1,37 @@
+{
+  "date": "2024-07-03",
+  "status": "ready",
+  "input_items": 2441,
+  "ready_items": 2439,
+  "excluded_items": 2,
+  "excluded_by_guard": {
+    "Japan June final services PMI": 1,
+    "FOMC June meeting minutes": 1
+  },
+  "excluded": [
+    {
+      "id": "n1721",
+      "published_at": "2024-07-02T07:00:00+00:00",
+      "src": "Reuters",
+      "title": "Japan's service activity slips for first time in 2 years, PMI shows - Reuters",
+      "guard": "Japan June final services PMI",
+      "screen_kind": "timing"
+    },
+    {
+      "id": "n2424",
+      "published_at": "2024-07-01T07:00:00+00:00",
+      "src": "IG",
+      "title": "Outlook for NFPs, FOMC minutes and Fed rate cut expectations - IG",
+      "guard": "FOMC June meeting minutes",
+      "screen_kind": "timing"
+    }
+  ],
+  "eligible_status_annotations": [],
+  "category_tightenings": [],
+  "ready_path": "feeds/2024-07-03.json.gz",
+  "ready_sha256": "cfdc650e66179ec1077b1a66d4f217cff7373f77a5d09c58a208ba1e9ee5592c",
+  "unreviewed_sha256": "45568684ebc84e4ba75e218ffa9665236f0df69313e958b09f7a0d04fafd52ca",
+  "release_guards_version": "jul-2024-release-guards-v1",
+  "release_schedule_sha256": "ec0affb8cf6d2e518d655e9fafd76c6d5b7ac56db1548962b1d6e95be7f2ec7d",
+  "named_exclusions_sha256": "06aba4eb3f84a714a7d429cf46641cd01c4b2b6245ec39a5a8010e87f9de6888"
+}

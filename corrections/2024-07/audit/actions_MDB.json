@@ -1,0 +1,18 @@
+{
+ "ticker": "MDB",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MDB?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "2fc021dd22793ca4401c497acb5d7315c6f3dcade2998ce502c824eb8de2bde6",
+   "fetched_at_utc": "2026-11-05T10:38:49.824446+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MDB?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "76d64d078e5d7dcd7af2ca648281804eabdd1f42c978b8ced229db529768c1b0",
+   "fetched_at_utc": "2026-11-05T10:38:50.200205+00:00"
+  }
+ ]
+}

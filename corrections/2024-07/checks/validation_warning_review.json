@@ -1,0 +1,185 @@
+{
+  "dates": [
+    "2024-07-01",
+    "2024-07-02",
+    "2024-07-03",
+    "2024-07-04",
+    "2024-07-05",
+    "2024-07-08",
+    "2024-07-09",
+    "2024-07-10",
+    "2024-07-11",
+    "2024-07-12",
+    "2024-07-15",
+    "2024-07-16",
+    "2024-07-17",
+    "2024-07-18",
+    "2024-07-19",
+    "2024-07-22",
+    "2024-07-23",
+    "2024-07-24",
+    "2024-07-25",
+    "2024-07-26",
+    "2024-07-29",
+    "2024-07-30",
+    "2024-07-31"
+  ],
+  "warnings": {
+    "2024-07-01": [
+      "geo:CN Playbook ✓: calendar wording \"scheduled for\" — needs a dated headline"
+    ],
+    "2024-07-02": [],
+    "2024-07-03": [],
+    "2024-07-04": [],
+    "2024-07-05": [],
+    "2024-07-08": [],
+    "2024-07-09": [],
+    "2024-07-10": [],
+    "2024-07-11": [
+      "repeated sentence in ['retail[1]', 'underowned[1]']: \"yahoo finance reported oracle partnering with palantir to accelerate ai adoption…\""
+    ],
+    "2024-07-12": [],
+    "2024-07-15": [],
+    "2024-07-16": [
+      "repeated sentence in ['earnings_pattern', 'geo:CN']: \"reuters reports swatch sales profits slump on weak china demand hammering shares…\"",
+      "repeated sentence in ['geo:AU', 'sector:XLB']: \"reuters reports rio tinto shuts iron ore mine in eastern canada amid wildfires…\"",
+      "repeated sentence in ['geo:AU', 'sector:XLI']: \"reuters reports rio tintos african iron ore project receives all necessary appro…\"",
+      "repeated sentence in ['catalysts[0]', 'sector:XLK']: \"reuters reports global smartphone market grew 65 in q2 led by samsung and apple …\"",
+      "repeated sentence in ['sector:XLK', 'underowned[2]']: \"bloomberg reports apples india sales surge 33 to record in shift from china…\"",
+      "repeated sentence in ['earnings_pattern', 'sector:XLF']: \"wsj reports big banks helped by wall street comeback…\"",
+      "repeated sentence in ['flows', 'sector:XLRE']: \"reuters reports us regional banks to face increased scrutiny as cre exposure sti…\"",
+      "repeated sentence in ['anticipatory[2]', 'sector:SOXX']: \"reuters reports tsmc secondquarter profit seen jumping 30 on surging ai chip dem…\""
+    ],
+    "2024-07-17": [],
+    "2024-07-18": [],
+    "2024-07-19": [],
+    "2024-07-22": [],
+    "2024-07-23": [],
+    "2024-07-24": [],
+    "2024-07-25": [],
+    "2024-07-26": [],
+    "2024-07-29": [],
+    "2024-07-30": [],
+    "2024-07-31": []
+  },
+  "reviewed_decisions": {
+    "2024-07-01": [
+      {
+        "warning": "geo:CN Playbook ✓: calendar wording \"scheduled for\" — needs a dated headline",
+        "evidence_ids": [
+          "n0199"
+        ],
+        "rationale": "The Straits Times headline published June 27 explicitly says China will hold the key political meeting from July 15 to 18. Both CN Playbook and China scenario retain those exact dates and call its content pending; neither asserts a released outcome."
+      }
+    ],
+    "2024-07-02": [],
+    "2024-07-03": [],
+    "2024-07-04": [],
+    "2024-07-05": [],
+    "2024-07-08": [],
+    "2024-07-09": [],
+    "2024-07-10": [],
+    "2024-07-11": [
+      {
+        "message": "repeated sentence in ['retail[1]', 'underowned[1]']: \"yahoo finance reported oracle partnering with palantir to accelerate ai adoption…\"",
+        "evidence_ids": [
+          "n0959"
+        ],
+        "locations": [
+          "retail[1]",
+          "underowned[1]"
+        ],
+        "rationale": "Both paragraphs accurately restate Yahoo Finance’s single Oracle/Palantir partnership headline with n0959. The retail section explains a Palantir attention catalyst; the nonretail theme analyzes paid implementation, procurement and cash conversion. The repeated sentence is a short attributed source fact, while the surrounding analysis and purpose differ. No repeated unsupported claim or copied analytical filler requires a rewrite.",
+        "warning": "repeated sentence in ['retail[1]', 'underowned[1]']: \"yahoo finance reported oracle partnering with palantir to accelerate ai adoption…\""
+      }
+    ],
+    "2024-07-12": [],
+    "2024-07-15": [],
+    "2024-07-16": [
+      {
+        "message": "WARN 2024-07-16 repeated sentence in ['earnings_pattern', 'geo:CN']: \"reuters reports swatch sales profits slump on weak china demand hammering shares…\"",
+        "evidence_ids": [
+          "n0185"
+        ],
+        "rationale": "The same completed Swatch result supports the China-demand transmission discussion and the earnings comparison; adjacent analysis treats different portfolio questions.",
+        "disposition": "reviewed_supported_reuse",
+        "warning": "repeated sentence in ['earnings_pattern', 'geo:CN']: \"reuters reports swatch sales profits slump on weak china demand hammering shares…\""
+      },
+      {
+        "message": "WARN 2024-07-16 repeated sentence in ['geo:AU', 'sector:XLB']: \"reuters reports rio tinto shuts iron ore mine in eastern canada amid wildfires…\"",
+        "evidence_ids": [
+          "n0075"
+        ],
+        "rationale": "The same Canadian wildfire closure is used for Australia operating context and the materials supply-versus-demand distinction; no production-loss estimate is invented.",
+        "disposition": "reviewed_supported_reuse",
+        "warning": "repeated sentence in ['geo:AU', 'sector:XLB']: \"reuters reports rio tinto shuts iron ore mine in eastern canada amid wildfires…\""
+      },
+      {
+        "message": "WARN 2024-07-16 repeated sentence in ['geo:AU', 'sector:XLI']: \"reuters reports rio tintos african iron ore project receives all necessary appro…\"",
+        "evidence_ids": [
+          "n0076"
+        ],
+        "rationale": "The same African approval supports company operating horizons in Australia and the industrial funded-project comparison; approval is not presented as completed output.",
+        "disposition": "reviewed_supported_reuse",
+        "warning": "repeated sentence in ['geo:AU', 'sector:XLI']: \"reuters reports rio tintos african iron ore project receives all necessary appro…\""
+      },
+      {
+        "message": "WARN 2024-07-16 repeated sentence in ['catalysts[0]', 'sector:XLK']: \"reuters reports global smartphone market grew 65 in q2 led by samsung and apple …\"",
+        "evidence_ids": [
+          "n0988"
+        ],
+        "rationale": "The same IDC smartphone result supports the technology demand discussion and the Apple catalyst; the market total is not assigned as Apple company revenue growth.",
+        "disposition": "reviewed_supported_reuse",
+        "warning": "repeated sentence in ['catalysts[0]', 'sector:XLK']: \"reuters reports global smartphone market grew 65 in q2 led by samsung and apple …\""
+      },
+      {
+        "message": "WARN 2024-07-16 repeated sentence in ['sector:XLK', 'underowned[2]']: \"bloomberg reports apples india sales surge 33 to record in shift from china…\"",
+        "evidence_ids": [
+          "n1313"
+        ],
+        "rationale": "The same India sales report supports Apple geographic analysis and the India theme; company expansion remains distinct from a pure Indian-market allocation.",
+        "disposition": "reviewed_supported_reuse",
+        "warning": "repeated sentence in ['sector:XLK', 'underowned[2]']: \"bloomberg reports apples india sales surge 33 to record in shift from china…\""
+      },
+      {
+        "message": "WARN 2024-07-16 repeated sentence in ['earnings_pattern', 'sector:XLF']: \"wsj reports big banks helped by wall street comeback…\"",
+        "evidence_ids": [
+          "n1316"
+        ],
+        "rationale": "The same large-bank headline supports sector revenue-mix analysis and the earnings pattern; fee strength is not generalized into improving deposit economics.",
+        "disposition": "reviewed_supported_reuse",
+        "warning": "repeated sentence in ['earnings_pattern', 'sector:XLF']: \"wsj reports big banks helped by wall street comeback…\""
+      },
+      {
+        "message": "WARN 2024-07-16 repeated sentence in ['flows', 'sector:XLRE']: \"reuters reports us regional banks to face increased scrutiny as cre exposure sti…\"",
+        "evidence_ids": [
+          "n0553"
+        ],
+        "rationale": "The same CRE/buyback report supports property and liquidity analysis; ETF price moves are explicitly distinguished from spreads, lending capacity and new fund flows.",
+        "disposition": "reviewed_supported_reuse",
+        "warning": "repeated sentence in ['flows', 'sector:XLRE']: \"reuters reports us regional banks to face increased scrutiny as cre exposure sti…\""
+      },
+      {
+        "message": "WARN 2024-07-16 repeated sentence in ['anticipatory[2]', 'sector:SOXX']: \"reuters reports tsmc secondquarter profit seen jumping 30 on surging ai chip dem…\"",
+        "evidence_ids": [
+          "n0909"
+        ],
+        "rationale": "The same TSMC estimate is a pending profit preview in both semiconductors and the scenario; reported sales and expected future profit remain explicitly separate.",
+        "disposition": "reviewed_supported_reuse",
+        "warning": "repeated sentence in ['anticipatory[2]', 'sector:SOXX']: \"reuters reports tsmc secondquarter profit seen jumping 30 on surging ai chip dem…\""
+      }
+    ],
+    "2024-07-17": [],
+    "2024-07-18": [],
+    "2024-07-19": [],
+    "2024-07-22": [],
+    "2024-07-23": [],
+    "2024-07-24": [],
+    "2024-07-25": [],
+    "2024-07-26": [],
+    "2024-07-29": [],
+    "2024-07-30": [],
+    "2024-07-31": []
+  },
+  "disposition": "Every emitted diagnostic is explicitly reviewed in a bound independent component receipt; no blanket calendar-warning clearance."
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "AMD",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMD?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "180566e2e61026588fb351d89046640becf0c21dcc71159015d3e30ad497b1bc",
+   "fetched_at_utc": "2026-11-05T10:38:46.524913+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMD?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "8d99ef899222463a9eaa39104b42c91334ad9549e7faaddae09a91ceb99111de",
+   "fetched_at_utc": "2026-11-05T10:38:46.797845+00:00"
+  }
+ ]
+}

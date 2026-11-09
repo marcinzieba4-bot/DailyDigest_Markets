@@ -1,0 +1,932 @@
+{
+  "status": "accepted",
+  "dates": [
+    "2024-07-01",
+    "2024-07-02",
+    "2024-07-03",
+    "2024-07-04",
+    "2024-07-05",
+    "2024-07-08",
+    "2024-07-09",
+    "2024-07-10",
+    "2024-07-11",
+    "2024-07-12",
+    "2024-07-15",
+    "2024-07-16",
+    "2024-07-17",
+    "2024-07-18",
+    "2024-07-19",
+    "2024-07-22",
+    "2024-07-23",
+    "2024-07-24",
+    "2024-07-25",
+    "2024-07-26",
+    "2024-07-29",
+    "2024-07-30",
+    "2024-07-31"
+  ],
+  "tool_sha256": {
+    "render.py": "1b69e7a5e589126c4b50581991e38b6d6ed6c90e8bebc4c2e81145e3e9c3e763",
+    "build_artifacts.py": "b3465f666d0fb8f571fea1335cda3e0b2b3f1412265f0087105261a0d54213f9",
+    "build_retail_page.py": "7e5a7dd3fd5106cdafe8b18e07301d942c87d92b441fe2adaaf3ed8c086eaf17",
+    "build_source_inventory.py": "a1b5c7c31d856320f7cb312594eb9c71572daa135c1ef0414d7a7ba3204bda27",
+    "audit_work/review_final_artifacts.py": "d776e7b667f1c31202c7c00fb74c8be82e1c07c01daa8d8e386b5c5253060432"
+  },
+  "artifact_targets_expected": 74,
+  "report_zip_members_expected": 72,
+  "runtime_artifacts_reviewed": true,
+  "negative_fixtures": [
+    {
+      "case": "builder_literal_bracket_preserved",
+      "result": "distinct_as_required"
+    },
+    {
+      "case": "builder_word_boundary_preserved",
+      "result": "distinct_as_required"
+    },
+    {
+      "case": "reviewer_literal_bracket_preserved",
+      "result": "distinct_as_required"
+    },
+    {
+      "case": "reviewer_word_boundary_preserved",
+      "result": "distinct_as_required"
+    },
+    {
+      "case": "builder_literal_bracket_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_word_boundary_corrupted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_paragraphs_reordered",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_repeated_occurrence_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_ledger_outlet_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_ledger_timestamp_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_ledger_missing_body_title_present",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_literal_bracket_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_word_boundary_corrupted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_paragraphs_reordered",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_repeated_occurrence_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_ledger_outlet_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_ledger_timestamp_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_ledger_missing_body_title_present",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "html_reordered_paragraphs",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "html_wrong_source_href",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "html_ledger_metadata_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "exact_own_feed_record_metadata",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "replay_hidden_parent_existing_file",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "local_hidden_parent_existing_file",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "native_wrong_exact_kind_path",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "collection_wrong_exact_path",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "zip_path_audit_work/.private/proof.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "zip_path_../outside.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "zip_path_/outside.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "zip_path_audit_work//proof.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "renderer_invalid_date_before_read_../2024-07-01",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "renderer_invalid_date_before_read_2024-08-01",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "renderer_invalid_date_before_read_2024-07-06",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "renderer_invalid_date_before_read_20240701",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "partial_collection_scope",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "replay_acceptance_digest_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "replay_raw_input_bytes_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "source_acceptance_feed_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "source_acceptance_card_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_AUTHORING.md",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_tools/fetch_news.py",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_audit_work/independent_guard_policy.py",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_audit/news_query_plan.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_audit/news_physical_requests.jsonl",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_cache/rss_raw/attempts/synthetic.1.xml.gz",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_cache/rss_raw/synthetic.xml.gz",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_newest_lambda_function.py",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_input_bindings_missing",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_physical_attempt_body_missing",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_introduction_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_label_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_chip_href_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_dated_ledger_removed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_ledger_timestamp_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_bracketed_number_deleted",
+      "result": "rejected_as_required"
+    }
+  ],
+  "negative_fixture_count": 55,
+  "superseded_initial_receipt": "audit/review_history/artifact_tool_review_initial_superseded.json",
+  "scope": "Generic July date/naming/shape/layout/escaping and code-compile checks only. No report data read, built, published or factually accepted.",
+  "fatal_or_major_remaining": 0,
+  "reviewed_at_utc": "2026-11-05T13:40:05.459988+00:00",
+  "artifact_manifest_sha256": "d0295037e8a2a077eee454e3505dda66f09e954519a2b664c76820581c95b67a",
+  "reports": [
+    {
+      "date": "2024-07-01",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 129,
+      "pdf_pages": 29,
+      "spec_sha256": "34d2332bc29445c12e35b2134a1060de6ccfb0b84e51281f75006e9059717be0"
+    },
+    {
+      "date": "2024-07-02",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 119,
+      "pdf_pages": 29,
+      "spec_sha256": "bb9489c38adf97063c416eb956b108fdd90248ea43e0fd2ec6f22117b5fcdfdb"
+    },
+    {
+      "date": "2024-07-03",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 116,
+      "pdf_pages": 29,
+      "spec_sha256": "b82f4885c2a54e82892e5c7e5581a313d911c5fc6a624b9dd7cd5ba0e7e7d890"
+    },
+    {
+      "date": "2024-07-04",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 113,
+      "pdf_pages": 30,
+      "spec_sha256": "146a90759019363a81bc34b4a6306ebe799e397d02dc8d45c1a37ab5a519da5a"
+    },
+    {
+      "date": "2024-07-05",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 113,
+      "pdf_pages": 30,
+      "spec_sha256": "dba0f4c0db90f190d68563f39a7909feb8d3fb5b30b1f004f681baa693898097"
+    },
+    {
+      "date": "2024-07-08",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 112,
+      "pdf_pages": 29,
+      "spec_sha256": "985adc1fdc7363e2572441b5ff9f8497c8ce9de5f3e898a2e1edd2c3061b5e2f"
+    },
+    {
+      "date": "2024-07-09",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 101,
+      "pdf_pages": 29,
+      "spec_sha256": "b1f867a52b5efd3ce7df469a340d9373ad8c415d198614de66dbf8078277bc7a"
+    },
+    {
+      "date": "2024-07-10",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 90,
+      "pdf_pages": 28,
+      "spec_sha256": "2b46f4e44e888dc2850c3af354e023c1aa4264edd88ad7c2e5ddd9cd9abbff98"
+    },
+    {
+      "date": "2024-07-11",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 90,
+      "pdf_pages": 28,
+      "spec_sha256": "0637d68d5ca33878da4e65a978708ee45e03cb4e0dbfb7c734bcf7cacc5e6392"
+    },
+    {
+      "date": "2024-07-12",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 87,
+      "pdf_pages": 28,
+      "spec_sha256": "eb1a21848373eb4e76d53621dc5e9ec9db3d7d226e1867f91d075bfffede7dc3"
+    },
+    {
+      "date": "2024-07-15",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 105,
+      "pdf_pages": 29,
+      "spec_sha256": "27e8713c19952889bea83fa5337caba088d8e32bd0799dbcd191abe1b8c3094f"
+    },
+    {
+      "date": "2024-07-16",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 94,
+      "pdf_pages": 28,
+      "spec_sha256": "65a37dd4ce4bcaf7c40495a517e08e957cfaed3f51ec028957f03c7e05366f7c"
+    },
+    {
+      "date": "2024-07-17",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 91,
+      "pdf_pages": 28,
+      "spec_sha256": "56254c2e17d7b1d9861afe9a1550db8dc43bd5680c95f677e1aa94c92100adbf"
+    },
+    {
+      "date": "2024-07-18",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 81,
+      "pdf_pages": 28,
+      "spec_sha256": "37261bf57e00d2bc936faa658d1b27ebc47dccf4bf1c2c9638406647403eada8"
+    },
+    {
+      "date": "2024-07-19",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 92,
+      "pdf_pages": 29,
+      "spec_sha256": "c08bf24f5a6a1883c17f19979ae2f36f5cc217d1d0389c3f34f2d42470a8f3b6"
+    },
+    {
+      "date": "2024-07-22",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 121,
+      "pdf_pages": 29,
+      "spec_sha256": "cc63b5e718892cfbf5643b6cdd3463b1aea1a424cb1bdb5d9f97e3ce0f044bef"
+    },
+    {
+      "date": "2024-07-23",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 107,
+      "pdf_pages": 28,
+      "spec_sha256": "60a61cede167971e62fde6f6bdbe37ceebd04e380fd62d4a29bce1a13d01e921"
+    },
+    {
+      "date": "2024-07-24",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 107,
+      "pdf_pages": 29,
+      "spec_sha256": "282751cb5b08065ea51e5be11f6a5fbbcfcc7822293bd5bed8ea1c0977ced8b5"
+    },
+    {
+      "date": "2024-07-25",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 104,
+      "pdf_pages": 29,
+      "spec_sha256": "68bc3804323b0f8a034fa8434fc8ba01b4bfab66f55505ffb56593d52ed24058"
+    },
+    {
+      "date": "2024-07-26",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 117,
+      "pdf_pages": 29,
+      "spec_sha256": "e7ddf3f0a63568cfeae99e5864f6a49c1bdb00adacb0a1c838148e89d6dd515d"
+    },
+    {
+      "date": "2024-07-29",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 131,
+      "pdf_pages": 30,
+      "spec_sha256": "a390113854610718095dba0436a4e5d81422d03639628c290649f7740e7f2564"
+    },
+    {
+      "date": "2024-07-30",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 117,
+      "pdf_pages": 29,
+      "spec_sha256": "a9aa12b40cceac4acad372fb5c681a5d0a650ac0f1f6ae3c6ea3197eb8c470d0"
+    },
+    {
+      "date": "2024-07-31",
+      "paragraphs_preserved": 149,
+      "ledger_headlines_preserved": 109,
+      "pdf_pages": 29,
+      "spec_sha256": "47f788ec870aa38d542dd3b5e08596a1119a36640d40b919f205bb81fd75047d"
+    }
+  ],
+  "monthly_retail_checks": [
+    {
+      "date": "2024-07-01",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 9,
+      "ledger_records": 9,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-02",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 13,
+      "ledger_records": 13,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-03",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 12,
+      "ledger_records": 12,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-04",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 12,
+      "ledger_records": 11,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-05",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 8,
+      "ledger_records": 8,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-08",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 11,
+      "ledger_records": 9,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-09",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 10,
+      "ledger_records": 9,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-10",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 9,
+      "ledger_records": 9,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-11",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 11,
+      "ledger_records": 11,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-12",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 11,
+      "ledger_records": 11,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-15",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 10,
+      "ledger_records": 9,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-16",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 14,
+      "ledger_records": 13,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-17",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 13,
+      "ledger_records": 11,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-18",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 12,
+      "ledger_records": 10,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-19",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 12,
+      "ledger_records": 11,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-22",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 15,
+      "ledger_records": 14,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-23",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 13,
+      "ledger_records": 10,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-24",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 14,
+      "ledger_records": 12,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-25",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 16,
+      "ledger_records": 15,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-26",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 15,
+      "ledger_records": 14,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-29",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 13,
+      "ledger_records": 11,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-30",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 12,
+      "ledger_records": 11,
+      "intro_labels_links_and_ledger_preserved": true
+    },
+    {
+      "date": "2024-07-31",
+      "trades": 4,
+      "parts": 12,
+      "citation_occurrences": 13,
+      "ledger_records": 11,
+      "intro_labels_links_and_ledger_preserved": true
+    }
+  ],
+  "layouts": [
+    {
+      "artifact": "2024-07-01",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-01",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-02",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-02",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-03",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-03",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-04",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-04",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-05",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-05",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-08",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-08",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-09",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-09",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-10",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-10",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-11",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-11",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-12",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-12",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-15",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-15",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-16",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-16",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-17",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-17",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-18",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-18",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-19",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-19",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-22",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-22",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-23",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-23",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-24",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-24",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-25",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-25",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-26",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-26",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-29",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-29",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-30",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-30",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "2024-07-31",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "2024-07-31",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "collection",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "collection",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "artifact": "retail_collection",
+      "viewport_width": 1440,
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "artifact": "retail_collection",
+      "viewport_width": 390,
+      "width": 390,
+      "scroll": 390
+    }
+  ],
+  "report_zip_members": 72,
+  "frozen_source_members": 51245,
+  "source_replay_verification": {
+    "replay_inputs_verified": 50654,
+    "source_input_bindings": 134,
+    "source_dependency_hash_checks": 49472,
+    "physical_attempts": 16437,
+    "received_attempt_bodies": 16437,
+    "canonical_physical_requests": 16437,
+    "current_source_schema_checked": true
+  },
+  "limits": [
+    "Technical preservation, Unicode, chronology, local bytes and layout review only; editorial/source-claim acceptance is separate.",
+    "No publication or public-domain routing/network verification performed; root verifies remote ZIP/native content separately."
+  ]
+}

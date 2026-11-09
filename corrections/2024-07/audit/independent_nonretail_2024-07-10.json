@@ -1,0 +1,1684 @@
+{
+  "date": "2024-07-10",
+  "status": "accepted",
+  "canonical_nonretail_sha256": "304d0c9991f210a7c4d7d97393e2270ba6d1303097a550a3317df6383d87fc1f",
+  "feed_sha256": "ad600af4d72e2d907de04fb427fec054c9f0045c31ca2e32bfae04a057ac335a",
+  "card_sha256": "dbfb68ae60c44436e3b5d0b8a7062379ae725b8ba3cb8b9a304d717eb4adacbe",
+  "exclusions_sha256": "f9c91e359490405e5f5485d7ff9ffafc7a2126a384d114c3aa07f0a2de030689",
+  "fatal_or_major_remaining": 0,
+  "validation": {
+    "command": "python tools/verify.py 2024-07-10 --nonretail --counts",
+    "result": "PASS",
+    "words": 8540,
+    "distinct_citations": 85,
+    "maximum_citation_uses": 3,
+    "all_36_ranges_pass": true,
+    "failures": 0,
+    "warnings": 0
+  },
+  "reviewed_validation_warnings": [],
+  "findings": [
+    {
+      "severity": "minor",
+      "location": "geo.US.Rates & Curve",
+      "finding": "Spread change was described as widening while the inversion became shallower.",
+      "fix": "Used increased for the +12 bps algebraic spread change; all values and bull-steepening classification preserved."
+    },
+    {
+      "severity": "minor",
+      "location": "geo.PL.Corporate & Sectors",
+      "finding": "Private-banking leadership could misclassify the Pekao executive’s former role; the headline says he headed a private bank.",
+      "fix": "Specified prior experience leading a privately owned bank, without inventing a name or business-unit role."
+    },
+    {
+      "severity": "minor",
+      "location": "sectors.XLC.Reported",
+      "finding": "Clinch-control wording could imply completed ownership transfer at Paramount.",
+      "fix": "Specified announced merger agreement, retaining Yahoo’s reported deal and adding CNBC n0753 for agreement status."
+    },
+    {
+      "severity": "minor",
+      "location": "sectors.XLE.Breaking Convention",
+      "finding": "Operations begin to normalize was stronger than the available evidence of attempts to restore operations.",
+      "fix": "Changed to companies trying to restore operations and attached Reuters n1934, preserving uncertainty."
+    }
+  ],
+  "claim_checks": [
+    {
+      "area": "Every numeric claim and identity",
+      "result": "Matched Treasury 2Y 4.62%, 10Y 4.30%, spread -32 bps and twenty-observation -25/-13/+12 bps to own-card Treasury fields. Checked every quoted equity/ETF/index/commodity close and stated return against the exact completed 2024-07-09 line, including Nasdaq 100, Tesla +47.81% twenty sessions, Samsung local KRW, TSM US ADR and Polish total-return tracker in PLN. DXY +0.22%, TLT +0.93%, HYG +0.56% and LQD +0.91% are twenty-session values, distinct from negative daily bond-ETF moves. BTC/ETH use 2024-07-09 completed UTC daily closes. Payroll, unemployment and services PMI values match cited headlines. No numeric spot FX or unsupported target was found."
+    },
+    {
+      "area": "Full headlines, windows and cutoff",
+      "result": "Read all 85 cited full titles, including newly added agreement and restoration-attempt sources. Powell growth-risk comments are already reported; CPI, China loans and bank earnings remain pending. Reuters loan poll is explicitly forecast, EIA/TrendForce output remains forecast, Samsung remains preliminary and TSM tight supply remains expectation. Nike June 27 warning is released earnings/guidance within fourteen days, not stale ordinary news. Older policy/affordability baselines remain within thirty-five-day macro eligibility."
+    },
+    {
+      "area": "Meaning and company roles",
+      "result": "BP refining and OMV legislation/inventory profit warnings remain indications with separate causes. Exxon’s exclusion of Pioneer remains attached wherever used. Tesla storage activity is separated from US vehicle-market share and deployment from margin. Mounjaro/Ozempic study remains study evidence rather than an approved indication. Asseco SEE is distinguished from other group entities. Pekao appointment, grocery searches, GPW product access and NewConnect revitalization are not converted into completed earnings, fines, flows or financing proceeds."
+    },
+    {
+      "area": "Flows and cross-section action consistency",
+      "result": "Indian equity mutual-fund June record, Goldman-attributed hedge-fund commodity buying and Temasek regional comparison retain their separate scopes. Bond ETF prices are explicitly not spreads or subscriptions. Selective bullish growth/power/health calls require orders, access, contracts or cash conversion. Bearish energy/BP and European autos retain conditions for covering or improving the stance; mixed Tesla balances storage with vehicle competition. Duration remains modest and conditional on long yields."
+    }
+  ],
+  "style_depth": {
+    "assessment": "All 36 blocks reviewed for meaningful mechanisms and explicit action/reversal conditions. CN treats expected loans, rate-control operations, resale/developer finance, cheap batteries, patents and tariff relocation as separate channels. PL compares inflation projections, household demand, mortgage cooling, executive/governance changes, security financing and exchange product competition, with substantive divergence. Sector and catalyst comparisons remain company specific without generic new padding.",
+    "limits": "The review validates headline-level claims and card identities. It does not infer unseen article content, private positions, unpublished data or subsequent outcomes."
+  },
+  "scope": {
+    "parts_reviewed": 136,
+    "titles_and_labels_reviewed": true,
+    "all_cited_full_headlines_reviewed": true,
+    "own_date_only": true,
+    "excluded_records": 0,
+    "other_dates_used_as_evidence": false,
+    "retail_reviewed_or_changed": false,
+    "minor_targeted_changes_only": true
+  },
+  "paragraph_checks": [
+    {
+      "path": "geo[0].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n2146",
+        "n2148"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[0].parts[1]",
+      "label": "Rates & Curve",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[0].parts[2]",
+      "label": "New / Most Important",
+      "evidence_ids": [
+        "n0888",
+        "n2065",
+        "n2045"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[0].parts[3]",
+      "label": "Playbook ✓",
+      "evidence_ids": [
+        "n2147",
+        "n1731"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[1].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n1315"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[1].parts[1]",
+      "label": "Activity & Inflation",
+      "evidence_ids": [
+        "n1311",
+        "n1297"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[1].parts[2]",
+      "label": "New / Most Important",
+      "evidence_ids": [
+        "n1301"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[1].parts[3]",
+      "label": "Playbook ✓",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[2].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n0205"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[2].parts[1]",
+      "label": "PMIs & Activity",
+      "evidence_ids": [
+        "n0214",
+        "n0206"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[2].parts[2]",
+      "label": "Credit Impulse",
+      "evidence_ids": [
+        "n0191",
+        "n0170"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[2].parts[3]",
+      "label": "Property",
+      "evidence_ids": [
+        "n0190",
+        "n0154"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[2].parts[4]",
+      "label": "Fiscal, Policy & Trade",
+      "evidence_ids": [
+        "n0192",
+        "n1922",
+        "n0189"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[2].parts[5]",
+      "label": "Markets & Flows",
+      "evidence_ids": [
+        "n0199",
+        "n0212"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[2].parts[6]",
+      "label": "New / Most Important",
+      "evidence_ids": [
+        "n0180",
+        "n0150"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[2].parts[7]",
+      "label": "Playbook ✓",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[3].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[3].parts[1]",
+      "label": "Activity & Currency",
+      "evidence_ids": [
+        "n1466",
+        "n1452",
+        "n1471"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[3].parts[2]",
+      "label": "Playbook ✓",
+      "evidence_ids": [
+        "n1435"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[4].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n0089"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[4].parts[1]",
+      "label": "Demand & Financing",
+      "evidence_ids": [
+        "n0077",
+        "n0050"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[4].parts[2]",
+      "label": "Playbook ✓",
+      "evidence_ids": [
+        "n0074"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[5].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n1767"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[5].parts[1]",
+      "label": "Markets",
+      "evidence_ids": [
+        "n1773"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[5].parts[2]",
+      "label": "Fiscal & Politics",
+      "evidence_ids": [
+        "n1683",
+        "n1501"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[5].parts[3]",
+      "label": "Corporate & Sectors",
+      "evidence_ids": [
+        "n1765",
+        "n1770",
+        "n1746",
+        "n1696"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[5].parts[4]",
+      "label": "Geopolitics & Security",
+      "evidence_ids": [
+        "n1744",
+        "n1492",
+        "n1735"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[5].parts[5]",
+      "label": "New / Most Important",
+      "evidence_ids": [
+        "n1778",
+        "n1779",
+        "n1761",
+        "n1754"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "geo[5].parts[6]",
+      "label": "Playbook ✓",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[0].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[0].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n0687"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[0].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[0].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[1].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[1].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n0809",
+        "n0753"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[1].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[1].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[2].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[2].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1217"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[2].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[2].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [
+        "n1167"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[3].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[3].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n0848",
+        "n1208"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[3].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[3].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [
+        "n1934"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[4].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[4].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1943"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[4].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[4].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[5].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[5].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1205",
+        "n1206"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[5].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[5].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[6].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[6].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1166"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[6].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[6].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[7].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[7].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n0879"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[7].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[7].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[8].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [
+        "n0714"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[8].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n0206"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[8].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[8].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[9].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[9].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n2136"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[9].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[9].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[10].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[10].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1921"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[10].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[10].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [
+        "n0802"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[11].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [
+        "n1922"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[11].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1895"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[11].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[11].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[12].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[12].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n0456",
+        "n0784"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[12].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "sectors[12].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "earnings_pattern.parts[0]",
+      "label": "Rewarded",
+      "evidence_ids": [
+        "n0687",
+        "n1214"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "earnings_pattern.parts[1]",
+      "label": "Punished",
+      "evidence_ids": [
+        "n0848",
+        "n1208"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "earnings_pattern.parts[2]",
+      "label": "Pattern",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "earnings_pattern.parts[3]",
+      "label": "Attention into EPS",
+      "evidence_ids": [
+        "n0111"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "earnings_pattern.parts[4]",
+      "label": "Playbook",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "underowned[0].parts[0]",
+      "label": "Attention Gap",
+      "evidence_ids": [
+        "n1214"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "underowned[0].parts[1]",
+      "label": "Exposure & Risk",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "underowned[0].parts[2]",
+      "label": "Trigger to Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "underowned[1].parts[0]",
+      "label": "Attention Gap",
+      "evidence_ids": [
+        "n1184"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "underowned[1].parts[1]",
+      "label": "Exposure & Risk",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "underowned[1].parts[2]",
+      "label": "Trigger to Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "underowned[2].parts[0]",
+      "label": "Attention Gap",
+      "evidence_ids": [
+        "n1217"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "underowned[2].parts[1]",
+      "label": "Exposure & Risk",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "underowned[2].parts[2]",
+      "label": "Trigger to Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "underowned[3].parts[0]",
+      "label": "Attention Gap",
+      "evidence_ids": [
+        "n1921"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "underowned[3].parts[1]",
+      "label": "Exposure & Risk",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "underowned[3].parts[2]",
+      "label": "Trigger to Watch",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "crypto.parts[0]",
+      "label": "Market Context",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "crypto.parts[1]",
+      "label": "New / Most Important",
+      "evidence_ids": [
+        "n1044",
+        "n1038",
+        "n1015",
+        "n1051"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "crypto.parts[2]",
+      "label": "Playbook",
+      "evidence_ids": [
+        "n1047"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "flows.parts[0]",
+      "label": "Global Liquidity",
+      "evidence_ids": [
+        "n2146"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "flows.parts[1]",
+      "label": "Rates & Dollar",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "flows.parts[2]",
+      "label": "Credit Check",
+      "evidence_ids": [
+        "n1336"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "flows.parts[3]",
+      "label": "Equity & Fund Flows",
+      "evidence_ids": [
+        "n1343",
+        "n0714",
+        "n1339",
+        "n0212"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "flows.parts[4]",
+      "label": "Portfolio Implication",
+      "evidence_ids": [
+        "n2151",
+        "n1348"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "anticipatory[0].parts[0]",
+      "label": "What Is Priced",
+      "evidence_ids": [
+        "n1731"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "anticipatory[0].parts[1]",
+      "label": "Conditional Expression",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "anticipatory[0].parts[2]",
+      "label": "Risk",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "anticipatory[1].parts[0]",
+      "label": "What Is Priced",
+      "evidence_ids": [
+        "n1217"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "anticipatory[1].parts[1]",
+      "label": "Conditional Expression",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "anticipatory[1].parts[2]",
+      "label": "Risk",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "anticipatory[2].parts[0]",
+      "label": "What Is Priced",
+      "evidence_ids": [
+        "n0205"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "anticipatory[2].parts[1]",
+      "label": "Conditional Expression",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "anticipatory[2].parts[2]",
+      "label": "Risk",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "anticipatory[3].parts[0]",
+      "label": "What Is Priced",
+      "evidence_ids": [
+        "n0704"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "anticipatory[3].parts[1]",
+      "label": "Conditional Expression",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "anticipatory[3].parts[2]",
+      "label": "Risk",
+      "evidence_ids": [
+        "n1935"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[0].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n0848"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[0].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[0].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[1].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n1214",
+        "n0954"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[1].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[1].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[2].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n0687"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[2].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[2].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[3].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n0879"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[3].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[3].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[4].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n0784"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[4].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[4].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[5].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n1205"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[5].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [
+        "n1064"
+      ],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    },
+    {
+      "path": "catalysts[5].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read and checked paragraph against own-date full headlines/card for claim identity, release status, attribution, number horizon and actionable conditions."
+    }
+  ],
+  "cited_headlines_checked": [
+    {
+      "id": "n0050",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "AFR",
+      "title": "Migration cut no ‘silver bullet’ to Australia’s inflation problem - AFR",
+      "uses": 1
+    },
+    {
+      "id": "n0074",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "AFR",
+      "title": "Copper a better bet than iron ore and lithium - AFR",
+      "uses": 1
+    },
+    {
+      "id": "n0077",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "ABC News & Headlines – Australian Broadcasting Corporation",
+      "title": "Here's how much you need to earn to afford a mid-range home in your capital city - ABC News & Headlines – Australian Broadcasting Corporation",
+      "uses": 1
+    },
+    {
+      "id": "n0089",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "ABC News & Headlines – Australian Broadcasting Corporation",
+      "title": "'Nasty' inflation numbers could deliver a rate rise despite retail discounting frenzy - ABC News & Headlines – Australian Broadcasting Corporation",
+      "uses": 1
+    },
+    {
+      "id": "n0111",
+      "published_at": "2024-07-07T07:00:00+00:00",
+      "source": "WSJ",
+      "title": "Earnings Season to Test Investors’ Faith in Big Tech Stocks - WSJ",
+      "uses": 1
+    },
+    {
+      "id": "n0150",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "China leads the patents race for generative AI, with Tencent and Baidu topping the list - CNBC",
+      "uses": 1
+    },
+    {
+      "id": "n0154",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "source": "South China Morning Post",
+      "title": "China’s second-hand property sales surge after policy incentives - South China Morning Post",
+      "uses": 1
+    },
+    {
+      "id": "n0170",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "WSJ",
+      "title": "China’s Central Bank Borrows ‘Hundreds of Billions’ of Yuan in Government Bonds - WSJ",
+      "uses": 1
+    },
+    {
+      "id": "n0180",
+      "published_at": "2024-07-06T07:00:00+00:00",
+      "source": "China Daily",
+      "title": "Firms to get support for future tech, products - China Daily",
+      "uses": 1
+    },
+    {
+      "id": "n0189",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "BMW seeks lower import tariffs for China-made electric Mini, source says - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0190",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "China's Guangzhou R&F Properties faces liquidation petition in Hong Kong - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0191",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "South China Morning Post",
+      "title": "China’s central bank takes extra control of interest rates amid reform push - South China Morning Post",
+      "uses": 1
+    },
+    {
+      "id": "n0192",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "EU tariffs hit growth in China's electric car exports, industry body official says - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0199",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Asia investors wager on region's rebound, China recovery - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0205",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "China's June new yuan loans seen surging on supportive policy: Reuters poll - Reuters",
+      "uses": 2
+    },
+    {
+      "id": "n0206",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Bloomberg",
+      "title": "China’s Batteries Are Now Cheap Enough to Power Huge Shifts - Bloomberg",
+      "uses": 2
+    },
+    {
+      "id": "n0212",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Bloomberg.com",
+      "title": "Temasek China Bets Trail Americas for First Time in a Decade - Bloomberg.com",
+      "uses": 2
+    },
+    {
+      "id": "n0214",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Business Insider",
+      "title": "The Chinese economy is so bad, even Chinese people can't be enticed into buying dirt-cheap mega-sale items - Business Insider",
+      "uses": 1
+    },
+    {
+      "id": "n0456",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Samsung flags better-than-expected profit rise as AI boom lifts chip prices - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0687",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Investopedia",
+      "title": "Corning Stock Soars After Glass Maker Lifts Guidance on Generative AI Boost - Investopedia",
+      "uses": 3
+    },
+    {
+      "id": "n0704",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Exxon signals Q2 below market consensus, excluding Pioneer buy - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0714",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "HEDGE FLOW Hedge funds buy commodity stocks at fastest pace in five months, says Goldman - Reuters",
+      "uses": 2
+    },
+    {
+      "id": "n0753",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "Paramount agrees to merge with Skydance, ending monthslong negotiations and Redstone era - CNBC",
+      "uses": 1
+    },
+    {
+      "id": "n0784",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Bloomberg.com",
+      "title": "TSMC Shares Soar to Record on Expectations of Tight 2025 Supply - Bloomberg.com",
+      "uses": 2
+    },
+    {
+      "id": "n0802",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Vistra, Constellation Energy surge on clean energy demand bets to power AI tech - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0809",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Yahoo Finance",
+      "title": "Who is David Ellison? Heir to the Oracle fortune celebrates his biggest deal ever by clinching control over ‘Top Gun’ studio Paramount - Yahoo Finance",
+      "uses": 1
+    },
+    {
+      "id": "n0848",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "BP shares dip after warning weak refining will hit Q2 profit - Reuters",
+      "uses": 3
+    },
+    {
+      "id": "n0879",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Barron's",
+      "title": "Eli Lilly’s Mounjaro Works Better Than Novo’s Ozempic, Study Finds - Barron's",
+      "uses": 2
+    },
+    {
+      "id": "n0888",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Goldman Sachs asset managers see US economy, stocks slowing - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0954",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "The New York Times",
+      "title": "Tesla’s Share of U.S. Electric Car Market Falls Below 50% (Published 2024) - The New York Times",
+      "uses": 1
+    },
+    {
+      "id": "n1015",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Bitcoin set for worst week in nearly a year on Mt. Gox liquidation fears - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1038",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "The German government owns around $2 billion in bitcoin — and it's freaking out crypto investors - CNBC",
+      "uses": 1
+    },
+    {
+      "id": "n1044",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Barron's",
+      "title": "Bitcoin Gains. What’s Driving the Crypto Market. - Barron's",
+      "uses": 1
+    },
+    {
+      "id": "n1047",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "CoinDesk",
+      "title": "Blockchain Startup Rome Raises $9M to Serve Ethereum Layer-2s Through Solana - CoinDesk",
+      "uses": 1
+    },
+    {
+      "id": "n1051",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "CoinDesk",
+      "title": "Lionel Messi Promotes Obscure Meme Coin on Instagram, Leading to 350% Surge - CoinDesk",
+      "uses": 1
+    },
+    {
+      "id": "n1064",
+      "published_at": "2024-06-27T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "Nike shares plunge after retailer says quarterly sales will fall 10%, warns on China weakness - CNBC",
+      "uses": 1
+    },
+    {
+      "id": "n1166",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "Inflation outrage: Even as prices stabilize, Walmart, Chipotle and others feel the heat from skeptical customers - CNBC",
+      "uses": 1
+    },
+    {
+      "id": "n1167",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Fortune",
+      "title": "Interest rates be damned: 3 reasons JPMorgan's commercial banking clients are optimistic about the U.S. economy - Fortune",
+      "uses": 1
+    },
+    {
+      "id": "n1184",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "PR Newswire Canada",
+      "title": "Bell acquires tech services companies Stratejm and CloudKettle Inc., strengthening managed cybersecurity and Salesforce capabilities for enterprises - PR Newswire Canada",
+      "uses": 1
+    },
+    {
+      "id": "n1205",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Fortune",
+      "title": "Nike brings senior executive out of retirement to help mend retail partnerships - Fortune",
+      "uses": 2
+    },
+    {
+      "id": "n1206",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Business Insider",
+      "title": "Nike's Trying to Pivot. It's Not Working Just yet. - Business Insider",
+      "uses": 1
+    },
+    {
+      "id": "n1208",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "OMV flags Q2 earnings hit from legislative changes, inventory losses - Reuters",
+      "uses": 2
+    },
+    {
+      "id": "n1214",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Utility Dive",
+      "title": "Tesla Energy deploys company record 9.4 GWh of storage in Q2 2024 - Utility Dive",
+      "uses": 3
+    },
+    {
+      "id": "n1217",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "US bank profits face pressure from lower interest payments, higher credit losses - Reuters",
+      "uses": 3
+    },
+    {
+      "id": "n1297",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "The Guardian",
+      "title": "Bank of England should keep interest rates on hold, says policymaker - The Guardian",
+      "uses": 1
+    },
+    {
+      "id": "n1301",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "German growth package offers limited boost, say economists - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1311",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Bank of England scrutinises risk transfers in insurance sector - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1315",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Is France governable? The budget is an early test - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1336",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Bloomberg",
+      "title": "Key Scarcity Indicator Flashes Warning Sign for Funding Market - Bloomberg",
+      "uses": 1
+    },
+    {
+      "id": "n1339",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "WSJ",
+      "title": "The Top Stock Mutual Funds Have a Familiar, Tech-Heavy Feel - WSJ",
+      "uses": 1
+    },
+    {
+      "id": "n1343",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "India's equity mutual fund inflows hit record high in June, data shows - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1348",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Bloomberg.com",
+      "title": "Trafigura Wrestles With Huge Share Buyback Bill as Boom Fades - Bloomberg.com",
+      "uses": 1
+    },
+    {
+      "id": "n1435",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Japanese firms deliver biggest pay hikes in 33 years, union survey shows - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1452",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Japan household spending falls unexpectedly, clouds BOJ rate path - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1466",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "The Japan Times",
+      "title": "Japan base pay jumps most since 1993 in positive signal for BOJ - The Japan Times",
+      "uses": 1
+    },
+    {
+      "id": "n1471",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "The New York Times",
+      "title": "The Yen Is Plunging. So Is Japan’s Defense Budget. (Published 2024) - The New York Times",
+      "uses": 1
+    },
+    {
+      "id": "n1492",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "source": "Euronews.com",
+      "title": "Poland and Lithuania call for EU and NATO help for border defence - Euronews.com",
+      "uses": 1
+    },
+    {
+      "id": "n1501",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "U.S. Department of State (.gov)",
+      "title": "Second $2 Billion U.S.-Poland Foreign Military Financing Direct Loan Strengthens NATO - U.S. Department of State (.gov)",
+      "uses": 1
+    },
+    {
+      "id": "n1683",
+      "published_at": "2024-07-07T07:00:00+00:00",
+      "source": "Money.pl",
+      "title": "Nieoczywiste skutki podniesienia kwoty wolnej. Wielu nie zapłaciłoby podatku - Money.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1696",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Money.pl",
+      "title": "Biedronka i Dino będą miały problem? Przeszukano siedziby firm - Money.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1731",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Strefa Inwestorów",
+      "title": "TYDZIEŃ NA RYNKACH: CPI z USA, szef Fed o polityce pieniężnej w Kongresie - Strefa Inwestorów",
+      "uses": 2
+    },
+    {
+      "id": "n1735",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Money.pl",
+      "title": "Ukraina ma dostać prąd z polskiego węgla. Scenariusz rządu ma dwa słabe punkty - Money.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1744",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Rzeczpospolita",
+      "title": "Andrzej Duda: Polska będzie zagrożona, jeśli Ukraina upadnie i Rosja wygra wojnę - Rzeczpospolita",
+      "uses": 1
+    },
+    {
+      "id": "n1746",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Parkiet",
+      "title": "Asseco SEE chce podbić Indie. Będą kolejne przejęcia? - Parkiet",
+      "uses": 1
+    },
+    {
+      "id": "n1754",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Parkiet",
+      "title": "Coraz bogatsza globalna oferta. Akcje gigantów trafiły na GPW - Parkiet",
+      "uses": 1
+    },
+    {
+      "id": "n1761",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Strefa Inwestorów",
+      "title": "GPW chce zrewitalizować NewConnect, by przyciągać spółki z portfeli venture capital - Strefa Inwestorów",
+      "uses": 1
+    },
+    {
+      "id": "n1765",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Money.pl",
+      "title": "Kim jest nowy prezes Pekao S.A.? To weteran bankowości - Money.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1767",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Strefa Inwestorów",
+      "title": "Nowe prognozy NBP. Inflacja znowu wzrośnie, by dopiero w 2026 r. wrócić do celu - Strefa Inwestorów",
+      "uses": 1
+    },
+    {
+      "id": "n1770",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Rzeczpospolita",
+      "title": "Pekao ma nowego prezesa. Wcześniej długo stał na czele prywatnego banku - Rzeczpospolita",
+      "uses": 1
+    },
+    {
+      "id": "n1773",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Forex Club",
+      "title": "Polski złoty najsilniejszy od miesiąca. Polityka monetarna NBP i FED - Forex Club",
+      "uses": 1
+    },
+    {
+      "id": "n1778",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Money.pl",
+      "title": "Tak wygląda ochłodzenie na rynku nieruchomości. Transakcji ubywa, wzrost cen hamuje - Money.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1779",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Bankier.pl",
+      "title": "Te drzwi w hipotekach już zamknięte, ale są szanse, żeby obniżyć oprocentowanie - Bankier.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1895",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Automotive News",
+      "title": "BYD to build 150,000 EVs and hybrids a year in new Turkey plant - Automotive News",
+      "uses": 1
+    },
+    {
+      "id": "n1921",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "U.S. Energy Information Administration (EIA) (.gov)",
+      "title": "EIA expects rising electricity demand and natural gas prices to affect electricity fuel mix for the rest of 2024 - U.S. Energy Information Administration (EIA) (.gov)",
+      "uses": 2
+    },
+    {
+      "id": "n1922",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "TrendForce",
+      "title": "EU Tariffs Act as Catalyst, Chinese Automakers to Accelerate Launch of 14 New Overseas Plants, Says TrendForce - TrendForce",
+      "uses": 2
+    },
+    {
+      "id": "n1934",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Oil companies try to restore Texas operations after Storm Beryl - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1935",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Oil prices fall more than 1% after US crude hub escapes serious damage from Beryl - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1943",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Bureau of Transportation Statistics (BTS) (.gov)",
+      "title": "U.S. Airlines’ May 2024 Fuel Cost per Gallon down 3.8% from April 2024; Aviation Fuel Consumption up 4.0% from Pre-Pandemic May 2019 | Bureau of Transportation Statistics - Bureau of Transportation Statistics (BTS) (.gov)",
+      "uses": 1
+    },
+    {
+      "id": "n2045",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "PR Newswire",
+      "title": "Services PMI® at 48.8%; June 2024 Services ISM® Report On Business® - PR Newswire",
+      "uses": 1
+    },
+    {
+      "id": "n2065",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "U.S. economy added 206,000 jobs in June, unemployment rate rises to 4.1% - CNBC",
+      "uses": 1
+    },
+    {
+      "id": "n2136",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Better Dwelling",
+      "title": "Canadian Mortgage Borrowers To Reduce Consumption Even After Rate Cuts: BoC - Better Dwelling",
+      "uses": 1
+    },
+    {
+      "id": "n2146",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "Fed Chair Powell says holding rates high for too long could jeopardize economic growth - CNBC",
+      "uses": 2
+    },
+    {
+      "id": "n2147",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Fed's Powell defends central bank independence as challenges loom - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n2148",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Axios",
+      "title": "High inflation no longer the only risk for U.S. economy, Fed chair Jerome Powell says - Axios",
+      "uses": 1
+    },
+    {
+      "id": "n2151",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Saudi Aramco returns to debt market with dollar bond sale - Reuters",
+      "uses": 1
+    }
+  ],
+  "nonretail_content_sha256": "304d0c9991f210a7c4d7d97393e2270ba6d1303097a550a3317df6383d87fc1f",
+  "digest_compatibility": {
+    "diagnosis": "Receipt key-name compatibility only. The staging key was absent; the original reviewed canonical digest and tools.merge_retail.digest(current_nonretail) are identical. No report value or report byte is changed by this repair.",
+    "original_review_receipt": "audit/review_history/digest_compatibility_independent_nonretail_2024-07-10.original.json",
+    "original_review_receipt_sha256": "640688db425442147883bf5662408520774607a47ff4ff1118ca10194e638d49",
+    "previous_nonretail_content_sha256_present": false,
+    "original_canonical_nonretail_sha256": "304d0c9991f210a7c4d7d97393e2270ba6d1303097a550a3317df6383d87fc1f",
+    "current_merge_digest": "304d0c9991f210a7c4d7d97393e2270ba6d1303097a550a3317df6383d87fc1f",
+    "digests_equal": true,
+    "serialization_algorithm": "sha256(json.dumps(nr, sort_keys=True, ensure_ascii=False, separators=(comma,colon)).encode())",
+    "current_nonretail_draft_sha256": "26f81350896808a341407b0fef9293a9b3658fd9380105e54f54ca2ce10e754d",
+    "current_raw_bytes_equal_review_save_format": true,
+    "review_save_format": "json.dumps(nr, ensure_ascii=False, indent=2) followed by one newline",
+    "draft_mtime_ns": 1793882557903401242,
+    "original_review_receipt_mtime_ns": 1793882593580909487,
+    "draft_mtime_precedes_original_review_receipt": true,
+    "raw_history_limit": "The original review receipt stored the canonical content digest, not a historical raw-file digest. Exact reviewed JSON value continuity is established cryptographically; current raw representation also matches the review-save format and the draft mtime predates its original review receipt. The expected staging key aliases the existing reviewed digest rather than rebinding changed content.",
+    "report_edited": false
+  }
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "V",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/V?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "f0da3f79cc8bc2aff078f2ad081c94d66364888a3fe780c22f3694e0f2f52b30",
+   "fetched_at_utc": "2026-11-05T10:38:50.466993+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/V?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "cb2216e2501ed6f01e62cbd9809973f24209610c0b69fa8c4e23fedaf63681e0",
+   "fetched_at_utc": "2026-11-05T10:38:50.759489+00:00"
+  }
+ ]
+}

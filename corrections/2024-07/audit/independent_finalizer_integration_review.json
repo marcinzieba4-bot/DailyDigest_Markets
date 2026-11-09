@@ -1,0 +1,94 @@
+{
+  "checked_at_utc": "2026-11-05T12:58:33.356472+00:00",
+  "reviewer": "/root/writer_late",
+  "status": "accepted_after_independent_root_hardening_recheck",
+  "passed": true,
+  "fatal_or_major_remaining": 0,
+  "errors": [],
+  "root_schema_patch_sha256": "65e48f173b53d18f288c0eecfc3a22b86c0983e5c4b7bec01dc028feaaf2f33c",
+  "finalizer_sha256": "bd00eb001b493ac594ad9f13278719317efdff75f83c4627ba1f3dcd2b823e01",
+  "original_accepted_finalizer_sha256": "533614e8f03321c5c4190f9a092241a440f55a752d20bc9f465fa38f61d32cd2",
+  "prior_authoring_review_history_path": "audit/review_history/independent_authoring_tool_review_before_finalizer_integration.json",
+  "prior_authoring_review_sha256": "3c4a53e5a362cd18e3b3a72137fd92a5631517dd9d92ac8c2e00650061ecc651",
+  "other_eight_tool_hashes_unchanged": true,
+  "unchanged_tool_sha256": {
+    "digest.py": "099881a6e6cc5d513fe83b4b69e7f03a2063f3cdf9eaa5cd1d9f32171266bd56",
+    "showcard.py": "d94367f24245ef36f7fcb785cb432e85a00412a0006349237f1be6d6250975b3",
+    "cited_titles.py": "fa9b4ce79c9f16fd8491b6869f35910c4b2844249373b00e40664baa46f80cd8",
+    "verify.py": "3b69be58e974d1c4aec462162f5ce6f8f28ae3479c41c0c6f4b2a99badf602ad",
+    "check_block_ranges.py": "c3f2770bf45da7b5c21213dd0f5af13e07f46a5fa4cef153424e173678324f5c",
+    "merge_retail.py": "f9ecc3f5c3a01a1916fd6924d9639de2aa6220f093335aa6d4da9f328497a0f6",
+    "stage_reviewed.py": "b7bf13d7f36be2f062cb9a500c8da8180c35ba30154815e87b6ba9f4a1b1eab5",
+    "retail_quality_snapshot.py": "fb35a728e1a013c2fe84d6d55cb0c7125d03fc8bbd4c2068f3793525238f4146"
+  },
+  "actual_source_acceptance_sha256": "147513cf16810e90e064a09c5cbaa89aa71509fcacb3c477403f4f8013769af2",
+  "actual_screening_receipts_checked": 23,
+  "actual_removed_occurrences": 124,
+  "findings_and_corrections": [
+    {
+      "finding": "Accepted source-row raw/ready/excluded counters could disagree with the individually hashed screening receipt.",
+      "correction": "Require exact receipt/accepted-row counter agreement and input = retained + removed."
+    },
+    {
+      "finding": "Boolean and negative counts could satisfy loose equality checks.",
+      "correction": "Require nonnegative integers, excluding booleans, in both schemas of current counters."
+    },
+    {
+      "finding": "An empty or noncanonical removed ID could enter the exclusion set.",
+      "correction": "Require the same canonical nNNNN ID syntax used by report citations."
+    },
+    {
+      "finding": "A duplicate ID within a legacy reason list was silently deduplicated.",
+      "correction": "Reject duplicates within each legacy list; preserve legitimate overlap between semantic and timing reasons."
+    },
+    {
+      "finding": "The current screening receipt raw-source hash was not compared with the accepted row.",
+      "correction": "Require unreviewed_sha256 to equal accepted raw_sha256."
+    }
+  ],
+  "preserved_gates": [
+    "Both current accepted hash bindings must match each exact news_ready receipt.",
+    "Receipt date/status/final-feed hash remain hard requirements.",
+    "A partial or missing schema has no empty-map fallback.",
+    "All23 current receipt hashes participate in the final stability check.",
+    "Full current-schema finalization still applies own-date retained exclusions through the verifier.",
+    "All existing nonretail/retail review hashes, exact word ranges, citation/number/FX checks and independent warning review remain active."
+  ],
+  "validation": {
+    "delta_checks": 37,
+    "delta_failures": 0,
+    "original_toolkit_regressions": 33,
+    "original_toolkit_failures": 0,
+    "current_schema_end_to_end_checks": 4,
+    "all_tests_passed": true,
+    "artifacts": {
+      "finalizer_integration_regressions.json": "c7d2d5e8acd3b0aab62725b5aec203f851b9ad9b6744f4f7e162805fdd4f4dd1",
+      "finalizer_integration_toolkit_regressions.json": "2d2e2c28fbe64cc214c5fe9771f017de703b31fc800143462156ea3e745a9102",
+      "finalizer_current_schema_end_to_end_tests.json": "a3eb25ebcc9ed3787d4f3c100f5dfbede1ebe132c64c731baf49110d34adfc56"
+    },
+    "test_script_sha256": {
+      "review_finalizer_integration_delta.py": "897de18519b0e34eb6a3b3fd9b6548e882a71dd6ddb4948ece2f1f38fc177f87",
+      "test_finalizer_current_end_to_end.py": "bd0cb7b8be5b0e11924935646c2196eb374a999986d20d431d76681a5a8e146a",
+      "test_authoring_toolkit.py": "64b71342bbc85e98f13e5132d3281cb5fe1d0570b9f0d25f100f4595c9cd3caa"
+    }
+  },
+  "independent_helper_recheck": {
+    "status": "accepted",
+    "reviewer": "root, independent of hardening author",
+    "path": "audit/independent_finalizer_hardening_recheck.json",
+    "sha256": "5371683b1fe30a8e51a45aeaa9fac7c7f3ee026a5a63d34bea094bc016332349",
+    "scope": "Read complete hardened frozen_source_exclusions helper and integration call/stability points. Separately executed all23 current accepted metadata receipts,124 removed occurrences, no source/draft writes.",
+    "limits": "Root independently read the complete helper/integration/stability points and exercised current real metadata; root did not claim to duplicate this reviewer’s entire synthetic suite."
+  },
+  "production_authored_reports_read": false,
+  "production_source_or_authored_text_modified": false,
+  "limitations": [
+    "The actual-data test checks accepted screening metadata, receipt/feed hashes, exclusion identities and counts; it does not repeat source acquisition or factual claim review.",
+    "Full finalization tests use isolated synthetic reports; no production final editorial receipt was generated.",
+    "Package inventories, PDF rendering, archive coverage and delivery checks belong to the separate artifact-engineering review.",
+    "Controlled retained-item exclusions are preserved as separate own-date policy; no pending July25 factual exclusion disposition is cleared here.",
+    "Numeric token membership and source metadata cannot establish instrument identity, actual-versus-preview meaning or original publisher vintage."
+  ],
+  "toolkit_review_path": "audit/independent_authoring_tool_review.json",
+  "toolkit_rebind_rule": "Only finalize_reviews.py code hash changes; the other eight accepted tool hashes must remain identical to history."
+}

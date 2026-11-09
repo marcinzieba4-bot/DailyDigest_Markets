@@ -1,0 +1,18 @@
+{
+ "ticker": "^SOX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "b25e0ec430bceebca5c47a82d1cd97e65338943a5bdd461b5534a5655383fe3f",
+   "fetched_at_utc": "2026-11-05T10:38:34.166863+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "efdb62bc38002bb28da9227f3334a58d3a828bee3969ae629b6831b5d911c0fe",
+   "fetched_at_utc": "2026-11-05T10:38:34.538786+00:00"
+  }
+ ]
+}

@@ -1,0 +1,157 @@
+{
+  "date": "2024-07-22",
+  "status": "accepted",
+  "nonretail_content_sha256": "48cda23161707d2dad707877526f8587996a4984286341748a059dd8c0924c86",
+  "feed_sha256": "d8478a3e238daa8a57bb3af1612a87ecaa11e217f4dba6d93f3b687413999446",
+  "card_sha256": "4baacd51e08c93e352717c39179529b8a79aca32e3fec4f4ce2cd62a264ff150",
+  "fatal_or_major_remaining": 0,
+  "scope": "All 36 nonretail blocks, titles, labels, stances and every cited full headline were read against the own-date frozen feed/card and current exclusions. No retail or other-date evidence used.",
+  "findings": [
+    "One older earnings preview was incorrectly admitted under its result category; removed n1333, published July12, from the July22 anticipatory scenario.",
+    "Small attribution and investor-risk wording improvements were possible without replacing any premise."
+  ],
+  "fixes": [
+    {
+      "location": "anticipatory[3].Conditional Expression",
+      "change": "Replaced nine-day-old earnings preview n1333 with own-date cited TSMC result/reaction comparison n1472.",
+      "evidence_ids": [
+        "n1472"
+      ]
+    },
+    {
+      "location": "geo.US.New / Most Important",
+      "change": "Attached the existing eligible outage headline to the operational-risk sentence.",
+      "evidence_ids": [
+        "n1144"
+      ]
+    },
+    {
+      "location": "geo.PL.Fiscal & Politics",
+      "change": "Clarified pending entry into the excessive-deficit procedure rather than completed formal entry.",
+      "evidence_ids": [
+        "n1903"
+      ]
+    },
+    {
+      "location": "geo.PL.New / Most Important; sectors.XLK; underowned[1]; catalysts[0]; anticipatory[1]",
+      "change": "Removed source-input or missing-evidence narration, expressing commercial, retention and recovery risks directly.",
+      "evidence_ids": [
+        "n1880",
+        "n1483",
+        "n1064",
+        "n2205"
+      ]
+    }
+  ],
+  "style_depth": {
+    "assessment": "Rich connected prose within every block range; China and Poland compare activity with credit/property/fiscal/security constraints and finish with substantive divergence. Sector and stock actions remain consistent: selective staged semiconductor and service exposure, conditional outage and medical-device exposure, measured crypto and small-cap expressions.",
+    "examples": [
+      {
+        "location": "geo.CN",
+        "evidence_ids": [
+          "n0140",
+          "n0141",
+          "n0224",
+          "n0132",
+          "n0209",
+          "n0194"
+        ],
+        "check": "Weak demand, bank cleanup, falling property prices, equipment support and household saving are compared through separate credit, income and execution mechanisms."
+      },
+      {
+        "location": "geo.PL",
+        "evidence_ids": [
+          "n2000",
+          "n1858",
+          "n1903",
+          "n1777",
+          "n1880",
+          "n1787"
+        ],
+        "check": "Wage support is balanced against declining employment, bond-demand/fiscal constraints, transaction and regulatory dispersion, and security financing."
+      }
+    ]
+  },
+  "paragraph_source_checks": [
+    {
+      "location": "geo.US.Rates & Curve; flows.Rates & Dollar",
+      "evidence_ids": [
+        "n2318"
+      ],
+      "check": "Matched Treasury July19 2Y4.49%,10Y4.25%,-24bps spread,20-observation -21/0/+21bps and exact inverted/steepening wording; DXY104.40,5session +0.30%,20session -1.13% match its own fields. S&P5505,VIX16.52 match July19 fields."
+    },
+    {
+      "location": "geo.EU/CN/JP/AU/PL Markets and sector price paragraphs",
+      "evidence_ids": [
+        "n1574",
+        "n0162",
+        "n1741",
+        "n0074",
+        "n1858"
+      ],
+      "check": "Matched each stated equity index/ETF and Polish security value/return with its actual July19 session and stated horizon; no spot-FX figures. Shanghai and Hang Seng use separate instruments. Beta WIG20TR is correctly a PLN total-return tracker, never an index level or flow."
+    },
+    {
+      "location": "crypto; anticipatory[2]",
+      "evidence_ids": [
+        "n1242",
+        "n1266",
+        "n1262",
+        "n1267",
+        "n1275"
+      ],
+      "check": "BTC68154.52/+1.48%,ETH3536.61/+0.49%,SOL184.54/+6.12% use completed July21 daily closes. Tuesday Ether ETF event remains pending; no postlaunch actual, fabricated demand, sale completion or miner-AI economics claimed."
+    },
+    {
+      "location": "sectors; earnings_pattern; catalysts",
+      "evidence_ids": [
+        "n1462",
+        "n1076",
+        "n1470",
+        "n1471",
+        "n1472",
+        "n0623",
+        "n1100",
+        "n1492"
+      ],
+      "check": "Read result semantics rather than query labels; Netflix subscriber/ad split, Intuitive14% and supply constraint, ASML orders/access risk, TSMC raised outlook and share weakness, SLB/Halliburton demand and attributed Netflix sports approach match headlines. US ASML line895.37/-17.50%5session and TSM ADR165.77/-3.55%session/-11.52%5session remain distinct from local lines."
+    },
+    {
+      "location": "catalysts price paragraphs",
+      "evidence_ids": [
+        "n1483",
+        "n1076",
+        "n1100"
+      ],
+      "check": "CRWD304.96/-11.10%session/-17.87%5session; ISRG455.01/+9.34%session;SLB49.67/+1.95%session/+7.00%5session;NFLX633.34/-6.73%20session match correct own-card identities and horizons. No before-close mark presented as reaction to later news."
+    },
+    {
+      "location": "flows.Credit Check/Equity & Fund Flows",
+      "evidence_ids": [
+        "n1638",
+        "n2432",
+        "n0973",
+        "n1624",
+        "n0248",
+        "n1358"
+      ],
+      "check": "Reported junk demand, PIK structures, BofA-attributed credit concern, Goldman-attributed hedge risk reduction and BlackRock ETF flows are distinguished from price appreciation. No numerical invented flows or assumed destination of sold positions."
+    },
+    {
+      "location": "geo/anticipatory timing and current exclusions",
+      "evidence_ids": [
+        "n2465",
+        "n1743",
+        "n1903",
+        "n1333"
+      ],
+      "check": "Biden exit is known July21, election/nomination and enacted policy remain unresolved; Japanese June inflation is available before July22 cutoff. Poland formal EDP entry remains pending. Removed the stale preview. Excluded same-day China rate-cut n0223 is absent."
+    }
+  ],
+  "validation": {
+    "command": "python tools/verify.py 2024-07-22 --nonretail --counts",
+    "result": "PASS: 108 distinct sources, 8537 words, all36 ranges,0fail,0warn",
+    "warnings": []
+  },
+  "limits": "Headline-level evidence supports only the claims made; no article-body details, later outcomes, raw histories or additional accounts were used."
+}

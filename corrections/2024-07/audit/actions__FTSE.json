@@ -1,0 +1,18 @@
+{
+ "ticker": "^FTSE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EFTSE?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "b50825362d923195b197c1b2d8114102926977905151469d7904bfdf0c060324",
+   "fetched_at_utc": "2026-11-05T10:38:39.513752+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EFTSE?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "8be61fca6540cdfd6e6eb7a698a5f2fa4a14373455c2a8c29856ded1ad038508",
+   "fetched_at_utc": "2026-11-05T10:38:39.764767+00:00"
+  }
+ ]
+}

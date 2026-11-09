@@ -1,0 +1,18 @@
+{
+ "ticker": "VWAGY",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VWAGY?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "05e3cdedc1f6fe0ba49f55368c2a4477c968209908ef1f52c00c70306e067ee3",
+   "fetched_at_utc": "2026-11-05T10:38:40.145063+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VWAGY?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "59a91011111cf626b0675f91f161af0ad6f53ae433c1ae7450b75a2b3d4cb5d9",
+   "fetched_at_utc": "2026-11-05T10:38:40.467049+00:00"
+  }
+ ]
+}

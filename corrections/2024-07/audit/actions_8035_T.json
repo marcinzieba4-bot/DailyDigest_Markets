@@ -1,0 +1,24 @@
+{
+ "ticker": "8035.T",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2026-09-29",
+   "factor": 5.0,
+   "ratio": "5:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/8035.T?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "ad2b0e0f736f9fc75db179d8e852235dfa59446e7ec3d31f0bc6f7c3df446e38",
+   "fetched_at_utc": "2026-11-05T10:38:41.516948+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/8035.T?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "9b972d175da6b1796478c277ead18bb7193485e22fb3379ca0c34559d5eee5c0",
+   "fetched_at_utc": "2026-11-05T10:38:41.867666+00:00"
+  }
+ ]
+}

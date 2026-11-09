@@ -1,0 +1,143 @@
+{
+  "date": "2024-07-24",
+  "status": "accepted",
+  "nonretail_content_sha256": "65eba8750d24a191e2f3f28e5df27ab36ecb57036d928040c83c5ee7df682f18",
+  "feed_sha256": "f6e979672aca90399b4902f6eb1973120744b2abb985125225803eb53ec5b3dd",
+  "card_sha256": "fad35fa0c16ff6302f6587709976356b6350954c40a586f6fa95ba16c162f642",
+  "fatal_or_major_remaining": 0,
+  "scope": "All36 nonretail blocks, titles, labels, stances and all102 cited full headlines read; own frozen feed/card/current exclusions only. No retail or other-date factual evidence.",
+  "findings": [
+    "No fatal or major remaining issue. Narrow GE earnings wording needed to distinguish evidence of a stronger forecast from inference of profitable aftermarket demand."
+  ],
+  "fixes": [
+    {
+      "location": "sectors.XLI.Reported",
+      "evidence_ids": [
+        "n1050",
+        "n1013"
+      ],
+      "change": "Changed asserted profitable aftermarket demand to the evidenced stronger outlook despite lower delivery expectations."
+    },
+    {
+      "location": "earnings_pattern.Rewarded",
+      "evidence_ids": [
+        "n1427"
+      ],
+      "change": "Engine demand replaces unevidenced maintenance-demand attribution."
+    },
+    {
+      "location": "underowned[0].Attention Gap",
+      "evidence_ids": [
+        "n1048",
+        "n0648"
+      ],
+      "change": "Added eligible Reuters engine-repair-shop upgrade headline to support the service-capacity theme."
+    },
+    {
+      "location": "geo.PL.Corporate & Sectors",
+      "evidence_ids": [
+        "n1937"
+      ],
+      "change": "Removed editorial instruction wording while retaining unofficial allegation/prosecutor status and unresolved liability."
+    }
+  ],
+  "style_depth": {
+    "assessment": "Specific earnings comparisons distinguish volume, pricing, mix, capacity and demand instead of treating beats as interchangeable. China develops collateral, property repair, industrial supply, data regulation and household caution. Poland develops labor/borrowing capacity, budget coordination, governance allegations and regional security. Actions stay consistent across sectors, themes and stocks.",
+    "evidence_ids": [
+      "n1050",
+      "n1013",
+      "n1017",
+      "n0159",
+      "n0164",
+      "n0181",
+      "n0130",
+      "n1939",
+      "n1859",
+      "n1724",
+      "n1937",
+      "n1713"
+    ]
+  },
+  "paragraph_source_checks": [
+    {
+      "location": "geo.US.Rates & Curve; flows.Rates & Dollar",
+      "evidence_ids": [
+        "n2201",
+        "n2225"
+      ],
+      "check": "Matched July23 Treasury2Y4.40%,10Y4.25%,-15bps spread,20obs-31/0/+31bps and exact inverted/steepening(2Ydown,10Yup/flat). S&P5555.74/-.16%,VIX14.72,DXY104.45 and+.17%5session,TLT-1.93%20session match correct fields. ISM48.8 indexpoints and June inflation are eligible35day macro baselines."
+    },
+    {
+      "location": "geo.CN/JP/AU/PL Markets",
+      "evidence_ids": [
+        "n0178",
+        "n0182",
+        "n1659",
+        "n0084",
+        "n1932"
+      ],
+      "check": "July23 Shanghai2915.37/-1.65%,HangSeng17469.36/-.94%,Nikkei39594.39/-.01%/-4.07%5session,ASX7971.10/+.50% and BetaPLN45.38/-1.44%/-3.99%20session match own instruments/horizons. OrangePLN7.71/-1.98% andPGEPLN7.01/-2.07% matched, not flows. Currency direction only, no numeric FX."
+    },
+    {
+      "location": "geo.US.New / Most Important; earnings_pattern; anticipatory[0]; catalysts.GOOGL/TSLA",
+      "evidence_ids": [
+        "n1415",
+        "n1448",
+        "n1447",
+        "n1025",
+        "n1449"
+      ],
+      "check": "Alphabet29%profit andTesla7%auto-revenue decline are same-paragraph exact headlines. July23 afterhours actuals are before July24cutoff; regular closes remain explicitly earlier, never reactions. GOOGL181.79/+.07% andTSLA246.38/-2.04% match regular fields, no postrelease quote inferred."
+    },
+    {
+      "location": "sector EPS paragraphs; catalysts.GE/SPOT",
+      "evidence_ids": [
+        "n0900",
+        "n1050",
+        "n1111"
+      ],
+      "check": "SAP GermanlineEUR196.74/+7.15%session;GEUSD172/+5.68%session/+5.62%5session;SPOT330.79/+11.96%session correctly matched. SectorETF exact returns checked individually:XLK-.40%,XLF+.19%/-.74%5session,XLE-1.59%/-2.13%5session,XLI-.19%,XLP-.36%,XLV-.06%,XLB+.40%,XLRE+6.49%20session/-.17%session,XLU-.62%,SOXX242.57/-1.49%/-7.34%5session,VWpreferenceEUR105.65/-.94%session."
+    },
+    {
+      "location": "crypto; anticipatory[3]",
+      "evidence_ids": [
+        "n1236",
+        "n2026",
+        "n1230",
+        "n1232",
+        "n1216",
+        "n1222"
+      ],
+      "check": "ETF debut actual matches July23release status. USD1billion is debut gross volume from own paragraph headline, expressly not net inflow. ETH3482/+1.21%,BTC65927.67/-2.45%,SOL172.76/-3.48% are completedJuly23daily. ETHA26.24 firstclose has no invented prior return. Product plans and carry-fund launch match headline roles."
+    },
+    {
+      "location": "flows.Equity & Fund Flows/Credit Check",
+      "evidence_ids": [
+        "n1550",
+        "n1036",
+        "n1134",
+        "n1564",
+        "n1063"
+      ],
+      "check": "Goldman hedge-risk reduction is attributed and no destination invented. OneStream pricing stays source-attributed and Toyota tender planned. IWM+10.64%20session andHYG+.01%/LQD-.07%session are prices, not flows/spreads. Junk demand and bank/privateequity exposure are headline-supported without invented volumes."
+    },
+    {
+      "location": "geo.PL governance/security; all temporal windows/current exclusions",
+      "evidence_ids": [
+        "n1937",
+        "n1923",
+        "n1951",
+        "n1713",
+        "n2177",
+        "n2163"
+      ],
+      "check": "Unofficial prosecutor reports are not convictions; approval is management authorization; CCC departure remains planned. Drone-parts headline supports supplychain risk without legal outcome. June26newhomes/June21existinghomes are macro within35days, all companynews/previews within7days and results within14days. Current exclusions empty, every cited fullheadline read and each Polish item translated by meaning."
+    }
+  ],
+  "validation": {
+    "command": "python tools/verify.py 2024-07-24 --nonretail --counts",
+    "result": "PASS:8585words,102sources,all36ranges,0fail,0warn",
+    "warnings": []
+  },
+  "limits": "Headlines and own-card fields only; no article-body details, later outcomes, raw histories or other-date facts used."
+}

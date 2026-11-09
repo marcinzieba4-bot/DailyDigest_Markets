@@ -1,0 +1,16 @@
+{
+  "date": "2024-07-22",
+  "feed_sha256": "d8478a3e238daa8a57bb3af1612a87ecaa11e217f4dba6d93f3b687413999446",
+  "exclusions": [
+    {
+      "id": "n0223",
+      "title": "China lowers lending benchmarks after PBOC's surprise rate cut - Reuters",
+      "reason": "Completed China July22lending/policy outcome is after the report00UTCcut. Existing independently reviewed schedule places release atJuly22 01:15UTC and firsteligibleeditionJuly23; reversed lending benchmarks wording escaped the prefreeze regex. AuthorD correctly omitted it.",
+      "evidence_path": "audit_work/july_release_schedule.json",
+      "release_utc": "2024-07-22T01:15:00+00:00",
+      "first_eligible_edition": "2024-07-23",
+      "reported_by": "july_nonretail_d; independently checked by root against exact headline and accepted schedule"
+    }
+  ],
+  "scope": "Known pre-release/unsafe records were removed before freeze and remain in the ready receipt; this file records subsequent own-date editorial exclusions only."
+}

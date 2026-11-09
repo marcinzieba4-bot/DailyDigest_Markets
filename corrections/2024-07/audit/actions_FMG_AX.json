@@ -1,0 +1,18 @@
+{
+ "ticker": "FMG.AX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FMG.AX?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "b1e2a0d15035b9594f5ed3168c773c8f5338d157efd6b9107471d0da7f932a9f",
+   "fetched_at_utc": "2026-11-05T10:38:43.545031+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FMG.AX?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "c4ce7e7a6746c58ecce549556bfb767db1faf1d61edd60afbdbbba5b3b6ef68a",
+   "fetched_at_utc": "2026-11-05T10:38:43.873462+00:00"
+  }
+ ]
+}

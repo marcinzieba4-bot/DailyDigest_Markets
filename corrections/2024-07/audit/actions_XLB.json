@@ -1,0 +1,24 @@
+{
+ "ticker": "XLB",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2025-12-05",
+   "factor": 2.0,
+   "ratio": "2:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLB?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "20ad1a1105180a6797148840c069612b461e30c7cfa2af6ce2628049d1c11d83",
+   "fetched_at_utc": "2026-11-05T10:38:44.475710+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLB?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "b877287b1c185b82b804f9d2a02bc5ebc07e1579d15025e7b4a01e545e19a93d",
+   "fetched_at_utc": "2026-11-05T10:38:44.939402+00:00"
+  }
+ ]
+}

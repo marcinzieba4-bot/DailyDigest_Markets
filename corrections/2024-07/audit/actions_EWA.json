@@ -1,0 +1,18 @@
+{
+ "ticker": "EWA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EWA?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "f3517012efbf1ae2c77df16b9d30677059b51792eced68c6bb1bfe3251debe9b",
+   "fetched_at_utc": "2026-11-05T10:38:43.338678+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EWA?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "22dec876719c6080aeeb81ae3050668e409f5eb47d215dc2ca3c21b5f5c6cc23",
+   "fetched_at_utc": "2026-11-05T10:38:43.953498+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "TGT",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TGT?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "719ee372e9729d43e3448ceec667e74d43afdc2a0e1fa6b926e63e2f8be02ec1",
+   "fetched_at_utc": "2026-11-05T10:38:56.008518+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/TGT?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "b99760b77ba91b6eccecbce23c66ce0dd0554c6890fd9d58ef2bd608f05ceaa0",
+   "fetched_at_utc": "2026-11-05T10:38:56.428272+00:00"
+  }
+ ]
+}

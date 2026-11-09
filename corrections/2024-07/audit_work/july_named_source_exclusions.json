@@ -1,0 +1,32 @@
+{
+  "version": "july-2024-named-prefreeze-exclusions-v1",
+  "scope": "Exact own-date raw identities, omitted before freeze; no retained IDs are renumbered.",
+  "exclusions": [
+    {
+      "id": "n1053",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "src": "Reuters",
+      "title": "Samsung flags better-than-expected profit rise as AI boom lifts chip prices - Reuters",
+      "date": "2024-07-05",
+      "guard": "Uncertain original publisher version before own cutoff",
+      "reason": "First pre00 publication vintage is uncertain. Current Reuters dated retrieval is Jul5 04:33:38 UTC and contains a later opening reaction; the RSS Jul4 index date alone cannot establish that this headline version existed before the Jul5 cutoff. This is an uncertainty omission, not an assertion that the displayed Date is necessarily first publication.",
+      "basis_url": "https://www.reuters.com/technology/samsung-flags-15-fold-rise-second-quarter-profit-chip-prices-climb-2024-07-04/",
+      "independent_review": "audit/independent_release_guard_review.json",
+      "screen_kind": "timing_uncertainty"
+    },
+    {
+      "id": "n1915",
+      "published_at": "2024-07-30T07:00:00+00:00",
+      "src": "Reuters",
+      "title": "Japan June retail sales rise 3.7% year-on-year, better than forecasts - Reuters",
+      "date": "2024-07-31",
+      "guard": "Uncertain original publisher version before own cutoff",
+      "reason": "First pre00 publication vintage is uncertain. Current Reuters dated retrieval shows Jul31 00:01:14 UTC. Even a data release before midnight does not prove this article/headline version existed before the Jul31 cutoff; no earlier archived version is retained. Displayed Date is not certified as first publication.",
+      "basis_url": "https://www.reuters.com/markets/asia/japan-june-retail-sales-rise-37-year-on-year-better-than-forecasts-2024-07-31/",
+      "independent_review": "audit/independent_release_guard_review.json",
+      "screen_kind": "timing_uncertainty"
+    }
+  ],
+  "independent_recommendation_path": "audit_work/release_guard_refs/named_omission_recommendations.json",
+  "independent_recommendation_sha256": "af73ce32a8768a7fc6aed5b8e9f0ae5152b3f5daf89f0bb2798737a6f6aeb0e0"
+}

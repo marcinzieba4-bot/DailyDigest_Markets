@@ -1,0 +1,141 @@
+{
+  "purpose": "Synthetic toolkit regression; no financial report authoring or production source reads.",
+  "checks": [
+    {
+      "check": "valid complete synthetic report",
+      "pass": true
+    },
+    {
+      "check": "all 23 weekdays including July 4 and July 5",
+      "pass": true
+    },
+    {
+      "check": "August date rejected",
+      "pass": true
+    },
+    {
+      "check": "valid isolated nonretail draft",
+      "pass": true
+    },
+    {
+      "check": "valid isolated retail draft",
+      "pass": true
+    },
+    {
+      "check": "missing citation membership",
+      "pass": true
+    },
+    {
+      "check": "unresolved citation alias",
+      "pass": true
+    },
+    {
+      "check": "overused citation hard failure",
+      "pass": true
+    },
+    {
+      "check": "exact geography labels",
+      "pass": true
+    },
+    {
+      "check": "required top-level keys",
+      "pass": true
+    },
+    {
+      "check": "hard body number provenance",
+      "pass": true
+    },
+    {
+      "check": "numeric spot FX mark",
+      "pass": true
+    },
+    {
+      "check": "forbidden FX ticker",
+      "pass": true
+    },
+    {
+      "check": "exact sector lower bound",
+      "pass": true
+    },
+    {
+      "check": "retail title hook length",
+      "pass": true
+    },
+    {
+      "check": "ordinary nonnumeric FX direction and JPY equity price allowed",
+      "pass": true
+    },
+    {
+      "check": "midnight actual rejected",
+      "pass": true
+    },
+    {
+      "check": "stale news rejected",
+      "pass": true
+    },
+    {
+      "check": "narrow semantic window enforced",
+      "pass": true
+    },
+    {
+      "check": "number supported only in another paragraph hard fails",
+      "pass": true
+    },
+    {
+      "check": "semantic exclusion hard failure",
+      "pass": true
+    },
+    {
+      "check": "retail gate also excludes own-date semantic source",
+      "pass": true
+    },
+    {
+      "check": "conflicting loose source rejected",
+      "pass": true
+    },
+    {
+      "check": "digest includes secondary topic and full headline/outlet",
+      "pass": true
+    },
+    {
+      "check": "cited titles prints full exact own-date headline",
+      "pass": true
+    },
+    {
+      "check": "showcard uses own card and suppresses FX row",
+      "pass": true
+    },
+    {
+      "check": "stage all23 current accepted components",
+      "pass": true
+    },
+    {
+      "check": "all828 exact block ranges",
+      "pass": true
+    },
+    {
+      "check": "stale review prevents any spec write",
+      "pass": true
+    },
+    {
+      "check": "accepted hashes with invalid candidate still prevent spec write",
+      "pass": true
+    },
+    {
+      "check": "complete23 final acceptance with current source hashes",
+      "pass": true
+    },
+    {
+      "check": "separate local July retail quality receipt",
+      "pass": true
+    },
+    {
+      "check": "stale market acceptance rejected at final binding",
+      "pass": true
+    }
+  ],
+  "passed": 33,
+  "failed": 0,
+  "dates": 23,
+  "nonretail_blocks": 828
+}

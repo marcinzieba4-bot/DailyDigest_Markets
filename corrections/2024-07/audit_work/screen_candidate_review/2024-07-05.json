@@ -1,0 +1,49 @@
+{
+  "date": "2024-07-05",
+  "status": "ready",
+  "input_items": 2230,
+  "ready_items": 2227,
+  "excluded_items": 3,
+  "excluded_by_guard": {
+    "Uncertain original publisher version before own cutoff": 1,
+    "UK settled election result and PM appointment": 2
+  },
+  "excluded": [
+    {
+      "id": "n1053",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "src": "Reuters",
+      "title": "Samsung flags better-than-expected profit rise as AI boom lifts chip prices - Reuters",
+      "date": "2024-07-05",
+      "guard": "Uncertain original publisher version before own cutoff",
+      "reason": "First pre00 publication vintage is uncertain. Current Reuters dated retrieval is Jul5 04:33:38 UTC and contains a later opening reaction; the RSS Jul4 index date alone cannot establish that this headline version existed before the Jul5 cutoff. This is an uncertainty omission, not an assertion that the displayed Date is necessarily first publication.",
+      "basis_url": "https://www.reuters.com/technology/samsung-flags-15-fold-rise-second-quarter-profit-chip-prices-climb-2024-07-04/",
+      "independent_review": "audit/independent_release_guard_review.json",
+      "screen_kind": "timing_uncertainty"
+    },
+    {
+      "id": "n1390",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "src": "Hargreaves Lansdown",
+      "title": "Labour win 2024 UK General Election – what it means for your money - Hargreaves Lansdown",
+      "guard": "UK settled election result and PM appointment",
+      "screen_kind": "timing"
+    },
+    {
+      "id": "n1392",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "src": "Schroders",
+      "title": "What does a landslide Labour UK election win mean for the economy and markets? - Schroders",
+      "guard": "UK settled election result and PM appointment",
+      "screen_kind": "timing"
+    }
+  ],
+  "eligible_status_annotations": [],
+  "category_tightenings": [],
+  "ready_path": "feeds/2024-07-05.json.gz",
+  "ready_sha256": "afd036d3f85fe8d22e98220c94c7c9b0963105536ea51489ac2c44f0e9db423e",
+  "unreviewed_sha256": "b134761b18904abab63b1dd60a2a234265841bbd4751ee099a394bc9fb6c7aad",
+  "release_guards_version": "jul-2024-release-guards-v1",
+  "release_schedule_sha256": "ec0affb8cf6d2e518d655e9fafd76c6d5b7ac56db1548962b1d6e95be7f2ec7d",
+  "named_exclusions_sha256": "06aba4eb3f84a714a7d429cf46641cd01c4b2b6245ec39a5a8010e87f9de6888"
+}

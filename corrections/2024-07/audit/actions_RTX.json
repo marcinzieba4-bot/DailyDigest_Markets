@@ -1,0 +1,18 @@
+{
+ "ticker": "RTX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RTX?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "1189e95b0a08aa31010885131e36a4dad085445e3b21b5e2d04738007264d5f7",
+   "fetched_at_utc": "2026-11-05T10:38:57.778857+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RTX?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "4cec7ff00e95bdd6dd3c650b00a43dc83d767af858933629e9130959014c609b",
+   "fetched_at_utc": "2026-11-05T10:38:58.237748+00:00"
+  }
+ ]
+}

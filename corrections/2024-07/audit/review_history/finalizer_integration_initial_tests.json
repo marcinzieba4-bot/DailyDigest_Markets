@@ -1,0 +1,170 @@
+{
+  "checked_at_utc": "2026-11-05T12:48:50.578415+00:00",
+  "finalizer_sha256": "65e48f173b53d18f288c0eecfc3a22b86c0983e5c4b7bec01dc028feaaf2f33c",
+  "actual_source_acceptance_sha256": "147513cf16810e90e064a09c5cbaa89aa71509fcacb3c477403f4f8013769af2",
+  "actual_receipt_count": 23,
+  "actual_removed_occurrences": 124,
+  "checks": [
+    {
+      "check": "actual current23 receipt schema accepted",
+      "passed": true
+    },
+    {
+      "check": "actual124 removed occurrences retained exactly",
+      "passed": true
+    },
+    {
+      "check": "all current receipt hashes independently double-bound",
+      "passed": true
+    },
+    {
+      "check": "current receipt feed hashes match frozen feeds",
+      "passed": true
+    },
+    {
+      "check": "missing both schema forms has no empty fallback",
+      "passed": true
+    },
+    {
+      "check": "missing input_bindings receipt hash rejected",
+      "passed": true
+    },
+    {
+      "check": "stale input_bindings receipt hash rejected",
+      "passed": true
+    },
+    {
+      "check": "missing date-row receipt hash rejected",
+      "passed": true
+    },
+    {
+      "check": "stale date-row receipt hash rejected",
+      "passed": true
+    },
+    {
+      "check": "changed receipt bytes without rebind rejected",
+      "passed": true
+    },
+    {
+      "check": "wrong receipt date rejected even with both hashes rebound",
+      "passed": true
+    },
+    {
+      "check": "pending receipt status rejected even with both hashes rebound",
+      "passed": true
+    },
+    {
+      "check": "wrong ready feed hash rejected even with both hashes rebound",
+      "passed": true
+    },
+    {
+      "check": "missing exclusion list rejected",
+      "passed": true
+    },
+    {
+      "check": "non-list exclusion payload rejected",
+      "passed": true
+    },
+    {
+      "check": "exclusion count mismatch rejected",
+      "passed": true
+    },
+    {
+      "check": "duplicate removed identity rejected",
+      "passed": true
+    },
+    {
+      "check": "accepted row exclusion count mismatch rejected",
+      "passed": false
+    },
+    {
+      "check": "accepted row ready count mismatch rejected",
+      "passed": false
+    },
+    {
+      "check": "accepted row raw count mismatch rejected",
+      "passed": false
+    },
+    {
+      "check": "boolean exclusion count rejected",
+      "passed": false
+    },
+    {
+      "check": "negative input count rejected",
+      "passed": false
+    },
+    {
+      "check": "empty removed identity rejected",
+      "passed": false
+    },
+    {
+      "check": "legacy full23 coverage and reason overlap accepted",
+      "passed": true
+    },
+    {
+      "check": "partial legacy schema rejected",
+      "passed": true
+    },
+    {
+      "check": "legacy incomplete date coverage rejected",
+      "passed": true
+    },
+    {
+      "check": "legacy extra date rejected",
+      "passed": true
+    },
+    {
+      "check": "legacy stale source hash rejected",
+      "passed": true
+    },
+    {
+      "check": "legacy malformed exclusion list rejected",
+      "passed": true
+    },
+    {
+      "check": "legacy duplicate identity within one reason rejected",
+      "passed": false
+    },
+    {
+      "check": "legacy empty removed identity rejected",
+      "passed": false
+    }
+  ],
+  "passed": false,
+  "failures": [
+    {
+      "check": "accepted row exclusion count mismatch rejected",
+      "passed": false
+    },
+    {
+      "check": "accepted row ready count mismatch rejected",
+      "passed": false
+    },
+    {
+      "check": "accepted row raw count mismatch rejected",
+      "passed": false
+    },
+    {
+      "check": "boolean exclusion count rejected",
+      "passed": false
+    },
+    {
+      "check": "negative input count rejected",
+      "passed": false
+    },
+    {
+      "check": "empty removed identity rejected",
+      "passed": false
+    },
+    {
+      "check": "legacy duplicate identity within one reason rejected",
+      "passed": false
+    },
+    {
+      "check": "legacy empty removed identity rejected",
+      "passed": false
+    }
+  ],
+  "production_drafts_or_specs_read": false,
+  "production_inputs_modified": false
+}

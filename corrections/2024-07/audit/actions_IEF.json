@@ -1,0 +1,18 @@
+{
+ "ticker": "IEF",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/IEF?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "3525e28bdf37472cb04de22ac90bf42acb604bbb5ab53678979b7c7eacf0e3f6",
+   "fetched_at_utc": "2026-11-05T10:38:45.217382+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/IEF?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "a31752afe13b1b76cf2b1e297b9750d301ae5c4f8adf1d41bba27690d16948bd",
+   "fetched_at_utc": "2026-11-05T10:38:45.630553+00:00"
+  }
+ ]
+}

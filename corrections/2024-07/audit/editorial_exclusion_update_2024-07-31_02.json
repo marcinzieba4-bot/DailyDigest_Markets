@@ -1,0 +1,53 @@
+{
+  "checked_at_utc": "2026-11-05T13:07:17.501114+00:00",
+  "date": "2024-07-31",
+  "change": "One additional conservative retained-item timing/vintage omission; frozen feed/card/source acceptance and both report components unchanged.",
+  "before_exclusions_sha256": "d8a6676aa3ca60a4b4e222386438dec7bbb796b05b3dba1b431f3a23212b9d1c",
+  "after_exclusions_sha256": "b217606f063ea4655fa71f0ac84bd5aedd804d8ce2b4a4821cffdab641146bdd",
+  "preserved_before": "audit/review_history/exclusions_2024-07-31_before_editorial_update_02.json",
+  "source_freeze_sha256": "7ec963b56b6e60ea9215d4374254b62883598f932e0d1cfd090e2a3544edd685",
+  "feed_sha256": "a4f58aa11e6e53ec5a5bb2276052e71ca7f544cc50a3a022c2df131678512501",
+  "card_sha256": "3930c508169cf8f2282eeaf62699e6c935b3a3c6e360b0f401df1d5d0ac88fb9",
+  "entry": {
+    "date": "2024-07-31",
+    "id": "n1189",
+    "title": "Siemens Healthineers hit by China order delays in Q3, but sees 2025 turnaround - Reuters",
+    "reason": "The original public availability of this completed Siemens Healthineers Q3 result cannot be certified before July31 00UTC from the normalized July30 index timestamp. Conservatively omit the actual for this edition rather than certify a potentially later European-morning result. No exact original publication or release clock is asserted.",
+    "disposition": "conservative original-vintage/timing omission for this edition",
+    "first_eligible_edition_conservative": "2024-08-01",
+    "reported_by": "july_nonretail_d; controlled root-authorized editorial registration after independent review; original clock remains unresolved"
+  },
+  "initial_authoring_gate_preserved": true,
+  "original_public_clock_certified": false,
+  "citation_check": {
+    "nonretail": 0,
+    "retail": 0
+  },
+  "previous_update_preserved": "audit/editorial_exclusion_update_2024-07-31.json",
+  "verification": {
+    "nonretail": {
+      "result": "PASS",
+      "words": 8530,
+      "sources": 103,
+      "failures": 0,
+      "warnings": 0
+    },
+    "retail": {
+      "result": "PASS",
+      "words": 1216,
+      "sources": 11,
+      "failures": 0,
+      "warnings": 0
+    }
+  },
+  "all_current_editorial_exclusion_citations": {
+    "nonretail_drafts": {
+      "n1143": 0,
+      "n1189": 0
+    },
+    "retail_drafts": {
+      "n1143": 0,
+      "n1189": 0
+    }
+  }
+}

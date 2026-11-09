@@ -1,0 +1,278 @@
+{
+  "status": "external_complete_frozen_source_archive",
+  "archive": {
+    "path": "collection/July_2024_Frozen_Sources.zip",
+    "sha256": "82bbfa09c4fafd5579139e05480b613c35fbb607a842a4e2d43053a39955ded6",
+    "bytes": 188529248
+  },
+  "public_url": "https://zembihf.xyz/reports/2024-07/July_2024_Frozen_Sources.zip",
+  "inventory_member": "source_inventory.json",
+  "inventory_member_sha256": "fc3840e026bac2afa298bad3f0ca4e1fa28340614677018aa2682c2fb0500dd8",
+  "inventory_canonical_sha256": "a74cea8d31aa1dfdf868ad23c1277edf95099cefba25029e2ca8dd1bae18e365",
+  "inventory_files": 51245,
+  "member_families": [
+    {
+      "family": "AUTHORING.md",
+      "files": 1,
+      "bytes": 15137
+    },
+    {
+      "family": "BRIEF.md",
+      "files": 1,
+      "bytes": 15137
+    },
+    {
+      "family": "README.md",
+      "files": 1,
+      "bytes": 2928
+    },
+    {
+      "family": "audit",
+      "files": 514,
+      "bytes": 57737557
+    },
+    {
+      "family": "audit/market_raw",
+      "files": 578,
+      "bytes": 620581
+    },
+    {
+      "family": "audit_work",
+      "files": 134,
+      "bytes": 14943786
+    },
+    {
+      "family": "cache/news",
+      "files": 16437,
+      "bytes": 22053458
+    },
+    {
+      "family": "cache/rss_raw",
+      "files": 32874,
+      "bytes": 56662162
+    },
+    {
+      "family": "cards",
+      "files": 23,
+      "bytes": 6549323
+    },
+    {
+      "family": "checks",
+      "files": 62,
+      "bytes": 517126
+    },
+    {
+      "family": "code_provenance.json",
+      "files": 1,
+      "bytes": 4387
+    },
+    {
+      "family": "data",
+      "files": 290,
+      "bytes": 1341376
+    },
+    {
+      "family": "exclusions",
+      "files": 23,
+      "bytes": 11479
+    },
+    {
+      "family": "feeds",
+      "files": 23,
+      "bytes": 13089125
+    },
+    {
+      "family": "newest_lambda_function.py",
+      "files": 1,
+      "bytes": 97759
+    },
+    {
+      "family": "nonretail_drafts",
+      "files": 23,
+      "bytes": 1702283
+    },
+    {
+      "family": "notes",
+      "files": 46,
+      "bytes": 109508
+    },
+    {
+      "family": "reference",
+      "files": 4,
+      "bytes": 27802
+    },
+    {
+      "family": "retail_drafts",
+      "files": 23,
+      "bytes": 222674
+    },
+    {
+      "family": "specs",
+      "files": 23,
+      "bytes": 1924343
+    },
+    {
+      "family": "tools",
+      "files": 24,
+      "bytes": 289729
+    },
+    {
+      "family": "work/acquisition_feeds",
+      "files": 23,
+      "bytes": 13114172
+    },
+    {
+      "family": "work/source_candidates",
+      "files": 93,
+      "bytes": 29397468
+    },
+    {
+      "family": "work/unreviewed_feeds",
+      "files": 23,
+      "bytes": 13114172
+    }
+  ],
+  "restore": "Verify archive and inventory digests before extracting the missing raw/replay families to an isolated working July ROOT. The Git checkpoint deliberately omits raw caches and binary delivery artifacts.",
+  "externalized_selected_proof": [
+    {
+      "path": "audit/news_query_plan.json",
+      "reason": "Large replay/transport proof retained in external frozen-source ZIP",
+      "sha256": "6a1d6ff30a3254f10650ec4139dda09a8bf5d844778abcec0148d655a4538ccc",
+      "bytes": 17751288,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit/news_base_query_plan.json",
+      "reason": "Large replay/transport proof retained in external frozen-source ZIP",
+      "sha256": "7ed75824c5b8e5432aba502db7d555a44e993752c212bca73188ae89ac4b6fb9",
+      "bytes": 6766579,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit/news_replay_inventory.json",
+      "reason": "Large replay/transport proof retained in external frozen-source ZIP",
+      "sha256": "358f67680eda753e572773c72c2cfafac0d206ab395fe5160101094095ff6031",
+      "bytes": 11510638,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/old_monthly_for_manual_review.json",
+      "reason": "Large replay/transport proof retained in external frozen-source ZIP",
+      "sha256": "b9f1488369ea731293b7ef01ef5824809aba84557fc2589dab5545716709b99c",
+      "bytes": 1331328,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/physical_source_inventory.json",
+      "reason": "Large replay/transport proof retained in external frozen-source ZIP",
+      "sha256": "6f1989b44d2c12a294422372c5c4f9b0d28a2cb31e6400ad5595707d0ef66014",
+      "bytes": 11786553,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/clock8.json",
+      "reason": "Raw connected-tool cache retained in external frozen-source ZIP",
+      "sha256": "ed6af9aa6b6f98bbf7f64e27cba0bc4aec71c3e5d95426e8211ff2a973f91a07",
+      "bytes": 27574,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/clock5.json",
+      "reason": "Raw connected-tool cache retained in external frozen-source ZIP",
+      "sha256": "e330b47d42cf3f0850f88dab8d78e980ea28ff6c6a2b976b228b7d7350141c4a",
+      "bytes": 28762,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/delta_search_reuters.json",
+      "reason": "Raw connected-tool cache retained in external frozen-source ZIP",
+      "sha256": "f6fb69530d9d7244e3ea1bae7160cb3dbb0b8da2d8ec65a4a32b1189e19c6bc7",
+      "bytes": 35099,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/delta_reuters_open.json",
+      "reason": "Raw connected-tool cache retained in external frozen-source ZIP",
+      "sha256": "1a7f3f9de87624e26d647e63c416e2f2c165b8e6a41ebb7bf3c1160fc29ea11d",
+      "bytes": 33330,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/clock4.json",
+      "reason": "Raw connected-tool cache retained in external frozen-source ZIP",
+      "sha256": "31ae310882119fdf9159fe0489bcee642729d239ab1826101ed1bf96b93faf0c",
+      "bytes": 25263,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/clock7.json",
+      "reason": "Raw connected-tool cache retained in external frozen-source ZIP",
+      "sha256": "f9cd1723955c682c7b89c150268b1d9adb0c7de1dcd13ea139941d923a8b895e",
+      "bytes": 33747,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/target3.json",
+      "reason": "Raw connected-tool cache retained in external frozen-source ZIP",
+      "sha256": "6605858921e2990f4c0f181978d7fda78127c187e142cd7cabcb5bb1b8dc09ab",
+      "bytes": 27797,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/clock9.json",
+      "reason": "Raw connected-tool cache retained in external frozen-source ZIP",
+      "sha256": "a0a2795c9bf745681bb28343283e4c0d183548a96499b008273ce956422d95d1",
+      "bytes": 28090,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/search_initial.json",
+      "reason": "Raw connected-tool cache retained in external frozen-source ZIP",
+      "sha256": "c3eb2c40776aa327dda7b46b296f5df0eaf131562bdaf29302f57ef6086a30a7",
+      "bytes": 30355,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/clock6.json",
+      "reason": "Raw connected-tool cache retained in external frozen-source ZIP",
+      "sha256": "776a80dc2c362ec15455fc0c42ab33e15cb93aceacb25b9d76711be29717ddcb",
+      "bytes": 29647,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/open_initial.json",
+      "reason": "Raw connected-tool cache retained in external frozen-source ZIP",
+      "sha256": "5ceb87e1094c8bed27a5a00579f34975e5119ac69edc04ebc76e3805b42a48ed",
+      "bytes": 26166,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/search_targeted.json",
+      "reason": "Raw connected-tool cache retained in external frozen-source ZIP",
+      "sha256": "c937b141d8be64c7a0839cb04f4b86fcac7f009f1fc87478293f13f494b25f1f",
+      "bytes": 29189,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/delta_open.json",
+      "reason": "Raw connected-tool cache retained in external frozen-source ZIP",
+      "sha256": "2ab150fe4f19e7d3fa757a98285f9b8ca2470239baca68a602867a97cb093852",
+      "bytes": 18058,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/clock10.json",
+      "reason": "Raw connected-tool cache retained in external frozen-source ZIP",
+      "sha256": "d70dccb1f9936fcfe586bdc8490aea1ac1ef247725c06407e0c96c81485ff351",
+      "bytes": 18840,
+      "external_inventory_match": true
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/delta_search_initial.json",
+      "reason": "Raw connected-tool cache retained in external frozen-source ZIP",
+      "sha256": "1919b2968e5bc9c3ab568d18f725a4067b7a2e4f84f036ba9c10c24874424898",
+      "bytes": 34661,
+      "external_inventory_match": true
+    }
+  ]
+}

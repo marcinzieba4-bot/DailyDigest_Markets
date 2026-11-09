@@ -1,0 +1,1839 @@
+{
+  "date": "2024-07-08",
+  "status": "accepted",
+  "canonical_nonretail_sha256": "1dee6f8536dc8a9c738f2a8346996166f4203548dc91327628d6d41a7c2f89f0",
+  "feed_sha256": "c9e3642dc91102d0c245e2324853aa652bfd3720ebf28d5839de162767b3df53",
+  "card_sha256": "bfda7d8e3f457ebb2854fe1e5ca34fcf6a81099644e04935a9adcde63fdec2e2",
+  "exclusions_sha256": "3038bd46e0533b243ac5277934467160f8dee1aa6ab746e3cd98eddc9f93c1ca",
+  "fatal_or_major_remaining": 0,
+  "validation": {
+    "command": "python tools/verify.py 2024-07-08 --nonretail --counts",
+    "result": "PASS",
+    "words": 8530,
+    "distinct_citations": 108,
+    "maximum_citation_uses": 2,
+    "all_36_ranges_pass": true,
+    "failures": 0,
+    "warnings": 0
+  },
+  "reviewed_validation_warnings": [],
+  "findings": [
+    {
+      "severity": "minor",
+      "location": "geo.US.Rates & Curve",
+      "finding": "A rise from a more negative 10Y-2Y spread was called widening, potentially confusing inversion depth with algebraic spread change.",
+      "fix": "Changed widened to increased; retained -32 bps, +11 bps and correctly identified inverted bull steepening."
+    },
+    {
+      "severity": "minor",
+      "location": "flows.Equity & Fund Flows",
+      "finding": "Chinese US-tracking ETF demand was repeated without its direct citation in that paragraph.",
+      "fix": "Attached own-date n0167 to the repeated ETF-demand statement. No aggregate capital-flow inference was introduced."
+    },
+    {
+      "severity": "minor",
+      "location": "catalysts.ASML.Trade Expression",
+      "finding": "An unanchored prospective stock-split aside could imply a company event unsupported by the cited ASML headline.",
+      "fix": "Replaced only that sentence with a conditional shipment-to-earnings test supported by the existing equipment thesis."
+    }
+  ],
+  "claim_checks": [
+    {
+      "area": "Rates and market numbers",
+      "result": "Matched Treasury 2Y 4.60%, 10Y 4.28%, -32 bps, 20-observation -12/-1/+11 bps and curve label to Treasury fields. Matched every quoted equity/ETF/index/commodity close and return to the named own-card instrument, completed 2024-07-05 session and stated horizon. BTC/ETH use the completed 2024-07-07 daily close, not equity Friday. Checked local Samsung KRW, Toyota JPY, BHP AUD, BMW EUR and Polish PLN against local lines; ASML explicitly US USD line. DXY is an index, no numeric spot FX."
+    },
+    {
+      "area": "Release and semantic windows",
+      "result": "All 108 cited complete titles read and matched to actual propositions. Older FedEx/Micron/Nike material is released earnings/guidance inside 14 days; June macro/PMI/housing/RBA/BOJ material is baseline evidence inside 35 days. July corporate/political/trade headlines are inside seven days. Samsung preliminary profit indication remains preliminary; earnings season remains pending; Three Mile Island talks remain reported potential, not approval or contract."
+    },
+    {
+      "area": "Corporate and flow identity",
+      "result": "Constellation Brands beer/EPS is separated from Constellation Energy nuclear talks. JPMorgan fees remain proposed customer adjustment; Netflix Canadian-tax appeal remains pending. Chinese ETF demand, Calastone fund-channel flow reporting and Emcure IPO bids are not generalized into national capital flows. HYG/LQD and market price changes are expressly not measured spread, subscriptions or ownership."
+    },
+    {
+      "area": "Action consistency",
+      "result": "Selective US/technology/semiconductor bullish stances remain contingent on cash conversion; mixed China/Europe/Poland and defensive duration calls carry explicit reversal tests. Bearish European autos is consistent with tariff/retaliation risk and has a cover condition. Themes describe attention gaps without invented ownership statistics."
+    }
+  ],
+  "style_depth": {
+    "assessment": "Substantive date-specific causal comparisons and falsifiable actions throughout all 36 blocks. CN connects resale turnover, developer cash, collateral, land revenue, demographics and export barriers; PL separates consumption/wages from rate, fiscal, governance and defense channels. Both end with genuine divergence analysis. Sector and catalyst text distinguishes agreement/guidance/approval from delivered earnings; no filler addition made during review.",
+    "limits": "Headline-only evidence supports the stated headline facts and conditional mechanisms, not article-body details or realized future outcomes."
+  },
+  "scope": {
+    "parts_reviewed": 136,
+    "titles_and_labels_reviewed": true,
+    "all_cited_full_headlines_reviewed": true,
+    "own_date_only": true,
+    "excluded_records": 0,
+    "other_dates_used_as_evidence": false,
+    "retail_reviewed_or_changed": false,
+    "minor_targeted_changes_only": true
+  },
+  "paragraph_checks": [
+    {
+      "path": "geo[0].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n2048",
+        "n2050",
+        "n2016"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[0].parts[1]",
+      "label": "Rates & Curve",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[0].parts[2]",
+      "label": "New / Most Important",
+      "evidence_ids": [
+        "n2028",
+        "n2029",
+        "n1999"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[0].parts[3]",
+      "label": "Playbook ✓",
+      "evidence_ids": [
+        "n2097"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[1].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n1286",
+        "n1296"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[1].parts[1]",
+      "label": "Activity & Inflation",
+      "evidence_ids": [
+        "n1253",
+        "n1241"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[1].parts[2]",
+      "label": "New / Most Important",
+      "evidence_ids": [
+        "n1289"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[1].parts[3]",
+      "label": "Playbook ✓",
+      "evidence_ids": [
+        "n1276"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[2].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n0107"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[2].parts[1]",
+      "label": "PMIs & Activity",
+      "evidence_ids": [
+        "n0125",
+        "n0135"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[2].parts[2]",
+      "label": "Credit Impulse",
+      "evidence_ids": [
+        "n0181",
+        "n0188"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[2].parts[3]",
+      "label": "Property",
+      "evidence_ids": [
+        "n0165",
+        "n0121",
+        "n0111"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[2].parts[4]",
+      "label": "Fiscal, Policy & Trade",
+      "evidence_ids": [
+        "n0162",
+        "n0178",
+        "n0156"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[2].parts[5]",
+      "label": "Markets & Flows",
+      "evidence_ids": [
+        "n0167"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[2].parts[6]",
+      "label": "New / Most Important",
+      "evidence_ids": [
+        "n0182",
+        "n0149"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[2].parts[7]",
+      "label": "Playbook ✓",
+      "evidence_ids": [
+        "n0179"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[3].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n1437",
+        "n1454"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[3].parts[1]",
+      "label": "Activity & Currency",
+      "evidence_ids": [
+        "n1446",
+        "n1421"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[3].parts[2]",
+      "label": "Playbook ✓",
+      "evidence_ids": [
+        "n1394"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[4].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n0015",
+        "n0035"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[4].parts[1]",
+      "label": "Demand & Financing",
+      "evidence_ids": [
+        "n0043",
+        "n0030",
+        "n0072"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[4].parts[2]",
+      "label": "Playbook ✓",
+      "evidence_ids": [
+        "n0069"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[5].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n1716",
+        "n1717"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[5].parts[1]",
+      "label": "Markets",
+      "evidence_ids": [
+        "n1704",
+        "n1708"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[5].parts[2]",
+      "label": "Fiscal & Politics",
+      "evidence_ids": [
+        "n1753",
+        "n1594"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[5].parts[3]",
+      "label": "Corporate & Sectors",
+      "evidence_ids": [
+        "n1703",
+        "n1723",
+        "n1655",
+        "n1712",
+        "n1610"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[5].parts[4]",
+      "label": "Geopolitics & Security",
+      "evidence_ids": [
+        "n1483",
+        "n1687",
+        "n1741"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[5].parts[5]",
+      "label": "New / Most Important",
+      "evidence_ids": [
+        "n1516",
+        "n1490",
+        "n1693",
+        "n1511"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "geo[5].parts[6]",
+      "label": "Playbook ✓",
+      "evidence_ids": [
+        "n1521"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[0].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[0].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1173"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[0].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[0].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [
+        "n1832"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[1].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[1].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1184"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[1].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[1].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[2].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[2].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n0224"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[2].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[2].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [
+        "n1177"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[3].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[3].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1820"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[3].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[3].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [
+        "n1906"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[4].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[4].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1804"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[4].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[4].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [
+        "n1250"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[5].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[5].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1052",
+        "n1850"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[5].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[5].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [
+        "n0474"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[6].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[6].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n0595"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[6].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[6].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[7].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[7].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n0438"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[7].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[7].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [
+        "n0479"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[8].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[8].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1864"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[8].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[8].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [
+        "n1890"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[9].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[9].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n2052"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[9].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[9].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[10].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[10].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n0432"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[10].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[10].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [
+        "n1905"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[11].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[11].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n0152",
+        "n1903"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[11].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[11].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[12].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[12].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n0794",
+        "n0740"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[12].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "sectors[12].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "earnings_pattern.parts[0]",
+      "label": "Rewarded",
+      "evidence_ids": [
+        "n1045",
+        "n1041",
+        "n0595"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "earnings_pattern.parts[1]",
+      "label": "Punished",
+      "evidence_ids": [
+        "n1051",
+        "n1052"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "earnings_pattern.parts[2]",
+      "label": "Pattern",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "earnings_pattern.parts[3]",
+      "label": "Attention into EPS",
+      "evidence_ids": [
+        "n0104",
+        "n0102"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "earnings_pattern.parts[4]",
+      "label": "Playbook",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "underowned[0].parts[0]",
+      "label": "Attention Gap",
+      "evidence_ids": [
+        "n1862"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "underowned[0].parts[1]",
+      "label": "Exposure & Risk",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "underowned[0].parts[2]",
+      "label": "Trigger to Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "underowned[1].parts[0]",
+      "label": "Attention Gap",
+      "evidence_ids": [
+        "n1655"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "underowned[1].parts[1]",
+      "label": "Exposure & Risk",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "underowned[1].parts[2]",
+      "label": "Trigger to Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "underowned[2].parts[0]",
+      "label": "Attention Gap",
+      "evidence_ids": [
+        "n2040"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "underowned[2].parts[1]",
+      "label": "Exposure & Risk",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "underowned[2].parts[2]",
+      "label": "Trigger to Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "underowned[3].parts[0]",
+      "label": "Attention Gap",
+      "evidence_ids": [
+        "n1766"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "underowned[3].parts[1]",
+      "label": "Exposure & Risk",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "underowned[3].parts[2]",
+      "label": "Trigger to Watch",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "crypto.parts[0]",
+      "label": "Market Context",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "crypto.parts[1]",
+      "label": "New / Most Important",
+      "evidence_ids": [
+        "n1018",
+        "n1026",
+        "n1027",
+        "n0424"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "crypto.parts[2]",
+      "label": "Playbook",
+      "evidence_ids": [
+        "n0374"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "flows.parts[0]",
+      "label": "Global Liquidity",
+      "evidence_ids": [
+        "n1323"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "flows.parts[1]",
+      "label": "Rates & Dollar",
+      "evidence_ids": [
+        "n0098"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "flows.parts[2]",
+      "label": "Credit Check",
+      "evidence_ids": [
+        "n0091"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "flows.parts[3]",
+      "label": "Equity & Fund Flows",
+      "evidence_ids": [
+        "n1315",
+        "n1174",
+        "n1327",
+        "n0167"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "flows.parts[4]",
+      "label": "Portfolio Implication",
+      "evidence_ids": [
+        "n2104",
+        "n1303"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "anticipatory[0].parts[0]",
+      "label": "What Is Priced",
+      "evidence_ids": [
+        "n0094"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "anticipatory[0].parts[1]",
+      "label": "Conditional Expression",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "anticipatory[0].parts[2]",
+      "label": "Risk",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "anticipatory[1].parts[0]",
+      "label": "What Is Priced",
+      "evidence_ids": [
+        "n0102"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "anticipatory[1].parts[1]",
+      "label": "Conditional Expression",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "anticipatory[1].parts[2]",
+      "label": "Risk",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "anticipatory[2].parts[0]",
+      "label": "What Is Priced",
+      "evidence_ids": [
+        "n0148"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "anticipatory[2].parts[1]",
+      "label": "Conditional Expression",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "anticipatory[2].parts[2]",
+      "label": "Risk",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "anticipatory[3].parts[0]",
+      "label": "What Is Priced",
+      "evidence_ids": [
+        "n1286",
+        "n1296"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "anticipatory[3].parts[1]",
+      "label": "Conditional Expression",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "anticipatory[3].parts[2]",
+      "label": "Risk",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[0].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n0890"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[0].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[0].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[1].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n0740"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[1].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[1].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[2].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n0612"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[2].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[2].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[3].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n0474"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[3].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[3].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[4].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n0235"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[4].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[4].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[5].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n0432"
+      ],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[5].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    },
+    {
+      "path": "catalysts[5].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read in full; claims, timing, attribution, conditional language, numeric identity and action checked against own-date headlines/card where applicable."
+    }
+  ],
+  "cited_headlines_checked": [
+    {
+      "id": "n0015",
+      "published_at": "2024-06-18T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Australia's central bank stays the course on rates, alert to inflation risks - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0030",
+      "published_at": "2024-06-26T07:00:00+00:00",
+      "source": "AFR",
+      "title": "High rates forcing indebted home owners to sell: RBA - AFR",
+      "uses": 1
+    },
+    {
+      "id": "n0035",
+      "published_at": "2024-06-26T07:00:00+00:00",
+      "source": "Reserve Bank of Australia",
+      "title": "Restrictive Financial Conditions in Australia | Speeches - Reserve Bank of Australia",
+      "uses": 1
+    },
+    {
+      "id": "n0043",
+      "published_at": "2024-06-29T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Australia Treasurer confident July 1 tax cuts won't stoke inflation - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0069",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "AFR",
+      "title": "Migration cut no ‘silver bullet’ to Australia’s inflation problem - AFR",
+      "uses": 1
+    },
+    {
+      "id": "n0072",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "AFR",
+      "title": "Which states are in ‘the slow lane’ for retail spending? - AFR",
+      "uses": 1
+    },
+    {
+      "id": "n0091",
+      "published_at": "2024-07-02T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "US overnight funding rate hits highest since January - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0094",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "S&P 500, Nasdaq post record closing highs as data stokes hope for rate cut - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0098",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Dollar stays lower after US jobs data; euro up ahead of French election - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0102",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Wall St Week Ahead Earnings season to test hopes for broader stocks rally - Reuters",
+      "uses": 2
+    },
+    {
+      "id": "n0104",
+      "published_at": "2024-07-07T07:00:00+00:00",
+      "source": "WSJ",
+      "title": "Earnings Season to Test Investors’ Faith in Big Tech Stocks - WSJ",
+      "uses": 1
+    },
+    {
+      "id": "n0107",
+      "published_at": "2024-06-07T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "China's exports rise solidly, but slower imports temper outlook - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0111",
+      "published_at": "2024-06-17T07:00:00+00:00",
+      "source": "The Guardian",
+      "title": "China new home prices drop at fastest rate in nearly a decade - The Guardian",
+      "uses": 1
+    },
+    {
+      "id": "n0121",
+      "published_at": "2024-07-01T07:00:00+00:00",
+      "source": "Global Times",
+      "title": "China's property market shows signs of uptick amid policy supports - Global Times",
+      "uses": 1
+    },
+    {
+      "id": "n0125",
+      "published_at": "2024-07-01T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Global factory activity has mixed performance in June, PMIs show - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0135",
+      "published_at": "2024-07-02T07:00:00+00:00",
+      "source": "Bloomberg",
+      "title": "Chinese Beef Prices Plunge as Appetite for Premium Meat Wavers - Bloomberg",
+      "uses": 1
+    },
+    {
+      "id": "n0148",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "China EV makers brace for tariffs as Beijing, EU engage in talks - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0149",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "China faces economic headwinds as it grapples with an aging — and shrinking — population - CNBC",
+      "uses": 1
+    },
+    {
+      "id": "n0152",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "German car industry urges EU to drop tariffs on China-made cars - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0156",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "South China Morning Post",
+      "title": "Indonesia to impose up to 200% import tariffs on China-made products - South China Morning Post",
+      "uses": 1
+    },
+    {
+      "id": "n0162",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "China-built EVs hit with duties in biggest EU trade case yet - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0165",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "source": "South China Morning Post",
+      "title": "China’s second-hand property sales surge after policy incentives - South China Morning Post",
+      "uses": 1
+    },
+    {
+      "id": "n0167",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "source": "South China Morning Post",
+      "title": "Chinese investors’ craze for ETFs tracking US stocks triggers suspensions, warnings - South China Morning Post",
+      "uses": 2
+    },
+    {
+      "id": "n0178",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "China steps up pressure with EU brandy probe hearing as EV tariffs begin - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0179",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "China's SAIC Motor seeks European Commission hearing on EV tariffs - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0181",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "WSJ",
+      "title": "China’s Central Bank Borrows ‘Hundreds of Billions’ of Yuan in Government Bonds - WSJ",
+      "uses": 1
+    },
+    {
+      "id": "n0182",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Peterson Institute for International Economics",
+      "title": "Chinese local governments' reliance on land revenue drops as the property downturn drags on - Peterson Institute for International Economics",
+      "uses": 1
+    },
+    {
+      "id": "n0188",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Global Times",
+      "title": "Reported move by PBC on treasury bond borrowing aimed at stabilizing market, managing expectation: analysts - Global Times",
+      "uses": 1
+    },
+    {
+      "id": "n0224",
+      "published_at": "2024-07-01T07:00:00+00:00",
+      "source": "Banking Dive",
+      "title": "Biggest US banks boost dividends, launch stock buybacks - Banking Dive",
+      "uses": 1
+    },
+    {
+      "id": "n0235",
+      "published_at": "2024-07-01T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "Boeing agrees to buy fuselage maker Spirit AeroSystems in $4.7 billion deal - CNBC",
+      "uses": 1
+    },
+    {
+      "id": "n0374",
+      "published_at": "2024-07-01T07:00:00+00:00",
+      "source": "Forbes",
+      "title": "Why These Bitcoin Miners Are Becoming Summer’s Hot AI Stocks - Forbes",
+      "uses": 1
+    },
+    {
+      "id": "n0424",
+      "published_at": "2024-07-02T07:00:00+00:00",
+      "source": "Yahoo Finance",
+      "title": "Coinbase lands $32.5 million U.S. government crypto contract - Yahoo Finance",
+      "uses": 1
+    },
+    {
+      "id": "n0432",
+      "published_at": "2024-07-02T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "EXCLUSIVE: Constellation talking to Pennsylvania on Three Mile Island restart, sources say - Reuters",
+      "uses": 2
+    },
+    {
+      "id": "n0438",
+      "published_at": "2024-07-02T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "FDA approves Eli Lilly Alzheimer’s drug, expanding treatment options in the U.S. - CNBC",
+      "uses": 1
+    },
+    {
+      "id": "n0474",
+      "published_at": "2024-07-02T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Nike plots $100 sneaker line as shares plunge in worst-ever drop - Reuters",
+      "uses": 2
+    },
+    {
+      "id": "n0479",
+      "published_at": "2024-07-02T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Novo Nordisk, Lilly must cut US prices of weight-loss drugs, Biden says - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0595",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "Investopedia",
+      "title": "Constellation Brands Raises EPS Outlook Amid Higher Beer Sales - Investopedia",
+      "uses": 2
+    },
+    {
+      "id": "n0612",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "Investopedia",
+      "title": "FDA Approves Eli Lilly's Alzheimer's Drug Kisunla - Investopedia",
+      "uses": 1
+    },
+    {
+      "id": "n0740",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "source": "Barron's",
+      "title": "ASML Stock Is an AI Chip Hero. Why It’s Set for a Boost. - Barron's",
+      "uses": 2
+    },
+    {
+      "id": "n0794",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Samsung flags better-than-expected profit rise as AI boom lifts chip prices - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0890",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "BBC",
+      "title": "Samsung expects profits to soar with boost from AI - BBC",
+      "uses": 1
+    },
+    {
+      "id": "n1018",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Bitcoin set for worst week in nearly a year on Mt. Gox liquidation fears - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1026",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "NBC News",
+      "title": "Mt. Gox begins repaying bitcoin to creditors a decade after exchange's collapse. What it means. - NBC News",
+      "uses": 1
+    },
+    {
+      "id": "n1027",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "Over $170 billion wiped off cryptocurrencies as market tanks on Mt. Gox bitcoin payout fears - CNBC",
+      "uses": 1
+    },
+    {
+      "id": "n1041",
+      "published_at": "2024-06-25T07:00:00+00:00",
+      "source": "Business Wire",
+      "title": "FedEx Reports Higher Full-Year Diluted EPS of $17.21 and Adjusted Diluted EPS of $17.80 - Business Wire",
+      "uses": 1
+    },
+    {
+      "id": "n1045",
+      "published_at": "2024-06-26T07:00:00+00:00",
+      "source": "Fortune",
+      "title": "FedEx stock rockets almost 16% on earnings beat—and BofA boosts its price target - Fortune",
+      "uses": 1
+    },
+    {
+      "id": "n1051",
+      "published_at": "2024-06-27T07:00:00+00:00",
+      "source": "Barron's",
+      "title": "Micron Earnings Beat Estimates. Why the Stock Is Falling. - Barron's",
+      "uses": 1
+    },
+    {
+      "id": "n1052",
+      "published_at": "2024-06-27T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "Nike shares plunge after retailer says quarterly sales will fall 10%, warns on China weakness - CNBC",
+      "uses": 2
+    },
+    {
+      "id": "n1173",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Fortune",
+      "title": "Apple’s top iPhone maker’s new AI server business is sending revenues on a tear - Fortune",
+      "uses": 1
+    },
+    {
+      "id": "n1174",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Bain-backed Emcure Pharma's $234 mln India IPO draws $11 bln in bids - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1177",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "WSJ",
+      "title": "Exclusive | JPMorgan Warns Customers: Prepare to Pay for Checking Accounts - WSJ",
+      "uses": 1
+    },
+    {
+      "id": "n1184",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "WSJ",
+      "title": "Netflix, U.S. Companies Ask Canada Appeal Court to Stop Proposed Tax on Streaming Revenue - WSJ",
+      "uses": 1
+    },
+    {
+      "id": "n1241",
+      "published_at": "2024-07-01T07:00:00+00:00",
+      "source": "Bloomberg.com",
+      "title": "ECB’s Lane Says Data Needed Beyond June to Clarify Services Path - Bloomberg.com",
+      "uses": 1
+    },
+    {
+      "id": "n1250",
+      "published_at": "2024-07-02T07:00:00+00:00",
+      "source": "WSJ",
+      "title": "Airbus Wins $24 Billion Jet Order From Cebu Air - WSJ",
+      "uses": 1
+    },
+    {
+      "id": "n1253",
+      "published_at": "2024-07-02T07:00:00+00:00",
+      "source": "The Guardian",
+      "title": "Eurozone inflation eases but ECB likely to keep interest rates on hold - The Guardian",
+      "uses": 1
+    },
+    {
+      "id": "n1276",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Can France count on an ECB rescue if vote upsets markets? - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1286",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "British assets gain, mid-cap stocks lead after Labour election win - Reuters",
+      "uses": 2
+    },
+    {
+      "id": "n1289",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "How the German coalition wants to bolster economic growth - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1296",
+      "published_at": "2024-07-06T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "France's political alliances and their election pledges - Reuters",
+      "uses": 2
+    },
+    {
+      "id": "n1303",
+      "published_at": "2024-07-01T07:00:00+00:00",
+      "source": "UBS",
+      "title": "Money Market Funds: Appeal set to expand in collateral in risk-management transactions - UBS",
+      "uses": 1
+    },
+    {
+      "id": "n1315",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "Portfolio Adviser",
+      "title": "Calastone: Equity fund flows have their best six months on record - Portfolio Adviser",
+      "uses": 1
+    },
+    {
+      "id": "n1323",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "source": "The Economist",
+      "title": "How much cash should be removed from the financial system? - The Economist",
+      "uses": 1
+    },
+    {
+      "id": "n1327",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "WSJ",
+      "title": "Why Your Fund Manager Can’t Beat Today’s Stock Market - WSJ",
+      "uses": 1
+    },
+    {
+      "id": "n1394",
+      "published_at": "2024-06-24T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "BOJ debated need for timely rate hike, signals chance of July action - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1421",
+      "published_at": "2024-07-02T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Japan's service activity slips for first time in 2 years, PMI shows - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1437",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Japanese firms deliver biggest pay hikes in 33 years, union survey shows - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1446",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Yen drops to 38-year low, US dollar slumps after weak data - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1454",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Japan household spending falls unexpectedly, clouds BOJ rate path - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1483",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "source": "Euronews.com",
+      "title": "Poland and Lithuania call for EU and NATO help for border defence - Euronews.com",
+      "uses": 1
+    },
+    {
+      "id": "n1490",
+      "published_at": "2024-06-03T07:00:00+00:00",
+      "source": "Bankier.pl",
+      "title": "PMI: żadnych złudzeń, proszę Państwa. W przemyśle jest źle i nie widać poprawy - Bankier.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1511",
+      "published_at": "2024-06-20T07:00:00+00:00",
+      "source": "Bankier.pl",
+      "title": "1 złotego brakuje do 8 tys. zł średniego wynagrodzenia. Pogłębia się za to spadek zatrudnienia - Bankier.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1516",
+      "published_at": "2024-06-25T07:00:00+00:00",
+      "source": "Strefa Inwestorów",
+      "title": "Rosnące wynagrodzenia pozwalają na wyższą konsumpcję i oszczędzanie. Sprzedaż detaliczna w górę - Strefa Inwestorów",
+      "uses": 1
+    },
+    {
+      "id": "n1521",
+      "published_at": "2024-06-27T07:00:00+00:00",
+      "source": "Business Insider Polska",
+      "title": "Ceny mieszkań na rynku wtórnym wyhamowały. Co będzie dalej? [RAPORT] - Business Insider Polska",
+      "uses": 1
+    },
+    {
+      "id": "n1594",
+      "published_at": "2024-07-02T07:00:00+00:00",
+      "source": "TVN24",
+      "title": "Najniższa krajowa 2024. Podwyżka dla trzech milionów Polaków - TVN24",
+      "uses": 1
+    },
+    {
+      "id": "n1610",
+      "published_at": "2024-07-02T07:00:00+00:00",
+      "source": "Strefa Inwestorów",
+      "title": "Walne Tauronu nie udzieliło byłemu zarządowi absolutorium za 2023 r. - Strefa Inwestorów",
+      "uses": 1
+    },
+    {
+      "id": "n1655",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "source": "samsung.com",
+      "title": "Asseco, Samsung i Xtension wspólnie wprowadzają certyfikowany podpis biometryczny - samsung.com",
+      "uses": 2
+    },
+    {
+      "id": "n1687",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "source": "Rzeczpospolita",
+      "title": "Rząd planuje obniżenie wydatków na obronność? MON dementuje doniesienia - Rzeczpospolita",
+      "uses": 1
+    },
+    {
+      "id": "n1693",
+      "published_at": "2024-07-04T07:00:00+00:00",
+      "source": "Money.pl",
+      "title": "Wstępne dane. Bezrobocie w Polsce spadło do najniższego poziomu od 34 lat - Money.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1703",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Money.pl",
+      "title": "Byłe kierownictwo KGHM bez absolutorium - Money.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1704",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Strefa Inwestorów",
+      "title": "DZIEŃ NA GPW: Niewielkie spadki głównych indeksów; payrolls bez wpływu na giełdę - Strefa Inwestorów",
+      "uses": 1
+    },
+    {
+      "id": "n1708",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "pb.pl",
+      "title": "Glapiński umacnia złotego. Funt nie reaguje na wybory - pb.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1712",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "wnp.pl",
+      "title": "JSW: nowe rozwiązania w kopalni Pniówek - wnp.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1716",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Business Insider Polska",
+      "title": "NBP odkrywa karty. Zaskakujący wzrost prognozy inflacji - Business Insider Polska",
+      "uses": 1
+    },
+    {
+      "id": "n1717",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "TVN24",
+      "title": "NBP przedstawia nowe scenariusze dla inflacji - TVN24",
+      "uses": 1
+    },
+    {
+      "id": "n1723",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "PAP MediaRoom portal.",
+      "title": "Projekt HBO - największa inwestycja Grupy ORLEN w Gdańsku - PAP MediaRoom portal.",
+      "uses": 1
+    },
+    {
+      "id": "n1741",
+      "published_at": "2024-07-06T07:00:00+00:00",
+      "source": "Interia Wydarzenia",
+      "title": "Ukraina apeluje do Polski. Chodzi o \"zamknięcie nieba\" - Interia Wydarzenia",
+      "uses": 1
+    },
+    {
+      "id": "n1753",
+      "published_at": "2024-07-07T07:00:00+00:00",
+      "source": "Money.pl",
+      "title": "Nieoczywiste skutki podniesienia kwoty wolnej. Wielu nie zapłaciłoby podatku - Money.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1766",
+      "published_at": "2024-07-01T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "Inside Starbucks' plans to improve stores for customers and baristas - CNBC",
+      "uses": 1
+    },
+    {
+      "id": "n1804",
+      "published_at": "2024-07-01T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Boeing, Airbus carve out Spirit Aero's global plants - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1820",
+      "published_at": "2024-07-01T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Oil prices up 2% to two-month high on summer demand hopes, supply worries - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1832",
+      "published_at": "2024-07-02T07:00:00+00:00",
+      "source": "S&P Global",
+      "title": "AI carries ongoing stock market rally, renewing bubble concerns - S&P Global",
+      "uses": 1
+    },
+    {
+      "id": "n1850",
+      "published_at": "2024-07-02T07:00:00+00:00",
+      "source": "BBC",
+      "title": "Tesla surprises with better than expected car sales - BBC",
+      "uses": 1
+    },
+    {
+      "id": "n1862",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Exclusive: India asks utilities to order $33 billion in equipment this year to boost coal power output - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1864",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "Mining.com",
+      "title": "Glencore scraps Kazzinc sale on shortage of bids - Mining.com",
+      "uses": 1
+    },
+    {
+      "id": "n1890",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Mining.com",
+      "title": "Gold prices rise to one-month high after US jobs report - Mining.com",
+      "uses": 1
+    },
+    {
+      "id": "n1903",
+      "published_at": "2024-07-07T07:00:00+00:00",
+      "source": "Automotive News",
+      "title": "China's BYD to build $1B EV plant in Turkey, report says - Automotive News",
+      "uses": 1
+    },
+    {
+      "id": "n1905",
+      "published_at": "2024-07-07T07:00:00+00:00",
+      "source": "WSJ",
+      "title": "The Next Big Power Play on Wall Street - WSJ",
+      "uses": 1
+    },
+    {
+      "id": "n1906",
+      "published_at": "2024-07-07T07:00:00+00:00",
+      "source": "Crude Oil Prices Today | OilPrice.com",
+      "title": "Will OPEC Ever Rein In Its Non-Compliant Members - Crude Oil Prices Today | OilPrice.com",
+      "uses": 1
+    },
+    {
+      "id": "n1999",
+      "published_at": "2024-07-01T07:00:00+00:00",
+      "source": "PR Newswire",
+      "title": "Manufacturing PMI® at 48.5%; June 2024 Manufacturing ISM® Report On Business® - PR Newswire",
+      "uses": 1
+    },
+    {
+      "id": "n2016",
+      "published_at": "2024-07-02T07:00:00+00:00",
+      "source": "Federal Reserve Bank of Dallas",
+      "title": "Unprecedented U.S. immigration surge boosts job growth, output - Federal Reserve Bank of Dallas",
+      "uses": 1
+    },
+    {
+      "id": "n2028",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "PR Newswire",
+      "title": "Services PMI® at 48.8%; June 2024 Services ISM® Report On Business® - PR Newswire",
+      "uses": 1
+    },
+    {
+      "id": "n2029",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "US service sector sags in June as orders sink - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n2040",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Gold prices rise to over one-month high after US jobs report - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n2048",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "U.S. economy added 206,000 jobs in June, unemployment rate rises to 4.1% - CNBC",
+      "uses": 1
+    },
+    {
+      "id": "n2050",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "US labor market losing steam as unemployment rate climbs to 4.1% - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n2052",
+      "published_at": "2024-07-05T07:00:00+00:00",
+      "source": "Politico",
+      "title": "‘Stuck’: Housing market malaise may last for years - Politico",
+      "uses": 1
+    },
+    {
+      "id": "n2097",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "Fed says it's not ready to cut rates until 'greater confidence' inflation is moving to 2% goal - CNBC",
+      "uses": 1
+    },
+    {
+      "id": "n2104",
+      "published_at": "2024-07-03T07:00:00+00:00",
+      "source": "WSJ",
+      "title": "The S&P 500 Isn’t as Diverse as It Used to Be. Here’s Why That Matters. - WSJ",
+      "uses": 1
+    }
+  ]
+}

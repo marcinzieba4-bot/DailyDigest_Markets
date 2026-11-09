@@ -1,0 +1,18 @@
+{
+ "ticker": "SLB",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SLB?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "b008d3b6bf25e52b99e287f572d762c583648c600c13ce688041af23b63dca69",
+   "fetched_at_utc": "2026-11-05T10:38:54.055483+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SLB?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "fa0a33a4e7dc523ba216d4fa579d33817810b3730be38e4c4bcd8b6b82ca561a",
+   "fetched_at_utc": "2026-11-05T10:38:54.390393+00:00"
+  }
+ ]
+}

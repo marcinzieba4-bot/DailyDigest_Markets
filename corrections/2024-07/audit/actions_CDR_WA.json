@@ -1,0 +1,18 @@
+{
+ "ticker": "CDR.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CDR.WA?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "2d8d3dc06ec08a80ac4bdc9821612169a11b4be84b85ae39bd0da22c9ef27292",
+   "fetched_at_utc": "2026-11-05T10:38:38.401658+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CDR.WA?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "4f0b0dfffd25192f2db05e6ada18b5a03dfe4b71bea41b411fc4f98d2b037a99",
+   "fetched_at_utc": "2026-11-05T10:38:38.626723+00:00"
+  }
+ ]
+}

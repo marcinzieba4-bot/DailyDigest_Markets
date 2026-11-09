@@ -1,0 +1,46 @@
+{
+  "source_input_bindings": 134,
+  "source_dependency_hash_checks": 49472,
+  "physical_attempts": 16437,
+  "received_attempt_bodies": 16437,
+  "canonical_physical_requests": 16437,
+  "current_source_schema_checked": true,
+  "status": "current_source_packaging_compatible",
+  "reviewed_at_utc": "2026-11-05T12:56:30.112511+00:00",
+  "month_artifacts_reviewed": false,
+  "public_delivery_reviewed": false,
+  "source_facts_or_authored_text_changed": false,
+  "intended_package_paths": 51080,
+  "market_input_bindings": 898,
+  "jsonl_physical_ledger_included": true,
+  "reference_schema_sha256": {
+    "reference/retail_schema.json": "020d73a6f97c3bf96f48216540ca3b1f805d424c8caf765563c8d5a435c36848",
+    "reference/nonretail_schema.json": "974532c8d9fbee0c5743a993ca16f1a8e7b0afa0fb5f61851fcaac0700dc0f7c"
+  },
+  "input_sha256": {
+    "audit/independent_source_review.json": "147513cf16810e90e064a09c5cbaa89aa71509fcacb3c477403f4f8013769af2",
+    "audit/source_freeze.json": "7ec963b56b6e60ea9215d4374254b62883598f932e0d1cfd090e2a3544edd685",
+    "audit/independent_market_review.json": "ec752616cd2986aa53e0cf33520a6287e806e061aa0f6ec4edf2f323d86a1610",
+    "audit/news_physical_requests.jsonl": "b6fe5ca6782421e42c324635bbc219ffaaabd5439bffb55a8aa9828027434083",
+    "audit_work/physical_source_inventory.json": "6f1989b44d2c12a294422372c5c4f9b0d28a2cb31e6400ad5595707d0ef66014",
+    "code_provenance.json": "3952f37aec4991d17231a0e4b9bd09848e3bf4051194bcf2bfc07c7844e806bd",
+    "checks/code_discovery.json": "aee43bf59d3a66277ee4d48edd14b11fe516a69814822b14e0321b393c624217"
+  },
+  "tool_sha256": {
+    "tools/render.py": "77e479f0e3a4fb7a3cbf54ee3f2fae9a813e2669023de52344ab25655b66cce3",
+    "tools/build_artifacts.py": "b3465f666d0fb8f571fea1335cda3e0b2b3f1412265f0087105261a0d54213f9",
+    "tools/build_retail_page.py": "7e5a7dd3fd5106cdafe8b18e07301d942c87d92b441fe2adaaf3ed8c086eaf17",
+    "tools/build_source_inventory.py": "a1b5c7c31d856320f7cb312594eb9c71572daa135c1ef0414d7a7ba3204bda27",
+    "audit_work/review_final_artifacts.py": "d776e7b667f1c31202c7c00fb74c8be82e1c07c01daa8d8e386b5c5253060432",
+    "audit_work/preview_first_edition.py": "bdd9101fbfd14029e695ee4543b1d821d3141b97f1db014b217a9ff81fb27a31",
+    "audit_work/review_artifact_integration.py": "038a0bead452cbeb4e5fbdf740daa30e834c6f4a198bc35a1dc25c6f6e98413c"
+  },
+  "root_patch_receipt_sha256": "9de40c35a2b130b6cbec17198080ecc1188ca19990e2782288d730342a149913",
+  "reviewed_root_deltas": [
+    "JSONL safe-path allowlist and top-level audit inclusion preserve all prior path guards.",
+    "Reference JSON schemas are included as exact current template bytes.",
+    "Current source input_bindings, tool/contract/reviewer dependency maps, physical ledger/immutable attempts/canonical XML/cache hashes, policy lock, source freeze and newest-code source provenance are all checked by the final archive consumer."
+  ],
+  "finalizer_scope": "Not edited or reviewed here; writer_late owns the source-schema finalizer integration recheck.",
+  "code_provenance_limit": "retrospective_tool_sha256 describes upstream toolkit bytes; adapted current tools have separate current hashes and are not asserted to equal upstream."
+}

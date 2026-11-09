@@ -1,0 +1,156 @@
+{
+  "date": "2024-07-26",
+  "status": "accepted",
+  "nonretail_content_sha256": "58b0cf1fa0a70de04adac025f8fc6a51e620c0c1dd96f3c53f5de2e878ce0611",
+  "feed_sha256": "160f2a439907c2a87a2442f991091948cfc24ffa4aaa97128872598d9e4639bb",
+  "card_sha256": "835128f791f2e1c7af0dca5d012742b311c39419e5fc2d9f17ebfc4d938c70cf",
+  "exclusions_sha256": "af09167524b1f318444f324cb3f41f9489b107217e5e01be0e6fd357a4c08349",
+  "fatal_or_major_remaining": 0,
+  "scope": "Read all 36 nonretail blocks, titles, labels, stances and all 105 cited full headlines, against this own-date frozen feed/card/current exclusions and AUTHORING. No retail, other-date factual evidence or raw histories used.",
+  "findings": [
+    "No fatal or major issue remains. Narrow market-instrument wording needed to identify the broad-market Polish ETF and front-month commodity futures explicitly."
+  ],
+  "fixes": [
+    {
+      "location": "geo.PL.Markets",
+      "evidence_ids": [
+        "n2065"
+      ],
+      "change": "Changed index-dispersion wording to dispersion across companies and a broad-market ETF, preserving Beta WIG20TR identity."
+    },
+    {
+      "location": "sectors.XLE/XLB.EPS Upside Watch",
+      "evidence_ids": [
+        "n1206",
+        "n0918"
+      ],
+      "change": "Specified front-month WTI and gold futures so quoted own-card returns cannot be mistaken for spot commodity marks."
+    }
+  ],
+  "style_depth": {
+    "assessment": "Substantive sector and stock comparisons connect demand to pricing, cost, financing and execution. China separates repeated easing and bank funding from borrower decisions, property repair, AI activity and cautious consumers. Poland compares retailer margin pressure with labor support, fiscal accountability, institutional process and transaction/governance risks. Bearish European autos, Stellantis and Dexcom actions match concrete operational or forecast setbacks; growth additions stay staged.",
+    "evidence_ids": [
+      "n0167",
+      "n0170",
+      "n0187",
+      "n0177",
+      "n0185",
+      "n1859",
+      "n2065",
+      "n2086",
+      "n2063",
+      "n1182",
+      "n1072"
+    ]
+  },
+  "paragraph_source_checks": [
+    {
+      "location": "geo.US.Macro Stance/Rates & Curve; flows.Rates & Dollar",
+      "evidence_ids": [
+        "n2423",
+        "n2427",
+        "n0093"
+      ],
+      "check": "US2.8%Q2pace matches same-paragraph CNBC title and is a completedJuly25release before cutoff. TreasuryJuly25 2Y4.41%,10Y4.27%,-14bps,20obs-30/-5/+25bps and5obs10Y+7bps match correct fields with exact inverted/bullsteepening wording. S&P5399.22/-.51%,VIX18.46,DXY104.36/-1.59%20session/+.18%5session andTLT+.82%session are exact own fields."
+    },
+    {
+      "location": "geo.CN; geo.JP",
+      "evidence_ids": [
+        "n0167",
+        "n0170",
+        "n0187",
+        "n1817",
+        "n1810",
+        "n1825"
+      ],
+      "check": "ChinaJuly25lower-rateMLF/deposit outcomes are available beforeJuly26cutoff despite earlier indexed stamps; framework reducedMLFrole is an attributed Reuters interpretation. Tokyo inflation release occurs beforeUTCmidnight on the reporting boundary and remains separate from pendingBOJdecision. Minimumwage remains proposed, not realized spending."
+    },
+    {
+      "location": "geo.CN/JP/AU/PL market paragraphs",
+      "evidence_ids": [
+        "n0150",
+        "n1823",
+        "n0063",
+        "n2065"
+      ],
+      "check": "Matched July25 Shanghai2886.74/-.52%,HangSeng17021.91/-1.67%,TencentHKD351.20/-3.30%,Nikkei37869.51/-3.28%,ASX7861.20/-1.29%,CBAAUD132.60/-.14%,BetaPLN44.83/-.81%/-5.27%20session,OrangePLN7.80/+1.12%,PGEPLN6.94/-.32%. These are prices, not flows; yen/AUD directional only, no numeric spotFX."
+    },
+    {
+      "location": "sector EPS paragraphs; catalysts.NOW/IBM/LULU/ABBV",
+      "evidence_ids": [
+        "n1172",
+        "n0883",
+        "n1132",
+        "n1030",
+        "n1182"
+      ],
+      "check": "NOW828.79/+13.40%,IBM191.98/+4.33%,LULU247.32/-9.09%/-18.86%20session andABBV182.17/+3.38% match own July25 identity/session/horizon, including reconstructed as-traded NOWunits. Sector returns individually matched:XLK-1.07%,XLC-1.15%,XLF+.38%,XLE+1.73%,XLI+.80%,XLP-.12%,XLRE-.55%/+6.09%20session,XLU-.83%,SOXX224.55/-2.23%/-7.93%5session. RenaultEUR43.99/-7.49% andEXV5EUR55.50/-1.65% are separate local instruments."
+    },
+    {
+      "location": "sectors.XLE/XLB",
+      "evidence_ids": [
+        "n1206",
+        "n2270",
+        "n0918",
+        "n0077"
+      ],
+      "check": "FrontmonthWTI78.28USD/bbl/+.89% andgold2353.50USD/oz/-2.57% match futures fields;NEM45.70/-4.19% is separate equity session. Valero beat and lowerprofit coexist by expectation/comparisonperiod, Novak statement remains attributed rather than demonstrated compliance."
+    },
+    {
+      "location": "earnings_pattern; sectors.XLY/XLV; catalysts.DXCM",
+      "evidence_ids": [
+        "n1069",
+        "n1072",
+        "n1071",
+        "n1030",
+        "n1521",
+        "n1174",
+        "n1173"
+      ],
+      "check": "Deckers and Dexcom afterhours actuals are available beforeJuly26cutoff but never assigned to earlier regular closes. Dexcom lower annual revenue forecast and CNBC sharp decline match titles without inventing a new price. AbbVie forecast/pipeline termination remain distinct. ServiceNow hiring/probe/departure retains source and executive roles, with no legal conclusion."
+    },
+    {
+      "location": "crypto/anticipatory[3]",
+      "evidence_ids": [
+        "n1303",
+        "n1060",
+        "n1297",
+        "n1313",
+        "n1059"
+      ],
+      "check": "USD4.5million fine is same-paragraph CNBC title and UKunit obligation, not a token forecast. BTC65777.23/+.62%,ETH3174.43/-4.85%,SOL171.96/-3.41% are completedJuly25UTCdaily;ETHA23.70/-7.06% is distinct USsession with no longerhistory inferred. FirstdayEtherflow remains specific priorallocation; politicalcourtship is not enactedpolicy or electionoutcome; Coinbase board appointment not SECresult."
+    },
+    {
+      "location": "flows; underowned[3]",
+      "evidence_ids": [
+        "n1063",
+        "n1694",
+        "n1045",
+        "n1314",
+        "n0662",
+        "n1668"
+      ],
+      "check": "LineageReutersintraday5% andCNBCcompletedgain>3% are not conflated, no unsupportedquote. BofAclientstock-sales/sectorETFbuying remains limited to statedclientgroup,FactSetpolarization qualitative,OneStreamsource-attributed. IWM+1.25%session/+10.27%20session andHYG+.01%/LQD+.40%session are prices, not newflows/spreads."
+    },
+    {
+      "location": "geo.PL; all temporal semantics/current exclusions",
+      "evidence_ids": [
+        "n2086",
+        "n2063",
+        "n2078",
+        "n2082",
+        "n2076",
+        "n2055",
+        "n2039",
+        "n1853"
+      ],
+      "check": "Auditofficecriticism,dischargeoutcome,possibleOrlenPocztatransfer,Trigonanalystvaluation,UniCredittransaction,PKPCargohaulage anddeputyPMaccessioncondition retain precise roles/status. Allcitedcompanynews/previews within7days,results within14,macro within35. Current exclusions empty; all105 fullheadlines read, Polishclaims translated by meaning."
+    }
+  ],
+  "validation": {
+    "command": "python tools/verify.py 2024-07-26 --nonretail --counts",
+    "result": "PASS: 8603 words,105 sources,all36ranges,0fail,0warn",
+    "warnings": []
+  },
+  "limits": "Headline-level and own-card evidence only; no article-body detail, later outcomes, raw histories, retail or other-date factual premises used."
+}

@@ -1,0 +1,53 @@
+{
+  "checked_at_utc": "2026-11-05T10:59:02.461779+00:00",
+  "passed": true,
+  "script_sha256": {
+    "digest.py": "099881a6e6cc5d513fe83b4b69e7f03a2063f3cdf9eaa5cd1d9f32171266bd56",
+    "showcard.py": "d94367f24245ef36f7fcb785cb432e85a00412a0006349237f1be6d6250975b3",
+    "cited_titles.py": "fa9b4ce79c9f16fd8491b6869f35910c4b2844249373b00e40664baa46f80cd8",
+    "verify.py": "3b69be58e974d1c4aec462162f5ce6f8f28ae3479c41c0c6f4b2a99badf602ad",
+    "check_block_ranges.py": "c3f2770bf45da7b5c21213dd0f5af13e07f46a5fa4cef153424e173678324f5c",
+    "merge_retail.py": "f9ecc3f5c3a01a1916fd6924d9639de2aa6220f093335aa6d4da9f328497a0f6",
+    "stage_reviewed.py": "b7bf13d7f36be2f062cb9a500c8da8180c35ba30154815e87b6ba9f4a1b1eab5",
+    "finalize_reviews.py": "533614e8f03321c5c4190f9a092241a440f55a752d20bc9f465fa38f61d32cd2",
+    "retail_quality_snapshot.py": "fb35a728e1a013c2fe84d6d55cb0c7125d03fc8bbd4c2068f3793525238f4146"
+  },
+  "inherited_regressions_replayed": 33,
+  "independent_negative_checks": [
+    {
+      "check": "wrong card identity rejected",
+      "passed": true
+    },
+    {
+      "check": "uncompleted market session rejected",
+      "passed": true
+    },
+    {
+      "check": "stale exclusions hash rejected",
+      "passed": true
+    },
+    {
+      "check": "naive news timestamp rejected",
+      "passed": true
+    },
+    {
+      "check": "duplicate source identity rejected",
+      "passed": true
+    },
+    {
+      "check": "required China contrary signal label enforced",
+      "passed": true
+    },
+    {
+      "check": "unresolved independent review blocks every spec write",
+      "passed": true
+    }
+  ],
+  "production_evidence_or_drafts_read": false,
+  "scope": "Read source and independently executed synthetic positive/negative gates for exact23-date scope/schema/word ranges, own-date sources, citation and local numeric support, FX exclusions, current review bindings and validation before atomic staging.",
+  "limitations": [
+    "Numeric token membership does not prove instrument identity, sign, session, horizon, unit or economic claim; every claim still requires independent own-date review.",
+    "Automated timestamp/category checks do not establish actual release timing, preview/outcome meaning or original article vintage.",
+    "Title/label factual meaning, cross-section consistency, chronology and substantive editorial depth remain independent review responsibilities."
+  ]
+}

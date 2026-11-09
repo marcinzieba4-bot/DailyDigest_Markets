@@ -1,0 +1,47 @@
+{
+  "status": "accepted_single_date_render_regression_proof",
+  "date": "2024-07-24",
+  "checked_at_utc": "2026-11-05T13:24:18.125446+00:00",
+  "month_artifacts_reviewed": false,
+  "publication_performed": false,
+  "renderer_sha256": "1b69e7a5e589126c4b50581991e38b6d6ed6c90e8bebc4c2e81145e3e9c3e763",
+  "old_renderer_sha256": "77e479f0e3a4fb7a3cbf54ee3f2fae9a813e2669023de52344ab25655b66cce3",
+  "unchanged_gate_sha256": {
+    "tools/build_artifacts.py": "b3465f666d0fb8f571fea1335cda3e0b2b3f1412265f0087105261a0d54213f9",
+    "audit_work/review_final_artifacts.py": "d776e7b667f1c31202c7c00fb74c8be82e1c07c01daa8d8e386b5c5253060432"
+  },
+  "input_sha256": {
+    "specs/2024-07-24.json": "282751cb5b08065ea51e5be11f6a5fbbcfcc7822293bd5bed8ea1c0977ced8b5",
+    "feeds/2024-07-24.json.gz": "f6e979672aca90399b4902f6eb1973120744b2abb985125225803eb53ec5b3dd",
+    "cards/2024-07-24.json": "fad35fa0c16ff6302f6587709976356b6350954c40a586f6fa95ba16c162f642"
+  },
+  "paragraphs_and_ledger": {
+    "paragraphs_preserved": 149,
+    "ledger_headlines_preserved": 107,
+    "ordered_occurrences_preserved": true,
+    "unicode_prose_preserved": true
+  },
+  "pdf_pages": 29,
+  "layouts": [
+    {
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "width": 390,
+      "scroll": 390
+    }
+  ],
+  "n1020_title_exact_unicode_preserved": true,
+  "expected_nonbreaking_hyphen": "U+2011",
+  "normalizers_changed": false,
+  "files": {
+    "work/july24_pdf_probe/staged/html/2024-07-24.html": "92ee17a7caf0754b2f61e1cc9b50becd65dbc6f89a1ed82b4e4e472a7e8b3aaa",
+    "work/july24_pdf_probe/staged/json/2024-07-24_Market_Intelligence.json": "9ec4855badd0de72652149721f2152e8536b41d4d2ca4cb630185c2a948c1b27",
+    "work/july24_pdf_probe/2024-07-24_after_U2011_fix.pdf": "0ed16e9f1e14b16f3e704e9009e8973c1cf824f55841bbd07a2fa9c6bc419886",
+    "work/july24_pdf_probe/font_matrix.pdf": "6fc78b8227778f966a4bbe8b1e60f6c11ae8c2b61b34b47959eb9d869a26e8ed",
+    "work/july24_pdf_probe/font_matrix_results.json": "97a23e3033826127a5734093439c286bab74c5928ec1d18cfd867b2699ca91f5",
+    "work/july24_pdf_probe/reproduce_after_fix.py": "b9d61510cecfa94778d8ae5f55c12a3f472d79b727525239a309fee667ead86f"
+  },
+  "source_proof_receipt_sha256": "0f06a0dce65e478170bbaca9d50b40af4010270b9794208b9cb8f26f6596b2f1"
+}

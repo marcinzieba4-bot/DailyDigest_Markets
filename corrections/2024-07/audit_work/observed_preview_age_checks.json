@@ -1,0 +1,31 @@
+{
+  "scope": "Observed-title semantic seven-day news age boundary, synthetic identity only; no report fact is generated.",
+  "screening_tool_sha256": "17ba7efe7b6bf89d67899b605f5507d3cfebc21227473103b29b33600ff8a5e4",
+  "cases": [
+    {
+      "edition": "2024-07-17",
+      "published_at": "2024-07-16T07:00:00+00:00",
+      "expected_retained": true,
+      "actual_retained": true,
+      "actual_category": "news",
+      "passed": true
+    },
+    {
+      "edition": "2024-07-23",
+      "published_at": "2024-07-16T07:00:00+00:00",
+      "expected_retained": true,
+      "actual_retained": true,
+      "actual_category": "news",
+      "passed": true
+    },
+    {
+      "edition": "2024-07-24",
+      "published_at": "2024-07-16T07:00:00+00:00",
+      "expected_retained": false,
+      "actual_retained": false,
+      "actual_category": null,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

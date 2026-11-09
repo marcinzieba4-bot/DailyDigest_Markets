@@ -1,0 +1,18 @@
+{
+ "ticker": "EMB",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EMB?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "a39d6beb3fb8329739a6b5d37888c40d32abaf1f7516610cd68d0e7567c33973",
+   "fetched_at_utc": "2026-11-05T10:38:45.318324+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/EMB?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "15a9be4ea4c3feb804cafbbccf1184bd67745c5a7c61b7706566c48fcc9927d6",
+   "fetched_at_utc": "2026-11-05T10:38:45.650737+00:00"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+  "date": "2024-07-02",
+  "status": "ready",
+  "input_items": 2452,
+  "ready_items": 2451,
+  "excluded_items": 1,
+  "excluded_by_guard": {
+    "FOMC June meeting minutes": 1
+  },
+  "excluded": [
+    {
+      "id": "n2448",
+      "published_at": "2024-07-01T07:00:00+00:00",
+      "src": "IG",
+      "title": "Outlook for NFPs, FOMC minutes and Fed rate cut expectations - IG",
+      "guard": "FOMC June meeting minutes",
+      "screen_kind": "timing"
+    }
+  ],
+  "eligible_status_annotations": [],
+  "category_tightenings": [],
+  "ready_path": "feeds/2024-07-02.json.gz",
+  "ready_sha256": "e16fba723dc37fb127597740017897d7859ad0b0f9f7206a2126491b50386515",
+  "unreviewed_sha256": "0627e943551126faf38de18940f8b06143ffd61eb937bbcd11f158b5963b9bd8",
+  "release_guards_version": "jul-2024-release-guards-v1",
+  "release_schedule_sha256": "ec0affb8cf6d2e518d655e9fafd76c6d5b7ac56db1548962b1d6e95be7f2ec7d",
+  "named_exclusions_sha256": "06aba4eb3f84a714a7d429cf46641cd01c4b2b6245ec39a5a8010e87f9de6888"
+}

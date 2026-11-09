@@ -1,0 +1,22 @@
+{
+  "date": "2024-07-31",
+  "feed_sha256": "a4f58aa11e6e53ec5a5bb2276052e71ca7f544cc50a3a022c2df131678512501",
+  "exclusions": [
+    {
+      "id": "n1143",
+      "title": "Microsoft shares fall in Frankfurt after disappointing update - Reuters",
+      "reason": "Frankfurt reaction to theJuly30USafter-close result occurs duringJuly31Europeantrading, after reportJuly31 00UTCcut. CurrentRSSJuly30timestamp cannot establish pre-cut availability. The US earnings result is separate and already eligible.",
+      "first_eligible_edition": "2024-08-01",
+      "reported_by": "july_nonretail_e; root independently checked exact headline, accepted US earnings release schedule, regional-session order and current own market card."
+    },
+    {
+      "id": "n1189",
+      "title": "Siemens Healthineers hit by China order delays in Q3, but sees 2025 turnaround - Reuters",
+      "reason": "The original public availability of this completed Siemens Healthineers Q3 result cannot be certified before July31 00UTC from the normalized July30 index timestamp. Conservatively omit the actual for this edition rather than certify a potentially later European-morning result. No exact original publication or release clock is asserted.",
+      "disposition": "conservative original-vintage/timing omission for this edition",
+      "first_eligible_edition_conservative": "2024-08-01",
+      "reported_by": "july_nonretail_d; controlled root-authorized editorial registration after independent review; original clock remains unresolved"
+    }
+  ],
+  "scope": "Known pre-release/unsafe records were removed before freeze and remain in the ready receipt; this file records subsequent own-date editorial exclusions only."
+}

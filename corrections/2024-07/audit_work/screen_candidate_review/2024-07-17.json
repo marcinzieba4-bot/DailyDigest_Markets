@@ -1,0 +1,61 @@
+{
+  "date": "2024-07-17",
+  "status": "ready",
+  "input_items": 2235,
+  "ready_items": 2231,
+  "excluded_items": 4,
+  "excluded_by_guard": {
+    "Tesla Alphabet GM UPS Visa TI Enphase quarterly outcome": 2,
+    "Dexcom Deckers Unilever Nestle Honeywell RTX quarterly outcome": 1,
+    "Ford Chipotle IBM ServiceNow GEV Edwards quarterly outcome": 1
+  },
+  "excluded": [
+    {
+      "id": "n0963",
+      "published_at": "2024-07-16T07:00:00+00:00",
+      "src": "Moomoo",
+      "title": "Can Tesla's rally continue? How to profit using options seller strategies? - Moomoo",
+      "guard": "Tesla Alphabet GM UPS Visa TI Enphase quarterly outcome",
+      "screen_kind": "timing"
+    },
+    {
+      "id": "n1052",
+      "published_at": "2024-07-16T07:00:00+00:00",
+      "src": "Forecast International",
+      "title": "Southwest Airlines Signs MOU With Archer Aviation - Forecast International",
+      "guard": "Dexcom Deckers Unilever Nestle Honeywell RTX quarterly outcome",
+      "screen_kind": "timing"
+    },
+    {
+      "id": "n1287",
+      "published_at": "2024-07-13T07:00:00+00:00",
+      "src": "MarketWatch",
+      "title": "Opinion: Tesla’s AI plans and its Nvidia ties affect the EV giant’s earnings outlook - MarketWatch",
+      "guard": "Tesla Alphabet GM UPS Visa TI Enphase quarterly outcome",
+      "screen_kind": "timing"
+    },
+    {
+      "id": "n1289",
+      "published_at": "2024-07-14T07:00:00+00:00",
+      "src": "Yahoo Finance",
+      "title": "Chipotle Mexican Grill's (NYSE:CMG) earnings growth rate lags the 31% CAGR delivered to shareholders - Yahoo Finance",
+      "guard": "Ford Chipotle IBM ServiceNow GEV Edwards quarterly outcome",
+      "screen_kind": "timing"
+    }
+  ],
+  "eligible_status_annotations": [],
+  "category_tightenings": [
+    {
+      "id": "n1340",
+      "from_category": "result",
+      "to_category": "news",
+      "reason": "Exact observed pending company preview; semantic seven-day window"
+    }
+  ],
+  "ready_path": "feeds/2024-07-17.json.gz",
+  "ready_sha256": "d17a842877027506183981d8e59ab34af36dc0860fdae252aa05a3d59d3c60b6",
+  "unreviewed_sha256": "1972db26b362dbfd874eae1cbc595703792820bd107feaf79483a1a1b93da0e6",
+  "release_guards_version": "jul-2024-release-guards-v1",
+  "release_schedule_sha256": "ec0affb8cf6d2e518d655e9fafd76c6d5b7ac56db1548962b1d6e95be7f2ec7d",
+  "named_exclusions_sha256": "06aba4eb3f84a714a7d429cf46641cd01c4b2b6245ec39a5a8010e87f9de6888"
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "ARKK",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ARKK?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "633399115a6d027ea9c07a5790e7a26dd277f89037ea9ca448f05eaa4daf15a1",
+   "fetched_at_utc": "2026-11-05T10:38:45.935876+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ARKK?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "9302d533a6416b1e2413eedd91d9820c4ff9d88c5318ec9daa55b647c3147c18",
+   "fetched_at_utc": "2026-11-05T10:38:46.271243+00:00"
+  }
+ ]
+}

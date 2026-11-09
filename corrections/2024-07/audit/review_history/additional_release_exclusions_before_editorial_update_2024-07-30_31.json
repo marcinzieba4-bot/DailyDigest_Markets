@@ -1,0 +1,51 @@
+{
+  "scope": "Additional retained-item release exclusions after initial July prefreeze screening; no unrecorded exclusions inferred.",
+  "exclusions": [
+    {
+      "date": "2024-07-22",
+      "id": "n0223",
+      "title": "China lowers lending benchmarks after PBOC's surprise rate cut - Reuters",
+      "reason": "Completed China July22lending/policy outcome is after the report00UTCcut. Existing independently reviewed schedule places release atJuly22 01:15UTC and firsteligibleeditionJuly23; reversed lending benchmarks wording escaped the prefreeze regex. AuthorD correctly omitted it.",
+      "evidence_path": "audit_work/july_release_schedule.json",
+      "release_utc": "2024-07-22T01:15:00+00:00",
+      "first_eligible_edition": "2024-07-23",
+      "reported_by": "july_nonretail_d; independently checked by root against exact headline and accepted schedule"
+    },
+    {
+      "date": "2024-07-31",
+      "id": "n1143",
+      "title": "Microsoft shares fall in Frankfurt after disappointing update - Reuters",
+      "reason": "Frankfurt reaction to theJuly30USafter-close result occurs duringJuly31Europeantrading, after reportJuly31 00UTCcut. CurrentRSSJuly30timestamp cannot establish pre-cut availability. The US earnings result is separate and already eligible.",
+      "first_eligible_edition": "2024-08-01",
+      "reported_by": "july_nonretail_e; root independently checked exact headline, accepted US earnings release schedule, regional-session order and current own market card."
+    },
+    {
+      "date": "2024-07-03",
+      "id": "n1081",
+      "title": "EU approves Sanofi's Dupixent for 'smoker's lungs' - Reuters",
+      "reason": "Independent claim review cannot certify the completed approval was publicly available beforeJuly3 00UTC. CurrentRSSJuly2timestamp alone is insufficient for this potentially later announcement; conservatively omit the actual-approval claim. This does not claim an independently verified legal decision or exact announcement clock.",
+      "disposition": "conservative original-vintage/timing omission for this edition",
+      "first_eligible_edition_conservative": "2024-07-04",
+      "reported_by": "july_nonretail_e; root retained unresolved timing rather than certify indexed date"
+    },
+    {
+      "date": "2024-07-25",
+      "id": "n0185",
+      "title": "China central bank surprises by lending again at lower rates - Reuters",
+      "reason": "Appears to describe theJuly25MLFoutcome; accepted calendar schedules that decision at01:20UTC, after00UTCcut. IndexedJuly24timestamp does not establish original pre-cut availability; conservatively omit this completed-outcome headline.",
+      "disposition": "conservative timing/vintage omission",
+      "relevant_schedule": "China July MLF decision,2024-07-25T01:20:00+00:00",
+      "first_eligible_edition_conservative": "2024-07-26",
+      "reported_by": "july_nonretail_d; root checked exact title and accepted schedule"
+    },
+    {
+      "date": "2024-07-25",
+      "id": "n0188",
+      "title": "Chinese banks cut deposit rates to relieve squeezed margins - Reuters",
+      "reason": "Original public timing of this completed deposit-rate outcome cannot be certified beforeJuly25 00UTC from the indexedJuly24headline. Omit conservatively; no exact announcement clock or legal effective date is asserted.",
+      "disposition": "conservative original-vintage/timing omission",
+      "first_eligible_edition_conservative": "2024-07-26",
+      "reported_by": "july_nonretail_d; root checked own headline and retained timing uncertainty"
+    }
+  ]
+}

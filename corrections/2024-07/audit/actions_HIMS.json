@@ -1,0 +1,18 @@
+{
+ "ticker": "HIMS",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HIMS?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "a71994b01ecfd9c9e988885cccc948749454b035ed52776aba93f465bc720a9b",
+   "fetched_at_utc": "2026-11-05T10:38:52.613542+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/HIMS?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "48459b065f9f12f90858807e2e833c8c473419ad38057eb9be28cea93fb7caa6",
+   "fetched_at_utc": "2026-11-05T10:38:53.028530+00:00"
+  }
+ ]
+}

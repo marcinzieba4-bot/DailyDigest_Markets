@@ -1,0 +1,13 @@
+{
+  "tested_at_utc": "2026-11-05T10:47:57.195544+00:00",
+  "tool_sha256": "cad4fe392c30925a8390b27ffc3f88fd2c19ce07ffb3c4c8ce7b14e8c2d61826",
+  "passed": true,
+  "checks": [
+    "Tokyo localJuly31 terminal bar discarded despite bounded query",
+    "UTCJuly31 candle discarded; lastJul30 retained",
+    "NewYork UTCJuly31timestamp still maps to localJul30 and is retained",
+    "Current regularMarketPrice metadata discarded in all cases",
+    "Retained timestamps/close pairs unchanged and removal counts exact"
+  ],
+  "method": "Executed retain_bounded_chart on three synthetic two-observation in-memory API envelopes in auto-deleted temporary directories; no synthetic fixture persisted in analyst data/cards."
+}

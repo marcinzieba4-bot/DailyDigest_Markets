@@ -1,0 +1,18 @@
+{
+ "ticker": "SLV",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SLV?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "fc89d56fdfbb9f28688247510fa9c961370d217e15fbb258929dc870fa818086",
+   "fetched_at_utc": "2026-11-05T10:38:45.657074+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SLV?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "67b88a2e6c1c1bfdd990b864cdca2786d38aea78826c5e0d0773f4c053b12046",
+   "fetched_at_utc": "2026-11-05T10:38:45.981291+00:00"
+  }
+ ]
+}

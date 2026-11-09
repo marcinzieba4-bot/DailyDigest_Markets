@@ -1,0 +1,68 @@
+{
+  "date": "2024-07-26",
+  "status": "accepted",
+  "retail_draft_sha256": "bdd148f57915b409345d5dfd3a1e07c2cbbdfec5ef6b330da4bbf8af1bda6b70",
+  "feed_sha256": "160f2a439907c2a87a2442f991091948cfc24ffa4aaa97128872598d9e4639bb",
+  "card_sha256": "835128f791f2e1c7af0dca5d012742b311c39419e5fc2d9f17ebfc4d938c70cf",
+  "fatal_or_major_remaining": 0,
+  "paragraphs_reviewed": 13,
+  "reviewed_locations": [
+    "retail_intro",
+    "all four titles",
+    "all twelve parts"
+  ],
+  "headline_ids_reviewed": [
+    "n0862",
+    "n1009",
+    "n1055",
+    "n1056",
+    "n1093",
+    "n1172",
+    "n1210",
+    "n1212",
+    "n1512",
+    "n1529",
+    "n1531",
+    "n1532",
+    "n1545",
+    "n2375"
+  ],
+  "claim_checks": [
+    "CMG USD50.82/-1.85% session/-4.80% five-session/-22.84% twenty-session exact July25 as-traded/comparable fields; no historical share-unit comparison. Removed unsupported implicit prior-split factual assertion.",
+    "Bloomberg/ChainStoreAge traffic/sales beat and income growth remain actual quarter evidence; Fortune/RestaurantBusiness portion response and BusinessInsider social drama exactly scoped. YouGov Buzz/Value deterioration is consumer attention, not shareholders; July19 item remains within seven-day window.",
+    "CFO California spending/pricing/wage-hike caution exact n1532, outlet corrected to metadata YahooFinance; not generalized to every geography.",
+    "NOW USD828.79/+13.40% exact July25 regular close; AI subscription-demand support from Investopedia, Desai resignation after contract probe from WSJ July24 20:50UTC before report cutoff. No automatic inference of commercial losses.",
+    "Viking nearly30% reported reaction and move toward late-stage/phase3 exact cited headlines; remains planned progression, not trial success or approval. No invented VKTX card quote.",
+    "Ford profit/quality/cost/EV issues exact Reuters; Cramer no-buyback criticism stays commentator preference, not management commitment.",
+    "All14 full cited headlines/metadata read, no exclusions. No numeric FX, unsupported flow/social-trader counts, targets/positions or historical episodes."
+  ],
+  "chronology": "Earlier notes through July25 only. First CMG lead, fresh result plus concrete consumer attention/response; first NOW/VKTX/Ford dedicated trades with distinct subscription/governance, clinical-development and industrial-execution catalysts. No repeated basket or stale full lead.",
+  "named_fixes": [
+    {
+      "field": "retail[0].parts[4][1]",
+      "old": "Business Insider reported the finance chief",
+      "new": "Yahoo Finance reported the finance chief",
+      "reason": "Match n1532 outlet metadata."
+    },
+    {
+      "field": "retail[0].parts[5][1]",
+      "old": "A small displayed price after a split does not make that drawdown cheap or change the ownership interest represented by the shares.",
+      "new": "A small displayed share price does not make the percentage drawdown cheap or establish that the prospective earnings power is now undervalued.",
+      "reason": "Remove prior-split assertion unsupported by eligible own-date headline; preserve valuation mechanism without adding facts."
+    }
+  ],
+  "verification": {
+    "result": "PASS",
+    "total_words": 1201,
+    "lead_words": 685,
+    "smaller_words": [
+      158,
+      164,
+      166
+    ],
+    "failures": 0,
+    "warnings": 0
+  },
+  "warning_dispositions": [],
+  "limits": "Headline-only exact-claim review; no article-body CFO details, split event or original unrevised vintage inferred."
+}

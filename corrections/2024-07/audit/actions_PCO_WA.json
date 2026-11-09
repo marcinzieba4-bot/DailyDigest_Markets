@@ -1,0 +1,18 @@
+{
+ "ticker": "PCO.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PCO.WA?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "084e928d38efb517abca58e290101d2226975da3bc8a6a0107724f7e7f028cae",
+   "fetched_at_utc": "2026-11-05T10:38:38.714282+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PCO.WA?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "b1d2c6fe3c97a6fe780bf5142203d8b15249a9b42c0cc2546a97292fdc99a428",
+   "fetched_at_utc": "2026-11-05T10:38:39.097326+00:00"
+  }
+ ]
+}

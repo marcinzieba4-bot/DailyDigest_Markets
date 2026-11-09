@@ -1,0 +1,46 @@
+{
+  "status": "accepted_viewed_screenshot_regions",
+  "date": "2024-07-01",
+  "reviewed_at_utc": "2026-11-05T13:12:14.504443+00:00",
+  "reviewer": "historical_data",
+  "based_on_actual_image_views": true,
+  "fatal_or_major_remaining": 0,
+  "preview_receipt_sha256": "9b0240d01611fc7527391537c7790ba1dccc74c27f2ff1b0ab33cfacd1c119bb",
+  "renderer_sha256": "77e479f0e3a4fb7a3cbf54ee3f2fae9a813e2669023de52344ab25655b66cce3",
+  "images": [
+    {
+      "path": "work/first_edition_preview/desktop.png",
+      "sha256": "055efcb49ccdc2948b70b3a00fe31328cbb8afd316efe5003b2c45388d433466",
+      "width": 1440,
+      "height": 1000,
+      "actually_viewed": true,
+      "finding": "Viewed the actual1440x1000 image: wide content area, readable navy text, clear section/header hierarchy and blue navigation/rules; no horizontal clipping or overlapping text observed in the shown header/macro region."
+    },
+    {
+      "path": "work/first_edition_preview/mobile.png",
+      "sha256": "008c46c4bc753be3d32629a121544481dfa15e911e248e4047ce819e076ba444",
+      "width": 390,
+      "height": 844,
+      "actually_viewed": true,
+      "finding": "Viewed the actual390x844 image: title and subtitle wrap cleanly; navigation wraps onto two rows within the viewport; region heading, stance label and body text remain readable without horizontal clipping. This image shows the report top, not the whole mobile report."
+    },
+    {
+      "path": "work/first_edition_preview/retail.png",
+      "sha256": "6aa5a5c4757308317ae5a1c178c24ce06bd68d9e51da1e67d5c38b69821afb3c",
+      "width": 1440,
+      "height": 1000,
+      "actually_viewed": true,
+      "finding": "Viewed the actual1440x1000 scrolled image: orange section rule/card border, prominent retail heading, readable lead name/hook and introductory lead paragraphs. Sticky navigation remains readable; the earlier stock block is still above the retail section. Lower retail parts/smaller trades are outside this viewport crop and are not claimed visually inspected."
+    }
+  ],
+  "findings": [
+    "Desktop uses a wide pale background with clear navy text and restrained blue navigation and rules.",
+    "The retail section receives a distinct orange accent and larger lead title/body hierarchy.",
+    "No horizontal clipping, unreadable glyphs or text collisions were observed in the displayed regions."
+  ],
+  "limits": [
+    "Visual acceptance covers these three saved screenshot viewports only, not every scroll position, report or PDF page.",
+    "Full23-edition paragraph/ledger/order/layout/ZIP and frozen-source transport audit remains pending the completed build.",
+    "No financial/source-claim judgment or public delivery verification is made by this visual receipt."
+  ]
+}

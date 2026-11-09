@@ -1,0 +1,66 @@
+{
+  "date": "2024-07-29",
+  "status": "accepted",
+  "retail_draft_sha256": "b3316aa3566da30fb15e9f486b2de87d579c92ebfbbfe589101cf83d5e329212",
+  "feed_sha256": "0ba0ca73f1fef3f8b298a4394caa93f449fba01c42fa810a87b0647bf68017d3",
+  "card_sha256": "b5db46b26921d870b82833397ae9bd8ee2f6d301486cc6b1fab7634f093296ee",
+  "fatal_or_major_remaining": 0,
+  "paragraphs_reviewed": 13,
+  "reviewed_locations": [
+    "retail_intro",
+    "all four titles",
+    "all twelve parts"
+  ],
+  "headline_ids_reviewed": [
+    "n0814",
+    "n0997",
+    "n0998",
+    "n0999",
+    "n1039",
+    "n1045",
+    "n1046",
+    "n1293",
+    "n1294",
+    "n1301",
+    "n2160"
+  ],
+  "claim_checks": [
+    "3M reported20% rise/two-year high explicitly attributed to Investopedia headline, not fabricated closing-card mark. Reuters cost cuts/growth and Kiplinger earnings-beat Dow-lead framing support actual catalyst/attention; no unsupported targets/institutional action after minor process-aside replacement.",
+    "General repair-to-proof analogy and conditional cost/demand risks make no named historical or undisclosed divisional claims.",
+    "BTC USD68255.87/+0.65% exact July28 completed UTC close. Actual July27 speech supported by Reuters/AP; stockpile vow and crypto-capital message remain campaign proposals, CNBC reserve distinction retained, no created reserve or election outcome asserted.",
+    "Michigan pension USD6.6m ETF investment exact ReutersJuly26 headline, scoped to one institution rather than global adoption/flows.",
+    "Dexcom forecast cut and more-than40% worst-day reaction exact Reuters/CNBC; no invented close, no forecast reset called unchanged valuation.",
+    "Deckers raised annual profit target/strong HokaUGG demand and full-price-sales bet exact Reuters headlines; actual guidance distinct from guaranteed future execution.",
+    "All11 full cited headlines/metadata read, none excluded, dates/events before cutoff with speech weekend timing evaluated by actual meaning rather than indexhour. No numerical FX, invented social counts/positions/targets or historical episodes."
+  ],
+  "chronology": "Earlier notes through July26 only. First MMM lead has strong new result/move/attention. BTC secondary advances prior conference preview to actual speech/proposal and pension investment; first DXCM/DECK items. No fixedbasket or unchanged repeated lead.",
+  "named_fixes": [
+    {
+      "field": "retail[0].parts[4][1]",
+      "old": "The strong-result headline is evidence that the program has produced an encouraging outcome, but it does not provide a license to invent analyst targets, institutional buying or detailed divisional achievements.",
+      "new": "The strong result supports confidence in the repair program, but a single reporting period leaves open how much improvement can recur if demand weakens or the easiest cost savings have already been captured.",
+      "reason": "Remove overt source-process/invention aside; retain operating-repeatability risk without adding facts."
+    },
+    {
+      "file": "notes/retail_2024-07-29.json",
+      "field": "considered_not_chosen[0]",
+      "old": "Bitcoin lead: strong new speech but 3M exceptional company-result reaction provides fresher lead; BTC secondary190words.",
+      "new": "Bitcoin lead: strong new speech but 3M exceptional company-result reaction provides fresher lead; BTC remains secondary with the material speech update.",
+      "reason": "Remove inaccurate190word memory label; actual verified BTC block168words."
+    }
+  ],
+  "verification": {
+    "result": "PASS",
+    "total_words": 1207,
+    "lead_words": 674,
+    "smaller_words": [
+      168,
+      168,
+      171
+    ],
+    "failures": 0,
+    "warnings": 0
+  },
+  "warning_dispositions": [],
+  "limits": "Headline-only exact-claim review; no article-body divisional detail or original unrevised vintage asserted."
+}

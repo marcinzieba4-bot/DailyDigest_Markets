@@ -1,0 +1,18 @@
+{
+ "ticker": "SPY",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "a1fafefe5eaa4df53b1fdfa789d5da5825411cc8cdb48466ed05f889a133232b",
+   "fetched_at_utc": "2026-11-05T10:38:44.832120+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "d744b537abcb68b03c093575e9662025bbad3a0461cdcef3be6eb477794f0baf",
+   "fetched_at_utc": "2026-11-05T10:38:45.158616+00:00"
+  }
+ ]
+}

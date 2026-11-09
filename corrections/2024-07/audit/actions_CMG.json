@@ -1,0 +1,24 @@
+{
+ "ticker": "CMG",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2024-06-26",
+   "factor": 50.0,
+   "ratio": "50:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CMG?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "d268c9a0067f89738a9a1ac1a86f261ace9663369e0c54504b346ec8942a6098",
+   "fetched_at_utc": "2026-11-05T10:38:56.607935+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CMG?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "34c741336cebe98d2a696ea1fb57f42c3924bd73d89ae34746e6c9fb45c3cfa0",
+   "fetched_at_utc": "2026-11-05T10:38:56.901051+00:00"
+  }
+ ]
+}

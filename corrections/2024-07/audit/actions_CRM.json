@@ -1,0 +1,18 @@
+{
+ "ticker": "CRM",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CRM?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "effcfa3e1a3604cc1a309f91aeeee160cf017848c08ad4a04c86a4a62a1820d8",
+   "fetched_at_utc": "2026-11-05T10:38:48.825979+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CRM?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "0251ff5eb3c70e8e57a52e552d7ff5dea2e4573fbf9ca64bf18ecb734d4dd080",
+   "fetched_at_utc": "2026-11-05T10:38:49.225083+00:00"
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+  "purpose": "Synthetic full current-schema finalization; no production reports read or written.",
+  "passed": true,
+  "checks": [
+    {
+      "check": "full23 current-schema synthetic finalization passes",
+      "passed": true
+    },
+    {
+      "check": "full current-schema missing binding fails before new final receipt",
+      "passed": true
+    },
+    {
+      "check": "current schema does not bypass retained own-date exclusions",
+      "passed": true
+    },
+    {
+      "check": "all current ready receipts participate in final stability check",
+      "passed": true
+    }
+  ],
+  "finalizer_sha256": "bd00eb001b493ac594ad9f13278719317efdff75f83c4627ba1f3dcd2b823e01",
+  "production_inputs_modified": false
+}

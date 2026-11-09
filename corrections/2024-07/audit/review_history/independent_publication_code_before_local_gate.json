@@ -1,0 +1,158 @@
+{
+  "checked_at_utc": "2026-11-05T10:45:30.896424+00:00",
+  "reviewer_tool_sha256": "9ab38ab0b7c8612f95121e5cdd5e809352a36419685d3be596ee165d632a74ca",
+  "expected_scope": {
+    "dates": [
+      "2024-07-01",
+      "2024-07-02",
+      "2024-07-03",
+      "2024-07-04",
+      "2024-07-05",
+      "2024-07-08",
+      "2024-07-09",
+      "2024-07-10",
+      "2024-07-11",
+      "2024-07-12",
+      "2024-07-15",
+      "2024-07-16",
+      "2024-07-17",
+      "2024-07-18",
+      "2024-07-19",
+      "2024-07-22",
+      "2024-07-23",
+      "2024-07-24",
+      "2024-07-25",
+      "2024-07-26",
+      "2024-07-29",
+      "2024-07-30",
+      "2024-07-31"
+    ],
+    "editions": 23,
+    "native_artifacts": 69,
+    "collection_artifacts": 5,
+    "targets": 74,
+    "reportZIP_members": 72,
+    "protected_objects": 151
+  },
+  "limits": [
+    "Static code inspection and pure-function/synthetic-predicate checks only. No publisher or delivery entrypoint, plan acquisition, AWS mutation or network call executed.",
+    "This code review does not approve July inputs, prose, final artifacts or live delivery; their independently bound gates and final checks remain required.",
+    "Any real concurrent live change must fail strict preservation and receive a separate evidence-based investigation; no inherited August exception is carried over."
+  ],
+  "passed": true,
+  "script_sha256": "9adae99417acbfcc5c0c5eb7ef2d9866626033a4dd43f383542acbb7372f29da",
+  "publisher_sha256": "9adae99417acbfcc5c0c5eb7ef2d9866626033a4dd43f383542acbb7372f29da",
+  "delivery_verifier_sha256": "e2df5303e40d5f1f7262da48e5484cc42d043d10fb679e3ee1eda888365ba282",
+  "checks": [
+    {
+      "check": "exact23July weekdays including exchange holiday",
+      "passed": true
+    },
+    {
+      "check": "exact151 protected keys:latest,Aug–Nov2024HTML,Aug2026andJulyweekends",
+      "passed": true
+    },
+    {
+      "check": "index merge adds only23daily+2Julycollection links and preserves every old href",
+      "passed": true
+    },
+    {
+      "check": "one July daily link each",
+      "passed": true
+    },
+    {
+      "check": "no July weekend link created",
+      "passed": true
+    },
+    {
+      "check": "July collection label says23editions",
+      "passed": true
+    },
+    {
+      "check": "index pure-function fixture: already-present July holiday",
+      "passed": true
+    },
+    {
+      "check": "index pure-function fixture: duplicate July date",
+      "passed": true
+    },
+    {
+      "check": "index pure-function fixture: missing archive list",
+      "passed": true
+    },
+    {
+      "check": "publisher requires74unique targets",
+      "passed": true
+    },
+    {
+      "check": "publisher requires69native format entries",
+      "passed": true
+    },
+    {
+      "check": "complete23 source/manifest gates",
+      "passed": true
+    },
+    {
+      "check": "independent source/market/precision/editorial/retail gates",
+      "passed": true
+    },
+    {
+      "check": "final component and input hash bindings",
+      "passed": true
+    },
+    {
+      "check": "every local artifact hash/size checked before write",
+      "passed": true
+    },
+    {
+      "check": "artifact path confined to July root",
+      "passed": true
+    },
+    {
+      "check": "only July target names admitted",
+      "passed": true
+    },
+    {
+      "check": "default dry-run reaches no S3 writes; only backup,daily,index put paths",
+      "passed": true
+    },
+    {
+      "check": "backup and daily objects are create-only",
+      "passed": true
+    },
+    {
+      "check": "index write conditional on fresh ETag",
+      "passed": true
+    },
+    {
+      "check": "July-specific index backup namespace",
+      "passed": true
+    },
+    {
+      "check": "backup and merged index full-body hashes verified",
+      "passed": true
+    },
+    {
+      "check": "strict protected preservation during publication and resume",
+      "passed": true
+    },
+    {
+      "check": "resume binds original exact artifact plan",
+      "passed": true
+    },
+    {
+      "check": "invalidation scoped to index and July paths",
+      "passed": true
+    },
+    {
+      "check": "no Lambda deployment/invocation,sends,or remote delete calls",
+      "passed": true
+    },
+    {
+      "check": "publisher unchanged during review",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "scope": "July publisher code only; exact date/target/protection,conditionalwrites,indexmerge and hardprepublication gates."
+}

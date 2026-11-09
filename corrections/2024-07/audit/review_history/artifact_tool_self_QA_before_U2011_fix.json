@@ -1,0 +1,263 @@
+{
+  "status": "static_checks_passed",
+  "dates": [
+    "2024-07-01",
+    "2024-07-02",
+    "2024-07-03",
+    "2024-07-04",
+    "2024-07-05",
+    "2024-07-08",
+    "2024-07-09",
+    "2024-07-10",
+    "2024-07-11",
+    "2024-07-12",
+    "2024-07-15",
+    "2024-07-16",
+    "2024-07-17",
+    "2024-07-18",
+    "2024-07-19",
+    "2024-07-22",
+    "2024-07-23",
+    "2024-07-24",
+    "2024-07-25",
+    "2024-07-26",
+    "2024-07-29",
+    "2024-07-30",
+    "2024-07-31"
+  ],
+  "tool_sha256": {
+    "render.py": "77e479f0e3a4fb7a3cbf54ee3f2fae9a813e2669023de52344ab25655b66cce3",
+    "build_artifacts.py": "b3465f666d0fb8f571fea1335cda3e0b2b3f1412265f0087105261a0d54213f9",
+    "build_retail_page.py": "7e5a7dd3fd5106cdafe8b18e07301d942c87d92b441fe2adaaf3ed8c086eaf17",
+    "build_source_inventory.py": "a1b5c7c31d856320f7cb312594eb9c71572daa135c1ef0414d7a7ba3204bda27",
+    "audit_work/review_final_artifacts.py": "d776e7b667f1c31202c7c00fb74c8be82e1c07c01daa8d8e386b5c5253060432"
+  },
+  "artifact_targets_expected": 74,
+  "report_zip_members_expected": 72,
+  "runtime_artifacts_reviewed": false,
+  "negative_fixtures": [
+    {
+      "case": "builder_literal_bracket_preserved",
+      "result": "distinct_as_required"
+    },
+    {
+      "case": "builder_word_boundary_preserved",
+      "result": "distinct_as_required"
+    },
+    {
+      "case": "reviewer_literal_bracket_preserved",
+      "result": "distinct_as_required"
+    },
+    {
+      "case": "reviewer_word_boundary_preserved",
+      "result": "distinct_as_required"
+    },
+    {
+      "case": "builder_literal_bracket_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_word_boundary_corrupted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_paragraphs_reordered",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_repeated_occurrence_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_ledger_outlet_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_ledger_timestamp_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "builder_ledger_missing_body_title_present",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_literal_bracket_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_word_boundary_corrupted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_paragraphs_reordered",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_repeated_occurrence_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_ledger_outlet_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_ledger_timestamp_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "reviewer_ledger_missing_body_title_present",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "html_reordered_paragraphs",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "html_wrong_source_href",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "html_ledger_metadata_deleted",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "exact_own_feed_record_metadata",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "replay_hidden_parent_existing_file",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "local_hidden_parent_existing_file",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "native_wrong_exact_kind_path",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "collection_wrong_exact_path",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "zip_path_audit_work/.private/proof.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "zip_path_../outside.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "zip_path_/outside.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "zip_path_audit_work//proof.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "renderer_invalid_date_before_read_../2024-07-01",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "renderer_invalid_date_before_read_2024-08-01",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "renderer_invalid_date_before_read_2024-07-06",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "renderer_invalid_date_before_read_20240701",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "partial_collection_scope",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "replay_acceptance_digest_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "replay_raw_input_bytes_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "source_acceptance_feed_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "source_acceptance_card_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_AUTHORING.md",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_tools/fetch_news.py",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_audit_work/independent_guard_policy.py",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_audit/news_query_plan.json",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_audit/news_physical_requests.jsonl",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_cache/rss_raw/attempts/synthetic.1.xml.gz",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_cache/rss_raw/synthetic.xml.gz",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_dependency_changed_newest_lambda_function.py",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_input_bindings_missing",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "current_source_physical_attempt_body_missing",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_introduction_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_label_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_chip_href_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_dated_ledger_removed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_ledger_timestamp_changed",
+      "result": "rejected_as_required"
+    },
+    {
+      "case": "monthly_retail_bracketed_number_deleted",
+      "result": "rejected_as_required"
+    }
+  ],
+  "negative_fixture_count": 55,
+  "superseded_initial_receipt": "audit/review_history/artifact_tool_review_initial_superseded.json",
+  "scope": "Generic July date/naming/shape/layout/escaping and code-compile checks only. No report data read, built, published or factually accepted."
+}

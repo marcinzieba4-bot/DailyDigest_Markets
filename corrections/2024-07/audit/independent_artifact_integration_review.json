@@ -1,0 +1,76 @@
+{
+  "status": "accepted",
+  "reviewed_at_utc": "2026-11-05T12:59:39.820562+00:00",
+  "scope": "Independent static-delta/input-transport and existing accepted July1 presentation replay. No factual/editorial reinterpretation and no report generation.",
+  "fatal_or_major_remaining": 0,
+  "independent_assertions": 149041,
+  "source_input_bindings": 134,
+  "market_input_bindings": 898,
+  "physical_attempts": 16437,
+  "received_immutable_attempt_bodies": 16437,
+  "canonical_physical_requests": 16437,
+  "owner_source_hash_checks_replayed": 49472,
+  "source_freeze_sha256": "7ec963b56b6e60ea9215d4374254b62883598f932e0d1cfd090e2a3544edd685",
+  "input_sha256": {
+    "audit/independent_source_review.json": "147513cf16810e90e064a09c5cbaa89aa71509fcacb3c477403f4f8013769af2",
+    "audit/source_freeze.json": "7ec963b56b6e60ea9215d4374254b62883598f932e0d1cfd090e2a3544edd685",
+    "audit/independent_market_review.json": "ec752616cd2986aa53e0cf33520a6287e806e061aa0f6ec4edf2f323d86a1610",
+    "audit/independent_artifact_tool_review.json": "d708ea94f2ee8d2dc174f09007de09921e102816460bd10f5c6ec4c873a2ab16",
+    "audit/artifact_runtime_integration.json": "a47fa69fcc0165dd027ed1c9077525d30e2b8134523edfffd00141ce81a5b4ad",
+    "checks/artifact_tool_review.json": "29e8829b06fd8485b6d312c0ab9e4e0ddd96fcef8b8eee75a39abc658dd553c9",
+    "work/first_edition_preview/preview_receipt.json": "9b0240d01611fc7527391537c7790ba1dccc74c27f2ff1b0ab33cfacd1c119bb"
+  },
+  "tool_sha256": {
+    "tools/render.py": "77e479f0e3a4fb7a3cbf54ee3f2fae9a813e2669023de52344ab25655b66cce3",
+    "tools/build_artifacts.py": "b3465f666d0fb8f571fea1335cda3e0b2b3f1412265f0087105261a0d54213f9",
+    "tools/build_retail_page.py": "7e5a7dd3fd5106cdafe8b18e07301d942c87d92b441fe2adaaf3ed8c086eaf17",
+    "tools/build_source_inventory.py": "a1b5c7c31d856320f7cb312594eb9c71572daa135c1ef0414d7a7ba3204bda27",
+    "audit_work/review_final_artifacts.py": "d776e7b667f1c31202c7c00fb74c8be82e1c07c01daa8d8e386b5c5253060432",
+    "audit_work/review_artifact_integration.py": "038a0bead452cbeb4e5fbdf740daa30e834c6f4a198bc35a1dc25c6f6e98413c",
+    "audit_work/preview_first_edition.py": "bdd9101fbfd14029e695ee4543b1d821d3141b97f1db014b217a9ff81fb27a31"
+  },
+  "reviewer_script_sha256": "a7133585bc49e86bbe5c1e5bd51635c8a5f7e8213527d7d80d92ff367e5d323c",
+  "single_edition_preview": {
+    "date": "2024-07-01",
+    "ordered_paragraphs": 149,
+    "ordered_complete_ledger_records": 129,
+    "PDF_pages": 29,
+    "layout": [
+      {
+        "width": 1440,
+        "scroll": 1440,
+        "headings": 9
+      },
+      {
+        "width": 390,
+        "scroll": 390,
+        "headings": 9
+      }
+    ],
+    "existing_preview_files_sha256": {
+      "html/2024-07-01.html": "9ad5376c600dec8da5371e2f73ed40f415bca0d4cb50fa8b6cb4457f1b84a73a",
+      "json/2024-07-01_Market_Intelligence.json": "7cc13730d58af1e7dcb4ca021ae47c2dd1e33f661251825121ea9430c8d901ce",
+      "work/first_edition_preview/2024-07-01.pdf": "4ca6b0dbb9bafe1e97d13d22a50091edd165f47b6001769ef3a0916db39e1ae2",
+      "work/first_edition_preview/desktop.png": "055efcb49ccdc2948b70b3a00fe31328cbb8afd316efe5003b2c45388d433466",
+      "work/first_edition_preview/retail.png": "6aa5a5c4757308317ae5a1c178c24ce06bd68d9e51da1e67d5c38b69821afb3c",
+      "work/first_edition_preview/mobile.png": "008c46c4bc753be3d32629a121544481dfa15e911e248e4047ce819e076ba444"
+    },
+    "new_artifacts_generated": false
+  },
+  "month_artifacts_reviewed": false,
+  "public_delivery_reviewed": false,
+  "cloud_writes_performed": false,
+  "source_or_report_mutations_performed": false,
+  "reviewed_deltas": [
+    "ISO date/timestamp and written hyphenated token protection preserves exact characters and HTML escaping; strict Unicode/literal/word-boundary normalizers remain unchanged.",
+    "JSONL ledger and reference JSON schema packaging use producer collect_paths and keep canonical, hidden-path, symlink, repository and credential guards.",
+    "Final archive checker verifies current source input_bindings and tool/contract/reviewer dependencies, policy/freeze/newest-code identity, all immutable physical bodies and canonical XML/cache bytes.",
+    "Existing July1 HTML/JSON/PDF and screenshots match accepted preview receipt hashes; both strict ordered PDF tests and exact HTML/evidence checks replay successfully."
+  ],
+  "limits": [
+    "This accepts engineering and July1 presentation only. All23 actual report artifacts, source/report ZIP members, monthly retail collection and public delivery still need final runtime checks.",
+    "Authored July1 prose was loaded programmatically only for exact preservation checks; no source claim or financial interpretation was reviewed or changed here.",
+    "The finalizer is outside this review and remains writer_late/root responsibility.",
+    "The integration snapshot is not a final archive: author files can be added subsequently, requiring a fresh full inventory/build/final-artifact review."
+  ]
+}

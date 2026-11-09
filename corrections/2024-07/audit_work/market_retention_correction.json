@@ -1,0 +1,147 @@
+{
+  "issue": "Independent reviewer found Yahoo terminal-date overrun bars in audit payloads; normalized data and cards were already correctly bounded.",
+  "resolution": "Physical audit-array clipping; original source hash retained, derivative hashes rebound; no later-price copy preserved.",
+  "changed_responses": [
+    {
+      "ticker": "000660.KS",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "005930.KS",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "6758.T",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "6857.T",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "7203.T",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "8035.T",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "9984.T",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "AUDUSD=X",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "BHP.AX",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "BTC-USD",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "CBA.AX",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "CNY=X",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "CSL.AX",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "DOGE-USD",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "ETH-USD",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "EURPLN=X",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "EURUSD=X",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "FMG.AX",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "GBPUSD=X",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "JPY=X",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "LYC.AX",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "PLN=X",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "RIO.AX",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "SOL-USD",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "XRP-USD",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "^AXJO",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "^KS11",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    },
+    {
+      "ticker": "^N225",
+      "removed_observation_count": 1,
+      "reason": "Yahoo terminal-date bar overrun removed by exchange-local day; no price kept afterJuly30."
+    }
+  ],
+  "affected_card_values": 0
+}

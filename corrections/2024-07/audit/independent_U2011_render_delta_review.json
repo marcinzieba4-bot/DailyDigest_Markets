@@ -1,0 +1,83 @@
+{
+  "status": "accepted",
+  "reviewed_at_utc": "2026-11-05T13:27:24.569728+00:00",
+  "scope": "Narrow renderer-only U+2011 PDF ToUnicode correction, unchanged strict normalizers and existing actual July24 transport/layout proof.",
+  "fatal_or_major_remaining": 0,
+  "old_renderer_sha256": "77e479f0e3a4fb7a3cbf54ee3f2fae9a813e2669023de52344ab25655b66cce3",
+  "new_renderer_sha256": "1b69e7a5e589126c4b50581991e38b6d6ed6c90e8bebc4c2e81145e3e9c3e763",
+  "renderer_changes": "Only DejaVu Sans class for an already-nowrap compound containing literal U+2011. No substitution, source/headline/card/spec edit, numeric claim or normalization exception.",
+  "normalizer_source_sha256": {
+    "tools/build_artifacts.py:prose_key": "db7800ddfa8191f4a8761423541c9ef4d1bf5ef8f81cbdd1c2b9c604fd68f90b",
+    "audit_work/review_final_artifacts.py:normal": "10d09eae78045fe268de172a032b3ac274c8a61e46278a6529d20e157ed1e78b"
+  },
+  "unchanged_gate_sha256": {
+    "tools/build_artifacts.py": "b3465f666d0fb8f571fea1335cda3e0b2b3f1412265f0087105261a0d54213f9",
+    "audit_work/review_final_artifacts.py": "d776e7b667f1c31202c7c00fb74c8be82e1c07c01daa8d8e386b5c5253060432"
+  },
+  "static_adversarial_cases_replayed": 55,
+  "literal_controls": [
+    "Exact text/class control 'non‑breaking'",
+    "Exact text/class control 'non‐breaking'",
+    "Exact text/class control 'non-breaking'",
+    "Exact text/class control 'ordinary'",
+    "Exact text/class control '2024-07-24T07:00:00+00:00'",
+    "Exact text/class control 'Łódź −3.2% & <tag>'",
+    "Both unchanged strict normalizers distinguish2011/2010, numeric literals and word boundaries",
+    "ActualJuly24 strict PDF gate rejects2011→2010 mutation"
+  ],
+  "independently_read_font_matrix": {
+    "Arial": {
+      "literal_2011_preserved": false,
+      "distinct_2011_and_2010_present": false
+    },
+    "DejaVu Sans": {
+      "literal_2011_preserved": true,
+      "distinct_2011_and_2010_present": true
+    },
+    "Noto Sans": {
+      "literal_2011_preserved": true,
+      "distinct_2011_and_2010_present": true
+    }
+  },
+  "actual_July24": {
+    "ordered_paragraphs": 149,
+    "complete_ordered_ledger_records": 107,
+    "pdf_pages": 29,
+    "n1020_literal_U2011_preserved": true,
+    "layouts": [
+      {
+        "width": 1440,
+        "scroll": 1440,
+        "headings": 9
+      },
+      {
+        "width": 390,
+        "scroll": 390,
+        "headings": 9
+      }
+    ],
+    "input_sha256": {
+      "specs/2024-07-24.json": "282751cb5b08065ea51e5be11f6a5fbbcfcc7822293bd5bed8ea1c0977ced8b5",
+      "feeds/2024-07-24.json.gz": "f6e979672aca90399b4902f6eb1973120744b2abb985125225803eb53ec5b3dd",
+      "cards/2024-07-24.json": "fad35fa0c16ff6302f6587709976356b6350954c40a586f6fa95ba16c162f642"
+    },
+    "proof_file_sha256": {
+      "work/july24_pdf_probe/staged/html/2024-07-24.html": "92ee17a7caf0754b2f61e1cc9b50becd65dbc6f89a1ed82b4e4e472a7e8b3aaa",
+      "work/july24_pdf_probe/staged/json/2024-07-24_Market_Intelligence.json": "9ec4855badd0de72652149721f2152e8536b41d4d2ca4cb630185c2a948c1b27",
+      "work/july24_pdf_probe/2024-07-24_after_U2011_fix.pdf": "0ed16e9f1e14b16f3e704e9009e8973c1cf824f55841bbd07a2fa9c6bc419886",
+      "work/july24_pdf_probe/font_matrix.pdf": "6fc78b8227778f966a4bbe8b1e60f6c11ae8c2b61b34b47959eb9d869a26e8ed",
+      "work/july24_pdf_probe/font_matrix_results.json": "97a23e3033826127a5734093439c286bab74c5928ec1d18cfd867b2699ca91f5",
+      "work/july24_pdf_probe/reproduce_after_fix.py": "b9d61510cecfa94778d8ae5f55c12a3f472d79b727525239a309fee667ead86f"
+    }
+  },
+  "source_owner_delta_receipt_sha256": "fbb478c2369a2fc5ae80f735b3342484e051ad8fa80f4b463bdaebc8e6301b12",
+  "source_retained_proof_sha256": "fce4f3f8441df4996e3a4a9a3b7e625109859bc76b90a8dad9709811100afb9e",
+  "review_script_sha256": "3691e2e6b78ff4804ce5e261e83c2d65bd6b9adb929a342b73b94a061fd32e7f",
+  "month_artifacts_reviewed": false,
+  "public_delivery_reviewed": false,
+  "new_artifacts_generated": false,
+  "limits": [
+    "Only the accepted renderer delta and July24 regression are certified here; full23-edition rebuild and strict month audit remain required.",
+    "Financial/source-claim interpretation is not reconsidered; existing accepted prose and immutable feed/card identities are preserved."
+  ]
+}

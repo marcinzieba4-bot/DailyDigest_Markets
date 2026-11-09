@@ -1,0 +1,96 @@
+{
+  "date": "2024-07-30",
+  "status": "accepted",
+  "retail_draft_sha256": "278fdc118612352c64b245940c21e64357a9a1da5f59f4e1f9371f635792b8e5",
+  "feed_sha256": "1ef35c88e0225c9e8522707deb3a8fe225ac99e093ba0a5b4a397c8307483869",
+  "card_sha256": "6695b489b85a044aa39987c5e4d1c109f8491e769d324455f6f0231ec12d9062",
+  "fatal_or_major_remaining": 0,
+  "paragraphs_reviewed": 13,
+  "reviewed_locations": [
+    "retail_intro",
+    "all four titles",
+    "all twelve parts"
+  ],
+  "headline_ids_reviewed": [
+    "n1105",
+    "n1114",
+    "n1143",
+    "n1145",
+    "n1184",
+    "n1193",
+    "n1563",
+    "n1565",
+    "n1566",
+    "n1569",
+    "n1573"
+  ],
+  "claim_checks": [
+    "MCD USD261.42/+3.74% session/+2.58% twenty-session exact July29. CNBC miss/consumer pressure, Reuters first global decline in overthree years, company value/menu/digital priorities and actual value-meal investor framing support first lead. USD5 deal exact MarketWatch headline; future economics conditional.",
+    "TSLA USD232.10/+5.60% session/-7.72% five-session exact July29. Reuters MorganStanley top-pick replacement and MarketWatch golden-cross attention correctly attributed, not operating improvement.",
+    "CRWD USD258.81/+1.03% exact July29 regular close remains a dated baseline, never identified as a response to counsel hiring. Own n1114 supports reported DavidBoies hiring/damages pursuit only. Dated Reuters July29 22:26UTC directly attributes completed hiring/compensation pursuit to CNBC, corroborating the narrow premise before July30 00UTC; not a filed suit, award, quantified liability or payment.",
+    "ON largest jump since2022 after beat exactly Bloomberg headline; no invented ON closing quote or broader industry recovery outcome.",
+    "All11 full cited headlines/metadata and current exclusions inspected. Excluded n1850 absent. All content claims supported within own headline/card scope; separate retained Reuters corroboration resolves only n1114 pre-cutoff reported-premise availability. No numeric FX, fabricated flow/social counts or targets."
+  ],
+  "findings": [
+    {
+      "severity": "resolved",
+      "headline_id": "n1114",
+      "issue": "Prior original-clock uncertainty resolved at the bounded reported-premise level, without certifying the exact first CNBC minute.",
+      "resolution": "Independently inspected retained successful Reuters original-URL extraction: displayed July29,2024 10:26PM UTC; report expressly attributes completed law-firm hiring/compensation pursuit to CNBC and identifies BoiesSchillerFlexner. Retained Reuters search extraction also has explicit July29 22:26:58UTC. Both precede cutoff. No later business, flight, cost or trading facts imported."
+    }
+  ],
+  "chronology": "Earlier notes through July29 only. First MCD lead and Tesla new MorganStanley top-pick/technical update support selection. CRWD secondary materially adds newly eligible counsel-hiring/damages-pursuit report, now independently corroborated before cutoff; not unchanged price/hook carryover. First ON results item.",
+  "named_fixes": [],
+  "verification": {
+    "result": "PASS",
+    "total_words": 1234,
+    "lead_words": 694,
+    "smaller_words": [
+      164,
+      172,
+      175
+    ],
+    "failures": 0,
+    "warnings": 0
+  },
+  "warning_dispositions": [],
+  "limits": "Headline-only content workflow preserved. Reopened review used only specifically authorized retained clock corroboration; it does not certify first CNBC minute or archived original CNBC full-page vintage. No external article-body facts beyond bounded timing/premise corroboration imported. Regular close remains baseline, not counsel-report reaction. No draft or notes edit.",
+  "exclusion_metadata_updates": [
+    {
+      "checked_at_utc": "2026-11-05T13:07:17.501114+00:00",
+      "id": "n1850",
+      "disposition": "conservative original-vintage/timing omission for this edition",
+      "exclusions_sha256": "ad14d1ba103fce42762c97ca873ecca755f5752dba981050e1c3891937deea11",
+      "excluded_id_citations_in_current_component": 0,
+      "content_unchanged": true,
+      "scope": "Exclusion metadata only; existing review status and content hash binding preserved. This does not clear any separate timing blocker."
+    }
+  ],
+  "current_exclusions_sha256": "ad14d1ba103fce42762c97ca873ecca755f5752dba981050e1c3891937deea11",
+  "clock_resolution": {
+    "adjudication_path": "audit/independent_delta_boies_clock_review.json",
+    "adjudication_sha256": "f30b92e645d4dff1accf6a9a6ff62896a0a78fab78017d2f5c7ebea48c52520c",
+    "retained_proof_inspected": [
+      {
+        "path": "audit_work/late_release_clock_refs/delta_reuters_open.json",
+        "sha256": "1a7f3f9de87624e26d647e63c416e2f2c165b8e6a41ebb7bf3c1160fc29ea11d",
+        "locations": "Reuters title, displayed explicit UTC minute, report of hiring/compensation attributed to CNBC and BoiesSchillerFlexner identification"
+      },
+      {
+        "path": "audit_work/late_release_clock_refs/delta_search_reuters.json",
+        "sha256": "f6fb69530d9d7244e3ea1bae7160cb3dbb0b8da2d8ec65a4a32b1189e19c6bc7",
+        "locations": "Reuters result explicit July29 22:26:58UTC and CNBC attribution"
+      }
+    ],
+    "pre_cutoff_reported_premise_corroborated": true,
+    "exact_first_CNBC_minute_certified": false,
+    "original_CNBC_page_vintage_archived": false,
+    "regular_close_reaction_claim": false,
+    "additional_external_facts_imported": false,
+    "draft_unchanged": true
+  },
+  "preserved_blocked_receipt": {
+    "path": "audit/blocked_retail_2024-07-30_before_clock_review.json",
+    "sha256": "32084b495db011e948674f8d5b11bd5d7a7c43140816fd2316abbd706d6df344"
+  }
+}

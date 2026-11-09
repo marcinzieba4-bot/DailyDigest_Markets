@@ -1,0 +1,24 @@
+{
+ "ticker": "DNP.WA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2025-07-31",
+   "factor": 10.0,
+   "ratio": "10:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DNP.WA?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "8699175b34c68c1c0e0a5b74c3c990ccc7e9ae2a64e6d3ad06822dba40a79dd0",
+   "fetched_at_utc": "2026-11-05T10:38:38.236945+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DNP.WA?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "5879fa7a2e289f5c76c3a76503fd91cdb1640e0812809e9491f1e674398f2dd3",
+   "fetched_at_utc": "2026-11-05T10:38:38.574846+00:00"
+  }
+ ]
+}

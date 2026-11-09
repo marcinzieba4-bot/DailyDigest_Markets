@@ -1,0 +1,89 @@
+{
+  "status": "awaiting_independent_release_review_and_final_candidate_manifest",
+  "scope": "Source engineering acquisition, cutoff/window enforcement, finite headline screening and observed safety review only; not report authoring or a universal publisher-vintage certification.",
+  "query_plan_sha256": "6a1d6ff30a3254f10650ec4139dda09a8bf5d844778abcec0148d655a4538ccc",
+  "release_schedule_sha256": "ec0affb8cf6d2e518d655e9fafd76c6d5b7ac56db1548962b1d6e95be7f2ec7d",
+  "screening_tool_sha256": "17ba7efe7b6bf89d67899b605f5507d3cfebc21227473103b29b33600ff8a5e4",
+  "named_exclusions_sha256": "06aba4eb3f84a714a7d429cf46641cd01c4b2b6245ec39a5a8010e87f9de6888",
+  "policy_lock_sha256": "7d2660a7a5a4546f6779d8ed9d122a4adfa42fc8ef70a607c91425775647dfc4",
+  "candidate_manifest_sha256": null,
+  "independent_release_guard_review_sha256": null,
+  "observed_review": {
+    "raw_own_date_records": 53907,
+    "current_ready_own_date_records": 53783,
+    "excluded_occurrences": 124,
+    "unique_excluded_publication_records": 52,
+    "method": "Read all59 distinct stage exclusions from the preceding bounded pass, then read every changed/new disposition against the locked pass (current52 are the retained subset plus the explicitly stale observed preview). Exact own-date headline/identity fields and independent primary timing references were compared; no report narrative was authored.",
+    "evidence": "audit_work/screen_candidate_review/all.json",
+    "evidence_sha256": "939e7b0d49e45b384bcf0911854dc8da50624ec99ba1b48f9f110e32958fba70",
+    "excluded_by_guard": {
+      "FOMC June meeting minutes": 2,
+      "Japan June final services PMI": 1,
+      "Uncertain original publisher version before own cutoff": 2,
+      "UK settled election result and PM appointment": 2,
+      "Delta PepsiCo Conagra quarterly outcome": 4,
+      "Goldman BlackRock quarterly outcome": 4,
+      "China June CPI PPI": 1,
+      "TSMC June monthly revenue and Q2 aggregate": 1,
+      "China Q2 GDP June activity": 3,
+      "Tesla Alphabet GM UPS Visa TI Enphase quarterly outcome": 24,
+      "Ford Chipotle IBM ServiceNow GEV Edwards quarterly outcome": 11,
+      "Dexcom Deckers Unilever Nestle Honeywell RTX quarterly outcome": 7,
+      "TSMC Q2 profit and full-year outlook": 1,
+      "Apple Amazon Intel pending beyond July quarterly outcome": 18,
+      "Verizon SAP NXP quarterly outcome": 2,
+      "Bank of Canada July decision": 3,
+      "Observed pending company preview older than seven days": 5,
+      "July flash PMI Japan": 1,
+      "rolling or live market page": 5,
+      "China July MLF decision": 1,
+      "FOMC July decision": 13,
+      "Bank of England August decision pending beyond July": 6,
+      "Microsoft AMD Starbucks Pinterest Pfizer Merck P&G quarterly outcome": 1,
+      "Meta Qualcomm Arm Boeing Mastercard quarterly outcome": 1,
+      "Samsung Electronics Q2 full result clock uncertain": 1,
+      "advertisement or coupon page": 1,
+      "BOJ July decision": 3
+    }
+  },
+  "observed_unscheduled_eth_safety": {
+    "evidence": "audit_work/unscheduled_eth_safety_candidates.json",
+    "evidence_sha256": "930e8f7ec084c84c8a30e567fc1c15550064a96c4f19f9234d0fcae6e21d5e7d",
+    "retained_unique_matches_read": 31,
+    "conclusion": "No premature July19 global-outage outcome, Biden withdrawal, VP selection, shooting result or French second-round outcome found in the bounded retained set. Earlier distinct outages, commentary, first-round reporting and speculation remain separate. Three early ETH ETF records support a launch schedule, unspecified-stage prior approval or set-to-launch notice, never actual trading or flows."
+  },
+  "acquisition": {
+    "report_dates": 23,
+    "query_catalog_contexts": 701,
+    "weekly_contexts": 4544,
+    "cutoff_prefix_contexts": 11917,
+    "unique_query_urls": 16437,
+    "daily_refinement_urls": 0,
+    "complementary_term_refinement_urls": 0,
+    "capped_requests": 0,
+    "unresolved_capped_requests": 0,
+    "failed_requests": 0
+  },
+  "named_findings": [
+    "Bounded US/PPI/CPI and company alternatives to avoid substring collisions; preserved company/legal and actual-versus-preview distinctions within the reviewed scope.",
+    "Separated TSMC July10 monthly revenue/Q2 aggregate from July18 full earnings and outlook; preserved SK hynix early-local eligibility and used conservative uncertain Samsung clock handling.",
+    "Kept Japanese early-local Tankan/household/wages/CPI separate from after00 final/flash PMIs; GUS dates use historical calendar days without fabricated2024 minute stamps.",
+    "UK exit polls remain projections; mixed settled-result/appointment clauses are blocked. Actual-first clauses cannot be cleared by a later modal or preview.",
+    "Omitted exact Jul5 Samsung Reuters n1053 and Jul31 Japanese retail Reuters n1915 original-vintage uncertainties; raw IDs remain untouched.",
+    "Preserved three observed pending company previews as seven-day news; explicitly recorded8 fresh category tightenings and5 stale-instance exclusions."
+  ],
+  "checks": {
+    "own_guard_regressions": 96,
+    "own_guard_failures": 0,
+    "observed_preview_age_boundary_cases": 3,
+    "observed_preview_age_failures": 0,
+    "raw_ids_renumbered": false
+  },
+  "limits": [
+    "Current-vintage Google historical search is discovery, not exhaustive contemporary coverage. No response exceeded33 items, so the100-item cap path was not triggered; absence of observed caps is not proof of exhaustive reporting.",
+    "Publisher original/unrevised article versions are not universally resolved. Independent dated official-calendar and targeted current Reuters inspections are safety evidence, not writer article-body facts.",
+    "Some ambiguous background, educational, broker-commentary or earnings-related matches are conservatively omitted by the finite screen; exclusion does not certify that every such title was a premature outcome.",
+    "Exact RPP intraday minute and Samsung original pre00 full-results clock remain unasserted; conservative date-only eligibility/omission is used.",
+    "Every authored cited claim still requires independent own-date meaning, age, actual-versus-preview, number/instrument and attribution review."
+  ]
+}

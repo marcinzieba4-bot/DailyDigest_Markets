@@ -1,0 +1,83 @@
+{
+  "checked_at_utc": "2026-11-05T12:58:33.356472+00:00",
+  "passed": true,
+  "script_sha256": {
+    "digest.py": "099881a6e6cc5d513fe83b4b69e7f03a2063f3cdf9eaa5cd1d9f32171266bd56",
+    "showcard.py": "d94367f24245ef36f7fcb785cb432e85a00412a0006349237f1be6d6250975b3",
+    "cited_titles.py": "fa9b4ce79c9f16fd8491b6869f35910c4b2844249373b00e40664baa46f80cd8",
+    "verify.py": "3b69be58e974d1c4aec462162f5ce6f8f28ae3479c41c0c6f4b2a99badf602ad",
+    "check_block_ranges.py": "c3f2770bf45da7b5c21213dd0f5af13e07f46a5fa4cef153424e173678324f5c",
+    "merge_retail.py": "f9ecc3f5c3a01a1916fd6924d9639de2aa6220f093335aa6d4da9f328497a0f6",
+    "stage_reviewed.py": "b7bf13d7f36be2f062cb9a500c8da8180c35ba30154815e87b6ba9f4a1b1eab5",
+    "finalize_reviews.py": "bd00eb001b493ac594ad9f13278719317efdff75f83c4627ba1f3dcd2b823e01",
+    "retail_quality_snapshot.py": "fb35a728e1a013c2fe84d6d55cb0c7125d03fc8bbd4c2068f3793525238f4146"
+  },
+  "inherited_regressions_replayed": 33,
+  "independent_negative_checks": [
+    {
+      "check": "wrong card identity rejected",
+      "passed": true
+    },
+    {
+      "check": "uncompleted market session rejected",
+      "passed": true
+    },
+    {
+      "check": "stale exclusions hash rejected",
+      "passed": true
+    },
+    {
+      "check": "naive news timestamp rejected",
+      "passed": true
+    },
+    {
+      "check": "duplicate source identity rejected",
+      "passed": true
+    },
+    {
+      "check": "required China contrary signal label enforced",
+      "passed": true
+    },
+    {
+      "check": "unresolved independent review blocks every spec write",
+      "passed": true
+    }
+  ],
+  "production_evidence_or_drafts_read": true,
+  "scope": "Read source and independently executed synthetic positive/negative gates for exact23-date scope/schema/word ranges, own-date sources, citation and local numeric support, FX exclusions, current review bindings and validation before atomic staging. Finalizer integration now additionally binds the accepted current source receipt schema, preserves the strict legacy branch, cross-checks exact integer counts/raw hashes/canonical removed identities, and detects changed ready receipts before final binding.",
+  "limitations": [
+    "Numeric token membership does not prove instrument identity, sign, session, horizon, unit or economic claim; every claim still requires independent own-date review.",
+    "Automated timestamp/category checks do not establish actual release timing, preview/outcome meaning or original article vintage.",
+    "Title/label factual meaning, cross-section consistency, chronology and substantive editorial depth remain independent review responsibilities.",
+    "The integration delta does not constitute source reacquisition, financial claim review, PDF review, package inventory acceptance or clearance of pending retained-item exclusions."
+  ],
+  "original_review_checked_at_utc": "2026-11-05T10:59:02.461779+00:00",
+  "review_history": [
+    {
+      "path": "audit/review_history/independent_authoring_tool_review_before_finalizer_integration.json",
+      "sha256": "3c4a53e5a362cd18e3b3a72137fd92a5631517dd9d92ac8c2e00650061ecc651",
+      "reason": "Preserve the complete prior accepted nine-tool review before the finalizer producer-schema integration and narrowly tested hardening."
+    }
+  ],
+  "delta_reviews": [
+    {
+      "kind": "finalizer_current_source_schema_integration",
+      "reviewer": "/root/writer_late",
+      "receipt_path": "audit/independent_finalizer_integration_review.json",
+      "receipt_sha256": "bbf2040fc7d583fc16ac10daba5336fca6a6ea6297d5cc783e8c3d6ae4ea2ca6",
+      "independent_hardening_recheck_path": "audit/independent_finalizer_hardening_recheck.json",
+      "independent_hardening_recheck_sha256": "5371683b1fe30a8e51a45aeaa9fac7c7f3ee026a5a63d34bea094bc016332349",
+      "changed_script": "finalize_reviews.py",
+      "previous_hash": "533614e8f03321c5c4190f9a092241a440f55a752d20bc9f465fa38f61d32cd2",
+      "current_hash": "bd00eb001b493ac594ad9f13278719317efdff75f83c4627ba1f3dcd2b823e01",
+      "actual_screening_receipts": 23,
+      "actual_removed_occurrences": 124,
+      "delta_checks": 37,
+      "original_toolkit_regressions_replayed": 33,
+      "current_schema_end_to_end_checks": 4,
+      "passed": true
+    }
+  ],
+  "production_data_scope": "For this delta, accepted source-review/screening metadata and frozen feed byte hashes only; no production authored draft/spec prose read or modified. The original synthetic-only review remains unchanged in history.",
+  "production_authored_reports_read": false
+}

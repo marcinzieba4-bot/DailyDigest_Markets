@@ -1,0 +1,266 @@
+{
+  "review_type": "independent_bounded_three_case_release_clock_adjudication",
+  "reviewed_at_utc": "2026-11-05T13:04:31.861745+00:00",
+  "passed": true,
+  "scope": "Release-event availability only for the three named own-date records. No report authoring, canonical publisher-version certification, frozen-source amendment or prose approval.",
+  "authoring_or_prose_approval": false,
+  "source_mutations": false,
+  "case_count": 3,
+  "unresolved_event_clock_questions": 0,
+  "original_article_vintages_certified": 0,
+  "cases": [
+    {
+      "date": "2024-07-16",
+      "id": "n0077",
+      "subject": "Rio second-quarter iron-ore shipment miss",
+      "title": "Rio Tinto's iron ore shipments miss estimates due to May train derailment - Reuters",
+      "rss_published_at": "2024-07-15T07:00:00+00:00",
+      "feed_sha256": "8f9b761434744e06b6690d16146cbf316fbaeb2f22f63e6b16556d11b33a00b4",
+      "source_item_sha256": "303e4ac5457162e5c757f37b40a02961f1035b555122654c7cd9194f2b4dd7d2",
+      "blocked_review_sha256": "88df54ed9a84573f4454008e2ddc72cbe90b50696e4b5883faa9f30708f578ee",
+      "cutoff_utc": "2024-07-16T00:00:00+00:00",
+      "clock_evidence": [
+        {
+          "key": "rio_asx",
+          "url": "https://www.marketindex.com.au/asx/rio/announcements/rio-tinto-releases-second-quarter-production-results-3A645994",
+          "cache_path": "audit_work/late_release_clock_refs/open_initial.json",
+          "cache_sha256": "5ceb87e1094c8bed27a5a00579f34975e5119ac69edc04ebc76e3805b42a48ed",
+          "web_reference": "turn402254view0:L28-L30",
+          "precision": "Dated secondary mirror of actual ASX issuer announcement; explicit AEST zone",
+          "meaning": "The identical second-quarter production release is recorded before the report cutoff. This is stronger than inferring a clock from the issuer local calendar date.",
+          "timing_excerpt": "Published: 16/07/24, 08:25am (AEST)",
+          "timing_excerpt_sha256": "174171ad5b1ad8d21503a164ce632d6b5956042f2cd5808b6ebf818e83502b9e"
+        },
+        {
+          "key": "rio_wire",
+          "url": "https://markets.financialcontent.com/kanerepublican/article/bizwire-2024-7-15-rio-tinto-releases-second-quarter-production-results",
+          "cache_path": "audit_work/late_release_clock_refs/clock9.json",
+          "cache_sha256": "a0a2795c9bf745681bb28343283e4c0d183548a96499b008273ce956422d95d1",
+          "web_reference": "turn261002view1:L41-L45",
+          "precision": "Dated issuer press release syndicated via Business Wire; explicit EDT zone",
+          "meaning": "The issuer production disclosure was distributed by this time, before the July16 UTC cutoff. This establishes an availability bound, not its first original publication second.",
+          "timing_excerpt": "July 15, 2024 at 18:31 PM EDT",
+          "timing_excerpt_sha256": "4556f042a6494a0576392edca846e4575d4a8c7fcc127866e58b43800dcf455e"
+        },
+        {
+          "key": "rio_primary",
+          "url": "https://www.riotinto.com/news/releases/2024/rio-tinto-releases-second-quarter-production-results",
+          "cache_path": "audit_work/late_release_clock_refs/clock5.json",
+          "cache_sha256": "e330b47d42cf3f0850f88dab8d78e980ea28ff6c6a2b976b228b7d7350141c4a",
+          "web_reference": "turn378695view2:L590-L636",
+          "precision": "Primary issuer release; Australian date only, no clock",
+          "meaning": "Identifies the exact quarterly production disclosure and train-collision/shipment subject. Its local date alone would be insufficient.",
+          "timing_excerpt": "16 July 2024",
+          "timing_excerpt_sha256": "38b2d029f146a4dfe9a989b75969f821f9057b192d11ec4c9aa964f791a5b162"
+        }
+      ],
+      "clock_conversions_utc": {
+        "asx": "2024-07-15T22:25:00+00:00",
+        "wire": "2024-07-15T22:31:00+00:00"
+      },
+      "event_available_before_cutoff": true,
+      "original_reuters_article_vintage_certified": false,
+      "verdict": "release_availability_supported_only",
+      "disposition": "The release-clock question can be resolved for the existing own-headline completed-event premise. This is not permission to import later article wording, numbers or reactions. If exact original article-vintage certification is required beyond the accepted headline/RSS workflow, conservatively omit this exact cited premise rather than claiming that certification.",
+      "reason": "Actual distribution timestamps support availability byJuly15 22:31UTC, more than an hour before cutoff. The own headline reports a shipment miss; the release clock does not permit aJuly16 Australian cash-session reaction.",
+      "limits": [
+        "The frozen Google RSS date was normalized to the preceding day07UTC; it was not used as the event clock.",
+        "Connected-web historical extracts are preserved below; original contemporaneous HTML/PDF bytes and exact original Reuters headline versions were not certified.",
+        "Only the existing own-date headline premise is adjudicated. No figures, forecasts, analyst quotes, intraday cash reactions or subsequent policy commentary from this research may be added to reports.",
+        "The issuer release supports shipments and the operational disruption; the comparison with analyst estimates comes from the existing Reuters headline, not from a newly imported issuer consensus.",
+        "Current Reuters retrieval carriesJuly16 01:16:01UTC; the current syndicated body contains an early Australian share reaction after cutoff. Neither is used to certify the original article version. Investing first-published metadata07:54PM lacks an explicit timezone in the retained extract and was not converted."
+      ]
+    },
+    {
+      "date": "2024-07-18",
+      "id": "n1557",
+      "subject": "Japan June provisional export growth",
+      "title": "Japan export growth cools amid worries about China slowdown - Reuters",
+      "rss_published_at": "2024-07-17T07:00:00+00:00",
+      "feed_sha256": "7f99b575bdf60015d63e99e7b057d0c9fdaf43d932f24b0e2a0f228dd8eb746d",
+      "source_item_sha256": "28618e0aebe483e9f4c6f1a71c3eab5af895b3b4076d4e24770f19bcfdc68ba7",
+      "blocked_review_sha256": "25f1da47c7de3b4f49224008e5e75d5b4ecdc4366adb4b030666677c38736d12",
+      "cutoff_utc": "2024-07-18T00:00:00+00:00",
+      "clock_evidence": [
+        {
+          "key": "exports_primary",
+          "url": "https://www.customs.go.jp/toukei/shinbun/trade-st_e/2024/2024064e.pdf",
+          "cache_path": "audit_work/late_release_clock_refs/clock10.json",
+          "cache_sha256": "d70dccb1f9936fcfe586bdc8490aea1ac1ef247725c06407e0c96c81485ff351",
+          "web_reference": "turn113858view0:P0:L10-L24",
+          "precision": "Primary June provisional trade release, dated July18; minute absent from PDF header",
+          "meaning": "Confirms the exact release vintage is June2024 provisional trade data. No later revised customs table was substituted.",
+          "timing_excerpt": "Release July 18, 2024",
+          "timing_excerpt_sha256": "453310a3e6edea417a495660b4400ee7b7d0d4ea7b07879efa024fa1f992951a"
+        },
+        {
+          "key": "exports_clock",
+          "url": "https://investinglive.com/news/japan-data-june-exports-54-yy-expected-64-imports-32-yy-expected-93-20240717/",
+          "cache_path": "audit_work/late_release_clock_refs/clock9.json",
+          "cache_sha256": "a0a2795c9bf745681bb28343283e4c0d183548a96499b008273ce956422d95d1",
+          "web_reference": "turn261002search5",
+          "precision": "Dated contemporaneous actual-data news item with explicit GMT; retained indexed extraction only",
+          "meaning": "The June exports/imports actual-data headline is timestamped before the July18 cutoff. Direct open returned403, so this is retained search extraction, not a full original page snapshot.",
+          "timing_excerpt": "17/07/2024 | 23:50 GMT",
+          "timing_excerpt_sha256": "8a1886089b912dad4867b5fae0f3596f9fbccf5c6b43cc5c5298cd8802b667d9"
+        },
+        {
+          "key": "exports_calendar",
+          "url": "https://www.dlri.co.jp/files/macro/351020.pdf",
+          "cache_path": "audit_work/late_release_clock_refs/target3.json",
+          "cache_sha256": "6605858921e2990f4c0f181978d7fda78127c187e142cd7cabcb5bb1b8dc09ab",
+          "web_reference": "turn281479search46",
+          "precision": "Dated institutional weekly calendar for July15–19; search extraction only",
+          "meaning": "The July18 June trade-statistics row has08:50, corroborating23:50UTC onJuly17 when interpreted in Japan local time. The direct PDF open returned403; this source corroborates, rather than independently certifying, actual release.",
+          "timing_excerpt": "7月18日（木） 8:50 6月貿易統計",
+          "timing_excerpt_sha256": "56a716f3e08689ec7144076471d3d853208fdff4194c3d29334cbf5a42df06b3"
+        }
+      ],
+      "clock_conversions_utc": {
+        "local_schedule": "2024-07-17T23:50:00+00:00",
+        "contemporaneous_actual_news": "2024-07-17T23:50:00+00:00"
+      },
+      "event_available_before_cutoff": true,
+      "original_reuters_article_vintage_certified": false,
+      "verdict": "release_availability_supported_only",
+      "disposition": "The release-clock question can be resolved for the existing own-headline completed-event premise. This is not permission to import later article wording, numbers or reactions. If exact original article-vintage certification is required beyond the accepted headline/RSS workflow, conservatively omit this exact cited premise rather than claiming that certification.",
+      "reason": "Primary dated release plus explicit23:50GMT actual-data reporting support event availability ten minutes before cutoff. The calendar independently corroborates the local08:50 timing.",
+      "limits": [
+        "The frozen Google RSS date was normalized to the preceding day07UTC; it was not used as the event clock.",
+        "Connected-web historical extracts are preserved below; original contemporaneous HTML/PDF bytes and exact original Reuters headline versions were not certified.",
+        "Only the existing own-date headline premise is adjudicated. No figures, forecasts, analyst quotes, intraday cash reactions or subsequent policy commentary from this research may be added to reports.",
+        "The original Reuters exact headline version is not certified. The currently retrievable Reuters item is datedJuly18 02:16:31UTC; a MarketScreener syndication recordsJuly18 00:28UTC. These later retrieval/syndication times do not prove that the underlying data or an earlier wire version were unavailable, and were not treated as first publication proof.",
+        "Investing first-published metadata07:59PM has no explicit timezone in the retained extract and was not converted."
+      ]
+    },
+    {
+      "date": "2024-07-19",
+      "id": "n1606",
+      "subject": "Japan June national CPI",
+      "title": "Japan core inflation perks up in June, keeps BOJ rate hike hopes alive - Reuters",
+      "rss_published_at": "2024-07-18T07:00:00+00:00",
+      "feed_sha256": "4ee3f69be8be5439b40b539ea2504e442dcd760d2c3a4f744708f20c9a8aced7",
+      "source_item_sha256": "b8d16fb49f6447a5971ac9b4c4a5022352d430bcf5c8dbee02a3adeff6add7d3",
+      "blocked_review_sha256": "34be4d5a650ec7b503cefa24d5e640615e12556f47be7d4e200e678bd9b63edc",
+      "cutoff_utc": "2024-07-19T00:00:00+00:00",
+      "clock_evidence": [
+        {
+          "key": "cpi_dataset",
+          "url": "https://www.e-stat.go.jp/en/stat-search/files?cycle=1&layout=dataset&month=12040606&page=1&stat_infid=000040191571&tclass1=000001150149&tclass2val=0&toukei=00200573&tstat=000001150147&year=20240",
+          "cache_path": "audit_work/late_release_clock_refs/search_targeted.json",
+          "cache_sha256": "c937b141d8be64c7a0839cb04f4b86fcac7f009f1fc87478293f13f494b25f1f",
+          "web_reference": "turn183075view0:L316-L332",
+          "precision": "Primary official June2024 CPI dataset historical publication metadata",
+          "meaning": "Unlike a generic current release calendar, the identified June2024 dataset itself records the historical publication date and08:30 clock. The official CPI convention explicitly identifies Japan time.",
+          "timing_excerpt": "Published date and time 2024-07-19 08:30",
+          "timing_excerpt_sha256": "4b1365261b0ce0ee20d2ad742cb2617eb7e69a4eebca41c1887e564f6613ebe8"
+        },
+        {
+          "key": "cpi_timezone",
+          "url": "https://www.stat.go.jp/english/data/cpi/1585.htm",
+          "cache_path": "audit_work/late_release_clock_refs/clock5.json",
+          "cache_sha256": "e330b47d42cf3f0850f88dab8d78e980ea28ff6c6a2b976b228b7d7350141c4a",
+          "web_reference": "turn378695view4:L123-L125",
+          "precision": "Primary current publication-method statement; timezone corroboration only",
+          "meaning": "Identifies the CPI release clock as Japan time. Current methodological text alone is not proof of an individual2024 event; it is combined with exact dated historical metadata.",
+          "timing_excerpt": "8:30 A.M. (Japan time)",
+          "timing_excerpt_sha256": "fc67944c9fbe9d082342c9646b9d23c7f693e8f4d42756b50c9aa3ad3a79e895"
+        }
+      ],
+      "clock_conversions_utc": {
+        "official_publication": "2024-07-18T23:30:00+00:00"
+      },
+      "event_available_before_cutoff": true,
+      "original_reuters_article_vintage_certified": false,
+      "verdict": "release_availability_supported_only",
+      "disposition": "The release-clock question can be resolved for the existing own-headline completed-event premise. This is not permission to import later article wording, numbers or reactions. If exact original article-vintage certification is required beyond the accepted headline/RSS workflow, conservatively omit this exact cited premise rather than claiming that certification.",
+      "reason": "Exact official historical publication metadata corroborates the already accepted dated secondary calendar:June CPI was available atJuly18 23:30UTC, thirty minutes before cutoff.",
+      "limits": [
+        "The frozen Google RSS date was normalized to the preceding day07UTC; it was not used as the event clock.",
+        "Connected-web historical extracts are preserved below; original contemporaneous HTML/PDF bytes and exact original Reuters headline versions were not certified.",
+        "Only the existing own-date headline premise is adjudicated. No figures, forecasts, analyst quotes, intraday cash reactions or subsequent policy commentary from this research may be added to reports.",
+        "The previously accepted Vietnam-local weekly-calendar evidence supports scheduled availability; it did not certify an original article version. The newly retained primary dataset timestamp strengthens the event-clock basis without changing the frozen schedule or feed.",
+        "The current Reuters version is datedJuly19 05:27UTC and can include later quotes/commentary. Investing metadata first-published07:37PM has no explicit timezone in the retained extract; neither timestamp is used as original pre-cutoff article certification."
+      ],
+      "retained_prior_calendar": {
+        "key": "japan_national_cpi_secondary",
+        "url": "https://masvn.com/api/attachment/file/1720969430048-Weekly_20240715.pdf",
+        "document_date": "2024-07-15",
+        "web_reference": "turn484416search32",
+        "timing_decision": "Vietnam localUTC+7 makes thisJul18 23:30UTC, supportingJul19 eligibility.",
+        "precision": "dated secondary calendar",
+        "limits": [
+          "Used only as timing corroboration; no forecast or realised value imported into a report.",
+          "Primary June-CPI release header was not retained in this review."
+        ],
+        "excerpt_sha256": "bcaab1276202d1be67297f11e5f00fcfccf7b969362c3c8a17086d5f36960093",
+        "timing_excerpt_normalized": "Friday, July 19, 2024. 6:30 AM JP CPI YoY (Jun). All times are local for Vietnam.",
+        "retained_reference_path": "audit_work/release_guard_refs/official_timing_excerpts.json",
+        "retained_reference_sha256": "b98455f9bd93aa998afaebcd365dcbba8158f17b921f4515a94e6ac21ff27085"
+      }
+    }
+  ],
+  "retained_tool_cache": [
+    {
+      "path": "audit_work/late_release_clock_refs/clock10.json",
+      "sha256": "d70dccb1f9936fcfe586bdc8490aea1ac1ef247725c06407e0c96c81485ff351",
+      "bytes": 18840
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/clock4.json",
+      "sha256": "31ae310882119fdf9159fe0489bcee642729d239ab1826101ed1bf96b93faf0c",
+      "bytes": 25263
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/clock5.json",
+      "sha256": "e330b47d42cf3f0850f88dab8d78e980ea28ff6c6a2b976b228b7d7350141c4a",
+      "bytes": 28762
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/clock6.json",
+      "sha256": "776a80dc2c362ec15455fc0c42ab33e15cb93aceacb25b9d76711be29717ddcb",
+      "bytes": 29647
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/clock7.json",
+      "sha256": "f9cd1723955c682c7b89c150268b1d9adb0c7de1dcd13ea139941d923a8b895e",
+      "bytes": 33747
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/clock8.json",
+      "sha256": "ed6af9aa6b6f98bbf7f64e27cba0bc4aec71c3e5d95426e8211ff2a973f91a07",
+      "bytes": 27574
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/clock9.json",
+      "sha256": "a0a2795c9bf745681bb28343283e4c0d183548a96499b008273ce956422d95d1",
+      "bytes": 28090
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/open_initial.json",
+      "sha256": "5ceb87e1094c8bed27a5a00579f34975e5119ac69edc04ebc76e3805b42a48ed",
+      "bytes": 26166
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/search_initial.json",
+      "sha256": "c3eb2c40776aa327dda7b46b296f5df0eaf131562bdaf29302f57ef6086a30a7",
+      "bytes": 30355
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/search_targeted.json",
+      "sha256": "c937b141d8be64c7a0839cb04f4b86fcac7f009f1fc87478293f13f494b25f1f",
+      "bytes": 29189
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/target3.json",
+      "sha256": "6605858921e2990f4c0f181978d7fda78127c187e142cd7cabcb5bb1b8dc09ab",
+      "bytes": 27797
+    }
+  ],
+  "accepted_schedule_sha256": "ec0affb8cf6d2e518d655e9fafd76c6d5b7ac56db1548962b1d6e95be7f2ec7d",
+  "accepted_source_review_sha256": "147513cf16810e90e064a09c5cbaa89aa71509fcacb3c477403f4f8013769af2",
+  "contract_sha256": "f0ffe6ce49d0ce7d82324199647c324ca3275c4116bc8905dba91ffc5fb02d78",
+  "rule_interpretation": "AUTHORING.md requires actual release-time assessment and permits early-local releases before UTC midnight. The accepted source workflow explicitly preserves canonical publisher-vintage limits. Dated event-clock corroboration resolves a release-availability question; it does not silently resolve an article-version question. The existing dated secondary CPI calendar was sufficient for bounded scheduled-availability support under that workflow; exact official historical metadata now corroborates it.",
+  "retention": "JSON caches contain actual connected-web tool responses and source/ref metadata, not original full HTTP response bytes. Failed/blocked opens remain recorded; no alternate network route was used to bypass policy. Irrelevant search results, current sidebars, later revisions, intraday reactions and later comments are excluded from the adjudication.",
+  "review_script_sha256": "9dcb2649474b5166d2a561d0751564378eab8301292c75ccb4a98a24f81b1bd2"
+}

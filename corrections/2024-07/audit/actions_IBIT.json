@@ -1,0 +1,18 @@
+{
+ "ticker": "IBIT",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/IBIT?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "d5dddc89adb1c4d5964911acfc628a889187e8ee42657d72d095f5b1e06147e1",
+   "fetched_at_utc": "2026-11-05T10:38:36.048541+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/IBIT?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "5672ba1d92c5bf560efa3cd08150e21665c1caad0e84ec2119eeca89822656b0",
+   "fetched_at_utc": "2026-11-05T10:38:36.356618+00:00"
+  }
+ ]
+}

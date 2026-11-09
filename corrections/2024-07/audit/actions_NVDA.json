@@ -1,0 +1,24 @@
+{
+ "ticker": "NVDA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2024-06-10",
+   "factor": 10.0,
+   "ratio": "10:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "540e39bc751ddc210e2496b9f5113f8ea83b256ac4148e4b6173f56ce4facb20",
+   "fetched_at_utc": "2026-11-05T10:38:46.491323+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "67d6e8a367349a2d6ac01842952961aee3df012031b9d0f62fe8d6b9eb5a29bc",
+   "fetched_at_utc": "2026-11-05T10:38:46.699265+00:00"
+  }
+ ]
+}

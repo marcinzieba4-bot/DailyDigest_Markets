@@ -1,0 +1,18 @@
+{
+ "ticker": "RKLB",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RKLB?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "c6a85df895881adf03069a75425cb2bb1941c6f4869896511e71fec3c4b8aaed",
+   "fetched_at_utc": "2026-11-05T10:38:51.979149+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RKLB?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "8c9ddfb5fa0e25df6285370ee9eaee7ec19ce1afd7cb4a5efebc2c4683a22ecb",
+   "fetched_at_utc": "2026-11-05T10:38:52.339923+00:00"
+  }
+ ]
+}

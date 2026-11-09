@@ -1,0 +1,18 @@
+{
+ "ticker": "ROST",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ROST?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "2e0663568d06a5b33b0081827f662a2d2995d13d18bfee886e1e7fb6e9a2f122",
+   "fetched_at_utc": "2026-11-05T10:38:56.293668+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ROST?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "f1e3aa1e961d63212ce410ac5b7c0508cbc9456700124af0347efcf0267018e9",
+   "fetched_at_utc": "2026-11-05T10:38:56.703396+00:00"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+  "checked_at_utc": "2026-11-05T11:20:58.169377+00:00",
+  "passed": true,
+  "cases": [
+    {
+      "case": "HTML challenge",
+      "passed": true
+    },
+    {
+      "case": "RSS missing channel",
+      "passed": true
+    },
+    {
+      "case": "UTC/lo/hi/naive/HTTPS/rolling boundary batch",
+      "passed": true,
+      "discarded": {
+        "outside_query_window": 2,
+        "malformed_timestamp": 1,
+        "missing_title_or_https_url": 1,
+        "rolling_headline": 1
+      }
+    },
+    {
+      "case": "semantic Dexcom faces inflation pressure",
+      "passed": true
+    },
+    {
+      "case": "semantic Microsoft quarterly earnings beat estimates",
+      "passed": true
+    },
+    {
+      "case": "semantic US CPI inflation cools",
+      "passed": true
+    },
+    {
+      "case": "semantic Microsoft will report quarterly results next week",
+      "passed": true
+    },
+    {
+      "case": "semantic Gold rises as Treasury yields fall",
+      "passed": true
+    }
+  ],
+  "reviewer_tool_sha256": "b7c301a509e8645e1d7586f45ca4294637ae6f19f118f770f1c775bd07b603a6",
+  "scope": "Synthetic independent parser/semantic boundary cases only, not acquired facts or source-authoring acceptance."
+}

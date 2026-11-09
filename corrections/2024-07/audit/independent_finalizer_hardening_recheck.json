@@ -1,0 +1,19 @@
+{
+  "checked_at_utc": "2026-11-05T12:57:05.385752+00:00",
+  "passed": true,
+  "reviewer": "root, independent of hardening author",
+  "script_sha256": "bd00eb001b493ac594ad9f13278719317efdff75f83c4627ba1f3dcd2b823e01",
+  "scope": "Read complete hardened frozen_source_exclusions helper and integration call/stability points. Separately executed all23 current accepted metadata receipts,124 removed occurrences, no source/draft writes.",
+  "checks": [
+    "Current receipt SHA must match both accepted input_bindings and date-row receiptSHA.",
+    "Ready/frozen/raw hashes, correctdate/status and all3 source counts are tied to the same accepted row.",
+    "Counts require exact nonnegative int types, rejectbool, match accepted values and balance raw=ready+excluded.",
+    "Removed identities require canonical n4\u20136digits and per-list uniqueness; legacyreasons may overlap legitimately.",
+    "Missing/partial legacy/current schema cannot silently become empty exclusions.",
+    "Current screening receipts remain in final input-stability check; allfinancialinputs/reportclaims remain separatelyreviewed."
+  ],
+  "actual_current_dates": 23,
+  "actual_removed_occurrences": 124,
+  "synthetic_proof": "writer_late independently executed37delta+33original+3current-schemaend-to-end checks; root doesnotclaim to have authored/repeated that entire synthetic run.",
+  "financial_inputs_or_text_changed": false
+}

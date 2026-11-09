@@ -1,0 +1,18 @@
+{
+ "ticker": "NEE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NEE?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "38d1e8f8a273f5c07e40974ac87741a860eab3f534bb162720b2e7301d74ebfa",
+   "fetched_at_utc": "2026-11-05T10:38:54.330076+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NEE?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "1dc2b83a555d37fe0805964c95ce08c1a03d0b5169cc77cd77cab6d8b750b3a3",
+   "fetched_at_utc": "2026-11-05T10:38:54.706557+00:00"
+  }
+ ]
+}

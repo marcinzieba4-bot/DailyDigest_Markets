@@ -1,0 +1,18 @@
+{
+ "ticker": "BIDU",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BIDU?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "6bf835b641064c99dbdbf054d6c94d49247f47722bf8d2540d4d86fb70ec4f98",
+   "fetched_at_utc": "2026-11-05T10:38:42.691320+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/BIDU?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "a11cd478e4aa5c3331005f895cc8b841cd29f0b652d7804bc329787b7f137948",
+   "fetched_at_utc": "2026-11-05T10:38:43.067172+00:00"
+  }
+ ]
+}

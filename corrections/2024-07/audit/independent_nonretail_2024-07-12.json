@@ -1,0 +1,1639 @@
+{
+  "date": "2024-07-12",
+  "status": "accepted",
+  "canonical_nonretail_sha256": "d9b80cb689ee643430c2c1e044ed71e03fef129f98dd2adcd9c1b2c8ae869ad6",
+  "feed_sha256": "47de1794624659f7aab7be9817dba85f60ed30aaf1d87f43a091dfeff2173fe7",
+  "card_sha256": "f1ce1dba96dabd1812171fad9d354ceea062a74038e6552043b4ce590b1a66d7",
+  "exclusions_sha256": "5e3a4a6554e471881af6c2e47cb4deac749ca16b0ef23da61c1954903d889f18",
+  "fatal_or_major_remaining": 0,
+  "validation": {
+    "command": "python tools/verify.py 2024-07-12 --nonretail --counts",
+    "result": "PASS",
+    "words": 8526,
+    "distinct_citations": 81,
+    "maximum_citation_uses": 3,
+    "all_36_ranges_pass": true,
+    "failures": 0,
+    "warnings": 0
+  },
+  "reviewed_validation_warnings": [],
+  "findings": [
+    {
+      "severity": "minor",
+      "location": "geo.US.Rates & Curve",
+      "finding": "Widened was ambiguous for a less negative inverted spread.",
+      "fix": "Specified that the algebraic spread increased 12 bps, preserving all quantities and curve classification."
+    },
+    {
+      "severity": "minor",
+      "location": "sectors.XLK.Reported and catalysts.AMD.Catalyst & Thesis",
+      "finding": "Buying Silo AI could leave acquisition agreement versus completion unclear.",
+      "fix": "Specified AMD’s deal to buy Silo AI in the two existing references; no claim of closed acquisition or realized integration benefit was added."
+    }
+  ],
+  "claim_checks": [
+    {
+      "area": "All numeric identity and horizons",
+      "result": "Verified Treasury 2Y 4.50%, 10Y 4.20%, -30 bps and twenty-observation -31/-19/+12 bps with inverted bull steepening. Checked every quoted completed 2024-07-11 market value and signed return against its exact instrument/horizon: Russell 2000 index +3.57% differs from IWM +3.59%; Nasdaq 100 -2.24% differs from S&P 500 -0.88%; Tesla 241.03/-8.44%/+41.23% and AMD 181.94/-1.10%/+14.46% retain their own identities. Local Polish PLN tracker/banks, Asian indices, sector ETFs, DXY, credit ETFs, TLT, gold futures 2421.90 USD/oz and GDX 38.09/+12.86% matched correct card lines. Bitcoin/Ether use completed 2024-07-11 UTC daily observations, not equity-session comparisons. No numeric spot FX or split-unit error."
+    },
+    {
+      "area": "Release timing and every cited full title",
+      "result": "Read all 81 cited full headlines. June US inflation is already released; bank reporting and China loan release remain pending. Delta/AP profit result is separated from Reuters pricing outlook; TCS result retains demand uncertainty; PepsiCo reported quarterly revenue and Conagra projected annual results are distinguished. TSMC revenue is actual sales evidence, not complete earnings. Every ordinary company/political/trade headline fits seven-day eligibility, with macro baseline interpretation kept within the allowed wider window. No later actual data or outcome was used."
+    },
+    {
+      "area": "Session order, corporate actions and roles",
+      "result": "Nikkei and Australian local closes explicitly precede later US inflation/currency developments and are not called reactions to them. Costco’s July 11 reported fall is a later observable response, distinct from the earlier regular session. MicroStrategy split is announcement only; Broadcom scheduled split changes share units, not enterprise earning power; no post-split price is mixed with pre-split quotes. CFTC chair’s characterization is attributed and does not settle all regulation. Yen intervention remains speculation, not conclusive official action. YouTube remains an internal business, not separately quoted stock."
+    },
+    {
+      "area": "Price versus flow, legal status and actions",
+      "result": "Russell/Nasdaq relative performance is a price rotation without invented transferred capital or seller identities. IIF portfolio inflows, Indian mutual-fund inflows, Goldman hedge-fund commodity buying and tech-heavy funds retain their distinct scopes. HYG/LQD are ETF prices, not spread or subscriptions. R&F petition and Polish retail searches do not become final legal outcomes. China cash-management tool and short-selling curbs are not private lending or profit growth. Bullish US/real-estate/utilities and selected AMD/Costco calls require financing/retention/commercial confirmation; mixed semiconductors/technology and bearish autos retain coherent reversal conditions."
+    }
+  ],
+  "style_depth": {
+    "assessment": "All 36 blocks have concrete evidence, causal comparisons, contradictory signals and practical triggers. CN connects merchant price wars, batteries, cash management, expected lending, local housing connectivity, tariffs and product localization without claiming a broad recovery. PL compares Pepco, Allegro and Budimex cash requirements with housing yields, wages, governance and actual security financing. The global section distinguishes a one-session price rotation from measured allocations; scenarios need earnings and refinancing confirmation. No major premise or story replacement was required.",
+    "limits": "The review validates the full quoted headline propositions and completed own-card observations; it does not infer article bodies, private trading books, later releases or future operating outcomes."
+  },
+  "scope": {
+    "parts_reviewed": 136,
+    "titles_and_labels_reviewed": true,
+    "all_cited_full_headlines_reviewed": true,
+    "own_date_only": true,
+    "excluded_records": 0,
+    "other_dates_used_as_evidence": false,
+    "retail_reviewed_or_changed": false,
+    "minor_targeted_changes_only": true
+  },
+  "paragraph_checks": [
+    {
+      "path": "geo[0].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n2343",
+        "n2273",
+        "n2318"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[0].parts[1]",
+      "label": "Rates & Curve",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[0].parts[2]",
+      "label": "New / Most Important",
+      "evidence_ids": [
+        "n2123"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[0].parts[3]",
+      "label": "Playbook ✓",
+      "evidence_ids": [
+        "n2344"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[1].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n2345"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[1].parts[1]",
+      "label": "Activity & Inflation",
+      "evidence_ids": [
+        "n1446",
+        "n1441"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[1].parts[2]",
+      "label": "New / Most Important",
+      "evidence_ids": [
+        "n1447",
+        "n1442"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[1].parts[3]",
+      "label": "Playbook ✓",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[2].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n0195"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[2].parts[1]",
+      "label": "PMIs & Activity",
+      "evidence_ids": [
+        "n0160",
+        "n0163"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[2].parts[2]",
+      "label": "Credit Impulse",
+      "evidence_ids": [
+        "n0206",
+        "n0147",
+        "n0162"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[2].parts[3]",
+      "label": "Property",
+      "evidence_ids": [
+        "n0146",
+        "n0143"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[2].parts[4]",
+      "label": "Fiscal, Policy & Trade",
+      "evidence_ids": [
+        "n0205",
+        "n0189"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[2].parts[5]",
+      "label": "Markets & Flows",
+      "evidence_ids": [
+        "n0180"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[2].parts[6]",
+      "label": "New / Most Important",
+      "evidence_ids": [
+        "n0204",
+        "n0196"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[2].parts[7]",
+      "label": "Playbook ✓",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[3].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n1607",
+        "n1615"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[3].parts[1]",
+      "label": "Activity & Currency",
+      "evidence_ids": [
+        "n1604",
+        "n1614"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[3].parts[2]",
+      "label": "Playbook ✓",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[4].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n0090",
+        "n0079"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[4].parts[1]",
+      "label": "Demand & Financing",
+      "evidence_ids": [
+        "n0083",
+        "n0065"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[4].parts[2]",
+      "label": "Playbook ✓",
+      "evidence_ids": [
+        "n0091"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[5].parts[0]",
+      "label": "Macro Stance",
+      "evidence_ids": [
+        "n1898"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[5].parts[1]",
+      "label": "Markets",
+      "evidence_ids": [
+        "n1843"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[5].parts[2]",
+      "label": "Fiscal & Politics",
+      "evidence_ids": [
+        "n1895",
+        "n1896"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[5].parts[3]",
+      "label": "Corporate & Sectors",
+      "evidence_ids": [
+        "n1912",
+        "n1861",
+        "n1865"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[5].parts[4]",
+      "label": "Geopolitics & Security",
+      "evidence_ids": [
+        "n1812",
+        "n1629"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[5].parts[5]",
+      "label": "New / Most Important",
+      "evidence_ids": [
+        "n1848",
+        "n1868",
+        "n1893",
+        "n1831",
+        "n1823"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "geo[5].parts[6]",
+      "label": "Playbook ✓",
+      "evidence_ids": [
+        "n1764"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[0].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[0].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1335"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[0].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[0].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[1].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[1].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1331"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[1].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[1].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[2].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[2].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1328",
+        "n0975"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[2].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[2].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[3].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[3].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n2119",
+        "n1094"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[3].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[3].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[4].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[4].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1349",
+        "n1345"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[4].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[4].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[5].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[5].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1080"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[5].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[5].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[6].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[6].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n1357",
+        "n0990"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[6].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[6].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[7].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[7].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n2077",
+        "n1051"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[7].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[7].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[8].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[8].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n0181",
+        "n2346"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[8].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[8].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[9].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[9].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n0923"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[9].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[9].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[10].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[10].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n2097",
+        "n1447"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[10].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[10].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[11].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [
+        "n2103"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[11].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n0205"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[11].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[11].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[12].parts[0]",
+      "label": "Narrative",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[12].parts[1]",
+      "label": "Reported",
+      "evidence_ids": [
+        "n0677"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[12].parts[2]",
+      "label": "EPS Upside Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "sectors[12].parts[3]",
+      "label": "⚡ Breaking Convention",
+      "evidence_ids": [
+        "n0981"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "earnings_pattern.parts[0]",
+      "label": "Rewarded",
+      "evidence_ids": [
+        "n1350",
+        "n1912"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "earnings_pattern.parts[1]",
+      "label": "Punished",
+      "evidence_ids": [
+        "n0998",
+        "n1357"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "earnings_pattern.parts[2]",
+      "label": "Pattern",
+      "evidence_ids": [
+        "n0994"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "earnings_pattern.parts[3]",
+      "label": "Attention into EPS",
+      "evidence_ids": [
+        "n1328"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "earnings_pattern.parts[4]",
+      "label": "Playbook",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "underowned[0].parts[0]",
+      "label": "Attention Gap",
+      "evidence_ids": [
+        "n2123"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "underowned[0].parts[1]",
+      "label": "Exposure & Risk",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "underowned[0].parts[2]",
+      "label": "Trigger to Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "underowned[1].parts[0]",
+      "label": "Attention Gap",
+      "evidence_ids": [
+        "n2346"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "underowned[1].parts[1]",
+      "label": "Exposure & Risk",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "underowned[1].parts[2]",
+      "label": "Trigger to Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "underowned[2].parts[0]",
+      "label": "Attention Gap",
+      "evidence_ids": [
+        "n1350"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "underowned[2].parts[1]",
+      "label": "Exposure & Risk",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "underowned[2].parts[2]",
+      "label": "Trigger to Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "underowned[3].parts[0]",
+      "label": "Attention Gap",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "underowned[3].parts[1]",
+      "label": "Exposure & Risk",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "underowned[3].parts[2]",
+      "label": "Trigger to Watch",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "crypto.parts[0]",
+      "label": "Market Context",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "crypto.parts[1]",
+      "label": "New / Most Important",
+      "evidence_ids": [
+        "n1072",
+        "n1179",
+        "n1168"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "crypto.parts[2]",
+      "label": "Playbook",
+      "evidence_ids": [
+        "n0978"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "flows.parts[0]",
+      "label": "Global Liquidity",
+      "evidence_ids": [
+        "n2348"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "flows.parts[1]",
+      "label": "Rates & Dollar",
+      "evidence_ids": [
+        "n2343"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "flows.parts[2]",
+      "label": "Credit Check",
+      "evidence_ids": [
+        "n0923",
+        "n1459"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "flows.parts[3]",
+      "label": "Equity & Fund Flows",
+      "evidence_ids": [
+        "n1474",
+        "n1466",
+        "n0439",
+        "n1462"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "flows.parts[4]",
+      "label": "Portfolio Implication",
+      "evidence_ids": [
+        "n1446",
+        "n1471"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "anticipatory[0].parts[0]",
+      "label": "What Is Priced",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "anticipatory[0].parts[1]",
+      "label": "Conditional Expression",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "anticipatory[0].parts[2]",
+      "label": "Risk",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "anticipatory[1].parts[0]",
+      "label": "What Is Priced",
+      "evidence_ids": [
+        "n1328"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "anticipatory[1].parts[1]",
+      "label": "Conditional Expression",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "anticipatory[1].parts[2]",
+      "label": "Risk",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "anticipatory[2].parts[0]",
+      "label": "What Is Priced",
+      "evidence_ids": [
+        "n0162"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "anticipatory[2].parts[1]",
+      "label": "Conditional Expression",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "anticipatory[2].parts[2]",
+      "label": "Risk",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "anticipatory[3].parts[0]",
+      "label": "What Is Priced",
+      "evidence_ids": [
+        "n2343"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "anticipatory[3].parts[1]",
+      "label": "Conditional Expression",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "anticipatory[3].parts[2]",
+      "label": "Risk",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[0].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n1349",
+        "n1345"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[0].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[0].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[1].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n1357"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[1].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [
+        "n1051"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[1].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[2].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n0994"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[2].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[2].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[3].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n1335"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[3].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[3].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[4].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n0990"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[4].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[4].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[5].parts[0]",
+      "label": "Catalyst & Thesis",
+      "evidence_ids": [
+        "n1080"
+      ],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[5].parts[1]",
+      "label": "Price Hurdle & Risk",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    },
+    {
+      "path": "catalysts[5].parts[2]",
+      "label": "Trade Expression",
+      "evidence_ids": [],
+      "review": "Read full paragraph and verified own-date proposition, citation scope, release timing, market number identity/horizon and action consistency."
+    }
+  ],
+  "cited_headlines_checked": [
+    {
+      "id": "n0065",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "ABC News & Headlines – Australian Broadcasting Corporation",
+      "title": "'Nasty' inflation numbers could deliver a rate rise despite retail discounting frenzy - ABC News & Headlines – Australian Broadcasting Corporation",
+      "uses": 1
+    },
+    {
+      "id": "n0079",
+      "published_at": "2024-07-10T07:00:00+00:00",
+      "source": "AFR",
+      "title": "Higher prices for Australian consumers and business as shipping crises ‘spanner in the works’ for inflation fight - AFR",
+      "uses": 1
+    },
+    {
+      "id": "n0083",
+      "published_at": "2024-07-10T07:00:00+00:00",
+      "source": "ABC News & Headlines – Australian Broadcasting Corporation",
+      "title": "The Aussie dollar has hit a six-month high — and some analysts predict it could get stronger - ABC News & Headlines – Australian Broadcasting Corporation",
+      "uses": 1
+    },
+    {
+      "id": "n0090",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "AFR",
+      "title": "Port costs raise inflation fears, leave luxe cars in the slow lane - AFR",
+      "uses": 1
+    },
+    {
+      "id": "n0091",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "AFR",
+      "title": "Two things have killed the post-pandemic job-switching boom - AFR",
+      "uses": 1
+    },
+    {
+      "id": "n0143",
+      "published_at": "2024-07-07T07:00:00+00:00",
+      "source": "South China Morning Post",
+      "title": "Zhongshan flats are hot as Hongkongers flock in on Shenzhen bridge - South China Morning Post",
+      "uses": 1
+    },
+    {
+      "id": "n0146",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "China's Guangzhou R&F Properties faces liquidation petition in Hong Kong - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0147",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "South China Morning Post",
+      "title": "China’s central bank takes extra control of interest rates amid reform push - South China Morning Post",
+      "uses": 1
+    },
+    {
+      "id": "n0160",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "China June consumer inflation misses forecasts amid anaemic demand - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0162",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "China's June new yuan loans seen surging on supportive policy: Reuters poll - Reuters",
+      "uses": 2
+    },
+    {
+      "id": "n0163",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Bloomberg",
+      "title": "China’s Batteries Are Now Cheap Enough to Power Huge Shifts - Bloomberg",
+      "uses": 1
+    },
+    {
+      "id": "n0180",
+      "published_at": "2024-07-10T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "China announces more short-selling curbs to stabilise stocks - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0181",
+      "published_at": "2024-07-10T07:00:00+00:00",
+      "source": "Mining.com",
+      "title": "Column: China’s refined copper imports remain surprisingly strong - Mining.com",
+      "uses": 1
+    },
+    {
+      "id": "n0189",
+      "published_at": "2024-07-10T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "US, Mexico move to thwart China circumvention of tariffs - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0195",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "China's relentless e-commerce price war leaves sellers struggling to make ends meet - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0196",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "WSJ",
+      "title": "China’s Economy Is Flagging. A Five-Year Plan Seeks to Change That. - WSJ",
+      "uses": 1
+    },
+    {
+      "id": "n0204",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "Samsung is developing AI features specifically for China as it looks to claw back into market - CNBC",
+      "uses": 1
+    },
+    {
+      "id": "n0205",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Tesla hikes Model 3 prices in Europe due to tariffs on China-made EVs - Reuters",
+      "uses": 2
+    },
+    {
+      "id": "n0206",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Why does China's central bank have a new cash management tool? - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0439",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "HEDGE FLOW Hedge funds buy commodity stocks at fastest pace in five months, says Goldman - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0677",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "TSMC Q2 revenue jumps on AI boost, handily beats market forecasts - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n0923",
+      "published_at": "2024-07-10T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "US regional banks to face increased scrutiny as CRE exposure stifles buybacks - Reuters",
+      "uses": 2
+    },
+    {
+      "id": "n0975",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Fortune",
+      "title": "Bank stocks like Goldman Sachs are suddenly soaring—and helping power an 18% stock market rally this year - Fortune",
+      "uses": 1
+    },
+    {
+      "id": "n0978",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "CoinDesk",
+      "title": "Bitcoin Miner Ionic Digital Hires CFO to Shepherd IPO - CoinDesk",
+      "uses": 1
+    },
+    {
+      "id": "n0981",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "The Motley Fool",
+      "title": "Broadcom Will Execute Its 10-for-1 Stock Split on July 12. History Says the AI Semiconductor Stock Will Do This Next. - The Motley Fool",
+      "uses": 1
+    },
+    {
+      "id": "n0990",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Conagra Brands projects lower annual sales, profit on tepid demand recovery - Reuters",
+      "uses": 2
+    },
+    {
+      "id": "n0994",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Fortune",
+      "title": "Costco stock falls despite membership fee increase, strong sales report - Fortune",
+      "uses": 2
+    },
+    {
+      "id": "n0998",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "WSJ",
+      "title": "Delta Earnings: Sagging Profit Signals Trouble for Airlines This Summer - WSJ",
+      "uses": 1
+    },
+    {
+      "id": "n1051",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Yahoo Finance",
+      "title": "PepsiCo CEO: GLP-1 drugs are 'not impacting us' - Yahoo Finance",
+      "uses": 2
+    },
+    {
+      "id": "n1072",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Software firm MicroStrategy announces 10-for-1 stock split - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1080",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "CNBC",
+      "title": "Tesla shares close down 8% after report of robotaxi unveiling delay - CNBC",
+      "uses": 2
+    },
+    {
+      "id": "n1094",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "US announces record oil and gas pollution penalty against Marathon Oil - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1168",
+      "published_at": "2024-07-10T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Donald Trump to address Bitcoin 2024 conference on July 27 - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1179",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Yahoo Finance",
+      "title": "CFTC Chair Reiterated to U.S. Senate that Bitcoin and Ethereum Are Commodities - Yahoo Finance",
+      "uses": 1
+    },
+    {
+      "id": "n1328",
+      "published_at": "2024-07-10T07:00:00+00:00",
+      "source": "WSJ",
+      "title": "What to Watch When Bank Earnings Season Kicks Off, in 10 Charts - WSJ",
+      "uses": 3
+    },
+    {
+      "id": "n1331",
+      "published_at": "2024-07-10T07:00:00+00:00",
+      "source": "Bloomberg.com",
+      "title": "YouTube Is a $455 Billion Media Giant Hiding in Plain Sight - Bloomberg.com",
+      "uses": 1
+    },
+    {
+      "id": "n1335",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Forbes",
+      "title": "AMD Buys Silo AI For $665 Million, Captions Raises $60 Million, New AI Video Tools - Forbes",
+      "uses": 2
+    },
+    {
+      "id": "n1345",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Delta sees improvement in pricing power after discounting pressure hits Q3 outlook - Reuters",
+      "uses": 2
+    },
+    {
+      "id": "n1349",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "AP News",
+      "title": "Higher costs and low base fares send Delta's profit down 29%. The airline still earned $1.31 billion - AP News",
+      "uses": 2
+    },
+    {
+      "id": "n1350",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "India's TCS beats Q1 view, flags persistent demand uncertainty - Reuters",
+      "uses": 2
+    },
+    {
+      "id": "n1357",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "PepsiCo quarterly revenue disappoints on slowing sales of snacks, beverages - Reuters",
+      "uses": 3
+    },
+    {
+      "id": "n1441",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Barry Callebaut slides as high cocoa prices trigger more debt - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1442",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Germany awards tender to Fertiglobe for green ammonia from Egypt - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1446",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Financial Times",
+      "title": "How bonds became a serious investment choice again - Financial Times",
+      "uses": 2
+    },
+    {
+      "id": "n1447",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "London stocks end higher on boost from utilities - Reuters",
+      "uses": 2
+    },
+    {
+      "id": "n1459",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Bloomberg",
+      "title": "Key Scarcity Indicator Flashes Warning Sign for Funding Market - Bloomberg",
+      "uses": 1
+    },
+    {
+      "id": "n1462",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "WSJ",
+      "title": "The Top Stock Mutual Funds Have a Familiar, Tech-Heavy Feel - WSJ",
+      "uses": 1
+    },
+    {
+      "id": "n1466",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "India's equity mutual fund inflows hit record high in June, data shows - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1471",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Bloomberg.com",
+      "title": "Trafigura Wrestles With Huge Share Buyback Bill as Boom Fades - Bloomberg.com",
+      "uses": 1
+    },
+    {
+      "id": "n1474",
+      "published_at": "2024-07-10T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Asia leads as EM portfolios see 8th consecutive month of inflows -IIF - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1604",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "BOJ survey shows wage growth spreading among small, medium Japanese firms - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1607",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Japanese yen surges, ringing intervention alarm bells - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1614",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Uniqlo owner lifts forecast again as weak yen powers sales from tourists - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n1615",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Bloomberg.com",
+      "title": "Yen Is Volatile as Central Bank Rate Checks Fuel Intervention Speculation - Bloomberg.com",
+      "uses": 1
+    },
+    {
+      "id": "n1629",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "U.S. Department of State (.gov)",
+      "title": "Second $2 Billion U.S.-Poland Foreign Military Financing Direct Loan Strengthens NATO - U.S. Department of State (.gov)",
+      "uses": 1
+    },
+    {
+      "id": "n1764",
+      "published_at": "2024-07-08T07:00:00+00:00",
+      "source": "Money.pl",
+      "title": "Biedronka i Dino będą miały problem? Przeszukano siedziby firm - Money.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1812",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Rzeczpospolita",
+      "title": "Andrzej Duda: Polska będzie zagrożona, jeśli Ukraina upadnie i Rosja wygra wojnę - Rzeczpospolita",
+      "uses": 1
+    },
+    {
+      "id": "n1823",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Parkiet",
+      "title": "Coraz bogatsza globalna oferta. Akcje gigantów trafiły na GPW - Parkiet",
+      "uses": 1
+    },
+    {
+      "id": "n1831",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Strefa Inwestorów",
+      "title": "GPW chce zrewitalizować NewConnect, by przyciągać spółki z portfeli venture capital - Strefa Inwestorów",
+      "uses": 1
+    },
+    {
+      "id": "n1843",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Forex Club",
+      "title": "Polski złoty najsilniejszy od miesiąca. Polityka monetarna NBP i FED - Forex Club",
+      "uses": 1
+    },
+    {
+      "id": "n1848",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Money.pl",
+      "title": "Tak wygląda ochłodzenie na rynku nieruchomości. Transakcji ubywa, wzrost cen hamuje - Money.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1861",
+      "published_at": "2024-07-10T07:00:00+00:00",
+      "source": "Bankier.pl",
+      "title": "Allegro wprowadza na czeski rynek automaty paczkowe One Box - Bankier.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1865",
+      "published_at": "2024-07-10T07:00:00+00:00",
+      "source": "wnp.pl",
+      "title": "Budimex wygrał przetarg na strategiczną drogę. Kwota robi wrażenie - wnp.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1868",
+      "published_at": "2024-07-10T07:00:00+00:00",
+      "source": "Bankier.pl",
+      "title": "Ceny mieszkań i najmu w Trójmieście rozjeżdżają się. Stopa zwrotu spada, ale ze szczytu - Bankier.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1893",
+      "published_at": "2024-07-10T07:00:00+00:00",
+      "source": "Business Insider Polska",
+      "title": "Wrze w najlepszej polskiej kopalni. Górnicy chcą podwyżek, boją się o miejsca pracy - Business Insider Polska",
+      "uses": 1
+    },
+    {
+      "id": "n1895",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Bankier.pl",
+      "title": "Były prezes GPW nie otrzymał absolutorium za rok 2023 - Bankier.pl",
+      "uses": 1
+    },
+    {
+      "id": "n1896",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Parkiet",
+      "title": "Czy Cezary Stypułkowski sprawdzi się w roli prezesa Pekao - Parkiet",
+      "uses": 1
+    },
+    {
+      "id": "n1898",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Obserwator Finansowy",
+      "title": "DABE NBP: Inflacja wróci do celu w 2026 roku - Obserwator Finansowy",
+      "uses": 1
+    },
+    {
+      "id": "n1912",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "wnp.pl",
+      "title": "Pepco poprawia wyniki i spodziewa się, że będzie jeszcze lepiej - wnp.pl",
+      "uses": 2
+    },
+    {
+      "id": "n2077",
+      "published_at": "2024-07-10T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Exclusive: Most patients stop using Wegovy, Ozempic for weight loss within two years - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n2097",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "The New York Times",
+      "title": "A.I.’s Insatiable Appetite for Energy (Published 2024) - The New York Times",
+      "uses": 1
+    },
+    {
+      "id": "n2103",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "China's Hongqi to launch two electric cars in Europe this year - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n2119",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Nigeria reaches oil supply deal, ending dispute with producers - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n2123",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "TradingView",
+      "title": "Small Cap Breakout: Can it Finally Stick? - TradingView",
+      "uses": 2
+    },
+    {
+      "id": "n2273",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "WSJ",
+      "title": "Milder Inflation Opens Door Wider to September Rate Cut - WSJ",
+      "uses": 1
+    },
+    {
+      "id": "n2318",
+      "published_at": "2024-07-09T07:00:00+00:00",
+      "source": "Axios",
+      "title": "High inflation no longer the only risk for U.S. economy, Fed chair Jerome Powell says - Axios",
+      "uses": 1
+    },
+    {
+      "id": "n2343",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Dollar drops, yen surges as consumer prices fall in June - Reuters",
+      "uses": 3
+    },
+    {
+      "id": "n2344",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Reuters",
+      "title": "Fed's Goolsbee says US economy looks back on track to 2% inflation - Reuters",
+      "uses": 1
+    },
+    {
+      "id": "n2345",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Financial Times",
+      "title": "French central bank chief warns of political uncertainty ‘shock’ - Financial Times",
+      "uses": 1
+    },
+    {
+      "id": "n2346",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "FXStreet",
+      "title": "Gold price rallies and surpasses $2,400 on tempered US inflation - FXStreet",
+      "uses": 2
+    },
+    {
+      "id": "n2348",
+      "published_at": "2024-07-11T07:00:00+00:00",
+      "source": "Axios",
+      "title": "Rate cut expectations spike - Axios",
+      "uses": 1
+    }
+  ],
+  "nonretail_content_sha256": "d9b80cb689ee643430c2c1e044ed71e03fef129f98dd2adcd9c1b2c8ae869ad6",
+  "digest_compatibility": {
+    "diagnosis": "Receipt key-name compatibility only. The staging key was absent; the original reviewed canonical digest and tools.merge_retail.digest(current_nonretail) are identical. No report value or report byte is changed by this repair.",
+    "original_review_receipt": "audit/review_history/digest_compatibility_independent_nonretail_2024-07-12.original.json",
+    "original_review_receipt_sha256": "b452d12f608f789a7c7ea7c713b1bf0303137ad30dee2fdfeedc08cdfe413587",
+    "previous_nonretail_content_sha256_present": false,
+    "original_canonical_nonretail_sha256": "d9b80cb689ee643430c2c1e044ed71e03fef129f98dd2adcd9c1b2c8ae869ad6",
+    "current_merge_digest": "d9b80cb689ee643430c2c1e044ed71e03fef129f98dd2adcd9c1b2c8ae869ad6",
+    "digests_equal": true,
+    "serialization_algorithm": "sha256(json.dumps(nr, sort_keys=True, ensure_ascii=False, separators=(comma,colon)).encode())",
+    "current_nonretail_draft_sha256": "78b5149c863bb65c3c3affacc1c8c7a458a03f71e7fbaf6e06ba4a0016cb06d0",
+    "current_raw_bytes_equal_review_save_format": true,
+    "review_save_format": "json.dumps(nr, ensure_ascii=False, indent=2) followed by one newline",
+    "draft_mtime_ns": 1793882786235978262,
+    "original_review_receipt_mtime_ns": 1793882824986185448,
+    "draft_mtime_precedes_original_review_receipt": true,
+    "raw_history_limit": "The original review receipt stored the canonical content digest, not a historical raw-file digest. Exact reviewed JSON value continuity is established cryptographically; current raw representation also matches the review-save format and the draft mtime predates its original review receipt. The expected staging key aliases the existing reviewed digest rather than rebinding changed content.",
+    "report_edited": false
+  }
+}

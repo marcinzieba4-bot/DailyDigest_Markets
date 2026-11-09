@@ -1,0 +1,18 @@
+{
+ "ticker": "PLTR",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PLTR?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "aa6421949f8cad459cd62c0db8d487aad27d37da2562f5d35b43d8a3404aee36",
+   "fetched_at_utc": "2026-11-05T10:38:47.339653+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PLTR?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "7673a938de0c50ed18b04c054bc2d31c37b6124415190cc9c39dab513b361fdb",
+   "fetched_at_utc": "2026-11-05T10:38:47.647494+00:00"
+  }
+ ]
+}

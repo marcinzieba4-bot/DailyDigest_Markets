@@ -1,0 +1,18 @@
+{
+ "ticker": "^HSI",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EHSI?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "de7af069273c1cd76242fb08e2a4289a086b5e2aea907d7f2cda792d3420ed43",
+   "fetched_at_utc": "2026-11-05T10:38:42.181819+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EHSI?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "5dd14066630040b2c76d69d2b592d07b1858babc4232163d1945f1264a567f9d",
+   "fetched_at_utc": "2026-11-05T10:38:42.599406+00:00"
+  }
+ ]
+}

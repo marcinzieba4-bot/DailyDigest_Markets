@@ -1,0 +1,1285 @@
+{
+  "purpose": "Independent fixed-scope synthetic release-boundary tests and exact actual-record omission checks; no authoring acceptance.",
+  "release_schedule_sha256": "ec0affb8cf6d2e518d655e9fafd76c6d5b7ac56db1548962b1d6e95be7f2ec7d",
+  "screening_tool_sha256": "17ba7efe7b6bf89d67899b605f5507d3cfebc21227473103b29b33600ff8a5e4",
+  "named_exclusions_sha256": "06aba4eb3f84a714a7d429cf46641cd01c4b2b6245ec39a5a8010e87f9de6888",
+  "cases": [
+    {
+      "case": "Tankan before July1 cutoff",
+      "synthetic_title": "Japan Tankan confidence rises",
+      "published_date": "2024-06-30",
+      "edition": "2024-07-01",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "Manufacturing PMI after July1 cutoff",
+      "synthetic_title": "Japan June final manufacturing PMI rises",
+      "published_date": "2024-06-30",
+      "edition": "2024-07-01",
+      "expected_excluded": true,
+      "actual_guard": "Japan June final manufacturing PMI",
+      "pass": true
+    },
+    {
+      "case": "Manufacturing PMI next cutoff",
+      "synthetic_title": "Japan June final manufacturing PMI rises",
+      "published_date": "2024-07-01",
+      "edition": "2024-07-02",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "Services PMI after July3 cutoff",
+      "synthetic_title": "Japan June final services PMI falls",
+      "published_date": "2024-07-02",
+      "edition": "2024-07-03",
+      "expected_excluded": true,
+      "actual_guard": "Japan June final services PMI",
+      "pass": true
+    },
+    {
+      "case": "Services PMI next cutoff",
+      "synthetic_title": "Japan June final services PMI falls",
+      "published_date": "2024-07-03",
+      "edition": "2024-07-04",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "Flash PMI after July24 cutoff",
+      "synthetic_title": "Japan July flash PMI falls",
+      "published_date": "2024-07-23",
+      "edition": "2024-07-24",
+      "expected_excluded": true,
+      "actual_guard": "July flash PMI Japan",
+      "pass": true
+    },
+    {
+      "case": "Flash PMI next cutoff",
+      "synthetic_title": "Japan July flash PMI falls",
+      "published_date": "2024-07-24",
+      "edition": "2024-07-25",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "Wages before July8 cutoff",
+      "synthetic_title": "Japan May wages rise",
+      "published_date": "2024-07-07",
+      "edition": "2024-07-08",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "GUS wages before release day",
+      "synthetic_title": "Poland June wages rise, GUS says",
+      "published_date": "2024-07-17",
+      "edition": "2024-07-18",
+      "expected_excluded": true,
+      "actual_guard": "Poland June enterprise wages and employment",
+      "pass": true
+    },
+    {
+      "case": "GUS wages next cutoff",
+      "synthetic_title": "Poland June wages rise, GUS says",
+      "published_date": "2024-07-18",
+      "edition": "2024-07-19",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "GUS output before release day",
+      "synthetic_title": "GUS: Produkcja przemysłowa w czerwcu wzrosła",
+      "published_date": "2024-07-17",
+      "edition": "2024-07-18",
+      "expected_excluded": true,
+      "actual_guard": "Poland June industry and producer prices",
+      "pass": true
+    },
+    {
+      "case": "GUS output next cutoff",
+      "synthetic_title": "GUS: Produkcja przemysłowa w czerwcu wzrosła",
+      "published_date": "2024-07-18",
+      "edition": "2024-07-19",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "GUS retail before release day",
+      "synthetic_title": "GUS: Sprzedaż detaliczna w czerwcu wzrosła",
+      "published_date": "2024-07-19",
+      "edition": "2024-07-22",
+      "expected_excluded": true,
+      "actual_guard": "Poland June retail sales",
+      "pass": true
+    },
+    {
+      "case": "GUS retail next cutoff",
+      "synthetic_title": "GUS: Sprzedaż detaliczna w czerwcu wzrosła",
+      "published_date": "2024-07-22",
+      "edition": "2024-07-23",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "GUS unemployment before release day",
+      "synthetic_title": "GUS podał dane o bezrobociu w czerwcu",
+      "published_date": "2024-07-22",
+      "edition": "2024-07-23",
+      "expected_excluded": true,
+      "actual_guard": "Poland June unemployment",
+      "pass": true
+    },
+    {
+      "case": "GUS unemployment next cutoff",
+      "synthetic_title": "GUS podał dane o bezrobociu w czerwcu",
+      "published_date": "2024-07-23",
+      "edition": "2024-07-24",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "GUS forecast remains a forecast",
+      "synthetic_title": "GUS: prognoza sprzedaży detalicznej w czerwcu",
+      "published_date": "2024-07-19",
+      "edition": "2024-07-22",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "Exit-poll outcome before publication",
+      "synthetic_title": "Labour exit poll forecasts landslide",
+      "published_date": "2024-07-03",
+      "edition": "2024-07-04",
+      "expected_excluded": true,
+      "actual_guard": "UK election exit poll projection",
+      "pass": true
+    },
+    {
+      "case": "Exit-poll projection eligible July5",
+      "synthetic_title": "Labour exit poll forecasts landslide",
+      "published_date": "2024-07-04",
+      "edition": "2024-07-05",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "Exit-poll preview preserved",
+      "synthetic_title": "UK exit poll preview: what to expect",
+      "published_date": "2024-07-03",
+      "edition": "2024-07-04",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "UK named PM actual mixed with projection",
+      "synthetic_title": "UK exit poll forecasts Labour landslide; Starmer is named prime minister",
+      "published_date": "2024-07-04",
+      "edition": "2024-07-05",
+      "expected_excluded": true,
+      "actual_guard": "UK settled election result and PM appointment",
+      "pass": true
+    },
+    {
+      "case": "UK concession actual mixed with projection",
+      "synthetic_title": "UK exit poll projects Labour landslide as Sunak concedes defeat",
+      "published_date": "2024-07-04",
+      "edition": "2024-07-05",
+      "expected_excluded": true,
+      "actual_guard": "UK settled election result and PM appointment",
+      "pass": true
+    },
+    {
+      "case": "UK sworn-in actual mixed with projection",
+      "synthetic_title": "UK exit poll projects Labour landslide, Starmer sworn in as prime minister",
+      "published_date": "2024-07-04",
+      "edition": "2024-07-05",
+      "expected_excluded": true,
+      "actual_guard": "UK settled election result and PM appointment",
+      "pass": true
+    },
+    {
+      "case": "UK actual becomes with intervening country",
+      "synthetic_title": "UK exit poll predicts Labour landslide; Starmer becomes Britain’s prime minister",
+      "published_date": "2024-07-04",
+      "edition": "2024-07-05",
+      "expected_excluded": true,
+      "actual_guard": "UK settled election result and PM appointment",
+      "pass": true
+    },
+    {
+      "case": "UK actual concession with election noun",
+      "synthetic_title": "UK exit poll projects Labour landslide after Sunak concedes the election",
+      "published_date": "2024-07-04",
+      "edition": "2024-07-05",
+      "expected_excluded": true,
+      "actual_guard": "UK settled election result and PM appointment",
+      "pass": true
+    },
+    {
+      "case": "UK Downing Street actual with projection",
+      "synthetic_title": "UK exit poll projects Labour landslide; Starmer enters Downing Street",
+      "published_date": "2024-07-04",
+      "edition": "2024-07-05",
+      "expected_excluded": true,
+      "actual_guard": "UK settled election result and PM appointment",
+      "pass": true
+    },
+    {
+      "case": "Meta top estimates actual",
+      "synthetic_title": "Meta earnings top estimates on advertising strength",
+      "published_date": "2024-07-30",
+      "edition": "2024-07-31",
+      "expected_excluded": true,
+      "actual_guard": "Meta Qualcomm Arm Boeing Mastercard quarterly outcome",
+      "pass": true
+    },
+    {
+      "case": "Meta soars doubles actual",
+      "synthetic_title": "Meta profit soars as advertising revenue doubles",
+      "published_date": "2024-07-30",
+      "edition": "2024-07-31",
+      "expected_excluded": true,
+      "actual_guard": "Meta Qualcomm Arm Boeing Mastercard quarterly outcome",
+      "pass": true
+    },
+    {
+      "case": "Microsoft Q4 disappoints actual",
+      "synthetic_title": "Microsoft Q4 earnings: Azure growth disappoints",
+      "published_date": "2024-07-29",
+      "edition": "2024-07-30",
+      "expected_excluded": true,
+      "actual_guard": "Microsoft AMD Starbucks Pinterest Pfizer Merck P&G quarterly outcome",
+      "pass": true
+    },
+    {
+      "case": "ASML Q2 top forecasts actual",
+      "synthetic_title": "ASML Q2 earnings top forecasts",
+      "published_date": "2024-07-16",
+      "edition": "2024-07-17",
+      "expected_excluded": true,
+      "actual_guard": "ASML Johnson Johnson United Airlines quarterly outcome",
+      "pass": true
+    },
+    {
+      "case": "Meta surprise actual",
+      "synthetic_title": "Meta earnings surprise Wall Street",
+      "published_date": "2024-07-30",
+      "edition": "2024-07-31",
+      "expected_excluded": true,
+      "actual_guard": "Meta Qualcomm Arm Boeing Mastercard quarterly outcome",
+      "pass": true
+    },
+    {
+      "case": "Meta neutralised comparison actual",
+      "synthetic_title": "Meta earnings were better than expected",
+      "published_date": "2024-07-30",
+      "edition": "2024-07-31",
+      "expected_excluded": true,
+      "actual_guard": "Meta Qualcomm Arm Boeing Mastercard quarterly outcome",
+      "pass": true
+    },
+    {
+      "case": "Meta preview preserved",
+      "synthetic_title": "Meta earnings preview: what to expect",
+      "published_date": "2024-07-30",
+      "edition": "2024-07-31",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "ASML pre-result price move preserved",
+      "synthetic_title": "ASML shares rise ahead of earnings",
+      "published_date": "2024-07-16",
+      "edition": "2024-07-17",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "ASML completed result next cutoff",
+      "synthetic_title": "ASML Q2 earnings top forecasts",
+      "published_date": "2024-07-17",
+      "edition": "2024-07-18",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "Microsoft postclose result before its day cutoff",
+      "synthetic_title": "Microsoft reports quarterly earnings beat",
+      "published_date": "2024-07-29",
+      "edition": "2024-07-30",
+      "expected_excluded": true,
+      "actual_guard": "Microsoft AMD Starbucks Pinterest Pfizer Merck P&G quarterly outcome",
+      "pass": true
+    },
+    {
+      "case": "Microsoft postclose result next cutoff",
+      "synthetic_title": "Microsoft reports quarterly earnings beat",
+      "published_date": "2024-07-30",
+      "edition": "2024-07-31",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "AMD postclose result next cutoff",
+      "synthetic_title": "AMD reports earnings beat",
+      "published_date": "2024-07-30",
+      "edition": "2024-07-31",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "TSMC revenue before July10 release",
+      "synthetic_title": "TSMC Q2 revenue beats estimates",
+      "published_date": "2024-07-09",
+      "edition": "2024-07-10",
+      "expected_excluded": true,
+      "actual_guard": "TSMC June monthly revenue and Q2 aggregate",
+      "pass": true
+    },
+    {
+      "case": "TSMC revenue known July11",
+      "synthetic_title": "TSMC Q2 revenue beats estimates",
+      "published_date": "2024-07-10",
+      "edition": "2024-07-11",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "TSMC full profit pending July18",
+      "synthetic_title": "TSMC Q2 profit beats estimates",
+      "published_date": "2024-07-17",
+      "edition": "2024-07-18",
+      "expected_excluded": true,
+      "actual_guard": "TSMC Q2 profit and full-year outlook",
+      "pass": true
+    },
+    {
+      "case": "TSMC full profit known July19",
+      "synthetic_title": "TSMC Q2 profit beats estimates",
+      "published_date": "2024-07-18",
+      "edition": "2024-07-19",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "SK hynix premature actual July24",
+      "synthetic_title": "SK hynix reports Q2 profit",
+      "published_date": "2024-07-23",
+      "edition": "2024-07-24",
+      "expected_excluded": true,
+      "actual_guard": "SK hynix Q2 early-local earnings",
+      "pass": true
+    },
+    {
+      "case": "SK hynix early-local actual July25",
+      "synthetic_title": "SK hynix reports Q2 profit",
+      "published_date": "2024-07-24",
+      "edition": "2024-07-25",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "SK hynix preview preserved",
+      "synthetic_title": "SK hynix earnings preview: what to expect",
+      "published_date": "2024-07-23",
+      "edition": "2024-07-24",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "Samsung full result uncertain clock omitted",
+      "synthetic_title": "Samsung second-quarter results top estimates",
+      "published_date": "2024-07-30",
+      "edition": "2024-07-31",
+      "expected_excluded": true,
+      "actual_guard": "Samsung Electronics Q2 full result clock uncertain",
+      "pass": true
+    },
+    {
+      "case": "Samsung unrelated product news preserved",
+      "synthetic_title": "Samsung unveils Galaxy AI tools",
+      "published_date": "2024-07-04",
+      "edition": "2024-07-05",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "Fed July31 completed decision unavailable",
+      "synthetic_title": "Fed holds rates unchanged, September cut could follow",
+      "published_date": "2024-07-30",
+      "edition": "2024-07-31",
+      "expected_excluded": true,
+      "actual_guard": "FOMC July decision",
+      "pass": true
+    },
+    {
+      "case": "Fed July31 preview preserved",
+      "synthetic_title": "Fed expected to hold rates; stocks rise ahead of decision",
+      "published_date": "2024-07-30",
+      "edition": "2024-07-31",
+      "expected_excluded": false,
+      "actual_guard": null,
+      "pass": true
+    }
+  ],
+  "named_record_checks": [
+    {
+      "date": "2024-07-05",
+      "id": "n1053",
+      "raw_identity_matches_recommendation": true,
+      "unreviewed_sha256": "b134761b18904abab63b1dd60a2a234265841bbd4751ee099a394bc9fb6c7aad",
+      "excluded_by_current_screen": true,
+      "guard": "Uncertain original publisher version before own cutoff",
+      "pass": true
+    },
+    {
+      "date": "2024-07-31",
+      "id": "n1915",
+      "raw_identity_matches_recommendation": true,
+      "unreviewed_sha256": "6855b074973201f9686ccc5b12fc723790de78ac2f69281ba023ad652c0b87b9",
+      "excluded_by_current_screen": true,
+      "guard": "Uncertain original publisher version before own cutoff",
+      "pass": true
+    }
+  ],
+  "observed_preview_controls": [
+    {
+      "case": "Observed pending preview preserved",
+      "title": "Microsoft (MSFT) Analysis: Volatile Trading Day Signals Resistance, Await Earnings for Clarity - StockInvest.us",
+      "date": "2024-07-17",
+      "id": "n1340",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOanVTS3dsZmVSSnFMd3h5WkpxQThmYkh1c3lwcWlOS1BPSXpNWlRLMUl2RkhXQUMzV0RCcHNqenVtYTgxNmt5N19vY0NYVWhTNE9udDdKYUF2SE1qazUxR3p1eE1xVjBMNTNfeU5raWt5c1F3b203SlFKY2lNRzJydktzYlIwY2J5RzJvQ2RIUDcxeC1IOF9PZDJDWmNKUGlIYUlJOTdoTm5MZ0VXODhxNlVhMWpGazVjeE9rY1d3MXpWUQ?oc=5",
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "Observed pending preview preserved",
+      "title": "The 'great rotation' faces its biggest test yet: earnings from Microsoft, Meta, Apple and Amazon - CNBC",
+      "date": "2024-07-29",
+      "id": "n1577",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQU0RLd21yU2dVaGxabTVLaDBiQWUxSkxZZDdFWkcwTmsxeUFLWDZvMDBEME85a0t4YmdaYXE1a0hoSElGaDBBWUwxSlFrc0FJOXFUWTRISjhKbE43czBJczdsTmJfbFVHRFNEZklrRE5vRmVUM08ycHJ5MG5mWnAxa01NMnlENWI3T0FfUER6VXE2eFY3ZVdZRmNBaG43YVpaT3dhYkZkd3dadDNwenJ0ZnVRdXE?oc=5",
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "Observed pending preview preserved",
+      "title": "Microsoft’s earnings report will offer a new gauge for AI demand and cloud investments - GeekWire",
+      "date": "2024-07-30",
+      "id": "n0093",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNY1BvWURERFdVcV9FRTZSb2dJVnR2SmI4RGdlcmNUWWhLVHY4YmlXY2p0MW9YWGpmZ2JFNlVoRktVNWdhS0FBb2tUaFlLX0tCSzNFSXd2R0xqdEFUbENVYVBzVkNKak5GSDJ3RFVHbDVqZ09CZVdTa2dtVXJnbkhRejFpRW91cUFtekZiUHpteHZsUVUzY2JOZmFnS0dTblNOLTJIaGYtbFB1U1ZwYXJuaWVneFRPZGxU?oc=5",
+      "actual_guard": null,
+      "pass": true
+    },
+    {
+      "case": "Observed pending preview preserved",
+      "title": "TSMC second-quarter profit seen jumping 30% on surging AI chip demand - Reuters",
+      "date": "2024-07-15",
+      "id": "n1077",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbmxjMWpFRmhGSzZMSVlFdEdwNTlXN3AtYXNBdVdWNnN6YlViekJZZW9qZUpzV0VmRnZxXzVHWGlGeXhiRS1JZjY1ZDRmR2owaVNMM09HNzRDZll2MDlRdmVpMWctNDBkTGNYNE8yVmhtZUNpWnNiUWpBWHZPdzNuZnFtSWl3cHdqenJxLVpEX1FuUHhIUzUzN25VZVpKLWk2WmpvbUdSUHBaa1VnZnVQd05n?oc=5",
+      "actual_guard": null,
+      "pass": true
+    }
+  ],
+  "owner_regression_replay": {
+    "source_path": "audit_work/july_guard_regressions.json",
+    "source_sha256": "a7e63c44ac2d95614a71fde47734fdca79768dc3d1eacf41c20c3c96b1585b31",
+    "cases": [
+      {
+        "title": "UK exit poll predicts Labour landslide; Starmer becomes Britain’s prime minister",
+        "published_date": "2024-07-04",
+        "edition": "2024-07-05",
+        "expected_excluded": true,
+        "actual_guard": "UK settled election result and PM appointment",
+        "pass": true
+      },
+      {
+        "title": "UK exit poll predicts Labour landslide; Sunak concedes the election",
+        "published_date": "2024-07-04",
+        "edition": "2024-07-05",
+        "expected_excluded": true,
+        "actual_guard": "UK settled election result and PM appointment",
+        "pass": true
+      },
+      {
+        "title": "UK exit poll predicts Labour landslide; Starmer enters Downing Street",
+        "published_date": "2024-07-04",
+        "edition": "2024-07-05",
+        "expected_excluded": true,
+        "actual_guard": "UK settled election result and PM appointment",
+        "pass": true
+      },
+      {
+        "title": "Meta earnings surprise Wall Street",
+        "published_date": "2024-07-30",
+        "edition": "2024-07-31",
+        "expected_excluded": true,
+        "actual_guard": "Meta Qualcomm Arm Boeing Mastercard quarterly outcome",
+        "pass": true
+      },
+      {
+        "title": "Meta earnings were better than expected",
+        "published_date": "2024-07-30",
+        "edition": "2024-07-31",
+        "expected_excluded": true,
+        "actual_guard": "Meta Qualcomm Arm Boeing Mastercard quarterly outcome",
+        "pass": true
+      },
+      {
+        "title": "SK hynix reports Q2 profit beat",
+        "published_date": "2024-07-23",
+        "edition": "2024-07-24",
+        "expected_excluded": true,
+        "actual_guard": "SK hynix Q2 early-local earnings",
+        "pass": true
+      },
+      {
+        "title": "SK hynix reports Q2 profit beat",
+        "published_date": "2024-07-24",
+        "edition": "2024-07-25",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Meta Earnings: Can it Beat Expectations as AI Comes in Focus?",
+        "published_date": "2024-07-25",
+        "edition": "2024-07-26",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Microsoft before Q4 earnings: should you buy or sell?",
+        "published_date": "2024-07-23",
+        "edition": "2024-07-24",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Cathie Wood buys CrowdStrike shares and sells Tesla before Q2 earnings",
+        "published_date": "2024-07-22",
+        "edition": "2024-07-23",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Surge in sales of biosimilars helps Samsung Biologics to a record-setting quarter",
+        "published_date": "2024-07-24",
+        "edition": "2024-07-25",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "McDonalds India franchisee Westlife posts Q1 profit drop",
+        "published_date": "2024-07-25",
+        "edition": "2024-07-26",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Diageo set for first post-COVID annual sales decline",
+        "published_date": "2024-07-28",
+        "edition": "2024-07-29",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Will Fed rate cuts spark a dollar selloff?",
+        "published_date": "2024-07-24",
+        "edition": "2024-07-25",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "TSMC reports quarterly profit beat",
+        "published_date": "2024-07-17",
+        "edition": "2024-07-18",
+        "expected_excluded": true,
+        "actual_guard": "TSMC Q2 profit and full-year outlook",
+        "pass": true
+      },
+      {
+        "title": "TSMC Q2 revenue jumps on AI boost, handily beats market forecasts",
+        "published_date": "2024-07-09",
+        "edition": "2024-07-10",
+        "expected_excluded": true,
+        "actual_guard": "TSMC June monthly revenue and Q2 aggregate",
+        "pass": true
+      },
+      {
+        "title": "TSMC Q2 revenue jumps on AI boost, handily beats market forecasts",
+        "published_date": "2024-07-10",
+        "edition": "2024-07-11",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "UK exit poll forecasts Labour landslide; Starmer is named prime minister",
+        "published_date": "2024-07-04",
+        "edition": "2024-07-05",
+        "expected_excluded": true,
+        "actual_guard": "UK settled election result and PM appointment",
+        "pass": true
+      },
+      {
+        "title": "UK exit poll forecasts Labour landslide; Sunak concedes defeat",
+        "published_date": "2024-07-04",
+        "edition": "2024-07-05",
+        "expected_excluded": true,
+        "actual_guard": "UK settled election result and PM appointment",
+        "pass": true
+      },
+      {
+        "title": "UK exit poll forecasts Labour landslide; Starmer sworn in as prime minister",
+        "published_date": "2024-07-04",
+        "edition": "2024-07-05",
+        "expected_excluded": true,
+        "actual_guard": "UK settled election result and PM appointment",
+        "pass": true
+      },
+      {
+        "title": "Meta earnings top estimates on advertising strength",
+        "published_date": "2024-07-30",
+        "edition": "2024-07-31",
+        "expected_excluded": true,
+        "actual_guard": "Meta Qualcomm Arm Boeing Mastercard quarterly outcome",
+        "pass": true
+      },
+      {
+        "title": "Meta profit soars as advertising revenue doubles",
+        "published_date": "2024-07-30",
+        "edition": "2024-07-31",
+        "expected_excluded": true,
+        "actual_guard": "Meta Qualcomm Arm Boeing Mastercard quarterly outcome",
+        "pass": true
+      },
+      {
+        "title": "Microsoft Q4 earnings: Azure growth disappoints",
+        "published_date": "2024-07-29",
+        "edition": "2024-07-30",
+        "expected_excluded": true,
+        "actual_guard": "Microsoft AMD Starbucks Pinterest Pfizer Merck P&G quarterly outcome",
+        "pass": true
+      },
+      {
+        "title": "ASML Q2 earnings top forecasts",
+        "published_date": "2024-07-16",
+        "edition": "2024-07-17",
+        "expected_excluded": true,
+        "actual_guard": "ASML Johnson Johnson United Airlines quarterly outcome",
+        "pass": true
+      },
+      {
+        "title": "Could a global IT outage hit CrowdStrike and Windows systems?",
+        "published_date": "2024-07-18",
+        "edition": "2024-07-19",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Global IT outage hits CrowdStrike; could Windows systems recover?",
+        "published_date": "2024-07-18",
+        "edition": "2024-07-19",
+        "expected_excluded": true,
+        "actual_guard": "Global July19 IT outage",
+        "pass": true
+      },
+      {
+        "title": "US Jobs Report to Show a Substantial Slowdown in Hiring in June",
+        "published_date": "2024-07-04",
+        "edition": "2024-07-05",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "US June CPI Preview: The Upcoming Inflation Data May Increase the Likelihood of a Rate Cut in September",
+        "published_date": "2024-07-10",
+        "edition": "2024-07-11",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "China leads the patents race for generative AI, with Tencent and Baidu topping the list",
+        "published_date": "2024-07-04",
+        "edition": "2024-07-05",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Red Sea attacks trigger fresh inflation fears as shipping plunges",
+        "published_date": "2024-07-05",
+        "edition": "2024-07-08",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Affordable fashion sales surge online, despite consumer spending slowdown",
+        "published_date": "2024-07-16",
+        "edition": "2024-07-17",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "PepsiCo quarterly revenue disappoints on slowing sales of snacks, beverages",
+        "published_date": "2024-07-11",
+        "edition": "2024-07-12",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Porsche reports U.S. retail sales for second quarter of 2024",
+        "published_date": "2024-07-09",
+        "edition": "2024-07-10",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Summer Dress Codes: Employers Rights and Responsibilities - ADP",
+        "published_date": "2024-06-27",
+        "edition": "2024-07-01",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Ukrainian DELTA System Successfully integrated with the Polish TOPAZ",
+        "published_date": "2024-07-01",
+        "edition": "2024-07-02",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Poland June industrial output falls",
+        "published_date": "2024-07-17",
+        "edition": "2024-07-18",
+        "expected_excluded": true,
+        "actual_guard": "Poland June industry and producer prices",
+        "pass": true
+      },
+      {
+        "title": "Poland June industrial output falls",
+        "published_date": "2024-07-18",
+        "edition": "2024-07-19",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Poland June retail sales rise",
+        "published_date": "2024-07-21",
+        "edition": "2024-07-22",
+        "expected_excluded": true,
+        "actual_guard": "Poland June retail sales",
+        "pass": true
+      },
+      {
+        "title": "Poland June unemployment falls",
+        "published_date": "2024-07-22",
+        "edition": "2024-07-23",
+        "expected_excluded": true,
+        "actual_guard": "Poland June unemployment",
+        "pass": true
+      },
+      {
+        "title": "Poland July flash inflation rises",
+        "published_date": "2024-07-30",
+        "edition": "2024-07-31",
+        "expected_excluded": true,
+        "actual_guard": "Poland July CPI flash",
+        "pass": true
+      },
+      {
+        "title": "Japan Tankan confidence rises",
+        "published_date": "2024-06-30",
+        "edition": "2024-07-01",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Japan June final factory PMI rises",
+        "published_date": "2024-06-30",
+        "edition": "2024-07-01",
+        "expected_excluded": true,
+        "actual_guard": "Japan June final manufacturing PMI",
+        "pass": true
+      },
+      {
+        "title": "Japan June final factory PMI rises",
+        "published_date": "2024-07-01",
+        "edition": "2024-07-02",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "China Caixin manufacturing PMI rises in June",
+        "published_date": "2024-06-30",
+        "edition": "2024-07-01",
+        "expected_excluded": true,
+        "actual_guard": "China June Caixin manufacturing",
+        "pass": true
+      },
+      {
+        "title": "US June ISM manufacturing falls",
+        "published_date": "2024-06-30",
+        "edition": "2024-07-01",
+        "expected_excluded": true,
+        "actual_guard": "US June ISM manufacturing",
+        "pass": true
+      },
+      {
+        "title": "US JOLTS job openings rise",
+        "published_date": "2024-07-01",
+        "edition": "2024-07-02",
+        "expected_excluded": true,
+        "actual_guard": "US May JOLTS release",
+        "pass": true
+      },
+      {
+        "title": "Tesla delivers record cars in quarterly report",
+        "published_date": "2024-07-01",
+        "edition": "2024-07-02",
+        "expected_excluded": true,
+        "actual_guard": "Tesla Q2 vehicle deliveries",
+        "pass": true
+      },
+      {
+        "title": "Tesla deliveries preview: what to expect",
+        "published_date": "2024-07-01",
+        "edition": "2024-07-02",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "US June ADP employment falls",
+        "published_date": "2024-07-02",
+        "edition": "2024-07-03",
+        "expected_excluded": true,
+        "actual_guard": "US June ADP employment",
+        "pass": true
+      },
+      {
+        "title": "US ISM services rises in June",
+        "published_date": "2024-07-02",
+        "edition": "2024-07-03",
+        "expected_excluded": true,
+        "actual_guard": "US June ISM services",
+        "pass": true
+      },
+      {
+        "title": "US June payrolls rise as unemployment rate increases",
+        "published_date": "2024-07-04",
+        "edition": "2024-07-05",
+        "expected_excluded": true,
+        "actual_guard": "US June employment report",
+        "pass": true
+      },
+      {
+        "title": "US payrolls preview: what to expect",
+        "published_date": "2024-07-04",
+        "edition": "2024-07-05",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "US June CPI falls while July inflation could rise",
+        "published_date": "2024-07-10",
+        "edition": "2024-07-11",
+        "expected_excluded": true,
+        "actual_guard": "US June CPI",
+        "pass": true
+      },
+      {
+        "title": "US CPI expected to fall; stocks rise ahead of release",
+        "published_date": "2024-07-10",
+        "edition": "2024-07-11",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "US June CPI falls",
+        "published_date": "2024-07-11",
+        "edition": "2024-07-12",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "US producer prices rise in June",
+        "published_date": "2024-07-11",
+        "edition": "2024-07-12",
+        "expected_excluded": true,
+        "actual_guard": "US June PPI",
+        "pass": true
+      },
+      {
+        "title": "US retail sales fall in June",
+        "published_date": "2024-07-15",
+        "edition": "2024-07-16",
+        "expected_excluded": true,
+        "actual_guard": "US June retail sales",
+        "pass": true
+      },
+      {
+        "title": "US Q2 GDP expands while Fed could cut rates",
+        "published_date": "2024-07-24",
+        "edition": "2024-07-25",
+        "expected_excluded": true,
+        "actual_guard": "US Q2 GDP advance",
+        "pass": true
+      },
+      {
+        "title": "US PCE inflation cools",
+        "published_date": "2024-07-25",
+        "edition": "2024-07-26",
+        "expected_excluded": true,
+        "actual_guard": "US June PCE",
+        "pass": true
+      },
+      {
+        "title": "Fed holds rates unchanged, September cut could follow",
+        "published_date": "2024-07-30",
+        "edition": "2024-07-31",
+        "expected_excluded": true,
+        "actual_guard": "FOMC July decision",
+        "pass": true
+      },
+      {
+        "title": "Fed expected to hold rates, stocks rise ahead of decision",
+        "published_date": "2024-07-30",
+        "edition": "2024-07-31",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "ECB holds rates but September cut could follow",
+        "published_date": "2024-07-17",
+        "edition": "2024-07-18",
+        "expected_excluded": true,
+        "actual_guard": "ECB July decision",
+        "pass": true
+      },
+      {
+        "title": "ECB expected to hold rates; stocks rise",
+        "published_date": "2024-07-17",
+        "edition": "2024-07-18",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "BOJ raises rates as more hikes could follow",
+        "published_date": "2024-07-30",
+        "edition": "2024-07-31",
+        "expected_excluded": true,
+        "actual_guard": "BOJ July decision",
+        "pass": true
+      },
+      {
+        "title": "Nvidia shares rise as earnings expectations grow",
+        "published_date": "2024-07-29",
+        "edition": "2024-07-30",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "AMD earnings preview: shares rise ahead of report",
+        "published_date": "2024-07-29",
+        "edition": "2024-07-30",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "AMD beats earnings while next sales could rise",
+        "published_date": "2024-07-29",
+        "edition": "2024-07-30",
+        "expected_excluded": true,
+        "actual_guard": "Microsoft AMD Starbucks Pinterest Pfizer Merck P&G quarterly outcome",
+        "pass": true
+      },
+      {
+        "title": "AMD beats earnings",
+        "published_date": "2024-07-30",
+        "edition": "2024-07-31",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Tesla cuts revenue forecast as investors await earnings",
+        "published_date": "2024-07-22",
+        "edition": "2024-07-23",
+        "expected_excluded": true,
+        "actual_guard": "Tesla Alphabet GM UPS Visa TI Enphase quarterly outcome",
+        "pass": true
+      },
+      {
+        "title": "ASML beats earnings",
+        "published_date": "2024-07-16",
+        "edition": "2024-07-17",
+        "expected_excluded": true,
+        "actual_guard": "ASML Johnson Johnson United Airlines quarterly outcome",
+        "pass": true
+      },
+      {
+        "title": "ASML beats earnings",
+        "published_date": "2024-07-17",
+        "edition": "2024-07-18",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "TSMC reports quarterly revenue beat",
+        "published_date": "2024-07-17",
+        "edition": "2024-07-18",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Netflix reports earnings beat",
+        "published_date": "2024-07-17",
+        "edition": "2024-07-18",
+        "expected_excluded": true,
+        "actual_guard": "Netflix TSMC Blackstone Abbott Novartis quarterly outcome",
+        "pass": true
+      },
+      {
+        "title": "Meta earnings beat estimates",
+        "published_date": "2024-07-30",
+        "edition": "2024-07-31",
+        "expected_excluded": true,
+        "actual_guard": "Meta Qualcomm Arm Boeing Mastercard quarterly outcome",
+        "pass": true
+      },
+      {
+        "title": "Qualcomm earnings preview: what to expect",
+        "published_date": "2024-07-30",
+        "edition": "2024-07-31",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Global Microsoft Windows outage hits airlines",
+        "published_date": "2024-07-18",
+        "edition": "2024-07-19",
+        "expected_excluded": true,
+        "actual_guard": "Global July19 IT outage",
+        "pass": true
+      },
+      {
+        "title": "Global Microsoft Windows outage could take days to repair",
+        "published_date": "2024-07-18",
+        "edition": "2024-07-19",
+        "expected_excluded": true,
+        "actual_guard": "Global July19 IT outage",
+        "pass": true
+      },
+      {
+        "title": "Global Microsoft Windows outage hits airlines",
+        "published_date": "2024-07-19",
+        "edition": "2024-07-22",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Biden withdraws from race",
+        "published_date": "2024-07-18",
+        "edition": "2024-07-19",
+        "expected_excluded": true,
+        "actual_guard": "Biden presidential campaign withdrawal",
+        "pass": true
+      },
+      {
+        "title": "Democrats urge Biden to withdraw from race",
+        "published_date": "2024-07-18",
+        "edition": "2024-07-19",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Biden says he will not withdraw from race",
+        "published_date": "2024-07-18",
+        "edition": "2024-07-19",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Biden withdraws from race",
+        "published_date": "2024-07-21",
+        "edition": "2024-07-22",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Trump shot in Pennsylvania rally assassination attempt",
+        "published_date": "2024-07-11",
+        "edition": "2024-07-12",
+        "expected_excluded": true,
+        "actual_guard": "Trump Pennsylvania shooting event",
+        "pass": true
+      },
+      {
+        "title": "Trump shot in Pennsylvania rally assassination attempt",
+        "published_date": "2024-07-13",
+        "edition": "2024-07-15",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Labour exit poll forecasts landslide",
+        "published_date": "2024-07-03",
+        "edition": "2024-07-04",
+        "expected_excluded": true,
+        "actual_guard": "UK election exit poll projection",
+        "pass": true
+      },
+      {
+        "title": "Labour exit poll forecasts landslide",
+        "published_date": "2024-07-04",
+        "edition": "2024-07-05",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Labour wins landslide and Starmer becomes prime minister",
+        "published_date": "2024-07-04",
+        "edition": "2024-07-05",
+        "expected_excluded": true,
+        "actual_guard": "UK settled election result and PM appointment",
+        "pass": true
+      },
+      {
+        "title": "Labour wins landslide and Starmer becomes prime minister",
+        "published_date": "2024-07-05",
+        "edition": "2024-07-08",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "France second-round election: what to expect",
+        "published_date": "2024-07-04",
+        "edition": "2024-07-05",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "France left-wing alliance wins second-round election but coalition could be hard",
+        "published_date": "2024-07-04",
+        "edition": "2024-07-05",
+        "expected_excluded": true,
+        "actual_guard": "France parliamentary second-round result",
+        "pass": true
+      },
+      {
+        "title": "France left-wing alliance wins second-round election",
+        "published_date": "2024-07-07",
+        "edition": "2024-07-08",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Tokyo July core inflation rises",
+        "published_date": "2024-07-25",
+        "edition": "2024-07-26",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Japan June core inflation rises",
+        "published_date": "2024-07-18",
+        "edition": "2024-07-19",
+        "expected_excluded": false,
+        "actual_guard": null,
+        "pass": true
+      },
+      {
+        "title": "Australia June quarterly CPI rises",
+        "published_date": "2024-07-30",
+        "edition": "2024-07-31",
+        "expected_excluded": true,
+        "actual_guard": "Australia June quarter CPI",
+        "pass": true
+      },
+      {
+        "title": "China July official manufacturing PMI falls",
+        "published_date": "2024-07-30",
+        "edition": "2024-07-31",
+        "expected_excluded": true,
+        "actual_guard": "China July official PMI",
+        "pass": true
+      },
+      {
+        "title": "Poland July flash inflation rises",
+        "published_date": "2024-07-30",
+        "edition": "2024-07-31",
+        "expected_excluded": true,
+        "actual_guard": "Poland July CPI flash",
+        "pass": true
+      }
+    ],
+    "case_count": 96
+  },
+  "failures": [],
+  "case_count": 49,
+  "passed": true
+}

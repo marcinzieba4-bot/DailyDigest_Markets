@@ -1,0 +1,71 @@
+{
+  "date": "2024-07-30",
+  "status": "blocked",
+  "retail_draft_sha256": "278fdc118612352c64b245940c21e64357a9a1da5f59f4e1f9371f635792b8e5",
+  "feed_sha256": "1ef35c88e0225c9e8522707deb3a8fe225ac99e093ba0a5b4a397c8307483869",
+  "card_sha256": "6695b489b85a044aa39987c5e4d1c109f8491e769d324455f6f0231ec12d9062",
+  "fatal_or_major_remaining": 1,
+  "paragraphs_reviewed": 13,
+  "reviewed_locations": [
+    "retail_intro",
+    "all four titles",
+    "all twelve parts"
+  ],
+  "headline_ids_reviewed": [
+    "n1105",
+    "n1114",
+    "n1143",
+    "n1145",
+    "n1184",
+    "n1193",
+    "n1563",
+    "n1565",
+    "n1566",
+    "n1569",
+    "n1573"
+  ],
+  "claim_checks": [
+    "MCD USD261.42/+3.74% session/+2.58% twenty-session exact July29. CNBC miss/consumer pressure, Reuters first global decline in overthree years, company value/menu/digital priorities and actual value-meal investor framing support first lead. USD5 deal exact MarketWatch headline; future economics conditional.",
+    "TSLA USD232.10/+5.60% session/-7.72% five-session exact July29. Reuters MorganStanley top-pick replacement and MarketWatch golden-cross attention correctly attributed, not operating improvement.",
+    "CRWD USD258.81/+1.03% exact July29 regular close; no explicit claim it is a reaction to legal news. But completed Delta hiring/damages report requires original-clock resolution before inclusion.",
+    "ON largest jump since2022 after beat exactly Bloomberg headline; no invented ON closing quote or broader industry recovery outcome.",
+    "All11 full cited headlines/metadata and exclusions inspected. No exclusions currently present. All claims except n1114 release eligibility are supported within headline scope; no numeric FX, fabricated flow/social counts or targets."
+  ],
+  "findings": [
+    {
+      "severity": "major",
+      "location": "retail[2] and notes.why_smaller[1]",
+      "headline_id": "n1114",
+      "issue": "Completed Delta hiring of DavidBoies to pursue damages is the whole new catalyst. Own feed supplies normalized July29 07UTC index timestamp but no independently established original publication clock. This appears to be late-US-evening reporting and could cross July30 00UTC; cannot certify eligibility from index date alone. No exact original clock is asserted by this review.",
+      "required_resolution": "Root confirm original pre-cut publication with concrete contemporaneous evidence, or fresh isolated author replace this secondary from eligible own-date evidence and update notes. If actual original release is after00UTC, omit it from July30; do not simply call it a prior-close reaction or relabel an unchanged CRWD carryover."
+    }
+  ],
+  "chronology": "Earlier notes through July29 only. MCD first lead and Tesla newly attributed top-pick/technical update support selection. CRWD repeat-secondary material-update claim depends entirely on unresolved n1114 timing; cannot clear unchanged carryover by price/new title. First ON results item.",
+  "named_fixes": [],
+  "verification": {
+    "result": "PASS",
+    "total_words": 1234,
+    "lead_words": 694,
+    "smaller_words": [
+      164,
+      172,
+      175
+    ],
+    "failures": 0,
+    "warnings": 0
+  },
+  "warning_dispositions": [],
+  "limits": "Headline-only independent review; no network or external timing source read. Normalized index timestamps do not certify original vintage. Draft preserved for fresh isolated resolution.",
+  "exclusion_metadata_updates": [
+    {
+      "checked_at_utc": "2026-11-05T13:07:17.501114+00:00",
+      "id": "n1850",
+      "disposition": "conservative original-vintage/timing omission for this edition",
+      "exclusions_sha256": "ad14d1ba103fce42762c97ca873ecca755f5752dba981050e1c3891937deea11",
+      "excluded_id_citations_in_current_component": 0,
+      "content_unchanged": true,
+      "scope": "Exclusion metadata only; existing review status and content hash binding preserved. This does not clear any separate timing blocker."
+    }
+  ],
+  "current_exclusions_sha256": "ad14d1ba103fce42762c97ca873ecca755f5752dba981050e1c3891937deea11"
+}

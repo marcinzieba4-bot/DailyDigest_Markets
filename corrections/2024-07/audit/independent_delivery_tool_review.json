@@ -1,0 +1,165 @@
+{
+  "checked_at_utc": "2026-11-05T10:50:04.764740+00:00",
+  "reviewer_tool_sha256": "9ab38ab0b7c8612f95121e5cdd5e809352a36419685d3be596ee165d632a74ca",
+  "expected_scope": {
+    "dates": [
+      "2024-07-01",
+      "2024-07-02",
+      "2024-07-03",
+      "2024-07-04",
+      "2024-07-05",
+      "2024-07-08",
+      "2024-07-09",
+      "2024-07-10",
+      "2024-07-11",
+      "2024-07-12",
+      "2024-07-15",
+      "2024-07-16",
+      "2024-07-17",
+      "2024-07-18",
+      "2024-07-19",
+      "2024-07-22",
+      "2024-07-23",
+      "2024-07-24",
+      "2024-07-25",
+      "2024-07-26",
+      "2024-07-29",
+      "2024-07-30",
+      "2024-07-31"
+    ],
+    "editions": 23,
+    "native_artifacts": 69,
+    "collection_artifacts": 5,
+    "targets": 74,
+    "reportZIP_members": 72,
+    "protected_objects": 151
+  },
+  "limits": [
+    "Static code inspection and pure-function/synthetic-predicate checks only. No publisher or delivery entrypoint, plan acquisition, AWS mutation or network call executed.",
+    "This code review does not approve July inputs, prose, final artifacts or live delivery; their independently bound gates and final checks remain required.",
+    "Any real concurrent live change must fail strict preservation and receive a separate evidence-based investigation; no inherited August exception is carried over."
+  ],
+  "passed": true,
+  "script_sha256": "e2df5303e40d5f1f7262da48e5484cc42d043d10fb679e3ee1eda888365ba282",
+  "publisher_sha256": "0e568d4d197aa374d569ee7ae4c3aee2d6d2bd787f03fbf0cca518c228dc146a",
+  "checks": [
+    {
+      "check": "isolate74-target predicate without executing network entrypoint",
+      "passed": true
+    },
+    {
+      "check": "delivery exact-target fixture: valid",
+      "passed": true
+    },
+    {
+      "check": "delivery exact-target fixture: missing",
+      "passed": true
+    },
+    {
+      "check": "delivery exact-target fixture: duplicate",
+      "passed": true
+    },
+    {
+      "check": "delivery exact-target fixture: foreign August route",
+      "passed": true
+    },
+    {
+      "check": "delivery exact-target fixture: wrong dates",
+      "passed": true
+    },
+    {
+      "check": "isolate72-member publicZIP predicate",
+      "passed": true
+    },
+    {
+      "check": "publicZIP exact-members fixture: valid",
+      "passed": true
+    },
+    {
+      "check": "publicZIP exact-members fixture: missing",
+      "passed": true
+    },
+    {
+      "check": "publicZIP exact-members fixture: duplicate",
+      "passed": true
+    },
+    {
+      "check": "publicZIP exact-members fixture: unsafe/foreign",
+      "passed": true
+    },
+    {
+      "check": "canonical July public report ZIP route",
+      "passed": true
+    },
+    {
+      "check": "ZIP CRC and all69native report members required",
+      "passed": true
+    },
+    {
+      "check": "origin/public full body hash/size checks",
+      "passed": true
+    },
+    {
+      "check": "46PDF/JSON public downloads verified through ZIP rather than fallback route",
+      "passed": true
+    },
+    {
+      "check": "strict preservation with no inherited Nov4 concurrency waiver",
+      "passed": true
+    },
+    {
+      "check": "index origin/public hash and original href preservation",
+      "passed": true
+    },
+    {
+      "check": "live Lambda metadata unchanged requirement",
+      "passed": true
+    },
+    {
+      "check": "strict final delivery gate accepts all verified conditions",
+      "passed": true
+    },
+    {
+      "check": "final delivery gate rejects protected latest change",
+      "passed": true
+    },
+    {
+      "check": "final delivery gate rejects one origin mismatch",
+      "passed": true
+    },
+    {
+      "check": "final delivery gate rejects one public mismatch",
+      "passed": true
+    },
+    {
+      "check": "final delivery gate rejects missing nativeZIP member",
+      "passed": true
+    },
+    {
+      "check": "final delivery gate rejects archive href loss",
+      "passed": true
+    },
+    {
+      "check": "final delivery gate rejects Lambda change",
+      "passed": true
+    },
+    {
+      "check": "final delivery gate rejects index public mismatch",
+      "passed": true
+    },
+    {
+      "check": "final delivery gate rejects pending invalidation",
+      "passed": true
+    },
+    {
+      "check": "delivery verifier has no remote mutation or send calls",
+      "passed": true
+    },
+    {
+      "check": "delivery verifier unchanged during review",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "scope": "July strict delivery verifier code only; exact74targets,72ZIP members,69native body checks,origin/public hashes,protected preservation and index links."
+}

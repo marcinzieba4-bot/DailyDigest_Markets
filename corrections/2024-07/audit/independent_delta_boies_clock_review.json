@@ -1,0 +1,107 @@
+{
+  "review_type": "independent_bounded_delta_boies_pre_cutoff_report_adjudication",
+  "reviewed_at_utc": "2026-11-05T13:08:29.844287+00:00",
+  "date": "2024-07-30",
+  "id": "n1114",
+  "title": "Delta hires David Boies to seek damages from CrowdStrike, Microsoft after outage - CNBC",
+  "rss_published_at": "2024-07-29T07:00:00+00:00",
+  "rss_timestamp_used_as_clock_proof": false,
+  "feed_sha256": "1ef35c88e0225c9e8522707deb3a8fe225ac99e093ba0a5b4a397c8307483869",
+  "accepted_source_review_sha256": "147513cf16810e90e064a09c5cbaa89aa71509fcacb3c477403f4f8013769af2",
+  "cutoff_utc": "2024-07-30T00:00:00+00:00",
+  "passed": true,
+  "status": "pre_cutoff_report_corroborated_by_dated_Reuters",
+  "reported_premise_available_before_cutoff": true,
+  "exact_first_CNBC_publication_clock_certified": false,
+  "original_CNBC_full_page_vintage_archived": false,
+  "authoring_or_general_prose_approval": false,
+  "source_or_report_mutations": false,
+  "evidence": [
+    {
+      "url": "https://www.reuters.com/business/aerospace-defense/delta-air-lines-seek-compensation-over-cyber-outage-cnbc-reports-2024-07-29/",
+      "path": "audit_work/late_release_clock_refs/delta_search_reuters.json",
+      "sha256": "f6fb69530d9d7244e3ea1bae7160cb3dbb0b8da2d8ec65a4a32b1189e19c6bc7",
+      "reference": "turn542778news19",
+      "precision": "Reuters dated article extraction with explicit UTC seconds",
+      "published_or_updated_utc": "2024-07-29T22:26:58+00:00",
+      "meaning": "The report explicitly attributes the completed law-firm hiring and compensation pursuit to CNBC. Its displayed dated timestamp is before the July30 cutoff; no timezone inference from an unspecified local clock is required."
+    },
+    {
+      "url": "https://www.reuters.com/business/aerospace-defense/delta-air-lines-seek-compensation-over-cyber-outage-cnbc-reports-2024-07-29/",
+      "path": "audit_work/late_release_clock_refs/delta_reuters_open.json",
+      "sha256": "1a7f3f9de87624e26d647e63c416e2f2c165b8e6a41ebb7bf3c1160fc29ea11d",
+      "reference": "turn798146view0:L151-L170",
+      "precision": "Direct successful connected-web open of Reuters original URL; explicit UTC minute",
+      "displayed_time": "July 29, 2024 10:26 PM UTC Updated July 29, 2024",
+      "meaning": "Confirms the same dated Reuters report, its CNBC attribution and Boies Schiller Flexner identity. This is independent corroboration of the reported premise before cutoff, not certification of the exact first CNBC publication minute."
+    },
+    {
+      "url": "https://www.cnbc.com/2024/07/29/delta-hires-david-boies-to-seek-damages-from-crowdstrike-microsoft-.html",
+      "path": "audit_work/late_release_clock_refs/delta_open.json",
+      "sha256": "2ab150fe4f19e7d3fa757a98285f9b8ca2470239baca68a602867a97cb093852",
+      "reference": "turn914369view0",
+      "precision": "Failed restricted canonical open, preserved without bypass",
+      "meaning": "No direct original CNBC page/clock was obtained. No alternate route was used to evade the restriction."
+    },
+    {
+      "url": "https://www.investing.com/news/stock-market-news/delta-air-lines-to-seek-compensation-over-cyber-outage-cnbc-reports-3542562",
+      "path": "audit_work/late_release_clock_refs/delta_open.json",
+      "sha256": "2ab150fe4f19e7d3fa757a98285f9b8ca2470239baca68a602867a97cb093852",
+      "reference": "turn914369view1:L20-L49",
+      "precision": "Reuters syndication; displayed local clock without explicit zone",
+      "displayed_time": "Published Jul29 05:19PM; Updated Jul29 06:30PM",
+      "meaning": "Corroborates Reuters/CNBC reporting but was not converted toUTC because the retained extraction does not establish its timezone."
+    }
+  ],
+  "scope": "Completed hiring/compensation-report availability for both named July30 blocks only. The three earlier release-clock cases are separately retained.",
+  "verdict": "The CNBC-reported hiring and compensation-pursuit premise is independently corroborated before the cutoff by the original Reuters report with an explicit22:26UTC clock. A timing-driven replacement is unnecessary for that narrow premise. Exact original CNBC minute and full original page are not certified.",
+  "both_block_restrictions": [
+    "Keep the statement at reported counsel hiring / intended damages pursuit. It is not a filed lawsuit, an award, a quantified liability or an established payment.",
+    "No numerical cost, cancellations, aftermarket share change, later company response, later lawsuit development or other external facts from this research may be imported. Existing own-date source membership and headline-meaning checks remain required.",
+    "Treat July29 regular cash-close figures as dated market baselines. The Reuters corroboration is after the regular close and provides no basis to label that close or its20session change as a reaction to the counsel report. The exact earlier CNBC first-publication time remains unproved."
+  ],
+  "blocks": [
+    {
+      "path": "nonretail.catalysts[4]",
+      "block_sha256": "a847098677af9a323fa5517d44132e20b9e451a10bec01baf84284aae89f0977",
+      "assessment": "The current block distinguishes a damages pursuit from established liability and gives a dated prior-close baseline without explicitly attributing its move to this report. This is a clock-scope observation, not a new blanket prose approval."
+    },
+    {
+      "path": "retail.retail[2]",
+      "block_sha256": "ba4cefff1423577b69f82cd87151f43e901b371ab483c0d4f706dedbba7143c4",
+      "assessment": "The current block distinguishes a damages pursuit from established liability and gives a dated prior-close baseline without explicitly attributing its move to this report. This is a clock-scope observation, not a new blanket prose approval."
+    }
+  ],
+  "draft_sha256": {
+    "nonretail_drafts/2024-07-30.json": "f32af3401b41844f76d3fb2d97e05cc8ece822466ecad44f7c2edbc887ddf10f",
+    "retail_drafts/2024-07-30.json": "278fdc118612352c64b245940c21e64357a9a1da5f59f4e1f9371f635792b8e5"
+  },
+  "retained_tool_cache": [
+    {
+      "path": "audit_work/late_release_clock_refs/delta_search_initial.json",
+      "sha256": "1919b2968e5bc9c3ab568d18f725a4067b7a2e4f84f036ba9c10c24874424898",
+      "bytes": 34661
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/delta_open.json",
+      "sha256": "2ab150fe4f19e7d3fa757a98285f9b8ca2470239baca68a602867a97cb093852",
+      "bytes": 18058
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/delta_search_reuters.json",
+      "sha256": "f6fb69530d9d7244e3ea1bae7160cb3dbb0b8da2d8ec65a4a32b1189e19c6bc7",
+      "bytes": 35099
+    },
+    {
+      "path": "audit_work/late_release_clock_refs/delta_reuters_open.json",
+      "sha256": "1a7f3f9de87624e26d647e63c416e2f2c165b8e6a41ebb7bf3c1160fc29ea11d",
+      "bytes": 33330
+    }
+  ],
+  "limitations": [
+    "No contemporaneous archive snapshot of CNBC was retrieved; the successful original Reuters connected-web extraction supplies the pre-cutoff corroboration.",
+    "Current article publication/update metadata is retained as retrieved and is not recast as an exact first-publication claim.",
+    "No archive, feed, exclusion record, card, draft, note, review acceptance, AWS object or live report was changed."
+  ],
+  "review_script_sha256": "db031a06ea90aa24685f1b115909904fb159e64715f893de8e9d12ffc566e0bf"
+}

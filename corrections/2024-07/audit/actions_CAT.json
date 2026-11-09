@@ -1,0 +1,18 @@
+{
+ "ticker": "CAT",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CAT?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "ece7249da52b76764e17beeb1ea9687c455d12ca5ffaf1a92e7a3933e79568ff",
+   "fetched_at_utc": "2026-11-05T10:38:57.385172+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/CAT?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "3cdc8e19ad2e3a2140d0efdd4413b90c5b3431d916b27166543c367cd57116f4",
+   "fetched_at_utc": "2026-11-05T10:38:57.735044+00:00"
+  }
+ ]
+}

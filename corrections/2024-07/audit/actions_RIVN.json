@@ -1,0 +1,18 @@
+{
+ "ticker": "RIVN",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RIVN?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "54313244f33eafe4656b4a152099f3be9b9b9b27a30440574cd050d9351c7b3a",
+   "fetched_at_utc": "2026-11-05T10:38:52.664323+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RIVN?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "dfa70fc7b46cea2dde56ac84bfd5afd70d6ef51000d03c49033b4563e4e9a3b9",
+   "fetched_at_utc": "2026-11-05T10:38:52.995672+00:00"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "ticker": "IONQ",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/IONQ?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "6a2c3cbccd3a30580c69ff16a082057e22cd56514c5f12f7b0775e73a905cd48",
+   "fetched_at_utc": "2026-11-05T10:38:51.900632+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/IONQ?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "fb3013600dcf6301c6dbf0b5e544496fc9a517b1368578fe59bf474a8608ec21",
+   "fetched_at_utc": "2026-11-05T10:38:52.243835+00:00"
+  }
+ ]
+}

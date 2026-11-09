@@ -1,0 +1,24 @@
+{
+ "ticker": "6758.T",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2024-09-27",
+   "factor": 5.0,
+   "ratio": "5:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/6758.T?period1=1714521600&period2=1722384000&interval=1d&events=div,splits",
+   "sha256": "b382110e4a5fa6d077e6bf4ca8c2b25637ee99956ca07ff03139d36a2eb1a004",
+   "fetched_at_utc": "2026-11-05T10:38:41.461940+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/6758.T?period1=1722384000&period2=1793875113&interval=1d&events=div,splits",
+   "sha256": "cde1c00297d03c1eaac6b7b88c655f04eb9ecef84e32b586d4fc2c51660123ad",
+   "fetched_at_utc": "2026-11-05T10:38:41.794059+00:00"
+  }
+ ]
+}
