@@ -1,0 +1,52 @@
+{
+  "status": "declared_plan_verified_full_acquisition_and_semantic_replay_pending",
+  "passed": false,
+  "design_checks_passed": true,
+  "authoring_acceptance": false,
+  "checked_at_utc": "2026-11-10T16:27:54.605172+00:00",
+  "checks": 15874,
+  "errors": [],
+  "physical_urls": 15869,
+  "base_urls": 15869,
+  "dates": [
+    "2024-04-01",
+    "2024-04-02",
+    "2024-04-03",
+    "2024-04-04",
+    "2024-04-05",
+    "2024-04-08",
+    "2024-04-09",
+    "2024-04-10",
+    "2024-04-11",
+    "2024-04-12",
+    "2024-04-15",
+    "2024-04-16",
+    "2024-04-17",
+    "2024-04-18",
+    "2024-04-19",
+    "2024-04-22",
+    "2024-04-23",
+    "2024-04-24",
+    "2024-04-25",
+    "2024-04-26",
+    "2024-04-29",
+    "2024-04-30"
+  ],
+  "reviewer_tool_sha256": "6dba26a9aa80e26218bcf460efc752ef6bd9dc6e8e744df0f202ef323bb50089",
+  "input_bindings": {
+    "audit/news_query_plan.json": "1a50955511c38fa7f1f8ef1602af0a634b209e69087c879cf227d96c7fe332dd",
+    "audit/news_physical_requests.jsonl": "90b8c5cc65bbfeb635dbcd9669147efbd4770dc584f9e052bea9f6571a154704",
+    "audit/news_physical_attempt_starts.jsonl": "9742230bb5f0b318e19a8f09c22ea98c9f0c9e1d84c5c1837d8bd2ac86a3d135",
+    "audit_work/acquisition_capture_limitation.json": "6e34f30135460f34eb9652512baf55941f326cf77512a9d80709503e97d2d84f",
+    "audit_work/news_catalogue_declaration.json": "a5c3228c14b317d765f86cdf76829da8cbe68c9303a9dbf6c9fa9281ddb24b65",
+    "tools/fetch_news.py": "ee3ca1c5c59fb05be05937c86c1caa919089581980877d08017c372cad33a8d9",
+    "tools/topics.py": "d9e08ac2eead8700ea64e4314c7a7a4a938569b119a5b8f13336c82e55681043",
+    "tools/expand_capped_news.py": "d6f5cbd6e54333998fa087093966d7b0416edcb5f2051212f6935821a3d6e536",
+    "audit_work/review_sources.py": "6dba26a9aa80e26218bcf460efc752ef6bd9dc6e8e744df0f202ef323bb50089",
+    "tools/build_source_inventory.py": "f2fb0defbe5633d326c758d1898d299721457187e9866ea9c627a9dcea788fbd"
+  },
+  "limits": [
+    "Declaration metadata was written immediately after collector launch; its own note disclaims an earlier signed timestamp. Fixed catalogue/URL/parser bytes and actual response replay are checked separately.",
+    "Current plan may still be incomplete; this design receipt never grants source acceptance."
+  ]
+}

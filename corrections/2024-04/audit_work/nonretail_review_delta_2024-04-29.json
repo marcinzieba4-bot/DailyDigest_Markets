@@ -1,0 +1,38 @@
+{
+  "date": "2024-04-29",
+  "reviewer": "/root/setup_market",
+  "author_changes_already_applied": [
+    {
+      "location": "geo.PL.Markets",
+      "old": "forecasting a weaker zloty path",
+      "new": "Citi’s outlook for the zloty’s exchange-rate path",
+      "evidence_id": "n2172",
+      "reason": "Exact headline forecasts levels only; no certified numeric spot-FX comparator establishes directional weakening."
+    },
+    {
+      "location": "geo.AU.Demand & Financing",
+      "old": "ABC also reports the Ravensthorpe nickel mine closing with job losses",
+      "new": "ABC also reports a planned closure of the Ravensthorpe nickel mine with expected job losses",
+      "evidence_id": "n0090",
+      "reason": "Headline says to close; preserve planned status."
+    }
+  ],
+  "reviewer_changes": [
+    {
+      "old": "ABC reports an Australian nickel mine closing.",
+      "new": "ABC reports a planned Australian nickel-mine closure."
+    },
+    {
+      "old": "Commodity selection after a nickel closure",
+      "new": "Commodity selection around a planned nickel closure"
+    },
+    {
+      "old": "ABC reports the Ravensthorpe nickel mine closing with job losses.",
+      "new": "ABC reports a planned Ravensthorpe nickel-mine closure with expected job losses."
+    }
+  ],
+  "reviewer_patch_input_file_sha256": "ab22f0a9610abffd73365066cf2c59802b154f451a6adb54304db13d64e54512",
+  "reviewer_patch_output_file_sha256": "04022539e84844782fa9cf4f34e8382c1129b0269493321794b12f1ee4970239",
+  "private_clock_check": "audit_work/nr29_aia_clock_check.json",
+  "reason": "Propagate prospective mine-closure status through every remaining named occurrence; preserve current unrelated text and prior writer corrections."
+}

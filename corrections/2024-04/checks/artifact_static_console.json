@@ -1,0 +1,52 @@
+{
+  "status": "static_checks_passed",
+  "dates": [
+    "2024-04-01",
+    "2024-04-02",
+    "2024-04-03",
+    "2024-04-04",
+    "2024-04-05",
+    "2024-04-08",
+    "2024-04-09",
+    "2024-04-10",
+    "2024-04-11",
+    "2024-04-12",
+    "2024-04-15",
+    "2024-04-16",
+    "2024-04-17",
+    "2024-04-18",
+    "2024-04-19",
+    "2024-04-22",
+    "2024-04-23",
+    "2024-04-24",
+    "2024-04-25",
+    "2024-04-26",
+    "2024-04-29",
+    "2024-04-30"
+  ],
+  "tool_sha256": {
+    "render.py": "ae68030afeab2d8b316e7d8b36a7d22f4bff93d3f4085deeb33e3f7d67769492",
+    "build_artifacts.py": "b70a9c36b743066dcb74178b74a428336a714d726894f519c7f1007e27efdd07",
+    "build_retail_page.py": "8c1a7a39d5078a5d5d01377caefa44eb02fdcd5a3ea46bb00fcbf8dc302efb02",
+    "build_source_inventory.py": "f55e0871bfef78e7b8f9540b7e4608417eef4b06e5dc510ae54d06957c4081fc",
+    "audit_work/review_final_artifacts.py": "0892feaaf8e0890d7688be8a84332bdbe13535b7b518a5a90b27be38a20333ce"
+  },
+  "artifact_targets_expected": 71,
+  "report_zip_members_expected": 69,
+  "runtime_artifacts_reviewed": false,
+  "negative_fixtures": [
+    "invalid_date_2024-04-06",
+    "invalid_date_2024-06-03",
+    "invalid_date_../2024-04-01",
+    "invalid_date_20240401",
+    "partial_collection",
+    "unsafe_path_../outside.json",
+    "unsafe_path_/outside.json",
+    "unsafe_path_audit_work//proof.json",
+    "unsafe_path_audit_work/.private/proof.json",
+    "bracket_deletion",
+    "word_join",
+    "ledger_deletion"
+  ],
+  "scope": "Generic April scope, escaping, literal/paragraph preservation and unsafe-path checks. No historical data accepted."
+}

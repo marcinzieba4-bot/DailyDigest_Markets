@@ -1,0 +1,117 @@
+{
+ "ticker": "ANET",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2024-12-04",
+   "factor": 4.0,
+   "ratio": "4:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?period1=1706745600&period2=1714435200&interval=1d&events=div,splits",
+   "sha256": "cfa6dbe756edab542cc3c7e6aa169e6f1824e1737dce6874d14860d6eb6644bf",
+   "fetched_at_utc": "2026-11-10T14:54:04.853783+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?period1=1714435200&period2=1794322360&interval=1d&events=div,splits",
+   "sha256": "7f729a82d8300ce9ac290d3e5c40e2dc14b2b316eff65af7a0679c2878d9e891",
+   "fetched_at_utc": "2026-11-10T14:54:07.240125+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?period1=1706745600&period2=1714435200&interval=1d&events=div,splits",
+    "sha256": "cfa6dbe756edab542cc3c7e6aa169e6f1824e1737dce6874d14860d6eb6644bf",
+    "fetched_at_utc": "2026-11-10T14:54:04.853783+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "ANET",
+    "exchangeName": "NYQ",
+    "fullExchangeName": "NYSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1402061400,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 61,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?period1=1714435200&period2=1794322360&interval=1d&events=div,splits",
+    "sha256": "7f729a82d8300ce9ac290d3e5c40e2dc14b2b316eff65af7a0679c2878d9e891",
+    "fetched_at_utc": "2026-11-10T14:54:07.240125+00:00"
+   },
+   "retained_exact_split_events": {
+    "1733322600": {
+     "date": 1733322600,
+     "numerator": 4.0,
+     "denominator": 1.0,
+     "splitRatio": "4:1"
+    }
+   },
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "ANET",
+    "exchangeName": "NYQ",
+    "fullExchangeName": "NYSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1402061400,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 636,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

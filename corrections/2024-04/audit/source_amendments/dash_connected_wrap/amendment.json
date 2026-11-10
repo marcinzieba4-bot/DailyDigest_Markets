@@ -1,0 +1,34 @@
+{
+  "amendment_type": "nonfinancial_literal_dash_layout_preservation",
+  "created_at_utc": "2026-11-10T17:23:48.875221+00:00",
+  "reason": "Frozen Apr26 n0828 contains the unspaced token 2024—and. Chromium wrapped after the em dash; extraction introduced a layout-space at that break, causing the unchanged strict preservation gate to reject the PDF.",
+  "change": "Only existing VERBATIM_TOKEN dash class adds observed U+2013 EN DASH and U+2014 EM DASH, placing connected tokens inside the existing nowrap span without changing literal text.",
+  "unchanged": [
+    "Frozen financial source/headline/spec/prose/card/exclusion bytes.",
+    "Strict preservation comparators, ActualText extraction fix, clickable PDF links and page count checks.",
+    "Publication and delivery tools and accepted publication engineering review."
+  ],
+  "prior_bytes_manifest": "audit/source_amendments/dash_connected_wrap/prior_bytes_manifest.json",
+  "actual_proof": "audit/source_amendments/dash_connected_wrap/final_proof.json",
+  "actual_proof_sha256": "edc654424ac7bf379f18cb31059c4cf03c1d27f5b55fd77954bdd0f2909bc146",
+  "renderer_sha256": "2170ea5cee006482fb25871dffb4857fdd7983e7bdc6056ef3530dc20c22e905",
+  "actual_layouts": 22,
+  "all88financial_input_hashes_unchanged": true,
+  "apr26_pdf_preservation": {
+    "paragraphs_preserved": 149,
+    "ledger_headlines_preserved": 122,
+    "ordered_occurrences_preserved": true,
+    "unicode_prose_preserved": true
+  },
+  "apr26_pdf_links": {
+    "unique_source_and_timing_URLs": 122,
+    "all_source_links_clickable": true
+  },
+  "runtime": {
+    "executable": "/workspace/work/april-runtime/bin/python",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "pymupdf": "1.26.6",
+    "pypdf": "6.10.0"
+  },
+  "acceptance_handling": "Preserve prior global source acceptance as historical and execute actual current-renderer source acceptance before final projection/archive. No old-code proof is relabeled."
+}

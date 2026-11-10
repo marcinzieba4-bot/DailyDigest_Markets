@@ -1,0 +1,84 @@
+{
+  "checked_at_utc": "2026-11-10T14:54:11.577783+00:00",
+  "repository": "marcinzieba4-bot/DailyDigest_Markets",
+  "newest_repository_tip": {
+    "branch": "codex/jun-2024-retrospective-20261109",
+    "sha": "5991208ed7f2d3a2763f261c0c3ba2b63b7d752f",
+    "committed_at": "2026-11-09T14:55:40Z",
+    "remote_heads_checked": 32
+  },
+  "source_path": "lambda_function.py",
+  "source_commit": "d365e09c5b2e2a1f60a384b33e1681d367b666a1",
+  "source_commit_at": "2026-10-23T07:45:44Z",
+  "source_bytes": 97759,
+  "source_sha256": "fb4f393d73c3acba6e2bd8f69b5f2884cc66ffd30e1888844ad1310b592456af",
+  "source_url": "https://github.com/marcinzieba4-bot/DailyDigest_Markets/blob/d365e09c5b2e2a1f60a384b33e1681d367b666a1/lambda_function.py",
+  "selected_adaptation_source": {
+    "commit": "5991208ed7f2d3a2763f261c0c3ba2b63b7d752f",
+    "path": "corrections/2024-06/tools",
+    "purpose": "Structural tooling only; no later-month data copied to April inputs"
+  },
+  "deployment_metadata_read_only": {
+    "LastModified": "2026-10-23T07:45:33.000+0000",
+    "Runtime": "python3.12",
+    "CodeSha256": "IP7GVukS9rD1NT2+KLVXmG9GyxQS2xGJkDuPzgz7ijY="
+  },
+  "limits": [
+    "Deployment ZIP presigned host blocked by network policy403; package not downloaded. CodeSha256 is package hash and does not establish deployed source equality.",
+    "Repository tip and root Lambda source-file revision are distinct. Root source hash independently matched locally.",
+    "No Lambda invocation, deployment, message sending, credential-file read or production mutation performed."
+  ],
+  "market_tool_adaptation": {
+    "retained_price_window": {
+      "first": "2024-02-01",
+      "last": "2024-04-29"
+    },
+    "report_month": "2024-04",
+    "dates": [
+      "2024-04-01",
+      "2024-04-02",
+      "2024-04-03",
+      "2024-04-04",
+      "2024-04-05",
+      "2024-04-08",
+      "2024-04-09",
+      "2024-04-10",
+      "2024-04-11",
+      "2024-04-12",
+      "2024-04-15",
+      "2024-04-16",
+      "2024-04-17",
+      "2024-04-18",
+      "2024-04-19",
+      "2024-04-22",
+      "2024-04-23",
+      "2024-04-24",
+      "2024-04-25",
+      "2024-04-26",
+      "2024-04-29",
+      "2024-04-30"
+    ],
+    "own_date_filter": "Every instrument uses last completed own-exchange session strictly before00:00UTC cutoff; crypto prior completed UTC day",
+    "writer_fx_exclusion": true,
+    "later_month_evidence_copied": false,
+    "identity_handling": {
+      "DJT": "Operating-company renamed trading metrics start2024-03-26; pre-combination vehicle history excluded from writer cards",
+      "GEV": "Ordinary trading metrics start2024-04-02; when-issued observations omitted",
+      "GE": "April metrics omitted due spin-off operating-perimeter and comparability ambiguity",
+      "OKLO": "Pre-combination acquisition-vehicle prices excluded from April cards",
+      "NNE": "No eligible listed trading history",
+      "NBIS": "No eligible resumed operating-company trading history"
+    },
+    "tool_sha256": {
+      "fetch_market.py": "bfc31b1814f3c7223eacbc83e99a41b42b7d3186cd8736c4c006fc071ffdc16a",
+      "build_cards.py": "1a5628fddf99e1d556fa63a25cac6a5b68300d736aafbdd0011454da45ee65b0",
+      "market_calendar_policy.py": "142583f0f9abec45e6325e9e60b3c5de10b733b853a334c8102bfa0ac55a722e",
+      "validate_market.py": "60401c6f78711a5c64ec9c64596c2facae54883e8cbda6f9371999efa20d1469"
+    },
+    "runtime_packages": {
+      "exchange-calendars": "4.13.2",
+      "pandas": "3.1.1",
+      "numpy": "2.5.4"
+    }
+  }
+}

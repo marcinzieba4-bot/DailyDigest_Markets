@@ -1,0 +1,95 @@
+{
+  "reviewer": "/root/nonretail_d",
+  "checked_at_utc": "2026-11-10T16:31:08.758203+00:00",
+  "status": "accepted",
+  "passed": true,
+  "fatal_or_major_remaining": 0,
+  "tool_sha256": {
+    "publish.py": "64d87cb5def6b08442d0ef9f13b4290da5f574313344cb8fb8a6a945f0f0a4d6",
+    "verify_delivery.py": "28007044841beabe7c858655bf171800d9f2c33f0fb6af1590b0fb50e30381af"
+  },
+  "fixture_tool": "audit_work/review_publication_engineering_d.py",
+  "fixture_tool_sha256": "a2c8c9c1d6a19a09172fc0531a955e5d93af5086b0f83cf20ea5f2f82c6842e0",
+  "fixture_count": 27,
+  "fixtures": {
+    "22_exact_weekday_dates": true,
+    "protected_snapshot_unique": true,
+    "april_weekend_native_keys_protected": true,
+    "nav_before_archive_correct_container": true,
+    "prior_hrefs_preserved": true,
+    "merge_idempotent": true,
+    "ambiguous_archive_rejected": true,
+    "missing_archive_rejected": true,
+    "exact_engineering_gate_accepts": true,
+    "gate_rejects_status": true,
+    "gate_rejects_passed": true,
+    "gate_rejects_boolean_remaining": true,
+    "gate_rejects_stale_tools": true,
+    "accepted_provenance_baseline": true,
+    "provenance_binding_change_rejected": true,
+    "all_origin_writes_correct_bucket": true,
+    "new_object_write_if_absent": true,
+    "postplan_mutation_rejected_before_artifact_put": true,
+    "existing_target_rejected_before_writes": true,
+    "index_write_compare_and_swap": true,
+    "conditional_upload_index_and_invalidation_success": true,
+    "cdn_invalidation_exact_scoped_paths": true,
+    "no_lambda_client_in_publisher": true,
+    "https_status200_same_url_wrong_body_rejected": true,
+    "delivery_stable_receipt_manifest_pass": true,
+    "delivery_receipt_mutation_rejected": true,
+    "delivery_manifest_mutation_rejected": true
+  },
+  "network_or_publication_performed": false,
+  "checkpoint_executed_or_imported": false,
+  "author_inputs_read_for_engineering_review": false,
+  "scope": "Independent engineering acceptance of exact publication/delivery code. This is not publication authorization or acceptance of reports, sources, runtime artifacts, delivery or repository checkpoint. All content/source/artifact plan gates remain mandatory.",
+  "fixed_findings": [
+    "Missing April discovery file replaced with source-bound exact provenance deployment metadata.",
+    "Archive merge chooses one unambiguous daily archive list and rejects missing/ambiguous lists.",
+    "Changed post-plan local body blocked by immediate exact SHA256/size check before artifact put.",
+    "Exact independent engineering receipt required before plan/go and pinned on resume/delivery.",
+    "Delivery output binds exact publication receipt and artifact manifest bytes and rejects mid-verification changes."
+  ],
+  "static_scope_verified": {
+    "weekday_dates": 22,
+    "daily_targets": 66,
+    "collection_targets": 5,
+    "total_expected_targets": 71,
+    "protected_snapshot_keys": 198,
+    "april_weekend_native_keys": 24,
+    "new_object_writes": "IfNoneMatch *",
+    "archive_index_write": "IfMatch current ETag",
+    "cdn_paths": [
+      "/reports/index.html",
+      "/reports/archive/2024-04-*",
+      "/reports/2024-04*",
+      "/Strategies/json/2024-04-*",
+      "/Strategies/2024-04-*"
+    ],
+    "delivery": "Complete origin SHA256+bytes for71; direct public HTML/collection bodies; all66native report ZIP members; archive-index full body hashes and old href preservation."
+  },
+  "documented_nonblocking_limits": [
+    "No automatic rollback command. Index backup plus resumable absent-only writes are provided; a compensating rollback must verify run-owned object identities and preserve intervening unrelated index edits.",
+    "Protected external-month snapshot covers enumerated HTML, not every prior native PDF/JSON/ZIP or Aug2026 collection object. Publisher target mapping cannot write those other-month objects.",
+    "Delivery checks CloudFront invalidation completion; publisher request path set is independently fixture-checked as April/index scoped.",
+    "Native Strategy PDF/JSON public delivery is verified inside the publicly hashed report ZIP, not certified as44direct HTTPS Strategy routes."
+  ],
+  "retained_code_provenance": {
+    "source_sha256": "fb4f393d73c3acba6e2bd8f69b5f2884cc66ffd30e1888844ad1310b592456af",
+    "code_provenance_sha256": "477ab684d34154093eb9549e2941526723313fdd71f9ffca83ea098b968a2426",
+    "deployed_package_source_equality_asserted": false
+  },
+  "checkpoint_delta_review": {
+    "script_sha256": "a05eae69358db1b32984698f1e977179084f1e6a41a7fe8d020f3505dc9a11d2",
+    "executed_or_imported": false,
+    "resolved": [
+      "Explicit exceptions retain mandatory gates under optimized Python.",
+      "Current delivery manifest/publication receipt hashes mandatory.",
+      "Core selected source inputs compared with exact delivered frozen-source ZIP inventory.",
+      "Rendered artifact paths compared with exact delivered artifact manifest.",
+      "Public-research hash label now matches actual metadata object."
+    ],
+    "root_notified_remaining_concrete_item": "Duplicate retail/ monthly HTML selected without a source or artifact path binding; omit duplicate or compare to canonical collection counterpart."
+  }
+}

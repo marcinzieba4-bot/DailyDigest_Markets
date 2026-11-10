@@ -1,0 +1,104 @@
+{
+ "ticker": "000001.SS",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/000001.SS?period1=1706745600&period2=1714435200&interval=1d&events=div,splits",
+   "sha256": "62a08e589991d1f3bf7b522d4724855edae35177a520535862d19fc24aaddbce",
+   "fetched_at_utc": "2026-11-10T14:53:34.837120+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/000001.SS?period1=1714435200&period2=1794322360&interval=1d&events=div,splits",
+   "sha256": "4600e8b7e43005e2b54484928aa82065490243497d8146968565b394006180f6",
+   "fetched_at_utc": "2026-11-10T14:53:36.883332+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/000001.SS?period1=1706745600&period2=1714435200&interval=1d&events=div,splits",
+    "sha256": "62a08e589991d1f3bf7b522d4724855edae35177a520535862d19fc24aaddbce",
+    "fetched_at_utc": "2026-11-10T14:53:34.837120+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "CNY",
+    "symbol": "000001.SS",
+    "exchangeName": "SHH",
+    "fullExchangeName": "Shanghai",
+    "instrumentType": "INDEX",
+    "firstTradeDate": 867807000,
+    "timezone": "CST",
+    "exchangeTimezoneName": "Asia/Shanghai"
+   },
+   "discarded_price_observations": 55,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/000001.SS?period1=1714435200&period2=1794322360&interval=1d&events=div,splits",
+    "sha256": "4600e8b7e43005e2b54484928aa82065490243497d8146968565b394006180f6",
+    "fetched_at_utc": "2026-11-10T14:53:36.883332+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "CNY",
+    "symbol": "000001.SS",
+    "exchangeName": "SHH",
+    "fullExchangeName": "Shanghai",
+    "instrumentType": "INDEX",
+    "firstTradeDate": 867807000,
+    "timezone": "CST",
+    "exchangeTimezoneName": "Asia/Shanghai"
+   },
+   "discarded_price_observations": 613,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

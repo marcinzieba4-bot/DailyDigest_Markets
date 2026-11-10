@@ -1,0 +1,149 @@
+{
+  "scope": "Explicit editorial exclusions of retained frozen headlines; no frozen feed mutation.",
+  "exclusions": [
+    {
+      "id": "n1384",
+      "title": "A final hurdle: Five questions for the ECB - Reuters",
+      "published_at": "2024-04-08T07:00:00+00:00",
+      "src": "Reuters",
+      "date": "2024-04-16",
+      "feed_sha256": "210e53ec86841dccab54ebcf69b943fc4f0559ee614bfaca68083a75e2214a92",
+      "screen_kind": "semantic_age",
+      "reason": "Root independently confirmed this April8 headline is a pending ECB event preview. Seven-day news window applies; it is stale at this edition despite inherited monthly category.",
+      "source_cutoff_utc": "2024-04-16T00:00:00Z",
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation",
+      "reviewer": "root"
+    },
+    {
+      "id": "n1407",
+      "title": "A final hurdle: Five questions for the ECB - Reuters",
+      "published_at": "2024-04-08T07:00:00+00:00",
+      "src": "Reuters",
+      "date": "2024-04-17",
+      "feed_sha256": "10ded24188f38a6cc8bc0711be37958c8185370df884962019713f2bb66e5476",
+      "screen_kind": "semantic_age",
+      "reason": "Root independently confirmed this April8 headline is a pending ECB event preview. Seven-day news window applies; it is stale at this edition despite inherited monthly category.",
+      "source_cutoff_utc": "2024-04-17T00:00:00Z",
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation",
+      "reviewer": "root"
+    },
+    {
+      "id": "n0196",
+      "title": "Analyst comments after Fitch downgrades China rating outlook - Reuters",
+      "published_at": "2024-04-09T07:00:00+00:00",
+      "src": "Reuters",
+      "date": "2024-04-10",
+      "feed_sha256": "e98a552ba50d72dab0126c12d1cc0e41d4a28ebcddb1face717cd0803f64b5c4",
+      "screen_kind": "article_vintage",
+      "reason": "Root independently confirmed Reuters canonical article published April10T05:20:36UTC, afterApr10UTCcutoff despite normalized April9RSS. Exclude retained headline for this edition only.",
+      "canonical_url": "https://www.reuters.com/markets/asia/analyst-comments-after-fitch-downgrades-china-rating-outlook-2024-04-10/",
+      "canonical_published_at": "2024-04-10T05:20:36+00:00",
+      "source_cutoff_utc": "2024-04-10T00:00:00Z",
+      "disposition": "exclude_from_report_claims_no_frozen_feed_mutation",
+      "reviewer": "root"
+    },
+    {
+      "id": "n1209",
+      "title": "Best Large-Cap Growth Stocks (October 2026) - Investing.com",
+      "published_at": "2024-04-17T14:56:43+00:00",
+      "src": "Investing.com",
+      "guard": "Obviously updated rolling ranking references October2026, after this April2024 report; stale index timestamp cannot make later content eligible.",
+      "reason": "Obviously updated rolling ranking references October2026, after this April2024 report; stale index timestamp cannot make later content eligible.",
+      "reviewer": "root",
+      "screen_kind": "rolling_future_editorial",
+      "date": "2024-04-18",
+      "feed_sha256": "f0b71dfec03f9244309c7a68babceed897e84d25827c627b246644dc6550e3a2"
+    },
+    {
+      "id": "n1036",
+      "title": "Best Large-Cap Growth Stocks (October 2026) - Investing.com",
+      "published_at": "2024-04-17T14:56:43+00:00",
+      "src": "Investing.com",
+      "guard": "Obviously updated rolling ranking references October2026, after this April2024 report; stale index timestamp cannot make later content eligible.",
+      "reason": "Obviously updated rolling ranking references October2026, after this April2024 report; stale index timestamp cannot make later content eligible.",
+      "reviewer": "root",
+      "screen_kind": "rolling_future_editorial",
+      "date": "2024-04-19",
+      "feed_sha256": "b28b4f20e2ffa075a40a40de45a826858b159dd692738f9d833f34a37dd4db55"
+    },
+    {
+      "id": "n1192",
+      "title": "Missed Nvidia’s Stock Price Rally? Check Out These 7 AI Stocks Instead: December 2025 Edition - Forbes",
+      "published_at": "2024-04-26T07:00:00+00:00",
+      "src": "Forbes",
+      "reason": "Headline explicitly refers to December2025 Edition, after this April2024 cutoff. Original RSS date cannot establish the eligibility of an obviously updated rolling investment ranking.",
+      "reviewer": "root",
+      "screen_kind": "rolling_future_editorial",
+      "date": "2024-04-29",
+      "feed_sha256": "48579a8f7d805cf38b627f12bf236a78d95d39946db75f43ffba6dc260eb11d7"
+    },
+    {
+      "id": "n1290",
+      "title": "FirstFT: Elon Musk’s Tesla teams up with China’s Baidu - Financial Times",
+      "published_at": "2024-04-28T07:00:00+00:00",
+      "src": "Financial Times",
+      "reason": "FirstFT retained April28 timestamp but current newsletter contains Monday premarket and yen-reversal updates. Original eligible headline vintage for the Baidu tie-up is not certified; omit this rolling newsletter rather than infer its original contents from the date. Sunday Musk visit is separately eligible.",
+      "reviewer": "root",
+      "screen_kind": "rolling_vintage_uncertain",
+      "date": "2024-04-29",
+      "feed_sha256": "48579a8f7d805cf38b627f12bf236a78d95d39946db75f43ffba6dc260eb11d7"
+    },
+    {
+      "id": "n1370",
+      "title": "5 Top Stocks With The Best Stock Buyback Programs: April 2025 Edition - Forbes",
+      "published_at": "2024-03-26T07:00:00+00:00",
+      "src": "Forbes",
+      "reason": "Root inspected exact headline: investment ranking or edition explicitly describes 2025/2026, after the April2024 cutoff. Retained historical RSS date does not make updated rolling content eligible.",
+      "reviewer": "root",
+      "screen_kind": "rolling_future_editorial",
+      "date": "2024-04-01",
+      "feed_sha256": "b8c25cb5e4dfcc9c59022b3d5dd3954f0c3ca86f41d8e00fb381a3f9e460f197"
+    },
+    {
+      "id": "n1356",
+      "title": "5 Top Stocks With The Best Stock Buyback Programs: April 2025 Edition - Forbes",
+      "published_at": "2024-03-26T07:00:00+00:00",
+      "src": "Forbes",
+      "reason": "Root inspected exact headline: investment ranking or edition explicitly describes 2025/2026, after the April2024 cutoff. Retained historical RSS date does not make updated rolling content eligible.",
+      "reviewer": "root",
+      "screen_kind": "rolling_future_editorial",
+      "date": "2024-04-02",
+      "feed_sha256": "a694b4af6c1bbc8ed88320cf74b086dd0dc8e51f7eb6c38c12e1bfc543612152"
+    },
+    {
+      "id": "n1247",
+      "title": "Best Growth Stocks to Buy in 2025 - Changelly",
+      "published_at": "2024-04-26T11:06:37+00:00",
+      "src": "Changelly",
+      "reason": "Root inspected exact headline: investment ranking or edition explicitly describes 2025/2026, after the April2024 cutoff. Retained historical RSS date does not make updated rolling content eligible.",
+      "reviewer": "root",
+      "screen_kind": "rolling_future_editorial",
+      "date": "2024-04-29",
+      "feed_sha256": "48579a8f7d805cf38b627f12bf236a78d95d39946db75f43ffba6dc260eb11d7"
+    },
+    {
+      "id": "n1249",
+      "title": "Best Pet Stocks (2026): Top Pet Companies - Bullish Bears",
+      "published_at": "2024-04-26T23:31:13+00:00",
+      "src": "Bullish Bears",
+      "reason": "Root inspected exact headline: investment ranking or edition explicitly describes 2025/2026, after the April2024 cutoff. Retained historical RSS date does not make updated rolling content eligible.",
+      "reviewer": "root",
+      "screen_kind": "rolling_future_editorial",
+      "date": "2024-04-29",
+      "feed_sha256": "48579a8f7d805cf38b627f12bf236a78d95d39946db75f43ffba6dc260eb11d7"
+    },
+    {
+      "id": "n2168",
+      "title": "Tesla's shift on low-cost cars throws Mexico, India factory plans into limbo - Reuters",
+      "published_at": "2024-04-23T07:00:00+00:00",
+      "src": "Reuters",
+      "reason": "Root independently checked Reuters canonical timestamp April24T02:45:28UTC and MarketScreener syndicated publication April23 20:59EDT=April24T00:59UTC. Both are after this cutoff despite normalized April23 RSS. Exclude factory-plans-in-limbo article for Apr24 only; no article-body facts enter report.",
+      "reviewer": "root",
+      "screen_kind": "article_vintage",
+      "canonical_url": "https://www.reuters.com/business/autos-transportation/teslas-shift-low-cost-cars-throws-mexico-india-factory-plans-into-limbo-2024-04-24/",
+      "canonical_published_at": "2024-04-24T02:45:28+00:00",
+      "date": "2024-04-24",
+      "feed_sha256": "a5164e8af710798abe076ed4b6083567d26dd6eab96f0736f6cda5b328434756"
+    }
+  ]
+}

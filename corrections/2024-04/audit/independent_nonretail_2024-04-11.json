@@ -1,0 +1,44 @@
+{
+  "date": "2024-04-11",
+  "status": "accepted",
+  "reviewer": "/root/artifact_tools",
+  "reviewed_at_utc": "2026-11-10T16:07:16.564030+00:00",
+  "fatal_or_major_remaining": 0,
+  "feed_sha256": "d504453b5b7998d480f6d2bafd6909e02d0dcda7115caa0a86323422b8f9b0c9",
+  "card_sha256": "45785d284bd1583c8527a56254353147445280c90bf5bfdbbfde75a77737a9da",
+  "exclusions_sha256": "d19a0d8cfc93fb6acd6f670c0966939b9f20ed804869e316862e5d0ffe0749f9",
+  "nonretail_content_sha256": "8dd6d0e53326ee14c30bb763cd3839b1585c976e390939df60d25b06a14cf0c7",
+  "draft_file_sha256": "762ad90f0384a7a39e6c2cbe377f7c00e37353799a6e38d6a094af7ca85ee7fd",
+  "nonretail_blocks_checked": 36,
+  "body_words": 8694,
+  "distinct_sources": 75,
+  "reviewed_validation_warnings": [],
+  "review_scope": [
+    "All 36 nonretail blocks reviewed against 75 exact own-date cited headline records and own-date exclusions: original full read plus source-aware n1026 Delta paragraph delta review.",
+    "All Treasury/market levels, dates, horizons and units checked against own-date card; equal39bps yield changes correctly described as parallel selloff over twenty observations, separately from daily reaction.",
+    "Fitch sovereign outlook change distinguished from rating downgrade; Vanke junk rating distinguished from default; Ping An Trust kept separate from wider group.",
+    "ECB and major-bank earnings remain pending; Microsoft/NetEase relaunch agreement is future access; Delta quarterly revenue guidance is not realised revenue.",
+    "TSMC reported revenue and monthly-sales evidence separated from profitability forecast and broad sector returns; GEV missing twenty-session history not filled.",
+    "Flow/money-market/crypto concentration observations preserve actual scope; no price move inferred as capital flow, no numeric spot-FX.",
+    "No other-date feed/card/report consulted during review."
+  ],
+  "findings_resolved": [
+    "Freed one Reuters n1027 use for merged retail: XLY Narrative now uses eligible own-date Skift n1026 reported record revenue/corporate-travel headline; all remaining Reuters references preserve future Q2 guidance scope."
+  ],
+  "review_result": "Accepted exact current draft after one root-requested source-aware Delta paragraph revision; prior full 36-block review retained, exact new paragraph checked against own-date Skift n1026 headline. Current verifier has zero failures and zero warnings.",
+  "limitations": [
+    "Headline records establish only their explicit facts and timing; original full article bodies/vintages are not certified.",
+    "Company forecasts and conditional playbooks are not assertions of later outcomes."
+  ],
+  "delta_review_scope": {
+    "prior_accepted_content_sha256": "8de4258d3598d18cf9ec30bc32761fa4d5bf2563c988dab42315f64e1039e460",
+    "changed_block": "sectors:XLY",
+    "changed_part": "Narrative",
+    "evidence_ids": [
+      "n1026"
+    ],
+    "evidence_title": "Delta Posts Record Revenues as Corporate Travel Bounces Back - Skift",
+    "unchanged_other_components": true,
+    "authoring_facts": "Only exact April11 feed/card/exclusions used for this correction; no later outcome imported."
+  }
+}

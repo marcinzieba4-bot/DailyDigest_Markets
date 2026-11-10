@@ -1,0 +1,19 @@
+{
+  "status": "baseline_preflight_engineering_checks_passed",
+  "baseline": {
+    "code_provenance_sha256": "477ab684d34154093eb9549e2941526723313fdd71f9ffca83ea098b968a2426",
+    "retained_source_sha256": "fb4f393d73c3acba6e2bd8f69b5f2884cc66ffd30e1888844ad1310b592456af",
+    "lambda_metadata": {
+      "CodeSha256": "IP7GVukS9rD1NT2+KLVXmG9GyxQS2xGJkDuPzgz7ijY=",
+      "LastModified": "2026-10-23T07:45:33.000+0000",
+      "Runtime": "python3.12"
+    }
+  },
+  "negative_fixtures": [
+    "missing_runtime",
+    "invalid_package_digest",
+    "clock_without_timezone"
+  ],
+  "no_network_or_remote_writes": true,
+  "independent_publication_acceptance": false
+}

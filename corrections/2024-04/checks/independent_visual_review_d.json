@@ -1,0 +1,123 @@
+{
+  "status": "accepted",
+  "passed": true,
+  "fatal_or_major_remaining": 0,
+  "reviewer": "nonretail_d",
+  "created_utc": "2026-11-10T17:46:42.834132+00:00",
+  "scope": "Independent runtime and visual engineering review of final built artifacts against independently accepted final specifications; no factual reapproval, publication, deployment, or source changes.",
+  "artifact_manifest_sha256": "7524e908cc402c47d50c8725a06c417d13d741d4605c651da50053b8ff7686af",
+  "final_artifact_review_sha256": "0edad2caab650e78f26d3b4be5e6e0c301dd307944ed4383963ee8e42de4859e",
+  "runtime_command": "/workspace/work/april-runtime/bin/python -u audit_work/review_final_artifacts.py > work/independent_artifact_runtime_d.log 2>&1",
+  "runtime_exit_code": 0,
+  "tool_sha256": {
+    "render.py": "2170ea5cee006482fb25871dffb4857fdd7983e7bdc6056ef3530dc20c22e905",
+    "build_artifacts.py": "d528e9750bce390512d431575b87c75aeb2dc025214dba1d1e7c203e109fd283",
+    "build_retail_page.py": "8c1a7a39d5078a5d5d01377caefa44eb02fdcd5a3ea46bb00fcbf8dc302efb02",
+    "build_source_inventory.py": "a8c5a53bff14bb43e7748aaea9bb66e98824462d25175e0e5b5c3311a9d7c7cc",
+    "audit_work/review_final_artifacts.py": "a9256d73beda477573caccd70cfdf413fccd5254a8a9463715ea1c6829fb5eba"
+  },
+  "runtime_summary": {
+    "reports": 22,
+    "responsive_layouts": 48,
+    "report_zip_members": 69,
+    "source_archive_members": 51301,
+    "accepted_source_dependency_hashes_checked": 1552
+  },
+  "visual_observations": [
+    "April 30 daily desktop and mobile top: readable header, navigation, macro card, body and citations; no horizontal overflow or clipped text.",
+    "April 30 daily retail anchor: desktop and mobile navigation lands with visible retail heading; lead card, prose labels and citation links wrap legibly.",
+    "Monthly retail desktop and mobile top: readable hero and all 22 weekday date links; mobile table of contents uses one column without horizontal overflow.",
+    "Monthly retail April 30 anchor: date click lands on correct section; lead title, cutoff, headings, long paragraphs and source links wrap without clipping.",
+    "April 30 PDF first page, retail transition page and lead page: legible text, citations and page furniture, with normal content flow across pages.",
+    "April 19 PDF source ledger sample: long English and Polish headlines, Unicode and links wrap legibly; fitz retains U+2060 ActualText."
+  ],
+  "anchor_interactions": [
+    {
+      "sample": "daily30-desktop-retail",
+      "hash": "#retail",
+      "heading_top": 70.015625,
+      "overflow": false
+    },
+    {
+      "sample": "monthly-retail-apr30-desktop",
+      "hash": "#2024-04-30",
+      "section_top": 0.203125,
+      "overflow": false
+    },
+    {
+      "sample": "daily30-mobile-retail",
+      "hash": "#retail",
+      "heading_top": 69.765625,
+      "overflow": false
+    },
+    {
+      "sample": "monthly-retail-apr30-mobile",
+      "hash": "#2024-04-30",
+      "section_top": 0.09375,
+      "overflow": false
+    }
+  ],
+  "visual_samples": [
+    {
+      "path": "work/author_d/visuals/daily19-pdf-unicode-ledger.png",
+      "sha256": "0db3a50975aca422cff74e38d64238b6134f146681ddd9262c041e85cfa546bf",
+      "size_bytes": 162984
+    },
+    {
+      "path": "work/author_d/visuals/daily30-desktop-retail.png",
+      "sha256": "225abd1742b4ad84c8dff384060b962d732b2d0d78971123073d5567150d83e8",
+      "size_bytes": 246127
+    },
+    {
+      "path": "work/author_d/visuals/daily30-desktop-top.png",
+      "sha256": "04a966b66070db919e86af428122a9868d5fd12af9c8a2eafc786bbe63f928fb",
+      "size_bytes": 218772
+    },
+    {
+      "path": "work/author_d/visuals/daily30-mobile-retail.png",
+      "sha256": "fc88315f24679d5eed2273ced6df7553c2e65ce270bafeeb95b2320984f05cba",
+      "size_bytes": 75454
+    },
+    {
+      "path": "work/author_d/visuals/daily30-mobile-top.png",
+      "sha256": "93d3d1f9a636e65b17d3ac1ef855ce12960a555157a3eca6f66817d9f4b301ad",
+      "size_bytes": 72095
+    },
+    {
+      "path": "work/author_d/visuals/daily30-pdf-first.png",
+      "sha256": "05d9c4b537ff646ee80caf0049c71aa204a27e00c7152d626be390a4e071dad9",
+      "size_bytes": 152536
+    },
+    {
+      "path": "work/author_d/visuals/daily30-pdf-retail-lead.png",
+      "sha256": "75baa2eace850d5a5164e672d55029452a008ed75eabbd9cfd5c107785837be4",
+      "size_bytes": 217760
+    },
+    {
+      "path": "work/author_d/visuals/daily30-pdf-retail.png",
+      "sha256": "d857d44cc54b8f852abb0d05d9fa0c95f4fbf2207125595deb4303acf7e7d5c3",
+      "size_bytes": 127216
+    },
+    {
+      "path": "work/author_d/visuals/monthly-retail-apr30-desktop.png",
+      "sha256": "c29b3b5f68d14594c55d083c4e161fd9420da48aa2f5fb2497a7dc4e536ff0db",
+      "size_bytes": 266000
+    },
+    {
+      "path": "work/author_d/visuals/monthly-retail-apr30-mobile.png",
+      "sha256": "0cd2cbde6312d994fd18c0731f4ce109669e90b3ceb047a9ce1fa0c750bd68f8",
+      "size_bytes": 82555
+    },
+    {
+      "path": "work/author_d/visuals/monthly-retail-desktop.png",
+      "sha256": "efa84631f261306a9e773fbd169d41f668f122d7f4ebf2b063a846a768d26fe0",
+      "size_bytes": 245386
+    },
+    {
+      "path": "work/author_d/visuals/monthly-retail-mobile.png",
+      "sha256": "e900ce21360e286bb8e7f08e687449c6426c893c627040921c3a268b3589cc07",
+      "size_bytes": 122571
+    }
+  ],
+  "findings": []
+}

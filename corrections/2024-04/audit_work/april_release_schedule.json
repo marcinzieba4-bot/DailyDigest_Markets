@@ -1,0 +1,879 @@
+{
+  "month": "2024-04",
+  "status": "merged_schedule_requires_independent_review",
+  "guards": [
+    {
+      "label": "US February JOLTS",
+      "release_utc": "2024-04-02T14:00:00+00:00",
+      "calendar_release_utc_date": "2024-04-02",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-03",
+      "earliest_pub_date": "2024-03-26",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American|JOLTS))(?=.*(?:JOLTS|job openings|job vacancies))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.bls.gov/schedule/2024/04_sched_list.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US March payrolls",
+      "release_utc": "2024-04-05T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-05",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-08",
+      "earliest_pub_date": "2024-03-29",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American|nonfarm|payroll))(?=.*(?:payroll|jobs report|employment report|labor market|labour market|unemployment))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.bls.gov/schedule/2024/04_sched_list.htm"
+      ],
+      "notes": "Preview language remains pending; do not guard unrelated country employment."
+    },
+    {
+      "label": "US March CPI",
+      "release_utc": "2024-04-10T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-10",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-11",
+      "earliest_pub_date": "2024-04-03",
+      "pattern": "^(?!.*(?:China|Chinese|Japan|Japanese|Tokyo|Australia|Australian|Poland|Polish|eurozone|euro zone|Germany|German|Canada|Canadian|UK|British|Britain))(?=.*(?:\\bCPI\\b|consumer prices|consumer inflation|inflation report))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.bls.gov/schedule/2024/04_sched_list.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US March PPI",
+      "release_utc": "2024-04-11T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-11",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-12",
+      "earliest_pub_date": "2024-04-04",
+      "pattern": "^(?!.*(?:China|Chinese|Japan|Japanese|Australia|Australian|Poland|Polish|eurozone|Germany|German|Canada|Canadian|UK|British|Britain))(?=.*(?:\\bPPI\\b|producer prices|producer inflation|wholesale prices))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.bls.gov/schedule/2024/04_sched_list.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US March import-export prices",
+      "release_utc": "2024-04-12T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-12",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-15",
+      "earliest_pub_date": "2024-04-05",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American))(?=.*(?:import|export))(?=.*(?:prices|inflation))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.bls.gov/schedule/2024/04_sched_list.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US first-quarter ECI",
+      "release_utc": "2024-04-30T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-30",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-05-01",
+      "earliest_pub_date": "2024-04-23",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American|\\bECI\\b))(?=.*(?:\\bECI\\b|employment cost|labor costs|labour costs|compensation costs))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.bls.gov/schedule/2024/04_sched_list.htm"
+      ],
+      "notes": "Word-boundary constrained ECI acronym; ordinary words such as decisions, especially and Niecie are not Employment Cost Index releases. First active lookback begins April23, after earlier frozen editions."
+    },
+    {
+      "label": "US February trade balance",
+      "release_utc": "2024-04-04T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-04",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-05",
+      "earliest_pub_date": "2024-03-28",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American))(?=.*(?:trade deficit|trade gap|trade balance))",
+      "kind": "macro",
+      "evidence": [
+        "https://apps.bea.gov/scb/issues/2023/12-december/1223-news-releases-2024.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US first-quarter advance GDP",
+      "release_utc": "2024-04-25T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-25",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-26",
+      "earliest_pub_date": "2024-04-18",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American))(?=.*(?:GDP|gross domestic product|economic growth|economy grew))(?=.*(?:first.quarter|Q1|advance|March))",
+      "kind": "macro",
+      "evidence": [
+        "https://apps.bea.gov/scb/issues/2023/12-december/1223-news-releases-2024.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US March PCE and spending",
+      "release_utc": "2024-04-26T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-26",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-29",
+      "earliest_pub_date": "2024-04-19",
+      "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American|\\bPCE\\b))(?=.*(?:\\bPCE\\b|personal consumption|personal income|March consumer spending|March inflation))",
+      "kind": "macro",
+      "evidence": [
+        "https://apps.bea.gov/scb/issues/2023/12-december/1223-news-releases-2024.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "ECB April policy decision",
+      "release_utc": "2024-04-11T12:15:00+00:00",
+      "calendar_release_utc_date": "2024-04-11",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-12",
+      "earliest_pub_date": "2024-04-04",
+      "pattern": "^(?=.*(?:ECB|European Central Bank|Lagarde))(?=.*(?:rates|rate|policy|decision))",
+      "kind": "policy",
+      "evidence": [
+        "https://www.ecb.europa.eu/press/pr/date/2024/html/ecb.mp240411~1345644915.en.html",
+        "https://www.ecb.europa.eu/press/govcdec/mopo/html/index.en.html"
+      ],
+      "notes": "Frankfurt daylight saving:14:15 CEST is12:15UTC. Press conference14:45local is12:45UTC; both after cutoffApr11."
+    },
+    {
+      "label": "BOJ April policy decision",
+      "release_utc": "2024-04-26T03:22:00+00:00",
+      "calendar_release_utc_date": "2024-04-26",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-29",
+      "earliest_pub_date": "2024-04-19",
+      "pattern": "^(?=.*(?:BOJ|Bank of Japan|Ueda))(?=.*(?:policy|rates|rate|outlook|bond buying|bond-buying))",
+      "kind": "policy",
+      "evidence": [
+        "https://www.boj.or.jp/en/mopo/mpmdeci/state_2024/k240426a.htm"
+      ],
+      "notes": "Official page reports actual statement release12:22JST, after Apr26 cutoff."
+    },
+    {
+      "label": "Japan March national CPI",
+      "release_utc": "2024-04-18T23:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-18",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-19",
+      "earliest_pub_date": "2024-04-12",
+      "pattern": "^(?=.*(?:Japan|Japanese))(?=.*(?:CPI|consumer prices|consumer inflation|core inflation))(?=.*(?:March|Mar\\b|national))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.jil.go.jp/english/estatis/esaikin/2024/e202404.html",
+        "https://www.stat.go.jp/english/data/cpi/1585.htm"
+      ],
+      "notes": "National March reportApr19 at08:30JST; eligibleApr19. Date evidence JILPT, clock Statistics Bureau FAQ."
+    },
+    {
+      "label": "Japan April Tokyo CPI",
+      "release_utc": "2024-04-25T23:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-25",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-26",
+      "earliest_pub_date": "2024-04-18",
+      "pattern": "^(?=.*(?:Tokyo|Japan.s capital|Japan’s capital))(?=.*(?:CPI|inflation|consumer prices))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.toukei.metro.tokyo.lg.jp/bukka/2024/bk2441data.htm",
+        "https://www.stat.go.jp/english/data/cpi/1585.htm"
+      ],
+      "notes": "Tokyo reportApr26 at08:30JST; eligibleApr26, not Apr29."
+    },
+    {
+      "label": "Japan March Tankan",
+      "release_utc": "2024-03-31T23:50:00+00:00",
+      "calendar_release_utc_date": "2024-03-31",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-01",
+      "earliest_pub_date": "2024-03-24",
+      "pattern": "^(?=.*(?:Japan|Japanese|BOJ|Tankan))(?=.*Tankan)",
+      "kind": "macro",
+      "evidence": [
+        "https://www.boj.or.jp/en/statistics/tk/yoshi/tk2403.htm",
+        "https://www.investing.com/news/economy/boj-tankan-to-show-q1-manufacturers-optimism-eased-slightly-services-improved--reuters-poll-3350203"
+      ],
+      "notes": "Apr1 at08:50JST precedesApr1UTC cutoff by10minutes; no later article admitted merely because event was available."
+    },
+    {
+      "label": "China March Caixin manufacturing PMI",
+      "release_utc": "2024-04-01T01:45:00+00:00",
+      "calendar_release_utc_date": "2024-04-01",
+      "timing_precision": "verified exact historical clock",
+      "eligible_edition": "2024-04-02",
+      "earliest_pub_date": "2024-03-25",
+      "pattern": "^(?=.*(?:China|Chinese|Caixin))(?=.*(?:manufactur|factory))(?=.*(?:Caixin|private survey))",
+      "kind": "macro",
+      "evidence": [
+        "https://forex.z.com/hk/en/forex_trading/economic_calendar/202404.html"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China March Caixin services PMI",
+      "release_utc": "2024-04-03T01:45:00+00:00",
+      "calendar_release_utc_date": "2024-04-03",
+      "timing_precision": "verified exact historical clock",
+      "eligible_edition": "2024-04-04",
+      "earliest_pub_date": "2024-03-27",
+      "pattern": "^(?=.*(?:China|Chinese|Caixin))(?=.*(?:services|service sector|non.manufactur))(?=.*(?:Caixin|private survey))",
+      "kind": "macro",
+      "evidence": [
+        "https://forex.z.com/hk/en/forex_trading/economic_calendar/202404.html"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China March CPI PPI",
+      "release_utc": "2024-04-11T01:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-11",
+      "timing_precision": "verified exact historical clock",
+      "eligible_edition": "2024-04-12",
+      "earliest_pub_date": "2024-04-04",
+      "pattern": "^(?=.*(?:China|Chinese|Caixin))(?=.*(?:\\bCPI\\b|\\bPPI\\b|consumer prices|producer prices|inflation|deflation))(?=.*(?:March|Mar\\b|2024))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.stats.gov.cn/english/PressRelease/ReleaseCalendar/202401/t20240104_1946223.html"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China March trade",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-12",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-15",
+      "earliest_pub_date": "2024-04-05",
+      "pattern": "^(?=.*(?:China|Chinese))(?=.*(?:exports|imports|trade surplus|trade data))(?=.*(?:March|Mar\\b|2024))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.kaohooninternational.com/economics/538563"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China March credit",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-12",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-15",
+      "earliest_pub_date": "2024-04-05",
+      "pattern": "^(?=.*(?:China|Chinese|PBOC|PBoC))(?=.*(?:new loans|bank loans|yuan loans|credit data|social financing|money supply|M2))(?=.*(?:March|Mar\\b|first.quarter|Q1|2024))",
+      "kind": "macro",
+      "evidence": [
+        "https://english.www.gov.cn/archive/statistics/202404/12/content_WS66192b0bc6d0868f4e8e5fc0.html"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China March activity and Q1 GDP",
+      "release_utc": "2024-04-16T02:00:00+00:00",
+      "calendar_release_utc_date": "2024-04-16",
+      "timing_precision": "verified exact historical clock",
+      "eligible_edition": "2024-04-17",
+      "earliest_pub_date": "2024-04-09",
+      "pattern": "^(?=.*(?:China|Chinese))(?=.*(?:\\bGDP\\b|industrial (?:output|production)|retail sales|fixed.asset|property investment|property sales|unemployment))(?=.*(?:March|Mar\\b|first.quarter|Q1|2024))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.stats.gov.cn/english/PressRelease/ReleaseCalendar/202401/t20240104_1946223.html"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China March home prices",
+      "release_utc": "2024-04-16T01:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-16",
+      "timing_precision": "verified exact historical clock",
+      "eligible_edition": "2024-04-17",
+      "earliest_pub_date": "2024-04-09",
+      "pattern": "^(?=.*(?:China|Chinese))(?=.*(?:home prices|house prices|housing prices))(?=.*(?:March|Mar\\b))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.stats.gov.cn/english/PressRelease/ReleaseCalendar/202401/t20240104_1946223.html"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China April MLF decision",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-15",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-16",
+      "earliest_pub_date": "2024-04-08",
+      "pattern": "^(?=.*(?:China|Chinese|PBOC|PBoC))(?=.*(?:MLF|medium.term lending))",
+      "kind": "policy",
+      "evidence": [
+        "https://forex.z.com/hk/en/forex_trading/economic_calendar/202404.html"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China April LPR decision",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-22",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-23",
+      "earliest_pub_date": "2024-04-15",
+      "pattern": "^(?=.*(?:China|Chinese|PBOC|PBoC))(?=.*(?:loan prime|LPR))",
+      "kind": "policy",
+      "evidence": [
+        "https://forex.z.com/hk/en/forex_trading/economic_calendar/202404.html"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China March industrial profits",
+      "release_utc": "2024-04-27T01:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-27",
+      "timing_precision": "verified exact historical clock",
+      "eligible_edition": "2024-04-29",
+      "earliest_pub_date": "2024-04-20",
+      "pattern": "^(?=.*(?:China|Chinese))(?=.*industrial profits)(?=.*(?:March|Mar\\b|first.quarter|Q1))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.stats.gov.cn/english/PressRelease/ReleaseCalendar/202401/t20240104_1946223.html"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "China April official PMI",
+      "release_utc": "2024-04-30T01:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-30",
+      "timing_precision": "verified exact historical clock",
+      "eligible_edition": "2024-05-01",
+      "earliest_pub_date": "2024-04-23",
+      "pattern": "^(?=.*(?:China|Chinese|NBS))(?=.*(?:PMI|manufactur|factory|non.manufactur|services activity))(?=.*(?:April|Apr\\b))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.stats.gov.cn/english/PressRelease/ReleaseCalendar/202401/t20240104_1946223.html"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "RBA March meeting minutes",
+      "release_utc": "2024-04-02T00:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-02",
+      "timing_precision": "verified exact historical clock",
+      "eligible_edition": "2024-04-03",
+      "earliest_pub_date": "2024-03-26",
+      "pattern": "^(?=.*(?:RBA|Reserve Bank of Australia))(?=.*minutes)",
+      "kind": "staged_event",
+      "evidence": [
+        "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2024/2024-03-19.html"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Australia February trade",
+      "release_utc": "2024-04-05T00:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-05",
+      "timing_precision": "verified exact historical clock",
+      "eligible_edition": "2024-04-08",
+      "earliest_pub_date": "2024-03-29",
+      "pattern": "^(?=.*(?:Australia|Australian))(?=.*(?:trade (?:surplus|balance|data)|exports|imports))(?=.*(?:February|Feb\\b))",
+      "kind": "macro",
+      "evidence": [
+        "https://forex.z.com/hk/en/forex_trading/economic_calendar/202404.html"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Australia March labour force",
+      "release_utc": "2024-04-18T01:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-18",
+      "timing_precision": "verified exact historical clock",
+      "eligible_edition": "2024-04-19",
+      "earliest_pub_date": "2024-04-11",
+      "pattern": "^(?=.*(?:Australia|Australian))(?=.*(?:jobs|employment|unemployment|labour force|labor force))(?=.*(?:March|Mar\\b))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/mar-2024"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Australia Q1 March inflation",
+      "release_utc": "2024-04-24T01:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-24",
+      "timing_precision": "verified exact historical clock",
+      "eligible_edition": "2024-04-25",
+      "earliest_pub_date": "2024-04-17",
+      "pattern": "^(?=.*(?:Australia|Australian))(?=.*(?:inflation|CPI|consumer prices))(?=.*(?:March|Mar\\b|first.quarter|Q1))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/mar-quarter-2024"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Australia March retail sales",
+      "release_utc": "2024-04-30T01:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-30",
+      "timing_precision": "verified exact historical clock",
+      "eligible_edition": "2024-05-01",
+      "earliest_pub_date": "2024-04-23",
+      "pattern": "^(?=.*(?:Australia|Australian))(?=.*retail)(?=.*(?:March|Mar\\b))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.abs.gov.au/media-centre/media-releases/consumers-cautious-retail-sales-fall-04"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Poland March manufacturing PMI",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-02",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-03",
+      "earliest_pub_date": "2024-03-26",
+      "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*))(?=.*(?:PMI|manufactur|przemysł\\w*))(?=.*(?:March|Mar\\b|marc\\w*))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.fxstreet.com/analysis/pmis-in-manufacturing-inched-up-in-march-202404020744"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Poland April MPC decision",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-04",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-05",
+      "earliest_pub_date": "2024-03-28",
+      "pattern": "^(?=.*(?:Poland|Polish|NBP|RPP|Glapi\\w*|Rada Polityki))(?=.*(?:rates|stóp|stopy|procentow\\w*|policy decision))",
+      "kind": "policy",
+      "evidence": [
+        "https://nbp.pl/wp-content/uploads/2024/05/Minutes-RPP-kwiecien-2024-ANG.pdf"
+      ],
+      "notes": "Later-published minutes used for meeting identity/date only; no minutes-content facts are author evidence."
+    },
+    {
+      "label": "Poland March final CPI",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-15",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-16",
+      "earliest_pub_date": "2024-04-08",
+      "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*))(?=.*(?:consumer price|inflation|CPI|inflacj\\w*))(?=.*(?:March|Mar\\b|marc\\w*))(?=.*(?:final|confirmed|confirms|potwierdz\\w*|ostatecz\\w*))",
+      "kind": "macro",
+      "evidence": [
+        "https://stat.gov.pl/en/release-calendar/04-2024.html"
+      ],
+      "notes": " Final-release language required; a GUS mention alone cannot suppress commentary on the already-released flash."
+    },
+    {
+      "label": "Poland March output wages employment",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-22",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-23",
+      "earliest_pub_date": "2024-04-15",
+      "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|GUS))(?=.*(?:industrial (?:production|output)|produkcj\\w*|producer prices|PPI|wages|salaries|wynagrodz\\w*|employment|zatrudn\\w*))(?=.*(?:March|Mar\\b|marc\\w*))",
+      "kind": "macro",
+      "evidence": [
+        "https://stat.gov.pl/en/release-calendar/04-2024.html"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Poland March retail sales",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-23",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-24",
+      "earliest_pub_date": "2024-04-16",
+      "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|GUS))(?=.*(?:retail sales|sprzedaż\\w* detalicz\\w*))(?=.*(?:March|Mar\\b|marc\\w*))",
+      "kind": "macro",
+      "evidence": [
+        "https://stat.gov.pl/files/gfx/portalinformacyjny/en/defaultaktualnosci/3285/11/103/1/retail_sales_index__march_2024.pdf"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Poland March GUS unemployment",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-24",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-25",
+      "earliest_pub_date": "2024-04-17",
+      "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|GUS))(?=.*(?:registered unemployment|bezroboci\\w*))(?=.*(?:March|Mar\\b|marc\\w*))(?=.*(?:GUS|statistics|statistical|urząd))",
+      "kind": "macro",
+      "evidence": [
+        "https://stat.gov.pl/en/release-calendar/04-2024.html"
+      ],
+      "notes": "Ministry preliminary estimate is a distinct earlier release; this guard targets GUS confirmation only."
+    },
+    {
+      "label": "Poland April flash CPI",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-30",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-05-01",
+      "earliest_pub_date": "2024-04-23",
+      "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|GUS))(?=.*(?:consumer price|inflation|CPI|inflacj\\w*))(?=.*(?:April|Apr\\b|kwiet\\w*))",
+      "kind": "macro",
+      "evidence": [
+        "https://stat.gov.pl/en/release-calendar/04-2024.html"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "JPMorgan April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-12",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-15",
+      "earliest_pub_date": "2024-03-29",
+      "pattern": "^(?=.*(?:JPMorgan|JP Morgan|JPM\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://www.jpmorganchase.com/ir/news/2024/jpmc-to-host-first-quarter-2024-earnings-call"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Citigroup April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-12",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-15",
+      "earliest_pub_date": "2024-03-29",
+      "pattern": "^(?=.*(?:Citigroup|\\bCiti\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://www.citigroup.com/global/news/press-release/2024/first-quarter-2024-results-and-key-metrics"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Wells Fargo April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-12",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-15",
+      "earliest_pub_date": "2024-03-29",
+      "pattern": "^(?=.*(?:Wells Fargo))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://www.sec.gov/Archives/edgar/data/72971/000007297124000115/wfc1qer04-12x24ex991xrelea.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "BlackRock April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-12",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-15",
+      "earliest_pub_date": "2024-03-29",
+      "pattern": "^(?=.*(?:BlackRock))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://www.sec.gov/Archives/edgar/data/1364742/000095017024043859/blk-20240412.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Goldman Sachs April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-15",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-16",
+      "earliest_pub_date": "2024-04-01",
+      "pattern": "^(?=.*(?:Goldman Sachs|Goldman))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://www.goldmansachs.com/pressroom/press-releases/2024/announcement-02-16-2024"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Bank of America April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-16",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-17",
+      "earliest_pub_date": "2024-04-02",
+      "pattern": "^(?=.*(?:Bank of America|BofA))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2024/04/bank-of-america-reports-first-quarter-2024-financial-results.html"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Morgan Stanley April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-16",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-17",
+      "earliest_pub_date": "2024-04-02",
+      "pattern": "^(?=.*(?:Morgan Stanley))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://www.morganstanley.com/press-releases/morgan-stanley-reports-first-quarter-2024"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "UnitedHealth April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-16",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-17",
+      "earliest_pub_date": "2024-04-02",
+      "pattern": "^(?=.*(?:UnitedHealth|UNH\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://www.unitedhealthgroup.com/newsroom/2024/2024-04-16-uhg-reports-first-quarter-results.html"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Johnson and Johnson April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-16",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-17",
+      "earliest_pub_date": "2024-04-02",
+      "pattern": "^(?=.*(?:Johnson.{0,5}Johnson|J&J|JNJ\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://www.jnj.com/media-center/press-releases/johnson-johnson-reports-q1-2024-results"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "ASML April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-17",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-18",
+      "earliest_pub_date": "2024-04-03",
+      "pattern": "^(?=.*(?:ASML))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://www.asml.com/news/press-releases/2024/q1-2024-financial-results"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "TSMC April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-18",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-19",
+      "earliest_pub_date": "2024-04-04",
+      "pattern": "^(?=.*(?:TSMC|Taiwan Semiconductor))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://investor.tsmc.com/english/quarterly-results/2024/q1"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Netflix April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-18",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-19",
+      "earliest_pub_date": "2024-04-04",
+      "pattern": "^(?=.*(?:Netflix))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://ir.netflix.net/investor-news-and-events/financial-releases/press-release-details/2024/Netflix-to-Announce-First-Quarter-2024-Financial-Results/default.aspx"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Tesla April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-23",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-24",
+      "earliest_pub_date": "2024-04-09",
+      "pattern": "^(?=.*(?:Tesla|TSLA\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://ir.tesla.com/press-release/tesla-releases-first-quarter-2024-financial-results"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "PepsiCo April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-23",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-24",
+      "earliest_pub_date": "2024-04-09",
+      "pattern": "^(?=.*(?:PepsiCo|Pepsi))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://www.pepsico.com/en/newsroom/press-releases/2024/pepsico-announces-timing-and-availability-of-first-quarter-2024-financial-results"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Meta April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-24",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-25",
+      "earliest_pub_date": "2024-04-10",
+      "pattern": "^(?=.*(?:\\bMeta\\b|Facebook))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://investor.atmeta.com/investor-news/press-release-details/2024/Meta-Reports-First-Quarter-2024-Results/default.aspx"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Microsoft April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-25",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-26",
+      "earliest_pub_date": "2024-04-11",
+      "pattern": "^(?=.*(?:Microsoft|MSFT\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://www.microsoft.com/en-us/investor/earnings/fy-2024-q3/press-release-webcast"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Alphabet April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-25",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-26",
+      "earliest_pub_date": "2024-04-11",
+      "pattern": "^(?=.*(?:Alphabet|Google))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://abc.xyz/investor/events/event-details/2024/2024-q1-earnings-call/"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Exxon April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-26",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-29",
+      "earliest_pub_date": "2024-04-12",
+      "pattern": "^(?=.*(?:Exxon))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://corporate.exxonmobil.com/news/news-releases/2024/0426_exxonmobil-announces-first-quarter-2024-results"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Chevron April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-26",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-29",
+      "earliest_pub_date": "2024-04-12",
+      "pattern": "^(?=.*(?:Chevron))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://chevroncorp.gcs-web.com/news-releases/news-release-details/chevron-reports-first-quarter-2024-results"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Coca Cola April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-30",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-05-01",
+      "earliest_pub_date": "2024-04-16",
+      "pattern": "^(?=.*(?:Coca.Cola))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://www.coca-colacompany.com/media-center/coca-cola-reports-first-quarter-2024-results"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Amazon April quarterly result",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-30",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-05-01",
+      "earliest_pub_date": "2024-04-16",
+      "pattern": "^(?=.*(?:Amazon))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook))",
+      "kind": "company_result",
+      "evidence": [
+        "https://ir.aboutamazon.com/news-release/news-release-details/2024/Amazon-com-Announces-First-Quarter-Results-68b9258cd/"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Tesla Q1 vehicle production and deliveries",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-02",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-03",
+      "earliest_pub_date": "2024-03-19",
+      "pattern": "^(?=.*(?:Tesla|TSLA))(?=.*(?:deliveries|delivered|delivery|production))(?=.*(?:quarter|Q1|first.quarter|March))",
+      "kind": "company_operation",
+      "evidence": [
+        "https://ir.tesla.com/press-release/tesla-vehicle-production-deliveries-and-date-financial-results-webcast-first-quarter-2024"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Trump Media annual loss disclosure",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-01",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-02",
+      "earliest_pub_date": "2024-03-25",
+      "pattern": "^(?=.*(?:Trump Media|Truth Social|\\bDJT\\b))(?=.*(?:2023|annual|\\$58|58 million|58.2|loss|revenue))",
+      "kind": "company_result",
+      "evidence": [
+        "https://apnews.com/article/6a6504f244c3130e102d11c40ad0d7ff"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "Bitcoin fourth halving completed",
+      "release_utc": "2024-04-20T00:09:00+00:00",
+      "calendar_release_utc_date": "2024-04-20",
+      "timing_precision": "verified exact historical clock",
+      "eligible_edition": "2024-04-22",
+      "earliest_pub_date": "2024-04-13",
+      "pattern": "^(?=.*(?:Bitcoin|\\bBTC\\b))(?=.*halving)",
+      "kind": "staged_event",
+      "evidence": [
+        "https://www.blockchain.com/explorer/blocks/btc/840000"
+      ],
+      "notes": "Block header clock00:09:27UTC; minute shown conservatively. Pending countdown is not completed halving."
+    },
+    {
+      "label": "Israeli retaliation inside Iran",
+      "release_utc": null,
+      "calendar_release_utc_date": "2024-04-19",
+      "timing_precision": "conservative UTC-day bound; exact minute unasserted",
+      "eligible_edition": "2024-04-22",
+      "earliest_pub_date": "2024-04-12",
+      "pattern": "^(?=.*(?:Israel|Israeli))(?=.*(?:strik|attack|retaliat|explosion|drone))(?=.*(?:Iran|Isfahan))",
+      "kind": "staged_event",
+      "evidence": [
+        "https://www.reuters.com/fact-check/video-explosion-predates-april-19-attack-iran-2024-04-19/"
+      ],
+      "notes": "Exact minute unasserted; UTC-day conservative screen. Earlier consular strike in Syria and Iranian attack on Israel are distinct events."
+    }
+  ],
+  "scope": "Safety screen only; compact historical release clocks, not writer factual evidence."
+}

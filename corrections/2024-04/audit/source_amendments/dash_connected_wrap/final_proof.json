@@ -1,0 +1,574 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-10T17:23:32.950318+00:00",
+  "scope": "Actual22-input isolated renderer/HTML/mobile regression plus Apr26 PDF exact preservation; not final runtime artifact acceptance.",
+  "runtime": {
+    "executable": "/workspace/work/april-runtime/bin/python",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "pymupdf": "1.26.6",
+    "pypdf": "6.10.0"
+  },
+  "renderer_sha256": "2170ea5cee006482fb25871dffb4857fdd7983e7bdc6056ef3530dc20c22e905",
+  "builder_sha256": "d528e9750bce390512d431575b87c75aeb2dc025214dba1d1e7c203e109fd283",
+  "runtime_reviewer_sha256": "a9256d73beda477573caccd70cfdf413fccd5254a8a9463715ea1c6829fb5eba",
+  "probe_sha256": "713c1e821e909651c1c7d6790191386003e542c01fc527a01b391820f5d7d188",
+  "frozen_input_bindings": {
+    "specs/2024-04-01.json": "a100ee8eb92592a4af7c829f95a43c8cb170f198644684dd9517856f0f04a942",
+    "feeds/2024-04-01.json.gz": "b8c25cb5e4dfcc9c59022b3d5dd3954f0c3ca86f41d8e00fb381a3f9e460f197",
+    "cards/2024-04-01.json": "64c9ac35791b5d2949d0f0e57e97af48d116433c083744264b58dc06fcfe984a",
+    "exclusions/2024-04-01.json": "b4343e4e4d5e18a6ad6e6ff6268380c508ed6f11bbb312edda675576495fce66",
+    "specs/2024-04-02.json": "286dd3fd699c5d9b0167a4549b0d7d5161ca5df383cc790772e4e880eadd1df8",
+    "feeds/2024-04-02.json.gz": "a694b4af6c1bbc8ed88320cf74b086dd0dc8e51f7eb6c38c12e1bfc543612152",
+    "cards/2024-04-02.json": "656b7debc865e772f8b00c5e3048b506f667164406639a757133f1790affd626",
+    "exclusions/2024-04-02.json": "e10fb00be30cab6935f39a7c873de9f3fba4a60e369482db39f39a4962b30750",
+    "specs/2024-04-03.json": "193d8f8486bd589e66fadcf9bbe7c4dba55f3539e9eeb96a92b772501fc5055a",
+    "feeds/2024-04-03.json.gz": "a5eda88985bc9d57ee57832fdcdd81c80ac66e2b7ed4ac16492ac999effc0389",
+    "cards/2024-04-03.json": "1470b6e7514091dbf183b134dbbcd5ddbe276358ded7d2ff991705d2dc93d9ee",
+    "exclusions/2024-04-03.json": "61bd44022c469ea0d4f2f2699f7cd643e0736e2827e96ca31a0ec7d47644f4fa",
+    "specs/2024-04-04.json": "331783c56f09253db387648e5cf5bed04c370796f5fc8c4325b882ab1490ec3e",
+    "feeds/2024-04-04.json.gz": "1a98f9fd81abfefb2412a6b6d97215cc17bd8144bd9e1185391d951d42d260ca",
+    "cards/2024-04-04.json": "6c1f275e43d8099164763be978d1a5bc072ddfe1de245b30f261c856815e373f",
+    "exclusions/2024-04-04.json": "f1ebf4e43595ac04322d845dbc32b03de5f6fbd3adb3ea980a3d663508dfd9fc",
+    "specs/2024-04-05.json": "cdf839c254ae1eddd54fb4225790639ec3824af98c270aef87cf9d4b7dbce411",
+    "feeds/2024-04-05.json.gz": "83c9561f3e4a1f98cb2618dc42b033da243189bed80dd6ffc976344d61155692",
+    "cards/2024-04-05.json": "15335ca1222588229fa54734896f957c44ac2482211bc3f67031fa81fdafac52",
+    "exclusions/2024-04-05.json": "a3357f97198cd0a6ec6a90a3931c016b6c909495f2a69e4808b0a33a8d1804b5",
+    "specs/2024-04-08.json": "3a080e17f2364669b32cafbaf7c2a932f426aab9bdade78376c52496c6d87361",
+    "feeds/2024-04-08.json.gz": "314ebc2c46f1a2693b6a7f56b4da1fa4abe6f546b3ac66d9187aad699227906f",
+    "cards/2024-04-08.json": "09bbbc3d06b833f392d84107bafd6ad4652255f16f99cb277ca8f900892b9a23",
+    "exclusions/2024-04-08.json": "b0c3f617b9f524de0c5b971ba1b7ac22800e4048a9a08d7ee1d8fde0e4d1eaaa",
+    "specs/2024-04-09.json": "0680c2bb7f58484ef4f039cbb8428a822a86dad92490b8cc29491e89e4604e4b",
+    "feeds/2024-04-09.json.gz": "231c79208a290e9289c33098397b2f9756f0d0d389ed8871cf9505a034f87da2",
+    "cards/2024-04-09.json": "e6c252859ca634519a67c7d5bd38b3cd5b7fbe8bde00123cc6ca829a28b3da1c",
+    "exclusions/2024-04-09.json": "a1e349c6624c751babe1b34da14d9642e9cef3dade183533ad53adffabcd2396",
+    "specs/2024-04-10.json": "1448a35802b5c502a67f6c3d19b9d82c277e804047a873709a9dcdfe8268ea32",
+    "feeds/2024-04-10.json.gz": "e98a552ba50d72dab0126c12d1cc0e41d4a28ebcddb1face717cd0803f64b5c4",
+    "cards/2024-04-10.json": "f4552d5df115c4799ed8c89b220a532bea6d192720630c05f1816d4389547dad",
+    "exclusions/2024-04-10.json": "54e5f525406388e0801a32d64ec3a4114708c3c631a5d0a01cb1758ecad3f43e",
+    "specs/2024-04-11.json": "2dd884b3374a79638bc03d2eee00d58df30565b3d7b1fcab58c137c10f7b8cef",
+    "feeds/2024-04-11.json.gz": "d504453b5b7998d480f6d2bafd6909e02d0dcda7115caa0a86323422b8f9b0c9",
+    "cards/2024-04-11.json": "45785d284bd1583c8527a56254353147445280c90bf5bfdbbfde75a77737a9da",
+    "exclusions/2024-04-11.json": "d19a0d8cfc93fb6acd6f670c0966939b9f20ed804869e316862e5d0ffe0749f9",
+    "specs/2024-04-12.json": "4cdbd046109c4a600ca876e3bcc4ebecce62474dd73a1bcb749ce0b40baa6bec",
+    "feeds/2024-04-12.json.gz": "6fed55e4001490735492c0fc6392f2e816e991bcb1fb6eb558e6da434aa59e02",
+    "cards/2024-04-12.json": "33c9e3998589b635ad707d2a499892eb2f74f2b461cae98d7dc979e53a8ebe85",
+    "exclusions/2024-04-12.json": "514f666156db7639f5e057936c78fde559c3ba61bb78f4e8350d55f3b7b8ea71",
+    "specs/2024-04-15.json": "9de01c5e5d1fd0da96d8dee65fe6756f7bd6f71d2354a32501fb56246e2c81de",
+    "feeds/2024-04-15.json.gz": "29bbe98ebd5e8180daca18cd02060be7763c5a9ae0d177fd213fd686336c100a",
+    "cards/2024-04-15.json": "cc7c32a23836a43078f0492c6ebbb32c488b512c0aca3f6bfc8f6157be5757da",
+    "exclusions/2024-04-15.json": "a36e1bbbe02d08decb22974aea95728dd24afdf4b962537777a9b79158791251",
+    "specs/2024-04-16.json": "91fe63681e4d7b1948767f7c64d3d4fae59830fbedc80ea4a0d515338604bcb4",
+    "feeds/2024-04-16.json.gz": "210e53ec86841dccab54ebcf69b943fc4f0559ee614bfaca68083a75e2214a92",
+    "cards/2024-04-16.json": "7c086aae090660c8e5cd18f548b940e7467af8ec0b08389e5cf5d60bee87054d",
+    "exclusions/2024-04-16.json": "26566eff9461b5275344369d2b7d05f62c73cbc7cae846c3bef8ca2675b424ad",
+    "specs/2024-04-17.json": "594a70bb15823db096e92645481f10111816ce8401f55c847b0ccc9970564c27",
+    "feeds/2024-04-17.json.gz": "10ded24188f38a6cc8bc0711be37958c8185370df884962019713f2bb66e5476",
+    "cards/2024-04-17.json": "52555cb3bbee901a71cbbb0a04a6e2178e1bb27b033f116008c041e386c17f54",
+    "exclusions/2024-04-17.json": "1d07835ec02a8da9339d583453eaa4f835d2acff0eec007d8b82d5d504c4882d",
+    "specs/2024-04-18.json": "f651cd48f17335e27f70e5f1e3dacf8caedf611bdecd8ae17e97e1cf7123db57",
+    "feeds/2024-04-18.json.gz": "f0b71dfec03f9244309c7a68babceed897e84d25827c627b246644dc6550e3a2",
+    "cards/2024-04-18.json": "92110ae5a87c8fbc1966cd7fd3e8798ba50705901e2d870e8c1be82904d496f8",
+    "exclusions/2024-04-18.json": "ed2af2284d7f8a964551e507104eb27c37c3956069472bde733d656609a2c87d",
+    "specs/2024-04-19.json": "fca959da25f13264fbe516a46ce9f344f361d215ae6b6a69b53fba43ab0cb2d5",
+    "feeds/2024-04-19.json.gz": "b28b4f20e2ffa075a40a40de45a826858b159dd692738f9d833f34a37dd4db55",
+    "cards/2024-04-19.json": "c788bcec3f4f538d600dad73f5264b97b47b57b5213c69f6e2e9150f1b3824ff",
+    "exclusions/2024-04-19.json": "c3402aba7d71cc5a2fc67acfe121e761f1acfc806da763d2d7a13e968456177e",
+    "specs/2024-04-22.json": "32ceaacb42d0204e366e36e70a987e4be4cde019a6a02507b58e951d16510c7e",
+    "feeds/2024-04-22.json.gz": "48b739006920703e8574a9f0e5b7450bc2caefd5b99958c3bd332d1ded5316a7",
+    "cards/2024-04-22.json": "26b9d5b92f7a05ecb204e1756de02ebde98e06b84465a5ba09cdfadc4e9c3595",
+    "exclusions/2024-04-22.json": "794cba0ca3537a613e91d8ee3b0e7e6d1c17acae94e0852d4aa9d2538dc11f50",
+    "specs/2024-04-23.json": "40697b0590fd0f44813d6bd8bb06ed7790d31baf0abb051a1e56eb00c39f84c9",
+    "feeds/2024-04-23.json.gz": "2c45f51633e0567ffd32d7e0452494b696106be3c870242d6e7e2d9951c30a1d",
+    "cards/2024-04-23.json": "1bfcb9254f225d9e644617616d9c826f48c553d45544b159962842cb2d8b566b",
+    "exclusions/2024-04-23.json": "47cfed6625d11d45b9b0557ab02eee5680dbc60d4010b2d89f20d7798c9c6896",
+    "specs/2024-04-24.json": "e29f9fa7f36b2deac388fffe5af6ef3c8ca828d1e2a04d0e98be3fbf3e90e315",
+    "feeds/2024-04-24.json.gz": "a5164e8af710798abe076ed4b6083567d26dd6eab96f0736f6cda5b328434756",
+    "cards/2024-04-24.json": "0de5534ab65c950e482906c112ca72e2fac42a225fc071e0e4a5bde48573fb94",
+    "exclusions/2024-04-24.json": "3eaa39538832461db0a8f2393f133d595effa842a7e1634f57ad29fe76bc99b4",
+    "specs/2024-04-25.json": "7fd2d549d220a39e669d51e0aa436da921025f4b49f68fe34f4524cef73cda02",
+    "feeds/2024-04-25.json.gz": "52e83c13625c44c97783f911ff691946e59c743b5d52028f8c8bc3519c69ea59",
+    "cards/2024-04-25.json": "f2982e6181e6bd2058a48c18bfc93485a6e233c9376b2e370cf264d41ef33ab7",
+    "exclusions/2024-04-25.json": "012ab8fa870fe7cdf2a0213ec84338b97add7f6390d138646d19bc8eb4352c00",
+    "specs/2024-04-26.json": "a16509e07cfb318b3fdf8fadfa3467ba1fbc204832cac79e27994b882c63078e",
+    "feeds/2024-04-26.json.gz": "dbe94c602b687c656c694a397aa774109d39cd8e18207d0c286a33342143474c",
+    "cards/2024-04-26.json": "c9acf07e6101b8fef5337141a4398ffbb05dac055702f227867ca40e848a893e",
+    "exclusions/2024-04-26.json": "acdc077465b57642116dcda5a5ca0b05e5bd71b9a76d2bfcaaab753f4b09a707",
+    "specs/2024-04-29.json": "ab1f58715ecc7ff83856ea91af18c8caa272f1eeb8346f9db33dbcfc9a728a07",
+    "feeds/2024-04-29.json.gz": "48579a8f7d805cf38b627f12bf236a78d95d39946db75f43ffba6dc260eb11d7",
+    "cards/2024-04-29.json": "54aea7aa6fc35b8dd53a2c390d3b03c34964f5fa81ccd3b67b26790f093cd830",
+    "exclusions/2024-04-29.json": "c089cf4a0cc184d42d7716e3428e79ea1ad7eff2ebaadc94e43e841ed17f4ab7",
+    "specs/2024-04-30.json": "93d4a7699b920b97fe6af92dee25ecf406a1a7165e8bce4f28b6cbc18a0cfd6d",
+    "feeds/2024-04-30.json.gz": "5d5d4ae3f8b20b625271ee3def512133eaf5b151750a3d4dfa3ec2152ad4e9c2",
+    "cards/2024-04-30.json": "d9600c7838751b2dee37cd786f2329505b34a676cbdb57920804277022f4af54",
+    "exclusions/2024-04-30.json": "2180f73ec4d9d9a3a99e31e9bb64174c5e327157be735be5695a1d8b61aab382"
+  },
+  "all88financial_input_hashes_unchanged": true,
+  "observed_new_dash_tokens": [
+    "10Y–2Y",
+    "2024—and",
+    "A320s—Why",
+    "Boeing–Airbus",
+    "Carrefour–PepsiCo",
+    "Deal—or",
+    "ECB–Fed",
+    "Equinix–PGIM",
+    "Frenzy—Watch",
+    "Guidance—Key",
+    "Iran–Israel",
+    "Stock—and",
+    "US–China",
+    "growth—but"
+  ],
+  "actual_mobile_layouts": [
+    {
+      "date": "2024-04-01",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-03-28T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-03-25T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-03-30T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-02",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-01T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-01T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-03-30T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-03",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-01T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-01T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-01T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-04",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-03T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-03T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-01T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-05",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-01T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-03T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-01T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-08",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-05T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-05T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-05T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-09",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "customer-capital-allocation",
+          "width": 178.421875
+        },
+        {
+          "text": "2024-04-05T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-05T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-10",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-09T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-09T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-09T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-11",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-10T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-10T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-10T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-12",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-10T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-10T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-10T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-15",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-14T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-14T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-14T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-16",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-15T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-15T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-15T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-17",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-15T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-16T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-16T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-18",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-15T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-16T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-17T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-19",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-18T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-18T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-18T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-22",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-19T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-19T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-19T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-23",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-22T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-22T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-22T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-24",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "Freeport-McMoRan",
+          "width": 173.125
+        },
+        {
+          "text": "2024-04-23T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-18T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-25",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-24T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-23T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-24T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-26",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "commodity-to-cash",
+          "width": 166.03125
+        },
+        {
+          "text": "2024-04-25T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-25T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-29",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-26T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-26T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-26T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    },
+    {
+      "date": "2024-04-30",
+      "html_paragraphs_preserved": 149,
+      "viewport": 390,
+      "scroll": 390,
+      "longestTokens": [
+        {
+          "text": "2024-04-29T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-26T07:00:00+00:00",
+          "width": 165.171875
+        },
+        {
+          "text": "2024-04-26T07:00:00+00:00",
+          "width": 165.171875
+        }
+      ]
+    }
+  ],
+  "apr26_pdf_preservation": {
+    "paragraphs_preserved": 149,
+    "ledger_headlines_preserved": 122,
+    "ordered_occurrences_preserved": true,
+    "unicode_prose_preserved": true
+  },
+  "apr26_pdf_links": {
+    "unique_source_and_timing_URLs": 122,
+    "all_source_links_clickable": true
+  }
+}

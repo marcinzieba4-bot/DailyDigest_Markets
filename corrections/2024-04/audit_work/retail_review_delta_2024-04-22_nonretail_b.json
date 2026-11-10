@@ -1,0 +1,19 @@
+{
+  "date": "2024-04-22",
+  "reviewer": "nonretail_b",
+  "before_sha256": "01ae67e39ea66c097d45105a4aef35f7103b9e90f2822dd1a277b8cadf50c341",
+  "changes": [
+    {
+      "path": "retail[2].parts[0][1]",
+      "before": "a widely discussed event",
+      "after": "an anticipated event",
+      "reason": "Neutral description of a pending-to-completed event transition without an unsupported popularity assertion."
+    },
+    {
+      "path": "retail[1].parts[0][1]",
+      "before": "Reuters reports Tesla cutting prices in China, Germany and other markets after US cuts; AP separately describes reductions for US vehicle models after a difficult week. [[n1354]] [[n2114]] The appeal to a recovery investor is that more competitive pricing might help the company reconnect with customers. The challenge is that demand and the economics of obtaining it have to improve together. A cheaper product can be useful to a buyer without automatically making the equity more attractive to its owner. The commercial test is whether the price response creates a healthier business rather than only a more visible offer.",
+      "after": "AP reports Tesla reducing prices for US vehicle models after a difficult week. [[n2114]] The appeal to a recovery investor is that more competitive pricing might help the company reconnect with customers. The challenge is that demand and the economics of obtaining it have to improve together. A cheaper product can be useful to a buyer without automatically making the equity more attractive to its owner. The commercial test is whether the price response creates a healthier business rather than only a more visible offer.",
+      "reason": "Merged n1354 budget requires source-aware narrowing to existing AP n2114 USpricecut scope, preserving operating mechanism and deleting globalcountry fact."
+    }
+  ]
+}

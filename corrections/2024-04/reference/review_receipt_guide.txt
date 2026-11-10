@@ -1,0 +1,26 @@
+# April authoring and review receipts
+
+This is a schema guide, not report evidence. The scope is the 22 weekdays April 1–30, including exchange holidays: 36 nonretail blocks per date, 792 total. Nonretail remains 8,500–9,200 body words; retail including its intro 1,200–1,350; the merged edition 9,500–11,000. The merged edition must cite at least 50 distinct own-date IDs, each used at most four times. Never delete citations automatically to pass that limit.
+
+Nonretail writers save only `nonretail_drafts/DATE.json` and `notes/DATE_nonretail.json`. The chronological retail writer saves only `retail_drafts/DATE.json` and `notes/retail_DATE.json`. Run `python tools/verify.py --nonretail DATE` or `--retail DATE`, then have a separate reviewer inspect the exact current draft against that date's frozen feed, card and exclusions. A reviewer never clears unsupported facts using a warning disposition.
+
+Save component acceptance as `audit/independent_nonretail_DATE.json` or `audit/independent_retail_DATE.json`. Both require `date`, explicit `status: "accepted"` (or `"passed"`), integer `fatal_or_major_remaining: 0`, and `feed_sha256`, `card_sha256`, `exclusions_sha256`. Hash the complete actual bytes of `feeds/DATE.json.gz`, `cards/DATE.json`, and `exclusions/DATE.json`, respectively. Hashing a decompressed or reserialized feed does not match. Each exclusions record must itself contain the mandatory frozen `feed_sha256` binding.
+
+The nonretail receipt uses **`nonretail_content_sha256`**, computed from the nonretail JSON value with exactly:
+
+```python
+hashlib.sha256(json.dumps(nonretail, sort_keys=True, ensure_ascii=False,
+                          separators=(',', ':')).encode('utf-8')).hexdigest()
+```
+
+The retail receipt uses **`retail_draft_sha256`**, the SHA-256 of the actual complete retail draft file bytes. The legacy names `component_sha256`, `nonretail_sha256` and `draft_sha256` do not substitute for these fields. Review receipts bind exclusions as well as feed and card; an edit to any reviewed artifact requires another current review.
+
+For every emitted diagnostic, add an object to `reviewed_validation_warnings` containing **`warning`**, **`evidence_ids`**, and **`rationale`**. `warning` must equal the raw diagnostic returned by `verify.verify(...)[1]` byte for byte: omit the CLI's `WARN DATE ` prefix. Use `warning`, never `message`. `evidence_ids` must be a nonempty list of distinct actual canonical IDs cited in the final current report. `rationale` must be specific to that diagnostic and its cited evidence and at least 40 characters. Do not paste a generic approval sentence. Run the verifier again after every edit and preserve the actual diagnostic text, including its punctuation.
+
+`merge_retail.py DATE` and `stage_reviewed.py [DATE ...]` validate the merged candidate before writing a spec and preserve nonretail content. They execute no author script. `check_block_ranges.py` records current component/feed/card/exclusion bindings. `finalize_reviews.py` additionally requires all 22 final specs, accepted source and market reviews, current `audit/news_ready_DATE.json` receipts and complete reviewed retail chronology. Missing inputs return pending; synthetic regression success is not real-input acceptance.
+
+Source acceptance uses the actual current `input_bindings` plus per-date `news_ready` schema. Its integer counts must be nonnegative, agree with the receipt, and balance raw = ready + excluded. Removed IDs must be canonical and unique. Do not fabricate legacy exclusion maps to replace missing current screening receipts.
+
+The local `retail_quality_snapshot.py --require-reviewed` gate recomputes all 22 spec/feed/card/exclusion hashes and chronological flags. Retail dispositions name the actual flag, cited own-date evidence, reviewer and a specific changed angle. A `material_update` needs newly eligible cited evidence; `brief_carryover` must be secondary and at most 160 words. A generic `reviewed_selection` cannot clear an unchanged/recycled/repeated full lead. The original shared gate is preserved separately by root.
+
+All evidence is own-date and strictly before 00:00 UTC. Numeric spot-FX marks/returns and `=X` instruments are prohibited; DXY remains an admissible index. Do not rerun old author scripts after review: load the current draft and patch only the named strings before another current review.

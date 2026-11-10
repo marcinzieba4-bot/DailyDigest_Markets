@@ -1,0 +1,284 @@
+{
+  "scope": "Nonfinancial extraction correctness amendment; exact existing PDF/HTML/JSON/source contents unchanged. Not final all22 runtime artifact acceptance.",
+  "checked_at_utc": "2026-11-10T17:09:48.638244+00:00",
+  "status": "passed",
+  "pymupdf_existing_runtime_version": "1.26.6",
+  "runtime": {
+    "executable": "/workspace/work/april-runtime/bin/python",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "pymupdf_metadata": "1.26.6",
+    "pypdf_metadata": "6.10.0"
+  },
+  "tool_sha256": {
+    "tools/build_artifacts.py": "d528e9750bce390512d431575b87c75aeb2dc025214dba1d1e7c203e109fd283",
+    "audit_work/review_final_artifacts.py": "a9256d73beda477573caccd70cfdf413fccd5254a8a9463715ea1c6829fb5eba"
+  },
+  "probe_sha256": "3bd2e7041d12bd7432bc39c5272e8032c9967abacbc0cc48a293d3e2409d0b5c",
+  "strict_comparator_functions_unchanged": [
+    "prose_key",
+    "ordered_matches",
+    "report_paragraphs",
+    "citation_order",
+    "rendered_prose",
+    "check_pdf_links",
+    "normal",
+    "monotonic",
+    "paragraphs",
+    "expected_order",
+    "displayed",
+    "pdf_preservation",
+    "pdf_link_preservation"
+  ],
+  "negative_preservation_fixtures_passed": [
+    "drop_word_joiner",
+    "replace_word_joiner_with_space",
+    "delete_headline_letter"
+  ],
+  "rows": [
+    {
+      "date": "2024-04-01",
+      "pdf_sha256": "80c4e8bc2c4436ed6dd8158654ef340a2926527fb44126fae1e0d2850390325b",
+      "json_sha256": "7736fb9c7ce9698e023f421050e6754317d764b3aef1dd59fbb5fe2a955d8dcd",
+      "paragraphs": 149,
+      "preservation": {
+        "paragraphs_preserved": 149,
+        "ledger_headlines_preserved": 105,
+        "ordered_occurrences_preserved": true,
+        "unicode_prose_preserved": true
+      },
+      "clickable_links": {
+        "unique_source_and_timing_URLs": 105,
+        "all_source_links_clickable": true
+      }
+    },
+    {
+      "date": "2024-04-02",
+      "pdf_sha256": "d1d0e8e5f922d96f79ed8ae5b6d2157e9a946cbcbaa26872f4220b2e4ef5b3bf",
+      "json_sha256": "41f60e76f4be554ecdb2d737a675ab8bc7e0fe0543662655c646b2645317bd6b",
+      "paragraphs": 149,
+      "preservation": {
+        "paragraphs_preserved": 149,
+        "ledger_headlines_preserved": 87,
+        "ordered_occurrences_preserved": true,
+        "unicode_prose_preserved": true
+      },
+      "clickable_links": {
+        "unique_source_and_timing_URLs": 87,
+        "all_source_links_clickable": true
+      }
+    },
+    {
+      "date": "2024-04-03",
+      "pdf_sha256": "0787f50abc2dedf6c3518691f303737c246d8665b3fbd6beac9e5ee1d8f1d852",
+      "json_sha256": "ad29c6e97512fc2a0bf760fa5c226276fc36e1de2a62216e0e4689617f23cb23",
+      "paragraphs": 149,
+      "preservation": {
+        "paragraphs_preserved": 149,
+        "ledger_headlines_preserved": 88,
+        "ordered_occurrences_preserved": true,
+        "unicode_prose_preserved": true
+      },
+      "clickable_links": {
+        "unique_source_and_timing_URLs": 88,
+        "all_source_links_clickable": true
+      }
+    },
+    {
+      "date": "2024-04-04",
+      "pdf_sha256": "290e4c6b22a7372bb5398578d45d9b87ef7b1dbbb1f9d4d462415865f48d4460",
+      "json_sha256": "2f7182af41153b730c643fa26439e9e515e10a5e6e80656c7c18767f0538e9bd",
+      "paragraphs": 149,
+      "preservation": {
+        "paragraphs_preserved": 149,
+        "ledger_headlines_preserved": 86,
+        "ordered_occurrences_preserved": true,
+        "unicode_prose_preserved": true
+      },
+      "clickable_links": {
+        "unique_source_and_timing_URLs": 86,
+        "all_source_links_clickable": true
+      }
+    },
+    {
+      "date": "2024-04-05",
+      "pdf_sha256": "2695e5e8ff45f0bab3d14f1228ffca34478e8d242e8748e4e6a69d20ad3ba912",
+      "json_sha256": "1366d6f2931ff4894f6031d2497f7898a00895cc4ce236ec48f4fea342dc89f8",
+      "paragraphs": 149,
+      "preservation": {
+        "paragraphs_preserved": 149,
+        "ledger_headlines_preserved": 119,
+        "ordered_occurrences_preserved": true,
+        "unicode_prose_preserved": true
+      },
+      "clickable_links": {
+        "unique_source_and_timing_URLs": 119,
+        "all_source_links_clickable": true
+      }
+    },
+    {
+      "date": "2024-04-08",
+      "pdf_sha256": "866beb18954aa6d9aa02f86ccfd913f29dd7e495cedd14bfb9668ed40ff9cdcd",
+      "json_sha256": "8c81cac6ecb6418370406b947c9e3314727f74914e2085bd50c72b719ef41a13",
+      "paragraphs": 149,
+      "preservation": {
+        "paragraphs_preserved": 149,
+        "ledger_headlines_preserved": 126,
+        "ordered_occurrences_preserved": true,
+        "unicode_prose_preserved": true
+      },
+      "clickable_links": {
+        "unique_source_and_timing_URLs": 126,
+        "all_source_links_clickable": true
+      }
+    },
+    {
+      "date": "2024-04-09",
+      "pdf_sha256": "2c7c084b71377e8613d25318361215a1c74a496956556e33062329a00d051f8c",
+      "json_sha256": "4768653428e2bf86ad6b0e72216216c336cec6f199175007934a83fbd64b48db",
+      "paragraphs": 149,
+      "preservation": {
+        "paragraphs_preserved": 149,
+        "ledger_headlines_preserved": 106,
+        "ordered_occurrences_preserved": true,
+        "unicode_prose_preserved": true
+      },
+      "clickable_links": {
+        "unique_source_and_timing_URLs": 106,
+        "all_source_links_clickable": true
+      }
+    },
+    {
+      "date": "2024-04-10",
+      "pdf_sha256": "9249dd87917668e926b34a9d546eefad58a7d21543d02ec16b143c6ac2e7d584",
+      "json_sha256": "25ad6e78f6378cef3d176684de41521215ce429bf7f7e075e23ee4b36e0c53c5",
+      "paragraphs": 149,
+      "preservation": {
+        "paragraphs_preserved": 149,
+        "ledger_headlines_preserved": 91,
+        "ordered_occurrences_preserved": true,
+        "unicode_prose_preserved": true
+      },
+      "clickable_links": {
+        "unique_source_and_timing_URLs": 91,
+        "all_source_links_clickable": true
+      }
+    },
+    {
+      "date": "2024-04-11",
+      "pdf_sha256": "0cd8b494fc1a8a50646a3e056be2c94eccdc7c83c70a5eebb2addb13ad633b35",
+      "json_sha256": "d0e41074930ef479f7b49f22272137f82d124a2794885ea34d03d8c6f60ec4a7",
+      "paragraphs": 149,
+      "preservation": {
+        "paragraphs_preserved": 149,
+        "ledger_headlines_preserved": 81,
+        "ordered_occurrences_preserved": true,
+        "unicode_prose_preserved": true
+      },
+      "clickable_links": {
+        "unique_source_and_timing_URLs": 81,
+        "all_source_links_clickable": true
+      }
+    },
+    {
+      "date": "2024-04-12",
+      "pdf_sha256": "a884e1e7dc18ec3b70a5316926e0ca4ac69c81e33c6244676ad3456e4ca6ead4",
+      "json_sha256": "ed8c85d500873b1cce0c58351f49027479e4523dc7dcd3072f80f122b41b816a",
+      "paragraphs": 149,
+      "preservation": {
+        "paragraphs_preserved": 149,
+        "ledger_headlines_preserved": 88,
+        "ordered_occurrences_preserved": true,
+        "unicode_prose_preserved": true
+      },
+      "clickable_links": {
+        "unique_source_and_timing_URLs": 88,
+        "all_source_links_clickable": true
+      }
+    },
+    {
+      "date": "2024-04-15",
+      "pdf_sha256": "4ea15edeee1d86e005e0b8cd0ad1a1d78422316d67f956b407d36c4ae30df891",
+      "json_sha256": "21ada122eb620bec66969f1517a07a50e54eb3ff2fabb9fe72eb57a865891049",
+      "paragraphs": 149,
+      "preservation": {
+        "paragraphs_preserved": 149,
+        "ledger_headlines_preserved": 88,
+        "ordered_occurrences_preserved": true,
+        "unicode_prose_preserved": true
+      },
+      "clickable_links": {
+        "unique_source_and_timing_URLs": 88,
+        "all_source_links_clickable": true
+      }
+    },
+    {
+      "date": "2024-04-16",
+      "pdf_sha256": "bd99593cb030b96de7edb1d83363e37cdc062f15dbe16c077cf2795a508f7631",
+      "json_sha256": "13c1cade850574c288ce5886937bb63ce4cc9b92b8105a06be7e61b411c533de",
+      "paragraphs": 149,
+      "preservation": {
+        "paragraphs_preserved": 149,
+        "ledger_headlines_preserved": 113,
+        "ordered_occurrences_preserved": true,
+        "unicode_prose_preserved": true
+      },
+      "clickable_links": {
+        "unique_source_and_timing_URLs": 113,
+        "all_source_links_clickable": true
+      }
+    },
+    {
+      "date": "2024-04-17",
+      "pdf_sha256": "3ae6c977f0fc8c55d6f25aadc37ce28ef208b65f4cfa8e5ef3c5d73f9cb603d6",
+      "json_sha256": "0809d2fcac03eec63f037d42056fece342f4c6a3c95d70477f978ebc921e5242",
+      "paragraphs": 149,
+      "preservation": {
+        "paragraphs_preserved": 149,
+        "ledger_headlines_preserved": 93,
+        "ordered_occurrences_preserved": true,
+        "unicode_prose_preserved": true
+      },
+      "clickable_links": {
+        "unique_source_and_timing_URLs": 93,
+        "all_source_links_clickable": true
+      }
+    },
+    {
+      "date": "2024-04-18",
+      "pdf_sha256": "60a1e3b31872eb79f6203411b88dff2b2333a6075c076e8d47dab4e57be27621",
+      "json_sha256": "9357916b6be34eaa16bce8a65971bbd52ffd2f719d763c1a25e34ea1b793de88",
+      "paragraphs": 149,
+      "preservation": {
+        "paragraphs_preserved": 149,
+        "ledger_headlines_preserved": 94,
+        "ordered_occurrences_preserved": true,
+        "unicode_prose_preserved": true
+      },
+      "clickable_links": {
+        "unique_source_and_timing_URLs": 94,
+        "all_source_links_clickable": true
+      }
+    },
+    {
+      "date": "2024-04-19",
+      "pdf_sha256": "14ba791441eae1d99fb75452c64d8c7e6ea729b8fb646a0e28641e6ab2e8663b",
+      "json_sha256": "de456d198f39b3515eb1dd2108c514ad4b0e1188ff49924b4c6cdee1358b4e23",
+      "paragraphs": 149,
+      "preservation": {
+        "paragraphs_preserved": 149,
+        "ledger_headlines_preserved": 92,
+        "ordered_occurrences_preserved": true,
+        "unicode_prose_preserved": true
+      },
+      "clickable_links": {
+        "unique_source_and_timing_URLs": 92,
+        "all_source_links_clickable": true
+      }
+    }
+  ],
+  "apr19_original_pdf_unchanged": {
+    "path": "pdf/2024-04-19_Market_Intelligence.pdf",
+    "sha256": "14ba791441eae1d99fb75452c64d8c7e6ea729b8fb646a0e28641e6ab2e8663b",
+    "bytes": 510316
+  }
+}

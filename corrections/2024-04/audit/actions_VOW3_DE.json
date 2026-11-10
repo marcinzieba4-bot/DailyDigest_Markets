@@ -1,0 +1,104 @@
+{
+ "ticker": "VOW3.DE",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VOW3.DE?period1=1706745600&period2=1714435200&interval=1d&events=div,splits",
+   "sha256": "beea7e098dd5db144b374e9eec6b368977c2b60ae8cee61fc19a3a49cd1c524c",
+   "fetched_at_utc": "2026-11-10T14:53:17.484609+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/VOW3.DE?period1=1714435200&period2=1794322360&interval=1d&events=div,splits",
+   "sha256": "3d8b3548172c7735fb67feb711472523ab2a7e2381b801b6342286d4d15ed624",
+   "fetched_at_utc": "2026-11-10T14:53:18.890503+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/VOW3.DE?period1=1706745600&period2=1714435200&interval=1d&events=div,splits",
+    "sha256": "beea7e098dd5db144b374e9eec6b368977c2b60ae8cee61fc19a3a49cd1c524c",
+    "fetched_at_utc": "2026-11-10T14:53:17.484609+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "EUR",
+    "symbol": "VOW3.DE",
+    "exchangeName": "GER",
+    "fullExchangeName": "XETRA",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 901090800,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Berlin"
+   },
+   "discarded_price_observations": 61,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/VOW3.DE?period1=1714435200&period2=1794322360&interval=1d&events=div,splits",
+    "sha256": "3d8b3548172c7735fb67feb711472523ab2a7e2381b801b6342286d4d15ed624",
+    "fetched_at_utc": "2026-11-10T14:53:18.890503+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "EUR",
+    "symbol": "VOW3.DE",
+    "exchangeName": "GER",
+    "fullExchangeName": "XETRA",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 901090800,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Berlin"
+   },
+   "discarded_price_observations": 644,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

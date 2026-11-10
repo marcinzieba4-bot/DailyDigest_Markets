@@ -1,0 +1,117 @@
+{
+ "ticker": "SMCI",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2024-10-01",
+   "factor": 10.0,
+   "ratio": "10:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SMCI?period1=1706745600&period2=1714435200&interval=1d&events=div,splits",
+   "sha256": "fe5aedb9f905ccd4b25a8e3e110d9805c7ca3c07043ec90db7a59328987f6990",
+   "fetched_at_utc": "2026-11-10T14:54:04.917237+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SMCI?period1=1714435200&period2=1794322360&interval=1d&events=div,splits",
+   "sha256": "f3e8d4b26ba1f481af7399c9cd3544caf70d9f9319b7168d0c6cf9551e007f99",
+   "fetched_at_utc": "2026-11-10T14:54:07.021414+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/SMCI?period1=1706745600&period2=1714435200&interval=1d&events=div,splits",
+    "sha256": "fe5aedb9f905ccd4b25a8e3e110d9805c7ca3c07043ec90db7a59328987f6990",
+    "fetched_at_utc": "2026-11-10T14:54:04.917237+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "SMCI",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1175175000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 61,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/SMCI?period1=1714435200&period2=1794322360&interval=1d&events=div,splits",
+    "sha256": "f3e8d4b26ba1f481af7399c9cd3544caf70d9f9319b7168d0c6cf9551e007f99",
+    "fetched_at_utc": "2026-11-10T14:54:07.021414+00:00"
+   },
+   "retained_exact_split_events": {
+    "1727789400": {
+     "date": 1727789400,
+     "numerator": 10.0,
+     "denominator": 1.0,
+     "splitRatio": "10:1"
+    }
+   },
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "SMCI",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1175175000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 636,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

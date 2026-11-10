@@ -1,0 +1,104 @@
+{
+ "ticker": "RIO.AX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RIO.AX?period1=1706745600&period2=1714435200&interval=1d&events=div,splits",
+   "sha256": "1c1ff8e521545e84b9893925a0d575f3b674659f3eb8df04563a64682bd34a54",
+   "fetched_at_utc": "2026-11-10T14:53:42.705595+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/RIO.AX?period1=1714435200&period2=1794322360&interval=1d&events=div,splits",
+   "sha256": "76fc240626819c3fb72ee367da9b528e1119f2ea717d5c31c3c62df52476ab1a",
+   "fetched_at_utc": "2026-11-10T14:53:44.539785+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/RIO.AX?period1=1706745600&period2=1714435200&interval=1d&events=div,splits",
+    "sha256": "1c1ff8e521545e84b9893925a0d575f3b674659f3eb8df04563a64682bd34a54",
+    "fetched_at_utc": "2026-11-10T14:53:42.705595+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "AUD",
+    "symbol": "RIO.AX",
+    "exchangeName": "ASX",
+    "fullExchangeName": "ASX",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 570409200,
+    "timezone": "AEDT",
+    "exchangeTimezoneName": "Australia/Sydney"
+   },
+   "discarded_price_observations": 61,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/RIO.AX?period1=1714435200&period2=1794322360&interval=1d&events=div,splits",
+    "sha256": "76fc240626819c3fb72ee367da9b528e1119f2ea717d5c31c3c62df52476ab1a",
+    "fetched_at_utc": "2026-11-10T14:53:44.539785+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "AUD",
+    "symbol": "RIO.AX",
+    "exchangeName": "ASX",
+    "fullExchangeName": "ASX",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 570409200,
+    "timezone": "AEDT",
+    "exchangeTimezoneName": "Australia/Sydney"
+   },
+   "discarded_price_observations": 646,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,50 @@
+{
+  "date": "2024-04-01",
+  "status": "reviewed_precision_revisions_requested",
+  "draft_sha256": "eff99a3ff93dd341a124d94f7c201e0b4592c32a2ed7ac9ad94780a7cad879e0",
+  "reviewer": "/root/artifact_tools",
+  "scope": "All36 nonretail blocks and93 cited own-date headline records reviewed against exact current own-date card/exclusions; facts limited to headlines; no later-date source/report input used.",
+  "verifier": {
+    "fails": 0,
+    "warnings": 0,
+    "distinct_sources": 93,
+    "body_words": 8699
+  },
+  "findings": [
+    {
+      "location": "geo.PL.Corporate & Sectors",
+      "evidence_ids": [
+        "n1742"
+      ],
+      "issue": "Use planned impairment wording; prospective Polish obniży does not establish completed write-down."
+    },
+    {
+      "location": "geo.PL.Playbook",
+      "evidence_ids": [
+        "n1770"
+      ],
+      "issue": "Headline generic earned/generated amount does not establish a cash-flow measure; refer to product economics."
+    },
+    {
+      "location": "sectors.XLE.Reported + catalysts.SLB.Catalyst & Thesis",
+      "evidence_ids": [
+        "n0859"
+      ],
+      "issue": "Combination announced as prospective; distinguish proposed platform from completed transaction."
+    },
+    {
+      "location": "catalysts.BABA.Catalyst & Thesis",
+      "evidence_ids": [
+        "n0595"
+      ],
+      "issue": "Stake purchase is plan, not completed transaction."
+    },
+    {
+      "location": "flows.Global Liquidity",
+      "evidence_ids": [
+        "n1297"
+      ],
+      "issue": "Headline describes ECB to change framework; specify planned change rather than implementation."
+    }
+  ]
+}

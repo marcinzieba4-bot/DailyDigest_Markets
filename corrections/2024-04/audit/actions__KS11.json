@@ -1,0 +1,104 @@
+{
+ "ticker": "^KS11",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EKS11?period1=1706745600&period2=1714435200&interval=1d&events=div,splits",
+   "sha256": "b7dd433e49f54e539707fc691ed7ad39f3ed3e74b763b5af6b8c04e6668396a5",
+   "fetched_at_utc": "2026-11-10T14:53:33.200702+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EKS11?period1=1714435200&period2=1794322360&interval=1d&events=div,splits",
+   "sha256": "4c5055ffaa8f6613272a8d623ec111744d5335e6705fc05551f17da1e2bac55b",
+   "fetched_at_utc": "2026-11-10T14:53:35.441186+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EKS11?period1=1706745600&period2=1714435200&interval=1d&events=div,splits",
+    "sha256": "b7dd433e49f54e539707fc691ed7ad39f3ed3e74b763b5af6b8c04e6668396a5",
+    "fetched_at_utc": "2026-11-10T14:53:33.200702+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "KRW",
+    "symbol": "^KS11",
+    "exchangeName": "KSC",
+    "fullExchangeName": "KSE",
+    "instrumentType": "INDEX",
+    "firstTradeDate": 850262400,
+    "timezone": "KST",
+    "exchangeTimezoneName": "Asia/Seoul"
+   },
+   "discarded_price_observations": 60,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EKS11?period1=1714435200&period2=1794322360&interval=1d&events=div,splits",
+    "sha256": "4c5055ffaa8f6613272a8d623ec111744d5335e6705fc05551f17da1e2bac55b",
+    "fetched_at_utc": "2026-11-10T14:53:35.441186+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "KRW",
+    "symbol": "^KS11",
+    "exchangeName": "KSC",
+    "fullExchangeName": "KSE",
+    "instrumentType": "INDEX",
+    "firstTradeDate": 850262400,
+    "timezone": "KST",
+    "exchangeTimezoneName": "Asia/Seoul"
+   },
+   "discarded_price_observations": 614,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

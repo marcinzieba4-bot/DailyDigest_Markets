@@ -1,0 +1,206 @@
+{
+  "scope": "Independent root schedule research only; not authoring evidence. Headline/card membership still required for every report fact.",
+  "reviewer": "root",
+  "guards": [
+    {
+      "label": "US February JOLTS",
+      "release_utc": "2024-04-02T14:00:00+00:00",
+      "calendar_release_utc_date": "2024-04-02",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-03",
+      "earliest_pub_date": "2024-03-26",
+      "pattern": "^(?=.*(?:US|U.S.|United States|American|JOLTS))(?=.*(?:JOLTS|job openings|job vacancies))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.bls.gov/schedule/2024/04_sched_list.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US March payrolls",
+      "release_utc": "2024-04-05T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-05",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-08",
+      "earliest_pub_date": "2024-03-29",
+      "pattern": "^(?=.*(?:US|U.S.|United States|American|nonfarm|payroll))(?=.*(?:payroll|jobs report|employment report|labor market|labour market|unemployment))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.bls.gov/schedule/2024/04_sched_list.htm"
+      ],
+      "notes": "Preview language remains pending; do not guard unrelated country employment."
+    },
+    {
+      "label": "US March CPI",
+      "release_utc": "2024-04-10T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-10",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-11",
+      "earliest_pub_date": "2024-04-03",
+      "pattern": "^(?=.*(?:US|U.S.|United States|American|CPI))(?=.*(?:CPI|consumer prices|consumer inflation|inflation report))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.bls.gov/schedule/2024/04_sched_list.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US March PPI",
+      "release_utc": "2024-04-11T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-11",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-12",
+      "earliest_pub_date": "2024-04-04",
+      "pattern": "^(?=.*(?:US|U.S.|United States|American|PPI))(?=.*(?:PPI|producer prices|producer inflation|wholesale prices))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.bls.gov/schedule/2024/04_sched_list.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US March import-export prices",
+      "release_utc": "2024-04-12T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-12",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-15",
+      "earliest_pub_date": "2024-04-05",
+      "pattern": "^(?=.*(?:US|U.S.|United States|American))(?=.*(?:import|export))(?=.*(?:prices|inflation))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.bls.gov/schedule/2024/04_sched_list.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US first-quarter ECI",
+      "release_utc": "2024-04-30T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-30",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-05-01",
+      "earliest_pub_date": "2024-04-23",
+      "pattern": "^(?=.*(?:US|U.S.|United States|American|ECI))(?=.*(?:ECI|employment cost|labor costs|labour costs|compensation costs))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.bls.gov/schedule/2024/04_sched_list.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US February trade balance",
+      "release_utc": "2024-04-04T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-04",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-05",
+      "earliest_pub_date": "2024-03-28",
+      "pattern": "^(?=.*(?:US|U.S.|United States|American))(?=.*(?:trade deficit|trade gap|trade balance))",
+      "kind": "macro",
+      "evidence": [
+        "https://apps.bea.gov/scb/issues/2023/12-december/1223-news-releases-2024.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US first-quarter advance GDP",
+      "release_utc": "2024-04-25T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-25",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-26",
+      "earliest_pub_date": "2024-04-18",
+      "pattern": "^(?=.*(?:US|U.S.|United States|American))(?=.*(?:GDP|gross domestic product|economic growth|economy grew))",
+      "kind": "macro",
+      "evidence": [
+        "https://apps.bea.gov/scb/issues/2023/12-december/1223-news-releases-2024.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "US March PCE and spending",
+      "release_utc": "2024-04-26T12:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-26",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-29",
+      "earliest_pub_date": "2024-04-19",
+      "pattern": "^(?=.*(?:US|U.S.|United States|American|PCE))(?=.*(?:PCE|personal consumption|consumer spending|personal income|inflation))",
+      "kind": "macro",
+      "evidence": [
+        "https://apps.bea.gov/scb/issues/2023/12-december/1223-news-releases-2024.htm"
+      ],
+      "notes": ""
+    },
+    {
+      "label": "ECB April policy decision",
+      "release_utc": "2024-04-11T12:15:00+00:00",
+      "calendar_release_utc_date": "2024-04-11",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-12",
+      "earliest_pub_date": "2024-04-04",
+      "pattern": "^(?=.*(?:ECB|European Central Bank|Lagarde))(?=.*(?:rates|rate|policy|decision))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.ecb.europa.eu/press/pr/date/2024/html/ecb.mp240411~1345644915.en.html",
+        "https://www.ecb.europa.eu/press/govcdec/mopo/html/index.en.html"
+      ],
+      "notes": "Frankfurt daylight saving:14:15 CEST is12:15UTC. Press conference14:45local is12:45UTC; both after cutoffApr11."
+    },
+    {
+      "label": "BOJ April policy decision",
+      "release_utc": "2024-04-26T03:22:00+00:00",
+      "calendar_release_utc_date": "2024-04-26",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-29",
+      "earliest_pub_date": "2024-04-19",
+      "pattern": "^(?=.*(?:BOJ|Bank of Japan|Ueda))(?=.*(?:policy|rates|rate|outlook|bond buying|bond-buying))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.boj.or.jp/en/mopo/mpmdeci/state_2024/k240426a.htm"
+      ],
+      "notes": "Official page reports actual statement release12:22JST, after Apr26 cutoff."
+    },
+    {
+      "label": "Japan March national CPI",
+      "release_utc": "2024-04-18T23:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-18",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-19",
+      "earliest_pub_date": "2024-04-12",
+      "pattern": "^(?=.*(?:Japan|Japanese))(?=.*(?:CPI|consumer prices|consumer inflation|core inflation))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.jil.go.jp/english/estatis/esaikin/2024/e202404.html",
+        "https://www.stat.go.jp/english/data/cpi/1585.htm"
+      ],
+      "notes": "National March reportApr19 at08:30JST; eligibleApr19. Date evidence JILPT, clock Statistics Bureau FAQ."
+    },
+    {
+      "label": "Japan April Tokyo CPI",
+      "release_utc": "2024-04-25T23:30:00+00:00",
+      "calendar_release_utc_date": "2024-04-25",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-26",
+      "earliest_pub_date": "2024-04-18",
+      "pattern": "^(?=.*(?:Tokyo|Japan.s capital|Japan’s capital))(?=.*(?:CPI|inflation|consumer prices))",
+      "kind": "macro",
+      "evidence": [
+        "https://www.toukei.metro.tokyo.lg.jp/bukka/2024/bk2441data.htm",
+        "https://www.stat.go.jp/english/data/cpi/1585.htm"
+      ],
+      "notes": "Tokyo reportApr26 at08:30JST; eligibleApr26, not Apr29."
+    },
+    {
+      "label": "Japan March Tankan",
+      "release_utc": "2024-03-31T23:50:00+00:00",
+      "calendar_release_utc_date": "2024-03-31",
+      "timing_precision": "verified scheduled local clock converted to UTC",
+      "eligible_edition": "2024-04-01",
+      "earliest_pub_date": "2024-03-24",
+      "pattern": "^(?=.*(?:Japan|Japanese|BOJ|Tankan))(?=.*Tankan)",
+      "kind": "macro",
+      "evidence": [
+        "https://www.boj.or.jp/en/statistics/tk/yoshi/tk2403.htm",
+        "https://www.investing.com/news/economy/boj-tankan-to-show-q1-manufacturers-optimism-eased-slightly-services-improved--reuters-poll-3350203"
+      ],
+      "notes": "Apr1 at08:50JST precedesApr1UTC cutoff by10minutes; no later article admitted merely because event was available."
+    }
+  ]
+}

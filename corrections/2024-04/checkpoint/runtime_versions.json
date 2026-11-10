@@ -1,0 +1,36 @@
+{
+  "runtimes": {
+    "artifacts": {
+      "executable_at_build": "/workspace/work/april-runtime/bin/python",
+      "python": "3.12.14",
+      "packages": {
+        "boto3": "1.43.127",
+        "botocore": "1.43.127",
+        "beautifulsoup4": "4.15.0",
+        "playwright": "1.62.0",
+        "pypdf": "6.10.0",
+        "PyMuPDF": "1.26.6",
+        "exchange-calendars": null,
+        "pandas": "2.2.3",
+        "numpy": "2.3.5"
+      }
+    },
+    "market_news_publication": {
+      "executable_at_build": "/workspace/.report-tools/bin/python",
+      "python": "3.12.14",
+      "packages": {
+        "boto3": "1.43.118",
+        "botocore": "1.43.118",
+        "beautifulsoup4": "4.15.0",
+        "playwright": null,
+        "pypdf": "6.21.2",
+        "PyMuPDF": null,
+        "exchange-calendars": "4.13.2",
+        "pandas": "3.1.1",
+        "numpy": "2.5.4"
+      }
+    }
+  },
+  "chromium": "Chromium 154.0.8037.57 built on Debian GNU/Linux 13 (trixie)",
+  "scope": "Observed installed runtime versions; dependencies are not bundled. Historical delivered artifact bytes are retained in the verified download ZIP."
+}

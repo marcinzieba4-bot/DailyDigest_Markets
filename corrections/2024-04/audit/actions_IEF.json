@@ -1,0 +1,104 @@
+{
+ "ticker": "IEF",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/IEF?period1=1706745600&period2=1714435200&interval=1d&events=div,splits",
+   "sha256": "ccf9c14c357f05d75d1d11c7793277810a920f1c4af91508668abe749d07e5a3",
+   "fetched_at_utc": "2026-11-10T14:53:53.344862+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/IEF?period1=1714435200&period2=1794322360&interval=1d&events=div,splits",
+   "sha256": "93161ef45e26122c8b9f408b1fd0c4ff930e4f69d5c4f55db3cb83a9ed2e4660",
+   "fetched_at_utc": "2026-11-10T14:53:55.105095+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/IEF?period1=1706745600&period2=1714435200&interval=1d&events=div,splits",
+    "sha256": "ccf9c14c357f05d75d1d11c7793277810a920f1c4af91508668abe749d07e5a3",
+    "fetched_at_utc": "2026-11-10T14:53:53.344862+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "IEF",
+    "exchangeName": "NGM",
+    "fullExchangeName": "NasdaqGM",
+    "instrumentType": "ETF",
+    "firstTradeDate": 1028035800,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 61,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/IEF?period1=1714435200&period2=1794322360&interval=1d&events=div,splits",
+    "sha256": "93161ef45e26122c8b9f408b1fd0c4ff930e4f69d5c4f55db3cb83a9ed2e4660",
+    "fetched_at_utc": "2026-11-10T14:53:55.105095+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "IEF",
+    "exchangeName": "NGM",
+    "fullExchangeName": "NasdaqGM",
+    "instrumentType": "ETF",
+    "firstTradeDate": 1028035800,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 636,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

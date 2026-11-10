@@ -1,0 +1,117 @@
+{
+ "ticker": "AVGO",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2024-07-15",
+   "factor": 10.0,
+   "ratio": "10:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AVGO?period1=1706745600&period2=1714435200&interval=1d&events=div,splits",
+   "sha256": "b1bea4ca15afb21ffa38873dac7ab9414a13376ecb41a23bd0b71280b065ef08",
+   "fetched_at_utc": "2026-11-10T14:53:59.628352+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/AVGO?period1=1714435200&period2=1794322360&interval=1d&events=div,splits",
+   "sha256": "8a0e2b87019bcd77fe88d65bdbecdbda609401c7a20d411b382ed4517539a185",
+   "fetched_at_utc": "2026-11-10T14:54:00.268874+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/AVGO?period1=1706745600&period2=1714435200&interval=1d&events=div,splits",
+    "sha256": "b1bea4ca15afb21ffa38873dac7ab9414a13376ecb41a23bd0b71280b065ef08",
+    "fetched_at_utc": "2026-11-10T14:53:59.628352+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "AVGO",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1249565400,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 61,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/AVGO?period1=1714435200&period2=1794322360&interval=1d&events=div,splits",
+    "sha256": "8a0e2b87019bcd77fe88d65bdbecdbda609401c7a20d411b382ed4517539a185",
+    "fetched_at_utc": "2026-11-10T14:54:00.268874+00:00"
+   },
+   "retained_exact_split_events": {
+    "1721050200": {
+     "date": 1721050200,
+     "numerator": 10.0,
+     "denominator": 1.0,
+     "splitRatio": "10:1"
+    }
+   },
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "AVGO",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1249565400,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 636,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

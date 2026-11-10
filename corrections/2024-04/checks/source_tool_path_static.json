@@ -1,0 +1,19 @@
+{
+  "status": "engineering_checks_passed",
+  "scope": "Direct Python parser/tool dependency allowance only; unsafe and nested paths still rejected",
+  "accepted_paths": [
+    "tools/fetch_news.py",
+    "tools/topics.py"
+  ],
+  "negative_paths": [
+    "tools/subdir/helper.py",
+    "tools/helper.json",
+    "tools/../fetch_news.py",
+    "tools/.hidden.py",
+    "tools/credential.py",
+    "tools/2024-05-01.py",
+    "/tools/fetch_news.py"
+  ],
+  "validator_sha256": "a8c5a53bff14bb43e7748aaea9bb66e98824462d25175e0e5b5c3311a9d7c7cc",
+  "source_acceptance_created": false
+}
