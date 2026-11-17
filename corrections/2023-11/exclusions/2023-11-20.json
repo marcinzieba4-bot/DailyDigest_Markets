@@ -3,6 +3,18 @@
  "feed_sha256": "ac055550cd2778c78d11098f85a612a5f216f2d87325d326de7e68e50b9647d2",
  "exclusions": [
   {
+   "id": "n0140",
+   "title": "Argentina Presidential Election Live Results 2023 - Bloomberg",
+   "published_at": "2023-11-17T08:00:00+00:00",
+   "src": "Bloomberg",
+   "date": "2023-11-20",
+   "feed_sha256": "ac055550cd2778c78d11098f85a612a5f216f2d87325d326de7e68e50b9647d2",
+   "screen_kind": "editorial_vintage",
+   "reason": "Live-results page published before the vote; not a dated fact.",
+   "disposition": "exclude_from_report_claims_no_frozen_feed_mutation",
+   "reviewer": "root (writer-flagged)"
+  },
+  {
    "id": "n0263",
    "title": "China keeps lending benchmark rates unchanged, as expected - Reuters",
    "published_at": "2023-11-19T08:00:00+00:00",
@@ -11,6 +23,30 @@
    "feed_sha256": "ac055550cd2778c78d11098f85a612a5f216f2d87325d326de7e68e50b9647d2",
    "screen_kind": "editorial_vintage",
    "reason": "China LPR announced 01:15 UTC Nov 20, after this cutoff; record misdated.",
+   "disposition": "exclude_from_report_claims_no_frozen_feed_mutation",
+   "reviewer": "root (writer-flagged)"
+  },
+  {
+   "id": "n0774",
+   "title": "Alibaba's Hong Kong shares drop 10% after it shelves cloud spinoff, citing U.S. chip restrictions - CNBC",
+   "published_at": "2023-11-16T08:00:00+00:00",
+   "src": "CNBC",
+   "date": "2023-11-20",
+   "feed_sha256": "ac055550cd2778c78d11098f85a612a5f216f2d87325d326de7e68e50b9647d2",
+   "screen_kind": "editorial_vintage",
+   "reason": "Alibaba Hong Kong drop happened on Nov 17 but record stamped Nov 16; misdated.",
+   "disposition": "exclude_from_report_claims_no_frozen_feed_mutation",
+   "reviewer": "root (writer-flagged)"
+  },
+  {
+   "id": "n1094",
+   "title": "Cruise CEO Kyle Vogt resigns from GM-owned robotaxi unit - CNBC",
+   "published_at": "2023-11-19T08:00:00+00:00",
+   "src": "CNBC",
+   "date": "2023-11-20",
+   "feed_sha256": "ac055550cd2778c78d11098f85a612a5f216f2d87325d326de7e68e50b9647d2",
+   "screen_kind": "editorial_vintage",
+   "reason": "Cruise CEO resignation reported late Sunday US time; possibly after the cutoff.",
    "disposition": "exclude_from_report_claims_no_frozen_feed_mutation",
    "reviewer": "root (writer-flagged)"
   },
@@ -51,6 +87,18 @@
    "reviewer": "root (writer-flagged)"
   },
   {
+   "id": "n1826",
+   "title": "Wojna w Ukrainie. Parlament uchwalił budżet na rok 2024. Zakłada on rekordowy deficyt - Money.pl",
+   "published_at": "2023-11-16T08:00:00+00:00",
+   "src": "Money.pl",
+   "date": "2023-11-20",
+   "feed_sha256": "ac055550cd2778c78d11098f85a612a5f216f2d87325d326de7e68e50b9647d2",
+   "screen_kind": "editorial_vintage",
+   "reason": "Record-deficit budget refers to Ukraine, not Poland; semantic trap.",
+   "disposition": "exclude_from_report_claims_no_frozen_feed_mutation",
+   "reviewer": "root (writer-flagged)"
+  },
+  {
    "id": "n2111",
    "title": "ADP Payroll Review 2026 - Business News Daily",
    "published_at": "2023-10-26T07:00:00+00:00",
@@ -59,6 +107,18 @@
    "feed_sha256": "ac055550cd2778c78d11098f85a612a5f216f2d87325d326de7e68e50b9647d2",
    "screen_kind": "editorial_vintage",
    "reason": "Title names a later year (2026) inconsistent with a pre-cutoff 2023 publication; misdated record.",
+   "disposition": "exclude_from_report_claims_no_frozen_feed_mutation",
+   "reviewer": "root (writer-flagged)"
+  },
+  {
+   "id": "n2264",
+   "title": "Dollar posts steep weekly fall, yen trades below 150 - CNBC",
+   "published_at": "2023-11-16T08:00:00+00:00",
+   "src": "CNBC",
+   "date": "2023-11-20",
+   "feed_sha256": "ac055550cd2778c78d11098f85a612a5f216f2d87325d326de7e68e50b9647d2",
+   "screen_kind": "editorial_vintage",
+   "reason": "Weekly FX wrap stamped before the week completed; misdated and numeric spot-FX.",
    "disposition": "exclude_from_report_claims_no_frozen_feed_mutation",
    "reviewer": "root (writer-flagged)"
   }
