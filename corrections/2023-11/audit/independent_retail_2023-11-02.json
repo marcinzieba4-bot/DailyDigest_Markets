@@ -1,0 +1,53 @@
+{
+  "date": "2023-11-02",
+  "status": "accepted",
+  "reviewer": "independent_reviewer",
+  "fatal_or_major_remaining": 0,
+  "feed_sha256": "8cf4553d1b3d5b1e9e484112411a3558203dc2099cd0f61b029acdeeaedc5a21",
+  "card_sha256": "fc280fbd4779601e32283f9ca5de27b7597629e268cde322552586292211a66b",
+  "exclusions_sha256": "48c5068153b284a3cb77f9cfc17f720a1428e0770d9604f8d27d164fbe9f5911",
+  "retail_draft_sha256": "a9c505dbdee571d10df6665e3574a15e8f3c8fe661693fab74f3d58fed737e5a",
+  "chronology_checked_against": [
+    "2023-11-01"
+  ],
+  "findings": [
+    {
+      "location": "retail[0].parts[0][1] (AMD, Why Retail Is Here)",
+      "issue": "Circular causality: AMD 'jumped 9.69% ... after CNBC reported a jump of more than 9%' [[n0861]].",
+      "severity": "minor",
+      "resolution": "Changed to 'a move CNBC tied to strong 2024 AI chip projections [[n0861]]'."
+    },
+    {
+      "location": "retail[0].parts[1][1] (AMD, What Is Driving It)",
+      "issue": "The 10Y's 18 bps five-observation fall was attributed as coming 'after' the Fed hold, though the window began 2023-10-25 and the decision came on its last day.",
+      "severity": "minor",
+      "resolution": "Changed to 'a slide capped by the Fed keeping rates unchanged as Powell hedged ... [[n2207]]'."
+    },
+    {
+      "location": "retail[0].parts[2][1] (AMD, The Social Signal)",
+      "issue": "'The attention shows up in the leverage' treated SOXL/TQQQ price gains (mechanical multiples of the SOX/Nasdaq 100 moves) as attention evidence; price changes are not flow or attention evidence.",
+      "severity": "minor",
+      "resolution": "Changed to 'The coverage carries the signal; the leverage is the accelerant', leaving the cited coverage (n0862, n0999, n0968, n0785) as the attention evidence."
+    },
+    {
+      "location": "retail[1].parts[1][1] (Solana, Where It Breaks)",
+      "issue": "Unsupported positioning statements as fact: 'is where new leverage concentrates', 'the highest-beta coin gives back the most'.",
+      "severity": "minor",
+      "resolution": "Made modal: 'tends to concentrate', 'is likely to give back the most'."
+    },
+    {
+      "location": "retail (selection and chronology)",
+      "issue": "Checked against notes/retail_2023-11-01.json (lead BTC-USD; smaller AMC, CCJ, GC=F). Four distinct narratives today (AI challenger AMD, crypto comeback SOL-USD, peak-rates TLT, solar bottom-fishing SEDG). No repeat lead; AMD was considered but not chosen on 2023-11-01 because its reaction was after hours, and it now has a completed +9.69% session plus newly eligible n0861, n0862, n1311, n2002. Solana returns only as a smaller trade on newly published n1099/n1090. Titles follow 'Name / TICKER — hook' with hooks of 4-6 words.",
+      "severity": "info",
+      "resolution": "No change; notes/retail_2023-11-02.json evidence_ids still equal the draft's 31 citations, and its titles match."
+    },
+    {
+      "location": "retail[3] (SolarEdge) and retail[1] (Solana) timing",
+      "issue": "n0988/n0989 report SolarEdge's 2023-11-01 after-close guidance (~20:00-21:00 UTC) and the after-hours drop; n1096 reports the SBF closing arguments on 2023-11-01 without a verdict.",
+      "severity": "info",
+      "resolution": "No change. The text correctly says the 75.79 USD close predates the latest leg down and does not mention any trial outcome."
+    }
+  ],
+  "reviewed_validation_warnings": [],
+  "scope_limits": "Headline-only review against the 2023-11-02 frozen feed (via tools/digest.py and tools/cited_titles.py), the 2023-11-02 market card (tools/showcard.py) and exclusions/2023-11-02.json. No article bodies, web, data/, cache/, other dates' feeds/cards/drafts or knowledge of events on/after 2023-11-02 were used. Publication times are the frozen feed values; day-granular placeholder stamps were judged by whether the reported event plausibly preceded 00:00 UTC, and the underlying event dates of older records were not independently re-verified. Exclusions were not edited. Hashes computed after the final edit. Chronology used only notes/retail_2023-11-01.json as editorial memory (the only earlier date). Retail edits were limited to named strings in retail_drafts/2023-11-02.json; notes/retail_2023-11-02.json needed no change."
+}

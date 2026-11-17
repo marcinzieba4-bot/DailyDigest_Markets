@@ -5,7 +5,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "058a3739b0fd90e6d2b0690a680e2600258d5917aff7b5b9d37e366a821b3b67",
  "card_sha256": "4498883af9a0ce2e680919468238ed27ddacbdb5548ec11764ce4e3dc7f74e51",
- "exclusions_sha256": "1b87f435e89e3b70601e037131777fea7357fa647fc834e71fd8f813abb8a25b",
+ "exclusions_sha256": "513c7b7bdce56c7a609fcd3a05d8b9e258dde8aa8aef418339f89673d99fe696",
  "retail_draft_sha256": "116c11c39d684c7b9bebf36514c7e6dd0c8c9d464cdf385426c345300312adad",
  "chronology_checked_against": [
   "2023-11-01",
@@ -50,5 +50,29 @@
   "Chronology memory limited to notes/retail_2023-11-01.json, notes/retail_2023-11-02.json and notes/retail_2023-11-03.json. No earlier retail drafts or other-date feeds were read.",
   "The shared retail_quality.py preflight was not run in this review. Edits were limited to unit strings in retail_drafts/2023-11-06.json, and notes/retail_2023-11-06.json was left unchanged.",
   "verify.py --retail 2023-11-06: PASS (0 fail, 0 warn). check_merged.py 2023-11-06: MERGED PASS."
+ ],
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "1b87f435e89e3b70601e037131777fea7357fa647fc834e71fd8f813abb8a25b",
+   "new_exclusions_sha256": "513c7b7bdce56c7a609fcd3a05d8b9e258dde8aa8aef418339f89673d99fe696",
+   "excluded_ids_now": [
+    "n0139",
+    "n0352",
+    "n0697",
+    "n0995",
+    "n1011",
+    "n1030",
+    "n1346",
+    "n1348",
+    "n1460",
+    "n1572",
+    "n1945",
+    "n1993"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
  ]
 }
