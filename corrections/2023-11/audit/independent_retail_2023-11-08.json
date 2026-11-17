@@ -1,0 +1,83 @@
+{
+ "date": "2023-11-08",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "dc40606f8f9bd302fd5a9a73216a4acdf469186c9580f9ce4484ac24182fd5aa",
+ "card_sha256": "8cad6ea675bf96b97c22c17ea70e944f718cd8f05d6502caf134080ffdb96e4a",
+ "exclusions_sha256": "629c8d6a8fc7e6dc1f5ad2c60591f29b886c03683895cc9e40c4859dffaa9cad",
+ "retail_draft_sha256": "57c3b8f8221c78e0daa18559cba43c6d629d0c671869e807fc4f0f297594149e",
+ "chronology_checked_against": [
+  "2023-11-01",
+  "2023-11-02",
+  "2023-11-03",
+  "2023-11-06",
+  "2023-11-07"
+ ],
+ "findings": [
+  {
+   "location": "retail[0] Social Signal",
+   "issue": "n0202 and n0715 are evergreen 'best stocks to buy' listicles (n0715 weekend-stamped, no event anchor) and cannot serve as dated attention evidence",
+   "severity": "major",
+   "resolution": "Removed both from the draft and notes; paragraph rebuilt on n0364, n0708, n0576, n1734; 'premium peaked' timing claim removed"
+  },
+  {
+   "location": "retail[0] Why Retail Is Here",
+   "issue": "'For a month the oil trade was the easiest story' unsupported and at odds with the card (WTI -10.00% over 20 sessions)",
+   "severity": "minor",
+   "resolution": "Reworded to 'Since the war began'"
+  },
+  {
+   "location": "retail[1] Robinhood",
+   "issue": "Q3 report (muted trading) was linked to a November rally it predates; HOOD close predates the report",
+   "severity": "minor",
+   "resolution": "Reworded the sequencing, marked the close as ahead of the report, made 'savers arriving through funds' modal"
+  },
+  {
+   "location": "retail[2] Rivian",
+   "issue": "RIVN close of 17.42 USD precedes the after-close report but read like a reaction",
+   "severity": "minor",
+   "resolution": "Added 'ahead of the report'"
+  },
+  {
+   "location": "notes/retail_2023-11-08.json",
+   "issue": "Notes cited the removed listicles",
+   "severity": "minor",
+   "resolution": "Dropped n0202/n0715 from evidence_ids and why_lead"
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only 2023-11-08 feed, card and exclusions and the final retail draft and notes; chronology checked against retail notes of 2023-11-01, 11-02, 11-03, 11-06 and 11-07 (earlier dates only; no earlier feeds, cards or drafts); headline-only checks; no social posts or counts asserted beyond cited headlines; Yahoo/Investopedia/Rigzone/J.P. Morgan items stamped earlier in the week retained as dated coverage though page vintage cannot be verified beyond the headline; no web access.",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "7dbf58d8effbcac6db31d7cf3b53608926115a3117458f13d2e299787bb15b22",
+   "new_exclusions_sha256": "629c8d6a8fc7e6dc1f5ad2c60591f29b886c03683895cc9e40c4859dffaa9cad",
+   "excluded_ids_now": [
+    "n0062",
+    "n0112",
+    "n0202",
+    "n0703",
+    "n0715",
+    "n0755",
+    "n0792",
+    "n0878",
+    "n0907",
+    "n0941",
+    "n1000",
+    "n1348",
+    "n1439",
+    "n1610",
+    "n1794",
+    "n1842",
+    "n1852",
+    "n1916",
+    "n1944",
+    "n1969"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
+}

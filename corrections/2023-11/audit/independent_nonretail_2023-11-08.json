@@ -1,0 +1,106 @@
+{
+ "date": "2023-11-08",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "dc40606f8f9bd302fd5a9a73216a4acdf469186c9580f9ce4484ac24182fd5aa",
+ "card_sha256": "8cad6ea675bf96b97c22c17ea70e944f718cd8f05d6502caf134080ffdb96e4a",
+ "exclusions_sha256": "629c8d6a8fc7e6dc1f5ad2c60591f29b886c03683895cc9e40c4859dffaa9cad",
+ "nonretail_content_sha256": "e6aed712465b15778c582cb91ca2fe882db582b5947ce3bbf8e4777949aba1de",
+ "findings": [
+  {
+   "location": "sectors[10].parts[1] (Utilities Reported)",
+   "issue": "Vistra Q3 earnings record (n0941) is stamped with the previous day's placeholder time and may have been published after the 00:00 UTC cutoff",
+   "severity": "major",
+   "resolution": "Replaced with Southern Company Vogtle cost-forecast headline n0557 (2023-11-02); n0941 no longer cited"
+  },
+  {
+   "location": "geo[2].parts[4], sectors[12].parts[3], catalysts[3]",
+   "issue": "Baidu-Huawei chip order exclusive (n0878) is an Asia-sourced record stamped on the previous day and could post-date the cutoff; the Baidu catalyst rested on it",
+   "severity": "major",
+   "resolution": "Dropped n0878 everywhere; China domestic-alternatives claim and the Baidu catalyst rebuilt on n0173 (2023-11-06); catalyst title changed to 'domestic chips challenge Nvidia' and the order claim removed"
+  },
+  {
+   "location": "geo[2].parts[6]",
+   "issue": "He Lifeng 'confirmed' record (n1439) is previous-day stamped Asia-sourced; the fact is already supported by an earlier record",
+   "severity": "minor",
+   "resolution": "Re-cited to n0176 (2023-11-06, heads top financial policy bodies)"
+  },
+  {
+   "location": "geo[2].parts[5]",
+   "issue": "'Foreign sponsorship stays thin' contradicted by n0184 headline (keeps billions invested)",
+   "severity": "minor",
+   "resolution": "Reworded to institutions restructuring rather than exiting"
+  },
+  {
+   "location": "geo[2].parts[7]",
+   "issue": "Playbook trigger 'second month of improving PMIs' implied an unsupported prior improvement; evidence shows an October manufacturing slump",
+   "severity": "minor",
+   "resolution": "Trigger changed to a Caixin PMI that stops contracting"
+  },
+  {
+   "location": "geo[5].parts[3]",
+   "issue": "'as Eurocash builds a rival' linked n1599 merger to Eurocash without support",
+   "severity": "minor",
+   "resolution": "Split into two independent clauses"
+  },
+  {
+   "location": "sectors[11].parts[3]",
+   "issue": "BYD Hungary plant stated as fact; headline n0690 is a press report",
+   "severity": "minor",
+   "resolution": "Rephrased as 'is reported to be building'"
+  },
+  {
+   "location": "flows.parts[3]",
+   "issue": "Gold-miner ETF underperformance used as evidence of passive money flows",
+   "severity": "minor",
+   "resolution": "Reworded to miners lagging the metal"
+  },
+  {
+   "location": "sectors[0].parts[3]; sectors[5].parts[2]; underowned[1].parts[0]",
+   "issue": "Unsupported 'consensus', 'pricing power' and 'few investors' assertions",
+   "severity": "minor",
+   "resolution": "Reworded to bear case / premium consumer rewarded / rates framing fits the move"
+  },
+  {
+   "location": "geo[0].parts[0]",
+   "issue": "PMI/ISM reading expressed with % rather than index points",
+   "severity": "minor",
+   "resolution": "Changed to 46.7 index points"
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only 2023-11-08 feed, card and exclusions and the final nonretail draft; headline-only checks (no article bodies); previous-day and Asia/Europe-sourced records stamped with day-granular placeholder times (e.g. n0193 IMF China upgrade, n0188, n1470, n1621, n1623) were retained where the reported event plausibly preceded 00:00 UTC but exact publication times cannot be verified; no other dates' feeds, cards or drafts read; no web access.",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "7dbf58d8effbcac6db31d7cf3b53608926115a3117458f13d2e299787bb15b22",
+   "new_exclusions_sha256": "629c8d6a8fc7e6dc1f5ad2c60591f29b886c03683895cc9e40c4859dffaa9cad",
+   "excluded_ids_now": [
+    "n0062",
+    "n0112",
+    "n0202",
+    "n0703",
+    "n0715",
+    "n0755",
+    "n0792",
+    "n0878",
+    "n0907",
+    "n0941",
+    "n1000",
+    "n1348",
+    "n1439",
+    "n1610",
+    "n1794",
+    "n1842",
+    "n1852",
+    "n1916",
+    "n1944",
+    "n1969"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
+}

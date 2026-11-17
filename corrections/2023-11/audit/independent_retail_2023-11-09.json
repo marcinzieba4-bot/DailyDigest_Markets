@@ -5,7 +5,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "6092831cd0fa70dcf293f44957b50289afc416b9ada869a77aa279cd5cc32de9",
  "card_sha256": "d8564f95a9808ad8454264689f369db0cb3b355626d2208ac7f831a569230de4",
- "exclusions_sha256": "5606f4c99eebf0b68772be8c06f694f2e5456157f8cdbca409f827c3c65e0062",
+ "exclusions_sha256": "cbbd3b151e1adf740270d4f1c38fc8e1bc13d9073fd0dd0788bd06d49fbdbddd",
  "retail_draft_sha256": "6718d15a1cbbf90c6f2899121624e349c5021e1dd489f28f9d345fc3d103c043",
  "chronology_checked_against": [
   "2023-11-01",
@@ -48,5 +48,28 @@
   }
  ],
  "reviewed_validation_warnings": [],
- "scope_limits": "Reviewed against 2023-11-09 feed headlines, card and exclusions plus notes/retail_* for strictly earlier dates. Roblox earnings release time relative to the 2023-11-08 session could not be determined from headlines; the draft states only the card move and the headline. notes/retail_2023-11-09.json needed no change."
+ "scope_limits": "Reviewed against 2023-11-09 feed headlines, card and exclusions plus notes/retail_* for strictly earlier dates. Roblox earnings release time relative to the 2023-11-08 session could not be determined from headlines; the draft states only the card move and the headline. notes/retail_2023-11-09.json needed no change.",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "5606f4c99eebf0b68772be8c06f694f2e5456157f8cdbca409f827c3c65e0062",
+   "new_exclusions_sha256": "cbbd3b151e1adf740270d4f1c38fc8e1bc13d9073fd0dd0788bd06d49fbdbddd",
+   "excluded_ids_now": [
+    "n0089",
+    "n0182",
+    "n0498",
+    "n0550",
+    "n0587",
+    "n0762",
+    "n0974",
+    "n1318",
+    "n1808",
+    "n1855",
+    "n1915"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
 }

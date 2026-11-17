@@ -5,8 +5,8 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "6092831cd0fa70dcf293f44957b50289afc416b9ada869a77aa279cd5cc32de9",
  "card_sha256": "d8564f95a9808ad8454264689f369db0cb3b355626d2208ac7f831a569230de4",
- "exclusions_sha256": "5606f4c99eebf0b68772be8c06f694f2e5456157f8cdbca409f827c3c65e0062",
- "nonretail_content_sha256": "9d79168c52ef34d6a97eb87d39b5bca982384760486ff3014a5ca650c7d7241e",
+ "exclusions_sha256": "cbbd3b151e1adf740270d4f1c38fc8e1bc13d9073fd0dd0788bd06d49fbdbddd",
+ "nonretail_content_sha256": "fd5a5479122698745e4b18a0cf71edcc75385966f3c2777d0d9a9d4cbd81b8a6",
  "findings": [
   {
    "location": "geo/US Macro Stance",
@@ -82,5 +82,17 @@
   }
  ],
  "reviewed_validation_warnings": [],
- "scope_limits": "Reviewed against 2023-11-09 frozen feed headlines, own card and exclusions only. Intraday release times behind day-granular 2023-11-08 stamps (Roblox, Powell remarks, Zepbound approval) could not be verified beyond plausibility; no later-date material consulted. Headlines are not article bodies."
+ "scope_limits": "Reviewed against 2023-11-09 frozen feed headlines, own card and exclusions only. Intraday release times behind day-granular 2023-11-08 stamps (Roblox, Powell remarks, Zepbound approval) could not be verified beyond plausibility; no later-date material consulted. Headlines are not article bodies.",
+ "root_deltas": [
+  {
+   "previous_sha256": "9d79168c52ef34d6a97eb87d39b5bca982384760486ff3014a5ca650c7d7241e",
+   "new_sha256": "fd5a5479122698745e4b18a0cf71edcc75385966f3c2777d0d9a9d4cbd81b8a6",
+   "removed": "An appeals court vacating the SEC's share repurchase rule [[n1318]] removes one disclosure friction, and Buffett's Berkshire cut cash, pared Chevron and lifted buybacks [[n0550]].",
+   "inserted": "Buyback support therefore depends on balance sheets that higher funding costs are already testing, so announced programmes are a weaker signal than completed repurchases.",
+   "reason": "Root post-review check: n1318 describes a later appeals-court vacatur (hindsight) and n0550's 'cut cash' contradicts record-cash reports; both claims removed.",
+   "severity": "major",
+   "by": "root",
+   "reverified": "288 sources, 8980 words, 0 fail"
+  }
+ ]
 }
