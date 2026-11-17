@@ -5,7 +5,11 @@ November 2023 retrospective — Market Intelligence Briefings
 Built on the April 2024 retrospective pipeline (branch codex/apr-2024-retrospective-20261110,
 commit 482f7f7) with the same author contract; see BRIEF.md / AUTHORING.md.
 
-Deliverables (built locally; NOT yet published — this environment has no AWS credentials)
+Deliverables — published 2026-11-17 to zembihf.xyz (receipt: checks/publication.json)
+  https://zembihf.xyz/reports/2023-11.html
+  https://zembihf.xyz/reports/2023-11/What_Retail_Is_Playing_2023-11.html
+  https://zembihf.xyz/reports/2023-11/November_2023_Weekday_Reports.zip
+  (archive index updated with 22 links; CloudFront invalidation completed)
   html/2023-11-DD.html                         22 archive pages with dated source ledgers
   json/2023-11-DD_Market_Intelligence.json     22 machine-readable copies
   pdf/                                         22 PDFs (gitignored; regenerate with tools/build_nov2023.py)
@@ -48,6 +52,6 @@ Rebuild
   python3 tools/verify.py                      # all 22 specs PASS
   python3 tools/retail_quality_snapshot.py . --output checks/retail_quality.json --require-reviewed
   python3 tools/build_nov2023.py               # html/json/pdf, retail page, archive, ZIP
-Publication (zembihf.xyz) must be run from a machine with the project .env (AWS); no Lambda
-invocation, deployment, e-mail or Telegram message was made from this session.
+Publication: python3 tools/publish_nov2023.py [--go] (create-only S3 writes, index backup + conditional
+merge, scoped CloudFront invalidation). No Lambda invocation, deployment, e-mail or Telegram message.
 Large caches (cache/, work/) are not committed; query plan and request ledgers are kept gzipped in audit/.
