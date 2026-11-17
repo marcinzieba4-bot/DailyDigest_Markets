@@ -1,62 +1,85 @@
 {
-  "date": "2023-11-03",
-  "status": "accepted",
-  "reviewer": "independent_reviewer",
-  "fatal_or_major_remaining": 0,
-  "feed_sha256": "76f533975161f45e8300f9d019b1726ee11dd3639f4ce59fa56b5b1fcc2b6e48",
-  "card_sha256": "24a6dd007fdf539f682ba3ab9e82fc9a502c9630c3a60416236060844dbf0eab",
-  "exclusions_sha256": "d68d6133516042faff5b10b405b20c608ccedfcfd1bb82fee43fc222233c84e7",
-  "nonretail_content_sha256": "98d999ab360d6057c91311bbeb35cbbcdec2fef4cc557a7ea7bd7019befc76e2",
-  "retail_draft_sha256": "1192ea98bb8d6775e918243b3c7c581d40658118df934f7726bcc3212f7cc8dc",
-  "chronology_checked_against": [
-    "2023-11-01",
-    "2023-11-02"
-  ],
-  "findings": [
-    {
-      "location": "retail[0].parts[1] (Eli Lilly, What Is Driving It)",
-      "issue": "'The crowd is leaving the last health mega-trade for the next one' asserted a crowd flow that no cited headline supports.",
-      "severity": "minor",
-      "resolution": "Fixed: 'The tape reads like a crowd leaving ...', an interpretation of the cited LLY, NVO, MRNA and PFE card moves."
-    },
-    {
-      "location": "retail[1].parts[1] (Palantir, Where It Breaks)",
-      "issue": "'AMD, the previous AI-guidance winner' had no same-paragraph support.",
-      "severity": "minor",
-      "resolution": "Fixed: cited n0543 (AMD forecasts $2 billion of AI chip sales); n0543 added to notes/retail_2023-11-03.json evidence_ids."
-    },
-    {
-      "location": "retail[3].parts[0] (Marathon Digital, Why Retail Is Here); also crypto.parts[1]",
-      "issue": "n1124 (Politico, SBF guilty on all counts) carries the 2023-11-02 07:00 placeholder stamp for a US-evening jury verdict, so it was checked against the 00:00 UTC cutoff.",
-      "severity": "note",
-      "resolution": "Retained. The verdict was returned on the evening of 2023-11-02, shortly before 20:00 ET (00:00 UTC under EDT), so the event precedes the cutoff; NYT n1126 and NPR n1127 carry the same verdict in the same day batch. Wording limited to the verdict itself; the crypto title no longer implies an observed post-verdict price reaction."
-    },
-    {
-      "location": "retail selection and chronology",
-      "issue": "Checked against notes/retail_2023-11-01.json (lead BTC; AMC, CCJ, gold) and notes/retail_2023-11-02.json (lead AMD; SOL, TLT, SEDG).",
-      "severity": "note",
-      "resolution": "Accepted. LLY is a new lead with newly published evidence (n0997, n1378, n1374, n0945, n1364). The AI theme is demoted to a secondary item on a new company and new results (n1001, n1002, n1003). Crypto appears for a third day only as a secondary miners/halving item on new evidence (n0985, n1124). The four narratives are distinct and titles follow 'Name / TICKER — hook' with hooks of eight words or fewer."
-    },
-    {
-      "location": "retail[0].parts[2] (The Social Signal)",
-      "issue": "The own-date feed has no platform-level retail attention (Reddit, Stocktwits, options) for LLY.",
-      "severity": "note",
-      "resolution": "Accepted. The paragraph uses genuine cited coverage of Ozempic spillovers (n1983, n1993, n2031), counterfeit pens (n1979) and supply strain (n2042) with no invented posts, counts, flows or rankings."
-    },
-    {
-      "location": "whole retail component",
-      "issue": "Card cross-check of every price and return (LLY, NVO, MRNA, PFE, PLTR, AI, SOUN, AMD, AFRM, UPST, SOFI, MARA, RIOT, CIFR, BTC-USD, Treasury 3M/2Y/10Y) and section word ranges.",
-      "severity": "note",
-      "resolution": "No discrepancies. Lead 703 words; secondary items 184, 176 and 167 words; retail including intro 1274 words."
-    }
-  ],
-  "reviewed_validation_warnings": [],
-  "scope_limits": [
-    "Headline-level review only: claims checked against the cited headline text and own-date card values (tools/showcard.py 2023-11-03), never imagined article bodies.",
-    "Evidence limited to feeds/2023-11-03.json.gz via tools/digest.py, cards/2023-11-03.json via tools/showcard.py, and exclusions/2023-11-03.json. No other date's feed, card or draft, no data/ or cache/, and no web access.",
-    "Exact publication times of records with day-granular 07:00/08:00 UTC placeholders cannot be certified; previous-day records were judged by whether the reported event plausibly precedes 00:00 UTC on 2023-11-03.",
-    "exclusions/2023-11-03.json was not modified; n0025 was dropped from citation as out of window by meaning, not excluded.",
-    "Verification after the final edit: verify.py --nonretail PASS (290 sources, 8910 words, 0 warn), verify.py --retail PASS (33 sources, 1274 words, 0 warn), check_merged.py MERGED PASS (303 sources, 10184 words); merged citations: 303 distinct, maximum 3 uses per id.",
-    "Retail chronology used only notes/retail_2023-11-01.json and notes/retail_2023-11-02.json as editorial memory, strictly earlier than 2023-11-03."
-  ]
+ "date": "2023-11-03",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "76f533975161f45e8300f9d019b1726ee11dd3639f4ce59fa56b5b1fcc2b6e48",
+ "card_sha256": "24a6dd007fdf539f682ba3ab9e82fc9a502c9630c3a60416236060844dbf0eab",
+ "exclusions_sha256": "a0ce596dabcf88e5627e92a83b3535e50c13f6d822f0e9df316e3ab29d2842c5",
+ "nonretail_content_sha256": "98d999ab360d6057c91311bbeb35cbbcdec2fef4cc557a7ea7bd7019befc76e2",
+ "retail_draft_sha256": "1192ea98bb8d6775e918243b3c7c581d40658118df934f7726bcc3212f7cc8dc",
+ "chronology_checked_against": [
+  "2023-11-01",
+  "2023-11-02"
+ ],
+ "findings": [
+  {
+   "location": "retail[0].parts[1] (Eli Lilly, What Is Driving It)",
+   "issue": "'The crowd is leaving the last health mega-trade for the next one' asserted a crowd flow that no cited headline supports.",
+   "severity": "minor",
+   "resolution": "Fixed: 'The tape reads like a crowd leaving ...', an interpretation of the cited LLY, NVO, MRNA and PFE card moves."
+  },
+  {
+   "location": "retail[1].parts[1] (Palantir, Where It Breaks)",
+   "issue": "'AMD, the previous AI-guidance winner' had no same-paragraph support.",
+   "severity": "minor",
+   "resolution": "Fixed: cited n0543 (AMD forecasts $2 billion of AI chip sales); n0543 added to notes/retail_2023-11-03.json evidence_ids."
+  },
+  {
+   "location": "retail[3].parts[0] (Marathon Digital, Why Retail Is Here); also crypto.parts[1]",
+   "issue": "n1124 (Politico, SBF guilty on all counts) carries the 2023-11-02 07:00 placeholder stamp for a US-evening jury verdict, so it was checked against the 00:00 UTC cutoff.",
+   "severity": "note",
+   "resolution": "Retained. The verdict was returned on the evening of 2023-11-02, shortly before 20:00 ET (00:00 UTC under EDT), so the event precedes the cutoff; NYT n1126 and NPR n1127 carry the same verdict in the same day batch. Wording limited to the verdict itself; the crypto title no longer implies an observed post-verdict price reaction."
+  },
+  {
+   "location": "retail selection and chronology",
+   "issue": "Checked against notes/retail_2023-11-01.json (lead BTC; AMC, CCJ, gold) and notes/retail_2023-11-02.json (lead AMD; SOL, TLT, SEDG).",
+   "severity": "note",
+   "resolution": "Accepted. LLY is a new lead with newly published evidence (n0997, n1378, n1374, n0945, n1364). The AI theme is demoted to a secondary item on a new company and new results (n1001, n1002, n1003). Crypto appears for a third day only as a secondary miners/halving item on new evidence (n0985, n1124). The four narratives are distinct and titles follow 'Name / TICKER — hook' with hooks of eight words or fewer."
+  },
+  {
+   "location": "retail[0].parts[2] (The Social Signal)",
+   "issue": "The own-date feed has no platform-level retail attention (Reddit, Stocktwits, options) for LLY.",
+   "severity": "note",
+   "resolution": "Accepted. The paragraph uses genuine cited coverage of Ozempic spillovers (n1983, n1993, n2031), counterfeit pens (n1979) and supply strain (n2042) with no invented posts, counts, flows or rankings."
+  },
+  {
+   "location": "whole retail component",
+   "issue": "Card cross-check of every price and return (LLY, NVO, MRNA, PFE, PLTR, AI, SOUN, AMD, AFRM, UPST, SOFI, MARA, RIOT, CIFR, BTC-USD, Treasury 3M/2Y/10Y) and section word ranges.",
+   "severity": "note",
+   "resolution": "No discrepancies. Lead 703 words; secondary items 184, 176 and 167 words; retail including intro 1274 words."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": [
+  "Headline-level review only: claims checked against the cited headline text and own-date card values (tools/showcard.py 2023-11-03), never imagined article bodies.",
+  "Evidence limited to feeds/2023-11-03.json.gz via tools/digest.py, cards/2023-11-03.json via tools/showcard.py, and exclusions/2023-11-03.json. No other date's feed, card or draft, no data/ or cache/, and no web access.",
+  "Exact publication times of records with day-granular 07:00/08:00 UTC placeholders cannot be certified; previous-day records were judged by whether the reported event plausibly precedes 00:00 UTC on 2023-11-03.",
+  "exclusions/2023-11-03.json was not modified; n0025 was dropped from citation as out of window by meaning, not excluded.",
+  "Verification after the final edit: verify.py --nonretail PASS (290 sources, 8910 words, 0 warn), verify.py --retail PASS (33 sources, 1274 words, 0 warn), check_merged.py MERGED PASS (303 sources, 10184 words); merged citations: 303 distinct, maximum 3 uses per id.",
+  "Retail chronology used only notes/retail_2023-11-01.json and notes/retail_2023-11-02.json as editorial memory, strictly earlier than 2023-11-03."
+ ],
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "d68d6133516042faff5b10b405b20c608ccedfcfd1bb82fee43fc222233c84e7",
+   "new_exclusions_sha256": "a0ce596dabcf88e5627e92a83b3535e50c13f6d822f0e9df316e3ab29d2842c5",
+   "excluded_ids_now": [
+    "n0329",
+    "n0526",
+    "n0869",
+    "n1137",
+    "n1218",
+    "n1435",
+    "n1784",
+    "n1863",
+    "n1869",
+    "n2073",
+    "n2121"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
 }
