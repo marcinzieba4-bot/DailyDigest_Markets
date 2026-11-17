@@ -5,7 +5,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "9d3a46d03344d63c82afd9a813e0a35e3676b86b2b862f8032a7232db6e3ef86",
  "card_sha256": "363ea03f48fa4a2b1a4c13a68038c622dc5ef3720e543d4e5e14533053d26df9",
- "exclusions_sha256": "ae9daf712ee77174d73570f6bd1fcd78ea8db9ce9dcb25cbc8481bc811844577",
+ "exclusions_sha256": "ae2c655f61a8ef25f0ed04b8003f369dd1f310b34a8d21cba3c5c5de939f3383",
  "nonretail_content_sha256": "8078d90b307a068e42b10720b78d0cf809e77e7db6e3bc88262d0438761dd036",
  "findings": [
   {
@@ -46,5 +46,38 @@
   }
  ],
  "reviewed_validation_warnings": [],
- "scope_limits": "Reviewed only 2023-11-14 feed, card and exclusions against cited headlines; headline-only support; no web, other dates or later knowledge used. Day-granular 07:00/08:00 UTC stamps cannot prove intraday timing; the caveat sweep found one unfalsifiable residual (n1062)."
+ "scope_limits": "Reviewed only 2023-11-14 feed, card and exclusions against cited headlines; headline-only support; no web, other dates or later knowledge used. Day-granular 07:00/08:00 UTC stamps cannot prove intraday timing; the caveat sweep found one unfalsifiable residual (n1062).",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "ae9daf712ee77174d73570f6bd1fcd78ea8db9ce9dcb25cbc8481bc811844577",
+   "new_exclusions_sha256": "ae2c655f61a8ef25f0ed04b8003f369dd1f310b34a8d21cba3c5c5de939f3383",
+   "excluded_ids_now": [
+    "n0060",
+    "n0063",
+    "n0144",
+    "n0372",
+    "n0721",
+    "n0774",
+    "n0775",
+    "n0908",
+    "n1051",
+    "n1068",
+    "n1069",
+    "n1127",
+    "n1360",
+    "n1524",
+    "n1527",
+    "n1528",
+    "n1669",
+    "n1741",
+    "n1747",
+    "n1993",
+    "n2030"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
 }
