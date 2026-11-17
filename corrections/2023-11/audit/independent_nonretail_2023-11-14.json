@@ -1,0 +1,50 @@
+{
+ "date": "2023-11-14",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "9d3a46d03344d63c82afd9a813e0a35e3676b86b2b862f8032a7232db6e3ef86",
+ "card_sha256": "363ea03f48fa4a2b1a4c13a68038c622dc5ef3720e543d4e5e14533053d26df9",
+ "exclusions_sha256": "ae9daf712ee77174d73570f6bd1fcd78ea8db9ce9dcb25cbc8481bc811844577",
+ "nonretail_content_sha256": "8078d90b307a068e42b10720b78d0cf809e77e7db6e3bc88262d0438761dd036",
+ "findings": [
+  {
+   "location": "geo[2] Fiscal, Policy & Trade",
+   "issue": "n0144 (NBC Bay Area, 'Biden arrives in San Francisco') carries a day-granular 2023-11-13 stamp and the arrival may have fallen after 00:00 UTC on 2023-11-14.",
+   "severity": "major",
+   "resolution": "Replaced with the 2023-11-10 Reuters preview n0132 ('what to expect'); n0144 no longer cited."
+  },
+  {
+   "location": "geo[5] Corporate & Sectors",
+   "issue": "n1741 is Allegro's own promotional page, an advertisement that cannot support a margin claim.",
+   "severity": "minor",
+   "resolution": "Removed the citation and the discount claim; kept card-based Allegro returns."
+  },
+  {
+   "location": "geo[0] New; geo[2] PMIs, New; geo[2] Markets; geo[5] Macro, Fiscal, New; catalysts[2]; catalysts[3]; sectors[2]",
+   "issue": "Overreaching or unsupported inference beyond the headline (Moody's flagged the funding fight; pricing power; multiples; iron ore 'held up'; central bank 'seen as partisan'; PPK 'flows'; 'de-rated'; 'data not yet in the price'; Reuters 'expects' vs 'may signal'; Pfizer 'leg of selling began').",
+   "severity": "minor",
+   "resolution": "Rewrote each sentence to claim only what the cited headline or card establishes."
+  },
+  {
+   "location": "sectors[0],[3],[9],[10]; flows Credit Check, Equity & Fund Flows; geo[1] New",
+   "issue": "Unsupported assertions or flow inference from price (paid seats, Saudi 'defend price', REIT gap about credit/leases, 'keeps spreads tight', 'flows produce size gap', Nexi 'low bar').",
+   "severity": "minor",
+   "resolution": "Made modal or removed; replaced flow language with price-consistent wording."
+  },
+  {
+   "location": "geo[5] Macro Stance",
+   "issue": "'near that level' ambiguous (referred to 8.2% September CPI rather than October level).",
+   "severity": "minor",
+   "resolution": "Changed to 'near the October level'."
+  },
+  {
+   "location": "all cited records stamped 2023-11-13 or earlier",
+   "issue": "Timing caveat sweep: every cited 11-13/11-12 record is a preview, commentary, evergreen item, or an event that plausibly occurred before 00:00 UTC. Residual judgement: Crypto Briefing n1062 (fake BlackRock XRP filing, 11-13 US business day) is accepted as pre-cutoff but cannot be time-verified beyond the day stamp.",
+   "severity": "minor",
+   "resolution": "Accepted n1062 with the claim limited to the headline; no price causation asserted."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only 2023-11-14 feed, card and exclusions against cited headlines; headline-only support; no web, other dates or later knowledge used. Day-granular 07:00/08:00 UTC stamps cannot prove intraday timing; the caveat sweep found one unfalsifiable residual (n1062)."
+}

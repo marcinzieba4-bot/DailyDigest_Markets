@@ -1,0 +1,64 @@
+{
+ "date": "2023-11-14",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "9d3a46d03344d63c82afd9a813e0a35e3676b86b2b862f8032a7232db6e3ef86",
+ "card_sha256": "363ea03f48fa4a2b1a4c13a68038c622dc5ef3720e543d4e5e14533053d26df9",
+ "exclusions_sha256": "ae9daf712ee77174d73570f6bd1fcd78ea8db9ce9dcb25cbc8481bc811844577",
+ "retail_draft_sha256": "b64511aebfe9e513736d30407950ec342cbc0dae142498587639f7a7aac0c420",
+ "chronology_checked_against": [
+  "2023-11-06",
+  "2023-11-07",
+  "2023-11-08",
+  "2023-11-09",
+  "2023-11-10",
+  "2023-11-13"
+ ],
+ "findings": [
+  {
+   "location": "retail[0] Boeing Historical Analog",
+   "issue": "n1884 (inspection streamlining) was stretched into 'production quality has been the binding constraint'.",
+   "severity": "minor",
+   "resolution": "Reworded to what the headline shows: inspection steps gate delivery pace."
+  },
+  {
+   "location": "retail[0] Social Signal",
+   "issue": "'format that travels fastest among retail traders' and 'within hours' were unsupported assertions.",
+   "severity": "minor",
+   "resolution": "Made modal and 'same day'."
+  },
+  {
+   "location": "retail[0] Smart Money View",
+   "issue": "FreightWaves headline is attributed to ATSG; final sentence about institutions questioning margin had no headline support and no named analyst.",
+   "severity": "minor",
+   "resolution": "Attributed to ATSG via FreightWaves; replaced the margin sentence with a claim limited to the 95-aircraft order and the freight headlines."
+  },
+  {
+   "location": "retail[0] When the Narrative Breaks",
+   "issue": "Speculative 'crowd will read every rival win as a reason to take profits'.",
+   "severity": "minor",
+   "resolution": "Replaced with the cited Airbaltic A220 order as a rival-order reminder."
+  },
+  {
+   "location": "retail[1] Nvidia Where It Breaks; retail[2] XRP Where It Breaks",
+   "issue": "Generic closing sentences without evidence.",
+   "severity": "minor",
+   "resolution": "Replaced with card-anchored levels (NVDA 486.20 USD; XRP 0.56 USD reference on 2023-10-24)."
+  },
+  {
+   "location": "retail[2] XRP",
+   "issue": "n1062 timing is day-granular (2023-11-13).",
+   "severity": "minor",
+   "resolution": "Accepted as a US business-day event; no causal price claim beyond the headline."
+  },
+  {
+   "location": "retail chronology",
+   "issue": "Boeing is a new lead versus 11-06 to 11-13 leads; Nvidia/XRP/Target items are distinct from earlier AI (MSFT 11-07), crypto (ETH 11-10, SOL 11-13) and consumer items.",
+   "severity": "info",
+   "resolution": "No change; notes already justify with new cited evidence (n0932, n0973, n1062, n1308)."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only the 2023-11-14 retail draft against that date's feed, card and exclusions, plus notes/retail_* for strictly earlier November dates (chronology only). Headline-only support; no social data beyond cited headlines."
+}
