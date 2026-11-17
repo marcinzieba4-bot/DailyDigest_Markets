@@ -366,6 +366,7 @@ def verify(d, nonretail=False, spec_override=None, retail_only=False):
         feed_hits[0] += len(FEED.findall(body))
         if BANNED.search(body): fails.append(f'{where} {lab}: hindsight/correction wording "{BANNED.search(body).group(0)}"')
         if COPPER.search(body): fails.append(f'{where} {lab}: copper ratio / growth-gauge wording')
+        if re.search(r'\{[^}]{0,40}\}', body): fails.append(f'{where} {lab}: unfilled template placeholder')
         if FX.search(body) or FX_WORD.search(body): fails.append(f'{where} {lab}: forbidden numeric spot-FX mark or =X instrument')
         for m in CAL.finditer(body):
             warns.append(f'{where} {lab}: calendar wording "{m.group(0)}" — needs a dated headline')
