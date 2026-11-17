@@ -1,0 +1,92 @@
+{
+ "date": "2023-11-24",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "f67dedc1c6b27f3613ce6af472c152ea28601b0b691436af0d81460cfbcf6f84",
+ "card_sha256": "83aad342ab20301e8957e8d81fac2e3893cac35815c047cc80a0b6a4d0686333",
+ "exclusions_sha256": "067625d48a9dcce8932b600108f76f29c13d524df66cc81baedfca1c86b2c58d",
+ "nonretail_content_sha256": "c5fa7627352ff5d448acbc137f5531ba9fb9f5e7b494d2a061c84eea7b48ecaf",
+ "findings": [
+  {
+   "location": "geo JP Activity & Currency [[n1283]]",
+   "issue": "Reuters Morning Bid on Japan CPI is stamped 2023-11-23 (Pacific-midnight placeholder) but is an Asia-morning/holiday-trade piece about a release due on the edition date; plausibly published at or after the 00:00 UTC cutoff.",
+   "severity": "major",
+   "resolution": "Citation removed; sentence now says the next national CPI print is the release to watch, with no dated claim."
+  },
+  {
+   "location": "geo CN Fiscal, Policy & Trade [[n0254]]",
+   "issue": "SCMP Shenzhen second-home down-payment cut is a completed Asian policy action stamped 2023-11-23 and could have appeared on the morning of 2023-11-24 Asia time; timing doubtful.",
+   "severity": "major",
+   "resolution": "Citation removed; paragraph now relies on n0248 (a report that Beijing weighs support) and n0180 (falling prices) and makes no completed-action claim. n0248 retained as a reported plan, flagged as borderline timing."
+  },
+  {
+   "location": "geo CN, flows Credit Check [[n0249]]",
+   "issue": "'Zhongzhi' is not named in the headline.",
+   "severity": "minor",
+   "resolution": "Replaced with 'that £30bn shortfall' / 'a Chinese shadow bank'."
+  },
+  {
+   "location": "geo CN Markets & Flows",
+   "issue": "'dollar-based money ... remains the marginal seller' is a flow claim inferred from ETF price moves.",
+   "severity": "minor",
+   "resolution": "Reworded to say offshore-listed China exposure has not joined the local rally."
+  },
+  {
+   "location": "geo AU Macro Stance / Demand & Financing",
+   "issue": "'Governor Bullock' not in headline; n0047 headline is an ABC story, not RBA minutes.",
+   "severity": "minor",
+   "resolution": "Now 'the RBA governor'; n0047 attributed to ABC reporting that growing signs prompted the latest hike."
+  },
+  {
+   "location": "geo PL Macro Stance / Fiscal & Politics",
+   "issue": "'RPP member' not in n1354 headline; n1565 headline says 'pensje', not public-sector pay.",
+   "severity": "minor",
+   "resolution": "Attributed to Rzeczpospolita quoting Kotecki; 'raise salaries'."
+  },
+  {
+   "location": "geo EU Credit & Inflation / New",
+   "issue": "Bund rally and 'subsidies behind green steel, battery and chip projects' not supported by headlines (n1856, n0819).",
+   "severity": "minor",
+   "resolution": "Reworded to general mechanics without invented detail."
+  },
+  {
+   "location": "sectors XLK, XLE, XLB, XLP",
+   "issue": "Overreach beyond headlines: HP 'crowding out' claim (n0997); 'that session' linkage of CNN 4% drop to card -0.86% (n1737); 'positioning turns bearish'; Franco-Nevada 'jurisdiction risk' (n0970); Walmart 'cautious consumer message' (n0936).",
+   "severity": "minor",
+   "resolution": "Each sentence narrowed to what the headline/card establishes."
+  },
+  {
+   "location": "earnings_pattern",
+   "issue": "'lean inventory' and 'record quarter' not in headlines (n0929, n0643); catalyst title for NVDA also said 'record quarter'.",
+   "severity": "minor",
+   "resolution": "Replaced with 'self-help' and 'tripled revenue'."
+  },
+  {
+   "location": "crypto, anticipatory[2]",
+   "issue": "Ether 'broader pipeline of wrappers', Coinbase 'ETF custody', 'latest surge' for undated NYT piece n0858 were unsupported.",
+   "severity": "minor",
+   "resolution": "Reworded; n0858 described only as 'a surge in crypto prices'."
+  },
+  {
+   "location": "flows Global Liquidity; anticipatory[0]-[1]; catalysts[0],[3]",
+   "issue": "Unsupported claims: shrinking central-bank balance sheets; 'OPEC+ cannot agree / fails again'; easing 'front-loaded'; NVDA 'China export restrictions main earnings risk'; Novo capacity 'almost directly into revenue'.",
+   "severity": "minor",
+   "resolution": "Replaced with claims supported by the cited headlines or modal wording."
+  },
+  {
+   "location": "all previous-day records",
+   "issue": "Timestamp-caveat sweep of every cited 2023-11-22/23 record; remaining records (incl. n0845, n0898, n0903, n1761, n1762, n1561, n1538) describe events plausibly before 00:00 UTC. No cited ids in exclusions.",
+   "severity": "info",
+   "resolution": "Retained."
+  },
+  {
+   "location": "numbers",
+   "issue": "All card figures (yields, indices, ETFs, single names, crypto, commodities, Polish names) checked against the market card; no mismatches found.",
+   "severity": "info",
+   "resolution": "None needed."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only 2023-11-24 feed, card and exclusions; headline-level evidence, no article bodies; no other dates' drafts/feeds read; actual publication times of day-granular placeholder stamps cannot be verified, so n0248 (Business Times, 2023-11-23) is retained as borderline."
+}

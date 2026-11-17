@@ -1,0 +1,120 @@
+{
+ "date": "2023-11-30",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "aae0ec32b3c83d8a155ac42976bdabb9530ff3afdb7c1595ccd42ad95bd130ea",
+ "card_sha256": "2b73e415730c8cf9325285ca3b5fe74835b41254ad89261ac0c5afabc94d8d58",
+ "exclusions_sha256": "a7bca61de0754d1129e97b50570d12885e4ef293670a3c84c677eeb784b95118",
+ "nonretail_content_sha256": "e0d5355085890671bab15a1316fccc7538d194636c149e2cc44bf921f8677fb1",
+ "findings": [
+  {
+   "location": "earnings_pattern/Punished",
+   "issue": "Cisco -7.83% explained by 'customers digesting earlier capital spending' with no supporting headline",
+   "severity": "minor",
+   "resolution": "Removed unsupported causal claim; Cisco stated as a 20-session laggard against the S&P 500 card move."
+  },
+  {
+   "location": "earnings_pattern/Pattern",
+   "issue": "Nvidia five-session decline attributed to priced-in beats while the SOXX block attributes it to the delayed China chip report",
+   "severity": "minor",
+   "resolution": "Reworded to acknowledge the n0178 China-chip report as a cross-current, restoring cross-section consistency."
+  },
+  {
+   "location": "sectors/XLV/Reported",
+   "issue": "CVS -3.49% and UNH -1.03% implied as a reaction to the Cigna-Humana WSJ report, whose intraday timing relative to the session is not established",
+   "severity": "minor",
+   "resolution": "Dropped the causal link; states the day moves and that a combination would add a larger rival."
+  },
+  {
+   "location": "sectors/XLV/Narrative",
+   "issue": "AbbVie and Merck percentages lacked a stated window (card values are 20-session)",
+   "severity": "minor",
+   "resolution": "Added 'over 20 sessions'."
+  },
+  {
+   "location": "sectors/XLB/EPS Upside Watch",
+   "issue": "Newmont five-session move compared with a 20-session bullion return",
+   "severity": "minor",
+   "resolution": "Labelled bullion +3.00% as a 20-session return."
+  },
+  {
+   "location": "sectors/XLY/Breaking Convention",
+   "issue": "Cybertruck delivery event stated without a cited headline",
+   "severity": "minor",
+   "resolution": "Added n1023 (preview naming the delivery event; no date asserted)."
+  },
+  {
+   "location": "catalysts/TSLA/Price Hurdle & Risk",
+   "issue": "'well into 2024' margin pressure is an unsupported horizon",
+   "severity": "minor",
+   "resolution": "Removed the horizon."
+  },
+  {
+   "location": "anticipatory/OPEC+ decision",
+   "issue": "Pending-event status not evidenced by any cited headline",
+   "severity": "minor",
+   "resolution": "Added n1669 (OPEC decision looms) to What Is Priced."
+  },
+  {
+   "location": "underowned/Uranium Exposure & Risk",
+   "issue": "'Demand broadening beyond utilities' contradicted by the cited PGE (a utility) nuclear item",
+   "severity": "minor",
+   "resolution": "Reworded to 'new builds and new customers'."
+  },
+  {
+   "location": "geo/JP Macro Stance; underowned/Japanese domestic reflation",
+   "issue": "n1256 (Asahi wage survey, day-stamped 2023-11-29 placeholder, Japanese-source) could have been published on the morning of 2023-11-30 JST, after the cutoff; a completed-release claim cannot be certified",
+   "severity": "major",
+   "resolution": "Replaced the 'highest since 1999' claim with n1247 (Oxford Economics, 2023-11-27) and n1250; n1256 no longer cited."
+  },
+  {
+   "location": "geo/PL Markets and Playbook divergence",
+   "issue": "EPOL minus WIG20TR gap attributed wholly to the zloty although the funds differ in composition and no numeric FX is allowed",
+   "severity": "minor",
+   "resolution": "Softened to 'plausibly reflects' / 'probably doing much of the work'."
+  },
+  {
+   "location": "all cited sections",
+   "issue": "Timing review of 2023-11-29-stamped US evening-prone items (n1907 Dimon, n0731 Iger, n0742 Cigna-Humana, n0826 Snowflake after-close results, n0739 Elliott): events are consistent with occurring before 00:00 UTC; Snowflake results after the 21:00 UTC close are valid",
+   "severity": "info",
+   "resolution": "Retained; no change. Residual intraday ambiguity noted in scope_limits."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed against own-date feed headlines (titles/day-granular timestamps only, no article bodies), own-date card and exclusions; no other dates read for nonretail. Day-stamped (07:00/08:00 UTC) records cannot be timed to the hour; evening-US items n1907, n0731, n0742, n0739 were accepted on plausibility of occurring before 00:00 UTC. No exclusion-listed id is cited. Retail component reviewed separately.",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "40651e184137a5ea7ea70bafe9f7583374cb474462999096955181760d537fe2",
+   "new_exclusions_sha256": "a7bca61de0754d1129e97b50570d12885e4ef293670a3c84c677eeb784b95118",
+   "excluded_ids_now": [
+    "n0088",
+    "n0220",
+    "n0221",
+    "n0223",
+    "n0262",
+    "n0409",
+    "n0465",
+    "n0603",
+    "n0666",
+    "n0672",
+    "n0724",
+    "n0765",
+    "n0801",
+    "n0839",
+    "n0878",
+    "n0929",
+    "n0976",
+    "n1037",
+    "n1256",
+    "n1725",
+    "n1735",
+    "n1747"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
+}

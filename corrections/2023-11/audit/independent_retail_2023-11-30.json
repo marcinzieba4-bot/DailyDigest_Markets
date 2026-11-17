@@ -1,0 +1,107 @@
+{
+ "date": "2023-11-30",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "aae0ec32b3c83d8a155ac42976bdabb9530ff3afdb7c1595ccd42ad95bd130ea",
+ "card_sha256": "2b73e415730c8cf9325285ca3b5fe74835b41254ad89261ac0c5afabc94d8d58",
+ "exclusions_sha256": "a7bca61de0754d1129e97b50570d12885e4ef293670a3c84c677eeb784b95118",
+ "retail_draft_sha256": "45868d0daf731ad75fd30306f5f27510bd508bf0db2de9f5e9e8801cdac42aba",
+ "chronology_checked_against": [
+  "2023-11-01",
+  "2023-11-02",
+  "2023-11-03",
+  "2023-11-06",
+  "2023-11-07",
+  "2023-11-08",
+  "2023-11-09",
+  "2023-11-10",
+  "2023-11-13",
+  "2023-11-14",
+  "2023-11-15",
+  "2023-11-16",
+  "2023-11-17",
+  "2023-11-20",
+  "2023-11-21",
+  "2023-11-22",
+  "2023-11-23",
+  "2023-11-24",
+  "2023-11-27",
+  "2023-11-28",
+  "2023-11-29"
+ ],
+ "findings": [
+  {
+   "location": "retail/0 The Social Signal",
+   "issue": "AMC tied to a Beyonce film premiere (n0385) though that headline does not name AMC",
+   "severity": "major",
+   "resolution": "Removed the n0385 clause and dropped n0385 from the retail notes; kept n0316 (AMC ad) with a precise paraphrase."
+  },
+  {
+   "location": "retail/0 Smart Money View",
+   "issue": "Asserted professionals are 'on the other side' and that 'institutions see a struggling game retailer' citing a Kotaku customer anecdote; dealers' hedging not in any headline",
+   "severity": "major",
+   "resolution": "Reworded to modal language; Kotaku item described as an anecdote, not an institutional verdict."
+  },
+  {
+   "location": "retail/0 What Is Driving It and retail_intro",
+   "issue": "'The fuel is options' / 'short-dated call buyers' stated as fact from a headline saying only 'placing bets'",
+   "severity": "minor",
+   "resolution": "Softened to 'looks like options' and 'options bettors'."
+  },
+  {
+   "location": "retail/2 TLT Why Retail Is Here",
+   "issue": "Asserted the retail crowd bought long bonds at high yields without evidence",
+   "severity": "minor",
+   "resolution": "Reworded to 'Anyone who bought long bonds...'."
+  },
+  {
+   "location": "retail chronology",
+   "issue": "GME was a smaller item on 2023-11-29 and now leads; justified by newly published n0145 (Reuters attributing rally to retail traders) and n0144 with a +20.46% session versus +13.27% earlier; 2023-11-29 lead was crypto miners",
+   "severity": "info",
+   "resolution": "Accepted as material update; PDD, BIRK new tickers; TLT last on 2023-11-02; titles and four distinct narratives verified."
+  },
+  {
+   "location": "retail numbers",
+   "issue": "All card figures (GME 16.25/+20.46/+29.48/+18.01/13.77; AMC, HOOD, PDD 141.73/101.42, TLT 92.63/83.58, BIRK 45.75/39.07) match the card",
+   "severity": "info",
+   "resolution": "No change."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed retail draft against own-date feed headlines, card and exclusions, plus earlier notes/retail_*.json for chronology only. Headline-only evidence; social attention is limited to Reuters/Business Insider headlines and options/0DTE coverage. Day-stamped records cannot be timed to the hour.",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "40651e184137a5ea7ea70bafe9f7583374cb474462999096955181760d537fe2",
+   "new_exclusions_sha256": "a7bca61de0754d1129e97b50570d12885e4ef293670a3c84c677eeb784b95118",
+   "excluded_ids_now": [
+    "n0088",
+    "n0220",
+    "n0221",
+    "n0223",
+    "n0262",
+    "n0409",
+    "n0465",
+    "n0603",
+    "n0666",
+    "n0672",
+    "n0724",
+    "n0765",
+    "n0801",
+    "n0839",
+    "n0878",
+    "n0929",
+    "n0976",
+    "n1037",
+    "n1256",
+    "n1725",
+    "n1735",
+    "n1747"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
+}

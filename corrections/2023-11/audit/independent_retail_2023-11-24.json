@@ -1,0 +1,69 @@
+{
+ "date": "2023-11-24",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "f67dedc1c6b27f3613ce6af472c152ea28601b0b691436af0d81460cfbcf6f84",
+ "card_sha256": "83aad342ab20301e8957e8d81fac2e3893cac35815c047cc80a0b6a4d0686333",
+ "exclusions_sha256": "067625d48a9dcce8932b600108f76f29c13d524df66cc81baedfca1c86b2c58d",
+ "retail_draft_sha256": "806545b7cc4e2bbd69cd0f390de565a07b65d43e47b4b2a5c49a721125a11c4b",
+ "chronology_checked_against": [
+  "2023-11-01",
+  "2023-11-02",
+  "2023-11-03",
+  "2023-11-06",
+  "2023-11-07",
+  "2023-11-08",
+  "2023-11-09",
+  "2023-11-10",
+  "2023-11-13",
+  "2023-11-14",
+  "2023-11-15",
+  "2023-11-16",
+  "2023-11-17",
+  "2023-11-20",
+  "2023-11-21",
+  "2023-11-22",
+  "2023-11-23"
+ ],
+ "findings": [
+  {
+   "location": "retail[2] Where It Breaks",
+   "issue": "'The cloud spin-off that powered the sum-of-the-parts story is off the table' is not in n0444/n0245 headlines.",
+   "severity": "minor",
+   "resolution": "Reworded to the restructuring snag undercutting break-up optimism."
+  },
+  {
+   "location": "retail[1] Where It Breaks",
+   "issue": "'Competition is closer than the crowd assumes' contradicted n0790 (Walmart widening the gap with Amazon).",
+   "severity": "minor",
+   "resolution": "Reworded to report the headline directly."
+  },
+  {
+   "location": "retail intro, retail[0] Historical Analog",
+   "issue": "Morgan Stanley at-risk list (n0845) described as 'food' stocks; headline names no sector.",
+   "severity": "minor",
+   "resolution": "Changed to 'stocks Ozempic might starve' / 'consumer names'; notes/retail_2023-11-24.json wording aligned."
+  },
+  {
+   "location": "retail previous-day records",
+   "issue": "Timestamp-caveat check on n0745, n0762, n0790, n1729, n1745 (2023-11-22) and n0091, n0245, n0811, n0826, n0845, n1761, n1762, n1763 2023-11-23 records: all report events plausibly before 00:00 UTC; none in exclusions.",
+   "severity": "info",
+   "resolution": "Retained."
+  },
+  {
+   "location": "retail chronology",
+   "issue": "Novo lead is a new ticker; weight-loss theme last led 2023-11-09 and was smaller on 2023-11-20; newly dated capacity evidence (n1762, n0745, n1763, n1745) justifies the lead. Alibaba (2023-11-17) and Cameco (2023-11-01) returns carry new cited evidence (n0230, n0826, n1761). Four distinct narratives; titles conform.",
+   "severity": "info",
+   "resolution": "Accepted."
+  },
+  {
+   "location": "retail numbers",
+   "issue": "All prices and returns match the card (NOVO-B.CO, LLY, AMZN, BABA, 9988.HK, CCJ, URA, MCD, PEP).",
+   "severity": "info",
+   "resolution": "None needed."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only 2023-11-24 feed, card and exclusions plus earlier notes/retail_*.json for chronology; headline-level evidence only; no later-date material used."
+}
