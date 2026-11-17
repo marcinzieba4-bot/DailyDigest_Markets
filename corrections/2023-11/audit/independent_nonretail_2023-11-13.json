@@ -1,0 +1,62 @@
+{
+ "date": "2023-11-13",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "0dbd0279121eab1d13286e1f369d1d99bce27e8201898212c661301b912404da",
+ "card_sha256": "c5441c51f2154e5c1fe0c79eac894abaee84d3a5681dc4844c25cc453d5676ac",
+ "exclusions_sha256": "76ffa4beecc1afbd680bfb8a2d30a77e72e0b6f7ea974dc251de17fa49a7e7fc",
+ "nonretail_content_sha256": "aad2c9e3f51e23679804085e3c2fa3ae5861904d363a10dec82456dc5f41e51a",
+ "findings": [
+  {
+   "location": "sectors/3 (XLE) Reported",
+   "issue": "Cited n0244 (Business Insider 'Buffett Cuts Cash...'), a record in exclusions/2023-11-13.json as unreliable",
+   "severity": "major",
+   "resolution": "Citation and the Buffett/Chevron claim removed; replaced with card-only Chevron and BP 20-session returns"
+  },
+  {
+   "location": "flows/Equity & Fund Flows",
+   "issue": "Same excluded id n0244 used for 'Buffett lifting buybacks'",
+   "severity": "major",
+   "resolution": "Clause removed; sentence now rests on Apple buyback headline n0476"
+  },
+  {
+   "location": "earnings_pattern/Pattern",
+   "issue": "Stray unresolved placeholder '{T}' in text",
+   "severity": "minor",
+   "resolution": "Replaced with '(US Treasury, prior close 2023-11-10)' source tag"
+  },
+  {
+   "location": "sectors/4 (XLI) EPS Upside Watch; catalysts/2 BA title",
+   "issue": "'Dubai' air show/orders not stated by n1858/n0949 headlines (unsupported calendar/location claim)",
+   "severity": "minor",
+   "resolution": "Reworded to 'the air show' and 'The Emirates Order' title"
+  },
+  {
+   "location": "anticipatory/2 Conditional Expression",
+   "issue": "'restored military communication' is a named outcome not in any own-date headline (hindsight risk)",
+   "severity": "minor",
+   "resolution": "Replaced with generic 'calms tensions and brings no new export curbs'"
+  },
+  {
+   "location": "geo/CN PMIs & Activity",
+   "issue": "'price cuts' behind November car sales not supported by n0500 headline",
+   "severity": "minor",
+   "resolution": "Reworded to targets-driven volume only"
+  },
+  {
+   "location": "crypto/Market Context",
+   "issue": "Solana 30.31% quoted without horizon (card value is five-session)",
+   "severity": "minor",
+   "resolution": "Added 'over five sessions'"
+  },
+  {
+   "location": "earnings_pattern/Rewarded; sectors/6 XLP; sectors/1 XLC",
+   "issue": "Unsupported ranking ('largest software move of the week'), 'volume winner' for Costco, Disney's library called 'second-tier'",
+   "severity": "minor",
+   "resolution": "Softened to card-consistent or neutral wording"
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only the 2023-11-13 frozen feed, own market card and exclusions; headline-only checking (no article bodies); day-granular placeholder timestamps on 11-11/11-12 records judged plausibly before 00:00 UTC (weekend events: Johnson stopgap, Moody's outlook after US close on 11-10, Xi/APEC previews); no other dates' feeds, cards or drafts read."
+}
