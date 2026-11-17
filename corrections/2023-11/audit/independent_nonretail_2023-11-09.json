@@ -1,0 +1,86 @@
+{
+ "date": "2023-11-09",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "6092831cd0fa70dcf293f44957b50289afc416b9ada869a77aa279cd5cc32de9",
+ "card_sha256": "d8564f95a9808ad8454264689f369db0cb3b355626d2208ac7f831a569230de4",
+ "exclusions_sha256": "5606f4c99eebf0b68772be8c06f694f2e5456157f8cdbca409f827c3c65e0062",
+ "nonretail_content_sha256": "9d79168c52ef34d6a97eb87d39b5bca982384760486ff3014a5ca650c7d7241e",
+ "findings": [
+  {
+   "location": "geo/US Macro Stance",
+   "issue": "ISM manufacturing 'slipped' to '46.7%' implied a prior reading and used percent for a PMI; headline n1873 gives only the level",
+   "severity": "minor",
+   "resolution": "Reworded to 'the ISM manufacturing PMI read 46.7 index points'"
+  },
+  {
+   "location": "geo/US New / Most Important",
+   "issue": "Nasdaq 100 five-session return was compared with Russell 2000 20-session return (mismatched horizons)",
+   "severity": "moderate",
+   "resolution": "Both now use the 20-session horizon from the card"
+  },
+  {
+   "location": "geo/EU Macro Stance",
+   "issue": "'Lagarde promises' overstated headline n1297 ('says ECB will get inflation down')",
+   "severity": "minor",
+   "resolution": "Changed to 'says the bank will bring inflation down'"
+  },
+  {
+   "location": "geo/JP Playbook",
+   "issue": "SoftBank decline causally tied to WeWork bankruptcy; 'live-action' Zelda not in headline n0872",
+   "severity": "minor",
+   "resolution": "Softened to 'with its WeWork bet now in bankruptcy'; removed 'live-action'"
+  },
+  {
+   "location": "geo/AU Playbook",
+   "issue": "BHP/Rio session moves lacked source tag",
+   "severity": "minor",
+   "resolution": "Added (Yahoo Finance, prior close 2023-11-08)"
+  },
+  {
+   "location": "geo/PL Corporate & Sectors; Markets",
+   "issue": "Eurocash and the 'new store network' (n1569, n1580) were presented as one chain; 'brokers are competing' generalised from XTB alone (n1590)",
+   "severity": "moderate",
+   "resolution": "Separated the two headlines; reworded the XTB sentence"
+  },
+  {
+   "location": "sectors/XLY, XLP, SXAP",
+   "issue": "Unsupported 'trading down/experiences' framing, 'record' Walmart presented as current (n0469 dated Nov 3), and 'short covering' flow claim",
+   "severity": "moderate",
+   "resolution": "Reworded to what headlines and card support"
+  },
+  {
+   "location": "flows/Global Liquidity",
+   "issue": "'Quantitative tightening continues' and China Treasury-holdings inference ('domestic buyers') not supported by n1296/n0151",
+   "severity": "moderate",
+   "resolution": "Replaced with claims the headlines establish"
+  },
+  {
+   "location": "anticipatory/US-China",
+   "issue": "Tencent bounce attributed to diplomatic signals without support",
+   "severity": "minor",
+   "resolution": "Reworded as general re-rating speed"
+  },
+  {
+   "location": "underowned/Regional banks",
+   "issue": "n0468 (deposit delays) cited as credit-risk evidence; it is not a credit headline",
+   "severity": "moderate",
+   "resolution": "Removed that clause; $650bn unrealized losses (n1964) retained"
+  },
+  {
+   "location": "underowned/Gold; crypto",
+   "issue": "'falling real yields' and 'confirms retail participation' overstated",
+   "severity": "minor",
+   "resolution": "Reworded to 'falling yields' and 'suggests'"
+  },
+  {
+   "location": "timing review",
+   "issue": "Records dated 2023-11-08 (FDA/Zepbound, Disney, Take-Two, Arm, RPP, Roblox, NuScale) checked against the 00:00 UTC cutoff; plausibly before cutoff (US after-close ~21:00 UTC); no records excluded; excluded ids n0089, n0182, n0498 not cited",
+   "severity": "info",
+   "resolution": "No change"
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed against 2023-11-09 frozen feed headlines, own card and exclusions only. Intraday release times behind day-granular 2023-11-08 stamps (Roblox, Powell remarks, Zepbound approval) could not be verified beyond plausibility; no later-date material consulted. Headlines are not article bodies."
+}

@@ -2,8 +2,22 @@
  "date": "2023-11-23",
  "author": "nonretail_writer",
  "own_date_sources_only": true,
- "central_thesis": "",
- "sources_policy": "",
- "known_ambiguities_omitted": [],
+ "central_thesis": "By the Thanksgiving pause markets had priced the end of Fed tightening and a soft landing: the 10Y fell 53 bps over 20 observations to 4.42%, the DXY dropped 2.45% over 20 sessions, the VIX sat at 12.85 and the S&P 500 gained 8.83% over 20 sessions, while the Fed minutes (rates stay high), a slowing US consumer (Walmart, Lowe's, Deere guidance) and Nvidia's sell-the-beat show the next leg needs earnings breadth rather than more multiple expansion. We favour duration, rate-sensitive breadth, EM credit and non-US beneficiaries of a softer dollar (Poland Bullish, Japan Bullish, gold miners, materials) over crowded mega-cap AI and energy, treating the inverted, bull-flattening curve (10Y-2Y -47 bps) as a growth warning rather than an all-clear.",
+ "sources_policy": "Only the 2023-11-23 frozen own-date feed (via tools/digest.py) and own-date market card (via tools/showcard.py) were used; 110 distinct own-date ids cited, none more than four times, none from exclusions/2023-11-23.json (n1570, n1991). Every number is from the card or from a headline cited in the same part; market figures carry each instrument's own completed session (US/Europe/Asia/Poland 2023-11-22, Treasury 2023-11-22, crypto prior completed daily close 2023-11-22). Windows applied by meaning: company news/previews 7 days, company results 14 days, macro releases/policy baselines 35 days. No numeric spot-FX levels or returns; currency direction only from cited headlines; DXY index used. Previews are used only as pending events (OPEC meeting delay, holiday shopping, spot Bitcoin ETF, next Fed decision). Polish-language headlines are translated in the PL block. No later-date files, notes, drafts or web resources were read.",
+ "known_ambiguities_omitted": [
+  "n0019 (Guardian, RBA hikes to 4.35%) carries published_at 2023-11-06 08:00 UTC, before the RBA's 2023-11-07 decision: misdated record; not cited (used n0026 instead). Suggest exclusion.",
+  "n1579 (Money.pl, 'Wojna w Ukrainie. Parlament uchwalił budżet na rok 2024... rekordowy deficyt') concerns Ukraine's parliament/budget, not Poland's; easy to misread as a Polish 2024 budget; not cited. Suggest exclusion or semantic flag.",
+  "n1936 (CBS, Altman to return) timestamped 2023-11-21 08:00 UTC precedes the late-2023-11-21 PT announcement (day-granular placeholder); harmless for this edition but not cited (used n1949, dated 2023-11-22).",
+  "n0172/n1208/n1206/n0869 (Nvidia Q3 FY24 results) timestamped 2023-11-21 08:00 UTC precede the after-close release that day (day-granular placeholders); event is before this edition's cutoff, so n1208 used.",
+  "n1269 (ECB Financial Stability Review, November 2023) dated 2023-11-14 while Guardian coverage n1330 is dated 2023-11-22; possibly misdated; not cited (used n1330).",
+  "n0968 (Reuters, 'Macron to unveil 2.1 billion euro Novo Nordisk investment') is a preview whose unveiling may fall on the report date; omitted.",
+  "Dutch election held 2023-11-22: only previews (n0893, n1310) in own-date headlines, no result; outcome omitted.",
+  "No own-date headlines for the 2023-11-22 US releases (durable goods, jobless claims, consumer sentiment); not discussed. Japan October CPI and euro-area/Japan November flash PMIs fall on/after the report date; not discussed.",
+  "OPEC+ rescheduled meeting date not carried in a cited headline (n1956); described only as delayed/pending.",
+  "Numeric FX levels in n1461 ('below 150 yen'), n1668 ('kurs dolara spadł poniżej 4 zł') and n1671 (NBP euro fixing) not quoted under the spot-FX prohibition; direction only.",
+  "n1591 (Parkiet 'Gotowi do wyprowadzenia kolejnego ataku na szczyt') and n1663 (wnp.pl 'Perła w koronie polskiego górnictwa...') have ambiguous subjects; omitted.",
+  "n0281 (WION, anti-CCP property protests) low-reliability framing; omitted.",
+  "n1742 (pb.pl, billionaire withdrawing from LPP) does not name the seller or mechanism; described only as a gradual withdrawal."
+ ],
  "authoring_stage": "initial nonretail draft before independent review"
 }
