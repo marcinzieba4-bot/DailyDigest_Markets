@@ -157,14 +157,18 @@ def run(root,start,end,url_template,workers,extract_only):
             "snapshot_scope":"Current public HTML snapshot. Exact preceding frozen source editions are not claimed preserved."}
         dump(source/"fetch_receipt.json",receipt)
         dump(source/"canonical_html_manifest.json",metas)
-        if failures: raise RuntimeError(str(len(failures))+" source fetch failures; do not prepare cohorts or calculate outcomes.")
+        if failures:
+            print(json.dumps({"source_fetch_failures":failures},indent=2),flush=True)
+            raise RuntimeError(str(len(failures))+" source fetch failures; do not prepare cohorts or calculate outcomes.")
     map_item,universe,mapping_hashes=mapper(root)
     rows=[]; errors=[]
     for meta in metas:
         try: rows.extend(html_items(meta,root,map_item))
         except Exception as ex: errors.append({"report_date":meta["report_date"],"type":type(ex).__name__,"message":str(ex)})
     dump(source/"source_schema_errors.json",errors)
-    if errors: raise RuntimeError(str(len(errors))+" source schema errors; do not prepare cohorts or calculate outcomes.")
+    if errors:
+        print(json.dumps({"source_schema_errors":errors},indent=2),flush=True)
+        raise RuntimeError(str(len(errors))+" source schema errors; do not prepare cohorts or calculate outcomes.")
     assert len(rows)==4*len(metas)
     write_csv(root/"inputs"/"archival_replay_etf_items.csv",rows)
     dump(source/"archival_replay_items.json",rows)

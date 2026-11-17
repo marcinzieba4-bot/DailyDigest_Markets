@@ -86,6 +86,11 @@ def audit(m):
             near(o['source_delta_qty'],source_delta)
         had_open_positions=bool(positions)
         open_nav=cash+sum(q*price(s,day) for s,q in positions.items());gopen=sum(abs(q)*price(s,day) for s,q in positions.items())/open_nav;nopen=sum(q*price(s,day) for s,q in positions.items())/open_nav
+        opening_diagnostics=[r for r in diag if r['date']==day]
+        assert len(opening_diagnostics)==(1 if active is not None else 0)
+        if opening_diagnostics:
+            assert opening_diagnostics[0]['basket_id']==active
+            near(opening_diagnostics[0]['opening_nav'],open_nav)
         near(gopen,d['gross_exposure_open']);near(nopen,d['signed_exposure_open']);opens.append(gopen);signed.append(abs(nopen))
         last_marks={s:price(s,day) for s in positions};accrue(day,time(day,16),'intraday')
         cs=transact(day,'close');final=[b for b in baskets if b['exit_date']==day and b['exit_kind']=='close']
@@ -248,12 +253,19 @@ def case_metrics(m):
     if rows[0]['date']<'2025-04-01' and rows[-1]['date']>='2025-04-01':
         early=[r for r in rows if r['date']<'2025-04-01'];assert early and early[-1]['date']=='2025-03-31'
         recent=[r for r in rows if r['date']>='2025-04-01'];assert recent
-        first_nav=float(early[-1]['nav']);result['added_period_return_through_2025_03_31']=first_nav-1
+        first_nav=float(early[-1]['nav']);result['pre_april_2025_return']=first_nav-1
         result['continuous_april_onward_return']=float(rows[-1]['nav'])/first_nav-1
-        near((1+result['added_period_return_through_2025_03_31'])*(1+result['continuous_april_onward_return']),1+m['total_return'])
-        result['added_period_filled_baskets']=sum(b['entry_date']<'2025-04-01' for b in baskets)
-        for label,selected in [('added_period_closed',[b for b in baskets if b['exit_date']<'2025-04-01']),('calendar_2025_closed',[b for b in baskets if '2025-01-01'<=b['exit_date']<'2026-01-01'])]:
+        near((1+result['pre_april_2025_return'])*(1+result['continuous_april_onward_return']),1+m['total_return'])
+        result['pre_april_2025_filled_baskets']=sum(b['entry_date']<'2025-04-01' for b in baskets)
+        for label,selected in [('pre_april_2025_closed',[b for b in baskets if b['exit_date']<'2025-04-01']),('calendar_2025_closed',[b for b in baskets if '2025-01-01'<=b['exit_date']<'2026-01-01'])]:
             result[label]={k+'_usd':100000*sum(float(b[k]) for b in selected) for k in ['source_gross_pnl','hedge_gross_pnl','transaction_cost','borrow_cost','net_pnl']};result[label]['baskets']=len(selected)
+    if rows[0]['date']<='2024-08-30' and rows[-1]['date']>'2024-08-30':
+        early=[r for r in rows if r['date']<='2024-08-30'];assert early[-1]['date']=='2024-08-30'
+        split_nav=float(early[-1]['nav'])
+        result['pre_september_2024_return']=split_nav-1
+        result['continuous_september_2024_onward_return']=float(rows[-1]['nav'])/split_nav-1
+        result['pre_september_2024_filled_baskets']=sum(b['entry_date']<='2024-08-30' for b in baskets)
+        near((1+result['pre_september_2024_return'])*(1+result['continuous_september_2024_onward_return']),1+m['total_return'])
     return result
 
 def predeclared_anchor(rows,cutoff='2025-04-04'):
