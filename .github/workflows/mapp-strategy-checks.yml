@@ -1,0 +1,59 @@
+name: mapp_strategy code checks
+on:
+  workflow_dispatch:
+  push:
+    branches: ['research/retail-part4-nov2023', 'main']
+    paths:
+      - '.github/workflows/mapp-strategy-checks.yml'
+      - 'strategies/mapp_strategy/**'
+  pull_request:
+    paths:
+      - '.github/workflows/mapp-strategy-checks.yml'
+      - 'strategies/mapp_strategy/**'
+permissions:
+  contents: read
+jobs:
+  code-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: strategies/mapp_strategy
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install code dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Compile strategy code
+        run: python -m compileall -q .
+      - name: Check named command entry points
+        run: |
+          python mapp_strategy.py --help
+          python mapp_strategy.py recorded-controls --help
+      - name: Check source format with invented inputs
+        run: python ci/test_collection_parser.py
+      - name: Verify sector crosswalk and frozen calculations
+        run: |
+          python - <<'PY'
+          import csv, hashlib, sys
+          from pathlib import Path
+          sys.path.insert(0, str(Path('source_tools/frozen_mapping').resolve()))
+          import map_retail_etf
+          rows = list(csv.DictReader(Path('sector_mapping.csv').open()))
+          actual = {r['source_symbol']: r['sector_etf'] for r in rows}
+          assert len(rows) == len(actual) == 153
+          assert actual == map_retail_etf.STOCK_TO_ETF
+          expected = {
+              'engine/run_nohedge.py': '05ed248a6122db21e016f0a409b6e0f1311773c74eae26c851f4506a8a18c613',
+              'engine/data.py': 'abe17e5490cc748968542bdf14dbcff2679e002025cd171498e8fe0b6d0fc4b0',
+              'source_tools/frozen_mapping/map_retail.py': '7ba29285967df019e609050edc0806ee87de84764f5ee3efa7a38f6492167f7f',
+              'source_tools/frozen_mapping/map_retail_etf.py': '887c0f530bb667a08b421b088cfa0670b05c882fefaf613facf49ee30ca06674',
+          }
+          for path, wanted in expected.items():
+              assert hashlib.sha256(Path(path).read_bytes()).hexdigest() == wanted, path
+          print('mapp_strategy: 153 sector mappings and frozen calculation identities verified')
+          PY
