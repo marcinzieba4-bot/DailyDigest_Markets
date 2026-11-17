@@ -5,7 +5,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "23a4659d2f75108be5b0f4b8fcd6df2181b6c7c44b5006136a2fa6821ec1a3e7",
  "card_sha256": "2950b50c25d3f1fa20a1f954b3a69bf620157373db9be0a3e5e7c38b246a032d",
- "exclusions_sha256": "a383c373872dd1f15dc1ce45a6da19cc1e98929eec4b7df74ab96e6c96c81781",
+ "exclusions_sha256": "b858cc06043f1e3701a475c7f49a4395635581dd6e2f7e228a236ea45009123e",
  "retail_draft_sha256": "80a7e31209512e745f2d816157ce8e7511939ca98f8d6df2b06b24a07bbfd41f",
  "chronology_checked_against": [
   "2023-11-01",
@@ -57,5 +57,35 @@
   }
  ],
  "reviewed_validation_warnings": [],
- "scope_limits": "Reviewed only against the 2023-11-22 frozen feed, card and exclusions; no later-date material, data/, cache/ or web. Headline-only evidence; article bodies not inspected. Day-granular placeholder stamps on 2023-11-21 records were assessed for plausible release before 00:00 UTC. Earlier retail notes read only for chronology."
+ "scope_limits": "Reviewed only against the 2023-11-22 frozen feed, card and exclusions; no later-date material, data/, cache/ or web. Headline-only evidence; article bodies not inspected. Day-granular placeholder stamps on 2023-11-21 records were assessed for plausible release before 00:00 UTC. Earlier retail notes read only for chronology.",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "a383c373872dd1f15dc1ce45a6da19cc1e98929eec4b7df74ab96e6c96c81781",
+   "new_exclusions_sha256": "b858cc06043f1e3701a475c7f49a4395635581dd6e2f7e228a236ea45009123e",
+   "excluded_ids_now": [
+    "n0137",
+    "n0210",
+    "n0289",
+    "n0476",
+    "n0553",
+    "n1101",
+    "n1148",
+    "n1223",
+    "n1314",
+    "n1726",
+    "n1735",
+    "n1892",
+    "n1901",
+    "n1902",
+    "n1907",
+    "n1908",
+    "n2107",
+    "n2249"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
 }
