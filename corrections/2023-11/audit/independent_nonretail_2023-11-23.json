@@ -5,7 +5,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "ca76b68e73aa121ae5800b19dfc8d7b84ea2c8419756d86a9bbb91e778deea60",
  "card_sha256": "959fe76d853348be1d2f8917e59069a9f23fec2f3b96a43f334bba242bdd0f3c",
- "exclusions_sha256": "f24d10e87a67f90658d5cc9400d78a4ca6def5dbea33d12d23e5c342c7a544cb",
+ "exclusions_sha256": "0abb621ea2e497d9ea1c6ceb9d951b62b6fc58243784e06df93165b5a8d56d41",
  "nonretail_content_sha256": "2bd7f91c77d00df889723d5488370a115fc3e60902a116d892b3d3abbada106a",
  "findings": [
   {
@@ -58,5 +58,26 @@
   }
  ],
  "reviewed_validation_warnings": [],
- "scope_limits": "Reviewed against own-date feed, card and exclusions only; feed timestamps are day-granular placeholders, so Poland and Europe items stamped 2023-11-22 (e.g. n1737, n1740, n1748, n1751, n1330) were judged plausibly published on 2023-11-22 local daytime from their content; no later-date data or outside knowledge was used to admit outcomes."
+ "scope_limits": "Reviewed against own-date feed, card and exclusions only; feed timestamps are day-granular placeholders, so Poland and Europe items stamped 2023-11-22 (e.g. n1737, n1740, n1748, n1751, n1330) were judged plausibly published on 2023-11-22 local daytime from their content; no later-date data or outside knowledge was used to admit outcomes.",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "f24d10e87a67f90658d5cc9400d78a4ca6def5dbea33d12d23e5c342c7a544cb",
+   "new_exclusions_sha256": "0abb621ea2e497d9ea1c6ceb9d951b62b6fc58243784e06df93165b5a8d56d41",
+   "excluded_ids_now": [
+    "n0093",
+    "n0123",
+    "n0280",
+    "n1188",
+    "n1570",
+    "n1579",
+    "n1773",
+    "n1783",
+    "n1991"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
 }

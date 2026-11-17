@@ -5,7 +5,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "ca76b68e73aa121ae5800b19dfc8d7b84ea2c8419756d86a9bbb91e778deea60",
  "card_sha256": "959fe76d853348be1d2f8917e59069a9f23fec2f3b96a43f334bba242bdd0f3c",
- "exclusions_sha256": "f24d10e87a67f90658d5cc9400d78a4ca6def5dbea33d12d23e5c342c7a544cb",
+ "exclusions_sha256": "0abb621ea2e497d9ea1c6ceb9d951b62b6fc58243784e06df93165b5a8d56d41",
  "retail_draft_sha256": "7ae13f4ed36cc435502727e56004eba057a818ffcc357e70a28f862d6ae425db",
  "chronology_checked_against": [
   "2023-11-20",
@@ -45,5 +45,26 @@
   }
  ],
  "reviewed_validation_warnings": [],
- "scope_limits": "Reviewed against own-date feed, card and exclusions plus retail notes of 2023-11-20, -21 and -22 for chronology only; day-granular 2023-11-22 stamps on crypto and Nvidia items were judged pre-cutoff from the events described (results 2023-11-21 after US close; Binance/CZ events 2023-11-21 US time)."
+ "scope_limits": "Reviewed against own-date feed, card and exclusions plus retail notes of 2023-11-20, -21 and -22 for chronology only; day-granular 2023-11-22 stamps on crypto and Nvidia items were judged pre-cutoff from the events described (results 2023-11-21 after US close; Binance/CZ events 2023-11-21 US time).",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "f24d10e87a67f90658d5cc9400d78a4ca6def5dbea33d12d23e5c342c7a544cb",
+   "new_exclusions_sha256": "0abb621ea2e497d9ea1c6ceb9d951b62b6fc58243784e06df93165b5a8d56d41",
+   "excluded_ids_now": [
+    "n0093",
+    "n0123",
+    "n0280",
+    "n1188",
+    "n1570",
+    "n1579",
+    "n1773",
+    "n1783",
+    "n1991"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
 }
