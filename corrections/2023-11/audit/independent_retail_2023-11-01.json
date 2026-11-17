@@ -1,0 +1,53 @@
+{
+ "date": "2023-11-01",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "9d01bcbd2e10e6a017fd43d20a6e1d64b1a58470f5e7a793acf2bc688a168678",
+ "card_sha256": "1e2fde0349192ee7f2b4c037626389263d94f10126604339739dcc4e23b7a6dc",
+ "exclusions_sha256": "3054edaaa920fa2cf9a76cafc9d4d00eee3dc6df230b707babe3bd6f94bfb59e",
+ "nonretail_content_sha256": "48f6906996678cc0430ef53d392de83ec2d516e30eb5f6329c9be7f040403139",
+ "retail_draft_sha256": "69cc0b146ec5b50adc733693b57525b057f10d91d1993d8bd77466174c4cf686",
+ "chronology_checked_against": [],
+ "findings": [
+  {
+   "location": "retail[0] What Is Driving It",
+   "issue": "Ether's 15.97% was given without a horizon; it is the 20-session change.",
+   "severity": "minor",
+   "resolution": "Changed to 'Ether gained 15.97% over the same 20 sessions to 1,816.46 USD'."
+  },
+  {
+   "location": "retail[1] Why Retail Is Here",
+   "issue": "'ABC' was ambiguous, since n1796's source is the Australian Broadcasting Corporation. 'FOREX.com's trending-meme-stocks column carries an October 31, 2023 edition' was filler that did not state the attention signal.",
+   "severity": "minor",
+   "resolution": "Changed to 'Australia's ABC'. Reworded to 'FOREX.com's Reddit-stocks column was asking which meme stocks were trending on October 31' (n0947)."
+  },
+  {
+   "location": "retail[0]-retail[3] previous-day records",
+   "issue": "Timestamp-caveat check on n1021 (October 27% surge), n1022, n1023, n1027, n0947, n1544 and n2143, all stamped 2023-10-31.",
+   "severity": "info",
+   "resolution": "Retained. Month-to-date October performance, the ETF market-maker report, the Tuesday Cryptoverse column, CME open-interest coverage, an October 31 trending column, the 2023-10-31 central-bank gold coverage and the Fed preview all plausibly predate 00:00 UTC. The Fed decision is presented only as pending."
+  },
+  {
+   "location": "retail selection and notes/retail_2023-11-01.json",
+   "issue": "Chronology and selection check. This is the first edition, so there are no earlier retail notes. The four narratives are distinct: crypto ETF access (lead), meme-stock nostalgia, uranium follow-the-funds and gold safe haven. Titles follow 'Name / TICKER — hook' with hooks of 8 words or fewer.",
+   "severity": "info",
+   "resolution": "No change needed. The notes' evidence_ids match the 26 cited ids. The considered_not_chosen entry that listed the excluded n0866 had already been removed by another process (13:18 UTC) before this review's edits, so this review did not change the notes."
+  },
+  {
+   "location": "retail vs nonretail consistency",
+   "issue": "Cross-section stance check.",
+   "severity": "info",
+   "resolution": "Consistent. The bitcoin lead's breakpoints match crypto Playbook 'hold, stop adding'. Uranium matches underowned[2]. Gold as a hedge matches flows Portfolio Implication. The Fed announcement is treated as pending everywhere."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "verify": "python3 tools/verify.py --retail 2023-11-01: PASS, 0 fail, 0 warn; python3 tools/check_merged.py 2023-11-01: MERGED PASS",
+ "scope_limits": [
+  "Headline-and-card review only: claims were checked against own-date headline titles, sources and timestamps (tools/digest.py), the own-date market card (tools/showcard.py) and exclusions/2023-11-01.json; article bodies, the web, data/ and cache/ were not read.",
+  "Publication timing of placeholder-stamped records (07:00/08:00 UTC) cannot be certified; previous-day records were judged by whether the reported event plausibly occurred before 2023-11-01T00:00:00Z. A pending-schedule fact (Rheinmetall's Q3 statement normally falls in November) was used only to omit a doubtful completed-result claim, never to add content.",
+  "Process disclosure: a shared scratchpad file was overwritten mid-review by a concurrent process with the 2023-11-07 market card, and part of that later-date card output was displayed once during a ticker grep. None of those values were used; every card check was redone against the own-date 2023-11-01 card regenerated into a private directory, and all quoted values match sessions dated 2023-10-31.",
+  "The repository's retail_quality.py preflight and merge/staging tools were not run as part of this component review; the reviewer did not commit or push. A concurrent root checkpoint commit (6d10d9ab) captured the draft edits made in this review.",
+  "2023-11-01 is the first November 2023 edition; no notes/retail_*.json for earlier dates exist or were read, so chronology_checked_against is empty."
+ ]
+}

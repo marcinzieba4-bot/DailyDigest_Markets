@@ -1,110 +1,133 @@
 {
-  "date": "2023-11-02",
-  "status": "accepted",
-  "reviewer": "independent_reviewer",
-  "fatal_or_major_remaining": 0,
-  "feed_sha256": "8cf4553d1b3d5b1e9e484112411a3558203dc2099cd0f61b029acdeeaedc5a21",
-  "card_sha256": "fc280fbd4779601e32283f9ca5de27b7597629e268cde322552586292211a66b",
-  "exclusions_sha256": "48c5068153b284a3cb77f9cfc17f720a1428e0770d9604f8d27d164fbe9f5911",
-  "nonretail_content_sha256": "6f0a3ee818959fadf15d135c4c722ce73bc2968b804ca5be66396f1c0b1c33e4",
-  "findings": [
-    {
-      "location": "anticipatory[2].parts[2][1] (Biden-Xi, Risk)",
-      "issue": "n1543 (PBS, stamped 2023-11-01 07:00 placeholder) reports a Taiwan defence-ministry tally of 43 planes and 7 ships; such tallies are released on Taiwan mornings, so the record may be the 2023-11-02 Taiwan-morning release published after 00:00 UTC. Timing not safely before cutoff.",
-      "severity": "major",
-      "resolution": "Stopped citing n1543. Replaced the claim with pre-cutoff own-date evidence: International Crisis Group 'Preventing War in the Taiwan Strait' [[n1501]] (2023-10-27) and NYT opinion 'No, Xi Jinping Is Not About to Attack Taiwan' [[n1512]] (2023-10-29)."
-    },
-    {
-      "location": "flows.parts[3][1] (Equity & Fund Flows)",
-      "issue": "Topic sentence 'Fund flows favour cash-like and income products over equity risk' misread n1461 ('cash cow' ETFs are equity funds, not cash-like) and asserted a flow pattern no cited headline establishes; 'a sign that speculative allocations are drifting toward crypto' (n1479, a survey) stated a flow as fact.",
-      "severity": "major",
-      "resolution": "Rewrote to 'Demand is running through packaged ETFs and bonds rather than new listings', described n1461 as 'cash cow' equity ETFs, and made the n1479 inference modal ('a hint that speculative appetite may be shifting')."
-    },
-    {
-      "location": "geo[1].parts[3][1] (EU Playbook)",
-      "issue": "Claimed Lagarde's 'I should have been bolder' [[n1403]] 'shows the hawkish reflex is still there'; the FT headline does not say what she should have been bolder about (imagined article body).",
-      "severity": "minor",
-      "resolution": "Replaced with the supported conditional: Vujcic's end to hikes holds only for now [[n1412]]; n1403 no longer cited."
-    },
-    {
-      "location": "flows.parts[2][1] (Credit Check)",
-      "issue": "Named Raising Cane's, but n0904's headline reads only 'Chicken Tender Chain Sells $500 Million of Bonds in Debut Offering'.",
-      "severity": "minor",
-      "resolution": "Changed to 'A chicken-tender chain sold $500 million of bonds in a debut offering [[n0904]]'."
-    },
-    {
-      "location": "crypto.parts[1][1] (New / Most Important)",
-      "issue": "'Coinbase launched regulated leveraged crypto futures for US traders' added 'regulated' and 'for US traders', which are not in n1090's headline.",
-      "severity": "minor",
-      "resolution": "Changed to 'leveraged crypto futures trading went live on Coinbase [[n1090]]'."
-    },
-    {
-      "location": "geo[5].parts[2][1] (PL Fiscal & Politics)",
-      "issue": "'central-bank independence is now part of the coalition debate' asserted as fact; n1662/n1663 cover Glapinski's 5 October remarks and a column, not a coalition debate.",
-      "severity": "minor",
-      "resolution": "Made modal: 'could become part of the coalition debate'."
-    },
-    {
-      "location": "underowned[1].title and parts[0][1] (Gold miners)",
-      "issue": "Title 'bullion's rally has not been owned through equities' and 'miners remain a value orphan' were unsupported ownership claims and contradicted by the card (GDX +8.49% vs gold +8.32% over 20 sessions).",
-      "severity": "minor",
-      "resolution": "Retitled 'Gold miners: the equity lever on a central-bank bid' and wrote that miners have merely kept pace with bullion rather than levering it (card-supported)."
-    },
-    {
-      "location": "underowned[0].parts[0][1], underowned[2].parts[0][1], underowned[3].parts[0][1]",
-      "issue": "Measured-ownership phrasing without evidence: 'niche sleeve in most diversified portfolios', 'still small positions', 'Defence primes are widely held'.",
-      "severity": "minor",
-      "resolution": "Rephrased to 'a niche corner of the equity market', 'small index weights', and 'Defence primes draw the headlines; the supply chain is where the bottlenecks sit' (tied to n0747)."
-    },
-    {
-      "location": "sectors[12].parts[2][1] (SOXX EPS Upside Watch); catalysts[0].parts[0][1] (AMD)",
-      "issue": "'the first credible second source to Nvidia' and 'makes AMD the first scaled alternative' stated as fact; headlines n1310/n0726 support only the revenue outlook.",
-      "severity": "minor",
-      "resolution": "Softened to 'a potential first credible second source' and 'would make AMD the first scaled alternative'."
-    },
-    {
-      "location": "geo[0].parts[2][1] (US New / Most Important)",
-      "issue": "DXY level quoted without index-point unit or source tag.",
-      "severity": "minor",
-      "resolution": "Now 'DXY at 106.88 index points rose only 0.21% (Yahoo Finance, prior close 2023-11-01)', matching the card."
-    },
-    {
-      "location": "sectors[0].parts[0][1] (XLK Narrative)",
-      "issue": "XLK price 167.18 quoted without currency.",
-      "severity": "minor",
-      "resolution": "Now '167.18 USD' per the card."
-    },
-    {
-      "location": "sectors[6].parts[2][1] (XLP EPS Upside Watch)",
-      "issue": "Filler: 'Mondelez reported third-quarter results [[n1339]]' added nothing (n1339 is an IR page title).",
-      "severity": "style",
-      "resolution": "Replaced with specific evidence: Reuters says the Unilever CEO's strategy plan failed to excite investors [[n0391]] (2023-10-26), framing share recovery as the hard part; n1339 no longer cited."
-    },
-    {
-      "location": "earnings_pattern.parts[4][1] (Playbook)",
-      "issue": "Generic closing line 'the edge lies in owning the guidance raisers and leaving the merely cheap behind'.",
-      "severity": "style",
-      "resolution": "Replaced with specific evidence: own raisers with pricing power such as Kraft Heinz [[n0957]], avoid companies trimming forward lines such as UPS after its revenue-outlook cut [[n0385]]."
-    },
-    {
-      "location": "earnings_pattern.parts[3][1] (Attention into EPS)",
-      "issue": "Run-on list with a doubled 'and'.",
-      "severity": "style",
-      "resolution": "Fixed punctuation; no change of claims."
-    },
-    {
-      "location": "all sections (timing check of previous-day stamped records)",
-      "issue": "Checked every cited record stamped 2023-11-01 07:00 against the placeholder-time caveat. US after-close reports (Qualcomm n0978, PayPal n0973, DoorDash n0921, MercadoLibre n0959, e.l.f. n0922/n1051, EA n0926, Aflac n1312, MicroStrategy n0884/n0960, Disney-Hulu n1003) fall around 20:00-21:30 UTC; Fed n2205-n2210, ADP n2150, ISM n2147 and refunding n0137/n0138 are US-daytime; Caixin n0219, Xpeng/Li Auto n0906, Moutai n1332, MUFG n1614 and Toyota n1354/n1018/n1019 are 2023-11-01 local releases. No 2023-11-02 session move is used.",
-      "severity": "info",
-      "resolution": "No change needed beyond n1543."
-    },
-    {
-      "location": "geo[4], geo[5], flows (older policy-baseline records)",
-      "issue": "n1662/n1663 (NBP, 2023-10-05), n0013 (2023-10-17), n2086 (2023-10-25), n1386 (2023-10-23), n1561/n0159 (2023-10-19) sit outside the seven-day news window.",
-      "severity": "info",
-      "resolution": "Accepted as central-bank/policy baselines within 35 days; used only for stance, not as fresh news."
-    }
-  ],
-  "reviewed_validation_warnings": [],
-  "scope_limits": "Headline-only review against the 2023-11-02 frozen feed (via tools/digest.py and tools/cited_titles.py), the 2023-11-02 market card (tools/showcard.py) and exclusions/2023-11-02.json. No article bodies, web, data/, cache/, other dates' feeds/cards/drafts or knowledge of events on/after 2023-11-02 were used. Publication times are the frozen feed values; day-granular placeholder stamps were judged by whether the reported event plausibly preceded 00:00 UTC, and the underlying event dates of older records were not independently re-verified. Exclusions were not edited. Hashes computed after the final edit. Nonretail edits were limited to named strings in nonretail_drafts/2023-11-02.json; notes/2023-11-02_nonretail.json was not modified."
+ "date": "2023-11-02",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "8cf4553d1b3d5b1e9e484112411a3558203dc2099cd0f61b029acdeeaedc5a21",
+ "card_sha256": "fc280fbd4779601e32283f9ca5de27b7597629e268cde322552586292211a66b",
+ "exclusions_sha256": "a8ced93a47fcee89f698b44f7af47872dcebc5ab2e1fb42d8c0395e0a29ab66a",
+ "nonretail_content_sha256": "6f0a3ee818959fadf15d135c4c722ce73bc2968b804ca5be66396f1c0b1c33e4",
+ "findings": [
+  {
+   "location": "anticipatory[2].parts[2][1] (Biden-Xi, Risk)",
+   "issue": "n1543 (PBS, stamped 2023-11-01 07:00 placeholder) reports a Taiwan defence-ministry tally of 43 planes and 7 ships; such tallies are released on Taiwan mornings, so the record may be the 2023-11-02 Taiwan-morning release published after 00:00 UTC. Timing not safely before cutoff.",
+   "severity": "major",
+   "resolution": "Stopped citing n1543. Replaced the claim with pre-cutoff own-date evidence: International Crisis Group 'Preventing War in the Taiwan Strait' [[n1501]] (2023-10-27) and NYT opinion 'No, Xi Jinping Is Not About to Attack Taiwan' [[n1512]] (2023-10-29)."
+  },
+  {
+   "location": "flows.parts[3][1] (Equity & Fund Flows)",
+   "issue": "Topic sentence 'Fund flows favour cash-like and income products over equity risk' misread n1461 ('cash cow' ETFs are equity funds, not cash-like) and asserted a flow pattern no cited headline establishes; 'a sign that speculative allocations are drifting toward crypto' (n1479, a survey) stated a flow as fact.",
+   "severity": "major",
+   "resolution": "Rewrote to 'Demand is running through packaged ETFs and bonds rather than new listings', described n1461 as 'cash cow' equity ETFs, and made the n1479 inference modal ('a hint that speculative appetite may be shifting')."
+  },
+  {
+   "location": "geo[1].parts[3][1] (EU Playbook)",
+   "issue": "Claimed Lagarde's 'I should have been bolder' [[n1403]] 'shows the hawkish reflex is still there'; the FT headline does not say what she should have been bolder about (imagined article body).",
+   "severity": "minor",
+   "resolution": "Replaced with the supported conditional: Vujcic's end to hikes holds only for now [[n1412]]; n1403 no longer cited."
+  },
+  {
+   "location": "flows.parts[2][1] (Credit Check)",
+   "issue": "Named Raising Cane's, but n0904's headline reads only 'Chicken Tender Chain Sells $500 Million of Bonds in Debut Offering'.",
+   "severity": "minor",
+   "resolution": "Changed to 'A chicken-tender chain sold $500 million of bonds in a debut offering [[n0904]]'."
+  },
+  {
+   "location": "crypto.parts[1][1] (New / Most Important)",
+   "issue": "'Coinbase launched regulated leveraged crypto futures for US traders' added 'regulated' and 'for US traders', which are not in n1090's headline.",
+   "severity": "minor",
+   "resolution": "Changed to 'leveraged crypto futures trading went live on Coinbase [[n1090]]'."
+  },
+  {
+   "location": "geo[5].parts[2][1] (PL Fiscal & Politics)",
+   "issue": "'central-bank independence is now part of the coalition debate' asserted as fact; n1662/n1663 cover Glapinski's 5 October remarks and a column, not a coalition debate.",
+   "severity": "minor",
+   "resolution": "Made modal: 'could become part of the coalition debate'."
+  },
+  {
+   "location": "underowned[1].title and parts[0][1] (Gold miners)",
+   "issue": "Title 'bullion's rally has not been owned through equities' and 'miners remain a value orphan' were unsupported ownership claims and contradicted by the card (GDX +8.49% vs gold +8.32% over 20 sessions).",
+   "severity": "minor",
+   "resolution": "Retitled 'Gold miners: the equity lever on a central-bank bid' and wrote that miners have merely kept pace with bullion rather than levering it (card-supported)."
+  },
+  {
+   "location": "underowned[0].parts[0][1], underowned[2].parts[0][1], underowned[3].parts[0][1]",
+   "issue": "Measured-ownership phrasing without evidence: 'niche sleeve in most diversified portfolios', 'still small positions', 'Defence primes are widely held'.",
+   "severity": "minor",
+   "resolution": "Rephrased to 'a niche corner of the equity market', 'small index weights', and 'Defence primes draw the headlines; the supply chain is where the bottlenecks sit' (tied to n0747)."
+  },
+  {
+   "location": "sectors[12].parts[2][1] (SOXX EPS Upside Watch); catalysts[0].parts[0][1] (AMD)",
+   "issue": "'the first credible second source to Nvidia' and 'makes AMD the first scaled alternative' stated as fact; headlines n1310/n0726 support only the revenue outlook.",
+   "severity": "minor",
+   "resolution": "Softened to 'a potential first credible second source' and 'would make AMD the first scaled alternative'."
+  },
+  {
+   "location": "geo[0].parts[2][1] (US New / Most Important)",
+   "issue": "DXY level quoted without index-point unit or source tag.",
+   "severity": "minor",
+   "resolution": "Now 'DXY at 106.88 index points rose only 0.21% (Yahoo Finance, prior close 2023-11-01)', matching the card."
+  },
+  {
+   "location": "sectors[0].parts[0][1] (XLK Narrative)",
+   "issue": "XLK price 167.18 quoted without currency.",
+   "severity": "minor",
+   "resolution": "Now '167.18 USD' per the card."
+  },
+  {
+   "location": "sectors[6].parts[2][1] (XLP EPS Upside Watch)",
+   "issue": "Filler: 'Mondelez reported third-quarter results [[n1339]]' added nothing (n1339 is an IR page title).",
+   "severity": "style",
+   "resolution": "Replaced with specific evidence: Reuters says the Unilever CEO's strategy plan failed to excite investors [[n0391]] (2023-10-26), framing share recovery as the hard part; n1339 no longer cited."
+  },
+  {
+   "location": "earnings_pattern.parts[4][1] (Playbook)",
+   "issue": "Generic closing line 'the edge lies in owning the guidance raisers and leaving the merely cheap behind'.",
+   "severity": "style",
+   "resolution": "Replaced with specific evidence: own raisers with pricing power such as Kraft Heinz [[n0957]], avoid companies trimming forward lines such as UPS after its revenue-outlook cut [[n0385]]."
+  },
+  {
+   "location": "earnings_pattern.parts[3][1] (Attention into EPS)",
+   "issue": "Run-on list with a doubled 'and'.",
+   "severity": "style",
+   "resolution": "Fixed punctuation; no change of claims."
+  },
+  {
+   "location": "all sections (timing check of previous-day stamped records)",
+   "issue": "Checked every cited record stamped 2023-11-01 07:00 against the placeholder-time caveat. US after-close reports (Qualcomm n0978, PayPal n0973, DoorDash n0921, MercadoLibre n0959, e.l.f. n0922/n1051, EA n0926, Aflac n1312, MicroStrategy n0884/n0960, Disney-Hulu n1003) fall around 20:00-21:30 UTC; Fed n2205-n2210, ADP n2150, ISM n2147 and refunding n0137/n0138 are US-daytime; Caixin n0219, Xpeng/Li Auto n0906, Moutai n1332, MUFG n1614 and Toyota n1354/n1018/n1019 are 2023-11-01 local releases. No 2023-11-02 session move is used.",
+   "severity": "info",
+   "resolution": "No change needed beyond n1543."
+  },
+  {
+   "location": "geo[4], geo[5], flows (older policy-baseline records)",
+   "issue": "n1662/n1663 (NBP, 2023-10-05), n0013 (2023-10-17), n2086 (2023-10-25), n1386 (2023-10-23), n1561/n0159 (2023-10-19) sit outside the seven-day news window.",
+   "severity": "info",
+   "resolution": "Accepted as central-bank/policy baselines within 35 days; used only for stance, not as fresh news."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Headline-only review against the 2023-11-02 frozen feed (via tools/digest.py and tools/cited_titles.py), the 2023-11-02 market card (tools/showcard.py) and exclusions/2023-11-02.json. No article bodies, web, data/, cache/, other dates' feeds/cards/drafts or knowledge of events on/after 2023-11-02 were used. Publication times are the frozen feed values; day-granular placeholder stamps were judged by whether the reported event plausibly preceded 00:00 UTC, and the underlying event dates of older records were not independently re-verified. Exclusions were not edited. Hashes computed after the final edit. Nonretail edits were limited to named strings in nonretail_drafts/2023-11-02.json; notes/2023-11-02_nonretail.json was not modified.",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "48c5068153b284a3cb77f9cfc17f720a1428e0770d9604f8d27d164fbe9f5911",
+   "new_exclusions_sha256": "a8ced93a47fcee89f698b44f7af47872dcebc5ab2e1fb42d8c0395e0a29ab66a",
+   "excluded_ids_now": [
+    "n0025",
+    "n0709",
+    "n0930",
+    "n1118",
+    "n1238",
+    "n1413",
+    "n1543",
+    "n1596",
+    "n1786",
+    "n2042",
+    "n2090"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
 }

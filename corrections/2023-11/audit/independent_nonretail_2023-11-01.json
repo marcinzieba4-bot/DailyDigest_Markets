@@ -1,0 +1,110 @@
+{
+ "date": "2023-11-01",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "9d01bcbd2e10e6a017fd43d20a6e1d64b1a58470f5e7a793acf2bc688a168678",
+ "card_sha256": "1e2fde0349192ee7f2b4c037626389263d94f10126604339739dcc4e23b7a6dc",
+ "exclusions_sha256": "3054edaaa920fa2cf9a76cafc9d4d00eee3dc6df230b707babe3bd6f94bfb59e",
+ "nonretail_content_sha256": "48f6906996678cc0430ef53d392de83ec2d516e30eb5f6329c9be7f040403139",
+ "findings": [
+  {
+   "location": "underowned[3] Exposure & Risk",
+   "issue": "Cited n0334 (Reuters, 'Rheinmetall Q3 profits jump on strong ammunition sales', stamped 2023-10-25 07:00 placeholder) as a completed Q3 result. Rheinmetall's scheduled Q3 statement normally falls in November, so this completed-result record is plausibly misdated and published after the cutoff.",
+   "severity": "major",
+   "resolution": "Removed the Rheinmetall Q3-profit claim and n0334; replaced with Reuters n0316 (military equipment for Ukraine helps fuel General Dynamics' profit, 2023-10-25) and kept only the card move for Rheinmetall (+14.00% over 20 sessions to 270.40 EUR)."
+  },
+  {
+   "location": "sector:XLY Reported",
+   "issue": "'McDonald's beat on higher prices' had no supporting headline in the paragraph; n1256 supports only the loss of low-income customers.",
+   "severity": "major",
+   "resolution": "Added Investopedia n0776 ('McDonald's Beats Profit and Sales Forecasts on Higher Prices, Larger Average Tickets', 2023-10-30) and reworded to 'McDonald's beat forecasts on higher prices'."
+  },
+  {
+   "location": "geo:PL Markets",
+   "issue": "'so for dollar-based holders the ETF route delivered the larger gain' compared EPOL (MSCI Poland, USD) with the WIG20TR tracker (PLN): both are ETFs, the indexes differ, and the implied currency effect has no headline support.",
+   "severity": "minor",
+   "resolution": "Deleted the inference; sentence now states EPOL gained 20.38% over its own 20 sessions."
+  },
+  {
+   "location": "geo:CN Fiscal, Policy & Trade",
+   "issue": "'Biden-Xi meeting at APEC next month' copied n0120's 2023-10-28 wording; on a 2023-11-01 edition 'next month' reads as December.",
+   "severity": "minor",
+   "resolution": "Changed to 'at APEC in November', which is what n0120's 'next month' meant on its publication date."
+  },
+  {
+   "location": "anticipatory[2] What Is Priced",
+   "issue": "Same 'next month' problem with the Guardian n0137 (2023-10-31). Also 'The SCMP quoted an expert': n0142's headline is an unattributed quotation, so the speaker's role is not established.",
+   "severity": "minor",
+   "resolution": "Changed to 'in November'. Reworded to 'The SCMP carried the view that differing US and Chinese objectives will limit the outcomes'."
+  },
+  {
+   "location": "geo:EU New / Most Important",
+   "issue": "'Vujcic told Bloomberg' implies an interview the n1324 headline does not establish. 'Lagarde's FT interview ... keeps the credibility debate alive' attributes content to n1315 that goes beyond its headline.",
+   "severity": "minor",
+   "resolution": "Changed to 'Vujcic said ..., Bloomberg reported'. Changed the Lagarde clause to 'adds a note of self-criticism from the top', which her quoted headline supports."
+  },
+  {
+   "location": "geo:CN Property",
+   "issue": "'Al Jazeera's reporting on unfinished homes describes the confidence channel' attributed the writer's pre-sale mechanism to the article body.",
+   "severity": "minor",
+   "resolution": "Reworded so Al Jazeera n0223 names only the subject ('Unfinished homes, the subject of Al Jazeera's report, are the confidence channel'); the mechanism stays as analysis."
+  },
+  {
+   "location": "geo:CN Markets & Flows",
+   "issue": "'a day later' between the SCMP n0187 and n0197 relied on day-granular placeholder timestamps.",
+   "severity": "minor",
+   "resolution": "Replaced with 'then'."
+  },
+  {
+   "location": "geo:JP Activity & Currency; catalysts[3] Catalyst & Thesis; earnings_pattern Attention into EPS",
+   "issue": "'Reuters expects Toyota ...' and 'the bonanza The Japan Times sees' presented preview headlines (n1520, n1218) as the outlets' own forecasts.",
+   "severity": "minor",
+   "resolution": "Reworded to 'Reuters reported Toyota is set to ride ...', 'Reuters says is set to deliver ...' and 'the $9.3 billion weak-yen bonanza The Japan Times reported'."
+  },
+  {
+   "location": "sector:SXAP Reported",
+   "issue": "n0644 is Reuters relaying manager magazin, but the draft named only Reuters as the source.",
+   "severity": "minor",
+   "resolution": "Added 'citing manager magazin'."
+  },
+  {
+   "location": "anticipatory[3] What Is Priced; Risk",
+   "issue": "'bonds slumping ... after the inflation data' had no inflation headline in the same paragraph. 'mortgage stress, already affecting 30.3% of holders' overstated Roy Morgan's 'at risk' estimate (n0077).",
+   "severity": "minor",
+   "resolution": "Cited SBS n0031 for the higher-than-expected inflation. Reworded the Risk clause to 'mortgage-stress risk, already flagged for 30.3% of mortgage holders'. The block stays in range at 144 words."
+  },
+  {
+   "location": "sector:XLB EPS Upside Watch",
+   "issue": "Filler: the opening sentence repeated the Narrative's n1544 central-bank gold claim without adding analysis.",
+   "severity": "minor",
+   "resolution": "Replaced it with a card-based miner-versus-bullion comparison (GDX -2.64% vs GLD -0.55% on the session; GDX +7.44% vs GLD +8.83% over 20 sessions). n1544 now has 3 merged uses."
+  },
+  {
+   "location": "all sections (previous-day records)",
+   "issue": "Timestamp-caveat check on every cited record stamped 2023-10-31 (and n1506, stamped 2023-10-30 but reporting the 2023-10-31 BOJ reaction).",
+   "severity": "info",
+   "resolution": "Retained: each reported event plausibly occurred before 00:00 UTC. These are US after-close results at about 20:15 UTC (n0864 AMD, n1240, n0872 Amgen), daytime US court verdicts (n1949 Tesla, n2087 realtors), European and Asian daytime releases (n1344, n1342, n1775, n1774, n1769, n0220, n0221, n1521, n1544, n1249 EnBW ad hoc guidance, n0958, n1245, n0939), previews (n2143, n0865, n1520, n1244) and the 2023-10-31 WeWork report relayed by Bisnow (n0943). No cited title shows a later vintage."
+  },
+  {
+   "location": "all sections (numbers)",
+   "issue": "Audit of card numbers, sessions, horizons and units.",
+   "severity": "info",
+   "resolution": "Every quoted level and return matches the own-date card: equity and ETF sessions 2023-10-31, crypto prior completed daily close 2023-10-31, Treasury prior close 2023-10-31 (2Y 5.07%, 10Y 4.88%, 10Y-2Y -19 bps, 20-observation steepening of +24 bps). XLRE +2.00% is the largest one-session sector-ETF move. No spot-FX levels are quoted."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "unsafe_or_doubtful_feed_ids": [
+  {
+   "id": "n0334",
+   "reason": "Completed Rheinmetall Q3-profit headline stamped 2023-10-25 with a placeholder time. The company's Q3 statement normally falls in November, so the record is plausibly misdated and published after the cutoff. It is no longer cited; exclusions/ was not edited."
+  }
+ ],
+ "verify": "python3 tools/verify.py --nonretail 2023-11-01: PASS, 0 fail, 0 warn; python3 tools/check_merged.py 2023-11-01: MERGED PASS",
+ "scope_limits": [
+  "Headline-and-card review only: claims were checked against own-date headline titles, sources and timestamps (tools/digest.py), the own-date market card (tools/showcard.py) and exclusions/2023-11-01.json; article bodies, the web, data/ and cache/ were not read.",
+  "Publication timing of placeholder-stamped records (07:00/08:00 UTC) cannot be certified; previous-day records were judged by whether the reported event plausibly occurred before 2023-11-01T00:00:00Z. A pending-schedule fact (Rheinmetall's Q3 statement normally falls in November) was used only to omit a doubtful completed-result claim, never to add content.",
+  "Process disclosure: a shared scratchpad file was overwritten mid-review by a concurrent process with the 2023-11-07 market card, and part of that later-date card output was displayed once during a ticker grep. None of those values were used; every card check was redone against the own-date 2023-11-01 card regenerated into a private directory, and all quoted values match sessions dated 2023-10-31.",
+  "The repository's retail_quality.py preflight and merge/staging tools were not run as part of this component review; the reviewer did not commit or push. A concurrent root checkpoint commit (6d10d9ab) captured the draft edits made in this review."
+ ]
+}
