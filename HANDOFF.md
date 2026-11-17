@@ -1,16 +1,18 @@
-# Part 4 Strategy Handoff
+# mapp_strategy handoff
 
-The public strategy implementation is documented in [strategies/retail_part4/README.md](strategies/retail_part4/README.md). It compares three unchanged hedge policies on three explicit report schedules, with the input freeze and an independent accounting audit carried alongside the results.
+The public strategy implementation is documented in [strategies/mapp_strategy/README.md](strategies/mapp_strategy/README.md). It compares three unchanged hedge policies on three explicit report schedules, with the input freeze and an independent accounting audit carried alongside the results.
+
+The named command entry point is `strategies/mapp_strategy/mapp_strategy.py`; the stock crosswalk is `strategies/mapp_strategy/sector_mapping.csv`. New simulation records use `strategy_id=mapp_strategy`.
 
 ## Start here
 
 | Item | Purpose |
 |---|---|
-| strategies/retail_part4/README.md | Trading rules, scope, price conventions and reproduction |
-| strategies/retail_part4/engine/run_nohedge.py | Recovered economic simulator; preserve its core accounting semantics |
-| strategies/retail_part4/engine/data.py | Completed-bar indicators, eligibility and reserved report calendar |
-| strategies/retail_part4/ci/independent_ledger.py | Independent physical-order, cash/NAV, borrow, beta and recovery verification |
-| strategies/retail_part4/ci/check_study.py | Input preflight and validation entry point |
+| strategies/mapp_strategy/README.md | Trading rules, scope, price conventions and reproduction |
+| strategies/mapp_strategy/engine/run_nohedge.py | Recovered economic simulator; preserve its core accounting semantics |
+| strategies/mapp_strategy/engine/data.py | Completed-bar indicators, eligibility and reserved report calendar |
+| strategies/mapp_strategy/ci/independent_ledger.py | Independent physical-order, cash/NAV, borrow, beta and recovery verification |
+| strategies/mapp_strategy/ci/check_study.py | Input preflight and validation entry point |
 | Input and price manifests | Pin the source editions, current price snapshot, case configuration and code used for a run |
 
 The recovered simulator file contains its historical wrapper. Use the current study adapter documented by the workflow; do not call a legacy three-book wrapper that expects an old local baseline directory.
@@ -37,7 +39,7 @@ The independent module writes detailed trade attribution locally. Console output
 
 ## Continue the work
 
-Use the exact commands in strategies/retail_part4/README.md. prepare_study.py builds the three schedules and freezes inputs without portfolio returns; run_study.py calls the unchanged simulate() only after a matching independent preflight. The CI execution flag remains off while May 2024 source coverage is unresolved. Do not bypass that missing-source gate.
+Use the exact commands in strategies/mapp_strategy/README.md. prepare_study.py builds the three schedules and freezes inputs without portfolio returns; run_study.py calls the unchanged simulate() only after a matching independent preflight. The GitHub workflow runs code checks only. Full historical execution remains a separate, explicit local command and still requires complete input coverage and a matching independent preflight.
 
 Start with the README’s reproduction section, then check the matching input freeze and preflight receipt. Do not claim a fresh adjusted-price replay is byte-identical to an old price vintage. Do not describe reconstructed report dates as verified historical publication times or the additional history as untouched live validation.
 

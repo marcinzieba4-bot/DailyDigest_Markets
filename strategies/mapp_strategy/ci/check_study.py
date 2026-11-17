@@ -25,7 +25,7 @@ EXPECTED_MAPPERS = {
     "map_retail.py":"7ba29285967df019e609050edc0806ee87de84764f5ee3efa7a38f6492167f7f",
     "map_retail_etf.py":"887c0f530bb667a08b421b088cfa0670b05c882fefaf613facf49ee30ca06674",
 }
-CASE_STARTS = {"november_continuous":"2023-11-01","september_current":"2024-09-01","september_recorded_fixture":"2024-09-01"}
+CASE_NAMES = {"november_continuous","september_current","september_recorded_fixture"}
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -62,6 +62,33 @@ def same(a,b):
     else:
         assert a==b, (a,b)
 
+def source_calendar(root):
+    """Strict weekdays plus explicitly approved, inventoried weekend reports."""
+    protocol=load(root/"protocol.json")
+    calendar=protocol["source_calendar"]
+    start,end=calendar["start"],calendar["end"]
+    assert dt.date.fromisoformat(start).isoformat()==start
+    assert dt.date.fromisoformat(end).isoformat()==end and start<=end
+    extras=calendar.get("extra_dates",[])
+    assert isinstance(extras,list) and extras==sorted(set(extras))
+    assert all(dt.date.fromisoformat(d).isoformat()==d and start<=d<=end
+               and dt.date.fromisoformat(d).weekday()>=5 for d in extras)
+    weekdays=[];day=dt.date.fromisoformat(start)
+    while day<=dt.date.fromisoformat(end):
+        if day.weekday()<5:weekdays.append(day.isoformat())
+        day+=dt.timedelta(days=1)
+    if extras:
+        inventory=calendar["public_inventory"]
+        assert all(isinstance(inventory.get(k),str) and inventory[k]
+                   for k in ["repository_full_name","path","blob_sha"])
+        assert len(inventory["blob_sha"])==40
+    expected=sorted(weekdays+extras)
+    config=protocol["case_config"]
+    assert set(config)==CASE_NAMES
+    assert {c["end"] for c in config.values()}=={end}
+    assert min(c["source_min"] for c in config.values())==start
+    return calendar,weekdays,expected
+
 def code_and_freeze(root):
     frozen=load(root/"research_freeze.json")
     assert frozen["cases"] in (6,9)
@@ -79,18 +106,23 @@ def code_and_freeze(root):
         assert any(str(p.relative_to(root)) in files for p in candidates), name+" missing from freeze"
         checks[name]=wanted
     config=frozen["case_config"]
+    calendar,_,_=source_calendar(root)
+    protocol=load(root/"protocol.json")
+    assert config==protocol["case_config"] and frozen["cases"]==protocol["cases"]
+    assert set(frozen["policies"])==set(protocol["policies"])
     assert isinstance(config,dict)
     assert set(config) in ({"november_continuous","september_current"},{"november_continuous","september_current","september_recorded_fixture"})
     assert frozen["cases"]==3*len(config)
     assert set(frozen.get("policies",POLICIES))==set(POLICIES)
     assert "protocol.json" in files
     for case,c in config.items():
-        assert c["start"]==CASE_STARTS[case] and c["end"]=="2026-10-30"
+        assert calendar["start"]<=c["start"]<=c["end"]==calendar["end"]
         assert c["prepared_path"]=="inputs/main_"+case+"_prepared.json"
         assert c["prepared_path"] in files
-        assert c["source_min"]==CASE_STARTS[case]
+        assert c["source_min"]==c["start"]
     assert "prices.csv" in files and "market_manifest.json" in files
     assert "market/fetch_prices.py" in files
+    assert "market/fetch_campaign.json" in files
     assert "source/canonical_html_manifest.json" in files
     assert "inputs/archival_replay_etf_items.csv" in files
     if "september_recorded_fixture" in config:
@@ -100,6 +132,8 @@ def code_and_freeze(root):
     return frozen,checks
 
 def prices_and_metadata(root):
+    calendar,_,_=source_calendar(root)
+    study_start,study_end=calendar["start"],calendar["end"]
     rows=read(root/"prices.csv")
     assert rows and set(rows[0])=={"symbol","session_date","open","close","adjusted_open","adjclose","volume"}
     prices={}
@@ -113,20 +147,31 @@ def prices_and_metadata(root):
         prices[key]=values
     manifest=load(root/"market_manifest.json")
     assert manifest["output_sha256"]==digest(root/"prices.csv")
+    assert manifest["requested_end"]==study_end and manifest["requested_start"]<study_start
+    campaign=load(root/"market/fetch_campaign.json")
+    assert campaign["requested_start"]==manifest["requested_start"] and campaign["requested_end"]==study_end
+    downloads={r["symbol"]:r for r in campaign["downloads"]}
+    assert len(downloads)==len(campaign["downloads"])==len(SYMBOLS) and set(downloads)==set(SYMBOLS)
     meta={r["symbol"]:r for r in manifest["series"]}
     assert set(meta)==set(SYMBOLS)
     days=sorted(d for s,d in prices if s=="SPY")
-    assert days and days[-1]=="2026-10-30" and "2023-11-01" in days
-    assert sum(d<"2023-11-01" for d in days)>=41
+    assert days and days[-1]==study_end and any(d>=study_start for d in days)
+    assert sum(d<study_start for d in days)>=41
+    endpoint_close=dt.datetime.combine(dt.date.fromisoformat(days[-1]),dt.time(16),NY)
     raw_count=0
     for symbol,m in meta.items():
         assert m["status"] in ["ok","cached","success"]
         assert m["quote_type"]=="ETF" and m["currency"]=="USD"
         assert m["exchange_timezone"]=="America/New_York" and m["exchange"] in EXCHANGES
         own_days=sorted(d for s,d in prices if s==symbol)
-        assert sum(d<"2023-11-01" for d in own_days)>=41
+        assert own_days and own_days[-1]==study_end
+        assert sum(d<study_start for d in own_days)>=41
         raw=safe_path(root,m["raw_path"])
         assert raw.exists() and digest(raw)==m["raw_sha256"]
+        download=downloads[symbol]
+        assert download["raw_path"]==m["raw_path"] and download["sha256"]==m["raw_sha256"]
+        successful=[a for a in download["attempts"] if a.get("http_status")==200 and a.get("sha256")==m["raw_sha256"]]
+        assert len(successful)==1 and stamp(successful[0]["requested_utc"])>=endpoint_close, "Endpoint raw download began before final daily close"
         document=load(raw); chart=document["chart"]
         assert chart.get("error") is None and len(chart["result"])==1
         item=chart["result"][0];timestamps=item["timestamp"]
@@ -150,26 +195,22 @@ def prices_and_metadata(root):
                 assert r[key]==float(value), (symbol,day,key)
             close(r["adjusted_open"],float(op)*float(adj)/float(cl),1e-12)
         raw_count+=1
-    return prices,days,meta,{"price_rows":len(rows),"series":len(meta),"spy_sessions":len(days),"first_price_session":days[0],"last_price_session":days[-1],"prior_spy_closes_before_start":sum(d<"2023-11-01" for d in days),"independently_decoded_raw_series":raw_count}
+    return prices,days,meta,{"price_rows":len(rows),"series":len(meta),"spy_sessions":len(days),"first_price_session":days[0],"last_price_session":days[-1],"prior_spy_closes_before_start":sum(d<study_start for d in days),"independently_decoded_raw_series":raw_count,"endpoint_close":endpoint_close.isoformat(),"all_raw_requests_after_endpoint_close":True}
 
 def source_rows(root):
+    calendar,weekdays,expected=source_calendar(root)
     rows=read(root/"inputs/archival_replay_etf_items.csv")
     by_date=defaultdict(list)
     for row in rows:
-        assert "2023-11-01"<=row["report_date"]<="2026-10-30"
+        assert calendar["start"]<=row["report_date"]<=calendar["end"]
         assert int(row["slot"]) in (1,2,3,4)
         assert len(row["source_sha256"])==64 and all(c in "0123456789abcdef" for c in row["source_sha256"])
-        expected=dt.datetime.combine(dt.date.fromisoformat(row["report_date"]),dt.time(23,59,59),NY)
-        assert stamp(row["available_at"])==expected
+        expected_available=dt.datetime.combine(dt.date.fromisoformat(row["report_date"]),dt.time(23,59,59),NY)
+        assert stamp(row["available_at"])==expected_available
         targets=json.loads(row["targets"])
         assert isinstance(targets,list) and len({t["symbol"] for t in targets})==len(targets)
         assert all(t["symbol"] in SYMBOLS and int(t["direction"]) in (-1,1) for t in targets)
         by_date[row["report_date"]].append(row)
-    expected=[];day=dt.date(2023,11,1)
-    while day<=dt.date(2026,10,30):
-        if day.weekday()<5:expected.append(day.isoformat())
-        day+=dt.timedelta(days=1)
-    assert len(expected)==783
     missing=sorted(set(expected)-set(by_date))
     assert not missing, "Missing printed weekday reports"
     assert not (set(by_date)-set(expected)), "Unexpected source report dates"
@@ -177,7 +218,7 @@ def source_rows(root):
     manifest=load(manifest_path)
     assert [m["report_date"] for m in manifest]==expected
     manifests={m["report_date"]:m for m in manifest}
-    assert len(manifests)==783
+    assert len(manifests)==len(expected)
     raw_verified=0;origins=defaultdict(int);raw_paths=set();collection_cache={}
     frozen_paths=load(root/"research_freeze.json")["sha256"]
     collection_config=load(root/"protocol.json").get("source_collections",{})
@@ -267,7 +308,7 @@ def source_rows(root):
                          "source_eligible":target.get("source_eligible",True),
                          "source_eligibility_reason":target.get("source_eligibility_reason","fixed17_etf_mapping")})
         row["legs"]=legs;items.append(row)
-    return items,{"source_reports":len(by_date),"source_rows":len(rows),"expected_weekdays":len(expected),"missing_weekday_count":len(missing),"weekday_coverage_complete":not missing,"source_report_sections_verified":raw_verified,"distinct_raw_html_documents":len(raw_paths),"source_origin_report_counts":dict(origins),"canonical_manifest_sha256":digest(manifest_path),"mapped_part4_rows":sum(bool(r["legs"]) for r in items),"availability":"Assumed printed report date 23:59:59 America/New_York; current retrospective snapshots, not verified historical publication."}
+    return items,{"source_reports":len(by_date),"source_rows":len(rows),"expected_weekdays":len(weekdays),"supplementary_report_dates":calendar.get("extra_dates",[]),"expected_report_dates":len(expected),"missing_weekday_count":len(set(weekdays)-set(by_date)),"missing_report_count":len(missing),"weekday_coverage_complete":not missing,"source_report_sections_verified":raw_verified,"distinct_raw_html_documents":len(raw_paths),"source_origin_report_counts":dict(origins),"canonical_manifest_sha256":digest(manifest_path),"mapped_part4_rows":sum(bool(r["legs"]) for r in items),"availability":"Assumed printed report date 23:59:59 America/New_York; current retrospective snapshots, not verified historical publication."}
 
 def independent_preparation(prices,days,meta,items,start,end,source_min):
     index={d:i for i,d in enumerate(days)};beta_cache={}

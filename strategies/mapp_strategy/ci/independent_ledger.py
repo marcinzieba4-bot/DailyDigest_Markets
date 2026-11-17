@@ -243,7 +243,7 @@ def subperiods(rows):
 
 def case_metrics(m):
     rows=read(OUT/m['daily_path']);baskets=read(OUT/m['baskets_path'])
-    result={k:m[k] for k in ['corpus','policy','start','end','total_return','max_drawdown','baskets','completed_baskets','max_gross_exposure','average_gross_exposure','transaction_cost','borrow_cost','realized_all','realized_active','max_abs_opening_estimated_beta','short_only_beta_constrained_openings','unknown_beta_active_openings']}
+    result={k:m[k] for k in ['scope','family','corpus','policy','start','end','total_return','max_drawdown','baskets','completed_baskets','max_gross_exposure','average_gross_exposure','transaction_cost','borrow_cost','realized_all','realized_active','max_abs_opening_estimated_beta','short_only_beta_constrained_openings','unknown_beta_active_openings']}
     result.update(ending_nav_usd=100000*float(rows[-1]['nav']),initial_capital_recovery=recovery(rows,1.),maximum_drawdown_episode=drawdown_episode(rows),calendar_year_returns=subperiods(rows))
     near(result['maximum_drawdown_episode']['drawdown'],m['max_drawdown'])
     result['lowest_observed_nav_close']=point(rows,min(range(len(rows)),key=lambda i:float(rows[i]['nav'])))

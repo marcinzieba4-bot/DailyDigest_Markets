@@ -1,23 +1,23 @@
 {
-  "study": "Part 4 November 2023 historical extension",
-  "status": "Nine cases predeclared; no new portfolio outcomes; complete source coverage and independent preflight required",
+  "study": "Part 4 November 2023 to November 2026 historical extension",
+  "status": "Nine cases predeclared through 2026-11-17; complete source coverage and independent preflight required before new portfolio outcomes",
   "cases": 9,
   "case_config": {
     "november_continuous": {
       "start": "2023-11-01",
-      "end": "2026-10-30",
+      "end": "2026-11-17",
       "source_min": "2023-11-01",
       "prepared_path": "inputs/main_november_continuous_prepared.json"
     },
     "september_current": {
       "start": "2024-09-01",
-      "end": "2026-10-30",
+      "end": "2026-11-17",
       "source_min": "2024-09-01",
       "prepared_path": "inputs/main_september_current_prepared.json"
     },
     "september_recorded_fixture": {
       "start": "2024-09-01",
-      "end": "2026-10-30",
+      "end": "2026-11-17",
       "source_min": "2024-09-01",
       "prepared_path": "inputs/main_september_recorded_fixture_prepared.json"
     }
@@ -41,5 +41,25 @@
   "execution_gate": "ExplicitrootconditionalGO authorizes a guarded singlejob: fetchonce, prepare, freeze exactlocalinputs, independentstrictpreflight, then simulateonlyifallgatespass; no refetch betweenfreezeandsimulation. NooutcomesbeforethatGO.",
   "publication": "Code and simulatedtrade/orderdata authorized. Raw reportarchives/fullmarketresponsefiles notpublished ortransferred. Only approvedsimulatedresults, aggregatechecks andcharts maybe artifacts/logtransport.",
   "source_collections": {},
-  "source_collection_rule": "Generic optional supplied collection: protocol.source_collections maps actual local relative path to {sha256,start,end}; configuration and supplied bytes require their own authorization. No private collection digest or contents are embedded in code. Every connected source must match this frozen approval anchor."
+  "source_collection_rule": "Generic optional supplied collection: protocol.source_collections maps actual local relative path to {sha256,start,end}; configuration and supplied bytes require their own authorization. No private collection digest or contents are embedded in code. Every connected source must match this frozen approval anchor.",
+  "source_calendar": {
+    "start": "2023-11-01",
+    "end": "2026-11-17",
+    "extra_dates": [
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-14",
+      "2026-11-15"
+    ],
+    "public_inventory": {
+      "repository_full_name": "marcinzieba4-bot/PlayOnRetailReport",
+      "path": "data/retail_plays.json",
+      "blob_sha": "53c05fde782652973678f831f4cb430613afa486",
+      "purpose": "Date inventory only; decisions use the full original-source HTML, not the inventory's abbreviated content."
+    }
+  },
+  "strategy_id": "mapp_strategy",
+  "name": "mapp_strategy"
 }

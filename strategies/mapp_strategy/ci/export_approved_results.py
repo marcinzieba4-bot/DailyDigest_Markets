@@ -28,21 +28,21 @@ def main():
         assert not any(x in relative.parts for x in ["source","market","inputs","raw","canonical_html","benchmarks"])
         target=out/relative;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,target)
         manifest.append({"path":relative.as_posix(),"bytes":source.stat().st_size,"sha256":sha(source)})
-    receipt={"status":"passed","kind":"authorized_simulated_outputs_only","cases":9,"files":manifest,
+    receipt={"strategy_id":"mapp_strategy","status":"passed","kind":"authorized_simulated_outputs_only","cases":9,"files":manifest,
         "exclusions":"No rawHTML, marketresponses, prices.csv, fullsourceexcerpts, credentials or source archives."}
     (out/"output_manifest.json").write_text(json.dumps(receipt,indent=2)+"\n")
-    archive=root/"retail_part4_simulated_results.zip"
+    archive=root/"mapp_strategy_simulated_results.zip"
     with zipfile.ZipFile(archive,"w",zipfile.ZIP_DEFLATED,compresslevel=9) as z:
         for source in sorted(out.rglob("*")):
             if source.is_file():z.write(source,source.relative_to(out))
     with zipfile.ZipFile(archive) as z:assert z.testzip() is None
     transport={"archive":{"name":archive.name,"bytes":archive.stat().st_size,"sha256":sha(archive)},"files":manifest}
-    print("RETAIL_APPROVED_OUTPUT_MANIFEST_BEGIN");print(json.dumps(transport));print("RETAIL_APPROVED_OUTPUT_MANIFEST_END")
+    print("MAPP_STRATEGY_APPROVED_OUTPUT_MANIFEST_BEGIN");print(json.dumps(transport));print("MAPP_STRATEGY_APPROVED_OUTPUT_MANIFEST_END")
     if a.log_transport:
         selected=[("ZIP",archive),("PNG",next(iter(sorted((root/"figures").glob("*.png")))))]
         for label,path in selected:
             content=base64.b64encode(path.read_bytes()).decode("ascii");size=16000;chunks=[content[i:i+size] for i in range(0,len(content),size)]
-            print("RETAIL_"+label+"_BASE64_BEGIN "+json.dumps({"name":path.name,"bytes":path.stat().st_size,"sha256":sha(path),"chunks":len(chunks)}))
-            for i,chunk in enumerate(chunks):print("RETAIL_"+label+"_CHUNK "+str(i+1)+"/"+str(len(chunks))+" "+chunk)
-            print("RETAIL_"+label+"_BASE64_END")
+            print("MAPP_STRATEGY_"+label+"_BASE64_BEGIN "+json.dumps({"name":path.name,"bytes":path.stat().st_size,"sha256":sha(path),"chunks":len(chunks)}))
+            for i,chunk in enumerate(chunks):print("MAPP_STRATEGY_"+label+"_CHUNK "+str(i+1)+"/"+str(len(chunks))+" "+chunk)
+            print("MAPP_STRATEGY_"+label+"_BASE64_END")
 if __name__=="__main__":main()

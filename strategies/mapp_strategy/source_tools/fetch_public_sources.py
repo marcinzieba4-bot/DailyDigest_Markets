@@ -30,6 +30,13 @@ def weekdays(start,end):
         if d.weekday()<5: result.append(d.isoformat())
         d+=dt.timedelta(days=1)
     return result
+def report_dates(start,end,extra_dates=None):
+    extras=list(extra_dates or [])
+    assert len(extras)==len(set(extras)), "Duplicate supplemental report dates"
+    for day in extras:
+        assert dt.date.fromisoformat(day).isoformat()==day and start<=day<=end
+        assert dt.date.fromisoformat(day).weekday()>=5, "Supplemental dates must be non-weekday report dates"
+    return sorted(set(weekdays(start,end))|set(extras))
 def iso_http(s):
     if not s: return ""
     parsed=email.utils.parsedate_to_datetime(s)
@@ -152,12 +159,12 @@ def html_items(meta,root,map_item):
         mapped=map_item(row); assert mapped["mapping_status"]=="unmapped" and mapped["targets"]=="[]"
         rows.append({**row,**mapped})
     return rows
-def run(root,start,end,url_template,workers,extract_only,collection=None):
+def run(root,start,end,url_template,workers,extract_only,collection=None,extra_dates=None):
     source=root/"source"; source.mkdir(parents=True,exist_ok=True)
-    expected=weekdays(start,end)
+    expected=report_dates(start,end,extra_dates)
     if extract_only:
         metas=json.loads((source/"canonical_html_manifest.json").read_text())
-        assert [m["report_date"] for m in metas]==expected,"manifest must exactly cover selected weekday dates"
+        assert [m["report_date"] for m in metas]==expected,"manifest must exactly cover the configured report calendar"
     else:
         supplements=collection_module().manifest_records(root,*collection) if collection else []
         supplied_dates={r["report_date"] for r in supplements}
@@ -170,10 +177,11 @@ def run(root,start,end,url_template,workers,extract_only,collection=None):
         fetched=[r for r in results if "failure" not in r]
         metas=sorted(fetched+supplements,key=lambda r:r["report_date"])
         receipt={"status":"passed" if not failures else "failed","source_only_no_market_or_portfolio_outcomes":True,
-            "fetched_utc":utcnow(),"start":start,"end":end,"expected_weekday_reports":len(expected),
+            "fetched_utc":utcnow(),"start":start,"end":end,"expected_report_dates":len(expected),
+            "expected_weekday_reports":len(weekdays(start,end)),"supplemental_report_dates":sorted(extra_dates or []),
             "fetched_reports":len(fetched),"connected_collection_reports":len(supplements),"resolved_reports":len(metas),
             "failures":sorted(failures,key=lambda r:r["report_date"]),
-            "inventory_scope":"Expected weekday date enumeration; anonymous dated URLs plus an explicitly configured collection; no authenticated S3 listing.",
+            "inventory_scope":"All weekdays plus explicitly configured non-weekday report dates; anonymous dated URLs plus an explicitly configured collection; no authenticated S3 listing.",
             "snapshot_scope":"Current public HTML and configured supplied collection bytes. Exact preceding frozen source editions are not claimed preserved."}
         dump(source/"fetch_receipt.json",receipt)
         dump(source/"canonical_html_manifest.json",metas)
@@ -204,7 +212,8 @@ def run(root,start,end,url_template,workers,extract_only,collection=None):
         "window":[start,end],"replay_reports":len(metas),"replay_rows":len(rows),
         "first_report_date":metas[0]["report_date"],"last_report_date":metas[-1]["report_date"],
         "all_expected_weekday_urls_fetched":all(m.get("source_kind","canonical_html")=="canonical_html" for m in metas),
-        "all_expected_report_dates_resolved":True,"missing_weekdays":[],"extra_dates":[],
+        "all_expected_report_dates_resolved":True,"expected_report_dates":len(expected),
+        "missing_weekdays":[],"unconfigured_extra_dates":[],"supplemental_report_dates":sorted(extra_dates or []),
         "source_origin_counts":dict(Counter(m.get("source_kind","canonical_html") for m in metas)),
         "reports_by_month":dict(Counter(m["report_date"][:7] for m in metas)),
         "observed_card_count_distribution":dict(Counter(r["observed_topic_count"] for r in rows if r["slot"]=="1")),
@@ -227,9 +236,10 @@ def run(root,start,end,url_template,workers,extract_only,collection=None):
     print(json.dumps(summary,indent=2))
 if __name__=="__main__":
     p=argparse.ArgumentParser()
-    p.add_argument("--start",default="2023-11-01"); p.add_argument("--end",default="2026-10-30")
+    p.add_argument("--start",default="2023-11-01"); p.add_argument("--end",default="2026-11-17")
     p.add_argument("--url-template",default=DEFAULT_URL); p.add_argument("--workers",type=int,default=8)
     p.add_argument("--root",type=Path,default=ROOT); p.add_argument("--extract-only",action="store_true")
+    p.add_argument("--extra-date",action="append",default=[],help="Explicit non-weekday report date; repeat for each published supplemental report")
     p.add_argument("--collection-file",type=Path)
     p.add_argument("--collection-start");p.add_argument("--collection-end");p.add_argument("--collection-sha256")
     args=p.parse_args()
@@ -237,4 +247,4 @@ if __name__=="__main__":
     supplied=[args.collection_file,args.collection_start,args.collection_end,args.collection_sha256]
     assert not any(x is not None for x in supplied) or all(x is not None for x in supplied),"Supply all collection arguments together"
     collection=tuple(supplied) if args.collection_file is not None else None
-    run(args.root,args.start,args.end,args.url_template,args.workers,args.extract_only,collection)
+    run(args.root,args.start,args.end,args.url_template,args.workers,args.extract_only,collection,args.extra_date)

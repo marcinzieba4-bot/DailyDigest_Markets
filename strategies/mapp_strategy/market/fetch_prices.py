@@ -2,7 +2,8 @@
 
 Standard-library only. Run from the study folder or use --root.
 Network fetch:
-    python market/fetch_prices.py --root . --start 2023-01-01 --end 2026-10-30
+    python market/fetch_prices.py --root . --start 2023-01-01
+    # End defaults to the common protocol.case_config end; --end can override explicitly.
 Offline deterministic re-decode:
     python market/fetch_prices.py --root . --decode-only
 No portfolio returns or entry/exit decisions are calculated here.
@@ -36,7 +37,6 @@ ALLOWED_EXCHANGES = {
     "NYSEArca", "NasdaqGM", "NasdaqGS", "NasdaqCM",
 }
 DEFAULT_START = "2023-01-01"
-DEFAULT_END = "2026-10-30"
 FIRST_RESEARCH_DAY = "2023-11-01"
 
 
@@ -348,11 +348,25 @@ def compare_prior_prices(current_path: Path, prior_path: Path) -> dict:
     }
 
 
+def configured_end(root: Path, explicit: str | None) -> str:
+    """Use an explicit end or the protocol's one common end; never the wall clock."""
+    if explicit is not None:
+        return dt.date.fromisoformat(explicit).isoformat()
+    protocol = json.loads((root / "protocol.json").read_text(encoding="utf-8"))
+    cases = protocol.get("case_config")
+    if not isinstance(cases, dict) or not cases:
+        raise ValueError("Supply --end or a nonempty protocol.case_config")
+    ends = {dt.date.fromisoformat(case["end"]).isoformat() for case in cases.values()}
+    if len(ends) != 1:
+        raise ValueError("Supply --end when protocol cases have different endpoints")
+    return next(iter(ends))
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--start", default=DEFAULT_START)
-    parser.add_argument("--end", default=DEFAULT_END)
+    parser.add_argument("--end", help="Inclusive endpoint; otherwise use the common protocol case_config end")
     parser.add_argument("--decode-only", action="store_true")
     parser.add_argument("--prior-prices", type=Path)
     args = parser.parse_args()
@@ -361,10 +375,13 @@ def main() -> None:
     record_path = root / "market/fetch_campaign.json"
     if args.decode_only:
         campaign = json.loads(record_path.read_text(encoding="utf-8"))
+        if args.end is not None and dt.date.fromisoformat(args.end).isoformat() != campaign["requested_end"]:
+            raise ValueError("--decode-only must retain the saved campaign endpoint")
     else:
+        args.end = configured_end(root, args.end)
         start_date, end_date = dt.date.fromisoformat(args.start), dt.date.fromisoformat(args.end)
-        if start_date >= dt.date.fromisoformat(FIRST_RESEARCH_DAY) or end_date != dt.date.fromisoformat(DEFAULT_END):
-            raise ValueError("Keep the approved warmup and fixed October2026 endpoint")
+        if start_date >= dt.date.fromisoformat(FIRST_RESEARCH_DAY) or end_date < dt.date.fromisoformat(FIRST_RESEARCH_DAY):
+            raise ValueError("Keep sufficient approved warmup and an endpoint on or after the research start")
         campaign = {
             "started_utc": utc_now(), "requested_start": args.start, "requested_end": args.end,
             "research_start": FIRST_RESEARCH_DAY, "symbols": SYMBOLS, "downloads": [],
