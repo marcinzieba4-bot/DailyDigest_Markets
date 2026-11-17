@@ -1,0 +1,62 @@
+{
+ "date": "2023-11-23",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "ca76b68e73aa121ae5800b19dfc8d7b84ea2c8419756d86a9bbb91e778deea60",
+ "card_sha256": "959fe76d853348be1d2f8917e59069a9f23fec2f3b96a43f334bba242bdd0f3c",
+ "exclusions_sha256": "f24d10e87a67f90658d5cc9400d78a4ca6def5dbea33d12d23e5c342c7a544cb",
+ "nonretail_content_sha256": "2bd7f91c77d00df889723d5488370a115fc3e60902a116d892b3d3abbada106a",
+ "findings": [
+  {
+   "location": "geo/AU Macro Stance (n0093)",
+   "issue": "Bullock 'homegrown' headline stamped 2023-11-22 placeholder; could have been published up to ~8 hours after the 00:00 UTC cutoff (Australian Nov 23 morning).",
+   "severity": "major",
+   "resolution": "Replaced with AFR 2023-11-21 headline n0074 (Bullock stands firm on inflation) and rewrote the follow-on sentence; n0093 no longer cited."
+  },
+  {
+   "location": "geo/CN PMIs & Activity (n0280)",
+   "issue": "Bloomberg labour-market headline stamped 2023-11-22 placeholder; Asia-hours publication could fall after cutoff.",
+   "severity": "major",
+   "resolution": "Replaced with Reuters 2023-11-08 consumer-prices headline n0196 (macro 35-day window) and adjusted the follow-on sentence; n0280 no longer cited."
+  },
+  {
+   "location": "flows Credit Check",
+   "issue": "HYG/LQD price returns were used to assert spread compression, which price changes alone do not evidence.",
+   "severity": "minor",
+   "resolution": "Reworded to credit having rallied alongside Treasuries."
+  },
+  {
+   "location": "geo/US Rates & Curve (n2096)",
+   "issue": "Gold/dollar headline was used to claim the bond rally is maturing; headline only says yields pared losses.",
+   "severity": "minor",
+   "resolution": "Reworded to the rally pausing into the holiday."
+  },
+  {
+   "location": "geo/EU Activity & Inflation",
+   "issue": "'ECB's reluctance to discuss cuts' had no supporting headline.",
+   "severity": "minor",
+   "resolution": "Tied to Lagarde premature-celebration headline n1323."
+  },
+  {
+   "location": "catalysts/Palantir Price Hurdle",
+   "issue": "Guardian GBP 330m contract figure conflicted with the Bloomberg GBP 480m ceiling cited in the same block.",
+   "severity": "minor",
+   "resolution": "Dropped the figure; refers to the NHS contract."
+  },
+  {
+   "location": "sectors/XLK Narrative and Breaking Convention",
+   "issue": "Vague 'tested it twice' filler and an unsupported claim that talent and compute stayed inside Microsoft's orbit.",
+   "severity": "minor",
+   "resolution": "Replaced with specific Nvidia-results/OpenAI-crisis framing and a supported funding-platform argument."
+  },
+  {
+   "location": "earnings_pattern/Pattern",
+   "issue": "Causal 'because positioning was already full' asserted as fact for Nvidia's drop.",
+   "severity": "minor",
+   "resolution": "Softened to 'with positioning already full'."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed against own-date feed, card and exclusions only; feed timestamps are day-granular placeholders, so Poland and Europe items stamped 2023-11-22 (e.g. n1737, n1740, n1748, n1751, n1330) were judged plausibly published on 2023-11-22 local daytime from their content; no later-date data or outside knowledge was used to admit outcomes."
+}

@@ -5,7 +5,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "f67dedc1c6b27f3613ce6af472c152ea28601b0b691436af0d81460cfbcf6f84",
  "card_sha256": "83aad342ab20301e8957e8d81fac2e3893cac35815c047cc80a0b6a4d0686333",
- "exclusions_sha256": "067625d48a9dcce8932b600108f76f29c13d524df66cc81baedfca1c86b2c58d",
+ "exclusions_sha256": "da4f67c7b3d5e4039598e295bea671dd2207824ca61b77a629f91e4ff7d23fb5",
  "nonretail_content_sha256": "c5fa7627352ff5d448acbc137f5531ba9fb9f5e7b494d2a061c84eea7b48ecaf",
  "findings": [
   {
@@ -88,5 +88,29 @@
   }
  ],
  "reviewed_validation_warnings": [],
- "scope_limits": "Reviewed only 2023-11-24 feed, card and exclusions; headline-level evidence, no article bodies; no other dates' drafts/feeds read; actual publication times of day-granular placeholder stamps cannot be verified, so n0248 (Business Times, 2023-11-23) is retained as borderline."
+ "scope_limits": "Reviewed only 2023-11-24 feed, card and exclusions; headline-level evidence, no article bodies; no other dates' drafts/feeds read; actual publication times of day-granular placeholder stamps cannot be verified, so n0248 (Business Times, 2023-11-23) is retained as borderline.",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "067625d48a9dcce8932b600108f76f29c13d524df66cc81baedfca1c86b2c58d",
+   "new_exclusions_sha256": "da4f67c7b3d5e4039598e295bea671dd2207824ca61b77a629f91e4ff7d23fb5",
+   "excluded_ids_now": [
+    "n0097",
+    "n0254",
+    "n0311",
+    "n0825",
+    "n0899",
+    "n0990",
+    "n1142",
+    "n1283",
+    "n1578",
+    "n1588",
+    "n1760",
+    "n1785"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
 }
