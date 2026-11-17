@@ -1,0 +1,32 @@
+{
+ "date": "2023-11-16",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "e9bf786410db7f5dce83e31746a9a05d5bc07a345af3b70391cb4cb47a070ee4",
+ "card_sha256": "fd8e0a9d54b1fbac5073cf1112cef9ba69054c83e9373e4be71695e110fa3246",
+ "exclusions_sha256": "207b44d0b8d1e9927fc446680e614c173d62f1eae1e5d9fe86fb951ad89f13a9",
+ "nonretail_content_sha256": "97d2479ba78fb34eac423118761e9d0d343e1d310882cf2a25537c096df645ca",
+ "findings": [
+  {
+   "location": "sectors XLK Reported/Breaking Convention; earnings_pattern Punished; catalysts Palo Alto block",
+   "issue": "Palo Alto fiscal Q1 2024 results, billings miss and Talon/Dig acquisition headlines (n0982, n0983, n0981, n0973) and the '87% rally' piece (n0922) carry a 2023-11-15 placeholder stamp but describe a quarterly report not yet released at the cutoff (hindsight trap); the whole catalyst block and two sentences presented a miss as fact.",
+   "severity": "major",
+   "resolution": "Removed all five ids. Rewrote the XLK Breaking Convention sentence, the Punished sentence (now Siemens Energy loss, n0998) and the PANW catalyst block (stance Bearish->Mixed, new title) using card prices and own-date product headlines n0669, n0670."
+  },
+  {
+   "location": "underowned[3] Attention Gap",
+   "issue": "n0847 is a rolling Federal Reserve 'Banking System Conditions' page, not a dated event; the sentence added nothing specific.",
+   "severity": "minor",
+   "resolution": "Replaced with Banking Dive's Morgan Stanley Fed-probe headline (n0338)."
+  },
+  {
+   "location": "crypto Market Context",
+   "issue": "Ether's 14.21% was written without its 20-day horizon.",
+   "severity": "minor",
+   "resolution": "Added 'over 20 days'."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only 2023-11-16 feed, card and exclusions; headline-only evidence; timestamps are day-granular placeholders so release timing was judged by event type. Other dates, data/, cache/ and the web were not read."
+}

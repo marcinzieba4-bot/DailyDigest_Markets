@@ -1,0 +1,47 @@
+{
+ "date": "2023-11-20",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "ac055550cd2778c78d11098f85a612a5f216f2d87325d326de7e68e50b9647d2",
+ "card_sha256": "ab23fe1a4955b4566ec82cbf1ba6f0ba518b275e40e0c7e5f9bdbbb7fc15a30e",
+ "exclusions_sha256": "9190e50b6303d85e64b2e2f6ffd4a0dbbc559c3958ba82700bb015c5ff372c22",
+ "retail_draft_sha256": "aa950ef39ab03e68e0a484a259da450a6dd8dc789c8361457ca8f0246d454f87",
+ "chronology_checked_against": [
+  "2023-11-01",
+  "2023-11-02",
+  "2023-11-03",
+  "2023-11-06",
+  "2023-11-07",
+  "2023-11-08",
+  "2023-11-09",
+  "2023-11-10",
+  "2023-11-13",
+  "2023-11-14",
+  "2023-11-15",
+  "2023-11-16",
+  "2023-11-17"
+ ],
+ "findings": [
+  {
+   "location": "lead/Why Retail Is Here",
+   "issue": "'Late on Friday' asserted an unevidenced time of day for the OpenAI announcement (headlines are only day-stamped).",
+   "severity": "minor",
+   "resolution": "Changed to 'On Friday'."
+  },
+  {
+   "location": "lead (MSFT repeat lead vs 2023-11-07)",
+   "issue": "Repeat lead needs new evidence: justified by n2046/n2047/n2048/n1011 (firing of Altman, published 2023-11-17, after the 11-07 DevDay story); Atlantic piece n2082 correctly not used.",
+   "severity": "info",
+   "resolution": "Accepted; all cited ids verified as pre-cutoff and supporting their sentences; no Sunday-night or later OpenAI developments present."
+  },
+  {
+   "location": "smaller trades LLY/DOGE/ARKK",
+   "issue": "Chronology: LLY (11-03 lead, 11-09 lead, 11-07 small), DOGE (11-07), ARKK (11-06 lead) are repeats; each carries new cited own-date evidence (n1020, n1142/n1146, n1929/n1908) and a distinct narrative from the other three.",
+   "severity": "info",
+   "resolution": "Accepted as secondary items; four distinct narratives; titles in 'Name / TICKER — hook' form."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only 2023-11-20 feed, card, exclusions, and earlier retail notes (listed) for chronology; headline-only checks; no social posts beyond cited headlines assumed."
+}
