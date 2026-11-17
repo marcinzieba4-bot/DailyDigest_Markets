@@ -1,6 +1,6 @@
 """Export PnL and drawdown for the earliest-start three-policy research case.
 
-All nine saved cases are reconciled from their own ledgers. Only the earliest
+All authorized saved cases are reconciled from their own ledgers. Only the earliest
 continuous three-policy group is plotted. This script never reruns a strategy.
 """
 from pathlib import Path
@@ -314,7 +314,8 @@ def main():
     parser.add_argument("--summary", type=Path)
     parser.add_argument("--main-scope")
     parser.add_argument("--main-corpus")
-    parser.add_argument("--expected-cases", type=int, default=9)
+    parser.add_argument("--expected-cases", type=int, choices=[6, 9], default=6,
+                        help="Six public-source cases by default; nine requires separately authorized fixture inputs.")
     parser.add_argument("--audit-json", type=Path)
     args = parser.parse_args()
     root = args.root.resolve()

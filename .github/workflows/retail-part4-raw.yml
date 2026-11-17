@@ -1,0 +1,44 @@
+name: Part 4 public raw inputs
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '.github/workflows/retail-part4-raw.yml'
+      - 'strategies/retail_part4/source_tools/fetch_public_sources.py'
+      - 'strategies/retail_part4/market/fetch_prices.py'
+      - 'strategies/retail_part4/ci/package_public_raw.py'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  public-raw:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    defaults:
+      run:
+        working-directory: strategies/retail_part4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install research dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Compile published source
+        run: python -m compileall -q .
+      - name: Fetch public historical report snapshot
+        run: python source_tools/fetch_public_sources.py --start 2023-11-01 --end 2026-10-30
+      - name: Fetch one public price campaign
+        run: python market/fetch_prices.py --start 2023-01-01 --end 2026-10-30
+      - name: Package only anonymous public raw inputs
+        run: python ci/package_public_raw.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: retail-part4-public-raw-${{ github.run_id }}
+          path: strategies/retail_part4/public_raw/
+          if-no-files-found: error
+          retention-days: 14
