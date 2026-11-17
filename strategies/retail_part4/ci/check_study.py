@@ -178,31 +178,63 @@ def source_rows(root):
     assert [m["report_date"] for m in manifest]==expected
     manifests={m["report_date"]:m for m in manifest}
     assert len(manifests)==783
-    raw_verified=0
+    raw_verified=0;origins=defaultdict(int);raw_paths=set();collection_cache={}
+    frozen_paths=load(root/"research_freeze.json")["sha256"]
+    collection_config=load(root/"protocol.json").get("source_collections",{})
+    assert isinstance(collection_config,dict)
     for day,group in by_date.items():
         assert len(group)==4 and {int(r["slot"]) for r in group}=={1,2,3,4}
         metadata=manifests[day]
-        assert metadata["path"]=="source/canonical_html/"+day+".html"
-        raw=safe_path(root,metadata["path"])
-        blob=raw.read_bytes();observed=hashlib.sha256(blob).hexdigest()
+        monthly=metadata.get("source_kind")=="connected_monthly_html"
+        if monthly:
+            assert metadata["source_element_id"]==day
+            assert metadata["path"] in collection_config, "Supplemental collection is not declared in frozen protocol"
+            approved=collection_config[metadata["path"]]
+            assert metadata["collection_start"]==approved["start"] and metadata["collection_end"]==approved["end"]
+            assert approved["start"]<=day<=approved["end"]
+            assert metadata["sha256"]==approved["sha256"]==frozen_paths[metadata["path"]]
+            assert not metadata.get("version_id") and not metadata.get("last_modified") and not metadata.get("public_url")
+        else:
+            assert metadata["path"]=="source/canonical_html/"+day+".html"
+            assert metadata["public_url"]=="https://d7g7nkeytae81.cloudfront.net/reports/archive/"+day+".html"
+        assert metadata["path"] in frozen_paths, "Raw source file omitted from freeze"
+        raw=safe_path(root,metadata["path"]);raw_paths.add(metadata["path"])
+        if monthly and metadata["path"] in collection_cache:
+            blob,soup,observed=collection_cache[metadata["path"]]
+        else:
+            blob=raw.read_bytes();observed=hashlib.sha256(blob).hexdigest()
+            soup=BeautifulSoup(blob,"html.parser")
+            if monthly:collection_cache[metadata["path"]]=(blob,soup,observed)
         assert observed==metadata["sha256"] and len(blob)==metadata["size"]
-        assert metadata["public_url"]=="https://d7g7nkeytae81.cloudfront.net/reports/archive/"+day+".html"
         assert all(r["source_sha256"]==observed and r["source_path"]==metadata["path"] for r in group)
         assert all(r["source_version_id"]==metadata.get("version_id","") for r in group)
         assert all(r["last_modified"]==metadata["last_modified"] for r in group)
-        soup=BeautifulSoup(blob,"html.parser")
-        markers=[h for h in soup.find_all(["h1","h2","h3","h4"]) if "What Retail Is Playing" in h.get_text()]
-        assert len(markers)==1
         cards=[]
-        for element in markers[0].find_next_siblings():
-            if element.name=="h2":break
-            headings=element.find_all(["h3","h4"])
-            if headings:
+        if monthly:
+            day_section=soup.find("section",id=day,class_="day")
+            assert day_section is not None
+            actual_cards=day_section.find_all("article",class_="trade",recursive=False)
+            assert len(actual_cards)==4
+            for card in actual_cards:
+                headings=card.find_all("h3",recursive=False)
                 assert len(headings)==1
-                paragraphs=[p.get_text(" ",strip=True) for p in element.find_all("p")]
+                paragraphs=[p.get_text(" ",strip=True) for p in card.find_all("p")]
                 assert paragraphs
                 cards.append((headings[0].get_text().strip(),"\n\n".join(paragraphs)))
-        assert 1<=len(cards)<=4
+            origins["connected_monthly_html"]+=1
+        else:
+            markers=[h for h in soup.find_all(["h1","h2","h3","h4"]) if "What Retail Is Playing" in h.get_text()]
+            assert len(markers)==1
+            for element in markers[0].find_next_siblings():
+                if element.name=="h2":break
+                headings=element.find_all(["h3","h4"])
+                if headings:
+                    assert len(headings)==1
+                    paragraphs=[p.get_text(" ",strip=True) for p in element.find_all("p")]
+                    assert paragraphs
+                    cards.append((headings[0].get_text().strip(),"\n\n".join(paragraphs)))
+            assert 1<=len(cards)<=4
+            origins["public_daily_html"]+=1
         for row in group:
             i=int(row["slot"])-1
             if i<len(cards):
@@ -212,6 +244,20 @@ def source_rows(root):
                 assert row["heading"]==row["text"]=="" and json.loads(row["targets"])==[]
                 if "positional_slot_present" in row:assert not truth(row["positional_slot_present"])
         raw_verified+=1
+    assert set(collection_cache)==set(collection_config), "Configured supplemental source was not consumed"
+    for path,(_,collection,observed) in collection_cache.items():
+        members=[m for m in manifest if m.get("source_kind")=="connected_monthly_html" and m["path"]==path]
+        assert members
+        first,last=members[0]["collection_start"],members[0]["collection_end"]
+        assert all(m["collection_start"]==first and m["collection_end"]==last and m["sha256"]==observed for m in members)
+        requested=[];day=dt.date.fromisoformat(first)
+        while day<=dt.date.fromisoformat(last):
+            if day.weekday()<5:requested.append(day.isoformat())
+            day+=dt.timedelta(days=1)
+        assert requested and all(d in expected for d in requested)
+        assert [m["report_date"] for m in members]==requested
+        actual_days=[section.get("id") for section in collection.find_all("section",class_="day")]
+        assert actual_days==requested
     items=[]
     for day in sorted(by_date):
         row=dict(next(r for r in by_date[day] if int(r["slot"])==4))
@@ -221,7 +267,7 @@ def source_rows(root):
                          "source_eligible":target.get("source_eligible",True),
                          "source_eligibility_reason":target.get("source_eligibility_reason","fixed17_etf_mapping")})
         row["legs"]=legs;items.append(row)
-    return items,{"source_reports":len(by_date),"source_rows":len(rows),"expected_weekdays":len(expected),"missing_weekday_count":len(missing),"weekday_coverage_complete":not missing,"raw_html_and_positional_bodies_verified":raw_verified,"canonical_manifest_sha256":digest(manifest_path),"mapped_part4_rows":sum(bool(r["legs"]) for r in items),"availability":"Assumed printed report date 23:59:59 America/New_York; current retrospective snapshots, not verified historical publication."}
+    return items,{"source_reports":len(by_date),"source_rows":len(rows),"expected_weekdays":len(expected),"missing_weekday_count":len(missing),"weekday_coverage_complete":not missing,"source_report_sections_verified":raw_verified,"distinct_raw_html_documents":len(raw_paths),"source_origin_report_counts":dict(origins),"canonical_manifest_sha256":digest(manifest_path),"mapped_part4_rows":sum(bool(r["legs"]) for r in items),"availability":"Assumed printed report date 23:59:59 America/New_York; current retrospective snapshots, not verified historical publication."}
 
 def independent_preparation(prices,days,meta,items,start,end,source_min):
     index={d:i for i,d in enumerate(days)};beta_cache={}

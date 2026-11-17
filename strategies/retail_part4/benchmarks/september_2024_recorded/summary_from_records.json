@@ -1,0 +1,42 @@
+{
+  "status": "published_reference_records_only",
+  "recorded_account_window": {
+    "start": "2024-09-03",
+    "end": "2026-10-30"
+  },
+  "initial_capital_usd": 100000,
+  "method": "Sum the 25 recorded closed-basket net PnL amounts per separately compounded account. These are historical saved results, not the new November 2023 replay and not a repricing on today's price snapshot.",
+  "trade_csv_sha256": "59fc98f15cfab32b8918b644e7e48db5dc30855821c24c86ceb4527f8a2fcc96",
+  "cases": [
+    {
+      "policy": "unhedged25",
+      "baskets": 25,
+      "first_entry": "2024-09-03",
+      "last_exit": "2026-10-12",
+      "total_return": 0.16569740585218126,
+      "ending_nav_usd": 116569.74058521811,
+      "transaction_cost_usd": 1335.3584342344664,
+      "borrow_cost_usd": 0
+    },
+    {
+      "policy": "dollar_short25",
+      "baskets": 25,
+      "first_entry": "2024-09-03",
+      "last_exit": "2026-10-12",
+      "total_return": 0.08885930749937904,
+      "ending_nav_usd": 108885.9307499379,
+      "transaction_cost_usd": 2559.2238401952986,
+      "borrow_cost_usd": 756.4174333640631
+    },
+    {
+      "policy": "beta40_daily_short25",
+      "baskets": 25,
+      "first_entry": "2024-09-03",
+      "last_exit": "2026-10-12",
+      "total_return": 0.06345094349424897,
+      "ending_nav_usd": 106345.0943494249,
+      "transaction_cost_usd": 2512.903537011732,
+      "borrow_cost_usd": 651.1945188066509
+    }
+  ]
+}
