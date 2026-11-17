@@ -1,0 +1,57 @@
+{
+  "ticker": "XLRE",
+  "path": "audit/market_raw/XLRE.json.gz",
+  "original_network_response_sha256": "bc28b1dd612e4205c742b5d31784edbfb52d5ba369e49e4b345e304643dcf6fd",
+  "retained_uncompressed_sha256": "b194e10483cb5d94f2d901fe2e139622eaf48404eb032926f8e7826315e0b16a",
+  "retained_gzip_sha256": "6cbe5fc43b080f320e36448663cac9ff19897f723425a15b06b1f8832d2cd6a5",
+  "removed_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+  ],
+  "historical_timestamp_and_close_arrays_unchanged": true,
+  "retained_historical_pairs_unchanged": true,
+  "removed_out_of_scope_observation_count": 0,
+  "removed_out_of_scope_observations": [],
+  "removed_out_of_scope_split_events": [],
+  "discarded_indicator_fields": [
+    "adjclose"
+  ],
+  "discarded_quote_fields": [
+    "high",
+    "low",
+    "open",
+    "volume"
+  ],
+  "first_retained_inclusive": "2023-09-01",
+  "final_retained_inclusive": "2023-11-29",
+  "retained_last_exchange_local_date": "2023-11-29",
+  "retained_meta_fields": [
+    "currency",
+    "exchangeName",
+    "exchangeTimezoneName",
+    "firstTradeDate",
+    "fullExchangeName",
+    "instrumentType",
+    "symbol",
+    "timezone"
+  ]
+}

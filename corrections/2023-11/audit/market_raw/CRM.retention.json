@@ -1,0 +1,57 @@
+{
+  "ticker": "CRM",
+  "path": "audit/market_raw/CRM.json.gz",
+  "original_network_response_sha256": "7eec465cd5f81a993f04a98794000af49f626617424dccfd90d789edb843a18e",
+  "retained_uncompressed_sha256": "9b518a56055c2a2352f5e9a48616b78e6297ecaa388bf4da52e5ed2f1b0a3ca3",
+  "retained_gzip_sha256": "104e489008cc3236925c7cc1ff8d392c5df70394455468e6569301e5b37ec281",
+  "removed_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+  ],
+  "historical_timestamp_and_close_arrays_unchanged": true,
+  "retained_historical_pairs_unchanged": true,
+  "removed_out_of_scope_observation_count": 0,
+  "removed_out_of_scope_observations": [],
+  "removed_out_of_scope_split_events": [],
+  "discarded_indicator_fields": [
+    "adjclose"
+  ],
+  "discarded_quote_fields": [
+    "high",
+    "low",
+    "open",
+    "volume"
+  ],
+  "first_retained_inclusive": "2023-09-01",
+  "final_retained_inclusive": "2023-11-29",
+  "retained_last_exchange_local_date": "2023-11-29",
+  "retained_meta_fields": [
+    "currency",
+    "exchangeName",
+    "exchangeTimezoneName",
+    "firstTradeDate",
+    "fullExchangeName",
+    "instrumentType",
+    "symbol",
+    "timezone"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "ticker": "EWJ",
+  "path": "audit/market_raw/EWJ.json.gz",
+  "original_network_response_sha256": "48787db43dd5fe66f083941fcaedb7ba871bd9504f36d028cebeb1023f09c61a",
+  "retained_uncompressed_sha256": "477dea47a4792508d1b9d8fb56f760dfe2f1464284998b88cd51126492026640",
+  "retained_gzip_sha256": "cf8e610e2082755e4aaf46fd314df9857baf741bcfd77b125cf564f370e5c4ec",
+  "removed_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+  ],
+  "historical_timestamp_and_close_arrays_unchanged": true,
+  "retained_historical_pairs_unchanged": true,
+  "removed_out_of_scope_observation_count": 0,
+  "removed_out_of_scope_observations": [],
+  "removed_out_of_scope_split_events": [],
+  "discarded_indicator_fields": [
+    "adjclose"
+  ],
+  "discarded_quote_fields": [
+    "high",
+    "low",
+    "open",
+    "volume"
+  ],
+  "first_retained_inclusive": "2023-09-01",
+  "final_retained_inclusive": "2023-11-29",
+  "retained_last_exchange_local_date": "2023-11-29",
+  "retained_meta_fields": [
+    "currency",
+    "exchangeName",
+    "exchangeTimezoneName",
+    "firstTradeDate",
+    "fullExchangeName",
+    "instrumentType",
+    "symbol",
+    "timezone"
+  ]
+}

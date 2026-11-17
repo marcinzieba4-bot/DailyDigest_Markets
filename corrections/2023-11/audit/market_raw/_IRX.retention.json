@@ -1,0 +1,57 @@
+{
+  "ticker": "^IRX",
+  "path": "audit/market_raw/_IRX.json.gz",
+  "original_network_response_sha256": "aad8cd002403a93cb2af9f998a9b01a0d2157c12b2076fe0e285ee30c5627759",
+  "retained_uncompressed_sha256": "885d58c54fdba5ea73c4f3d3249bd228a97d8ec646fd2e57778ad71aa883ad52",
+  "retained_gzip_sha256": "0f83862c866f1f24644ca16b5d1f62c1961da5cb7198228dd8e8a1bb560849a1",
+  "removed_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+  ],
+  "historical_timestamp_and_close_arrays_unchanged": true,
+  "retained_historical_pairs_unchanged": true,
+  "removed_out_of_scope_observation_count": 0,
+  "removed_out_of_scope_observations": [],
+  "removed_out_of_scope_split_events": [],
+  "discarded_indicator_fields": [
+    "adjclose"
+  ],
+  "discarded_quote_fields": [
+    "high",
+    "low",
+    "open",
+    "volume"
+  ],
+  "first_retained_inclusive": "2023-09-01",
+  "final_retained_inclusive": "2023-11-29",
+  "retained_last_exchange_local_date": "2023-11-29",
+  "retained_meta_fields": [
+    "currency",
+    "exchangeName",
+    "exchangeTimezoneName",
+    "firstTradeDate",
+    "fullExchangeName",
+    "instrumentType",
+    "symbol",
+    "timezone"
+  ]
+}

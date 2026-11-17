@@ -1,0 +1,57 @@
+{
+  "ticker": "DNP.WA",
+  "path": "audit/market_raw/DNP_WA.json.gz",
+  "original_network_response_sha256": "c295dfd7771284899228eb4edae4426c3ed3a1ce05e87a8454cc72015e5ba159",
+  "retained_uncompressed_sha256": "608f2ef7af1db509e632525ef10753845b11f280d6f4d92e47c1054e6212dc26",
+  "retained_gzip_sha256": "eeb14a2a37472615897557747b4cf86252bd5203b8c04113147cb7984acd83f9",
+  "removed_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+  ],
+  "historical_timestamp_and_close_arrays_unchanged": true,
+  "retained_historical_pairs_unchanged": true,
+  "removed_out_of_scope_observation_count": 0,
+  "removed_out_of_scope_observations": [],
+  "removed_out_of_scope_split_events": [],
+  "discarded_indicator_fields": [
+    "adjclose"
+  ],
+  "discarded_quote_fields": [
+    "high",
+    "low",
+    "open",
+    "volume"
+  ],
+  "first_retained_inclusive": "2023-09-01",
+  "final_retained_inclusive": "2023-11-29",
+  "retained_last_exchange_local_date": "2023-11-29",
+  "retained_meta_fields": [
+    "currency",
+    "exchangeName",
+    "exchangeTimezoneName",
+    "firstTradeDate",
+    "fullExchangeName",
+    "instrumentType",
+    "symbol",
+    "timezone"
+  ]
+}

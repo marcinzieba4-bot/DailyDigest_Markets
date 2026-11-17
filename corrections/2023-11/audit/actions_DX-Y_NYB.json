@@ -1,0 +1,104 @@
+{
+ "ticker": "DX-Y.NYB",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1693526400&period2=1701302400&interval=1d&events=div,splits",
+   "sha256": "3cb2b76217e7612fca637a11ef7249931d89ca915048d14cdb89fee32a159b00",
+   "fetched_at_utc": "2026-11-17T12:38:01.159671+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1701302400&period2=1794919080&interval=1d&events=div,splits",
+   "sha256": "131a5b7975a42ea4add3dd8d852e883c9bd25748f4e4923d18e6ded6cbeb5416",
+   "fetched_at_utc": "2026-11-17T12:38:01.383289+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1693526400&period2=1701302400&interval=1d&events=div,splits",
+    "sha256": "3cb2b76217e7612fca637a11ef7249931d89ca915048d14cdb89fee32a159b00",
+    "fetched_at_utc": "2026-11-17T12:38:01.159671+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "DX-Y.NYB",
+    "exchangeName": "NYB",
+    "fullExchangeName": "ICE Futures",
+    "instrumentType": "INDEX",
+    "firstTradeDate": 31813200,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 76,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1701302400&period2=1794919080&interval=1d&events=div,splits",
+    "sha256": "131a5b7975a42ea4add3dd8d852e883c9bd25748f4e4923d18e6ded6cbeb5416",
+    "fetched_at_utc": "2026-11-17T12:38:01.383289+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "DX-Y.NYB",
+    "exchangeName": "NYB",
+    "fullExchangeName": "ICE Futures",
+    "instrumentType": "INDEX",
+    "firstTradeDate": 31813200,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 903,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

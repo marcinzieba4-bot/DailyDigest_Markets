@@ -1,0 +1,306 @@
+{
+ "dispositions": [
+  {
+   "title": "GDP surged 4.9% in the third quarter, defying the Fed's rate hikes - CBS News",
+   "guard": "FOMC November decision",
+   "disposition": "not_this_event",
+   "reason": "US Q3 advance GDP released Oct 26; mentions Fed hikes but reports no FOMC November decision.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Toyota Sets New Records for Global Output, Sales - Investopedia",
+   "guard": "Toyota quarterly result",
+   "disposition": "not_this_event",
+   "reason": "Monthly September output/sales statistics, not the November 1 quarterly result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Toyota set to ride robust demand, weak yen to bumper profit - Reuters",
+   "guard": "Toyota quarterly result",
+   "disposition": "preview",
+   "reason": "Forward-looking preview of the pending quarterly result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Tokyo Disney Resort Reports Record Profit & More Aggressive Investment Plans - Disney Tourist Blog",
+   "guard": "Walt Disney quarterly result",
+   "disposition": "not_this_event",
+   "reason": "Oriental Land/Tokyo Disney Resort, not Walt Disney Co.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Watch The 1,234bhp Lucid Air Sapphire Run a Sub-9 Second Quarter Mile - Car Throttle",
+   "guard": "Lucid quarterly result",
+   "disposition": "not_this_event",
+   "reason": "Car performance video; no financial result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Black Friday 2023 deals: Early sales rolling out at Walmart, Target and more stores - Axios",
+   "guard": "Target quarterly result",
+   "disposition": "not_this_event",
+   "reason": "Holiday promotions article, not Target quarterly result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Kraft Heinz lifts annual profit target again on margin boost from higher prices - Reuters",
+   "guard": "Target quarterly result",
+   "disposition": "not_this_event",
+   "reason": "Kraft Heinz result (Nov 1 before US open); word target is a profit target, not Target Corp.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Once valued at $47 billion, coworking-space provider WeWork nears bankruptcy - Ars Technica",
+   "guard": "WeWork bankruptcy filing",
+   "disposition": "preview",
+   "reason": "Reports of a pending/possible filing and share-price reaction before the actual Chapter 11 filing; no completed filing asserted.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "WeWork Shares Fall to All-Time Low Following Reports of a Possible Bankruptcy Filing - Investopedia",
+   "guard": "WeWork bankruptcy filing",
+   "disposition": "preview",
+   "reason": "Reports of a pending/possible filing and share-price reaction before the actual Chapter 11 filing; no completed filing asserted.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "WeWork Stock Plummets 50% After Impending Bankruptcy Reports - Forbes",
+   "guard": "WeWork bankruptcy filing",
+   "disposition": "preview",
+   "reason": "Reports of a pending/possible filing and share-price reaction before the actual Chapter 11 filing; no completed filing asserted.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "WeWork shares sink to record low on reports bankruptcy filing imminent - Reuters",
+   "guard": "WeWork bankruptcy filing",
+   "disposition": "preview",
+   "reason": "Reports of a pending/possible filing and share-price reaction before the actual Chapter 11 filing; no completed filing asserted.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "WeWork stock price falls to an all-time low after bankruptcy report - Fast Company",
+   "guard": "WeWork bankruptcy filing",
+   "disposition": "preview",
+   "reason": "Reports of a pending/possible filing and share-price reaction before the actual Chapter 11 filing; no completed filing asserted.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "WeWork: Shares plunge after reports say firm is filing for bankruptcy - BBC",
+   "guard": "WeWork bankruptcy filing",
+   "disposition": "preview",
+   "reason": "Reports of a pending/possible filing and share-price reaction before the actual Chapter 11 filing; no completed filing asserted.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "WeWork’s shares plunge 37% on bankruptcy reports | CNN Business - CNN",
+   "guard": "WeWork bankruptcy filing",
+   "disposition": "preview",
+   "reason": "Reports of a pending/possible filing and share-price reaction before the actual Chapter 11 filing; no completed filing asserted.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "WeWork stock halted as rumors swirl about bankruptcy preparations for the office sharing company - EL PAÍS English",
+   "guard": "WeWork bankruptcy filing",
+   "disposition": "preview",
+   "reason": "Reports of a pending/possible filing and share-price reaction before the actual Chapter 11 filing; no completed filing asserted.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Private sector payrolls rose 113,000 in October, less than expected, ADP says - CNBC",
+   "guard": "US October payrolls",
+   "disposition": "not_this_event",
+   "reason": "ADP private payrolls released Nov 1 12:15 UTC; not the BLS October employment report.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "NY Attorney General announces $328M in settlement funds from Uber and Lyft for 'stealing earnings' - ABC7 Bay Area",
+   "guard": "Uber quarterly result",
+   "disposition": "not_this_event",
+   "reason": "Driver-pay settlement; the word earnings refers to driver earnings, not Uber quarterly results.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Uber and Lyft to pay $328M to settle accusations of ‘stealing earnings’ from NY drivers - New York Post",
+   "guard": "Uber quarterly result",
+   "disposition": "not_this_event",
+   "reason": "Driver-pay settlement; the word earnings refers to driver earnings, not Uber quarterly results.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Uber, Lyft to pay $328M settlement to drivers for 'taking earnings' - Scripps News",
+   "guard": "Uber quarterly result",
+   "disposition": "not_this_event",
+   "reason": "Driver-pay settlement; the word earnings refers to driver earnings, not Uber quarterly results.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "5 candidates qualify for third GOP presidential primary debate - Politico",
+   "guard": "Republican third presidential debate",
+   "disposition": "preview",
+   "reason": "Qualification list ahead of the November 8 debate; no debate outcome.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Here’s Who Qualified for the Third Republican Presidential Debate (Published 2023) - The New York Times",
+   "guard": "Republican third presidential debate",
+   "disposition": "preview",
+   "reason": "Qualification list ahead of the November 8 debate; no debate outcome.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Disney hires veteran PepsiCo finance chief Hugh Johnston as new CFO - CNBC",
+   "guard": "Walt Disney quarterly result",
+   "disposition": "not_this_event",
+   "reason": "CFO appointment announced Nov 6; not the November 8 quarterly result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Disney taps PepsiCo veteran Johnston as CFO - Reuters",
+   "guard": "Walt Disney quarterly result",
+   "disposition": "not_this_event",
+   "reason": "CFO appointment announced Nov 6; not the November 8 quarterly result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Disney Taps PepsiCo Veteran Hugh Johnston As CFO, A Rare Outsider In A Top Executive Role - Deadline",
+   "guard": "Walt Disney quarterly result",
+   "disposition": "not_this_event",
+   "reason": "CFO appointment announced Nov 6; not the November 8 quarterly result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Disney's new CFO Hugh Johnston 'knows how to deliver high-quality earnings,' says a Wedbush analyst - Fortune",
+   "guard": "Walt Disney quarterly result",
+   "disposition": "not_this_event",
+   "reason": "CFO appointment announced Nov 6; not the November 8 quarterly result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Earnings Double-Header: Streaming Profitability to Take Center Stage for Disney, Warner Bros. Discovery - TheWrap",
+   "guard": "Walt Disney quarterly result",
+   "disposition": "preview",
+   "reason": "Explicit preview of pending Disney/WBD results.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "SoftBank Corp. Q2 FY2023 Earnings: Making Good Progress Toward Full-year Forecast and Mid-term Management Targets with Increased Revenue and Profits - ソフトバンク",
+   "guard": "SoftBank quarterly result",
+   "disposition": "not_this_event",
+   "reason": "SoftBank Corp. (telecom subsidiary) result published Nov 8 JST afternoon; not SoftBank Group Nov 9 result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Walmart, Target earnings to offer clues on crucial holiday season - Reuters",
+   "guard": "Target quarterly result",
+   "disposition": "preview",
+   "reason": "Explicit preview of pending Walmart/Target results.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Nvidia ulepszy swój procesor. Firma chce zdominować rynek AI - pb.pl",
+   "guard": "Nvidia quarterly result",
+   "disposition": "not_this_event",
+   "reason": "Product announcement (processor upgrade), not a quarterly result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Tencent Music beats revenue estimates despite China gambling hit - Reuters",
+   "guard": "Tencent quarterly result",
+   "disposition": "not_this_event",
+   "reason": "Tencent Music Entertainment result (Nov 13), not Tencent Holdings Nov 15 result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "3 Ways to Use Data to Drive Loyalty — Just Like Formula 1 - Salesforce",
+   "guard": "Salesforce quarterly result",
+   "disposition": "not_this_event",
+   "reason": "Salesforce marketing article; no result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "CrowdStrike CEO George Kurtz on F1 sponsorship, revenue generation - CNBC",
+   "guard": "CrowdStrike quarterly result",
+   "disposition": "not_this_event",
+   "reason": "CEO interview on sponsorship; no quarterly result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "From Data to Solutions: The Deutsche Bank-Salesforce Techathon - Salesforce",
+   "guard": "Salesforce quarterly result",
+   "disposition": "not_this_event",
+   "reason": "Event article; no result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Dell Prohibits Sales of AMD Radeon RX 7900 XTX, 7900 XT, PRO W7900 & Upcoming MI300 GPUs In China - Wccftech",
+   "guard": "Dell quarterly result",
+   "disposition": "not_this_event",
+   "reason": "Export-compliance news; not Dell quarterly result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Amazon Will Offer Salesforce Apps on AWS, Allowing Easier Integration of AI Tech - Investopedia",
+   "guard": "Salesforce quarterly result",
+   "disposition": "not_this_event",
+   "reason": "Partnership announcement; not Salesforce result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Accenture Expands its Salesforce Capabilities with Acquisition of Incapsulate - Accenture",
+   "guard": "Salesforce quarterly result",
+   "disposition": "not_this_event",
+   "reason": "Acquisition by Accenture; not Salesforce result.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "More builders under scrutiny as new home sales plunge - building and construction news - API Magazine - Australian Property Investor Magazine",
+   "guard": "US October new home sales",
+   "disposition": "not_this_event",
+   "reason": "Australian Property Investor article on Australian builders; not the US Census new-home-sales release.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Proof Point: Why has U.S. consumer spending been so much more resilient than Canada’s? - RBC",
+   "guard": "US October PCE and spending",
+   "disposition": "not_this_event",
+   "reason": "RBC analysis comparing US and Canadian spending; not the October PCE release.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Rząd Morawieckiego zostanie zaprzysiężony w poniedziałek, ale budżet złoży już rząd Tuska - Gazeta Prawna",
+   "guard": "Morawiecki cabinet sworn in",
+   "disposition": "preview",
+   "reason": "Polish headline about a future swearing-in (zostanie/powoła = will be/will appoint); no completed event.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Jakie są szanse na nowy rząd Morawieckiego? \"To nie 10 procent, tylko to Ziobro procent\" - Fakty TVN",
+   "guard": "Morawiecki cabinet sworn in",
+   "disposition": "preview",
+   "reason": "Polish headline about a future swearing-in (zostanie/powoła = will be/will appoint); no completed event.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Prezydent powoła \"rząd dwutygodniowy\" - Wyborcza.pl",
+   "guard": "Morawiecki cabinet sworn in",
+   "disposition": "preview",
+   "reason": "Polish headline about a future swearing-in (zostanie/powoła = will be/will appoint); no completed event.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Earnings Double-Header: Streaming Profitability to Take Center Stage for Disney, Warner Bros. Discovery - TheWrap",
+   "guard": "Warner Bros Discovery quarterly result",
+   "disposition": "preview",
+   "reason": "Explicit preview of pending Disney/WBD results.",
+   "reviewer": "root semantic review"
+  },
+  {
+   "title": "Walmart, Target earnings to offer clues on crucial holiday season - Reuters",
+   "guard": "Walmart quarterly result",
+   "disposition": "preview",
+   "reason": "Explicit preview of pending Walmart/Target results.",
+   "reviewer": "root semantic review"
+  }
+ ],
+ "scope": "Observed guard matches independently judged not_this_event or preview by root semantic review before authoring (2026-11-17). Each disposition applies to the exact title only."
+}

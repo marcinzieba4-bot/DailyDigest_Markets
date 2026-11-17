@@ -1,0 +1,102 @@
+{
+ "ticker": "^STOXX50E",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESTOXX50E?period1=1693526400&period2=1701302400&interval=1d&events=div,splits",
+   "sha256": "b2e33c3d6e7b2507131f23a6db2e91385216c6fa52b866c649a5d07251878a05",
+   "fetched_at_utc": "2026-11-17T12:38:04.810979+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESTOXX50E?period1=1701302400&period2=1794919080&interval=1d&events=div,splits",
+   "sha256": "b4441abe4e833df439a36987edb44a6ad43330bd4136684dcc7427c606c3369e",
+   "fetched_at_utc": "2026-11-17T12:38:04.989763+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESTOXX50E?period1=1693526400&period2=1701302400&interval=1d&events=div,splits",
+    "sha256": "b2e33c3d6e7b2507131f23a6db2e91385216c6fa52b866c649a5d07251878a05",
+    "fetched_at_utc": "2026-11-17T12:38:04.810979+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": null,
+    "symbol": "^STOXX50E",
+    "exchangeName": "ZRH",
+    "fullExchangeName": "Zurich",
+    "instrumentType": "INDEX",
+    "firstTradeDate": 1175238000,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Zurich"
+   },
+   "discarded_price_observations": 64,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESTOXX50E?period1=1701302400&period2=1794919080&interval=1d&events=div,splits",
+    "sha256": "b4441abe4e833df439a36987edb44a6ad43330bd4136684dcc7427c606c3369e",
+    "fetched_at_utc": "2026-11-17T12:38:04.989763+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": null,
+    "symbol": "^STOXX50E",
+    "exchangeName": "ZRH",
+    "fullExchangeName": "Zurich",
+    "instrumentType": "INDEX",
+    "firstTradeDate": 1175238000,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Zurich"
+   },
+   "discarded_price_observations": 741,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

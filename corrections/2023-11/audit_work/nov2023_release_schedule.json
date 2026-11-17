@@ -1,0 +1,1939 @@
+{
+ "month": "2023-11",
+ "status": "pre-authoring safety screen",
+ "scope": "Safety screen only; compact historical release clocks, not writer factual evidence.",
+ "guards": [
+  {
+   "label": "CVS Health quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-01",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-02",
+   "earliest_pub_date": "2023-10-18",
+   "pattern": "^(?=.*(?:\\bCVS\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "China October Caixin manufacturing PMI",
+   "release_utc": "2023-11-01T01:45:00+00:00",
+   "calendar_release_utc_date": "2023-11-01",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-02",
+   "earliest_pub_date": "2023-10-26",
+   "pattern": "^(?=.*(?:China|Chinese|Caixin))(?=.*(?:manufactur|factory))(?=.*(?:Caixin|private survey))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.pmi.spglobal.com/Public/Release/ReleaseDates"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "DoorDash quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-01",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-02",
+   "earliest_pub_date": "2023-10-18",
+   "pattern": "^(?=.*(?:DoorDash))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "FOMC November decision",
+   "release_utc": "2023-11-01T18:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-01",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-02",
+   "earliest_pub_date": "2023-10-26",
+   "pattern": "^(?=.*(?:\\bFed\\b|FOMC|Federal Reserve|Powell))(?=.*(?:rates|rate|policy|decision|hold|pause))",
+   "kind": "policy",
+   "evidence": [
+    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "PayPal quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-01",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-02",
+   "earliest_pub_date": "2023-10-18",
+   "pattern": "^(?=.*(?:PayPal))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Qualcomm quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-01",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-02",
+   "earliest_pub_date": "2023-10-18",
+   "pattern": "^(?=.*(?:Qualcomm))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Toyota quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-01",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-02",
+   "earliest_pub_date": "2023-10-18",
+   "pattern": "^(?=.*(?:Toyota))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US October ADP employment",
+   "release_utc": "2023-11-01T12:15:00+00:00",
+   "calendar_release_utc_date": "2023-11-01",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-02",
+   "earliest_pub_date": "2023-10-26",
+   "pattern": "^(?=.*(?:\\bADP\\b))(?=.*(?:jobs|payrolls|employment|hiring|private))",
+   "kind": "macro",
+   "evidence": [
+    "https://adpemploymentreport.com"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US October ISM manufacturing",
+   "release_utc": "2023-11-01T14:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-01",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-02",
+   "earliest_pub_date": "2023-10-26",
+   "pattern": "^(?!.*(?:China|Chinese|Japan|Japanese|Tokyo|Australia|Australian|Poland|Polish|eurozone|euro zone|Germany|German|Canada|Canadian|\\bUK\\b|British|Britain|India|Turkey|Argentin))(?=.*(?:\\bISM\\b|Institute for Supply Management))(?=.*(?:manufactur|factory|factories))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.ismworld.org"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US September JOLTS",
+   "release_utc": "2023-11-01T14:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-01",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-02",
+   "earliest_pub_date": "2023-10-26",
+   "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American|JOLTS))(?=.*(?:JOLTS|job openings|job vacancies))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.bls.gov/schedule/2023/11_sched_list.htm"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US Treasury November refunding",
+   "release_utc": "2023-11-01T12:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-01",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-02",
+   "earliest_pub_date": "2023-10-26",
+   "pattern": "^(?=.*(?:Treasury|Yellen))(?=.*(?:refunding|auction sizes|coupon auctions|long-dated debt sales))",
+   "kind": "macro",
+   "evidence": [
+    "https://home.treasury.gov/news/press-releases"
+   ],
+   "notes": "Refunding statement 08:30 ET; pending sizing previews remain eligible."
+  },
+  {
+   "label": "Airbnb quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-19",
+   "pattern": "^(?=.*(?:Airbnb))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Apple quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-19",
+   "pattern": "^(?=.*(?:Apple\\b|\\bAAPL\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Australia September trade",
+   "release_utc": "2023-11-02T00:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-27",
+   "pattern": "^(?=.*(?:Australia|Australian))(?=.*(?:trade (?:surplus|balance|data)|exports|imports))(?=.*(?:September|Sept|Sep\\b))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.abs.gov.au/release-calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Bankman-Fried trial verdict",
+   "release_utc": "2023-11-02T23:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-27",
+   "pattern": "^(?=.*(?:Bankman.Fried|\\bSBF\\b))(?=.*(?:guilty|convicted|verdict|jury))",
+   "kind": "staged_event",
+   "evidence": [
+    "https://www.justice.gov/usao-sdny"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Block quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-19",
+   "pattern": "^(?=.*(?:Block Inc|\\bBlock\\b.{0,20}(?:Square|Cash App)|Square))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "BoE November decision",
+   "release_utc": "2023-11-02T12:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-27",
+   "pattern": "^(?=.*(?:Bank of England|\\bBoE\\b|BOE|Bailey))(?=.*(?:rates|rate|policy|decision|hold|keeps))",
+   "kind": "policy",
+   "evidence": [
+    "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Cloudflare quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-19",
+   "pattern": "^(?=.*(?:Cloudflare))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Coinbase quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-19",
+   "pattern": "^(?=.*(?:Coinbase))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "ConocoPhillips quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-19",
+   "pattern": "^(?=.*(?:ConocoPhillips))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "DraftKings quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-19",
+   "pattern": "^(?=.*(?:DraftKings))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Eli Lilly quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-19",
+   "pattern": "^(?=.*(?:Eli Lilly|\\bLilly\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Japan government stimulus package approval",
+   "release_utc": "2023-11-02T08:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-27",
+   "pattern": "^(?=.*(?:Japan|Japanese|Kishida))(?=.*(?:stimulus|economic package|economic measures|relief package|tax cut))(?=.*(?:approve|approved|adopt|adopted|unveil|unveiled|compiles?|compiled|announces?|announced))",
+   "kind": "macro",
+   "evidence": [
+    "https://japan.kantei.go.jp"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Moderna quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-19",
+   "pattern": "^(?=.*(?:Moderna))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Novo Nordisk quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-19",
+   "pattern": "^(?=.*(?:Novo Nordisk|Novo\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Poland October manufacturing PMI",
+   "release_utc": "2023-11-02T08:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-27",
+   "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|PMI w Polsce|PMI dla Polski))(?=.*(?:PMI|manufactur|przemysł\\w*))(?=.*(?:October|Oct\\b|październik\\w*))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.pmi.spglobal.com/Public/Release/ReleaseDates"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Shopify quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-19",
+   "pattern": "^(?=.*(?:Shopify))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Starbucks quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-02",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-03",
+   "earliest_pub_date": "2023-10-19",
+   "pattern": "^(?=.*(?:Starbucks))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "China October Caixin services PMI",
+   "release_utc": "2023-11-03T01:45:00+00:00",
+   "calendar_release_utc_date": "2023-11-03",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-06",
+   "earliest_pub_date": "2023-10-30",
+   "pattern": "^(?=.*(?:China|Chinese|Caixin))(?=.*(?:services|service sector|non.manufactur))(?=.*(?:Caixin|private survey))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.pmi.spglobal.com/Public/Release/ReleaseDates"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US October ISM services",
+   "release_utc": "2023-11-03T14:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-03",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-06",
+   "earliest_pub_date": "2023-10-30",
+   "pattern": "^(?!.*(?:China|Chinese|Japan|Japanese|Tokyo|Australia|Australian|Poland|Polish|eurozone|euro zone|Germany|German|Canada|Canadian|\\bUK\\b|British|Britain|India|Turkey|Argentin))(?=.*(?:\\bISM\\b|Institute for Supply Management))(?=.*(?:services|service sector|non.?manufactur))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.ismworld.org"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US October payrolls",
+   "release_utc": "2023-11-03T12:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-03",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-06",
+   "earliest_pub_date": "2023-10-30",
+   "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American|nonfarm|payroll))(?=.*(?:payroll|jobs report|employment report|unemployment rate|job growth|hiring slow))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.bls.gov/schedule/2023/11_sched_list.htm"
+   ],
+   "notes": "Preview language remains pending; unrelated country employment not guarded."
+  },
+  {
+   "label": "Duda designates Morawiecki",
+   "release_utc": "2023-11-06T19:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-06",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-07",
+   "earliest_pub_date": "2023-10-31",
+   "pattern": "^(?=.*(?:Duda|prezydent|president))(?=.*(?:Morawiecki|premier))(?=.*(?:misj\\w*|mission|task|tasks|nominat\\w*|desygn\\w*|powierz\\w*|asks|picks|chooses|first chance|first shot))",
+   "kind": "staged_event",
+   "evidence": [
+    "https://www.prezydent.pl"
+   ],
+   "notes": "Presidential address evening CET 6 Nov; previews remain eligible."
+  },
+  {
+   "label": "Japan September wages and household spending",
+   "release_utc": "2023-11-06T23:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-06",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-07",
+   "earliest_pub_date": "2023-10-31",
+   "pattern": "^(?=.*(?:Japan|Japanese))(?=.*(?:real wages|wages|household spending))(?=.*(?:September|Sept|Sep\\b|18th|fall|fell|drop|decline))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.stat.go.jp/english/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "China October trade",
+   "release_utc": "2023-11-07T03:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-07",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-08",
+   "earliest_pub_date": "2023-11-01",
+   "pattern": "^(?=.*(?:China|Chinese))(?=.*(?:exports|imports|trade surplus|trade data|shipments))(?=.*(?:October|Oct\\b|unexpectedly|contract|shrink|rebound|beat|miss))",
+   "kind": "macro",
+   "evidence": [
+    "http://english.customs.gov.cn"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Datadog quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-07",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-08",
+   "earliest_pub_date": "2023-10-24",
+   "pattern": "^(?=.*(?:Datadog))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Lucid quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-07",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-08",
+   "earliest_pub_date": "2023-10-24",
+   "pattern": "^(?=.*(?:\\bLucid\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "PKO Bank Polski quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-07",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-08",
+   "earliest_pub_date": "2023-10-24",
+   "pattern": "^(?=.*(?:PKO BP|PKO Bank|PKO Banku))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "RBA November decision",
+   "release_utc": "2023-11-07T03:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-07",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-08",
+   "earliest_pub_date": "2023-11-01",
+   "pattern": "^(?=.*(?:RBA|Reserve Bank of Australia|Bullock|Australia.s central bank|Australian central bank))(?=.*(?:rates|rate|policy|decision|hike|hikes|raises|lifts))",
+   "kind": "policy",
+   "evidence": [
+    "https://www.rba.gov.au/schedules-events/calendar.html"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Rivian quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-07",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-08",
+   "earliest_pub_date": "2023-10-24",
+   "pattern": "^(?=.*(?:Rivian))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Robinhood quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-07",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-08",
+   "earliest_pub_date": "2023-10-24",
+   "pattern": "^(?=.*(?:Robinhood))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US September trade balance",
+   "release_utc": "2023-11-07T13:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-07",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-08",
+   "earliest_pub_date": "2023-11-01",
+   "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American|America\\'s|America’s))(?=.*(?:trade deficit|trade gap|trade balance))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.census.gov/economic-indicators/calendar-listview.html"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Uber quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-07",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-08",
+   "earliest_pub_date": "2023-10-24",
+   "pattern": "^(?=.*(?:\\bUber\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "WeWork bankruptcy filing",
+   "release_utc": "2023-11-07T03:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-07",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-08",
+   "earliest_pub_date": "2023-11-01",
+   "pattern": "^(?=.*WeWork)(?=.*(?:files|filed|filing|bankruptcy|Chapter 11))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.kccllc.net/wework"
+   ],
+   "notes": "Filing late 6 Nov ET; plan-to-file reports remain eligible."
+  },
+  {
+   "label": "Arm Holdings quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-08",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-09",
+   "earliest_pub_date": "2023-10-25",
+   "pattern": "^(?=.*(?:\\bArm\\b.{0,25}(?:Holdings|chip|shares|stock)|Arm Holdings))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Poland November MPC decision",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-08",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-09",
+   "earliest_pub_date": "2023-11-02",
+   "pattern": "^(?=.*(?:Poland|Polish|NBP|RPP|Glapi\\w*|Rada Polityki))(?=.*(?:rates|stóp|stopy|procentow\\w*|policy decision|decyzj\\w*))",
+   "kind": "policy",
+   "evidence": [
+    "https://nbp.pl/en/monetary-policy/mpc-meetings-schedule/"
+   ],
+   "notes": "Decision clock not asserted; eligible 9 November."
+  },
+  {
+   "label": "Walt Disney quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-08",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-09",
+   "earliest_pub_date": "2023-10-25",
+   "pattern": "^(?=.*(?:Disney))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Warner Bros Discovery quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-08",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-09",
+   "earliest_pub_date": "2023-10-25",
+   "pattern": "^(?=.*(?:Warner Bros))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "China October CPI PPI",
+   "release_utc": "2023-11-09T01:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-09",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-10",
+   "earliest_pub_date": "2023-11-03",
+   "pattern": "^(?=.*(?:China|Chinese))(?=.*(?:\\bCPI\\b|\\bPPI\\b|consumer prices|producer prices|inflation|deflation))(?=.*(?:October|Oct\\b|deflation|slips|falls|fell|returns))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.stats.gov.cn/english/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "NBP governor November press conference",
+   "release_utc": "2023-11-09T14:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-09",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-10",
+   "earliest_pub_date": "2023-11-03",
+   "pattern": "^(?=.*(?:Glapi\\w*))(?=.*(?:konferencj\\w*|press conference|said|says|powiedział|stwierdził|zapowiedział|ocenił))",
+   "kind": "staged_event",
+   "evidence": [
+    "https://nbp.pl"
+   ],
+   "notes": "Governor press conference the day after the decision."
+  },
+  {
+   "label": "Plug Power quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-09",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-10",
+   "earliest_pub_date": "2023-10-26",
+   "pattern": "^(?=.*(?:Plug Power))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Republican third presidential debate",
+   "release_utc": "2023-11-09T01:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-09",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-10",
+   "earliest_pub_date": "2023-11-03",
+   "pattern": "^(?=.*(?:Republican|GOP))(?=.*debate)",
+   "kind": "staged_event",
+   "evidence": [
+    "https://gop.com"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "SoftBank quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-09",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-10",
+   "earliest_pub_date": "2023-10-26",
+   "pattern": "^(?=.*(?:SoftBank))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Moody's US sovereign outlook change",
+   "release_utc": "2023-11-10T22:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-10",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-13",
+   "earliest_pub_date": "2023-11-06",
+   "pattern": "^(?=.*Moody)(?=.*(?:\\bUS\\b|U\\.S\\.|United States|America|Treasury|sovereign))(?=.*(?:outlook|negative|downgrad|cuts?|lowers?|revis))",
+   "kind": "macro",
+   "evidence": [
+    "https://ratings.moodys.com"
+   ],
+   "notes": "Announcement after US close Friday; eligible Monday 2023-11-13."
+  },
+  {
+   "label": "RBA November Statement on Monetary Policy",
+   "release_utc": "2023-11-10T00:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-10",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-13",
+   "earliest_pub_date": "2023-11-06",
+   "pattern": "^(?=.*(?:RBA|Reserve Bank of Australia))(?=.*(?:Statement on Monetary Policy|\\bSoMP\\b|forecasts? (?:upgrade|raise|lift)|inflation forecast))",
+   "kind": "staged_event",
+   "evidence": [
+    "https://www.rba.gov.au/schedules-events/calendar.html"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "UK third-quarter GDP",
+   "release_utc": "2023-11-10T07:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-10",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-13",
+   "earliest_pub_date": "2023-11-06",
+   "pattern": "^(?=.*(?:\\bUK\\b|Britain|British|U\\.K\\.))(?=.*(?:GDP|economy|economic growth|recession))(?=.*(?:third.quarter|Q3|September|stagnat|flatlin|avoid|zero growth))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.ons.gov.uk/releasecalendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US November preliminary UMich sentiment",
+   "release_utc": "2023-11-10T15:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-10",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-13",
+   "earliest_pub_date": "2023-11-06",
+   "pattern": "^(?=.*(?:University of Michigan|UMich|Michigan))(?=.*(?:sentiment|inflation expectations|consumer))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.sca.isr.umich.edu"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "China October credit",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-13",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-14",
+   "earliest_pub_date": "2023-11-07",
+   "pattern": "^(?=.*(?:China|Chinese|PBOC|PBoC))(?=.*(?:new loans|bank loans|yuan loans|credit data|social financing|money supply|\\bM2\\b|lending))(?=.*(?:October|Oct\\b|slump|plunge|fall|fell|drop|rise|beat|miss))",
+   "kind": "macro",
+   "evidence": [
+    "http://www.pbc.gov.cn/en/3688247/index.html"
+   ],
+   "notes": "Credit data clock unscheduled; next weekday edition after release date used."
+  },
+  {
+   "label": "Sejm first sitting and Marshal election",
+   "release_utc": "2023-11-13T13:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-13",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-14",
+   "earliest_pub_date": "2023-11-07",
+   "pattern": "^(?=.*(?:Sejm|Hołownia|Holownia|marszał\\w*))(?=.*(?:elected|wybran\\w*|first sitting|pierwsze posiedzeni\\w*|inauguracyjn\\w*|sworn|ślubowa\\w*))(?!.*(?:Johnson|House|Congress))",
+   "kind": "staged_event",
+   "evidence": [
+    "https://www.sejm.gov.pl"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Eurozone Q3 GDP second flash",
+   "release_utc": "2023-11-14T10:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-14",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-15",
+   "earliest_pub_date": "2023-11-08",
+   "pattern": "^(?=.*(?:euro zone|eurozone|euro area|Eurostat))(?=.*(?:GDP|economy|contract|growth))(?=.*(?:third.quarter|Q3|second estimate|confirmed|flash))",
+   "kind": "macro",
+   "evidence": [
+    "https://ec.europa.eu/eurostat/news/release-calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Germany November ZEW",
+   "release_utc": "2023-11-14T10:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-14",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-15",
+   "earliest_pub_date": "2023-11-08",
+   "pattern": "^(?=.*(?:\\bZEW\\b))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.zew.de"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Home Depot quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-14",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-15",
+   "earliest_pub_date": "2023-10-31",
+   "pattern": "^(?=.*(?:Home Depot))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Japan Q3 preliminary GDP",
+   "release_utc": "2023-11-14T23:50:00+00:00",
+   "calendar_release_utc_date": "2023-11-14",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-15",
+   "earliest_pub_date": "2023-11-08",
+   "pattern": "^(?=.*(?:Japan|Japanese))(?=.*(?:GDP|economy|economic growth|contract|shrink))(?=.*(?:third.quarter|Q3|July.September|shrinks|shrank|contracts|contracted|annualised|annualized))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.esri.cao.go.jp/en/sna/sokuhou/sokuhou_top.html"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Poland Q3 flash GDP",
+   "release_utc": "2023-11-14T09:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-14",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-15",
+   "earliest_pub_date": "2023-11-08",
+   "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|GUS))(?=.*(?:GDP|PKB|economy|gospodark\\w*))(?=.*(?:third.quarter|Q3|III kw\\w*|trzecim kwartale|flash|szybki szacunek))",
+   "kind": "macro",
+   "evidence": [
+    "https://stat.gov.pl/en/release-calendar/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US October CPI",
+   "release_utc": "2023-11-14T13:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-14",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-15",
+   "earliest_pub_date": "2023-11-08",
+   "pattern": "^(?!.*(?:China|Chinese|Japan|Japanese|Tokyo|Australia|Australian|Poland|Polish|eurozone|euro zone|Germany|German|Canada|Canadian|\\bUK\\b|British|Britain|India|Turkey|Argentin))(?=.*(?:\\bCPI\\b|consumer prices|consumer inflation|inflation report|inflation data|core inflation))(?=.*(?:October|Oct\\b|cool|eases|slows|unchanged|flat|rises|rose|surprise|softer|lower))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.bls.gov/schedule/2023/11_sched_list.htm"
+   ],
+   "notes": "Requires October or outcome wording to avoid guarding generic pending inflation commentary."
+  },
+  {
+   "label": "US stopgap funding passage",
+   "release_utc": "2023-11-14T23:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-14",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-15",
+   "earliest_pub_date": "2023-11-08",
+   "pattern": "^(?=.*(?:stopgap|continuing resolution|funding bill|spending bill|shutdown))(?=.*(?:House|Senate|Congress|Biden|lawmakers))(?=.*(?:passes|passed|approves|approved|averts|averted|clears|cleared|signs|signed|avoids|avoided))",
+   "kind": "macro",
+   "evidence": [
+    "https://clerk.house.gov/Votes"
+   ],
+   "notes": "House vote evening ET 14 Nov; Senate late 15 Nov ET; pending vote language remains eligible."
+  },
+  {
+   "label": "Biden Xi meeting",
+   "release_utc": "2023-11-15T19:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-15",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-16",
+   "earliest_pub_date": "2023-11-09",
+   "pattern": "^(?=.*(?:Biden))(?=.*(?:\\bXi\\b))(?=.*(?:\\bmet\\b|agreed|agree to|agreement|handshake|dictator|military (?:talks|communication|ties)|fentanyl|after (?:meeting|summit|talks)|takeaways|outcome|resum))",
+   "kind": "staged_event",
+   "evidence": [
+    "https://www.whitehouse.gov/briefing-room/"
+   ],
+   "notes": "Woodside meeting afternoon PT 15 Nov; previews remain eligible."
+  },
+  {
+   "label": "China November MLF",
+   "release_utc": "2023-11-15T01:20:00+00:00",
+   "calendar_release_utc_date": "2023-11-15",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-16",
+   "earliest_pub_date": "2023-11-09",
+   "pattern": "^(?=.*(?:China|Chinese|PBOC|PBoC|central bank))(?=.*(?:MLF|medium.term lending))",
+   "kind": "policy",
+   "evidence": [
+    "http://www.pbc.gov.cn/en/3688247/index.html"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "China October activity data",
+   "release_utc": "2023-11-15T02:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-15",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-16",
+   "earliest_pub_date": "2023-11-09",
+   "pattern": "^(?=.*(?:China|Chinese))(?=.*(?:industrial (?:output|production)|retail sales|fixed.asset|property investment|property sales|urban unemployment|jobless rate))(?=.*(?:October|Oct\\b|beat|miss|slow|accelerat|quicken|tops|faster))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.stats.gov.cn/english/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Cisco quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-15",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-16",
+   "earliest_pub_date": "2023-11-01",
+   "pattern": "^(?=.*(?:\\bCisco\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "JD.com quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-15",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-16",
+   "earliest_pub_date": "2023-11-01",
+   "pattern": "^(?=.*(?:JD\\.com|\\bJD\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Japan October trade",
+   "release_utc": "2023-11-15T23:50:00+00:00",
+   "calendar_release_utc_date": "2023-11-15",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-16",
+   "earliest_pub_date": "2023-11-09",
+   "pattern": "^(?=.*(?:Japan|Japanese))(?=.*(?:exports|imports|trade (?:deficit|surplus|balance)))(?=.*(?:October|Oct\\b))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.customs.go.jp/toukei/info/index_e.htm"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Palo Alto Networks quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-15",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-16",
+   "earliest_pub_date": "2023-11-01",
+   "pattern": "^(?=.*(?:Palo Alto))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Poland October final CPI",
+   "release_utc": "2023-11-15T09:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-15",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-16",
+   "earliest_pub_date": "2023-11-09",
+   "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|GUS))(?=.*(?:consumer price|inflation|CPI|inflacj\\w*))(?=.*(?:October|Oct\\b|październik\\w*))(?=.*(?:final|confirmed|confirms|potwierdz\\w*|ostateczn\\w*|6\\.6))",
+   "kind": "macro",
+   "evidence": [
+    "https://stat.gov.pl/en/release-calendar/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Target quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-15",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-16",
+   "earliest_pub_date": "2023-11-01",
+   "pattern": "^(?=.*(?:\\bTarget(?:\\'s|’s)?\\s+(?:Corp|stock|shares|earnings|results|quarterly|third.quarter|Q3|profit|sales|comparable|beats?|miss)|retailer Target|\\bTGT\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Tencent quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-15",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-16",
+   "earliest_pub_date": "2023-11-01",
+   "pattern": "^(?=.*(?:Tencent))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "UK October CPI",
+   "release_utc": "2023-11-15T07:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-15",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-16",
+   "earliest_pub_date": "2023-11-09",
+   "pattern": "^(?=.*(?:\\bUK\\b|Britain|British|U\\.K\\.))(?=.*(?:inflation|CPI|consumer prices))(?=.*(?:October|Oct\\b|falls|fell|slows|eases|cools|drops|lowest|4\\.6|halv))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.ons.gov.uk/releasecalendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US October PPI",
+   "release_utc": "2023-11-15T13:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-15",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-16",
+   "earliest_pub_date": "2023-11-09",
+   "pattern": "^(?!.*(?:China|Chinese|Japan|Japanese|Tokyo|Australia|Australian|Poland|Polish|eurozone|euro zone|Germany|German|Canada|Canadian|\\bUK\\b|British|Britain|India|Turkey|Argentin))(?=.*(?:\\bPPI\\b|producer prices|producer inflation|wholesale prices))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.bls.gov/schedule/2023/11_sched_list.htm"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US October retail sales",
+   "release_utc": "2023-11-15T13:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-15",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-16",
+   "earliest_pub_date": "2023-11-09",
+   "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American|America\\'s|America’s)|.*Commerce Department)(?=.*retail sales)(?!.*(?:China|Chinese|Japan|Australia|Poland|Polish|UK|British|eurozone))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.census.gov/economic-indicators/calendar-listview.html"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Alibaba quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-16",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-17",
+   "earliest_pub_date": "2023-11-02",
+   "pattern": "^(?=.*(?:Alibaba))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Applied Materials quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-16",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-17",
+   "earliest_pub_date": "2023-11-02",
+   "pattern": "^(?=.*(?:Applied Materials))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Australia October labour force",
+   "release_utc": "2023-11-16T00:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-16",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-17",
+   "earliest_pub_date": "2023-11-10",
+   "pattern": "^(?=.*(?:Australia|Australian))(?=.*(?:jobs|employment|unemployment|labour force|labor force))(?=.*(?:October|Oct\\b))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.abs.gov.au/release-calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "China October home prices",
+   "release_utc": "2023-11-16T01:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-16",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-17",
+   "earliest_pub_date": "2023-11-10",
+   "pattern": "^(?=.*(?:China|Chinese))(?=.*(?:home prices|house prices|housing prices|new home))(?=.*(?:October|Oct\\b|fastest|steepest|fall|fell|decline|drop))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.stats.gov.cn/english/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "KGHM quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-16",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-17",
+   "earliest_pub_date": "2023-11-02",
+   "pattern": "^(?=.*(?:KGHM))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US October import prices",
+   "release_utc": "2023-11-16T13:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-16",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-17",
+   "earliest_pub_date": "2023-11-10",
+   "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American|America\\'s|America’s))(?=.*(?:import prices|export prices))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.bls.gov/schedule/2023/11_sched_list.htm"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US October industrial production",
+   "release_utc": "2023-11-16T14:15:00+00:00",
+   "calendar_release_utc_date": "2023-11-16",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-17",
+   "earliest_pub_date": "2023-11-10",
+   "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American|America\\'s|America’s)|.*Federal Reserve)(?=.*(?:industrial production|industrial output|factory output|manufacturing output))(?!.*(?:China|Chinese|Japan|Poland|Polish|German|UK))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.federalreserve.gov/releases/g17/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Walmart quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-16",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-17",
+   "earliest_pub_date": "2023-11-02",
+   "pattern": "^(?=.*(?:Walmart))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Argentina presidential runoff result",
+   "release_utc": "2023-11-19T23:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-19",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-20",
+   "earliest_pub_date": "2023-11-13",
+   "pattern": "^(?=.*(?:Argentin|Milei|Massa))(?=.*(?:\\bwins\\b|\\bwon\\b|elected|victory|president.elect|concede|landslide|defeats?|beats?))",
+   "kind": "staged_event",
+   "evidence": [
+    "https://www.argentina.gob.ar/dine"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "OpenAI board removes Altman",
+   "release_utc": "2023-11-17T20:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-17",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-20",
+   "earliest_pub_date": "2023-11-13",
+   "pattern": "^(?=.*(?:Altman|OpenAI))(?=.*(?:fired|fires|ousted|ousts|out as|removed|removes|pushed out|exit|departure|steps down|leadership transition|board))(?=.*(?:Altman|CEO|chief executive))",
+   "kind": "macro",
+   "evidence": [
+    "https://openai.com/blog/openai-announces-leadership-transition"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US October housing starts",
+   "release_utc": "2023-11-17T13:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-17",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-20",
+   "earliest_pub_date": "2023-11-13",
+   "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American|America\\'s|America’s)|.*homebuilding)(?=.*(?:housing starts|building permits|homebuilding|groundbreaking))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.census.gov/economic-indicators/calendar-listview.html"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Altman joins Microsoft",
+   "release_utc": "2023-11-20T08:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-20",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-21",
+   "earliest_pub_date": "2023-11-14",
+   "pattern": "^(?=.*(?:Altman|Brockman))(?=.*Microsoft)(?=.*(?:join|joins|joined|hire|hires|hired|to lead|new AI|research team))",
+   "kind": "macro",
+   "evidence": [
+    "https://blogs.microsoft.com"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "China November LPR",
+   "release_utc": "2023-11-20T01:15:00+00:00",
+   "calendar_release_utc_date": "2023-11-20",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-21",
+   "earliest_pub_date": "2023-11-14",
+   "pattern": "^(?=.*(?:China|Chinese|PBOC|PBoC))(?=.*(?:loan prime|\\bLPR\\b|benchmark lending))",
+   "kind": "policy",
+   "evidence": [
+    "http://www.pbc.gov.cn/en/3688247/index.html"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Poland October output wages employment",
+   "release_utc": "2023-11-20T09:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-20",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-21",
+   "earliest_pub_date": "2023-11-14",
+   "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|GUS))(?=.*(?:industrial (?:production|output)|produkcj\\w*|producer prices|\\bPPI\\b|wages|salaries|wynagrodz\\w*|employment|zatrudnieni\\w*))(?=.*(?:October|Oct\\b|październik\\w*))",
+   "kind": "macro",
+   "evidence": [
+    "https://stat.gov.pl/en/release-calendar/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Zoom quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-20",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-21",
+   "earliest_pub_date": "2023-11-06",
+   "pattern": "^(?=.*(?:Zoom Video|\\bZoom\\b(?=.{0,30}(?:shares|stock|earnings|results))|\\bZM\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Baidu quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-21",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-22",
+   "earliest_pub_date": "2023-11-07",
+   "pattern": "^(?=.*(?:Baidu))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Best Buy quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-21",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-22",
+   "earliest_pub_date": "2023-11-07",
+   "pattern": "^(?=.*(?:Best Buy))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Binance DOJ plea agreement",
+   "release_utc": "2023-11-21T19:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-21",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-22",
+   "earliest_pub_date": "2023-11-15",
+   "pattern": "^(?=.*(?:Binance|Changpeng Zhao|\\bCZ\\b))(?=.*(?:pleads?|pleaded|guilty|steps down|resigns?|\\$4\\.3|4\\.3 billion|admits))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.justice.gov/opa"
+   ],
+   "notes": "Settlement-talk reports remain eligible; guilty plea/step-down wording guarded."
+  },
+  {
+   "label": "FOMC October/November meeting minutes",
+   "release_utc": "2023-11-21T19:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-21",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-22",
+   "earliest_pub_date": "2023-11-15",
+   "pattern": "^(?=.*(?:\\bFed\\b|FOMC|Federal Reserve))(?=.*minutes)",
+   "kind": "staged_event",
+   "evidence": [
+    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Israel Hamas truce agreement",
+   "release_utc": "2023-11-21T23:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-21",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-22",
+   "earliest_pub_date": "2023-11-15",
+   "pattern": "^(?=.*(?:Israel|Israeli|Hamas|Gaza))(?=.*(?:truce|ceasefire|cease-fire|pause|hostage deal|hostages deal))(?=.*(?:agree|agreed|agreement|approves|approved|deal reached|strike deal|strikes deal|announce))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.gov.il/en"
+   ],
+   "notes": "Cabinet approval late 21 Nov UTC; negotiation reports remain eligible if pending."
+  },
+  {
+   "label": "Lowe's quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-21",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-22",
+   "earliest_pub_date": "2023-11-07",
+   "pattern": "^(?=.*(?:\\bLowe\\'?s\\b|\\bLowe’s\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Nvidia quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-21",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-22",
+   "earliest_pub_date": "2023-11-07",
+   "pattern": "^(?=.*(?:Nvidia|\\bNVDA\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "RBA November meeting minutes",
+   "release_utc": "2023-11-21T00:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-21",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-22",
+   "earliest_pub_date": "2023-11-15",
+   "pattern": "^(?=.*(?:RBA|Reserve Bank of Australia))(?=.*minutes)",
+   "kind": "staged_event",
+   "evidence": [
+    "https://www.rba.gov.au/schedules-events/calendar.html"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US October existing home sales",
+   "release_utc": "2023-11-21T15:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-21",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-22",
+   "earliest_pub_date": "2023-11-15",
+   "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|National Association of Realtors|\\bNAR\\b|existing))(?=.*(?:existing.home sales|home resales|existing home))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.nar.realtor"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Altman reinstated at OpenAI",
+   "release_utc": "2023-11-22T06:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-22",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-23",
+   "earliest_pub_date": "2023-11-16",
+   "pattern": "^(?=.*(?:Altman))(?=.*(?:return|returns|returned|reinstated|back as|back at|comeback|agreement in principle|new board))",
+   "kind": "macro",
+   "evidence": [
+    "https://openai.com/blog"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Deere quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-22",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-23",
+   "earliest_pub_date": "2023-11-08",
+   "pattern": "^(?=.*(?:\\bDeere\\b|John Deere))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "OPEC+ meeting postponement",
+   "release_utc": "2023-11-22T13:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-22",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-23",
+   "earliest_pub_date": "2023-11-16",
+   "pattern": "^(?=.*(?:OPEC))(?=.*(?:postpone|postpones|postponed|delay|delays|delayed|pushed back))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.opec.org"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Poland October retail sales",
+   "release_utc": "2023-11-22T09:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-22",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-23",
+   "earliest_pub_date": "2023-11-16",
+   "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|GUS))(?=.*(?:retail sales|sprzedaż\\w* detalicz\\w*))(?=.*(?:October|Oct\\b|październik\\w*))",
+   "kind": "macro",
+   "evidence": [
+    "https://stat.gov.pl/en/release-calendar/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "UK Autumn Statement",
+   "release_utc": "2023-11-22T12:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-22",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-23",
+   "earliest_pub_date": "2023-11-16",
+   "pattern": "^(?=.*(?:Autumn Statement|Hunt))(?=.*(?:tax|national insurance|budget|statement|cuts?|unveil|announce))",
+   "kind": "staged_event",
+   "evidence": [
+    "https://www.gov.uk/government/topical-events/autumn-statement-2023"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US November final UMich sentiment",
+   "release_utc": "2023-11-22T15:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-22",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-23",
+   "earliest_pub_date": "2023-11-22",
+   "pattern": "^(?=.*(?:University of Michigan|UMich|Michigan))(?=.*(?:sentiment|inflation expectations|consumer))(?=.*(?:final|November|Nov\\b))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.sca.isr.umich.edu"
+   ],
+   "notes": "Lookback limited to avoid duplicating the preliminary-release guard."
+  },
+  {
+   "label": "US October durable goods",
+   "release_utc": "2023-11-22T13:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-22",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-23",
+   "earliest_pub_date": "2023-11-16",
+   "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American|America\\'s|America’s)|.*durable)(?=.*(?:durable goods|durable-goods|capital goods orders|business equipment orders))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.census.gov/economic-indicators/calendar-listview.html"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Eurozone November flash PMI",
+   "release_utc": "2023-11-23T09:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-23",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-24",
+   "earliest_pub_date": "2023-11-17",
+   "pattern": "^(?=.*(?:euro zone|eurozone|euro area|German|Germany|France|French|HCOB))(?=.*(?:PMI|business activity|purchasing managers))(?=.*(?:November|Nov\\b|flash))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.pmi.spglobal.com/Public/Release/ReleaseDates"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Japan November Tokyo CPI",
+   "release_utc": "2023-11-23T23:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-23",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-24",
+   "earliest_pub_date": "2023-11-17",
+   "pattern": "^(?=.*(?:Tokyo|Japan.s capital|Japan’s capital))(?=.*(?:CPI|inflation|consumer prices))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.stat.go.jp/english/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Japan October national CPI",
+   "release_utc": "2023-11-23T23:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-23",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-24",
+   "earliest_pub_date": "2023-11-17",
+   "pattern": "^(?=.*(?:Japan|Japanese))(?=.*(?:CPI|consumer prices|consumer inflation|core inflation))(?=.*(?:October|Oct\\b|national))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.stat.go.jp/english/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Gaza truce begins and hostages freed",
+   "release_utc": "2023-11-24T05:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-24",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-27",
+   "earliest_pub_date": "2023-11-25",
+   "pattern": "^(?=.*(?:Israel|Israeli|Hamas|Gaza|hostages?))(?=.*(?:truce|ceasefire|pause|hostages?))(?=.*(?:begins|began|takes effect|took effect|holds|freed|released|first group|exchange))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.gov.il/en"
+   ],
+   "notes": "Short lookback avoids earlier October hostage releases."
+  },
+  {
+   "label": "Germany November Ifo",
+   "release_utc": "2023-11-24T09:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-24",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-27",
+   "earliest_pub_date": "2023-11-20",
+   "pattern": "^(?=.*(?:\\bIfo\\b))(?=.*(?:German|Germany|business|sentiment|climate|index|morale))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.ifo.de/en/survey/ifo-business-climate-germany"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Japan November flash PMI",
+   "release_utc": "2023-11-24T00:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-24",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-27",
+   "earliest_pub_date": "2023-11-20",
+   "pattern": "^(?=.*(?:Japan|Japanese|au Jibun))(?=.*(?:PMI|purchasing managers|factory activity))(?=.*(?:November|Nov\\b|flash))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.pmi.spglobal.com/Public/Release/ReleaseDates"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Poland October registered unemployment",
+   "release_utc": "2023-11-24T09:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-24",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-27",
+   "earliest_pub_date": "2023-11-20",
+   "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|GUS))(?=.*(?:registered unemployment|bezroboci\\w*))(?=.*(?:October|Oct\\b|październik\\w*))",
+   "kind": "macro",
+   "evidence": [
+    "https://stat.gov.pl/en/release-calendar/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "China October industrial profits",
+   "release_utc": "2023-11-27T01:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-27",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-28",
+   "earliest_pub_date": "2023-11-21",
+   "pattern": "^(?=.*(?:China|Chinese))(?=.*industrial profits)",
+   "kind": "macro",
+   "evidence": [
+    "https://www.stats.gov.cn/english/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Morawiecki cabinet sworn in",
+   "release_utc": "2023-11-27T10:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-27",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-28",
+   "earliest_pub_date": "2023-11-21",
+   "pattern": "^(?=.*(?:Morawiecki|rząd|government|cabinet))(?=.*(?:sworn|zaprzysi\\w*|appoint\\w*|powoła\\w*|new cabinet|nowy rząd|nowego rządu))(?=.*(?:Duda|prezydent|president|Morawiecki))",
+   "kind": "staged_event",
+   "evidence": [
+    "https://www.prezydent.pl"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US October new home sales",
+   "release_utc": "2023-11-27T15:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-27",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-28",
+   "earliest_pub_date": "2023-11-21",
+   "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American|America\\'s|America’s)|.*new home)(?=.*(?:new home sales|new-home sales|sales of new))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.census.gov/economic-indicators/calendar-listview.html"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Australia October retail sales",
+   "release_utc": "2023-11-28T00:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-28",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-29",
+   "earliest_pub_date": "2023-11-22",
+   "pattern": "^(?=.*(?:Australia|Australian))(?=.*retail)(?=.*(?:October|Oct\\b))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.abs.gov.au/release-calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "CrowdStrike quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-28",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-29",
+   "earliest_pub_date": "2023-11-14",
+   "pattern": "^(?=.*(?:CrowdStrike))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "PDD Holdings quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-28",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-29",
+   "earliest_pub_date": "2023-11-14",
+   "pattern": "^(?=.*(?:\\bPDD\\b|Pinduoduo|Temu))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US November Conference Board confidence",
+   "release_utc": "2023-11-28T15:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-28",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-29",
+   "earliest_pub_date": "2023-11-22",
+   "pattern": "^(?=.*(?:Conference Board|consumer confidence))(?=.*(?:\\bUS\\b|U\\.S\\.|American|Conference Board|November))(?!.*(?:China|Japan|Australia|German|UK|Poland|eurozone))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.conference-board.org"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Australia October monthly CPI",
+   "release_utc": "2023-11-29T00:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-29",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-30",
+   "earliest_pub_date": "2023-11-23",
+   "pattern": "^(?=.*(?:Australia|Australian))(?=.*(?:inflation|CPI|consumer prices))(?=.*(?:October|Oct\\b|monthly))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.abs.gov.au/release-calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "CD Projekt quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-29",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-30",
+   "earliest_pub_date": "2023-11-15",
+   "pattern": "^(?=.*(?:CD Projekt|CDR\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Fed November Beige Book",
+   "release_utc": "2023-11-29T19:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-29",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-30",
+   "earliest_pub_date": "2023-11-23",
+   "pattern": "^(?=.*(?:Beige Book))",
+   "kind": "staged_event",
+   "evidence": [
+    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Germany November flash CPI",
+   "release_utc": "2023-11-29T13:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-29",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-30",
+   "earliest_pub_date": "2023-11-23",
+   "pattern": "^(?=.*(?:German|Germany))(?=.*(?:inflation|CPI|consumer prices))(?=.*(?:November|Nov\\b))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.destatis.de/EN/Service/Release-Calendar/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Japan October industrial production and retail sales",
+   "release_utc": "2023-11-29T23:50:00+00:00",
+   "calendar_release_utc_date": "2023-11-29",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-30",
+   "earliest_pub_date": "2023-11-23",
+   "pattern": "^(?=.*(?:Japan|Japanese))(?=.*(?:industrial (?:output|production)|factory output|retail sales))(?=.*(?:October|Oct\\b))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.meti.go.jp/english/statistics/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "RBNZ November decision",
+   "release_utc": "2023-11-29T01:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-29",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-30",
+   "earliest_pub_date": "2023-11-23",
+   "pattern": "^(?=.*(?:RBNZ|Reserve Bank of New Zealand|New Zealand.s central bank|\\bOrr\\b))(?=.*(?:rates|rate|OCR|policy|decision|hold|hike))",
+   "kind": "policy",
+   "evidence": [
+    "https://www.rbnz.govt.nz/monetary-policy"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Salesforce quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-29",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-30",
+   "earliest_pub_date": "2023-11-15",
+   "pattern": "^(?=.*(?:Salesforce))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Snowflake quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-29",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-11-30",
+   "earliest_pub_date": "2023-11-15",
+   "pattern": "^(?=.*(?:Snowflake))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US third-quarter GDP second estimate",
+   "release_utc": "2023-11-29T13:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-29",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-11-30",
+   "earliest_pub_date": "2023-11-23",
+   "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American|America\\'s|America’s)|.*economy grew)(?=.*(?:GDP|gross domestic product|economic growth|economy grew))(?=.*(?:third.quarter|Q3|revised|revision|second estimate|5\\.2))(?!.*(?:China|Chinese|Japan|Japanese|Poland|Polish|euro|German|UK|British|India|Canada))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.bea.gov/news/schedule"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "China November official PMI",
+   "release_utc": "2023-11-30T01:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-30",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-12-01",
+   "earliest_pub_date": "2023-11-24",
+   "pattern": "^(?=.*(?:China|Chinese|NBS))(?=.*(?:PMI|manufactur|factory|non.manufactur|services activity))(?=.*(?:November|Nov\\b))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.stats.gov.cn/english/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Dell quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-30",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-12-01",
+   "earliest_pub_date": "2023-11-16",
+   "pattern": "^(?=.*(?:\\bDell\\b))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Eurozone November flash CPI",
+   "release_utc": "2023-11-30T10:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-30",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-12-01",
+   "earliest_pub_date": "2023-11-24",
+   "pattern": "^(?=.*(?:euro zone|eurozone|euro area|Eurostat|bloc))(?=.*(?:inflation|HICP|consumer prices))(?=.*(?:November|Nov\\b|flash))",
+   "kind": "macro",
+   "evidence": [
+    "https://ec.europa.eu/eurostat/news/release-calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Marvell quarterly result",
+   "release_utc": null,
+   "calendar_release_utc_date": "2023-11-30",
+   "timing_precision": "release date known; clock not asserted, next weekday edition used",
+   "eligible_edition": "2023-12-01",
+   "earliest_pub_date": "2023-11-16",
+   "pattern": "^(?=.*(?:Marvell))(?=.*(?:earnings|results|quarter|profit|EPS|guidance|outlook|revenue|sales|forecast))",
+   "kind": "company_result",
+   "evidence": [
+    "company investor-relations release calendar"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "Poland November flash CPI",
+   "release_utc": "2023-11-30T09:00:00+00:00",
+   "calendar_release_utc_date": "2023-11-30",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-12-01",
+   "earliest_pub_date": "2023-11-24",
+   "pattern": "^(?=.*(?:Poland|Polish|Polsk\\w*|GUS))(?=.*(?:consumer price|inflation|CPI|inflacj\\w*))(?=.*(?:November|Nov\\b|listopad\\w*))",
+   "kind": "macro",
+   "evidence": [
+    "https://stat.gov.pl/en/release-calendar/"
+   ],
+   "notes": ""
+  },
+  {
+   "label": "US October PCE and spending",
+   "release_utc": "2023-11-30T13:30:00+00:00",
+   "calendar_release_utc_date": "2023-11-30",
+   "timing_precision": "verified scheduled local clock converted to UTC",
+   "eligible_edition": "2023-12-01",
+   "earliest_pub_date": "2023-11-24",
+   "pattern": "^(?=.*(?:\\bUS\\b|U\\.S\\.|United States|American|\\bPCE\\b))(?=.*(?:\\bPCE\\b|personal consumption|personal income|consumer spending))",
+   "kind": "macro",
+   "evidence": [
+    "https://www.bea.gov/news/schedule"
+   ],
+   "notes": ""
+  }
+ ]
+}

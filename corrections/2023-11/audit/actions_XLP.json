@@ -1,0 +1,104 @@
+{
+ "ticker": "XLP",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLP?period1=1693526400&period2=1701302400&interval=1d&events=div,splits",
+   "sha256": "7c5abd80e0be8317281509575a021be47b240191090e23166e1e07d4ea367338",
+   "fetched_at_utc": "2026-11-17T12:38:11.089529+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLP?period1=1701302400&period2=1794919080&interval=1d&events=div,splits",
+   "sha256": "65a9b9f9392aacf73b82d93424ee769d7897056fccecb9b5ebfdd4f86d6987cd",
+   "fetched_at_utc": "2026-11-17T12:38:12.808924+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLP?period1=1693526400&period2=1701302400&interval=1d&events=div,splits",
+    "sha256": "7c5abd80e0be8317281509575a021be47b240191090e23166e1e07d4ea367338",
+    "fetched_at_utc": "2026-11-17T12:38:11.089529+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "XLP",
+    "exchangeName": "PCX",
+    "fullExchangeName": "NYSEArca",
+    "instrumentType": "ETF",
+    "firstTradeDate": 914337000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLP?period1=1701302400&period2=1794919080&interval=1d&events=div,splits",
+    "sha256": "65a9b9f9392aacf73b82d93424ee769d7897056fccecb9b5ebfdd4f86d6987cd",
+    "fetched_at_utc": "2026-11-17T12:38:12.808924+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "XLP",
+    "exchangeName": "PCX",
+    "fullExchangeName": "NYSEArca",
+    "instrumentType": "ETF",
+    "firstTradeDate": 914337000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 743,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

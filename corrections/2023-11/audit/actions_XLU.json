@@ -1,0 +1,117 @@
+{
+ "ticker": "XLU",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2025-12-05",
+   "factor": 2.0,
+   "ratio": "2:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLU?period1=1693526400&period2=1701302400&interval=1d&events=div,splits",
+   "sha256": "c5e0d248c68db6dd29d18f730a8020cd5685cf35c787fbd5810135e1c9c77966",
+   "fetched_at_utc": "2026-11-17T12:38:10.796697+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLU?period1=1701302400&period2=1794919080&interval=1d&events=div,splits",
+   "sha256": "314fb0197fdad490c8a371c245c63e4216f8530aa115a52a19c415f3de45e4d0",
+   "fetched_at_utc": "2026-11-17T12:38:10.993633+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLU?period1=1693526400&period2=1701302400&interval=1d&events=div,splits",
+    "sha256": "c5e0d248c68db6dd29d18f730a8020cd5685cf35c787fbd5810135e1c9c77966",
+    "fetched_at_utc": "2026-11-17T12:38:10.796697+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "XLU",
+    "exchangeName": "PCX",
+    "fullExchangeName": "NYSEArca",
+    "instrumentType": "ETF",
+    "firstTradeDate": 914337000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLU?period1=1701302400&period2=1794919080&interval=1d&events=div,splits",
+    "sha256": "314fb0197fdad490c8a371c245c63e4216f8530aa115a52a19c415f3de45e4d0",
+    "fetched_at_utc": "2026-11-17T12:38:10.993633+00:00"
+   },
+   "retained_exact_split_events": {
+    "1764945000": {
+     "date": 1764945000,
+     "numerator": 2.0,
+     "denominator": 1.0,
+     "splitRatio": "2:1"
+    }
+   },
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "XLU",
+    "exchangeName": "PCX",
+    "fullExchangeName": "NYSEArca",
+    "instrumentType": "ETF",
+    "firstTradeDate": 914337000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 743,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,102 @@
+{
+ "ticker": "SI=F",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SI%3DF?period1=1693526400&period2=1701302400&interval=1d&events=div,splits",
+   "sha256": "135e44f98841260ad51668475b1e46358ca07abaa499384834cf705b26debc30",
+   "fetched_at_utc": "2026-11-17T12:38:01.862819+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SI%3DF?period1=1701302400&period2=1794919080&interval=1d&events=div,splits",
+   "sha256": "833074a22cad72b1df3743c1dbe3641eb2464b8d08a8f58c79e64189f27eff14",
+   "fetched_at_utc": "2026-11-17T12:38:02.042307+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/SI%3DF?period1=1693526400&period2=1701302400&interval=1d&events=div,splits",
+    "sha256": "135e44f98841260ad51668475b1e46358ca07abaa499384834cf705b26debc30",
+    "fetched_at_utc": "2026-11-17T12:38:01.862819+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "SI=F",
+    "exchangeName": "CMX",
+    "fullExchangeName": "COMEX",
+    "instrumentType": "FUTURE",
+    "firstTradeDate": 967608000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 63,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/SI%3DF?period1=1701302400&period2=1794919080&interval=1d&events=div,splits",
+    "sha256": "833074a22cad72b1df3743c1dbe3641eb2464b8d08a8f58c79e64189f27eff14",
+    "fetched_at_utc": "2026-11-17T12:38:02.042307+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "SI=F",
+    "exchangeName": "CMX",
+    "fullExchangeName": "COMEX",
+    "instrumentType": "FUTURE",
+    "firstTradeDate": 967608000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 748,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

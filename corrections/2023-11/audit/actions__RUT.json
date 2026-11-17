@@ -1,0 +1,104 @@
+{
+ "ticker": "^RUT",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ERUT?period1=1693526400&period2=1701302400&interval=1d&events=div,splits",
+   "sha256": "db9ab2ac03053a2442e061186ee717e428e9e962d92424e7a6e56eeabcfc7692",
+   "fetched_at_utc": "2026-11-17T12:38:01.157125+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ERUT?period1=1701302400&period2=1794919080&interval=1d&events=div,splits",
+   "sha256": "1ade59d27c372d4e827f3efce0e959bbd85296254b4c12e83021144353d47f80",
+   "fetched_at_utc": "2026-11-17T12:38:01.348512+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ERUT?period1=1693526400&period2=1701302400&interval=1d&events=div,splits",
+    "sha256": "db9ab2ac03053a2442e061186ee717e428e9e962d92424e7a6e56eeabcfc7692",
+    "fetched_at_utc": "2026-11-17T12:38:01.157125+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "^RUT",
+    "exchangeName": "WCB",
+    "fullExchangeName": "Chicago Options",
+    "instrumentType": "INDEX",
+    "firstTradeDate": 558279000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ERUT?period1=1701302400&period2=1794919080&interval=1d&events=div,splits",
+    "sha256": "1ade59d27c372d4e827f3efce0e959bbd85296254b4c12e83021144353d47f80",
+    "fetched_at_utc": "2026-11-17T12:38:01.348512+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "^RUT",
+    "exchangeName": "WCB",
+    "fullExchangeName": "Chicago Options",
+    "instrumentType": "INDEX",
+    "firstTradeDate": 558279000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 743,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

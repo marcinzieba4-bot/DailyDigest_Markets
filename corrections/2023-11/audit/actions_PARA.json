@@ -1,0 +1,150 @@
+{
+ "ticker": "PARA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2024-09-19",
+   "factor": 0.02,
+   "ratio": "1:50"
+  },
+  {
+   "date": "2025-07-08",
+   "factor": 0.1,
+   "ratio": "1:10"
+  },
+  {
+   "date": "2026-05-08",
+   "factor": 0.05,
+   "ratio": "1:20"
+  },
+  {
+   "date": "2026-10-27",
+   "factor": 0.1,
+   "ratio": "1:10"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PARA?period1=1693526400&period2=1701302400&interval=1d&events=div,splits",
+   "sha256": "0b44bfa38a1e9297160d8a5c06c4b6d9be13f8729ad9fcbabf219122a3fc59f1",
+   "fetched_at_utc": "2026-11-17T12:38:26.167601+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/PARA?period1=1701302400&period2=1794919080&interval=1d&events=div,splits",
+   "sha256": "ca180c57b6a033769757362214b4fc412ec4014bfab90006f294e776753829b8",
+   "fetched_at_utc": "2026-11-17T12:38:26.363039+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/PARA?period1=1693526400&period2=1701302400&interval=1d&events=div,splits",
+    "sha256": "0b44bfa38a1e9297160d8a5c06c4b6d9be13f8729ad9fcbabf219122a3fc59f1",
+    "fetched_at_utc": "2026-11-17T12:38:26.167601+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "PARA",
+    "exchangeName": "NCM",
+    "fullExchangeName": "NasdaqCM",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1613140200,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/PARA?period1=1701302400&period2=1794919080&interval=1d&events=div,splits",
+    "sha256": "ca180c57b6a033769757362214b4fc412ec4014bfab90006f294e776753829b8",
+    "fetched_at_utc": "2026-11-17T12:38:26.363039+00:00"
+   },
+   "retained_exact_split_events": {
+    "1726752600": {
+     "date": 1726752600,
+     "numerator": 1.0,
+     "denominator": 50.0,
+     "splitRatio": "1:50"
+    },
+    "1751981400": {
+     "date": 1751981400,
+     "numerator": 1.0,
+     "denominator": 10.0,
+     "splitRatio": "1:10"
+    },
+    "1778247000": {
+     "date": 1778247000,
+     "numerator": 1.0,
+     "denominator": 20.0,
+     "splitRatio": "1:20"
+    },
+    "1793107800": {
+     "date": 1793107800,
+     "numerator": 1.0,
+     "denominator": 10.0,
+     "splitRatio": "1:10"
+    }
+   },
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "PARA",
+    "exchangeName": "NCM",
+    "fullExchangeName": "NasdaqCM",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1613140200,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 743,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

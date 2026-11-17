@@ -1,0 +1,117 @@
+{
+ "ticker": "LRCX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2024-10-03",
+   "factor": 10.0,
+   "ratio": "10:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LRCX?period1=1693526400&period2=1701302400&interval=1d&events=div,splits",
+   "sha256": "3972bbd70ecb39d8d0080f86d4daff7dbca5a4c01ae91b2ed0195bc7d7a32bf6",
+   "fetched_at_utc": "2026-11-17T12:38:14.783205+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LRCX?period1=1701302400&period2=1794919080&interval=1d&events=div,splits",
+   "sha256": "137bd9eefbfa9b3a76afe769f0ce60133e8dfd3d421052a2104bb18ef816fb03",
+   "fetched_at_utc": "2026-11-17T12:38:14.997924+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/LRCX?period1=1693526400&period2=1701302400&interval=1d&events=div,splits",
+    "sha256": "3972bbd70ecb39d8d0080f86d4daff7dbca5a4c01ae91b2ed0195bc7d7a32bf6",
+    "fetched_at_utc": "2026-11-17T12:38:14.783205+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "LRCX",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 452525400,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 62,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/LRCX?period1=1701302400&period2=1794919080&interval=1d&events=div,splits",
+    "sha256": "137bd9eefbfa9b3a76afe769f0ce60133e8dfd3d421052a2104bb18ef816fb03",
+    "fetched_at_utc": "2026-11-17T12:38:14.997924+00:00"
+   },
+   "retained_exact_split_events": {
+    "1727962200": {
+     "date": 1727962200,
+     "numerator": 10.0,
+     "denominator": 1.0,
+     "splitRatio": "10:1"
+    }
+   },
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "LRCX",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 452525400,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 743,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}
