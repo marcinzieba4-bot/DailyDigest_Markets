@@ -1,0 +1,56 @@
+{
+ "date": "2023-11-28",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "bea74dc83b037afe0f695b975862c83ac70089a6a5bf91a06b4f5bbf9def6e97",
+ "card_sha256": "4cd813c78757b51834813ad8ef897bb9887606c80d4523f6e26df76edce02f65",
+ "exclusions_sha256": "5d1f49aca65534d3f0b988baf59ec78421d95fed456ded4c83d41af05f0e588f",
+ "nonretail_content_sha256": "2c2d796eba6d0efff268434091b3f6c3ec19ecc9628c4187f1e6eeba017b20b3",
+ "findings": [
+  {
+   "location": "geo.CN Macro Stance / Markets & Flows / New",
+   "issue": "Beijing bourse headline (n0236) generalised to the whole onshore equity market; 'in October' added to the profits headline (n0224) though the headline names no month.",
+   "severity": "minor",
+   "resolution": "Scoped the claim to parts of the market and to downside at the margin; removed the month."
+  },
+  {
+   "location": "sectors XLK/XLI/XLF/SOXX",
+   "issue": "Overstatements beyond headline: 'every dollar' of Nvidia revenue is capex, farm equipment 'first' capex category to guide down, KBW list read as deposit-cost consolidation, Tom's Hardware revenue crown called a profit pool.",
+   "severity": "minor",
+   "resolution": "Softened to what the headlines establish (much of, a large category, live path, revenue pool)."
+  },
+  {
+   "location": "earnings_pattern Rewarded/Pattern/title",
+   "issue": "Target (n0812) credited to margins; headline supports only an earnings beat with falling sales.",
+   "severity": "minor",
+   "resolution": "Reworded to earnings beat outrunning a sales decline."
+  },
+  {
+   "location": "crypto New / Most Important",
+   "issue": "'Arbitrage capital is buying the trust' is an unsupported flow claim from the GBTC discount headline (n0779).",
+   "severity": "minor",
+   "resolution": "Rephrased as the market increasingly pricing a spot-ETF conversion."
+  },
+  {
+   "location": "flows Global Liquidity / Credit Check",
+   "issue": "FT headline (n0981) read as EM easing cycles ahead of developed ones; HYG/LQD price returns described as spreads tightening.",
+   "severity": "minor",
+   "resolution": "Removed the easing claim, made EM transmission modal, described high yield as joining the rally."
+  },
+  {
+   "location": "catalysts NVDA / LLY / MRVL / BABA",
+   "issue": "Unsupported thesis details: sovereign-AI demand, Lilly new capacity, Marvell enterprise/carrier weakness and market selling of beats, Alibaba restructuring losing momentum.",
+   "severity": "minor",
+   "resolution": "Replaced with claims supported by the cited headlines and card figures."
+  },
+  {
+   "location": "cited records stamped 2023-11-27",
+   "issue": "Timestamp caveat checked for every record stamped 2023-11-26/27 (n0098, n0155, n0679, n0932, n1050, n1626 and others); all describe events plausibly complete before 00:00 UTC (Monday session/US daytime, Asian and European morning items, n1050 stamped 19:22 UTC). n0679 (court ruling) and n0155 (AP market wrap) are the latest-plausible items.",
+   "severity": "minor",
+   "resolution": "Retained; no cited record reports Australian retail sales or any 2023-11-28 release. No unsafe feed ids found."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only 2023-11-28 feed headlines, card and exclusions; headline-level support only, article bodies not available; no web or later-date material used."
+}
