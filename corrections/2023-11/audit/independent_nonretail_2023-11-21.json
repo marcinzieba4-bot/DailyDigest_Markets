@@ -1,0 +1,92 @@
+{
+ "date": "2023-11-21",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "84691cb4a61e004c11299547f56890adce139fa157461926fb6741c452b2ab0d",
+ "card_sha256": "7c89d79f3375f8a4a4cb23d4c8c4d181b792e3a22b0e8eb72f7a69c961a2c372",
+ "exclusions_sha256": "df307bd769b32c94ea985bacb06e1f4847d1fb9412d436e482f0d5bea1b0fefb",
+ "nonretail_content_sha256": "c74245d958aa5d932e92937457cb5955fbdc65bcf1fcecef8fa91b3b0765ef99",
+ "findings": [
+  {
+   "location": "sectors/XLK Reported",
+   "issue": "Palo Alto 'missed billings' headline (n0543, stamped 2023-11-15) sits beside a company results release (n0542) whose real timing is unreliable relative to the 2023-11-20 +5.24% session; result/price pairing could be a misdated outcome.",
+   "severity": "major",
+   "resolution": "Claim removed; replaced with Cisco collaboration-sales headline n1272 and card move."
+  },
+  {
+   "location": "sectors/XLF EPS Upside Watch",
+   "issue": "Cited n0751 is a Robinhood advertisement.",
+   "severity": "moderate",
+   "resolution": "Replaced with Yahoo Finance news item n0763 (same 5% APY fact)."
+  },
+  {
+   "location": "underowned/1 Attention Gap",
+   "issue": "n1631 (Nikkei Asia, Tokyo as corporate magnet) does not support a domestic-reflation claim; ownership claim about foreign investors unsupported.",
+   "severity": "moderate",
+   "resolution": "Citation dropped, claim reworded modally."
+  },
+  {
+   "location": "crypto New / Most Important",
+   "issue": "n1139 is an NYT '(Published 2023)' archive-style record whose stamp may not match its true date.",
+   "severity": "moderate",
+   "resolution": "Replaced with n1129 ETF.com spot-bitcoin-ETF item."
+  },
+  {
+   "location": "geo/JP Activity & Currency",
+   "issue": "Toyota's 3.89% fall on the Tokyo session was attributed to a US financing-arm fine (n1093) published after the Tokyo close.",
+   "severity": "moderate",
+   "resolution": "Causal link removed; fine mentioned as separate."
+  },
+  {
+   "location": "geo/US New; catalysts/MSFT",
+   "issue": "'ousted' OpenAI chief and 'resolved into a Microsoft win' go beyond the headlines (former CEO); resolved framing risks hindsight.",
+   "severity": "minor",
+   "resolution": "Reworded to 'former OpenAI CEO' and 'turmoil lifted Microsoft'."
+  },
+  {
+   "location": "sectors/XLC Reported; XLY Reported; XLV; XLRE; XLU; underowned/3; anticipatory/0; geo/PL, CN, AU",
+   "issue": "Unsupported causal or detail additions (Disney streaming-profitability rationale, 'fewer markdowns', Covid fade, mortgage-rate unlock, 'years ahead', price move as positioning, 'slightly'/'October' qualifiers, capital concentrating, rents and construction costs).",
+   "severity": "minor",
+   "resolution": "Softened or replaced with headline-supported wording (Morningstar n0644 for Disney)."
+  },
+  {
+   "location": "flows/Global Liquidity; underowned/1",
+   "issue": "Deutsche Bank source role omitted for the $20 trln carry-trade headline (n1597).",
+   "severity": "minor",
+   "resolution": "Attribution added."
+  },
+  {
+   "location": "merged citations",
+   "issue": "n1048 (5), n1062 (6), n1029 (5) exceeded four uses.",
+   "severity": "moderate",
+   "resolution": "Nonretail occurrences swapped to n1046, n1063 or dropped; MERGED PASS."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only 2023-11-21 feed, card and exclusions; headline-only evidence; no external lookup. Nov 20-stamped records (e.g. n0264 Li Qiang, n0267 swap) have day-granular stamps and were accepted as published before 00:00 UTC Nov 21 on plausibility. Nvidia results and RBA minutes appear only as pending/absent; n0075 untouched.",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "2a5c72bf8327f83baeda1a145ef629f5e4b30499bdc25256b60d9a812ee10e63",
+   "new_exclusions_sha256": "df307bd769b32c94ea985bacb06e1f4847d1fb9412d436e482f0d5bea1b0fefb",
+   "excluded_ids_now": [
+    "n0075",
+    "n0135",
+    "n0751",
+    "n1010",
+    "n1064",
+    "n1139",
+    "n1259",
+    "n1789",
+    "n1798",
+    "n1925",
+    "n1935",
+    "n2120"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
+}

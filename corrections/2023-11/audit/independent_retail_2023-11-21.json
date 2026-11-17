@@ -1,0 +1,78 @@
+{
+ "date": "2023-11-21",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "84691cb4a61e004c11299547f56890adce139fa157461926fb6741c452b2ab0d",
+ "card_sha256": "7c89d79f3375f8a4a4cb23d4c8c4d181b792e3a22b0e8eb72f7a69c961a2c372",
+ "exclusions_sha256": "df307bd769b32c94ea985bacb06e1f4847d1fb9412d436e482f0d5bea1b0fefb",
+ "retail_draft_sha256": "f568b84ea238940be51068bd5b279c3d8bd257667cf8496a8032b0723796899b",
+ "chronology_checked_against": [
+  "2023-11-01",
+  "2023-11-02",
+  "2023-11-03",
+  "2023-11-06",
+  "2023-11-07",
+  "2023-11-08",
+  "2023-11-09",
+  "2023-11-10",
+  "2023-11-13",
+  "2023-11-14",
+  "2023-11-15",
+  "2023-11-16",
+  "2023-11-17",
+  "2023-11-20"
+ ],
+ "findings": [
+  {
+   "location": "retail_intro",
+   "issue": "'OpenAI drama resolved in Microsoft's favour' overstates and risks hindsight.",
+   "severity": "moderate",
+   "resolution": "Reworded to Altman hire turning the scramble into a record high."
+  },
+  {
+   "location": "retail/3 Microsoft Why Retail Is Here",
+   "issue": "'Friday's casualty' / 'fired' lacked own-date citation.",
+   "severity": "minor",
+   "resolution": "Added n1047 (Forbes Australia 'fired CEO') and note evidence."
+  },
+  {
+   "location": "retail/0 Social Signal",
+   "issue": "'gaming channel is tight' and 'implies' overstated what n0762 and SOXL price action show.",
+   "severity": "minor",
+   "resolution": "Softened wording."
+  },
+  {
+   "location": "notes/retail_2023-11-21.json",
+   "issue": "Note cited n1153 that the draft does not cite; n1047 missing from evidence ids.",
+   "severity": "minor",
+   "resolution": "Note reconciled."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed retail draft and note against own-date feed/card/exclusions and earlier retail notes only. MSFT repeat accepted as smaller material update on n1048 (published 2023-11-20); Boeing smaller item on Dubai tallies; NVDA and MSFT both AI-linked but distinct narratives (earnings crowding vs talent coup).",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "2a5c72bf8327f83baeda1a145ef629f5e4b30499bdc25256b60d9a812ee10e63",
+   "new_exclusions_sha256": "df307bd769b32c94ea985bacb06e1f4847d1fb9412d436e482f0d5bea1b0fefb",
+   "excluded_ids_now": [
+    "n0075",
+    "n0135",
+    "n0751",
+    "n1010",
+    "n1064",
+    "n1139",
+    "n1259",
+    "n1789",
+    "n1798",
+    "n1925",
+    "n1935",
+    "n2120"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
+}
