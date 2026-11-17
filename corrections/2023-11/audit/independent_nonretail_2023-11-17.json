@@ -1,0 +1,50 @@
+{
+ "date": "2023-11-17",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "012d4e7404cfdb99b22315f8368af76c69cbbe82d5ef93a48197d768cb49c3a3",
+ "card_sha256": "28c8f656d9e5f9ad4abcde766ddfc9c6bf6d9346f8f314c4cd3fcc8222dde27d",
+ "exclusions_sha256": "b5c7afae933393b8772ff2ffb48147998b56cf9c9637962fb61c3b6a9fde358a",
+ "nonretail_content_sha256": "60a6ddb8c041b8e92795ef95d2f8a9793e578aa0636aca175feff0bef7ff359a",
+ "findings": [
+  {
+   "location": "geo/CN New / Most Important; catalysts/Alibaba",
+   "issue": "Cited n0244 (Jack Ma trust share sale), which is on the date's exclusion list (publication before cutoff not certified); verifier FAIL",
+   "severity": "major",
+   "resolution": "Removed both uses; CN paragraph now contrasts the ADR -9.14% with the HK close -2.22% from the card; catalyst keeps Bridgewater n0204 only"
+  },
+  {
+   "location": "catalysts/Applied Materials; sectors/SOXX Reported",
+   "issue": "n0977 (Reuters exclusive on a US criminal probe) is a high-impact story while AMAT closed only -0.36% on the session; likely published after the US close, so before-cutoff timing is not certifiable",
+   "severity": "major",
+   "resolution": "Stopped citing n0977; AMAT catalyst rebuilt on n0929, n0249, n0168 (export-curb/substitution risk); SOXX Reported now cites SMIC n0168; title, price-risk and cover trigger reworded"
+  },
+  {
+   "location": "flows/Global Liquidity",
+   "issue": "n1250 (ECB 'Financial Stability Review, November 2023') and n0686 (Fed 'Banking System Conditions' standing page) are undated institutional pages stamped 2023-11-14; the November review could be a later-vintage document and the Fed page is evergreen",
+   "severity": "major",
+   "resolution": "Removed both claims; sentence now rests on FT n1438 alone"
+  },
+  {
+   "location": "geo/PL Corporate & Sectors",
+   "issue": "n1701 is Allegro's own promotional advertisement and was cited as context for the -9.28% move",
+   "severity": "minor",
+   "resolution": "Removed the advertisement citation; kept the card figure"
+  },
+  {
+   "location": "sectors/SOXX Breaking Convention",
+   "issue": "Assertion that leverage 'is setting the marginal price' from a 3x ETF move overstated what the card shows",
+   "severity": "minor",
+   "resolution": "Softened to 'suggests leverage may be setting'"
+  },
+  {
+   "location": "all Nov-16-stamped cited records",
+   "issue": "Timestamp caveat check: events (Walmart, Target-related, Alibaba spin-off, Siemens, Burberry, Biden-Xi summit items, Musk/Tesla, BlackRock ether filing, Longfor downgrade n0245) plausibly occurred before 00:00 UTC; Longfor n0245 timing is only plausible, not certain",
+   "severity": "minor",
+   "resolution": "Kept with note; claims are limited to the headline fact"
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only 2023-11-17 feed, card and exclusions; no other dates' drafts, no web. Headline-level support only; article bodies not seen. Longfor n0245 publication time before cutoff judged plausible, not proven."
+}

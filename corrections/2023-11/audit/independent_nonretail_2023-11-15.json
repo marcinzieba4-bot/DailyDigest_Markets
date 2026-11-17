@@ -1,0 +1,71 @@
+{
+ "date": "2023-11-15",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "82bb32f7d793a60026545ef48198a1c712138835a614c801f2d7f2dcfd046e61",
+ "card_sha256": "699dcdf2e589d2fb68a6e2fbc2d3cf007a67c0a2f5a8548a93822a772842db7b",
+ "exclusions_sha256": "b702b63c679e338c3c22e96746454c0f71914ecc4d9acd5f95cfaaa9b7340f76",
+ "nonretail_content_sha256": "1bab1a343ae959b2077867268a1db8a214d447decc36831a2b95c8fcd5868db5",
+ "findings": [
+  {
+   "location": "geo CN Markets & Flows; flows Equity & Fund Flows",
+   "issue": "n0233 (SCMP, Bridgewater 13F sale of Xpeng/Yum/TSMC) reports a US filing made late on 2023-11-14; an Asia-based outlet's article plausibly published after 00:00 UTC on the edition date despite the 2023-11-14 placeholder stamp.",
+   "severity": "major",
+   "resolution": "Removed both claims; CN paragraph now cites only n0166 for institutional China sentiment; flows keeps Burry and Berkshire."
+  },
+  {
+   "location": "sectors XLK EPS Upside Watch; flows Equity & Fund Flows",
+   "issue": "n1035 (aggregator-style Point72 13F article) has doubtful same-day publication time relative to the 00:00 UTC cutoff.",
+   "severity": "major",
+   "resolution": "Removed the Point72/Adobe clauses in both places."
+  },
+  {
+   "location": "sectors XLY Narrative",
+   "issue": "Causal ordering: Airbnb's 6.32% session gain was written as following an acquisition headline that may have appeared after the close.",
+   "severity": "minor",
+   "resolution": "Reworded to state the move and the acquisition headline separately."
+  },
+  {
+   "location": "underowned[3] Attention Gap",
+   "issue": "Kansas City Fed headline (title only) was said to 'describe the mechanism', and one Goldman note was generalized to 'the sell side'.",
+   "severity": "minor",
+   "resolution": "Reworded as a framing of the question plus a general mechanism; attributed rotation to one large bank."
+  },
+  {
+   "location": "geo JP Macro Stance (n1601, n1602)",
+   "issue": "Japan Q3 GDP is released at 08:50 JST on 2023-11-15 (23:50 UTC on 2023-11-14), ten minutes before the cutoff; eligible but borderline, and the root exclusions left it in place.",
+   "severity": "minor",
+   "resolution": "Kept: release precedes cutoff and no later outcome or revision is claimed."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Checked only 2023-11-15 feed, card, exclusions and this edition's nonretail draft; no web, no other dates' feeds/cards/drafts. Timestamps are day-granular placeholders, so same-day publication times of 13F-based items from US outlets (Burry n2051/n1008/n1007/n0989, Berkshire n1067/n1066, n0990) and the US House vote n1532 are judged plausible, not proven, to precede 00:00 UTC.",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "a628dc40ac02bf12440e94eb1d7c109798738422f68558226ed3db554848c228",
+   "new_exclusions_sha256": "b702b63c679e338c3c22e96746454c0f71914ecc4d9acd5f95cfaaa9b7340f76",
+   "excluded_ids_now": [
+    "n0052",
+    "n0055",
+    "n0233",
+    "n0234",
+    "n0238",
+    "n0263",
+    "n0609",
+    "n1035",
+    "n1102",
+    "n1119",
+    "n1346",
+    "n1401",
+    "n1594",
+    "n1729",
+    "n2100"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
+}

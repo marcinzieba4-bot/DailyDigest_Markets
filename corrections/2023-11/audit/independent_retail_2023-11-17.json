@@ -1,0 +1,70 @@
+{
+ "date": "2023-11-17",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "012d4e7404cfdb99b22315f8368af76c69cbbe82d5ef93a48197d768cb49c3a3",
+ "card_sha256": "28c8f656d9e5f9ad4abcde766ddfc9c6bf6d9346f8f314c4cd3fcc8222dde27d",
+ "exclusions_sha256": "b5c7afae933393b8772ff2ffb48147998b56cf9c9637962fb61c3b6a9fde358a",
+ "retail_draft_sha256": "945a1c4d68ce24ca3ee1301abb61c1757459f94ac5ea94b1fb6456d7cd2058f8",
+ "chronology_checked_against": [
+  "2023-11-01",
+  "2023-11-02",
+  "2023-11-03",
+  "2023-11-06",
+  "2023-11-07",
+  "2023-11-08",
+  "2023-11-09",
+  "2023-11-10",
+  "2023-11-13",
+  "2023-11-14",
+  "2023-11-15",
+  "2023-11-16"
+ ],
+ "findings": [
+  {
+   "location": "retail/0 Social Signal",
+   "issue": "Claimed Yahoo's Walmart-vs-Target price list was 'the same exercise investors were running on the two tickers' (invented attention evidence)",
+   "severity": "major",
+   "resolution": "Reworded to say the headline invites the Walmart-versus-Target comparison"
+  },
+  {
+   "location": "retail/0 Historical Analog",
+   "issue": "'Two-day swing' mismatched the card's five-session returns (TGT +21.68%, WMT -4.81%)",
+   "severity": "minor",
+   "resolution": "Changed to 'five-session split'"
+  },
+  {
+   "location": "retail/0 Smart Money View",
+   "issue": "'even as volumes hold' not supported by the Grocery Dive headline",
+   "severity": "minor",
+   "resolution": "Replaced with 'which can squeeze margins'"
+  },
+  {
+   "location": "retail/2 Robinhood Where It Breaks",
+   "issue": "Stated as fact that deposit rates cost interest income; headline does not establish it",
+   "severity": "minor",
+   "resolution": "Modal wording 'may buy loyalty at the cost of interest income'"
+  },
+  {
+   "location": "retail/3 WTI Where It Breaks",
+   "issue": "'war premium has already drained away' stated beyond headline n1977 (tensions easing)",
+   "severity": "minor",
+   "resolution": "Reworded to easing tension having taken some war premium out"
+  },
+  {
+   "location": "notes/retail considered_not_chosen",
+   "issue": "AMAT entry referenced n0977, whose pre-cutoff timing is not certifiable",
+   "severity": "minor",
+   "resolution": "Dropped the id and reworded reason"
+  },
+  {
+   "location": "retail chronology",
+   "issue": "Walmart is a new lead; Target led 2023-11-16 and is only a contrast; WTI (lead 2023-11-08) and Robinhood (smaller 2023-11-08) return as secondary items with new cited evidence (n2032/n1977, n1040/n1912); four distinct narratives; titles in required format",
+   "severity": "info",
+   "resolution": "No change needed"
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only 2023-11-17 feed, card and exclusions plus retail notes for strictly earlier dates (selections only, not evidence). Headline-level support only; no social posts seen, so the Social Signal rests on coverage headlines and is framed modally."
+}

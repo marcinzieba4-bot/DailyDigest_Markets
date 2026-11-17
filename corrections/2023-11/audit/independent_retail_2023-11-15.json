@@ -1,0 +1,65 @@
+{
+ "date": "2023-11-15",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "82bb32f7d793a60026545ef48198a1c712138835a614c801f2d7f2dcfd046e61",
+ "card_sha256": "699dcdf2e589d2fb68a6e2fbc2d3cf007a67c0a2f5a8548a93822a772842db7b",
+ "exclusions_sha256": "b702b63c679e338c3c22e96746454c0f71914ecc4d9acd5f95cfaaa9b7340f76",
+ "retail_draft_sha256": "ff4b2890996b75674e2cbfbe7415912aa85f1e1c794fb2bff3cfbeb887c777f4",
+ "chronology_checked_against": [
+  "2023-11-01",
+  "2023-11-02",
+  "2023-11-03",
+  "2023-11-06",
+  "2023-11-07",
+  "2023-11-08",
+  "2023-11-09",
+  "2023-11-10",
+  "2023-11-13",
+  "2023-11-14"
+ ],
+ "findings": [
+  {
+   "location": "retail[1] SOXL Why Retail Is Here",
+   "issue": "'The tape answered the other way' implied SOXL's session jump was a reaction to Burry's 13F-based chip short, which was disclosed late on 2023-11-14 after the close.",
+   "severity": "minor",
+   "resolution": "Changed to 'The tape was already running the other way'."
+  },
+  {
+   "location": "retail[0] lead When the Narrative Breaks (n1532)",
+   "issue": "House funding vote reported on 2023-11-14; evening timing plausible before cutoff but unproven.",
+   "severity": "minor",
+   "resolution": "Kept; no outcome after the cutoff is claimed and the Senate step is described as pending."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Checked only 2023-11-15 feed, card, exclusions and retail draft/notes, plus earlier retail notes (2023-11-01 to 2023-11-14) for chronology. Four narratives are distinct from earlier leads and smaller items; SOXL vs the 2023-11-14 Nvidia item is justified by newly published Burry chip-short and leveraged-ETF move. No web or other dates' feeds/cards/drafts read.",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "a628dc40ac02bf12440e94eb1d7c109798738422f68558226ed3db554848c228",
+   "new_exclusions_sha256": "b702b63c679e338c3c22e96746454c0f71914ecc4d9acd5f95cfaaa9b7340f76",
+   "excluded_ids_now": [
+    "n0052",
+    "n0055",
+    "n0233",
+    "n0234",
+    "n0238",
+    "n0263",
+    "n0609",
+    "n1035",
+    "n1102",
+    "n1119",
+    "n1346",
+    "n1401",
+    "n1594",
+    "n1729",
+    "n2100"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
+}
