@@ -1,0 +1,22 @@
+{
+ "date": "2023-11-09",
+ "author": "nonretail_writer",
+ "own_date_sources_only": true,
+ "central_thesis": "At the 2023-11-09 cutoff the dominant cross-asset fact is a long-end-led Treasury rally (10Y 4.49%, -28 bps over five observations, curve still inverted and bull-flattening over 20) after the Fed held, October payrolls slowed to 150,000 and oil fell to a three-month low, which eased financial conditions (S&P 500 +3.42% over five sessions, VIX 14.45, DXY -1.21%) without any Fed cut. The briefing therefore favours duration, megacap quality growth, semis and GLP-1 health care over energy, China-sensitive materials, European autos and small caps, treats China as a managed property triage with deflation risk, and is Bullish on Poland where the RPP's surprise hold and a strong zloty meet a fiscal/transition divergence.",
+ "sources_policy": "Facts are drawn only from the 2023-11-09 frozen own-date feed (via tools/digest.py) and the own-date market card (via tools/showcard.py); every cited id is from this date's feed and none is in exclusions/2023-11-09.json. Card values use each instrument's completed 2023-11-08 session with Yahoo Finance / US Treasury tags; crypto uses the prior completed daily close. No numeric spot-FX is quoted; currency direction comes from cited headlines (zloty, yen, dollar index). Previews are used only to establish pending events (APEC Biden-Xi meeting, spot bitcoin ETF approval, China price data, US funding deadline), never results. Polish-language headlines are translated and attributed. Background knowledge is used only for general mechanisms.",
+ "known_ambiguities_omitted": [
+  "n0182 (Reuters, 'China's consumer prices back in decline as recovery wobbles'): China's October CPI was released on 2023-11-09 local morning, after the 00:00 UTC cutoff; the date-only timestamp looks premature. Omitted; only the Morning Bid preview n0179 is used.",
+  "n0047 (RBA, '7 November 2023 | Minutes of the Monetary Policy Meeting'): minutes of the 7 November meeting are published about two weeks later; record appears misdated. Omitted.",
+  "n0044 and n0045 (RBA hike reports timestamped 2023-11-06): they report the 7 November decision as completed but carry a timestamp before the decision; omitted in favour of n0055, n0056 and n0059 dated 2023-11-07.",
+  "n0763 (Moomoo, 'AU Morning Wrap: ASX Gains; Xero Plunges 8%'): the Xero move may belong to a later session than the timestamp implies; omitted.",
+  "n0866 (Reuters, 'National Australia Bank eyes business credit in soft home loan market'): results-day coverage whose release time sits close to UTC midnight; omitted as timing-ambiguous.",
+  "n0889 (Teslarati, 'Rivian surges while Lucid dips'): the 'surges' direction reflects extended trading and contradicts the RIVN regular-session close (-2.41%); omitted, n0888/n0891 used instead.",
+  "n0974 (CoinDCX, 'Spot Bitcoin ETFs Gain Momentum with $4.16 Billion in Total Value'): ambiguous given no US spot ETF was approved at the cutoff; omitted.",
+  "n0498 (MarketWatch, 'Taylor Swift is Time's person of the year'): Time's announcement came in December 2023, so the 2023-11-04 timestamp looks misdated; omitted.",
+  "n1865 (Kevin Drum blog, 'Core PCE inflation spiked to 3.6% in September'): blog-derived figure that differs from standard reporting; omitted.",
+  "n0472 (Moomoo, 'Weekly Buzz: Stocks rebound, bonds tank'): bond direction contradicts the same-week Treasury rally in the curve data; omitted.",
+  "n1583 (INFOR.PL NBP fixing table with a numeric EUR/PLN rate) and the numeric euro move in n1954: numeric spot-FX is prohibited; n1954 is cited only for dollar-index direction.",
+  "n1363 (source labelled 'U.S. Department of War (.gov)'): source naming is anachronistic for 2023; not used."
+ ],
+ "authoring_stage": "initial nonretail draft before independent review"
+}
