@@ -1,0 +1,197 @@
+{
+ "date": "2023-11-06",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "058a3739b0fd90e6d2b0690a680e2600258d5917aff7b5b9d37e366a821b3b67",
+ "card_sha256": "4498883af9a0ce2e680919468238ed27ddacbdb5548ec11764ce4e3dc7f74e51",
+ "exclusions_sha256": "1b87f435e89e3b70601e037131777fea7357fa647fc834e71fd8f813abb8a25b",
+ "nonretail_content_sha256": "6d9c23d4f7b11dae1ca0a4e2355eac0271835178258021dbf2bdebc172c38dd8",
+ "findings": [
+  {
+   "location": "flows / Equity & Fund Flows",
+   "issue": "Cited n1460 (Freshfields, stamped 2023-11-03) carries a later-vintage \"UPDATE: US Appeals Court vacates SEC share repurchase rule\" title. The vacatur was a December 2023 event (the October 31 ruling only remanded), so the claim that the rule was vacated is hindsight.",
+   "severity": "major",
+   "resolution": "Removed the claim and n1460. Replaced with own-date buyback evidence: Expedia $5 billion repurchase authorization [[n0778]] and HSBC $3 billion buyback [[n1429]]. n1460 reported as an unsafe feed item; exclusions not edited."
+  },
+  {
+   "location": "geo JP / Macro Stance",
+   "issue": "Cited n1572 (Reuters, BOJ September-meeting minutes, stamped 2023-11-05 07:00). The minutes are an 08:50 JST Monday 6 November release, an Asia-morning release on the edition date, published at best minutes before the 00:00 UTC cutoff.",
+   "severity": "major",
+   "resolution": "Replaced with eligible n1545 (East Asia Forum, 2023-10-31: an undervalued yen poses problems for the Bank of Japan). n1572 reported as unsafe."
+  },
+  {
+   "location": "underowned[1] title",
+   "issue": "Title \"Gold miners lagging the metal\" contradicted the card. GDX +9.59% vs gold +8.35% over twenty sessions, and +0.92% vs +0.04% over five.",
+   "severity": "major",
+   "resolution": "Retitled \"Gold miners, the overlooked leverage to bullion\". Body unchanged; it already makes no lagging claim."
+  },
+  {
+   "location": "underowned[0] / Attention Gap",
+   "issue": "\"Japan's tool makers are moving faster\" than Nvidia/AMD was contradicted by the five-session card figures it cited (Tokyo Electron +8.89% vs Nvidia +11.12%, AMD +16.41%).",
+   "severity": "major",
+   "resolution": "Rewrote as a twenty-session comparison from the card: Tokyo Electron +8.78% (prior close 2023-11-02) vs AMD +4.67% and Nvidia -1.65% (prior close 2023-11-03). Advantest +10.00% kept."
+  },
+  {
+   "location": "geo JP / Playbook",
+   "issue": "\"Lower US yields help here\" contradicted the long-exporter stance, since a narrower rate gap strengthens the yen.",
+   "severity": "minor",
+   "resolution": "Reworded: lower US yields cut both ways, paying the currency hedge but trimming exporters' translation gains."
+  },
+  {
+   "location": "anticipatory[1] / What Is Priced",
+   "issue": "n0116 headline does not mention San Francisco, but the sentence attributed it there.",
+   "severity": "minor",
+   "resolution": "Moved San Francisco to the n0131 APEC clause, which names the city."
+  },
+  {
+   "location": "anticipatory[3] / What Is Priced and Risk",
+   "issue": "n0894 (\"WeWork to start closing some offices\") was rendered as offices already closed. The Blackstone redemption-limit fact in Risk had no citation.",
+   "severity": "minor",
+   "resolution": "Changed to future tense with BBC attribution. Added [[n0530]] with its $66 billion / 12th month facts."
+  },
+  {
+   "location": "sectors XLRE / Breaking Convention",
+   "issue": "n1409 (BusinessDaily) headline does not say Europe; \"in Europe ... not only American\" overreached.",
+   "severity": "minor",
+   "resolution": "Rephrased to the headline (commercial real estate frozen by the heavy blow from interest rates) plus the transaction-versus-occupancy mechanism."
+  },
+  {
+   "location": "sectors XLU / Reported and Breaking Convention",
+   "issue": "n0772 headline says the sale \"signals a new era\"; \"to become a fully regulated utility\" and \"exit from renewables\" went beyond it.",
+   "severity": "minor",
+   "resolution": "Matched the headline wording and narrowed the claim to \"exit from commercial renewables\"."
+  },
+  {
+   "location": "sectors XLV / Breaking Convention",
+   "issue": "n0344 headline is conditional (\"could grow to $100 billion\"); the draft said Goldman \"sees ... reaching\".",
+   "severity": "minor",
+   "resolution": "Changed to \"argues ... could grow to\"."
+  },
+  {
+   "location": "underowned[3] / Attention Gap",
+   "issue": "n1871 (AVUV article) does not mention \"quality screens\".",
+   "severity": "minor",
+   "resolution": "Changed to \"argues that Avantis' small-cap value approach works\"."
+  },
+  {
+   "location": "sectors XLE / Narrative",
+   "issue": "\"while crude fell\" over twenty sessions is only true for WTI (-2.75%); Brent rose 0.37%.",
+   "severity": "minor",
+   "resolution": "Specified WTI fell 2.75% over the same span."
+  },
+  {
+   "location": "catalysts AAPL / Price Hurdle & Risk",
+   "issue": "\"the guide confirmed a slow holiday\" was a concrete claim with no citation in the paragraph.",
+   "severity": "minor",
+   "resolution": "Cited n0721 (holiday forecast disappoints on iPad, wearables); n0721 now used 3 times."
+  },
+  {
+   "location": "geo PL / Markets",
+   "issue": "\"savers are being pushed toward equities\" was an unsupported flow claim.",
+   "severity": "minor",
+   "resolution": "Made modal (\"which may push savers toward equities\")."
+  },
+  {
+   "location": "geo PL / New / Most Important",
+   "issue": "RPP logic was muddled (\"softer CPI argues for patience ... argue against further easing\").",
+   "severity": "minor",
+   "resolution": "Reworded so softer CPI argues for easing and the fiscal stance plus 0% mortgage plan argue for a pause."
+  },
+  {
+   "location": "geo CN / New / Most Important",
+   "issue": "Alibaba's AI model launch (n0399) was listed among \"casualties\".",
+   "severity": "minor",
+   "resolution": "Split into a separate \"Meanwhile\" sentence."
+  },
+  {
+   "location": "geo CN / Macro Stance and Property",
+   "issue": "The Economist question was answered as if it were the outlet's finding, and n0151 \"fell 0.3% in September\" was rendered as \"on the month\".",
+   "severity": "minor",
+   "resolution": "Made the answer modal (\"the likely answer\"); matched the n0151 horizon wording."
+  },
+  {
+   "location": "sectors XLK / Breaking Convention",
+   "issue": "\"Budgets are being reallocated toward AI\" was stated as fact without support.",
+   "severity": "minor",
+   "resolution": "Recast as a modal read-through."
+  },
+  {
+   "location": "sectors XLF / Breaking Convention",
+   "issue": "Non sequitur: deposit delays (n0965) were used to argue the sector is not insurance against a growth slowdown.",
+   "severity": "minor",
+   "resolution": "Replaced with a specific mechanism: lower yields repair bond books but not loan losses, and operational hiccups test deposit confidence."
+  },
+  {
+   "location": "sectors SXAP / Reported",
+   "issue": "Filler: \"Mercedes-Benz published its Q3 results [[n1115]]\" added nothing.",
+   "severity": "minor",
+   "resolution": "Tied the report to the card: it did not lift the shares out of their twenty-session slide."
+  },
+  {
+   "location": "catalysts LLY / Price Hurdle & Risk",
+   "issue": "Generic crowding/competition sentence with no evidence.",
+   "severity": "minor",
+   "resolution": "Replaced with a card-based point: NVO US ADR -2.73% on the same session, so the two leaders trade as one obesity basket."
+  },
+  {
+   "location": "sectors XLC / EPS Upside Watch",
+   "issue": "n1218 says Facebook \"puts a price on privacy\"; \"now charges ... for an ad-free tier\" went beyond the headline.",
+   "severity": "minor",
+   "resolution": "Matched the headline wording."
+  },
+  {
+   "location": "flows / Credit Check",
+   "issue": "n2080 says Raising Cane's is \"to Borrow\"; the draft used the completed past tense.",
+   "severity": "minor",
+   "resolution": "Changed to \"is borrowing\"."
+  },
+  {
+   "location": "geo US / Macro Stance; catalysts CAT / Trade Expression",
+   "issue": "ISM PMI written as 46.7%; the contract requires PMI readings in index points.",
+   "severity": "minor",
+   "resolution": "Changed to 46.7 index points in both places."
+  },
+  {
+   "location": "geo US, EU, CN, JP, AU; underowned[3]; flows / Rates & Dollar",
+   "issue": "Index levels (S&P 500, VIX, DXY, Stoxx 600, Shanghai, Hang Seng, Nikkei 225, ASX 200, Russell 2000) had no unit.",
+   "severity": "minor",
+   "resolution": "Added \"index points\" to each."
+  },
+  {
+   "location": "timing review: weekend- and day-before-stamped citations",
+   "issue": "Checked n0215, n0980, n0981, n0982, n0984, n1001, n1012, n1013, n1014, n1024, n1349, n1422, n1825, n1920 and the 2023-11-03 evening items (n2066, n1066).",
+   "severity": "info",
+   "resolution": "Kept. Each reports a weekend feature, commentary, Saturday release or US-evening item whose event plausibly precedes 00:00 UTC on 2023-11-06. No Asia-morning edition-date releases remain."
+  },
+  {
+   "location": "vintage review",
+   "issue": "NYT titles n1328, n1368 and n1387 carry a \"(Published 2023)\" archive suffix; forward-looking \"2024\"/\"2027\" titles are forecasts.",
+   "severity": "info",
+   "resolution": "Kept. No later year is asserted as a fact. Only n1460 showed a later-vintage outcome and it was removed."
+  },
+  {
+   "location": "geo PL / New / Most Important",
+   "issue": "n1613 and n1614 (2023-10-05) are 32 days old.",
+   "severity": "info",
+   "resolution": "Kept. They are central-bank communication within the 35-day policy-baseline window and are not presented as new data."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "unsafe_feed_ids": [
+  {
+   "id": "n1460",
+   "reason": "Later-vintage Freshfields title reporting the December 2023 vacatur of the SEC buyback rule; hindsight outcome."
+  },
+  {
+   "id": "n1572",
+   "reason": "BOJ September minutes released 08:50 JST on 2023-11-06, an Asia-morning edition-date release at or after the cutoff margin."
+  }
+ ],
+ "scope_limits": [
+  "Evidence limited to the 2023-11-06 own-date feed via tools/digest.py (excluded items removed), the card via tools/showcard.py, and exclusions/2023-11-06.json. Headlines only, no article bodies.",
+  "Day-granular 07:00 UTC placeholder times cannot be verified exactly. Weekend and prior-day items were judged by whether the reported event plausibly preceded 00:00 UTC.",
+  "No other date's feed, card or draft, no data/ or cache/, and no web were consulted. Edits were limited to targeted strings in nonretail_drafts/2023-11-06.json.",
+  "verify.py --nonretail 2023-11-06: PASS (0 fail, 0 warn). check_merged.py 2023-11-06: MERGED PASS."
+ ]
+}

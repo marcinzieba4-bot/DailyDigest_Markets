@@ -1,0 +1,54 @@
+{
+ "date": "2023-11-06",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "058a3739b0fd90e6d2b0690a680e2600258d5917aff7b5b9d37e366a821b3b67",
+ "card_sha256": "4498883af9a0ce2e680919468238ed27ddacbdb5548ec11764ce4e3dc7f74e51",
+ "exclusions_sha256": "1b87f435e89e3b70601e037131777fea7357fa647fc834e71fd8f813abb8a25b",
+ "retail_draft_sha256": "116c11c39d684c7b9bebf36514c7e6dd0c8c9d464cdf385426c345300312adad",
+ "chronology_checked_against": [
+  "2023-11-01",
+  "2023-11-02",
+  "2023-11-03"
+ ],
+ "findings": [
+  {
+   "location": "retail[0] / What Is Driving It and When the Narrative Breaks",
+   "issue": "Index levels lacked a proper unit: Russell 2000 had none, and S&P 500 and VIX were written as bare \"points\".",
+   "severity": "minor",
+   "resolution": "Changed to \"index points\" in three places. No other retail text changed."
+  },
+  {
+   "location": "retail chronology",
+   "issue": "Checked against notes/retail_2023-11-01, -02 and -03. ARKK is a new lead: on 2023-11-03 it was considered and rejected for lack of headline evidence, and the peak-rates theme appeared only as secondary items (TLT, Affirm). The promotion rests on newly published payroll and Fed-done evidence (n2064, n2063, n2065, n2066, n0134). Bitcoin, the 2023-11-01 lead, returns only as a secondary item on new verdict and ETF-listing evidence (n1079, n1080, n1074). The four narratives are distinct (rate-relief moonshots, Tesla dip-buy, sports-betting growth, bitcoin ETF calendar).",
+   "severity": "info",
+   "resolution": "Accepted. No change to notes/retail_2023-11-06.json, which matches the final draft."
+  },
+  {
+   "location": "retail[0] / The Social Signal",
+   "issue": "Attention evidence is thin: seasonal coverage (n0612, n1825), the BofA losing-stocks list (n1008), the AMC turnaround question (n1009) and card-based leveraged-ETF moves (TQQQ +20.06%, SOXL +21.72%). No posts, counts or flows are invented, and behavioural claims are modal.",
+   "severity": "info",
+   "resolution": "Accepted as an honest, modal Social Signal. No change."
+  },
+  {
+   "location": "retail timing",
+   "issue": "Weekend-stamped retail citations n1008, n1009, n1349, n1825 (2023-11-05) and n0996 (2023-11-04) are commentary or features whose subject predates the cutoff. The Friday-evening items are pre-cutoff: n2066 (Bloomberg evening briefing) and n1079 (AP, SBF verdict of 2023-11-02).",
+   "severity": "info",
+   "resolution": "Kept."
+  },
+  {
+   "location": "retail claims and numbers",
+   "issue": "All retail numbers checked against the card (ARKK, UPST, AFRM, DASH, TQQQ, SOXL, TSLA, DKNG, BTC-USD, 10Y/2Y, S&P 500, Russell 2000, VIX) and the cited headlines. Titles follow Name / TICKER — hook with hooks of eight words or fewer. No hindsight: pending items (next inflation print, ETF approval) stay undated and pending.",
+   "severity": "info",
+   "resolution": "No change."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": [
+  "Evidence limited to the 2023-11-06 own-date feed via tools/digest.py, the card via tools/showcard.py, and exclusions/2023-11-06.json. Headlines only.",
+  "Chronology memory limited to notes/retail_2023-11-01.json, notes/retail_2023-11-02.json and notes/retail_2023-11-03.json. No earlier retail drafts or other-date feeds were read.",
+  "The shared retail_quality.py preflight was not run in this review. Edits were limited to unit strings in retail_drafts/2023-11-06.json, and notes/retail_2023-11-06.json was left unchanged.",
+  "verify.py --retail 2023-11-06: PASS (0 fail, 0 warn). check_merged.py 2023-11-06: MERGED PASS."
+ ]
+}
