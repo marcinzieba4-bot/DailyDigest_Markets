@@ -34,6 +34,10 @@ jobs:
         run: python -m compileall -q .
       - name: Verify generic collection format with invented inputs
         run: python ci/test_collection_parser.py
+      - name: Check extended price campaign locally
+        run: python market/fetch_prices.py --start 2023-01-01 --end 2026-11-17
+      - name: Independently verify extended price coverage
+        run: python -c "import json;from pathlib import Path;from ci.check_study import prices_and_metadata;print(json.dumps(prices_and_metadata(Path.cwd())[3]))"
       - name: State unresolved input gate
         if: env.SOURCE_COVERAGE_APPROVED != 'true'
         run: python -c "print('Source-coverage review is pending; preparation and portfolio execution remain gated.')"
