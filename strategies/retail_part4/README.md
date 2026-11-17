@@ -1,27 +1,11 @@
-# Part 4 retail strategy
+# Retail Part 4 strategy research
 
-The main research policy is `unhedged25`: trade the fourth positional topic in **What Retail Is Playing**, using the frozen ETF mapping, original daily SMA20 and liquidity gates, a 25% source entry budget, and ten-session scheduled exits. The reservation calendar and full-flat wait are part of the strategy. No RSI, weekly filter, stop or take profit is added.
+This draft publishes the frozen ETF mapping, calendar/data helper, anonymous source and price fetchers, and nine-case renderer. The economic runtime and new November orchestration are being integrated next. **No November 2023 portfolio result has been generated yet.**
 
-The last completed simulation covers **3 September 2024–30 October 2026**, with 25 baskets per account:
+The comparison retains the original 25% source entry allocation, directional prior-close SMA20, liquidity eligibility, reserved report windows and ten-session exit. It compares fixed-dollar short SPY, daily 40-return beta short-or-flat SPY, and no SPY hedge. There is no RSI, weekly filter, new stop or optimization grid. Candidate eligibility/liquidity precedes reservation; reservation precedes SMA20. Rejected weights remain in cash, without renormalization.
 
-| Policy | Net return | Maximum drawdown |
-| --- | ---: | ---: |
-| No SPY hedge | +16.57% | 2.23% |
-| Fixed-dollar short SPY | +8.89% | 3.40% |
-| Daily beta40 short-or-flat SPY | +6.35% | 4.12% |
+The requested main history is 1 November 2023 through 30 October 2026. A September 2024 current-clock reset separates earlier chronology from the current source snapshot. Repricing the earlier 25 recorded cohorts is planned separately; the private records and detailed trade/order datasets are not published without specific approval.
 
-These are historical replay results after modeled order fees and borrow. The unhedged account retains positive market exposure; its realized market beta was +0.154 on active days. Early report publication times are assumed for reconstructed archive editions.
+The source fetchers use anonymous public report HTML and Yahoo prices. Current response metadata and content hashes are retained separately from assumed historical report availability at printed-date end of day in New York. Reconstructed reports and fresh price vintages are not untouched historical validation.
 
-The requested extension starts **1 November 2023** and retains the **30 October 2026** endpoint. **No November-start portfolio result has been calculated or validated.**
-
-## Availability probe
-
-`ci/availability_probe.py` checks public report endpoints and SPY price-history coverage from a GitHub-hosted runner. It records HTTP status, object metadata, byte digests, retail-section/card counts and price-bar counts. It does not calculate trading returns.
-
-The workflow uses public HTTP requests without AWS credentials. Its result is written to `availability_probe.json` on this research branch when the branch has not advanced, and retained as a GitHub Actions artifact.
-
-## Original code import
-
-The previously audited executable package and frozen mapping are not yet imported into this repository. They remain in the author's saved research workspace and Library archives. This probe and summary must not be represented as the complete executable strategy.
-
-The full simulator, fixed mapper, source version records, price vintage, ledgers, independent audit and reproducible charts must be imported and checked before claiming that the extended simulation reproduces the original research.
+Only code and aggregate methodology are published at this stage. Data preparation, input freeze and independent review must precede any new portfolio calculation. Detailed inputs/results and write-capable CI publication require their separate authorization. The finished availability workflow is removed from this branch so code changes do not repeatedly trigger it; its source and aggregate probe record remain.

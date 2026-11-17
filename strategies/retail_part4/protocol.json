@@ -1,0 +1,30 @@
+{
+  "study": "Part 4 November 2023 historical extension",
+  "status": "Code foundation only; no new portfolio outcomes",
+  "main_start": "2023-11-01",
+  "end": "2026-10-30",
+  "source_allocation": 0.25,
+  "policies": [
+    "dollar_short25",
+    "beta40_daily_short25",
+    "unhedged25"
+  ],
+  "public_source_case_design": [
+    "november_continuous",
+    "september_current"
+  ],
+  "recorded_fixture_case": "september_recorded_fixture",
+  "recorded_fixture_transfer_and_publication": "Blocked pending specific data authorization; no private fixture or recorded trade/order contents in public files",
+  "nine_book_design": "Three source windows or fixtures times three unchanged hedge policies; the recorded fixture phase remains gated on authorization",
+  "source_rules": "Use positional Part4 only and unchanged frozen17ETF mapping with completePL=F/HG=F exclusions. Metadata/liquidity candidate eligibility precedes reservation; reserve before SMA20, retain full-flat cooldown and unrenormalized source weights.",
+  "holding": "Scheduled tenth subsequent session opening within21calendar days; terminal finalclose liquidation markedcensored.",
+  "costs": {
+    "per_net_order": 0.001,
+    "short_borrow_ACT365": 0.03,
+    "cash_yield": 0
+  },
+  "unhedged_scope": "No conceptual SPY hedge. A genuine SPY source instrument or source short remains possible; actual net physical shorts incur borrow. Do not force long-only assumptions.",
+  "filters": "No RSI, weekly filter, new regime, stop, takeprofit or parameter grid.",
+  "execution_gate": "Prepare/source-audit/freeze first; explicit root GO before new portfolio outcomes. Simulation consumes reviewed frozen inputs without refetch. No automatic repository write publication.",
+  "source_timing": "Current anonymous public snapshot; assumed printed-date EOD America/New_York availability is counterfactual. Exact prior source/price vintage identity is not claimed."
+}
