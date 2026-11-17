@@ -5,7 +5,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "ac055550cd2778c78d11098f85a612a5f216f2d87325d326de7e68e50b9647d2",
  "card_sha256": "ab23fe1a4955b4566ec82cbf1ba6f0ba518b275e40e0c7e5f9bdbbb7fc15a30e",
- "exclusions_sha256": "9190e50b6303d85e64b2e2f6ffd4a0dbbc559c3958ba82700bb015c5ff372c22",
+ "exclusions_sha256": "4df4d54c8792902f59f0154625c3028803b7c6d8bd6eb6bf80b2deee72979dff",
  "nonretail_content_sha256": "c70bdae31e61119188ceab81e891e7cbd23cd5fc74d5e6e6c5eae90865c31743",
  "findings": [
   {
@@ -64,5 +64,32 @@
   }
  ],
  "reviewed_validation_warnings": [],
- "scope_limits": "Reviewed only 2023-11-20 feed, card and exclusions via showcard/digest; no other dates, data/, cache/ or web. Headline-only verification; timestamps of date-granular records judged by plausibility against the 00:00 UTC cutoff. Unsafe ids not cited in the final nonretail draft: n2082, n0666, n0667, n0668, n1245, n1551, n2008, n2063, n1940."
+ "scope_limits": "Reviewed only 2023-11-20 feed, card and exclusions via showcard/digest; no other dates, data/, cache/ or web. Headline-only verification; timestamps of date-granular records judged by plausibility against the 00:00 UTC cutoff. Unsafe ids not cited in the final nonretail draft: n2082, n0666, n0667, n0668, n1245, n1551, n2008, n2063, n1940.",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "9190e50b6303d85e64b2e2f6ffd4a0dbbc559c3958ba82700bb015c5ff372c22",
+   "new_exclusions_sha256": "4df4d54c8792902f59f0154625c3028803b7c6d8bd6eb6bf80b2deee72979dff",
+   "excluded_ids_now": [
+    "n0140",
+    "n0263",
+    "n1094",
+    "n1117",
+    "n1245",
+    "n1289",
+    "n1586",
+    "n1817",
+    "n1826",
+    "n1921",
+    "n1931",
+    "n1940",
+    "n2082",
+    "n2111",
+    "n2264"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
 }
