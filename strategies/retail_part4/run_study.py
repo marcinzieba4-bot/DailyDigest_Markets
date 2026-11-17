@@ -1,6 +1,6 @@
 """Execute the nine predeclared books only after a successful frozen-input preflight."""
 from __future__ import annotations
-import argparse,csv,hashlib,json,sys
+import argparse,csv,hashlib,importlib.metadata,json,os,subprocess,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT/"engine"))
@@ -49,5 +49,16 @@ def main():
     model.write(model.OUT/"metrics.csv",[{k:json.dumps(v) if isinstance(v,dict) else v for k,v in m.items()} for m in summary])
     model.write(root/"all_trades.csv",trades);model.write(root/"all_orders.csv",orders);model.write(root/"all_daily_nav.csv",daily_rows)
     model.dump(model.OUT/"run_manifest.json",dict(status="completed",cases=9,failed_cases=0,input_freeze_sha256=a.expected_freeze,no_refetch_after_freeze=True))
+    try:code_commit=subprocess.check_output(["git","rev-parse","HEAD"],cwd=root,text=True).strip()
+    except (OSError,subprocess.CalledProcessError):code_commit="local-unrecorded"
+    versions={}
+    for name in ["numpy","matplotlib","beautifulsoup4"]:
+        try:versions[name]=importlib.metadata.version(name)
+        except importlib.metadata.PackageNotFoundError:versions[name]=None
+    model.dump(root/"provenance_run.json",dict(code_commit=code_commit,python=sys.version,packages=versions,
+        workflow={k:os.environ.get(k) for k in ["GITHUB_REPOSITORY","GITHUB_RUN_ID","GITHUB_RUN_ATTEMPT","GITHUB_SHA"]},
+        input_freeze_sha256=a.expected_freeze,protocol_sha256=sha(root/"protocol.json"),
+        price_snapshot_sha256=sha(root/"prices.csv"),source_extraction_sha256=sha(root/"inputs/archival_replay_etf_items.csv"),
+        same_local_inputs_from_freeze_through_execution=True))
     print(json.dumps({"status":"completed","cases":9,"books":[{k:m[k] for k in ["corpus","policy","start","end","total_return","max_drawdown","baskets","max_gross_exposure","transaction_cost","borrow_cost","realized_all","realized_active"]} for m in summary]},indent=2))
 if __name__=="__main__":main()

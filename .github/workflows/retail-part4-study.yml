@@ -32,15 +32,14 @@ jobs:
         run: python -m pip install -r requirements.txt
       - name: Compile all strategy and audit source
         run: python -m compileall -q .
+      - name: Verify generic collection format with invented inputs
+        run: python ci/test_collection_parser.py
       - name: State unresolved input gate
         if: env.SOURCE_COVERAGE_APPROVED != 'true'
         run: python -c "print('Source-coverage review is pending; preparation and portfolio execution remain gated.')"
-      - name: Fetch complete report input snapshot locally
+      - name: Fetch one coherent local input snapshot
         if: env.SOURCE_COVERAGE_APPROVED == 'true'
-        run: python source_tools/fetch_public_sources.py --start 2023-11-01 --end 2026-10-30
-      - name: Fetch one coherent price campaign locally
-        if: env.SOURCE_COVERAGE_APPROVED == 'true'
-        run: python market/fetch_prices.py --start 2023-01-01 --end 2026-10-30
+        run: python ci/fetch_inputs.py
       - name: Prepare nine schedules and freeze exact local inputs
         if: env.SOURCE_COVERAGE_APPROVED == 'true'
         run: python prepare_study.py

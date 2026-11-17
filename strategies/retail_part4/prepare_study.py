@@ -71,6 +71,11 @@ def main():
     fixed=[root/"protocol.json",root/"requirements.txt",root/"prices.csv",root/"market_manifest.json",root/"market/fetch_campaign.json",root/"market/fetch_prices.py",
         root/"source/canonical_html_manifest.json",root/"inputs/archival_replay_etf_items.csv",
         root/"benchmarks/september_2024_recorded/trades.csv",root/"benchmarks/september_2024_recorded/orders.csv"]
+    source_manifest=json.loads((root/"source/canonical_html_manifest.json").read_text())
+    for meta in source_manifest:
+        actual=(root/meta["path"]).resolve()
+        assert root in actual.parents and actual.is_file(),"Source manifest path must stay in the study"
+        fixed.append(actual)
     fixed+=list(root.glob("*.py"))
     for folder in ["engine","ci","source_tools","market/raw","source/canonical_html"]:
         fixed += [x for x in (root/folder).rglob("*") if x.is_file() and "__pycache__" not in x.parts and (x.suffix in [".py",".json",".html"])]

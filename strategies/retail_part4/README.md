@@ -66,13 +66,12 @@ Use Python 3.12. From the repository root:
 ~~~bash
 cd strategies/retail_part4
 python -m pip install -r requirements.txt
-python source_tools/fetch_public_sources.py --start 2023-11-01 --end 2026-10-30
-python market/fetch_prices.py --start 2023-01-01 --end 2026-10-30
+python ci/fetch_inputs.py
 python prepare_study.py
 python ci/check_study.py --preflight
 ~~~
 
-The source gate currently rejects 23 May 2024 responses: the CDN returns an HTTP-200 page whose body says 404, rather than the report. Do not skip those dates or count them as no-theme cash. The complete nine-book November experiment remains unrun until the reports are recovered or a separately declared gap experiment is authorized.
+The public CDN currently returns an HTTP-200 page whose body says 404 for May 2024. Do not skip these reports or count them as no-theme cash. A supplied retail collection can be parsed generically after its separate authorization: set protocol.source_collections to map its local relative path to {sha256, start, end}. The fetch helper passes those runtime values to the collection parser; no protected collection fingerprint or report contents are embedded in the code. The complete nine-book November experiment remains unrun until the complete source snapshot passes independent preflight.
 
 After complete source coverage and an independent preflight pass, an explicit research GO permits:
 
