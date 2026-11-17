@@ -1,4 +1,4 @@
-name: Part 4 source and price preflight diagnostics
+name: Part 4 May template diagnostics
 on:
   workflow_dispatch:
   push:
@@ -7,6 +7,7 @@ on:
       - '.github/workflows/retail-part4-raw.yml'
       - 'strategies/retail_part4/source_tools/fetch_public_sources.py'
       - 'strategies/retail_part4/market/fetch_prices.py'
+      - 'strategies/retail_part4/ci/diagnose_may_schema.py'
 permissions:
   contents: read
 jobs:
@@ -28,15 +29,5 @@ jobs:
         run: python -m pip install -r requirements.txt
       - name: Compile published source
         run: python -m compileall -q .
-      - name: Diagnose historical source extraction
-        id: sources
-        continue-on-error: true
-        run: python source_tools/fetch_public_sources.py --start 2023-11-01 --end 2026-10-30
-      - name: Validate price campaign independently
-        id: prices
-        if: always()
-        continue-on-error: true
-        run: python market/fetch_prices.py --start 2023-01-01 --end 2026-10-30
-      - name: Keep source or price failures visible
-        if: ${{ steps.sources.outcome != 'success' || steps.prices.outcome != 'success' }}
-        run: exit 1
+      - name: Inspect May template structure
+        run: python ci/diagnose_may_schema.py
