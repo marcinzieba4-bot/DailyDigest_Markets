@@ -1,0 +1,72 @@
+{
+ "date": "2023-11-29",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "e3cf98b960ecbfb86d934bb53d5e366d72140a5ac299806ba88dfaec2af25435",
+ "card_sha256": "f384092e7937791dacfa32b1f4b99a3353eac600a4e69e10878e9d139f2348a3",
+ "exclusions_sha256": "5810cd70505ff7241f7886dbcae53b9a001115059ffb286046b897e3c74bce66",
+ "retail_draft_sha256": "2d6fbcff80fb820ecd032c9e285fff2708878afa2eb8f835ac6f20dc475d9bb8",
+ "chronology_checked_against": [
+  "2023-11-01",
+  "2023-11-02",
+  "2023-11-03",
+  "2023-11-06",
+  "2023-11-07",
+  "2023-11-08",
+  "2023-11-09",
+  "2023-11-10",
+  "2023-11-13",
+  "2023-11-14",
+  "2023-11-15",
+  "2023-11-16",
+  "2023-11-17",
+  "2023-11-20",
+  "2023-11-21",
+  "2023-11-22",
+  "2023-11-23",
+  "2023-11-24",
+  "2023-11-27",
+  "2023-11-28"
+ ],
+ "findings": [
+  {
+   "location": "MARA lead Why Retail Is Here",
+   "issue": "Bitcoin 20-session return (from 2023-11-08 base) compared against MARA's 20-session return (from 2023-10-30 base), implying a like-for-like multiplier",
+   "severity": "minor",
+   "resolution": "Replaced with bitcoin's same-day +1.55% against MARA's +9.75%"
+  },
+  {
+   "location": "MARA lead Social Signal",
+   "issue": "'cautionary tale making the rounds' implied invented social circulation",
+   "severity": "minor",
+   "resolution": "Reworded to attribute only the Business Insider story"
+  },
+  {
+   "location": "MARA lead When the Narrative Breaks",
+   "issue": "Spot-ETF timetable slippage referenced without any cited headline",
+   "severity": "minor",
+   "resolution": "Removed ETF reference; kept year-end 2024 target risk citing n0817"
+  },
+  {
+   "location": "notes/retail_2023-11-29.json why_lead",
+   "issue": "Note cited ETF timing as a break that no longer appears in the draft",
+   "severity": "minor",
+   "resolution": "Updated to match draft"
+  },
+  {
+   "location": "Chronology",
+   "issue": "Lead MARA last appeared 2023-11-03 as smaller; crypto last led 2023-11-22; Berkshire repeat from 2023-11-27 is a smaller material update on Munger's death (n0769); no repeated full lead",
+   "severity": "info",
+   "resolution": "Accepted; new cited evidence n0659/n0817 and n0769"
+  },
+  {
+   "location": "Munger coverage n0634 n0670 n0698 n0699 n0769",
+   "issue": "Day-stamped 2023-11-28 evening news; announcement plausibly before 00:00 UTC (BRK-B -0.36% session before news)",
+   "severity": "info",
+   "resolution": "Retained; flagged in scope_limits"
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only 2023-11-29 feed, card and exclusions plus earlier retail notes for chronology; headline-level evidence only; Munger-related records carry day-granular stamps so timing before cutoff is judged plausible, not certified; no later-date data used."
+}
