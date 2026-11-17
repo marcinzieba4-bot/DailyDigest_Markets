@@ -1,0 +1,83 @@
+{
+ "date": "2023-11-07",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "2649cf638ae0aaf70251707fb10a32af5b267e2dc3c5889a3f30e2f27943f88c",
+ "card_sha256": "3f8b3bf167e991427efeed29008a1ad3f54e384d656fbcac33db9f5220b99373",
+ "exclusions_sha256": "9c11c44c63e4694778014ed4bce7fd33574190c6caf361897d3f42b913046764",
+ "retail_draft_sha256": "327ba19b2f11ef0cd3d0e5e4eef809511a86eb605687d8f23c067734bd91eeb6",
+ "chronology_checked_against": [
+  "2023-11-01",
+  "2023-11-02",
+  "2023-11-03",
+  "2023-11-06"
+ ],
+ "findings": [
+  {
+   "location": "retail[2] Constellation Energy, Why Retail Is Here",
+   "issue": "Cited n0860 (Yahoo Finance, '11 Best Uranium Stocks To Buy'). This is an evergreen 'best of' list page, which the vintage rule rejects as evidence of current attention.",
+   "severity": "major",
+   "resolution": "Stopped citing n0860. Replaced the clause with n0708 (Reuters, 2023-11-02, Southern Company raises Vogtle cost forecast). This supports the item's operators-versus-new-build angle."
+  },
+  {
+   "location": "retail[0] Microsoft lead, Smart Money View",
+   "issue": "'Institutions appear to be expressing the theme through the platform rather than its satellites' inferred institutional positioning from price action alone. No headline supports it, and price changes are not flow evidence.",
+   "severity": "minor",
+   "resolution": "Replaced it with n1765 (Business Insider, 2023-10-31: a minor ChatGPT update shows Big Tech can blow up a startup at any time), followed by the card's MSFT +1.06% versus C3.ai -5.63% comparison."
+  },
+  {
+   "location": "retail[0] Microsoft lead, When the Narrative Breaks",
+   "issue": "'Erase the whole autumn rerating' misstated the horizon. 329.82 USD is the close 20 sessions earlier (2023-10-09).",
+   "severity": "minor",
+   "resolution": "Changed to 'erase the entire 20-session gain'."
+  },
+  {
+   "location": "retail[3] Eli Lilly smaller item",
+   "issue": "This repeats the 2023-11-03 lead. The only newly eligible evidence is n1254, published after the 2023-11-03 cutoff, plus a new +4.82% session. n0654 and n0678 predate that edition. At 161 words the item exceeded the 160-word ceiling for a brief carryover.",
+   "severity": "minor",
+   "resolution": "Trimmed it to 151 body words (range 150-220) and kept it secondary, citing n1254 as the material update. The material-update rationale in the notes is unchanged."
+  },
+  {
+   "location": "notes/retail_2023-11-07.json",
+   "issue": "After the draft fixes, evidence_ids and the reasons no longer matched the draft.",
+   "severity": "minor",
+   "resolution": "Replaced n0860 with n0708, added n1765, and updated the why_lead and why_smaller wording. Notes evidence_ids now exactly match the draft's 24 cited ids."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": [
+  "Evidence was limited to the 2023-11-07 frozen feed (with exclusions), the 2023-11-07 card and exclusions/2023-11-07.json. For the chronology check only, notes/retail_2023-11-01, -02, -03 and -06 were read as editorial memory and never as evidence.",
+  "Chronology: MSFT is a new lead ticker. The AI theme last led on 2023-11-02 (AMD, chips) and was a smaller item on 2023-11-03 (PLTR). It returns on newly published OpenAI DevDay headlines (n1859-n1867) with a distinct consumer-platform narrative. DOGE is new. CEG differs from the 2023-11-01 Cameco item in company, angle and evidence (n0404, n0766, n0708). The four narratives are distinct.",
+  "The Social Signal relies on adoption and coverage headlines (n1867, n1849, n1863, n1864, n0874, n1034). The feed has no MSFT-specific Reddit, Stocktwits or options evidence, and none was invented.",
+  "The OpenAI DevDay records are stamped with a 2023-11-06 08:00 placeholder. The event (keynote at about 18:00 UTC on 6 November) precedes the cutoff. The Grok copycat-token item n1034 reports reaction to the 4 November Grok announcement.",
+  "Hashes were computed after the last edit. exclusions/2023-11-07.json is unchanged."
+ ],
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "2ce501f06f12596cfec1bf17ac0de7e4bee2d020b56603c413c8f096053ff320",
+   "new_exclusions_sha256": "9c11c44c63e4694778014ed4bce7fd33574190c6caf361897d3f42b913046764",
+   "excluded_ids_now": [
+    "n0023",
+    "n0076",
+    "n0122",
+    "n0547",
+    "n0848",
+    "n0860",
+    "n0899",
+    "n0935",
+    "n1292",
+    "n1516",
+    "n1528",
+    "n1870",
+    "n1889",
+    "n1937",
+    "n1947"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
+}

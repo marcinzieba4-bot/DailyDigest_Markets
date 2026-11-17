@@ -1,0 +1,131 @@
+{
+ "date": "2023-11-07",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "2649cf638ae0aaf70251707fb10a32af5b267e2dc3c5889a3f30e2f27943f88c",
+ "card_sha256": "3f8b3bf167e991427efeed29008a1ad3f54e384d656fbcac33db9f5220b99373",
+ "exclusions_sha256": "9c11c44c63e4694778014ed4bce7fd33574190c6caf361897d3f42b913046764",
+ "nonretail_content_sha256": "c54018523c111613dc886e779a094c871e818a85a37c9f12211ca344ae998632",
+ "findings": [
+  {
+   "location": "geo[3] JP Activity & Currency; geo[3] JP Playbook; underowned[3] title and Attention Gap",
+   "issue": "Cited n1292 (Nikkei Asia, 'Japan's trading houses raise outlooks on weak yen, non-resource businesses') carries the 2023-11-06 08:00 placeholder, so it may have been published up to 17:00 JST on 7 November. A Tokyo roundup of trading-house outlooks most plausibly followed results released in Japanese business hours on the edition date, after the 00:00 UTC cutoff. The completed-event claim is doubtful, and it was the only trading-house evidence in the edition.",
+   "severity": "major",
+   "resolution": "Stopped citing n1292. JP now cites n0516 (Reuters, Toyota rides weak yen and hybrid demand to blowout profit, 2023-11-01). Underowned theme 4 now cites n1154 (Asahi Shimbun, Toyota profits zoom on cheap yen, 2023-11-01) and is retitled 'Japan's weak-yen exporters'. The JP Playbook no longer names trading houses."
+  },
+  {
+   "location": "geo[5] PL Geopolitics & Security",
+   "issue": "Cited n1528 (TSN, 'Ukraine has sent a note to Poland regarding the border blocking') is stamped 2023-11-01. The Polish hauliers' border blockade it refers to only began on 6 November, and no own-date headline shows a blockade in place on 1 November. The record is therefore likely misdated (a later vintage), so the diplomatic-note claim cannot be safely timed.",
+   "severity": "major",
+   "resolution": "Stopped citing n1528. Replaced the sentence with n1646 (Interia, 2023-11-02: will Russia resume nuclear tests after withdrawing from a key treaty)."
+  },
+  {
+   "location": "anticipatory[0] RBA What Is Priced",
+   "issue": "n0023 (Real Estate, 2023-10-25, 'November interest rate hike all but guaranteed') is a preview of the RBA decision published 13 days before cutoff. That is outside the seven-day window for previews by meaning, although its 'mon' category passed the verifier.",
+   "severity": "major",
+   "resolution": "Replaced it with n0071 (The Guardian, 2023-11-05, if interest rates rise again it may be because inflation fears lost their anchor). n0078 and n0062 still support the convergence on a hike."
+  },
+  {
+   "location": "geo[0] US Macro Stance; flows Portfolio Implication",
+   "issue": "The ISM manufacturing PMI was quoted as '46.7%'. The contract requires PMI readings in index points.",
+   "severity": "minor",
+   "resolution": "Changed both to '46.7'."
+  },
+  {
+   "location": "geo[0] US Rates & Curve and Playbook; geo[1] EU New; geo[2] CN Markets & Flows; geo[3] JP Activity; geo[4] AU Demand; flows Rates & Dollar; anticipatory[0]; crypto Playbook",
+   "issue": "Index levels (S&P 500, VIX, DXY, Euro Stoxx 50, Hang Seng, Shanghai Composite, Nikkei 225, ASX 200) were quoted without a unit. The contract requires prices in currency or index points.",
+   "severity": "minor",
+   "resolution": "Added 'index points' to each quoted index level."
+  },
+  {
+   "location": "geo[0] US Rates & Curve",
+   "issue": "'The DXY eased 0.85% to 105.22' gave no horizon. The card's 1-session DXY move is +0.19%, and -0.85% is the 5-session move.",
+   "severity": "minor",
+   "resolution": "Changed to 'eased 0.85% over 5 sessions'."
+  },
+  {
+   "location": "geo[0] US Rates & Curve",
+   "issue": "'Term-premium unwind after the Treasury said it would increase most auction sizes [[n0094]]' implied that larger auctions caused the yield fall. The headline supports only the size increase.",
+   "severity": "minor",
+   "resolution": "Reworded to 'even though the Treasury said it would increase most auction sizes'."
+  },
+  {
+   "location": "geo[0] US New / Most Important",
+   "issue": "'Stan Druckenmiller told Fortune...' n0487 does not establish that he gave Fortune an interview.",
+   "severity": "minor",
+   "resolution": "Changed to 'Fortune reported that Stan Druckenmiller is really nervous...'."
+  },
+  {
+   "location": "geo[5] PL Macro Stance",
+   "issue": "'the strongest post-event story in our coverage' describes the edition's own coverage instead of the market.",
+   "severity": "minor",
+   "resolution": "Changed to 'the strongest equity story among the six regions'. The PL Markets part supports this with EPOL +17.94% over 20 sessions on the card."
+  },
+  {
+   "location": "sectors XLU Breaking Convention",
+   "issue": "The text added 'as a regulated utility', which is not in headline n0623, and claimed without support that 'merchant players are keen to own' the assets Duke is selling.",
+   "severity": "minor",
+   "resolution": "Reworded to stay within the headline and frame it as an incumbent narrowing its focus while firm power commands the premium."
+  },
+  {
+   "location": "sectors SXAP Reported",
+   "issue": "Filler sentence: 'Mercedes-Benz published its third-quarter results [[n1064]]' added nothing.",
+   "severity": "minor",
+   "resolution": "Replaced it with a card-based comparison of German automakers over 20 sessions: Mercedes -9.33%, BMW -1.92%, VOW3 -0.62%."
+  },
+  {
+   "location": "underowned[2] Exposure & Risk",
+   "issue": "'Supply constraints are easing' overstated n1211, which reports only that Lilly is planning expansions. The Yahoo source tag also sat after Mondelez, which is not a card instrument.",
+   "severity": "minor",
+   "resolution": "Changed to 'should ease' and moved the source tag next to the PepsiCo and P&G figures."
+  },
+  {
+   "location": "catalysts[0] Palantir",
+   "issue": "The quoted phrase 'most significant' profit was attributed to Reuters ('what it called'). The quotation marks in the headline indicate it is the company's wording.",
+   "severity": "minor",
+   "resolution": "Changed to 'what the company called'."
+  },
+  {
+   "location": "catalysts[1] Eli Lilly",
+   "issue": "The text said CNBC reports US Mounjaro supply has improved. In the headline, Eli Lilly makes that statement.",
+   "severity": "minor",
+   "resolution": "Reworded to say Lilly says supply has improved, according to CNBC."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": [
+  "Evidence was limited to the 2023-11-07 frozen feed (tools/digest.py, with exclusions applied), the 2023-11-07 card (tools/showcard.py) and exclusions/2023-11-07.json. No other date, data/, cache/ or web source was read.",
+  "Each claim was checked against its headline only, not against an imagined article body. Card numbers were checked for instrument, session, horizon and unit.",
+  "Every cited record stamped 2023-11-06 08:00 was assessed for whether the event it reports plausibly happened before 00:00 UTC. The following were kept as plausibly pre-cutoff: OpenAI DevDay items (keynote about 18:00 UTC on 6 Nov); Citi job cuts n0902/n0903; Disney CFO n0909/n1286; Dish results n1284; NRG n0938; Newmont n0940; WeWork halt n0973/n0974 (the halt only; no filing is claimed); Lyft preview n0944; Duda address n1714; RBA previews n0075/n0078 (published before the 03:30 UTC decision, used only as expectations); Bloomberg He Lifeng n0194, Nikkei Micron n1298 and JoongAng Samsung share sale n0949 (none is tied to an edition-date release). The exact minute of publication for these placeholders cannot be verified.",
+  "The RBA decision of 7 November and China trade data due on 7 November appear only as pending events, never as outcomes.",
+  "Exclusions were not edited. Hashes were computed after the last edit, and exclusions/2023-11-07.json was confirmed unchanged against git HEAD."
+ ],
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "2ce501f06f12596cfec1bf17ac0de7e4bee2d020b56603c413c8f096053ff320",
+   "new_exclusions_sha256": "9c11c44c63e4694778014ed4bce7fd33574190c6caf361897d3f42b913046764",
+   "excluded_ids_now": [
+    "n0023",
+    "n0076",
+    "n0122",
+    "n0547",
+    "n0848",
+    "n0860",
+    "n0899",
+    "n0935",
+    "n1292",
+    "n1516",
+    "n1528",
+    "n1870",
+    "n1889",
+    "n1937",
+    "n1947"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
+}

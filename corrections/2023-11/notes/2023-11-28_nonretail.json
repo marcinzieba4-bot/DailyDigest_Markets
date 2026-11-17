@@ -1,0 +1,21 @@
+{
+ "date": "2023-11-28",
+ "author": "nonretail_writer",
+ "own_date_sources_only": true,
+ "central_thesis": "Into 2023-11-28 markets have priced the end of Fed tightening: the Treasury curve bull-flattened (10Y down 45 bps over 20 observations to 4.39%, 2Y 4.84%), the dollar is on course for its worst month of 2023 and VIX sits at 12.69, so further gains depend on growth holding rather than more rate relief. Evidence is two-sided (record online Black Friday spend and Nvidia's record quarter against Deere's guidance miss, Volkswagen's 'no longer competitive' warning, German budget paralysis and slowing Chinese profits), so the stance is long duration and quality, underweight energy, European autos and staples, overweight Japan domestic/semis and Poland selectively.",
+ "sources_policy": "Only the 2023-11-28 frozen feed (via tools/digest.py) and the 2023-11-28 market card (via tools/showcard.py) were used for facts; no other date's materials, data/, audit/ or web resources were opened. Windows applied: company news/previews 7 days, company results 14 days, macro releases/policy baselines 35 days. Exclusions in exclusions/2023-11-28.json were not cited. Numeric spot-FX levels were not used; currency direction comes from cited headlines only. Previews (Marvell, OPEC+, Cybertruck event, spot ETF) are presented as pending, never as results.",
+ "known_ambiguities_omitted": [
+  "n0015 (Guardian, 'Reserve Bank hikes cash rate by 25 basis points to 4.35%') is timestamped 2023-11-06 08:00 UTC although the RBA decision came on 7 November AEDT; not cited here (n0019 used instead) and flagged as misdated for earlier editions.",
+  "n0224 (Reuters, China industrial profits growth slows) is timestamped 2023-11-26 08:00 UTC although October industrial profits were released on 27 November Beijing time; safe for this edition but the timestamp precedes the event.",
+  "n0683 (WSJ, Shein files to go public) is dated 2023-11-27 08:00 with a placeholder time; the filing report may have appeared late on 27 November US time near the cutoff, so it was not used.",
+  "n0593 and n0618 (Motley Fool on Berkshire selling UPS and P&G stakes) describe a mid-November 13F disclosure older than the seven-day company-news window; not used.",
+  "n0809 versus n0810 give TJX's holiday outlook in opposite directions (downbeat holiday earnings vs raised guidance); not used.",
+  "n1107/n1126 (yen weakening, traveller spending) versus n1106 (dollar sliding against the yen) describe different horizons of yen direction; only n1106 was used for direction.",
+  "n0050 (Aussie dollar weak) versus n0055 (falling US dollar or rising Australian dollar) conflict on AUD direction; neither was used for currency claims.",
+  "n1330 reports a state company's share-price collapse without naming it; it was not attributed to JSW.",
+  "n1300 and n1326 carry numeric EUR/PLN levels/changes; not used because numeric spot-FX is prohibited.",
+  "n0641 ('Top announcements of AWS re:Invent 2023') is a rolling page for an event that ran past the cutoff; not used.",
+  "n1236 (KGHM analyst day page) is a bare URL title; not used."
+ ],
+ "authoring_stage": "initial nonretail draft before independent review"
+}
