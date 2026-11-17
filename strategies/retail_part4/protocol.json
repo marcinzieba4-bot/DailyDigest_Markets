@@ -1,30 +1,43 @@
 {
   "study": "Part 4 November 2023 historical extension",
-  "status": "Code foundation only; no new portfolio outcomes",
-  "main_start": "2023-11-01",
-  "end": "2026-10-30",
-  "source_allocation": 0.25,
+  "status": "Nine cases predeclared; no new portfolio outcomes; complete source coverage and independent preflight required",
+  "cases": 9,
+  "case_config": {
+    "november_continuous": {
+      "start": "2023-11-01",
+      "end": "2026-10-30",
+      "source_min": "2023-11-01",
+      "prepared_path": "inputs/main_november_continuous_prepared.json"
+    },
+    "september_current": {
+      "start": "2024-09-01",
+      "end": "2026-10-30",
+      "source_min": "2024-09-01",
+      "prepared_path": "inputs/main_september_current_prepared.json"
+    },
+    "september_recorded_fixture": {
+      "start": "2024-09-01",
+      "end": "2026-10-30",
+      "source_min": "2024-09-01",
+      "prepared_path": "inputs/main_september_recorded_fixture_prepared.json"
+    }
+  },
   "policies": [
     "dollar_short25",
     "beta40_daily_short25",
     "unhedged25"
   ],
-  "public_source_case_design": [
-    "november_continuous",
-    "september_current"
-  ],
-  "recorded_fixture_case": "september_recorded_fixture",
-  "recorded_fixture_transfer_and_publication": "Blocked pending specific data authorization; no private fixture or recorded trade/order contents in public files",
-  "nine_book_design": "Three source windows or fixtures times three unchanged hedge policies; the recorded fixture phase remains gated on authorization",
-  "source_rules": "Use positional Part4 only and unchanged frozen17ETF mapping with completePL=F/HG=F exclusions. Metadata/liquidity candidate eligibility precedes reservation; reserve before SMA20, retain full-flat cooldown and unrenormalized source weights.",
-  "holding": "Scheduled tenth subsequent session opening within21calendar days; terminal finalclose liquidation markedcensored.",
+  "source_allocation": 0.25,
   "costs": {
-    "per_net_order": 0.001,
-    "short_borrow_ACT365": 0.03,
+    "per_net_physical_order": 0.001,
+    "annual_ACT365_short_borrow": 0.03,
     "cash_yield": 0
   },
-  "unhedged_scope": "No conceptual SPY hedge. A genuine SPY source instrument or source short remains possible; actual net physical shorts incur borrow. Do not force long-only assumptions.",
-  "filters": "No RSI, weekly filter, new regime, stop, takeprofit or parameter grid.",
-  "execution_gate": "Prepare/source-audit/freeze first; explicit root GO before new portfolio outcomes. Simulation consumes reviewed frozen inputs without refetch. No automatic repository write publication.",
-  "source_timing": "Current anonymous public snapshot; assumed printed-date EOD America/New_York availability is counterfactual. Exact prior source/price vintage identity is not claimed."
+  "source_rules": "Only fourth positional What Retail Is Playing topic. Frozen17ETF map plus completePL=F/HG=F identity exclusion. Metadata/liquidity candidate eligibility precedes reservation; reserve before directional prior-closeSMA20; preserve completeflat cooldown and originalunrenormalized sourceweights.",
+  "holding": "Tenth subsequent session opening within21calendar days, terminalfinalclose liquidationflaggedcensored. No RSI, weeklyfilter, extra regime, newstop/takeprofit, orparameter grid.",
+  "hedges": "Fixed entry-dollar shortSPY; daily40strictprior-return beta short-or-flatSPY; no conceptualSPYhedge. Preserve genuine sourceSPY/source shorts, netphysicalsame-symbol orders andactualshortborrow. No long-onlyassumption fornew sourcecases.",
+  "source_timing": "Anonymous current public snapshot with exactHTTPmetadata/contenthashes. Historical availability assumedprinted-date23:59:59 America/New_York; retrospective research, not verifiedhistoricalpublication oruntouchedvalidation.",
+  "bridges": "Septembercurrent-clock distinguishes earlierchronology fromcurrent source snapshot. Recorded25fixture reconstructedfromapproved75tradeCSV repricedonfreshprices, notoriginalpreparedJSON orpriorprice/sourcebyteidentity.",
+  "execution_gate": "ExplicitrootconditionalGO authorizes a guarded singlejob: fetchonce, prepare, freeze exactlocalinputs, independentstrictpreflight, then simulateonlyifallgatespass; no refetch betweenfreezeandsimulation. NooutcomesbeforethatGO.",
+  "publication": "Code and simulatedtrade/orderdata authorized. Raw reportarchives/fullmarketresponsefiles notpublished ortransferred. Only approvedsimulatedresults, aggregatechecks andcharts maybe artifacts/logtransport."
 }

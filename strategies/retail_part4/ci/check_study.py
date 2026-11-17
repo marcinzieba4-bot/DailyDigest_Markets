@@ -90,7 +90,12 @@ def code_and_freeze(root):
         assert c["prepared_path"] in files
         assert c["source_min"]==CASE_STARTS[case]
     assert "prices.csv" in files and "market_manifest.json" in files
+    assert "market/fetch_prices.py" in files
+    assert "source/canonical_html_manifest.json" in files
     assert "inputs/archival_replay_etf_items.csv" in files
+    if "september_recorded_fixture" in config:
+        assert "benchmarks/september_2024_recorded/trades.csv" in files
+        assert "benchmarks/september_2024_recorded/orders.csv" in files
     assert not (root/"results/summary.json").exists(), "Fresh portfolio summary exists before preflight"
     return frozen,checks
 
@@ -305,6 +310,36 @@ def independent_preparation(prices,days,meta,items,start,end,source_min):
                     held_states+=1
     return opportunities,cohorts,qualifications,held_states,len(beta_cache)
 
+def recorded_fixture(root,prepared):
+    path=root/"benchmarks/september_2024_recorded/trades.csv"
+    expected_hash="59fc98f15cfab32b8918b644e7e48db5dc30855821c24c86ceb4527f8a2fcc96"
+    assert digest(path)==expected_hash
+    orders=root/"benchmarks/september_2024_recorded/orders.csv"
+    assert digest(orders)=="ef578ab28e6896cde1894c6c815eeae36bbb05799cca3326debe7adf95e49267"
+    rows=read(path);assert len(rows)==75
+    signatures={}
+    for policy in POLICIES:
+        group=[r for r in rows if r["policy"]==policy];assert len(group)==25
+        signatures[policy]=[(r["basket_id"],r["report_date"],r["entry_date"],r["exit_date"],r["exit_kind"],r["symbols"]) for r in group]
+    assert all(v==signatures["unhedged25"] for v in signatures.values())
+    expected=[]
+    for row in [r for r in rows if r["policy"]=="dollar_short25"]:
+        symbols=json.loads(row["source_directions"])
+        assert len(symbols)==1 and symbols.get(row["symbols"])==1
+        close(float(row["source_entry_notional"])*1.001,float(row["entry_nav"])*.25)
+        expected.append({"basket_id":row["basket_id"],"report_date":row["report_date"],
+            "entry_date":row["entry_date"],"exit_date":row["exit_date"],"exit_kind":row["exit_kind"],
+            "heading":row["report_heading"],"terminal_censored":truth(row["terminal_censored"]),
+            "legs":[{"symbol":row["symbols"],"direction":1,"weight":1.0}]})
+    same(expected,prepared["cohorts"]["etf_own"])
+    assert all(not c.get("source_sha256") for c in prepared["cohorts"]["etf_own"])
+    p=prepared["fixture_provenance"]
+    assert p["csv_sha256"]==expected_hash and p["reconstructed_from_recorded_trades"] is True
+    assert p["not_original_prepared_json_bytes"] is True
+    assert prepared["source_corpus"]=="recorded_economic_fixture" and prepared["source_items"]==25
+    assert not prepared["etf_opportunities"] and not prepared["etf_qualification"]
+    return {"case":"september_recorded_fixture","source_mode":"Verified recorded economic decisions repriced on current data; not original prepared bytes or original price vintage.","funded_cohorts":25,"benchmark_trade_csv_sha256":expected_hash}
+
 def run_preflight(root):
     frozen,code=code_and_freeze(root)
     prices,days,meta,price_report=prices_and_metadata(root)
@@ -320,8 +355,7 @@ def run_preflight(root):
         assert all(c["entry_date"]<c["exit_date"] or (c["exit_kind"]=="close" and truth(c["terminal_censored"])) for c in cohorts)
         assert all(len({t["symbol"] for t in c["legs"]})==len(c["legs"]) for c in cohorts)
         if case=="september_recorded_fixture":
-            assert len(cohorts)==25 and not prepared["etf_opportunities"] and not prepared["etf_qualification"]
-            check={"case":case,"source_mode":"Recorded economic decisions repriced; not original prepared bytes or original price vintage.","funded_cohorts":len(cohorts)}
+            check=recorded_fixture(root,prepared)
         else:
             opp,expected,qual,held,beta_count=independent_preparation(prices,days,meta,items,cfg["start"],cfg["end"],cfg["source_min"])
             same(opp,prepared["etf_opportunities"]);same(expected,cohorts);same(qual,prepared["etf_qualification"])
