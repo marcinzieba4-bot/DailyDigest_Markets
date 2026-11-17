@@ -1,0 +1,87 @@
+{
+ "date": "2023-11-27",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "02be6944c681fb0a002d062b7d8b43b303218ed006448eeb1e49a4c9518a9a11",
+ "card_sha256": "b20b924862ead077ab94e26f0b5fbc798f900428f2eab816efc433645c28e8c2",
+ "exclusions_sha256": "998806331f79dbc28886655de41c3bbe237266221c19d4061713c8b2c3c9f851",
+ "nonretail_content_sha256": "4dbe90df8151a8133261274dcdab7db2371491c7ff651d62321bd24c47d55dd1",
+ "findings": [
+  {
+   "location": "geo/US Macro Stance; geo/US New / Most Important; anticipatory/0 What Is Priced",
+   "issue": "n1021 (CNBC dollar weakens) is stamped Sunday 2023-11-26 placeholder time and reports a market move; it may have been published after 00:00 UTC (Monday Asia morning).",
+   "severity": "major",
+   "resolution": "Replaced with n0976 (InvestmentNews, 2023-11-20, dollar down on rates speculation); DXY figures remain from the card."
+  },
+  {
+   "location": "earnings_pattern Punished",
+   "issue": "Described Nvidia as a completed record quarter meeting Bloomberg test while citing only the preview headline n0855.",
+   "severity": "moderate",
+   "resolution": "Result now carried by n0453 (revenue tripled); n0855 cited only as the pre-print test."
+  },
+  {
+   "location": "crypto Market Context",
+   "issue": "XRP -13.79% is the 20-session return but was phrased as over five sessions.",
+   "severity": "moderate",
+   "resolution": "Reworded to 20 sessions for XRP, five sessions for Dogecoin."
+  },
+  {
+   "location": "underowned/0 Attention Gap",
+   "issue": "Unsupported \"fraction of the coverage\" comparison.",
+   "severity": "minor",
+   "resolution": "Replaced with the card S&P 500 20-session return."
+  },
+  {
+   "location": "underowned/3 Exposure & Risk",
+   "issue": "Unsupported \"yen firmer tone\" explanation for EWJ vs Nikkei gap.",
+   "severity": "minor",
+   "resolution": "Reworded to currency translation and index composition."
+  },
+  {
+   "location": "geo/EU Credit & Inflation",
+   "issue": "\"central bank that refuses to discuss relief\" overstated n0990 headline.",
+   "severity": "minor",
+   "resolution": "Reworded to a central bank warning against premature celebration."
+  },
+  {
+   "location": "earnings_pattern Attention into EPS",
+   "issue": "Asserted re-rating on GLP-1 commentary as fact.",
+   "severity": "minor",
+   "resolution": "Made modal (\"can be re-rated\")."
+  },
+  {
+   "location": "geo/US, geo/PL, flows",
+   "issue": "Sunday 2023-11-26 stamped records n0147, n1492, n1438 and Saturday n1424/n1612/n0144 checked: general or weekend-paper content with no dated completed outcome; kept. n1358 supports the pending Morawiecki swearing-in. No China industrial profits, December events or later-dated facts found.",
+   "severity": "info",
+   "resolution": "No change."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only 2023-11-27 feed headlines, market card and exclusions; no other dates, web or later knowledge. Headline-level support only; Sunday 2023-11-26 placeholder-stamped items judged on plausibility of pre-cutoff publication.",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "86e92727e8bc51dbc966e975a2b35d25276032704b4a84d9a89fab87c842d0a1",
+   "new_exclusions_sha256": "998806331f79dbc28886655de41c3bbe237266221c19d4061713c8b2c3c9f851",
+   "excluded_ids_now": [
+    "n0099",
+    "n0635",
+    "n0666",
+    "n0695",
+    "n0797",
+    "n0834",
+    "n0854",
+    "n0937",
+    "n0943",
+    "n1019",
+    "n1021",
+    "n1579",
+    "n1631"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
+}

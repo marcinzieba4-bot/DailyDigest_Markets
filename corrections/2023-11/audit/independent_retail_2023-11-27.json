@@ -1,0 +1,83 @@
+{
+ "date": "2023-11-27",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "02be6944c681fb0a002d062b7d8b43b303218ed006448eeb1e49a4c9518a9a11",
+ "card_sha256": "b20b924862ead077ab94e26f0b5fbc798f900428f2eab816efc433645c28e8c2",
+ "exclusions_sha256": "998806331f79dbc28886655de41c3bbe237266221c19d4061713c8b2c3c9f851",
+ "retail_draft_sha256": "558c52d078811de8b5d7c3412425fd50ebe04f4d039a6faa3e9afbc7c0c1a4f6",
+ "chronology_checked_against": [
+  "2023-11-01",
+  "2023-11-02",
+  "2023-11-03",
+  "2023-11-06",
+  "2023-11-07",
+  "2023-11-08",
+  "2023-11-09",
+  "2023-11-10",
+  "2023-11-13",
+  "2023-11-14",
+  "2023-11-15",
+  "2023-11-16",
+  "2023-11-17",
+  "2023-11-20",
+  "2023-11-21",
+  "2023-11-22",
+  "2023-11-23",
+  "2023-11-24"
+ ],
+ "findings": [
+  {
+   "location": "retail/2 Silver Why Retail Is Here",
+   "issue": "n1021 (CNBC, Sunday 2023-11-26 stamp) may post-date cutoff as a market-move report.",
+   "severity": "major",
+   "resolution": "Replaced with n0976 (InvestmentNews, 2023-11-20); notes updated."
+  },
+  {
+   "location": "retail/0 lead Historical Analog",
+   "issue": "Closing sentences were generic filler and an untethered generalisation.",
+   "severity": "minor",
+   "resolution": "Replaced with card-based Target vs Walmart 20-session contrast (retail is a modal reflex, not evidence of flows)."
+  },
+  {
+   "location": "retail chronology",
+   "issue": "Amazon was a smaller item 2023-11-24; lead now justified by newly published Black Friday results (n0144, n0673) and Cyber Monday coverage (n0149, n0151). Coinbase (11-21), silver/gold (11-01) and Berkshire are not back-to-back repeats; four narratives distinct; titles in required format.",
+   "severity": "info",
+   "resolution": "No change."
+  },
+  {
+   "location": "retail/0 timing",
+   "issue": "n0144 (Saturday), n0149/n0151/n0737 (Sat/Sun) are weekend consumer content with no after-cutoff outcome; Cyber Monday treated as pending.",
+   "severity": "info",
+   "resolution": "No change."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only 2023-11-27 feed headlines, market card and exclusions; no other dates, web or later knowledge. Headline-level support only; Sunday 2023-11-26 placeholder-stamped items judged on plausibility of pre-cutoff publication.",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "86e92727e8bc51dbc966e975a2b35d25276032704b4a84d9a89fab87c842d0a1",
+   "new_exclusions_sha256": "998806331f79dbc28886655de41c3bbe237266221c19d4061713c8b2c3c9f851",
+   "excluded_ids_now": [
+    "n0099",
+    "n0635",
+    "n0666",
+    "n0695",
+    "n0797",
+    "n0834",
+    "n0854",
+    "n0937",
+    "n0943",
+    "n1019",
+    "n1021",
+    "n1579",
+    "n1631"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
+}
