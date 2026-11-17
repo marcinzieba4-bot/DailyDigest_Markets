@@ -1,0 +1,39 @@
+name: Part 4 public data availability
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '.github/workflows/retail-part4-availability.yml'
+      - 'strategies/retail_part4/ci/availability_probe.py'
+      - 'strategies/retail_part4/README.md'
+permissions:
+  contents: write
+jobs:
+  probe:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Probe public archives and SPY warmup
+        env:
+          SOURCE_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python strategies/retail_part4/ci/availability_probe.py
+      - name: Retain probe artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: retail-part4-availability
+          path: strategies/retail_part4/availability_probe.json
+          retention-days: 14
+          if-no-files-found: error
+      - name: Publish probe metadata to research branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+          PUBLISH_BRANCH: ${{ github.event.pull_request.head.ref || github.ref_name }}
+        run: python strategies/retail_part4/ci/availability_probe.py --publish
