@@ -1,0 +1,152 @@
+{
+  "date": "2023-11-03",
+  "status": "accepted",
+  "reviewer": "independent_reviewer",
+  "fatal_or_major_remaining": 0,
+  "feed_sha256": "76f533975161f45e8300f9d019b1726ee11dd3639f4ce59fa56b5b1fcc2b6e48",
+  "card_sha256": "24a6dd007fdf539f682ba3ab9e82fc9a502c9630c3a60416236060844dbf0eab",
+  "exclusions_sha256": "d68d6133516042faff5b10b405b20c608ccedfcfd1bb82fee43fc222233c84e7",
+  "nonretail_content_sha256": "98d999ab360d6057c91311bbeb35cbbcdec2fef4cc557a7ea7bd7019befc76e2",
+  "findings": [
+    {
+      "location": "anticipatory[1].parts[0] (What Is Priced)",
+      "issue": "n0025 (Real Estate, 'November interest rate hike all but guaranteed', 2023-10-25) is an RBA-decision preview 8.7 days before cutoff, outside the seven-day preview window by meaning although catalogued monthly.",
+      "severity": "major",
+      "resolution": "Fixed: replaced the clause with 'economist Warren Hogan calls a rise inevitable [[n0084]]' (2023-11-02, in window). n0025 is no longer cited anywhere."
+    },
+    {
+      "location": "sectors[4].parts[2] (XLI EPS Upside Watch)",
+      "issue": "The $328 million New York wage settlement was attributed to Uber alone; the cited headline n1053 is a joint Uber and Lyft settlement.",
+      "severity": "major",
+      "resolution": "Fixed: 'now shares a $328 million New York wage settlement with Lyft [[n1053]]'."
+    },
+    {
+      "location": "underowned[3].parts[1-2] (Biotech beyond GLP-1)",
+      "issue": "Lilly's $200 million purchase of Beam's share of Verve drugs (n0582) was called an obesity-adjacent asset; the headline identifies Verve only as a gene-editing firm, so the characterisation was unsupported, and the trigger repeated it.",
+      "severity": "major",
+      "resolution": "Fixed: risk now reads 'keeps its deals small and selective ... from gene-editing firm Verve [[n0582]]'; trigger now watches whether deals 'scale up from bolt-ons'."
+    },
+    {
+      "location": "geo[2].parts[6] (CN New / Most Important)",
+      "issue": "'record-pace government borrowing' overstated n0182, which reports a 2023 high, and the year needed same-paragraph support.",
+      "severity": "minor",
+      "resolution": "Fixed: 'government borrowing at a 2023 high [[n0182]]'."
+    },
+    {
+      "location": "geo[2].parts[0] (CN Macro Stance)",
+      "issue": "'October undid September's tentative stabilisation' asserted a September improvement with no cited headline in the paragraph.",
+      "severity": "minor",
+      "resolution": "Fixed: 'October disappointed:'."
+    },
+    {
+      "location": "geo[2].parts[3] (CN Property)",
+      "issue": "Evergrande hearing described as adjourned 'again'; n0186 states only that it was adjourned.",
+      "severity": "minor",
+      "resolution": "Fixed: removed 'again'."
+    },
+    {
+      "location": "geo[5].parts[0] (PL Macro Stance)",
+      "issue": "Election day number '15' had no own-date headline or card support in the paragraph.",
+      "severity": "minor",
+      "resolution": "Fixed: 'After the October election'."
+    },
+    {
+      "location": "geo[5].parts[3] (PL Corporate & Sectors)",
+      "issue": "'Swiss-franc loans' and 'Poczta Polska's stake' added detail beyond n0094 (FX loans) and n1881 (a state giant changes its mind; Bank Pocztowy again not going to PKO BP).",
+      "severity": "minor",
+      "resolution": "Fixed: 'foreign-currency loans' and 'a state-owned giant has changed its mind, so Bank Pocztowy will again not pass to PKO BP [[n1881]]'."
+    },
+    {
+      "location": "sectors[0].parts[1] (XLK Reported)",
+      "issue": "'the shares slipped [[n0893]]' could be read as the regular session, which the card shows at +2.07% for AAPL on 2023-11-02.",
+      "severity": "minor",
+      "resolution": "Fixed: 'slipped after the bell'."
+    },
+    {
+      "location": "sectors[6].parts[2] (XLP EPS Upside Watch)",
+      "issue": "'Share gains, not price, are now the EPS source' contradicted the Reported part (Kraft Heinz lifting targets on higher prices, n0776).",
+      "severity": "minor",
+      "resolution": "Fixed: 'Share gains, not further price increases, are the next EPS source.'"
+    },
+    {
+      "location": "sectors[7].parts[2] (XLV EPS Upside Watch)",
+      "issue": "Unsupported claim that capacity announcements 'now move the stocks as much as clinical data'.",
+      "severity": "minor",
+      "resolution": "Fixed: 'capacity can matter as much as clinical data for the leaders'."
+    },
+    {
+      "location": "earnings_pattern.parts[3] (Attention into EPS)",
+      "issue": "Starbucks was called an under-credited cost-cutting story although it rose 9.48% on the session (inconsistent with XLY and the Bullish Starbucks catalyst), and the paragraph ended on a filler sentence.",
+      "severity": "minor",
+      "resolution": "Fixed: rewrote the two sentences to contrast Starbucks' planned cuts [[n1031]] on a +9.48% day with PayPal's promised cuts [[n1006]] while PYPL remains down 4.21% over 20 sessions; filler removed."
+    },
+    {
+      "location": "underowned[0].parts[0] (Regional banks Attention Gap)",
+      "issue": "Generic filler sentence 'That is an attention gap, not a valuation verdict.'",
+      "severity": "minor",
+      "resolution": "Fixed: replaced with analysis linking the recession-driven reluctance to the group's two-year-yield earnings driver."
+    },
+    {
+      "location": "geo[0].parts[3] (US Playbook)",
+      "issue": "'the insurance the market has just stopped buying' invented put-buying behaviour.",
+      "severity": "minor",
+      "resolution": "Fixed: 'insurance that has just become cheaper' (VIX 15.66, -24.27% over five sessions)."
+    },
+    {
+      "location": "anticipatory[0].parts[2] (Payrolls Risk)",
+      "issue": "'positioning has moved quickly' asserted positioning without evidence.",
+      "severity": "minor",
+      "resolution": "Fixed: 'prices have moved quickly'."
+    },
+    {
+      "location": "catalysts[4].parts[0-1] (Starbucks)",
+      "issue": "'giving it pricing data that rivals lack' and the 'China execution' hurdle had no own-date support; the loyalty-hedge headline is the company's own framing.",
+      "severity": "minor",
+      "resolution": "Fixed: attributed the hedge to Starbucks [[n1383]] and anchored the hurdle in low-income fast-food traffic [[n1276]]."
+    },
+    {
+      "location": "flows.parts[3] (Equity & Fund Flows)",
+      "issue": "'fee compression, not new money' asserted an unsupported flow conclusion from n0078.",
+      "severity": "minor",
+      "resolution": "Fixed: 'fee compression is now the main weapon in the product race'."
+    },
+    {
+      "location": "crypto.title and crypto.parts[1]",
+      "issue": "Title 'outlasts the FTX verdict' implied an observed post-verdict price reaction that the prior completed daily close cannot show, and 'closing the courtroom chapter' ignored pending sentencing.",
+      "severity": "minor",
+      "resolution": "Fixed: title 'Bitcoin's ETF bid meets the FTX verdict'; 'closing the trial chapter'."
+    },
+    {
+      "location": "crypto.parts[1] (New / Most Important); retail[3].parts[0] (Why Retail Is Here)",
+      "issue": "n1124 (Politico, SBF guilty on all counts) carries the 2023-11-02 07:00 placeholder stamp for a US-evening jury verdict, so it was checked against the 00:00 UTC cutoff.",
+      "severity": "note",
+      "resolution": "Retained. The verdict was returned on the evening of 2023-11-02, shortly before 20:00 ET (00:00 UTC under EDT), so the event precedes the cutoff; NYT n1126 and NPR n1127 carry the same verdict in the same day batch. Wording limited to the verdict itself; the crypto title no longer implies an observed post-verdict price reaction."
+    },
+    {
+      "location": "sectors[0], sectors[1], sectors[5], catalysts[1], flows.parts[3], earnings_pattern.parts[2]",
+      "issue": "Previous-day placeholder records for US after-close releases on 2023-11-02 (Apple n0893 n0894 n1351 n1353 n1356 n1357 n0892; Expedia n0948 n0950; Paramount n1004) and the CNBC Dan Ives Apple segment n1065 were checked for post-cutoff publication.",
+      "severity": "note",
+      "resolution": "Retained. These releases came out around 20:00-21:00 UTC on 2023-11-02, before the cutoff; the Ives item is an opinion segment within the 2023-11-02 Pacific day, not a result. Apple's 'shares slip' is now explicitly after the bell, consistent with the card's +2.07% regular session."
+    },
+    {
+      "location": "geo[2], geo[3], geo[4], underowned[1], sectors[3]",
+      "issue": "Records that could be Asia-morning 2023-11-03 publications (CGTN n0227, SCMP n0231, Nippon.com n1656, Straits Times n1689, MPA n0084, Reuters n1651) and n1073 (J.P. Morgan, 2023-11-02 20:16 UTC) were checked for edition-date releases and later vintage.",
+      "severity": "note",
+      "resolution": "Retained. Each reports an event or commentary that precedes the cutoff (late-October regional and bank results, WGC September purchase data, a 2023-11-02 JST cabinet package, a pre-meeting economist comment); n1073 carries an explicit pre-cutoff time and no later-year marker. No cited record shows a later-vintage title."
+    },
+    {
+      "location": "whole nonretail component",
+      "issue": "Card cross-check of every quoted close, session, 1/5/20-session return, Treasury level, spread and bps change; window check of every cited record older than seven days by meaning; cross-section stance and playbook consistency.",
+      "severity": "note",
+      "resolution": "No further discrepancies. Older records rely on the 35-day macro/policy or 14-day results windows (for example n0004, n0013, n1702, n1703, n2076, n0160, n1163, n1165). Stances and playbooks are consistent across geo, sectors, anticipatory and catalysts."
+    }
+  ],
+  "reviewed_validation_warnings": [],
+  "scope_limits": [
+    "Headline-level review only: claims checked against the cited headline text and own-date card values (tools/showcard.py 2023-11-03), never imagined article bodies.",
+    "Evidence limited to feeds/2023-11-03.json.gz via tools/digest.py, cards/2023-11-03.json via tools/showcard.py, and exclusions/2023-11-03.json. No other date's feed, card or draft, no data/ or cache/, and no web access.",
+    "Exact publication times of records with day-granular 07:00/08:00 UTC placeholders cannot be certified; previous-day records were judged by whether the reported event plausibly precedes 00:00 UTC on 2023-11-03.",
+    "exclusions/2023-11-03.json was not modified; n0025 was dropped from citation as out of window by meaning, not excluded.",
+    "Verification after the final edit: verify.py --nonretail PASS (290 sources, 8910 words, 0 warn), verify.py --retail PASS (33 sources, 1274 words, 0 warn), check_merged.py MERGED PASS (303 sources, 10184 words); merged citations: 303 distinct, maximum 3 uses per id."
+  ]
+}
