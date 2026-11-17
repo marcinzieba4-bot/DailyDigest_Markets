@@ -1,0 +1,43 @@
+{
+  "study": "Part 4 November 2023 historical extension",
+  "status": "Nine cases predeclared; no new portfolio outcomes; complete source coverage and independent preflight required",
+  "cases": 9,
+  "case_config": {
+    "november_continuous": {
+      "start": "2023-11-01",
+      "end": "2026-10-30",
+      "source_min": "2023-11-01",
+      "prepared_path": "inputs/main_november_continuous_prepared.json"
+    },
+    "september_current": {
+      "start": "2024-09-01",
+      "end": "2026-10-30",
+      "source_min": "2024-09-01",
+      "prepared_path": "inputs/main_september_current_prepared.json"
+    },
+    "september_recorded_fixture": {
+      "start": "2024-09-01",
+      "end": "2026-10-30",
+      "source_min": "2024-09-01",
+      "prepared_path": "inputs/main_september_recorded_fixture_prepared.json"
+    }
+  },
+  "policies": [
+    "dollar_short25",
+    "beta40_daily_short25",
+    "unhedged25"
+  ],
+  "source_allocation": 0.25,
+  "costs": {
+    "per_net_physical_order": 0.001,
+    "annual_ACT365_short_borrow": 0.03,
+    "cash_yield": 0
+  },
+  "source_rules": "Only fourth positional What Retail Is Playing topic. Frozen17ETF map plus completePL=F/HG=F identity exclusion. Metadata/liquidity candidate eligibility precedes reservation; reserve before directional prior-closeSMA20; preserve completeflat cooldown and originalunrenormalized sourceweights.",
+  "holding": "Tenth subsequent session opening within21calendar days, terminalfinalclose liquidationflaggedcensored. No RSI, weeklyfilter, extra regime, newstop/takeprofit, orparameter grid.",
+  "hedges": "Fixed entry-dollar shortSPY; daily40strictprior-return beta short-or-flatSPY; no conceptualSPYhedge. Preserve genuine sourceSPY/source shorts, netphysicalsame-symbol orders andactualshortborrow. No long-onlyassumption fornew sourcecases.",
+  "source_timing": "Anonymous current public snapshot with exactHTTPmetadata/contenthashes. Historical availability assumedprinted-date23:59:59 America/New_York; retrospective research, not verifiedhistoricalpublication oruntouchedvalidation.",
+  "bridges": "Septembercurrent-clock distinguishes earlierchronology fromcurrent source snapshot. Recorded25fixture reconstructedfromapproved75tradeCSV repricedonfreshprices, notoriginalpreparedJSON orpriorprice/sourcebyteidentity.",
+  "execution_gate": "ExplicitrootconditionalGO authorizes a guarded singlejob: fetchonce, prepare, freeze exactlocalinputs, independentstrictpreflight, then simulateonlyifallgatespass; no refetch betweenfreezeandsimulation. NooutcomesbeforethatGO.",
+  "publication": "Code and simulatedtrade/orderdata authorized. Raw reportarchives/fullmarketresponsefiles notpublished ortransferred. Only approvedsimulatedresults, aggregatechecks andcharts maybe artifacts/logtransport."
+}

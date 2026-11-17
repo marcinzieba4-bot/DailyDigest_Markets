@@ -1,0 +1,33 @@
+name: Part 4 May template diagnostics
+on:
+  workflow_dispatch:
+  push:
+    branches: ['research/retail-part4-nov2023']
+    paths:
+      - '.github/workflows/retail-part4-raw.yml'
+      - 'strategies/retail_part4/source_tools/fetch_public_sources.py'
+      - 'strategies/retail_part4/market/fetch_prices.py'
+      - 'strategies/retail_part4/ci/diagnose_may_schema.py'
+permissions:
+  contents: read
+jobs:
+  public-input-diagnostics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    defaults:
+      run:
+        working-directory: strategies/retail_part4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install research dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Compile published source
+        run: python -m compileall -q .
+      - name: Inspect May template structure
+        run: python ci/diagnose_may_schema.py
