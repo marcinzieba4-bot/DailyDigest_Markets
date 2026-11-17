@@ -2,8 +2,21 @@
  "date": "2023-11-03",
  "author": "nonretail_writer",
  "own_date_sources_only": true,
- "central_thesis": "",
- "sources_policy": "",
- "known_ambiguities_omitted": [],
+ "central_thesis": "Peak-rate relief, not growth, is driving cross-asset prices: the Fed's second straight hold with Powell hedging, a larger Treasury refunding and soft ISM (46.7) and ADP (113,000) readings coincided with a 19 bps five-observation fall in the 10Y to 4.67%, a lower DXY and VIX, and outsized gains in rate-sensitive equity (KRE, XLRE, Russell 2000), while the curve stays inverted at -31 bps. We lean into quality duration and under-owned rate-sensitive equity in the US and into post-election Polish banks and insurers, but stay underweight euro-area and mainland-China cyclicals where the same relief meets contracting activity, with the pending US payrolls print and the enlarged coupon auctions as the tests that could reverse the move.",
+ "sources_policy": "Every fact comes from the 2023-11-03 frozen own-date feed (read via tools/digest.py) or the 2023-11-03 market card (read via tools/showcard.py); no other date's feed/card/spec/draft, no data/audit/cache files and no web resources were used. All cited IDs are in the own-date feed, none is in exclusions/2023-11-03.json, and no ID is used more than three times. Numbers come only from the card or from a headline cited in the same part; data tags use each instrument's card session (2023-11-02; Polish one-session moves are measured from 2023-10-31 because Warsaw was closed on November 1; Tokyo is shut on the report date). Numeric spot-FX levels/returns are excluded; currency direction is taken only from cited headlines (yen: n1625/n1640/n1631; zloty: n1658 framing; dollar: n0652/n2205 plus DXY). Previews are used only as pending events, never as results. Background knowledge is limited to general mechanisms; calendar facts about the November 1 Warsaw and November 3 Tokyo closures come from BRIEF.md.",
+ "known_ambiguities_omitted": [
+  "US October payrolls are released on the report date (after cutoff): treated only as pending, no outcome claimed; no release date stated.",
+  "Dino Polska 'Dino zachwyciło rynek. To był kwartał wzrostów' (n1869, 2023-11-02): a quarterly-results claim whose release timing cannot be verified from the headline; omitted.",
+  "Orlen quarterly results appear only in a weekly domestic preview (n1811); no result headline, so no Orlen result claimed.",
+  "WeWork bankruptcy is reported as imminent (n0622, n0853, n0855); no filing is claimed.",
+  "No eligible preview gives a date for the next RPP/NBP or RBA decision (n0036 says only 'next week' relative to its own date); no calendar dates used.",
+  "Numeric FX in n1640 (yen level), n1812 (NBP EUR fixing), n1826, n1746 and n1646 omitted under the spot-FX rule; only direction used.",
+  "Apple's after-hours reaction to its 2023-11-02 report is not in the card; only the headline wording ('shares slip', n0893) is used, with no number.",
+  "Paramount (PARA) card row shows 1.06 USD and 0.00% at every horizon, inconsistent with the headline-reported jump (n1004); no PARA price used.",
+  "Large card moves in Shopify, Arista, Affirm and Super Micro lack own-date explanatory headlines (except Affirm's Amazon tie-up, used only as a partnership fact); not attributed to earnings.",
+  "Treasury one-observation changes exist in the card JSON but are not displayed by showcard; not used.",
+  "n1625 (BoJ adjustment 'seen inadequate', timestamped 2023-10-30 07:00) appears to precede the decision it describes; content is still pre-cutoff and is used only for yen direction.",
+  "Sam Bankman-Fried verdict headlines (n1124, n1126, n1127) are dated 2023-11-02; the verdict came late on 2023-11-02 US time, shortly before the UTC cutoff. Used once (n1124); reviewer should confirm timing."
+ ],
  "authoring_stage": "initial nonretail draft before independent review"
 }
