@@ -1,0 +1,56 @@
+{
+ "date": "2023-11-10",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "fe41a1be106266bf87781ae9e93fa8f6d2871c5a54adf422be402de18d600c12",
+ "card_sha256": "736d61ed50ce1aa8159cfe3d3ff22d00b643a1b13c3eaa04a2ab0a27260fb9e8",
+ "exclusions_sha256": "22462a1a7803c0f56d03418739455bc87429244faab7eb080ab4273c96a79e20",
+ "nonretail_content_sha256": "ddc615654c8616c8a2c80530f35f04822116a862a53fb60ceadade19007c75b3",
+ "findings": [
+  {
+   "location": "flows/Rates & Dollar",
+   "issue": "Powell remarks asserted as the cause of the DXY pause; Gensler/hedge-fund headline over-read as a dispute about leveraged auction positions.",
+   "severity": "minor",
+   "resolution": "Softened to modal wording; Gensler sentence reworded to what the headline supports."
+  },
+  {
+   "location": "flows/Credit Check",
+   "issue": "Q3 fixed-income issuance/ADV headline over-read as 'less net supply in credit'; Citadel hiring read as a firm market signal.",
+   "severity": "minor",
+   "resolution": "Reworded to 'lower issuance' and modal language."
+  },
+  {
+   "location": "flows/Equity & Fund Flows",
+   "issue": "'Retail money is the marginal buyer of wrappers' is an unsupported ranking claim.",
+   "severity": "minor",
+   "resolution": "Changed to 'a growing buyer' consistent with the cited ETF retail-boom headlines."
+  },
+  {
+   "location": "crypto/Playbook",
+   "issue": "Miners described as lagging without horizon, while 20-session returns for MARA/RIOT/CIFR are positive.",
+   "severity": "minor",
+   "resolution": "Qualified as lagging over five sessions, matching the quoted Riot figure."
+  },
+  {
+   "location": "sectors/XLC EPS Upside Watch; catalysts/Disney",
+   "issue": "Tentative SAG-AFTRA deal (n0807) stated as already restoring/removing a content drag; Netflix licensing (n1124) stated as adding revenue.",
+   "severity": "minor",
+   "resolution": "Conditional wording (would/could/points toward)."
+  },
+  {
+   "location": "underowned/European defence; sectors/XLF; sectors/XLRE",
+   "issue": "Inferences stated as fact (Patriot withdrawal 'must' be filled; Affirm jump proves credit not breaking; one Apollo deal = private credit is the marginal funder).",
+   "severity": "minor",
+   "resolution": "Modal wording."
+  },
+  {
+   "location": "all cited ids",
+   "issue": "Checked every cited id for timestamp vintage (previous-day Pacific-midnight placeholders: n0752, n0756, n0771, n0801, n0814, n0849, n0867, n0944-n0948, n1919-n1924 and others), numbers against the card, roles/outlets, and hindsight; no cited record fails and no excluded id is cited.",
+   "severity": "info",
+   "resolution": "No change required. n0849 (Barron's Nvidia China chips, stamped 2023-11-09 08:00 UTC) is the least certain intraday time but is a US-daytime story consistent with pre-cutoff publication; left in place."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only against the frozen 2023-11-10 feed (headlines only), own-date card and exclusions; no other dates' feeds/cards/drafts, data/, cache/ or web consulted. Publication times of Pacific-midnight placeholder records cannot be resolved beyond plausibility; article bodies not available."
+}

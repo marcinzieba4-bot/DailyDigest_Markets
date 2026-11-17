@@ -1,0 +1,59 @@
+{
+ "date": "2023-11-10",
+ "status": "accepted",
+ "reviewer": "independent_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "fe41a1be106266bf87781ae9e93fa8f6d2871c5a54adf422be402de18d600c12",
+ "card_sha256": "736d61ed50ce1aa8159cfe3d3ff22d00b643a1b13c3eaa04a2ab0a27260fb9e8",
+ "exclusions_sha256": "22462a1a7803c0f56d03418739455bc87429244faab7eb080ab4273c96a79e20",
+ "retail_draft_sha256": "13e1dc0ed3ccac90160259a812bf5bacde709817ab65f180a4255ad3c0ab76db",
+ "chronology_checked_against": [
+  "2023-11-01",
+  "2023-11-02",
+  "2023-11-03",
+  "2023-11-06",
+  "2023-11-07",
+  "2023-11-08",
+  "2023-11-09"
+ ],
+ "findings": [
+  {
+   "location": "lead/Smart Money View",
+   "issue": "'Most-quoted ETF analyst' is an invented ranking; 'institutions sound more measured' and 'professionals argue over how much a 32.15% month has paid for' attribute views the headlines (a Deutsche Bank question, FCA and Coinbase-hire items) do not state.",
+   "severity": "major",
+   "resolution": "Rewritten to what the headlines establish: one bullish named analyst, regulatory/institutional items about rules and pace; 20-session figure kept with card source."
+  },
+  {
+   "location": "lead/When the Narrative Breaks; lead/Historical Analog",
+   "issue": "'Trust registration' asserted as having occurred (headline says plans fuel speculation about a filing); 'hand back most of a 12.24% day' is an unsupported computed claim.",
+   "severity": "minor",
+   "resolution": "Reworded to 'a plan to file'/'trust plan' and to undoing the breakout."
+  },
+  {
+   "location": "smaller/NuScale",
+   "issue": "Retail behaviour (bottom-fishers) stated as fact; 'customer that has not yet appeared' unsupported.",
+   "severity": "minor",
+   "resolution": "Modal wording and a headline-consistent break condition."
+  },
+  {
+   "location": "smaller/AMC",
+   "issue": "Opening cites a 'Barbenheimer beat' that no own-date headline supports.",
+   "severity": "minor",
+   "resolution": "Replaced with $10-line framing already cited via n0316; Where It Breaks now points to the 8.71 USD close."
+  },
+  {
+   "location": "chronology",
+   "issue": "Ether is a new lead ticker; ETF-front-run mechanism led 2023-11-01 via bitcoin and bitcoin was smaller on 2023-11-06. AMC smaller on 2023-11-01 and 2023-11-09; third appearance in ten days.",
+   "severity": "info",
+   "resolution": "Accepted: ether lead is justified by newly published BlackRock ethereum-trust, ether-above-$2,000 and ETF-launch headlines (n0771, n0948, n0945) with a 12.24% day; AMC is a material update on new stock-sale and pay-vote headlines (n0756, n0757) with the 2023-11-09 break (below $10) triggered. NuScale and Disney are new."
+  },
+  {
+   "location": "all cited ids",
+   "issue": "Checked timestamps of all 2023-11-09 placeholder records (n0752, n0756, n0757, n0771, n0801, n0834, n0847, n0879, n0944-n0949, n1178, n1919, n1923) for events before 00:00 UTC; titles checked for later vintage; card numbers matched; titles follow 'Name / TICKER - hook' with hooks of at most eight words.",
+   "severity": "info",
+   "resolution": "No cited record fails; none excluded ids cited."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "scope_limits": "Reviewed only against the frozen 2023-11-10 feed (headlines only), own-date card and exclusions plus retail notes for 2023-11-01..09 for chronology; no other dates' feeds/cards/drafts, data/, cache/ or web consulted. Social-attention evidence is limited to headline coverage; no posts or counts exist or are claimed."
+}
