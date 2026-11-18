@@ -1,0 +1,73 @@
+{
+ "date": "2022-02-15",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "b261fe6152029c86c2d6f5e2de3c43f8e475c0d852f25b82c49be2f7fecf2410",
+ "card_sha256": "25b9a11474e7c24d73d9b9e224054cc15ed3738b78d30a1838ab5f68cdc78837",
+ "exclusions_sha256": "edb4308a6088fd2c8be80237dd4371ccc001db99b280850e1c09a5d317bd0f0c",
+ "findings": [
+  {
+   "location": "retail[0] When the Narrative Breaks",
+   "issue": "The macro trigger reused Reuters' 10 February 'big-bang' March hike headline (n2165), the core evidence of the strictly earlier 2022-02-11 lead and a repeat of the 2022-02-14 draft's trigger; the paragraph also restated the Historical Analog's free-coin caution.",
+   "severity": "moderate",
+   "resolution": "Replaced with the 14 February Reuters Bullard/dollar report (n0129, moved from Smart Money View) and replaced the repeated caution with an observable test: Coinbase's next quarterly report (no date claimed), where user counts show what the airtime bought."
+  },
+  {
+   "location": "retail[0] Smart Money View",
+   "issue": "A Reuters dollar/Bullard headline stood in for a professional view, which is a macro data point rather than an institutional stance.",
+   "severity": "minor",
+   "resolution": "Replaced with Inc.'s 'best ad of the Super Bowl, just 1 problem' verdict (n0124, 14 February); the split is now marketing-win and Tiger Global's PDAX round versus CNBC, PCMag, Inc. and Bloomberg's crash-hedge options trade."
+  },
+  {
+   "location": "retail_intro",
+   "issue": "'free-bitcoin QR code' was cited only to CNN (n0127), whose headline does not mention free bitcoin.",
+   "severity": "minor",
+   "resolution": "Added Notebookcheck's 'free bitcoin' Coinbase QR headline (n1006) to the intro citation."
+  },
+  {
+   "location": "retail[1] Where It Breaks",
+   "issue": "The break test leaned on Munger's Daily Journal margin debt (n0849), unrelated to Rivian, and had no company-level risk.",
+   "severity": "moderate",
+   "resolution": "Replaced with the NYT's 'Rivian loses its shine as investors fret about production delays' (n0508, 9 February) alongside the 21.64% gap to the 20-session reference."
+  },
+  {
+   "location": "retail[3] Where It Breaks / retail[1] Where It Breaks",
+   "issue": "The 'rented' metaphor closed both the Rivian and USO items.",
+   "severity": "minor",
+   "resolution": "USO now ends 'headline froth, not a shortage'; Rivian 'lasted a day'."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Checked every cited ID against the 2022-02-15 frozen feed (title, source, timestamp) and every number against the 2022-02-15 card or a same-paragraph headline. The Super Bowl, its ads and the Coinbase app outage are known at this cutoff; Russia's claimed partial pull-back, the Duma appeal and Airbnb/Roblox/Upstart results (15 February) are not mentioned, and n1502 (troop-withdrawal item stamped 14 February) and the rolling 'Russia invades Ukraine' photo page are not cited. Headlines only; no article bodies. Chronology compared with retail drafts and notes for 2022-02-01 to 2022-02-14 only.",
+ "recommended_exclusions": [
+  {
+   "id": "n1502",
+   "reason": "Item stamped 14 February describing Russia withdrawing some troops from the border, i.e. the 15 February partial pull-back claim, which is after the 15 February 00:00 UTC cutoff."
+  },
+  {
+   "id": "n1494",
+   "reason": "CNN 'Photos: Russia invades Ukraine' is a rolling photo page stamped 14 February that describes the invasion, an event after every February cutoff before 24 February; it cannot be pre-cutoff evidence."
+  }
+ ],
+ "verifier": {
+  "words": 1289,
+  "distinct_sources": 38,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "33b72a03598e6a7f1f023824c22a160edd75ba43f0f3fe129766e3868bfcc223",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02",
+  "2022-02-03",
+  "2022-02-04",
+  "2022-02-07",
+  "2022-02-08",
+  "2022-02-09",
+  "2022-02-10",
+  "2022-02-11",
+  "2022-02-14"
+ ]
+}
