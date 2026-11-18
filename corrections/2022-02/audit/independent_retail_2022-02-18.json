@@ -1,0 +1,106 @@
+{
+ "date": "2022-02-18",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "8b56e19ca204a8afe00670f877b10e8c4116d4632439ee7e19aa17d51a6443ec",
+ "card_sha256": "e137e0f244391e77e5552d3364406b18e3c6e55c175c565c505e8c8923df760b",
+ "exclusions_sha256": "63bc2d23fbcf1c944b01eb2418c005c070d13dd0819ddd090e01bc7007cb2e1c",
+ "findings": [
+  {
+   "location": "retail_intro",
+   "issue": "The intro said Palantir's margin warning and Charlie Munger's 'speculative mess' verdict 'landed on the crowd's favourite tickers the same day war fear returned'. Munger's verdict is a 16 February item (Yahoo Finance [[n1869]], stamped 2022-02-16), while the Palantir results, the shelling and Biden's warning are 17 February; the same-day claim was a timing error.",
+   "severity": "major",
+   "resolution": "Rewritten: Palantir's warning 'landed on the day war fear returned and just after Charlie Munger said retail trading apps are creating a speculative mess [[n1869]]'."
+  },
+  {
+   "location": "retail[0] Palantir / PLTR, The Social Signal and Smart Money View",
+   "issue": "Chronology: Bloomberg 'Watch Themis Trading's Joe Saluzzi on Retail Investors' Rebellion' [[n1885]] and Bloomberg 'Cathie Wood's Innovation ETF ARKK Is a Year From Its Peak and Still Struggling' [[n1868]] are the same headlines the strictly earlier 2022-02-17 edition used in its Social Signal and Historical Analog; reusing them a day later added no new evidence.",
+   "severity": "minor",
+   "resolution": "Dropped both. The Social Signal now rests on the card co-movement of the crowd's tickers plus Munger via Yahoo Finance [[n1869]] and Business Insider [[n0869]]; the Smart Money View uses the ARKK card move (-6.44% to 68.18 USD, prior close 2022-02-17) beside Cathie Wood's 'way undervalued' [[n1889]], and adds Business Insider's Black Swan fund manager on 'clearly heightened fears that the bubble will pop' [[n1432]] (13 Feb, inside the 7-day window, not used earlier)."
+  },
+  {
+   "location": "retail[0] Palantir / PLTR, What Is Driving It and Historical Analog",
+   "issue": "Bloomberg's 'Meta Loses Top-10 Ranking by Market Value Amid Worst Month Ever' [[n0929]] was cited in both parts for the same point, leaving the analog thin and What Is Driving It without a second own-date growth signal.",
+   "severity": "minor",
+   "resolution": "Meta now appears only in the Historical Analog, joined by Business Insider on Tencent joining the top-10 as Meta slid [[n0873]], with the general spend-now repricing mechanism. What Is Driving It now cites Reuters 'Roku revenue misses on supply chain snags, shares fall 20%' [[n0949]] (17 Feb after the close; Roku results are known to this edition) as same-day intolerance for growth disappointments. No claim that Meta's slide was spending-driven is made."
+  },
+  {
+   "location": "retail[0] Palantir / PLTR, Why Retail Is Here",
+   "issue": "The crowd thesis ('the operating system for big institutions', CEO 'image is part of the pitch') echoed the August 2026 reference page's Palantir wording, which is voice-only and not February 2022 evidence; 'NRKbeta investigated' overstated a 'The Mystery of ...' headline; 'holders ... see 11.77 USD as the cheapest entry' was stated as fact.",
+   "severity": "minor",
+   "resolution": "Thesis now tied to own-date evidence: a data-software company holders expect to grow from government work into big commercial customers, the commercial push Reuters says is costing margin [[n0941]]; NRKbeta 'wrote up as a mystery' [[n0669]]; holders 'may see' 11.77 USD as the cheapest entry."
+  },
+  {
+   "location": "retail[0] Palantir / PLTR, When the Narrative Breaks",
+   "issue": "The Munich trigger cited Reuters 'Ukraine crisis takes centre stage at Munich Security Conference' [[n0156]], a present-tense headline that may describe the conference after its 18 February opening (after this cutoff).",
+   "severity": "minor",
+   "resolution": "Replaced with Reuters 'No Russia at this year's Munich Security Conference - event chair' [[n0119]] (14 Feb, a clean pre-event item); the conference stays a pending, undated venue. Nothing about its proceedings is described."
+  },
+  {
+   "location": "retail[0] Palantir / PLTR, The Social Signal and When the Narrative Breaks",
+   "issue": "Robinhood's -9.33% card move was read as evidence that 'the selling hit the same kind of account across many names' and a second red day would show 'selling is spreading across retail accounts', more than a broker's share price establishes.",
+   "severity": "minor",
+   "resolution": "Reframed as market pricing: the market is marking down the whole retail ecosystem, the platform as well as the tickers its users favour; a second heavy day would show the market marking down retail activity itself. Also 'Patient money has been buying selectively' for Temasek's filing [[n1862]], and the VIX level now carries 'index points'."
+  },
+  {
+   "location": "retail[1] Bitcoin / BTC, Where It Breaks",
+   "issue": "'A daily close below the 20-session reference of 37,784.33 USD would erase the February rebound entirely' misdated the reference, which is the 2022-01-28 completed daily close.",
+   "severity": "minor",
+   "resolution": "Now 'would erase the whole rebound since late January'."
+  },
+  {
+   "location": "notes/retail_2022-02-18.json",
+   "issue": "Selection notes needed to reflect the edits; the 'avoided' line treated the AP 7,000-troops item (n1503) as possibly after cutoff, which applies to the 17 February edition but not to this one.",
+   "severity": "minor",
+   "resolution": "evidence_ids regenerated from the draft; why_lead/why_smaller record the reviewer changes; considered_not_chosen corrected for n1503, explains the Munich swap (n0156, n0157), lists n1060 (Gadgets 360 'little price movement', contradicting the completed 17 Feb close) as unused, re-scopes the Roku entry, and adds DWAC (Reuters tester rollout [[n1890]], +0.39%) as a non-material carryover."
+  },
+  {
+   "location": "all citations",
+   "issue": "Checked every cited ID against the 2022-02-18 feed for title, src and published_at, timing, preview-vs-outcome and outlet attribution.",
+   "severity": "info",
+   "resolution": "All 29 IDs resolve and are stamped 13-17 February (day-granular), inside the windows (company news ≤7 days, results ≤14). Outcomes described are all known before 00:00 UTC on 18 Feb: Palantir and Walmart (17 Feb pre-market), Roku (17 Feb after the close), DoorDash (16 Feb after the close, 17 Feb session), the 17 Feb Donbas shelling [[n1521]], Biden's warning [[n1532]]. Deere (Barron's 'coming Friday' preview) and the Munich conference are not described as outcomes. Every number matches the card (instrument, 2022-02-17 session or 2022-02-17 completed UTC crypto close, horizon, units) or a headline in the same part; PLTR -15.75% is confirmed as the largest one-session drop on the card. No spot-FX. Japan Times' 'more than 30%' for DoorDash is attributed to the headline and kept distinct from the +10.69% regular session."
+  },
+  {
+   "location": "chronology",
+   "issue": "Repeats checked: Bitcoin (2022-02-04, 02-09 smaller; 02-08, 02-14 leads; 02-15 Coinbase lead), gold (02-14 GDX, 02-17 GLD), DoorDash (02-17 lead counter-signal), DWAC (02-17 smaller), Palantir (never earlier), Meta (02-03/02-04 leads, 02-08 smaller).",
+   "severity": "info",
+   "resolution": "Palantir is a new lead on new 17 Feb evidence. Bitcoin is the only crypto item, a new haven-test angle resting on 16-17 Feb evidence (none of the earlier crypto items' citations reused), kept secondary. Gold appears only as the comparison inside the Bitcoin item. DoorDash is a material update (the completed session after the beat) with all-new 17 Feb citations. Meta appears only through new 17 Feb ranking stories. DWAC not repeated. Four distinct narratives: broken growth conviction, failed crypto haven, pandemic habit that held, inflation-winner defensive."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Headline-level review only: article bodies are not available, so claims are limited to what titles establish. Only the 2022-02-18 feed, card and exclusions plus strictly earlier retail drafts/notes (2022-02-01 to 2022-02-17, the 2022-02-17 draft as finalised in this review) were read; strictly earlier feeds were consulted only through tools/cited_titles.py to resolve which headlines earlier retail editions had cited. No later-date files, nonretail drafts, specs or other reviews were read. Publication timestamps are day-granular, so within-day order cannot be confirmed from metadata; event timing was checked against the stated guardrails. Merged-report citation caps depend on the nonretail component, which was not read.",
+ "recommended_exclusions": [
+  {
+   "id": "n0156",
+   "reason": "Reuters 'Ukraine crisis takes centre stage at Munich Security Conference', stamped 2022-02-17 (day-granular), is present-tense and may report the conference after its 18 February opening, after this cutoff. Ambiguous: use only as a pending-event preview, or exclude."
+  },
+  {
+   "id": "n0157",
+   "reason": "NPR 'Vice President Harris is meeting leaders in Munich to talk about Russia and Ukraine', stamped 2022-02-17, may describe meetings held on 18 February or later. Ambiguous for a pre-cutoff fact."
+  }
+ ],
+ "verifier": {
+  "words": 1342,
+  "distinct_sources": 29,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "9f009aaee860d1806ad13034f590b7e87bdf62d6070d3e5cff0d71daa24b686f",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02",
+  "2022-02-03",
+  "2022-02-04",
+  "2022-02-07",
+  "2022-02-08",
+  "2022-02-09",
+  "2022-02-10",
+  "2022-02-11",
+  "2022-02-14",
+  "2022-02-15",
+  "2022-02-16",
+  "2022-02-17"
+ ]
+}
