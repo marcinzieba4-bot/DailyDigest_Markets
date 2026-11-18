@@ -1,0 +1,91 @@
+{
+ "date": "2022-02-07",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "25c5d2be5f6efbf235343341102ec4d02995fbcb913710a4ec437097cb803ed6",
+ "card_sha256": "88349872481b72af59b53decc92276c032e9c93b95cc682d273403b0979e16b0",
+ "exclusions_sha256": "9770b3389cd6208ac4c63454bb4a5758fd6f6ad3182bd66cb792379d64f0ea47",
+ "findings": [
+  {
+   "location": "catalysts/PayPal/Price Hurdle & Risk",
+   "issue": "'The bear case is now consensus' has no supporting headline, and the Wolfe/Peller CNBC item carries a day-granular 1 Feb stamp that may precede PayPal's results.",
+   "severity": "moderate",
+   "resolution": "Replaced with a neutral 'credible counterweight' framing attributed to Wolfe Research via n0482; no consensus claim."
+  },
+  {
+   "location": "geo/JP/Macro Stance",
+   "issue": "'nothing like the Fed's path is priced' is not in any own-date headline or card field.",
+   "severity": "moderate",
+   "resolution": "Replaced with 'an eventual rather than imminent move', which is what n1424's headline ('eventual rate hike') supports."
+  },
+  {
+   "location": "geo/PL/Geopolitics & Security",
+   "issue": "Attributed the 'NATO enlargement to Poland was a fraud' quote to Putin alone; the headline (n1569) names only a Putin-Orban press conference.",
+   "severity": "minor",
+   "resolution": "Reworded to a Putin-Orban press conference where enlargement is called a fraud."
+  },
+  {
+   "location": "flows/Rates & Dollar",
+   "issue": "Causal claims beyond the headlines: the Gulf Times item (n0114) was presented as the explanation for the 10Y lagging the 2Y, and the DXY drop was asserted to be caused by hawkish ECB/BoE signals.",
+   "severity": "minor",
+   "resolution": "Softened to 'may help explain' and 'consistent with'."
+  },
+  {
+   "location": "earnings_pattern/Punished",
+   "issue": "Spotify listed as punished (n0592, 2 Feb) although the card shows +9.18% on Friday and +0.84% over five sessions.",
+   "severity": "minor",
+   "resolution": "Added 'before a +9.18% bounce on Friday' with the card source tag."
+  },
+  {
+   "location": "Whole draft: numbers",
+   "issue": "All card figures (instrument, session, 1/5/20-session horizon, units), curve wording (bear flattening, moderately steep), prior-close tags (crypto 2022-02-06, Shanghai 2022-01-28) and Meta Platforms (FB) naming checked against the 2022-02-07 card; no cross-date contamination (no 2022-01-31 or 2022-02-10 values) found.",
+   "severity": "minor",
+   "resolution": "No change needed."
+  },
+  {
+   "location": "Whole draft: timing",
+   "issue": "All 252 cited IDs are stamped before cutoff. Day-granular items n0145 (Caixin PMI, 29 Jan stamp), n2147 (Sunday tipswatch), n1502/n1280 (weekend) describe pre-cutoff events or pending items only. Caixin services PMI and Monday Asian trading are not described as outcomes; Macron mission and Polish MPC treated as pending.",
+   "severity": "minor",
+   "resolution": "No change needed."
+  },
+  {
+   "location": "Whole draft: consistency and wording",
+   "issue": "Stances and Playbooks (banks over industrials, offshore over onshore China, energy and quality over long-duration growth) are consistent across sections. No input narration, no 'META'/'DJT'/'XYZ' tickers, no numeric spot-FX, no invasion stated as fact.",
+   "severity": "minor",
+   "resolution": "No change needed."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Reviewed only the 2022-02-07 feed headlines (titles/src/stamps, not article bodies), card, exclusions and BRIEF; no other date, retail draft, or web access. Judgements on day-granular stamps rely on headline meaning only. Interpretive trade-view statements (e.g. causal market commentary) were accepted when they are modal and consistent with cited headlines.",
+ "recommended_exclusions": [
+  {
+   "id": "n0022",
+   "reason": "RBA 'Minutes of the Monetary Policy Meeting' of 1 February are published two weeks after the meeting; the 1 Feb stamp is misdated and the content is after cutoff."
+  },
+  {
+   "id": "n1242",
+   "reason": "'BoE raises rates by most since 1995 even as long recession looms' does not match the 3 Feb 25 bp hike; it describes a later, larger decision (misdated/anachronistic)."
+  },
+  {
+   "id": "n0373",
+   "reason": "'Bitcoin Price Predictions for 2025' is a later-dated page with a stale 1 Feb stamp."
+  },
+  {
+   "id": "n0879",
+   "reason": "'A List of Fake Crypto Websites & Trading Platforms 2023' references a later year; misdated."
+  },
+  {
+   "id": "n1278",
+   "reason": "Sunday-stamped CNBC 'Dollar up, euro down as pair face off' conflicts with the card's -1.84% five-session DXY move and may describe Monday trading after cutoff."
+  }
+ ],
+ "verifier": {
+  "words": 9012,
+  "distinct_sources": 252,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "dca04a22f39120f927b7b14cf66c0126299f093b2746f049739596720705dc5d"
+}

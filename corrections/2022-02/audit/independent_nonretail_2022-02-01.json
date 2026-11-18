@@ -1,0 +1,85 @@
+{
+ "date": "2022-02-01",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "046d8b641a66e67dfe567296c3c373d6295e5ca085295ef4244630d6801ecb29",
+ "card_sha256": "b4a94ffeda67344c93a8487a5a5cc65eb29b6821a55513cbd3805a12f55ed3b4",
+ "exclusions_sha256": "d3f326d4b2d88d0e98f8e7c49b0ee9a68cb9e458e56144a77e7cb41305d58f71",
+ "findings": [
+  {
+   "location": "geo/CN/PMIs & Activity",
+   "issue": "'external demand carried 2021' went beyond the cited headlines (HSBC supply-chain ripple effects; trade topping $6 trillion).",
+   "severity": "moderate",
+   "resolution": "Reworded to the supported fact: trade topped $6 trillion in 2021 (n0100, same part)."
+  },
+  {
+   "location": "geo/PL/New / Most Important",
+   "issue": "'rising WIBOR feeds through to households' asserted a rising WIBOR that none of the cited headlines (n1573 conditional question, n1452) states.",
+   "severity": "moderate",
+   "resolution": "Reworded to households weighing what higher WIBOR means for their loans."
+  },
+  {
+   "location": "sectors/XLRE/Breaking Convention",
+   "issue": "A headline about Chinese cities selling land to themselves (n0133) was presented as 'showing' leveraged US property bites first.",
+   "severity": "moderate",
+   "resolution": "Reframed as the Chinese property crisis illustrating the point, not evidence for US property."
+  },
+  {
+   "location": "sectors/XLK/EPS Upside Watch",
+   "issue": "'pricing and mix rather than volume' for Apple/Microsoft contradicted the cited Reuters line (chip-shortage hit easing, i.e. supply) and no headline supports mix.",
+   "severity": "moderate",
+   "resolution": "Changed to easing supply and guidance visibility."
+  },
+  {
+   "location": "underowned/Japan's pricing-power pivot",
+   "issue": "Condo price headline (n0998) cited as a 'wealth effect behind domestic demand', which the headline does not say.",
+   "severity": "minor",
+   "resolution": "Softened to a reminder of property wealth behind domestic demand."
+  },
+  {
+   "location": "flows/Global Liquidity",
+   "issue": "Richmond Fed ON RRP study (stamped 2021-12-30, 33 days old, inside the 35-day macro limit) was used to assert that cash cushions runoff; headline only asks why usage rose.",
+   "severity": "minor",
+   "resolution": "Hedged with 'may cushion'."
+  },
+  {
+   "location": "underowned/Atlantic LNG",
+   "issue": "'a record 70% one-day spike' placed next to the Henry Hub futures close could read as the futures move; the Reuters headline says US natural gas prices spiked 70% on Thursday.",
+   "severity": "minor",
+   "resolution": "Reworded to the headline's own wording."
+  },
+  {
+   "location": "geo/US/Playbook",
+   "issue": "A trailing DXY sentence sat after 'What changes the call' with no label, breaking the action/trigger/change structure.",
+   "severity": "minor",
+   "resolution": "Prefixed with 'Context:'."
+  },
+  {
+   "location": "whole component",
+   "issue": "Checked for other-date contamination (writer's scratch-file incident), hindsight, FB ticker, after-cutoff events (RBA decision, ISM/JOLTS, Alphabet/AMD/PayPal/Starbucks/GM/Exxon/UPS results), Lunar New Year closures, curve wording, spot-FX, citation caps (all <=2), age limits per category: no violations. Every card figure matched this date's card instrument, session and horizon.",
+   "severity": "minor",
+   "resolution": "No change needed; verifier PASS 0 fail 0 warn after edits, word ranges kept (US 496, CN 940, XLK about 197)."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Reviewed every sentence's cited IDs against this date's feed (title, src, published_at, cat) and every number against this date's card via my own scripts (age limits by category checked programmatically; citation counts <=2). Headlines only; article bodies not available, so claims at the edge of a headline (e.g. causal glosses on CD Projekt/Sony moves, interpretive opinions about positioning) are judged as editorial inference and left as hedged. Day-granular 08:00 stamps for Jan 31 items (Boeing-Qatar, Sony-Bungie, FTX, Moderna approval, UN session, Diem sale) were judged to describe pre-cutoff US-day events; residual uncertainty remains for same-day timing. No other date's materials or web were used.",
+ "recommended_exclusions": [
+  {
+   "id": "n0837",
+   "reason": "CNBC 'Stocks rise for a third day ... Dow jumps 270 points' is stamped 31 Jan but describes the 1 Feb US session (card shows the Dow +1.17%, about 410 points, on 31 Jan); after cutoff."
+  },
+  {
+   "id": "n1926",
+   "reason": "Al Jazeera 'Asia shares in cautious mood, oil keeps climbing' stamped 31 Jan could describe the 1 Feb Asian morning; ambiguous timing, uncited."
+  }
+ ],
+ "verifier": {
+  "words": 8869,
+  "distinct_sources": 262,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "b4139168e782f8c5c3e4ca662caad055ddc1cc3efdf47967520ea3bc0bcb8f8d"
+}

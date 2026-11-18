@@ -1,0 +1,59 @@
+{
+ "date": "2022-02-01",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "046d8b641a66e67dfe567296c3c373d6295e5ca085295ef4244630d6801ecb29",
+ "card_sha256": "b4a94ffeda67344c93a8487a5a5cc65eb29b6821a55513cbd3805a12f55ed3b4",
+ "exclusions_sha256": "d3f326d4b2d88d0e98f8e7c49b0ee9a68cb9e458e56144a77e7cb41305d58f71",
+ "findings": [
+  {
+   "location": "retail_intro",
+   "issue": "The intro tied a claimed buy-the-dip 'reflex the GameStop squeeze taught' to Reuters n0629, whose headline only says 'Meme stock hangover: a year after GameStop, traders face gloomier markets' — overreach beyond the headline.",
+   "severity": "moderate",
+   "resolution": "Rewritten so n0629 supports only the one-year meme-stock hangover framing; the dip-as-discount idea is stated as a general mechanism."
+  },
+  {
+   "location": "retail[0] The Social Signal",
+   "issue": "MarketWatch n0301 (published 2022-01-25) on retail investors dumping stocks 'at Monday's open' was attributed to JPMorgan without the outlet and read as if it described the 31 January (Monday) rebound session discussed in the same lead.",
+   "severity": "moderate",
+   "resolution": "Attributed to MarketWatch and dated to 'the previous Monday's open' so it cannot be confused with the 31 January session."
+  },
+  {
+   "location": "retail[0] The Social Signal",
+   "issue": "n0685 (New York Post) was called a 'review' of the GameStop documentary; the headline does not establish the article type.",
+   "severity": "minor",
+   "resolution": "Changed to 'piece on the documentary'."
+  },
+  {
+   "location": "retail[0] When the Narrative Breaks",
+   "issue": "GME trigger ('whether Monday's jump holds') had no observable level.",
+   "severity": "minor",
+   "resolution": "Tied to the card's 108.93 USD close and the 11.26% one-session jump."
+  },
+  {
+   "location": "retail[1] Where It Breaks (Netflix)",
+   "issue": "Third near-identical rates caution in the section (lead, Netflix, ARKK all broke on rates), against the voice standard's no-repeated-caution rule.",
+   "severity": "minor",
+   "resolution": "Added a Netflix-specific competition breaker (Statista n1756, Disney+ vs Netflix and Amazon) and kept the 10Y (1.79%, +27 bps) as a subordinate clause; break level now names the 10.33% five-session rebound."
+  },
+  {
+   "location": "retail[3] title (ARKK)",
+   "issue": "Hook 'buy the deepest dip' overstated: ARKK's -20.26% vs year-end is shallower than GME (-26.59%) and AMC (-40.96%) on the same card.",
+   "severity": "minor",
+   "resolution": "Hook changed to 'Cathie's faithful buy the thesis on sale', matching the paragraph; duplicate discount wording removed from the first sentence."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Reviewed only the 2022-02-01 retail draft and writer note against the 2022-02-01 frozen feed (headline titles/sources/timestamps only), the 2022-02-01 card and exclusions (empty). No earlier retail editions exist for chronology. Day-granular 08:00 stamps were checked for events after 31 January; none cited describes a 1 February event. Article bodies were not available; claims are limited to what headlines establish. RBA, ISM/JOLTS and 1 February results (Alphabet, AMD, PayPal, Starbucks, GM, Exxon, UPS) are absent from the section.",
+ "recommended_exclusions": [],
+ "verifier": {
+  "words": 1341,
+  "distinct_sources": 41,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "104b29775127057d4646b8031cfd8a5e2c5f70c0cc081c6673e1296008a35385",
+ "chronology_checked_against": []
+}
