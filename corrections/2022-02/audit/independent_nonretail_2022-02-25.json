@@ -1,0 +1,121 @@
+{
+ "date": "2022-02-25",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "2c8aa61f07eed4f8c424fd20f5642f789a61a57731a6fe90f6754d23ae76e3d7",
+ "card_sha256": "c716703751e6bf4f21007bfb44290327ca3cd4dfc9f89407c539b4ed97dea35e",
+ "exclusions_sha256": "c60873c6be0063fce141b60c36e68cb4d1610e1f7085ca278ce39006d48b2dff",
+ "findings": [
+  {
+   "location": "geo.US Macro Stance (n0144)",
+   "issue": "Fortune 'This week had one of the incredible vaults...' is a weekly-wrap style headline stamped 24 Feb 08:00 that may describe the full week and appear after the cutoff; it was used to describe the 24 Feb reversal.",
+   "severity": "major",
+   "resolution": "Sentence removed; reversal remains supported by card closes and n1126."
+  },
+  {
+   "location": "geo.US Macro Stance",
+   "issue": "Uncited statement of what 'investors read' and a Fed-path inference presented as fact.",
+   "severity": "moderate",
+   "resolution": "Reworded to modal language."
+  },
+  {
+   "location": "geo.US Rates & Curve (n1965)",
+   "issue": "Commentary headline only says bond market sends flawed signals; sentence asserted labour data and long-yield growth pricing beyond the headline.",
+   "severity": "moderate",
+   "resolution": "Trimmed to what the headline supports."
+  },
+  {
+   "location": "crypto New / Most Important; earnings_pattern Pattern; catalysts Coinbase (n0678, n0679)",
+   "issue": "Coinbase results timing relative to the 24 Feb US close is unclear; juxtaposing the +3.95% close with the beat and calling it an archetype of a muted reaction implied a reaction not evidenced.",
+   "severity": "major",
+   "resolution": "Close stated as possibly not reflecting the report; Pattern sentence reframed as an open forward question."
+  },
+  {
+   "location": "sectors XLB (n0720)",
+   "issue": "MP Materials results timing unclear; 'and the shares closed up 7.37%' implied a reaction to the report.",
+   "severity": "moderate",
+   "resolution": "Reworded to a separate session move; also removed unsupported 'largest supply-risk premium' claim."
+  },
+  {
+   "location": "sectors XLK Breaking Convention",
+   "issue": "Claimed the war 'lowered expected policy rates and raised security spending' without headline support.",
+   "severity": "moderate",
+   "resolution": "Reworded to yields lower and cyber defence in focus; hedged yield causation."
+  },
+  {
+   "location": "sectors XLF (n1151)",
+   "issue": "Fed note on bank business-loan supply was claimed to show where a March hike would show up.",
+   "severity": "moderate",
+   "resolution": "Reworded as a general channel."
+  },
+  {
+   "location": "sectors XLE, XLP, XLU, SOXX",
+   "issue": "Unsupported causal or flow claims: rotation 'funded out of energy', staples fell because of input costs, collateral strain for generators, Asian vs US chip split attributed to investor views on sanctions.",
+   "severity": "moderate",
+   "resolution": "Replaced with rotation/timing language and hedged mechanisms; trading-down line softened."
+  },
+  {
+   "location": "geo.JP",
+   "issue": "EWJ move interpreted as foreign holders' view.",
+   "severity": "minor",
+   "resolution": "Replaced with session-timing fact."
+  },
+  {
+   "location": "geo.CN (n0219, n0660), anticipatory China (n0218)",
+   "issue": "Interpretation beyond headline (losses landing on concentrated holders not cascading; Alibaba 'concedes' domestic core maturing; rust-belt plan 'signals' local support demand).",
+   "severity": "minor",
+   "resolution": "Softened to what headlines establish."
+  },
+  {
+   "location": "geo.PL (n1371, n1522, n1519)",
+   "issue": "Refugee burden 'falling most heavily on Poland', Parkiet framing of NBP choice, and 'local attention migrating' went beyond headlines.",
+   "severity": "minor",
+   "resolution": "Made modal / reworded."
+  },
+  {
+   "location": "crypto (n0872); earnings_pattern (n0269, n1783)",
+   "issue": "Overreach: 'leverage migrating on-chain', Deere 'paid for', Wayfair 'de-rating'.",
+   "severity": "minor",
+   "resolution": "Reworded to headline content."
+  },
+  {
+   "location": "whole draft",
+   "issue": "Numbers, session dates, source tags, curve wording (positively sloped, bear flattening), 20/5/1-session horizons and period names (FB, RTX, Mercedes-Benz Group, RIOT) checked against the card; no numeric spot-FX, no post-cutoff events (EU second package, UN vote, Putin sanctions, PCE, 25 Feb ASX) found. No discrepancies found.",
+   "severity": "minor",
+   "resolution": "None needed."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Own-date feed and card only; headlines not article bodies, so claims limited to headline content. Day-granular 08:00 stamps mean intraday and overnight timing of some 24 Feb items cannot be verified. Verifier reports 0 warnings after edits.",
+ "recommended_exclusions": [
+  {
+   "id": "n0144",
+   "reason": "Fortune weekly-wrap style headline ('This week had one of the incredible vaults') stamped 24 Feb but likely written after the 24 Feb close or the week's end; possibly after cutoff. Removed from draft."
+  },
+  {
+   "id": "n0074",
+   "reason": "ABC report of the ASX rebound after the $74b wipe-out describes the 25 Feb ASX session, after the cutoff; misdated to 24 Feb."
+  },
+  {
+   "id": "n1132",
+   "reason": "Reuters 'Investors regain risk appetite; dollar, oil pare gains after Ukraine invasion' is likely an Asian Friday wrap after the cutoff; misdated to 24 Feb."
+  },
+  {
+   "id": "n1262",
+   "reason": "NPR 'Russia invades Ukraine as explosions are heard in Kyiv' stamped 23 Feb 08:00, before the invasion began (about 03:00 UTC 24 Feb); misdated."
+  },
+  {
+   "id": "n1135",
+   "reason": "marketscreener.com rolling 'Agriculture: Stock prices and news' page stamped 24 Feb 23:35 UTC; live/rolling page, not a dated headline."
+  }
+ ],
+ "verifier": {
+  "words": 8732,
+  "distinct_sources": 248,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "01aad09c3c5f3c832c36dc867d3ca0beca66bbb669697a66a342bb0cb32a14b4"
+}
