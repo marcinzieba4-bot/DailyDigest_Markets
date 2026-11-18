@@ -1,0 +1,65 @@
+{
+ "date": "2022-02-08",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "8b7bea8dd62eaaed1b9e9bf22421b356397bbe0e6028ac19a98904c7ee6c0f21",
+ "card_sha256": "39a03a526242eee2a831d9ad16f137984f86c41f615d03f50053cbab92839dfa",
+ "exclusions_sha256": "e7440109bc5fe1e05d0b3b3f47c73f80d179806a0d9914e1c13c8ad7247c56c2",
+ "findings": [
+  {
+   "location": "retail[2] Meta Platforms / FB",
+   "issue": "Chronology: Meta led on 2022-02-03 and 2022-02-04 and was the foil on 2022-02-07; this item's Why Retail Is Here rested on the same Berkshire-market-value and Buffett 'extraordinary business but ruled out buying' headlines the 2022-02-04 lead had used, with a bargain-or-trap angle close to that lead's. A recycled full item, not a material update.",
+   "severity": "major",
+   "resolution": "Rewritten as a brief secondary carryover (155 words) built only on post-crash evidence (n1279 Europe shutdown threat, n0789 Thiel leaving the board, n0739 young users) and the further -5.14% session to 224.91 USD; Buffett/Berkshire citations removed; note updated."
+  },
+  {
+   "location": "retail[0] Smart Money View / When the Narrative Breaks (Bitcoin lead)",
+   "issue": "Chronology: the lead, the third straight crypto edition, reused three headlines the 2022-02-07 MicroStrategy item had just used (Fundstrat $200k, Al Jazeera's past-$40,000 line in near-identical wording, CNBC's $320 million hack), weakening the claim that this was a material update on new evidence.",
+   "severity": "moderate",
+   "resolution": "Replaced with evidence not used in the prior item: Business Insider's banking-veteran five cryptos (n0923) as the bull voice, Reuters' 'Bitcoin mimics stocks rally' (n0635) as the test of the own-story belief, and Futurism's NFT-collector crash warning (n0922) as the froth risk. 'Two levels frame it' corrected to a single level."
+  },
+  {
+   "location": "retail[3] Exxon Mobil / XOM",
+   "issue": "Chronology: the World Oil 'Exxon joins Chevron in Permian oil surge' headline was already the break test in the 2022-02-02 Exxon item; the CNA explainer added colour but no catalyst.",
+   "severity": "moderate",
+   "resolution": "Swapped in Houston Public Media's report of Exxon's Permian expansion plans (n0652) for the supply break, and Reuters' strategists' $100 oil call on demand and the Russia-Ukraine crisis (n1384) for the war-premium hook."
+  },
+  {
+   "location": "retail[1] Peloton Interactive / PTON",
+   "issue": "The Bloomberg regulatory-headache headline was carried from the 2022-02-07 item; the rest is a material update (completed +20.93% session, new BBC/Sky/Wedbush/CNBC coverage).",
+   "severity": "minor",
+   "resolution": "Dropped the recycled Bloomberg clause; the break now rests on CNBC's 'why a deal might not happen' (n0823) and the BBC's 'reports say' sourcing (n0766). Results kept undated as the near-term test, as no dated preview exists and the 8 February report is after the cutoff."
+  },
+  {
+   "location": "retail[0] The Social Signal (n0938)",
+   "issue": "MoneySense headline asks whether memecoins are a good investment; the text said it asked which of Shiba Inu or Dogecoin is the better bet.",
+   "severity": "minor",
+   "resolution": "Reworded to match the headline."
+  },
+  {
+   "location": "whole section",
+   "issue": "All cited IDs resolved in the 2022-02-08 feed (stamps 2022-02-01 to 2022-02-07, all before the cutoff; company news within seven days, results within fourteen); card numbers checked (BTC, ETH, XRP, DOGE, GBTC, IREN, NDX, 2Y, AMC, PTON, META, XOM, XLE, Brent). Macron–Putin used as known (n1277); no Peloton/Pfizer/Chipotle/BP/SoftBank results, NBP decision or formal Nvidia–Arm termination used. FTX/Bud Light Super Bowl items describe planned ads, not the game. Four distinct narratives retained.",
+   "severity": "minor",
+   "resolution": "No further change required."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Headlines only (no article bodies); the card is the sole price source; the 2022-02-01 to 02-07 retail drafts and notes were read as editorial memory only. No later-date files were read.",
+ "recommended_exclusions": [],
+ "verifier": {
+  "words": 1329,
+  "distinct_sources": 28,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "c1e92b0b0ba835bb63696453fef76a02921dc54d846ba4553fb5349a55f34298",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02",
+  "2022-02-03",
+  "2022-02-04",
+  "2022-02-07"
+ ]
+}
