@@ -1,0 +1,105 @@
+{
+ "date": "2022-02-10",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "461192ec67957c7f6282cf542277d2aaf69a3dc3581d7ce030b9c64efcb11a63",
+ "card_sha256": "b31c7a55a8c4cfc309ca6c196c9503d8a968479c76d52696818f2d0fde6538d6",
+ "exclusions_sha256": "3bda3fd0f360af758d66cea4b03d8c2ce5170201990c03814f1547d76acb865b",
+ "findings": [
+  {
+   "location": "sectors/XLV EPS Upside Watch",
+   "issue": "Eli Lilly attributed tirzepatide, but cited n1907 (MedPage Today) names only the drug; no own-date headline links tirzepatide to Lilly (n0714, n1912 also name only the drug).",
+   "severity": "major",
+   "resolution": "Removed the tirzepatide claim; replaced with Lilly full-year revenue rise (n1067) and Lilly's own release citing late-stage pipeline successes (n1026), both naming Lilly."
+  },
+  {
+   "location": "sectors/XLP Reported; anticipatory/3 Risk",
+   "issue": "'Ahead of Kellogg's numbers' asserted a pending result status that the Reuters headline (n0819) does not establish and which could be a result-day item.",
+   "severity": "moderate",
+   "resolution": "Reworded to say only that Reuters reported the strike is set to eat into margins; no result status asserted."
+  },
+  {
+   "location": "anticipatory/2 Conditional Expression",
+   "issue": "'talks would resume on Tuesday' (n1424, stamped 8 Feb) is a stale calendar claim; the Tuesday had already passed.",
+   "severity": "moderate",
+   "resolution": "Dropped the weekday; kept the preview wording only."
+  },
+  {
+   "location": "sectors/SOXX Reported vs catalysts/SoftBank",
+   "issue": "Nvidia-Arm deal quoted as $40bn (Guardian) and $66bn (CNBC) in different blocks, an apparent inconsistency.",
+   "severity": "moderate",
+   "resolution": "Removed the dollar figure from the SOXX sentence."
+  },
+  {
+   "location": "geo/AU Macro Stance",
+   "issue": "RBA statement n0016 was cited as 'the patience the market is now testing', a claim about content the title does not establish.",
+   "severity": "moderate",
+   "resolution": "Reworded to a neutral policy-reference clause."
+  },
+  {
+   "location": "geo/AU Playbook",
+   "issue": "Westpac cost cuts (n0365) said to show peers chasing the discipline 'that underpins CBA's buyback', beyond the headline.",
+   "severity": "moderate",
+   "resolution": "Reworded to 'another major bank also cutting costs'."
+  },
+  {
+   "location": "geo/PL Corporate & Sectors; Fiscal; Playbook; Macro Stance",
+   "issue": "KGHM 'making its metal deliverable' (beyond n1713); 'council believes it still has room' (n1602); 'highest geopolitical betas in the EU' and 'most exposed geography' were unsupported superlatives.",
+   "severity": "moderate",
+   "resolution": "Removed or softened each to what the headlines and card support."
+  },
+  {
+   "location": "geo/US New / Most Important; anticipatory/0 What Is Priced",
+   "issue": "Imports described as 'external demand' (it is domestic demand); CME headline (n2105) overread as flagging a risk.",
+   "severity": "minor",
+   "resolution": "Reworded to strong demand showing in trade; CME item now described as a comparison of expectations and reality."
+  },
+  {
+   "location": "crypto New / Most Important",
+   "issue": "Terra sponsorship (n0958) labelled a 'late-cycle signal', an unsupported judgement with hindsight flavour.",
+   "severity": "minor",
+   "resolution": "Reworded to a neutral marker of marketing money chasing attention."
+  },
+  {
+   "location": "sectors/SXAP Narrative",
+   "issue": "'Easing chip constraints' conflicts with XLY/JP supply-constrained wording and Ford cuts (n0419).",
+   "severity": "minor",
+   "resolution": "Reworded to 'any stabilisation in chip supply' (ACEA headline n1867 says stabilises)."
+  },
+  {
+   "location": "underowned/1 (aluminium) Attention Gap, Exposure, Trigger",
+   "issue": "'Smelters curtailed by European power prices' and 'tight smelting capacity' were uncited facts beyond n0711.",
+   "severity": "minor",
+   "resolution": "Made modal/mechanistic with no new factual claim."
+  },
+  {
+   "location": "underowned/0 Attention Gap",
+   "issue": "Cameco price jump causally tied ('as') to n0774 restart headline.",
+   "severity": "minor",
+   "resolution": "Changed to 'while' (coincident, not causal)."
+  },
+  {
+   "location": "all parts: citations, numbers, timing, hindsight",
+   "issue": "Checked every cited ID against own-date feed (id/src/date/cat/title); all stamped before cutoff; Disney/Uber/Toyota/CVS/Glapinski treated as known; Twitter/Coca-Cola/PepsiCo/Unilever/Cloudflare/Affirm used only as pending or via card prices; CPI pending with no date/estimate; no META/XYZ/DJT tickers (FB, SQ used); no numeric spot FX; all card numbers verified against instrument, session, horizon and sign; curve wording matches bear flattening/positively sloped; no figure traced to another date.",
+   "severity": "minor",
+   "resolution": "No change needed; verifier PASS 0 fail 0 warn after edits."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Headlines only, not article bodies; reviewed against own-date feed, card and BRIEF only; no web access or later knowledge. Day-granular 08:00 stamps (e.g. n0140 Caixin PMI, n0855/n0856 Siemens-Koerber, n0819 Kellogg) cannot be clock-verified; n0855 (agreed sale) is uncited and treated as ambiguous, only the 'imminent' preview n0856 is cited.",
+ "recommended_exclusions": [
+  {
+   "id": "n0796",
+   "reason": "CNBC 'Dow slides 500 points as yields spike following red-hot inflation report' stamped 2022-02-09 describes the January CPI release/session on 10 Feb (13:30 UTC onward), after the cutoff; uncited."
+  }
+ ],
+ "verifier": {
+  "words": 8964,
+  "distinct_sources": 276,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "04224bfc656bcf4137dc38aaf57c4fbcb32ee4ece314c1ba0c182baa8444cfcb"
+}

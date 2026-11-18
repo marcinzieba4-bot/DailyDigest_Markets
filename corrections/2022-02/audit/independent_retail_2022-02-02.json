@@ -1,0 +1,60 @@
+{
+ "date": "2022-02-02",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "2a80a9e36a973a81a0beacf7db59132273a7bf4133131aba3095b560f31963eb",
+ "card_sha256": "96cbe19a980de7533ba2de52f392f783718181ccb116fe405b36c32309deb417",
+ "exclusions_sha256": "49799efe7dc73ca4074517c482f440af9aa434b70891065918d0bb3d4017a946",
+ "findings": [
+  {
+   "location": "retail[0] The Social Signal",
+   "issue": "Cited n0097 ('Stock Splits Calendar for: - Yahoo Finance'), a rolling calendar page that establishes nothing about attention to Alphabet's split; rolling pages are to be rejected.",
+   "severity": "moderate",
+   "resolution": "Citation removed; the paragraph now rests on the coverage breadth of CNBC n0806, Shacknews n0805 and Deadline n0870 plus the AMC call-buying headline n0820 and card moves."
+  },
+  {
+   "location": "retail[0] Smart Money View",
+   "issue": "No Alphabet-specific institutional evidence, and the Morgan Stanley Apple top pick (n0647) was glossed as 'a preference for cash-rich mega-caps', a motive the headline does not state.",
+   "severity": "moderate",
+   "resolution": "Added Al Jazeera's 'Alphabet beats earnings expectations' (n0807) for the Street-versus-numbers split; Morgan Stanley gloss reduced to what the two headlines jointly show (cautious index view, single mega-cap pick); Standard Chartered curve call no longer asserts that flattening 'compresses every growth multiple'."
+  },
+  {
+   "location": "retail[0] When the Narrative Breaks",
+   "issue": "Third trigger repeated the 2Y +40 bps rates caution already given in What Is Driving It and Smart Money View.",
+   "severity": "minor",
+   "resolution": "Replaced by a concrete same-evening contrast: CNBC's PayPal plunge on weak guidance (n0831, second and final use)."
+  },
+  {
+   "location": "retail[0] Historical Analog",
+   "issue": "Opened by narrating the absence of an analog ('The mechanism needs no borrowed episode').",
+   "severity": "minor",
+   "resolution": "Sentence removed; the paragraph now opens directly on the split mechanism (unit, not value; accessibility, option-contract cost and attention; front-loaded enthusiasm)."
+  },
+  {
+   "location": "retail[0] The Social Signal / Historical Analog",
+   "issue": "Near-duplicate phrasing about coverage reaching new buyers appeared in both parts.",
+   "severity": "minor",
+   "resolution": "Social Signal wording changed to 'coverage far outside the financial press'."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Reviewed only the 2022-02-02 retail draft and writer note against the 2022-02-02 frozen feed (headline titles/sources/timestamps only), the 2022-02-02 card and exclusions (empty). Chronology checked against the 2022-02-01 retail draft and note only. The 1 February results (Alphabet, PayPal, Exxon) and the Alphabet/PayPal after-hours reactions are treated as known; no 2 February session, Meta/Qualcomm/Spotify results, eurozone CPI, ADP or OPEC+ decision appears. The OPEC reference (n1844) is to January output, not the 2 February meeting. Article bodies were not available.",
+ "recommended_exclusions": [
+  {
+   "id": "n0097",
+   "reason": "Yahoo Finance 'Stock Splits Calendar for:' is a rolling calendar page with no dated content; it should not be cited as evidence in any section."
+  }
+ ],
+ "verifier": {
+  "words": 1332,
+  "distinct_sources": 27,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "dea90e631e89ae342a7668136089546de8bd09638e20302ae24189f103d9ddd3",
+ "chronology_checked_against": [
+  "2022-02-01"
+ ]
+}
