@@ -1,0 +1,100 @@
+{
+ "date": "2022-02-11",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "19df18a5b243e53e43697e87da8662d542b0b19406ea579d9bf6d4f3ea968cc5",
+ "card_sha256": "91d75a92d59c4634694e8fec04cb132242026bd5e89c5d226e3541f06187fe2a",
+ "exclusions_sha256": "b0b4ea2889f753f8d225635b19be0d9a160ea45c12ddc000e90ea6b91faa0a1d",
+ "findings": [
+  {
+   "location": "geo/US Macro Stance",
+   "issue": "Reuters headline n1196 says only that inflation is widespread; text added a services/rent/wage shift not in the headline.",
+   "severity": "moderate",
+   "resolution": "Replaced with a neutral 'broad-based pressure that policy has to lean against'."
+  },
+  {
+   "location": "geo/US Rates & Curve",
+   "issue": "Colon after the Reuters explainer cite attributed our mortgage/financial-conditions reasoning to Reuters.",
+   "severity": "minor",
+   "resolution": "Recast as our own reasoning ('because when the short end leads...')."
+  },
+  {
+   "location": "geo/CN PMIs & Activity",
+   "issue": "Bloomberg 'lying flat' explainer was said to show a ceiling on mass consumption; headline does not say that.",
+   "severity": "moderate",
+   "resolution": "Softened to 'adds a social dimension to that restraint'."
+  },
+  {
+   "location": "geo/CN Property and New/Most Important; anticipatory/3",
+   "issue": "Escrow-fund access is a Reuters 'report' headline; text presented it as done and as the most practical step; anticipatory/3 cited escrow only to the Evergrande headline n0235.",
+   "severity": "moderate",
+   "resolution": "Hedged ('if confirmed', 'per the Reuters report', 'may be reaching'); added n0245 to anticipatory/3 (second use of that ID)."
+  },
+  {
+   "location": "sectors/XLK EPS Upside Watch",
+   "issue": "Apple tap-to-pay headline cannot support a 'payments revenue line'.",
+   "severity": "moderate",
+   "resolution": "Rewritten to say it extends the iPhone base into payments with revenue unquantified."
+  },
+  {
+   "location": "sectors/XLF EPS Upside Watch",
+   "issue": "Kansas City Fed headline is a question; the 'asset yields reprice faster than deposits' mechanism was presented as its content.",
+   "severity": "moderate",
+   "resolution": "Reframed as our working assumption."
+  },
+  {
+   "location": "sectors/XLRE EPS Upside Watch",
+   "issue": "Realtor.com supply-gap headline does not state landlord occupancy/pricing outcome.",
+   "severity": "minor",
+   "resolution": "Hedged with 'should ... even if'."
+  },
+  {
+   "location": "earnings_pattern part 0 and 2",
+   "issue": "Stray ', By contrast' mid-sentence; causal 'because' for Uber's fall exceeded the Guardian headline.",
+   "severity": "minor",
+   "resolution": "Fixed punctuation; 'because' changed to 'which suggests'."
+  },
+  {
+   "location": "underowned/0, catalysts/Cameco; underowned/1",
+   "issue": "Cameco restart 'signals confidence' stated as fact; 'aluminium is tighter' than copper conflicts with copper stocks at three days' consumption (n1936).",
+   "severity": "minor",
+   "resolution": "Hedged to 'suggests'/'normally'; changed to 'just as tight'."
+  },
+  {
+   "location": "flows part 3",
+   "issue": "'Growth managers are cutting' generalised from one fund (Cathie Wood headline).",
+   "severity": "minor",
+   "resolution": "Reworded to 'Growth exposure is being cut'."
+  },
+  {
+   "location": "anticipatory/2 Conditional Expression",
+   "issue": "Frontier-Spirit claim uncited.",
+   "severity": "minor",
+   "resolution": "Added n0447 (second use)."
+  },
+  {
+   "location": "catalysts/Meta",
+   "issue": "Facebook $230bn plunge (n0305) occurred 3 Feb US session, about 7 days before cutoff; borderline for news window.",
+   "severity": "minor",
+   "resolution": "Left: it is the market reaction to Meta's 2 Feb results (company results window 14 days) and the stamp is 4 Feb; no new facts added."
+  },
+  {
+   "location": "Scratch collision check",
+   "issue": "Confirmed every cited ID resolves in this date's feed to the intended headline and src named in text; all card numbers (instrument, session, horizon, curve wording) match this date's card; no numeric FX; FB ticker used; no UK GDP/UMich/Bank of Russia outcome, no post-cutoff content.",
+   "severity": "minor",
+   "resolution": "No change needed."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Own-date feed, card, BRIEF and draft only; headlines not article bodies; no web access; no other-date material read. Scanned feed for post-cutoff or misdated items and found none; day-granular 08:00 stamps (Zynga after-hours, Twitter, Coca-Cola, Affirm, Uber) judged to fall before 00:00 UTC 11 Feb.",
+ "recommended_exclusions": [],
+ "verifier": {
+  "words": 8862,
+  "distinct_sources": 273,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "c5ad9ba1b2f0d81844d0d3739c4530904409035b623d42f40c6c303296646492"
+}
