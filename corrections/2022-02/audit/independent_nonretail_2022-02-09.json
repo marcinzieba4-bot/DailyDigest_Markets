@@ -1,0 +1,94 @@
+{
+ "date": "2022-02-09",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "23be44b3c8d4ba6fc15c5f25a7ab8ab3af24a4774058446b7baacda479df4946",
+ "card_sha256": "3cffca9cef2ea2e1e839a8fd78154a6f170e1f546296b6975641b5c16c7bea36",
+ "exclusions_sha256": "785cf78b6c6c84900254a154a79129b531f7049e86c979e5d2265666fd9a97c6",
+ "findings": [
+  {
+   "location": "geo.CN / New / Most Important",
+   "issue": "Claimed the trade-deal shortfall 'gives Congress cover for more' US listing actions; no own-date headline supports a congressional role.",
+   "severity": "moderate",
+   "resolution": "Reworded to say the shortfall adds to Washington's list of grievances (interpretive, no new fact)."
+  },
+  {
+   "location": "geo.CN / Playbook",
+   "issue": "'so the entry is not crowded' asserted positioning/ownership with no headline or card field (ASHR -4.04% over 20 sessions does not establish crowding).",
+   "severity": "moderate",
+   "resolution": "Clause removed."
+  },
+  {
+   "location": "sectors.XLK / Breaking Convention",
+   "issue": "Used the collapsed Nvidia-Arm deal as evidence that platforms are funding consolidation; the headline shows a regulatory failure, so the inference ran backwards.",
+   "severity": "moderate",
+   "resolution": "Rewritten: Microsoft weighing Mandiant versus a deal blocked by regulators; no new facts."
+  },
+  {
+   "location": "sectors.XLF / Breaking Convention",
+   "issue": "Santander ceasing US mortgage origination was read as evidence that higher rates are the cause; headline gives no reason.",
+   "severity": "moderate",
+   "resolution": "Softened to a non-causal observation about origination exposure; word count kept within 150-200."
+  },
+  {
+   "location": "sectors.XLE / Breaking Convention",
+   "issue": "'The consensus fears windfall taxes' presented an unsupported consensus; BBC headline only explains the windfall tax.",
+   "severity": "minor",
+   "resolution": "Reworded to 'Windfall taxes are the visible policy risk'."
+  },
+  {
+   "location": "sectors.XLB / Reported",
+   "issue": "'Pricing is running ahead of input costs' not supported by DuPont/Sherwin headlines.",
+   "severity": "moderate",
+   "resolution": "Replaced with 'Price increases are sticking in reported results' (DuPont headline cites price hikes)."
+  },
+  {
+   "location": "sectors.XLY / Breaking Convention",
+   "issue": "Attributed Peloton's 25.28% jump solely to restructuring; same draft attributes the five-session +33.01% to takeover talk (BBC n0651).",
+   "severity": "minor",
+   "resolution": "Added 'and bid hopes'."
+  },
+  {
+   "location": "sectors.SOXX / Breaking Convention",
+   "issue": "Asserted the Qualcomm 'high bar' has reset lower for equipment names; speculative.",
+   "severity": "minor",
+   "resolution": "Made conditional (may have reset / could be rewarded)."
+  },
+  {
+   "location": "anticipatory[3] / What Is Priced",
+   "issue": "Czech-rates-twice-Poland headline (3 Feb) predates the 8 Feb hike, so the gap was stated as still current.",
+   "severity": "minor",
+   "resolution": "Qualified as the gap before Tuesday's hike."
+  },
+  {
+   "location": "geo.PL / Corporate & Sectors",
+   "issue": "'defensive yield name' for Orange Polska had no support.",
+   "severity": "minor",
+   "resolution": "Reduced to 'a defensive name'."
+  },
+  {
+   "location": "geo.PL / New / Most Important",
+   "issue": "'finance minister replaced over a tax reform' cited only the new-minister headline, not the Polityka headline that ties the minister to Polski Ład.",
+   "severity": "minor",
+   "resolution": "Added citation [[n1716]] (now used twice)."
+  },
+  {
+   "location": "all parts",
+   "issue": "Checked citation support, source naming, timing (all items before cutoff; company results within 14 days, news within 7, macro within 35), all card numbers/horizons/units, 20-observation curve wording, absence of numeric spot-FX, FB ticker usage, guardrail events (NBP, Peloton, Nvidia-Arm, Pfizer, BP, SoftBank, Bitfinex treated as known; Disney/Uber/Toyota results, Glapinski conference and US CPI treated only as pending). No fatal or major issue found; no cross-date contamination detected (every number found in the own-date card or same-part headline).",
+   "severity": "minor",
+   "resolution": "No change required."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Own-date feed, card and BRIEF only; headlines not article bodies. Could not verify actual release times beyond headline stamps; CBA (n0069) used as a pre-open 9 Feb AEDT release, i.e. before 00:00 UTC. n1349 (Abu Dhabi Ports debut) relies on its 8 Feb stamp. Spot-FX absent so not checked.",
+ "recommended_exclusions": [],
+ "verifier": {
+  "words": 8830,
+  "distinct_sources": 267,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "6d3c3eea11f36ff19d12b3f551bccc05410f6d9e0fa18998cd03fdd1048dc5fa"
+}
