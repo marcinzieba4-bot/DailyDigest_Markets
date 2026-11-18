@@ -1,0 +1,101 @@
+{
+ "date": "2022-02-21",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "bda6a931904fb82c4f7b0bf1675b980c855ea7c664936ddb1a04e31e77838061",
+ "card_sha256": "d037d8aeaa40960239154302de775b69c558b3812ab78e5dbe91c9e3e8bff712",
+ "exclusions_sha256": "4ac5e63ae1420936a69c15eb86910fe051dc8eb6b28403ef549dbc7db8ddbcf7",
+ "findings": [
+  {
+   "location": "retail[0] title and retail_intro",
+   "issue": "Lead hook 'Truth Social launches on a closed market' and intro 'led by Trump's Truth Social launch' read as a completed launch; the App Store release came after the 00:00 UTC 21 February cutoff and was only scheduled (Reuters n0932, Axios n1766).",
+   "severity": "major",
+   "resolution": "Hook changed to 'Truth Social's launch is set for a holiday'; intro and Why Retail Is Here now say the launch is set/due for Presidents' Day; When the Narrative Breaks now reads 'whatever Monday's launch delivers' instead of presupposing a launch and its reception."
+  },
+  {
+   "location": "notes why_lead; retail[0] evidence",
+   "issue": "Note claimed DWAC/Truth Social was never an earlier lead or smaller item, but the 17 February edition ran DWAC as a smaller item ('Truth Social's first screenshot'); the lead recycled that item's headlines (Forbes screenshot n1722, Newsweek look-alike n1723, Time n0403) and the 17-18 February Munger/Saluzzi items (n1721, n1737).",
+   "severity": "major",
+   "resolution": "Recycled headlines removed except Bloomberg's Parler/Gettr item; lead rebuilt on newly published evidence (Slate n1763, Guardian beta n1752, Vanity Fair n1744, NYT n1767, CNBC n0844, Bloomberg options hedge n2043) around the new holiday-gap angle; note corrected with the 17 February relation."
+  },
+  {
+   "location": "retail[1] Bitcoin",
+   "issue": "Item 'digital gold flunks the weekend war test' repeated the 18 February smaller item 'digital gold fails the war test' (same gold-versus-bitcoin angle) without a new narrative.",
+   "severity": "major",
+   "resolution": "Re-angled to 'the dip-buyers meet Buterin's winter' on new 18-19 February evidence (Bloomberg n1001, Business Insider Africa n1762, ADWEEK n0995); gold comparison and the 14 February Super Bowl items (n0360, n0086, n2045) dropped; Ether's 17.33% labelled as a five-session move."
+  },
+  {
+   "location": "retail[3] GDX",
+   "issue": "Third gold-hedge item in a week (GDX 14 February, GLD 17 February) presented as a full material update with the same invasion-hedge angle; it also relied on the Guardian Macron summit item n1430, whose summit-in-principle announcement may post-date the cutoff, consistent with the writer's own avoidance of n1427/n1440.",
+   "severity": "moderate",
+   "resolution": "Demoted to a brief secondary carryover of 154 words citing only new weekend evidence (n1424, n1422, n1435, n0834); n1430 and the Barrick item removed; the timing sentence now attaches 'yet to trade' to the Sunday Belarus extension."
+  },
+  {
+   "location": "retail[2] Tesla Where It Breaks",
+   "issue": "NPR Boombox recall (n1866) carries a 17 February index stamp but reports the recall announced on 10 February, outside the seven-day company-news window.",
+   "severity": "moderate",
+   "resolution": "Replaced with Time's 16 February 'latest scandals could hurt its bottom line' (n1834)."
+  },
+  {
+   "location": "retail[0] Historical Analog",
+   "issue": "Avis meme-stock headline attributed to 'Business Insider' (src is Business Insider Africa) and mechanically weak as a DWAC analog.",
+   "severity": "minor",
+   "resolution": "Removed; analog now rests on the Virgin Galactic round trip with CNBC n0844 for the board exit and Forbes n0903 for the crash framing."
+  },
+  {
+   "location": "retail[0] voice",
+   "issue": "Social Signal mixed leverage evidence into attention evidence; Smart Money View leaned on generic Munger/rebellion commentary.",
+   "severity": "minor",
+   "resolution": "Social Signal limited to attention coverage with a modal inference; Smart Money View now names a business split (NYT vs Parler/Gettr CEOs) and a positioning split (Bloomberg crash hedge, Wolf Street leverage)."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Headlines only, not article bodies; feed timestamps are day-granular (08:00 UTC), so timing was judged from event knowledge strictly before 00:00 UTC 21 February. Numbers checked against cards/2022-02-21.json (US sessions 18 February; crypto 20 February). The Truth Social launch outcome, Putin's 21 February recognition and anything later were not used.",
+ "recommended_exclusions": [
+  {
+   "id": "n1319",
+   "reason": "CNN 'Photos: Russia invades Ukraine' stamped 14 February: misdated or mischaracterised; no invasion had occurred at this cutoff."
+  },
+  {
+   "id": "n1427",
+   "reason": "CNN/CNBC Biden agrees 'in principle' to meet Putin: White House statement issued around or after 00:00 UTC 21 February."
+  },
+  {
+   "id": "n1440",
+   "reason": "CNN White House statement on a Biden-Putin meeting in principle: same timing risk as n1427."
+  },
+  {
+   "id": "n1430",
+   "reason": "Guardian Macron paves way for Putin-Biden summit: reports the summit-in-principle announcement made around midnight UTC; timing doubtful."
+  },
+  {
+   "id": "n1866",
+   "reason": "NPR Tesla Boombox recall: a 10 February event indexed 17 February; stale company news for this date."
+  }
+ ],
+ "verifier": {
+  "words": 1343,
+  "distinct_sources": 28,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "b3d52ee3a832a5c918f21d7df916b1b7699ff77ad1bd73b2eb4be719adba5cd4",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02",
+  "2022-02-03",
+  "2022-02-04",
+  "2022-02-07",
+  "2022-02-08",
+  "2022-02-09",
+  "2022-02-10",
+  "2022-02-11",
+  "2022-02-14",
+  "2022-02-15",
+  "2022-02-16",
+  "2022-02-17",
+  "2022-02-18"
+ ]
+}
