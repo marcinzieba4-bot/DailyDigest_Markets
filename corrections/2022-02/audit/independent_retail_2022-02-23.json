@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "f20cb912d8a94b7ddffaa6a07aad5e495bc9d8c8ea572fbb17a6316e15fe670a",
  "card_sha256": "67211e27b16f3d1f7d9fcf1e6c0ea8a525db34d5d208ddd1f0644b927dff3522",
- "exclusions_sha256": "7ba03e69187ae1f84f48369e7ca0495282e75055030919c8f4cb77871a9daa12",
+ "exclusions_sha256": "46be31ba9f2022d9024974fbc4927ccb04278b2aafd9d72ca61d2e6ac83850e2",
  "findings": [
   {
    "location": "retail[0] Why Retail Is Here, Historical Analog, When the Narrative Breaks (Brent 3.53%)",
@@ -84,5 +84,25 @@
   "2022-02-18",
   "2022-02-21",
   "2022-02-22"
+ ],
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "7ba03e69187ae1f84f48369e7ca0495282e75055030919c8f4cb77871a9daa12",
+   "new_exclusions_sha256": "46be31ba9f2022d9024974fbc4927ccb04278b2aafd9d72ca61d2e6ac83850e2",
+   "excluded_ids_now": [
+    "n0066",
+    "n0067",
+    "n0360",
+    "n0516",
+    "n0728",
+    "n1093",
+    "n1166",
+    "n1254"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
  ]
 }

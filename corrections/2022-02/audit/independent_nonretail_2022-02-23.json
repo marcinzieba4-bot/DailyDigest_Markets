@@ -1,0 +1,117 @@
+{
+ "date": "2022-02-23",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "f20cb912d8a94b7ddffaa6a07aad5e495bc9d8c8ea572fbb17a6316e15fe670a",
+ "card_sha256": "67211e27b16f3d1f7d9fcf1e6c0ea8a525db34d5d208ddd1f0644b927dff3522",
+ "exclusions_sha256": "46be31ba9f2022d9024974fbc4927ccb04278b2aafd9d72ca61d2e6ac83850e2",
+ "findings": [
+  {
+   "location": "sectors/XLK Breaking Convention",
+   "issue": "Claimed security software and government data platforms 'gain' on the war; the cited CDC-Palantir headline is only a contract and Palantir (-20.97% over five sessions) and Palo Alto both fell.",
+   "severity": "moderate",
+   "resolution": "Reworded to government data demand as a counterweight, with no claim of gains."
+  },
+  {
+   "location": "geo/PL Markets (n1401)",
+   "issue": "Parkiet headline only asks how markets would react to a global conflict; text attributed to it a framing of bank selling and lenders as liquid proxy.",
+   "severity": "moderate",
+   "resolution": "Reattributed as the question only; the lender-proxy mechanism is now the author's own inference."
+  },
+  {
+   "location": "geo/PL New / Most Important (n1516)",
+   "issue": "Headline is a question (will NBP profit finance the armed forces?) but text stated funding from central-bank profit as fact.",
+   "severity": "moderate",
+   "resolution": "Made conditional ('if adopted, would shift')."
+  },
+  {
+   "location": "sectors/SOXX Reported (n1701)",
+   "issue": "Headline says Nvidia 'reportedly' spent $10 billion on TSMC capacity; text stated it flatly.",
+   "severity": "moderate",
+   "resolution": "Added 'reportedly'."
+  },
+  {
+   "location": "crypto Playbook",
+   "issue": "'most crowded position' for Iris Energy is a positioning claim with no supporting headline or card field.",
+   "severity": "moderate",
+   "resolution": "Replaced with 'the stretched end of the trade' (price run only)."
+  },
+  {
+   "location": "geo/CN PMIs & Activity (n0905)",
+   "issue": "Schindler profit warning headline stated as a sign construction demand is weak; beyond headline.",
+   "severity": "minor",
+   "resolution": "Softened to 'a possible sign'."
+  },
+  {
+   "location": "sectors/XLC Breaking Convention (n0681)",
+   "issue": "'strips out legacy cost' goes beyond the CNN 3G-shutdown headline.",
+   "severity": "minor",
+   "resolution": "Changed to 'retires legacy infrastructure'."
+  },
+  {
+   "location": "sectors/XLE and XLI Breaking Convention",
+   "issue": "Inferences about equity holders' views and peak-margin fears stated as fact.",
+   "severity": "minor",
+   "resolution": "Made modal ('may doubt', 'hints')."
+  },
+  {
+   "location": "anticipatory/Sanctions Risk (n1224)",
+   "issue": "'only if' overstated the CNBC headline ('if Russia has not invaded').",
+   "severity": "minor",
+   "resolution": "Changed to 'if'."
+  },
+  {
+   "location": "geo/EU Activity & Inflation",
+   "issue": "Lower-case sentence start 'a Reuters report'.",
+   "severity": "minor",
+   "resolution": "Capitalised."
+  },
+  {
+   "location": "whole draft",
+   "issue": "Checked every cited headline against sentence, src, timing windows, card numbers and source tags, curve wording, FX (none numeric), period names (FB, RTX, Mercedes-Benz Group), and invasion wording (Biden 'beginning invasion' attributed as his characterisation). No cross-date or hindsight material, no excluded IDs, no after-cutoff outcomes (RBNZ, Lowe's, TJX, Lucid, eBay treated only as pending or not as results). No fatal or major issues found.",
+   "severity": "minor",
+   "resolution": "No further change."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Reviewed only the own-date feed headlines (not article bodies), own-date card and brief; no web access; item stamp-to-release timing for day-granular 08:00 stamps judged by headline meaning only. Cited items stamped 22 Feb (Coles, Seven Group, RBA speech n0068, Facebook Reels, Tegna, SoFi) are treated as released before 00:00 UTC on 23 Feb.",
+ "recommended_exclusions": [
+  {
+   "id": "n0066",
+   "reason": "ABC piece on wages pushing higher but slower than living costs; likely coverage of Australia's Wage Price Index released 23 Feb 11:30 AEDT (00:30 UTC), after cutoff."
+  },
+  {
+   "id": "n0067",
+   "reason": "Reuters on Woolworths half-year profit and sales; Australian morning result on 23 Feb AEDT, after or at the edge of the 00:00 UTC cutoff despite 22 Feb stamp."
+  }
+ ],
+ "verifier": {
+  "words": 9030,
+  "distinct_sources": 260,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "14b9b2b01201cb2ef57bc2304e0f68f87ce04dfaf849c1823587a37116729435",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "7ba03e69187ae1f84f48369e7ca0495282e75055030919c8f4cb77871a9daa12",
+   "new_exclusions_sha256": "46be31ba9f2022d9024974fbc4927ccb04278b2aafd9d72ca61d2e6ac83850e2",
+   "excluded_ids_now": [
+    "n0066",
+    "n0067",
+    "n0360",
+    "n0516",
+    "n0728",
+    "n1093",
+    "n1166",
+    "n1254"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
+}
