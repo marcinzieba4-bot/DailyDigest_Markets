@@ -1,0 +1,109 @@
+{
+ "date": "2022-02-28",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "0c6d8ea1e1d88dd9643c6cb06c4882536d8c6cc7b3f70a4f28b4d86786caea98",
+ "card_sha256": "5dc7ebadf5c5494b0acc5366982ff737c7077c264ae89564f15b37490e4d5c94",
+ "exclusions_sha256": "d61ee2e4cbf2558a4e0a23e1d6d9ca15ca4064b8c18e7c3855cfcff249d77815",
+ "findings": [
+  {
+   "location": "retail[0] Why Retail Is Here / When the Narrative Breaks",
+   "issue": "Buffett's letter was published Saturday 26 February (n0806, n0807, n0828 stamped 26 Feb), after BRK-B's Friday close, but the draft set the record-buyback headline directly beside the +3.56% Friday move and later spoke of 'the letter's glow' fading, implying the session had priced the letter.",
+   "severity": "major",
+   "resolution": "Now states the shares 'had closed Friday, before the letter' and that Monday is the first session to price it; the break line reads 'would say the letter bought no premium at all'; What Is Driving It says the letter came out on Saturday after the invasion week."
+  },
+  {
+   "location": "retail[0] When the Narrative Breaks",
+   "issue": "'Buffett's own words, no good investments' overstated Reuters' 'laments lack of good investments' (n0807) and attached the paraphrase to the Time citation (n0827).",
+   "severity": "minor",
+   "resolution": "Rewritten as 'buybacks on a merely mildly attractive path [[n0827]] alongside the lament about a lack of good investments' (the lament is cited to n0807 earlier in the item; n0807 already at its two-use cap)."
+  },
+  {
+   "location": "retail[0] Smart Money View",
+   "issue": "'a manager who cannot find anything worth buying' overstated n0807; 'a pointed message to the profitless growth names' presented an interpretation of n0826 ('Buffett Blasts Fake Earnings') as fact.",
+   "severity": "minor",
+   "resolution": "Now 'a manager who laments a shortage of good investments is not calling a bottom' and the fake-earnings point 'can be read as a jab at the profitless growth stories retail chased in 2021'. The split remains Buffett's caution versus the Four Giants/buyback bull reading; no other analyst or bank comments on Berkshire in the own-date feed."
+  },
+  {
+   "location": "retail[0] What Is Driving It / The Social Signal",
+   "issue": "$89.8B net profit carried no outlet attribution; 'Yahoo Finance is recirculating' and 'unusually broad' asserted things the headlines do not establish; 'Every February' replaced by a safer generalisation.",
+   "severity": "minor",
+   "resolution": "'Forbes Middle East puts Berkshire's 2021 net profit at $89.8B [[n0837]]'; 'Yahoo Finance is running a piece on Buffett's fourth law of motion [[n0876]]'; 'The attention is broad for a shareholder letter'; opening now 'Once a year the crowd gets one shareholder letter it actually reads'."
+  },
+  {
+   "location": "retail[2] Block",
+   "issue": "'The move travelled, with ABC reporting Block soaring on the ASX' reversed the order of sessions: the ASX session of 25 February (n0061, stamped 24 Feb) traded before the US Friday session. 'After a brutal stretch' had no support in this card, where Block is +13.42% over 20 sessions.",
+   "severity": "minor",
+   "resolution": "Now 'Australian holders got there first, with ABC reporting Block soaring on the ASX [[n0061]]; then the US shares rose 26.14% to $119.82'; 'a brutal stretch for fintech' is backed by PayPal -29.83% and Affirm -23.17% over 20 sessions in Where It Breaks; Payments Dive attribution made explicit. n0061 describes the 25 Feb ASX session, which precedes this edition's cutoff (the 02-25 ban does not apply here)."
+  },
+  {
+   "location": "retail[2] Block results status",
+   "issue": "No own-date headline names the completed Q4 report; the 'first session after quarterly results' rests on the 23 Feb Investopedia preview (n0421, not cited), Payments Dive's 25 Feb 'Block defends higher marketing spending' (n1073) and the card's +26.14% move.",
+   "severity": "info",
+   "resolution": "Kept the release-status wording only (no reported figures or guidance claimed); recorded in notes."
+  },
+  {
+   "location": "retail[3] MP Materials",
+   "issue": "'rare earths are the purest retail expression of it' asserted retail attention for which there is no own-date headline.",
+   "severity": "minor",
+   "resolution": "Now 'a US rare-earth miner is its simplest ticker'; all prices (MP 46.85 USD +6.84%, +12.62% 5s, +25.10% 20s; Lynas 9.57 AUD +6.93%) match the card."
+  },
+  {
+   "location": "word counts",
+   "issue": "Edits pushed the section to 1,385 words (cap 1,350).",
+   "severity": "minor",
+   "resolution": "Trimmed redundant lines (lead What Is Driving It closing sentence, Social Signal lead-in, Smart Money aside, Block close); final 1,347 words, lead 703, smaller 192/215/189."
+  },
+  {
+   "location": "notes/retail_2022-02-28.json",
+   "issue": "Notes needed the timing clarification and precise chronology for Block (previously appeared as a peer figure on 2022-02-23 and was declined on 2022-02-25) and Rheinmetall (n0623 was the 2022-02-25 lead's attention evidence).",
+   "severity": "minor",
+   "resolution": "why_lead and why_smaller updated; evidence_ids already equal the final cited set (24 IDs)."
+  },
+  {
+   "location": "all items: timing and guardrails",
+   "issue": "Checked every cited ID: stamps 2022-02-22 to 2022-02-27, all before 00:00 UTC 28 Feb and inside their windows (news 7 days, MP results 14 days); Sunday-stamped items (n1228, n1229, n1230, n1232, n0837, n0876, n1969) describe weekend events, not Monday trading; no Bank of Russia hike, Monday ruble move, Moscow exchange closure or excluded n1971; no numeric spot-FX; no FB/SQ/DWAC hindsight; all card values, sessions and units correct.",
+   "severity": "info",
+   "resolution": "No change needed."
+  },
+  {
+   "location": "chronology",
+   "issue": "Lead Berkshire (Buffett letter) is new to the month. Rheinmetall recurs after the 2022-02-25 ITA lead (and the 2022-02-22 LMT / 2022-02-24 ITA items) with a new angle (Germany's EUR 100 billion pledge, 27 Feb: n1228, n1229, n1230, n1232) and new reaction (RHM +7.00% to 107.05 EUR). Block is new as an item (25 Feb +26.14%). MP Materials is new. TQQQ, Tesla and Coinbase are not repeated. Four distinct narratives.",
+   "severity": "info",
+   "resolution": "Accepted."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Headline-level review only (no article bodies). Day-granular 08:00 stamps treated as same-day publication; ABC n0061 (stamped 24 Feb) read as describing the 25 Feb ASX session, eligible for this edition. The lead's selection over a second consecutive defence lead is an editorial choice accepted on the strength of the Buffett-letter attention cluster; no own-date analyst comment on Berkshire exists to widen the Smart Money split. No web access.",
+ "recommended_exclusions": [],
+ "verifier": {
+  "words": 1347,
+  "distinct_sources": 24,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "5da1cb8cff16120c1f73e76b0c2d3c76641b104a5d5a75519b5cec0b443b287f",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02",
+  "2022-02-03",
+  "2022-02-04",
+  "2022-02-07",
+  "2022-02-08",
+  "2022-02-09",
+  "2022-02-10",
+  "2022-02-11",
+  "2022-02-14",
+  "2022-02-15",
+  "2022-02-16",
+  "2022-02-17",
+  "2022-02-18",
+  "2022-02-21",
+  "2022-02-22",
+  "2022-02-23",
+  "2022-02-24",
+  "2022-02-25"
+ ]
+}
