@@ -1,0 +1,87 @@
+{
+ "date": "2022-02-28",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "0c6d8ea1e1d88dd9643c6cb06c4882536d8c6cc7b3f70a4f28b4d86786caea98",
+ "card_sha256": "5dc7ebadf5c5494b0acc5366982ff737c7077c264ae89564f15b37490e4d5c94",
+ "exclusions_sha256": "d61ee2e4cbf2558a4e0a23e1d6d9ca15ca4064b8c18e7c3855cfcff249d77815",
+ "findings": [
+  {
+   "location": "CAT Alibaba (BABA) / Catalyst & Thesis",
+   "issue": "n0805 (Borneo Bulletin, stamped 26 Feb) re-reports Alibaba's December-quarter results, which were released about 3 Feb, so by meaning it is a company result older than the 14-day window.",
+   "severity": "major",
+   "resolution": "Removed the n0805 sentence. The thesis now rests on n0534 (24 Feb) and the card's 13.25% five-session ADR decline."
+  },
+  {
+   "location": "Underowned theme 3 (solar) / Trigger to Watch",
+   "issue": "n1232 (BBC) covers Germany's defence U-turn, but the text called it an energy-security pivot, which the headline does not support.",
+   "severity": "moderate",
+   "resolution": "Reworded: the BBC called the U-turn dramatic, and the trigger is conditional on the pivot extending from defence to energy security."
+  },
+  {
+   "location": "JP Playbook",
+   "issue": "n1472 (Japan Times, 'The economic consequences of Putin's war') was cited as warning that oil would push price gains into wages. The headline does not say that.",
+   "severity": "moderate",
+   "resolution": "Reworded so the headline supports only the claim that the economic consequences are being set out. The wage-pass-through risk is now presented as the writer's own analysis."
+  },
+  {
+   "location": "Earnings Pattern / Pattern",
+   "issue": "Moderna was grouped with the punished 'despite beats' names because of a 'vaccine peak'. No cited headline says that, and n0604 points to $19 bn of 2022 vaccine sales.",
+   "severity": "moderate",
+   "resolution": "Removed the vaccine-peak claim. The text now says only that Moderna slipped after its profit, which the card shows as -3.14% on Friday."
+  },
+  {
+   "location": "CAT Block (SQ) title and Earnings Rewarded",
+   "issue": "The title 'outlook-led re-rating' asserted a cause. The only cited headline (n1073) says management defended higher marketing spending.",
+   "severity": "moderate",
+   "resolution": "Retitled 'Block (SQ) — marketing spend rewarded'. Body numbers were already correct."
+  },
+  {
+   "location": "PL Fiscal & Politics",
+   "issue": "n1485 (World Bank Poland Public Finance Review) was said to 'frame the trade-offs', which is more than the headline says.",
+   "severity": "minor",
+   "resolution": "Softened to 'sets the fiscal backdrop'."
+  },
+  {
+   "location": "PL New / Most Important",
+   "issue": "Tone: the fee waivers for Ukrainian refugees were called 'a small but visible hit to fee income', which is cold given the gravity of the war.",
+   "severity": "minor",
+   "resolution": "Reworded to 'a small fee-income cost the sector is choosing to carry'."
+  },
+  {
+   "location": "JP Activity & Currency",
+   "issue": "SoftBank was grouped under the 'chip-equipment complex'.",
+   "severity": "minor",
+   "resolution": "Reworded to 'chip equipment and SoftBank'."
+  },
+  {
+   "location": "CN PMIs & Activity",
+   "issue": "The text named the February PMIs as the next test. The Monday data is unknown at the cutoff, and no data from it appears, but the term sits close to a guardrail.",
+   "severity": "minor",
+   "resolution": "Reworded to 'February surveys', which carries no data."
+  },
+  {
+   "location": "Whole component",
+   "issue": "Checked every citation against own-date headlines, source labels and stamps. Checked all card numbers for instrument, session and horizon, curve wording, crypto prior-close 2022-02-27 tags, FB/Block/RTX/Mercedes names, no numeric spot-FX, no Monday-unknown events (Bank of Russia hike, ruble collapse, Moscow closure, China PMI data) and no n1971. No further fatal or major issues. The rouble reference (n1332, 23 Feb) and the Russian stock crash (n0638, 24 Feb) are pre-weekend and supported.",
+   "severity": "minor",
+   "resolution": "None needed."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "I used only the 2022-02-28 draft, writer note, own-date feed, card and exclusions, plus the brief. Headlines were checked against titles, not article bodies. My own knowledge of the Alibaba results date (about 3 Feb) was used for the n0805 staleness judgement. Sunday-stamped weekend items cited (n1416, n1225, n1226, n1228, n1229, n1230, n1232, n1511, n0836, n1744, n1747, n1749, n1417) fall within the known-weekend list or occurred before 00:00 UTC Monday as far as I can tell. n0139 (Caixin January PMI, stamped 29 Jan) is probably misdated, since the real release was about 1 Feb. It is within the macro window either way.",
+ "recommended_exclusions": [
+  {
+   "id": "n0805",
+   "reason": "Borneo Bulletin item stamped 26 Feb re-reports Alibaba's December-quarter results, which were released around 3 Feb. It is a stale company result, but it is now uncited."
+  }
+ ],
+ "verifier": {
+  "words": 8845,
+  "distinct_sources": 263,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "9d12d5caeb2b53af39f7d60a5418d74be74fd270d854b1fad4e147ad3a38d69b"
+}

@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "deab18b0cf5adbba7f8e0f411a66f2fac24793caaa03dd905a4d5b6d7c708f57",
  "card_sha256": "7c1813e7d027943794291c56b118aef5a8630e0200a59fa615d016af0ae69f16",
- "exclusions_sha256": "ab49a2d1e21a8dd1c173ac742367fdc1beb6569d3d4501f813cef3c938bd9434",
+ "exclusions_sha256": "bf3279709571326174b8bc4036313067b5f370cac37d291a47f288dc07db4c19",
  "findings": [
   {
    "location": "retail_intro",
@@ -71,7 +71,7 @@
   "distinct_sources": 24,
   "warnings": 0
  },
- "retail_draft_sha256": "75cb1c09c7783adff04cdf06eae4881fbdc262b0c6d045dc046e646faa9c8c90",
+ "retail_draft_sha256": "d049330144d35540724115d166fbc3911463bc21a7730ad69832579015d9e5ac",
  "chronology_checked_against": [
   "2022-02-01",
   "2022-02-02",
@@ -110,6 +110,38 @@
    "components_reverified": true,
    "by": "root",
    "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  },
+  {
+   "previous_exclusions_sha256": "ab49a2d1e21a8dd1c173ac742367fdc1beb6569d3d4501f813cef3c938bd9434",
+   "new_exclusions_sha256": "bf3279709571326174b8bc4036313067b5f370cac37d291a47f288dc07db4c19",
+   "excluded_ids_now": [
+    "n0135",
+    "n0382",
+    "n0594",
+    "n0742",
+    "n0837",
+    "n1064",
+    "n1232",
+    "n1265",
+    "n1268",
+    "n1911"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ],
+ "root_deltas": [
+  {
+   "previous_sha256": "75cb1c09c7783adff04cdf06eae4881fbdc262b0c6d045dc046e646faa9c8c90",
+   "new_sha256": "d049330144d35540724115d166fbc3911463bc21a7730ad69832579015d9e5ac",
+   "removed": "The war-scare trade has two legs, and ETF investors are buying both: the Financial Times reports ETF investors piling into Russian equities and defence stocks [[n0837]].",
+   "inserted": "The war-scare trade has two legs, and the bargain-hunting crowd is tempted by both: beaten-down Russian assets and the defence primes that would supply any escalation.",
+   "reason": "Root timing correction: FT n0837 on ETF flows into Russian equities and defence is stamped 23 February and could describe post-invasion flows (independent nonretail review); the item no longer asserts flows.",
+   "severity": "major",
+   "by": "root",
+   "reverified": "23 sources, 1344 words, 0 fail"
   }
  ]
 }
