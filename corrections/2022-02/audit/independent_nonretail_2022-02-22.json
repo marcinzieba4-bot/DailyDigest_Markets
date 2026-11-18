@@ -1,0 +1,52 @@
+{
+ "date": "2022-02-22",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "824e2ef31feb6ed2feb2cb7a0e5f0c3705d9e5118ffcfdde249504cd19c0e714",
+ "card_sha256": "0f10a9109c80f57029418ccefa0216cb41bf713f2685e5aa5e9a58162d67ec60",
+ "exclusions_sha256": "bf18ef47fb35f96dd586f040eeca7b18229e4d4bf03aec998f38837232688541",
+ "findings": [
+  {
+   "location": "sectors XLF/XLC/SOXX, geo PL Corporate (Morgan Stanley, Spotify, Intel, CD Projekt, PGE/Tauron)",
+   "issue": "Price moves joined to older headlines with 'as', implying causation the headlines do not support",
+   "severity": "moderate",
+   "resolution": "Changed 'as' to 'while' in six sentences; no facts added"
+  },
+  {
+   "location": "sectors XLK Narrative",
+   "issue": "'curve matters more than the Donbas' sat awkwardly against the Bearish US stance built on the recognition shock",
+   "severity": "minor",
+   "resolution": "Reworded to 'matters as much as the Donbas'"
+  },
+  {
+   "location": "crypto Market Context",
+   "issue": "'absorbed the escalation in real time' asserts causation and timing beyond the card (daily UTC close)",
+   "severity": "minor",
+   "resolution": "Reworded to 'traded through the 21 February escalation'"
+  },
+  {
+   "location": "notes/2022-02-22_nonretail.json",
+   "issue": "Note missing after writer stop",
+   "severity": "minor",
+   "resolution": "Wrote note with required fields"
+  },
+  {
+   "location": "whole draft",
+   "issue": "Checked every cited ID against own-date feed (src, stamps, cat), all card figures, curve wording, source tags, citation counts (none above 2), post-cutoff items and persona names (FB, SQ, RTX, DWAC, Mercedes-Benz Group). No unsupported numbers, outlet mismatches or post-cutoff facts found. Some interpretive links (e.g. haven demand offsetting hike repricing, Buffett 13F buys called value-tilted) are editorial inference rather than headline claims",
+   "severity": "minor",
+   "resolution": "Left as analysis; no change"
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Reviewed only the 2022-02-22 feed, card, exclusions and nonretail draft; headlines only, no article bodies; did not read other dates or retail drafts; Putin/Atlantic Council 21 Feb items rely on the brief's known-events guardrail.",
+ "recommended_exclusions": [],
+ "verifier": {
+  "words": 8796,
+  "distinct_sources": 249,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "46ad6fb71baa5fe3b29e30a05caf02d0773c115f652e0f543b00dd0358afc231"
+}
