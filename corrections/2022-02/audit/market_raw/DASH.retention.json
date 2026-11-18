@@ -1,0 +1,57 @@
+{
+  "ticker": "DASH",
+  "path": "audit/market_raw/DASH.json.gz",
+  "original_network_response_sha256": "9168527b45610f284bcc8e5fe43c8180723e398611f49e1e40b409d298c8779a",
+  "retained_uncompressed_sha256": "c4d905c2333cc39b13ae7a4fde5488dcb6cd0867905151f5c0aeea52ccc6d67c",
+  "retained_gzip_sha256": "f96318d1a41eb48e14ff5301bd6e874501c3f6f29713b8d7d5b8d1630a33beb4",
+  "removed_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+  ],
+  "historical_timestamp_and_close_arrays_unchanged": true,
+  "retained_historical_pairs_unchanged": true,
+  "removed_out_of_scope_observation_count": 0,
+  "removed_out_of_scope_observations": [],
+  "removed_out_of_scope_split_events": [],
+  "discarded_indicator_fields": [
+    "adjclose"
+  ],
+  "discarded_quote_fields": [
+    "high",
+    "low",
+    "open",
+    "volume"
+  ],
+  "first_retained_inclusive": "2021-11-01",
+  "final_retained_inclusive": "2022-02-27",
+  "retained_last_exchange_local_date": "2022-02-25",
+  "retained_meta_fields": [
+    "currency",
+    "exchangeName",
+    "exchangeTimezoneName",
+    "firstTradeDate",
+    "fullExchangeName",
+    "instrumentType",
+    "symbol",
+    "timezone"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "ticker": "AIR.PA",
+  "path": "audit/market_raw/AIR_PA.json.gz",
+  "original_network_response_sha256": "65b83bd89a972936d0790070ecdd67ad434ac11e334873a4883d3db809be49ed",
+  "retained_uncompressed_sha256": "5a22b4494b5f7c17fab03eff1eae2eae30be977af7d8e70870989d5309c57fa7",
+  "retained_gzip_sha256": "611fab096948e8be36782a7fb3488f03a44dfd4ecab840e6ddd3d50558c75b85",
+  "removed_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+  ],
+  "historical_timestamp_and_close_arrays_unchanged": true,
+  "retained_historical_pairs_unchanged": true,
+  "removed_out_of_scope_observation_count": 0,
+  "removed_out_of_scope_observations": [],
+  "removed_out_of_scope_split_events": [],
+  "discarded_indicator_fields": [
+    "adjclose"
+  ],
+  "discarded_quote_fields": [
+    "high",
+    "low",
+    "open",
+    "volume"
+  ],
+  "first_retained_inclusive": "2021-11-01",
+  "final_retained_inclusive": "2022-02-27",
+  "retained_last_exchange_local_date": "2022-02-25",
+  "retained_meta_fields": [
+    "currency",
+    "exchangeName",
+    "exchangeTimezoneName",
+    "firstTradeDate",
+    "fullExchangeName",
+    "instrumentType",
+    "symbol",
+    "timezone"
+  ]
+}

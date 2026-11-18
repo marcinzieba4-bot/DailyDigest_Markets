@@ -1,0 +1,57 @@
+{
+  "ticker": "GBTC",
+  "path": "audit/market_raw/GBTC.json.gz",
+  "original_network_response_sha256": "f9c53abff769b03cad6ee72b86988aad375edeed6daf98b3f7e86363babf72e3",
+  "retained_uncompressed_sha256": "558b1b9657da39d19ee2b53c12f9607692f91a8380ecc9d7b3d1b49c7e245ddf",
+  "retained_gzip_sha256": "0460e401cb400bc6ec7ac8db7ec5a6da6775a0f9f015c229248eb3c5dc6f8d5f",
+  "removed_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+  ],
+  "historical_timestamp_and_close_arrays_unchanged": true,
+  "retained_historical_pairs_unchanged": true,
+  "removed_out_of_scope_observation_count": 0,
+  "removed_out_of_scope_observations": [],
+  "removed_out_of_scope_split_events": [],
+  "discarded_indicator_fields": [
+    "adjclose"
+  ],
+  "discarded_quote_fields": [
+    "high",
+    "low",
+    "open",
+    "volume"
+  ],
+  "first_retained_inclusive": "2021-11-01",
+  "final_retained_inclusive": "2022-02-27",
+  "retained_last_exchange_local_date": "2022-02-25",
+  "retained_meta_fields": [
+    "currency",
+    "exchangeName",
+    "exchangeTimezoneName",
+    "firstTradeDate",
+    "fullExchangeName",
+    "instrumentType",
+    "symbol",
+    "timezone"
+  ]
+}

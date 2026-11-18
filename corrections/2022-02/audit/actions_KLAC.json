@@ -1,0 +1,117 @@
+{
+ "ticker": "KLAC",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2026-06-12",
+   "factor": 10.0,
+   "ratio": "10:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KLAC?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+   "sha256": "a880d96d4568e94a75bd5a6a3215b06bbc3796e911d05c9097d87d6ebcf7b7b8",
+   "fetched_at_utc": "2026-11-18T11:18:01.124889+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/KLAC?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+   "sha256": "d4896925ea6237976e6cdf9fc4e35e1e0d32c1c2a2160d4c25dc4452de6123a4",
+   "fetched_at_utc": "2026-11-18T11:18:01.361985+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/KLAC?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+    "sha256": "a880d96d4568e94a75bd5a6a3215b06bbc3796e911d05c9097d87d6ebcf7b7b8",
+    "fetched_at_utc": "2026-11-18T11:18:01.124889+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "KLAC",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 339859800,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 81,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/KLAC?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+    "sha256": "d4896925ea6237976e6cdf9fc4e35e1e0d32c1c2a2160d4c25dc4452de6123a4",
+    "fetched_at_utc": "2026-11-18T11:18:01.361985+00:00"
+   },
+   "retained_exact_split_events": {
+    "1781271000": {
+     "date": 1781271000,
+     "numerator": 10.0,
+     "denominator": 1.0,
+     "splitRatio": "10:1"
+    }
+   },
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "KLAC",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 339859800,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 1186,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

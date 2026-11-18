@@ -1,0 +1,62 @@
+{
+  "ticker": "BTC-USD",
+  "path": "audit/market_raw/BTC-USD.json.gz",
+  "original_network_response_sha256": "41d43511301710e3fa957c1558c8e4bffd9db851b7a0ae91a97d44a71976582d",
+  "retained_uncompressed_sha256": "3b58155e024ca032788625dfd83459f189bc3936126c00afc4502583b6aee916",
+  "retained_gzip_sha256": "cf2eb3e47daf92fab12202b4f015db216b3bbc7166ccd3a9fcf1e22dc156de27",
+  "removed_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+  ],
+  "historical_timestamp_and_close_arrays_unchanged": false,
+  "retained_historical_pairs_unchanged": true,
+  "removed_out_of_scope_observation_count": 1,
+  "removed_out_of_scope_observations": [
+    {
+      "timestamp": 1646006400,
+      "exchange_local_date": "2022-02-28"
+    }
+  ],
+  "removed_out_of_scope_split_events": [],
+  "discarded_indicator_fields": [
+    "adjclose"
+  ],
+  "discarded_quote_fields": [
+    "high",
+    "low",
+    "open",
+    "volume"
+  ],
+  "first_retained_inclusive": "2021-11-01",
+  "final_retained_inclusive": "2022-02-27",
+  "retained_last_exchange_local_date": "2022-02-27",
+  "retained_meta_fields": [
+    "currency",
+    "exchangeName",
+    "exchangeTimezoneName",
+    "firstTradeDate",
+    "fullExchangeName",
+    "instrumentType",
+    "symbol",
+    "timezone"
+  ]
+}

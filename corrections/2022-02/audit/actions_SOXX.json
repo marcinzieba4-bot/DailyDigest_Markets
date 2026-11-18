@@ -1,0 +1,128 @@
+{
+ "ticker": "SOXX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2024-03-07",
+   "factor": 3.0,
+   "ratio": "3:1"
+  },
+  {
+   "date": "2026-11-05",
+   "factor": 3.0,
+   "ratio": "3:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SOXX?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+   "sha256": "a5e83692f47ca4c32b10dace8affd239c8f69517a2cba7d4a9fe865c896c781e",
+   "fetched_at_utc": "2026-11-18T11:17:57.378538+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/SOXX?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+   "sha256": "c177e320ba117f821747cac8ab1e29f4614d0b94a282bcbf5a73bf1e1c258099",
+   "fetched_at_utc": "2026-11-18T11:17:57.638370+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/SOXX?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+    "sha256": "a5e83692f47ca4c32b10dace8affd239c8f69517a2cba7d4a9fe865c896c781e",
+    "fetched_at_utc": "2026-11-18T11:17:57.378538+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "SOXX",
+    "exchangeName": "NGM",
+    "fullExchangeName": "NasdaqGM",
+    "instrumentType": "ETF",
+    "firstTradeDate": 995031000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 81,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/SOXX?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+    "sha256": "c177e320ba117f821747cac8ab1e29f4614d0b94a282bcbf5a73bf1e1c258099",
+    "fetched_at_utc": "2026-11-18T11:17:57.638370+00:00"
+   },
+   "retained_exact_split_events": {
+    "1709821800": {
+     "date": 1709821800,
+     "numerator": 3.0,
+     "denominator": 1.0,
+     "splitRatio": "3:1"
+    },
+    "1793889000": {
+     "date": 1793889000,
+     "numerator": 3.0,
+     "denominator": 1.0,
+     "splitRatio": "3:1"
+    }
+   },
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "SOXX",
+    "exchangeName": "NGM",
+    "fullExchangeName": "NasdaqGM",
+    "instrumentType": "ETF",
+    "firstTradeDate": 995031000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 1186,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

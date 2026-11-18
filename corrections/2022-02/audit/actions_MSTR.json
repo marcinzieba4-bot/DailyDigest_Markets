@@ -1,0 +1,117 @@
+{
+ "ticker": "MSTR",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2024-08-08",
+   "factor": 10.0,
+   "ratio": "10:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+   "sha256": "5292ceb6a07601024d24086131df5a5f9c8f7dbf3d7bd350d82dc3ff2ab1a534",
+   "fetched_at_utc": "2026-11-18T11:17:50.082354+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+   "sha256": "0a057c6c5c422e5b3246d5924136fedc49aebb757a2ae4ef37d36b70b5ca7de0",
+   "fetched_at_utc": "2026-11-18T11:17:50.307414+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+    "sha256": "5292ceb6a07601024d24086131df5a5f9c8f7dbf3d7bd350d82dc3ff2ab1a534",
+    "fetched_at_utc": "2026-11-18T11:17:50.082354+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "MSTR",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 897571800,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 81,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+    "sha256": "0a057c6c5c422e5b3246d5924136fedc49aebb757a2ae4ef37d36b70b5ca7de0",
+    "fetched_at_utc": "2026-11-18T11:17:50.307414+00:00"
+   },
+   "retained_exact_split_events": {
+    "1723123800": {
+     "date": 1723123800,
+     "numerator": 10.0,
+     "denominator": 1.0,
+     "splitRatio": "10:1"
+    }
+   },
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "MSTR",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 897571800,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 1186,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

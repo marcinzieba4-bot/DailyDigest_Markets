@@ -1,0 +1,62 @@
+{
+  "ticker": "XRP-USD",
+  "path": "audit/market_raw/XRP-USD.json.gz",
+  "original_network_response_sha256": "53e087bac9d233428f8729cd53ece4b534be8358d520a92edf22ac49246a9767",
+  "retained_uncompressed_sha256": "50d5f36afc1d81eeefa812c41a621b8025afc65dd2410f5d1494b2635fe3233e",
+  "retained_gzip_sha256": "5320904d21a732ffdb5647aad5edd60c8ad3b9d648db9c2d7812c6b1232c7e1c",
+  "removed_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+  ],
+  "historical_timestamp_and_close_arrays_unchanged": false,
+  "retained_historical_pairs_unchanged": true,
+  "removed_out_of_scope_observation_count": 1,
+  "removed_out_of_scope_observations": [
+    {
+      "timestamp": 1646006400,
+      "exchange_local_date": "2022-02-28"
+    }
+  ],
+  "removed_out_of_scope_split_events": [],
+  "discarded_indicator_fields": [
+    "adjclose"
+  ],
+  "discarded_quote_fields": [
+    "high",
+    "low",
+    "open",
+    "volume"
+  ],
+  "first_retained_inclusive": "2021-11-01",
+  "final_retained_inclusive": "2022-02-27",
+  "retained_last_exchange_local_date": "2022-02-27",
+  "retained_meta_fields": [
+    "currency",
+    "exchangeName",
+    "exchangeTimezoneName",
+    "firstTradeDate",
+    "fullExchangeName",
+    "instrumentType",
+    "symbol",
+    "timezone"
+  ]
+}

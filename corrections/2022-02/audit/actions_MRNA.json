@@ -1,0 +1,104 @@
+{
+ "ticker": "MRNA",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MRNA?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+   "sha256": "3cbb11f82b6e0792619f76daf3eca1fd7b08726fe76b1c22a65fcbc5963cc3e4",
+   "fetched_at_utc": "2026-11-18T11:18:08.738776+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/MRNA?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+   "sha256": "8887bf2aff259f24cdf3a5c5a41155dd01954b307ee65ef50d9230f40ca14aff",
+   "fetched_at_utc": "2026-11-18T11:18:08.959017+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/MRNA?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+    "sha256": "3cbb11f82b6e0792619f76daf3eca1fd7b08726fe76b1c22a65fcbc5963cc3e4",
+    "fetched_at_utc": "2026-11-18T11:18:08.738776+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "MRNA",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1544193000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 81,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/MRNA?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+    "sha256": "8887bf2aff259f24cdf3a5c5a41155dd01954b307ee65ef50d9230f40ca14aff",
+    "fetched_at_utc": "2026-11-18T11:18:08.959017+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "MRNA",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1544193000,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 1186,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

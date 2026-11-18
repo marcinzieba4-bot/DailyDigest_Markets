@@ -1,0 +1,117 @@
+{
+ "ticker": "6758.T",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2024-09-27",
+   "factor": 5.0,
+   "ratio": "5:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/6758.T?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+   "sha256": "a943a0b22bc81798c3a15de3fafaf4cbef317e4d549cf077f865eaab8b145209",
+   "fetched_at_utc": "2026-11-18T11:17:54.576945+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/6758.T?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+   "sha256": "7a8a653c3ac41dc955c526d4d67b7ccc689f47cb9300eafded9d5196d0f0c019",
+   "fetched_at_utc": "2026-11-18T11:17:54.802881+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/6758.T?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+    "sha256": "a943a0b22bc81798c3a15de3fafaf4cbef317e4d549cf077f865eaab8b145209",
+    "fetched_at_utc": "2026-11-18T11:17:54.576945+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "JPY",
+    "symbol": "6758.T",
+    "exchangeName": "JPX",
+    "fullExchangeName": "Tokyo",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 946944000,
+    "timezone": "JST",
+    "exchangeTimezoneName": "Asia/Tokyo"
+   },
+   "discarded_price_observations": 79,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/6758.T?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+    "sha256": "7a8a653c3ac41dc955c526d4d67b7ccc689f47cb9300eafded9d5196d0f0c019",
+    "fetched_at_utc": "2026-11-18T11:17:54.802881+00:00"
+   },
+   "retained_exact_split_events": {
+    "1727395200": {
+     "date": 1727395200,
+     "numerator": 5.0,
+     "denominator": 1.0,
+     "splitRatio": "5:1"
+    }
+   },
+   "retained_identity_meta": {
+    "currency": "JPY",
+    "symbol": "6758.T",
+    "exchangeName": "JPX",
+    "fullExchangeName": "Tokyo",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 946944000,
+    "timezone": "JST",
+    "exchangeTimezoneName": "Asia/Tokyo"
+   },
+   "discarded_price_observations": 1155,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

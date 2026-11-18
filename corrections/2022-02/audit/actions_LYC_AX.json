@@ -1,0 +1,104 @@
+{
+ "ticker": "LYC.AX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LYC.AX?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+   "sha256": "72ff75e30c07b12b1ad68d5f45850a018ada87f11a105292dcaa1d64242e6616",
+   "fetched_at_utc": "2026-11-18T11:17:56.354068+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/LYC.AX?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+   "sha256": "b1f9431dc5aa226d5ab633a1dac4da4f6268442ca56fd7a4c0e8129e4a0ea3e0",
+   "fetched_at_utc": "2026-11-18T11:17:56.584889+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/LYC.AX?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+    "sha256": "72ff75e30c07b12b1ad68d5f45850a018ada87f11a105292dcaa1d64242e6616",
+    "fetched_at_utc": "2026-11-18T11:17:56.354068+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "AUD",
+    "symbol": "LYC.AX",
+    "exchangeName": "ASX",
+    "fullExchangeName": "ASX",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 928972800,
+    "timezone": "AEDT",
+    "exchangeTimezoneName": "Australia/Sydney"
+   },
+   "discarded_price_observations": 82,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/LYC.AX?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+    "sha256": "b1f9431dc5aa226d5ab633a1dac4da4f6268442ca56fd7a4c0e8129e4a0ea3e0",
+    "fetched_at_utc": "2026-11-18T11:17:56.584889+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "AUD",
+    "symbol": "LYC.AX",
+    "exchangeName": "ASX",
+    "fullExchangeName": "ASX",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 928972800,
+    "timezone": "AEDT",
+    "exchangeTimezoneName": "Australia/Sydney"
+   },
+   "discarded_price_observations": 1198,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

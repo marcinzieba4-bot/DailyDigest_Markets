@@ -1,0 +1,117 @@
+{
+ "ticker": "NFLX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2025-11-17",
+   "factor": 10.0,
+   "ratio": "10:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NFLX?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+   "sha256": "345988ddcaf2d74f045a121bbec12ac3cccd57c494c57c351743e4c74263d5fc",
+   "fetched_at_utc": "2026-11-18T11:18:00.929069+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NFLX?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+   "sha256": "111938f5032ea434e10a79930993e1075a9db1adc4aa5e15f0449980febc2dbe",
+   "fetched_at_utc": "2026-11-18T11:18:01.149095+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/NFLX?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+    "sha256": "345988ddcaf2d74f045a121bbec12ac3cccd57c494c57c351743e4c74263d5fc",
+    "fetched_at_utc": "2026-11-18T11:18:00.929069+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "NFLX",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1022160600,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 81,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/NFLX?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+    "sha256": "111938f5032ea434e10a79930993e1075a9db1adc4aa5e15f0449980febc2dbe",
+    "fetched_at_utc": "2026-11-18T11:18:01.149095+00:00"
+   },
+   "retained_exact_split_events": {
+    "1763389800": {
+     "date": 1763389800,
+     "numerator": 10.0,
+     "denominator": 1.0,
+     "splitRatio": "10:1"
+    }
+   },
+   "retained_identity_meta": {
+    "currency": "USD",
+    "symbol": "NFLX",
+    "exchangeName": "NMS",
+    "fullExchangeName": "NasdaqGS",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1022160600,
+    "timezone": "EST",
+    "exchangeTimezoneName": "America/New_York"
+   },
+   "discarded_price_observations": 1186,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+  "ticker": "6857.T",
+  "path": "audit/market_raw/6857_T.json.gz",
+  "original_network_response_sha256": "29a90ffd426680bf7f49f15d33ef696369e18d3877312f27364131a9d55bd64a",
+  "retained_uncompressed_sha256": "fd741aa43c76b3af1e5bc12bb0b9a61cc99db4394bdc2a6f32750fcaad22c89c",
+  "retained_gzip_sha256": "ce8a1d19737d85f40b8156acd2a0b9af9f55accc5af983ac7f1e97f4261a7359",
+  "removed_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+  ],
+  "historical_timestamp_and_close_arrays_unchanged": false,
+  "retained_historical_pairs_unchanged": true,
+  "removed_out_of_scope_observation_count": 1,
+  "removed_out_of_scope_observations": [
+    {
+      "timestamp": 1646006400,
+      "exchange_local_date": "2022-02-28"
+    }
+  ],
+  "removed_out_of_scope_split_events": [],
+  "discarded_indicator_fields": [
+    "adjclose"
+  ],
+  "discarded_quote_fields": [
+    "high",
+    "low",
+    "open",
+    "volume"
+  ],
+  "first_retained_inclusive": "2021-11-01",
+  "final_retained_inclusive": "2022-02-27",
+  "retained_last_exchange_local_date": "2022-02-25",
+  "retained_meta_fields": [
+    "currency",
+    "exchangeName",
+    "exchangeTimezoneName",
+    "firstTradeDate",
+    "fullExchangeName",
+    "instrumentType",
+    "symbol",
+    "timezone"
+  ]
+}

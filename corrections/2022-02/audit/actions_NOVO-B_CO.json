@@ -1,0 +1,117 @@
+{
+ "ticker": "NOVO-B.CO",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [
+  {
+   "date": "2023-09-13",
+   "factor": 2.0,
+   "ratio": "2:1"
+  }
+ ],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NOVO-B.CO?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+   "sha256": "f319f80e9be994ed6312669636edd8f15c036e9916ca8a1e14eb63088ad63617",
+   "fetched_at_utc": "2026-11-18T11:17:53.497819+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/NOVO-B.CO?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+   "sha256": "1da1699263a10d814a2b6949acb430e425cede2838ea391d95f5252460ab1481",
+   "fetched_at_utc": "2026-11-18T11:17:53.732519+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/NOVO-B.CO?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+    "sha256": "f319f80e9be994ed6312669636edd8f15c036e9916ca8a1e14eb63088ad63617",
+    "fetched_at_utc": "2026-11-18T11:17:53.497819+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "DKK",
+    "symbol": "NOVO-B.CO",
+    "exchangeName": "CPH",
+    "fullExchangeName": "Copenhagen",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 978768000,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Copenhagen"
+   },
+   "discarded_price_observations": 83,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/NOVO-B.CO?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+    "sha256": "1da1699263a10d814a2b6949acb430e425cede2838ea391d95f5252460ab1481",
+    "fetched_at_utc": "2026-11-18T11:17:53.732519+00:00"
+   },
+   "retained_exact_split_events": {
+    "1694588400": {
+     "date": 1694588400,
+     "numerator": 2.0,
+     "denominator": 1.0,
+     "splitRatio": "2:1"
+    }
+   },
+   "retained_identity_meta": {
+    "currency": "DKK",
+    "symbol": "NOVO-B.CO",
+    "exchangeName": "CPH",
+    "fullExchangeName": "Copenhagen",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 978768000,
+    "timezone": "CET",
+    "exchangeTimezoneName": "Europe/Copenhagen"
+   },
+   "discarded_price_observations": 1183,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

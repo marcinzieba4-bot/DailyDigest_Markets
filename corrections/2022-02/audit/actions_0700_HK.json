@@ -1,0 +1,104 @@
+{
+ "ticker": "0700.HK",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/0700.HK?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+   "sha256": "b3de93d675caf81d31ccd766e80f280cf3d180776fb3b75d53fb72bc7430a4c2",
+   "fetched_at_utc": "2026-11-18T11:17:55.707492+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/0700.HK?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+   "sha256": "bf8c770cc2d1efd1005121f1093f93a71cf83df50ede7e5bdd061dc3130dc104",
+   "fetched_at_utc": "2026-11-18T11:17:55.949982+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/0700.HK?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+    "sha256": "b3de93d675caf81d31ccd766e80f280cf3d180776fb3b75d53fb72bc7430a4c2",
+    "fetched_at_utc": "2026-11-18T11:17:55.707492+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "HKD",
+    "symbol": "0700.HK",
+    "exchangeName": "HKG",
+    "fullExchangeName": "HKSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1087349400,
+    "timezone": "HKT",
+    "exchangeTimezoneName": "Asia/Hong_Kong"
+   },
+   "discarded_price_observations": 81,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/0700.HK?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+    "sha256": "bf8c770cc2d1efd1005121f1093f93a71cf83df50ede7e5bdd061dc3130dc104",
+    "fetched_at_utc": "2026-11-18T11:17:55.949982+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "HKD",
+    "symbol": "0700.HK",
+    "exchangeName": "HKG",
+    "fullExchangeName": "HKSE",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 1087349400,
+    "timezone": "HKT",
+    "exchangeTimezoneName": "Asia/Hong_Kong"
+   },
+   "discarded_price_observations": 1161,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}

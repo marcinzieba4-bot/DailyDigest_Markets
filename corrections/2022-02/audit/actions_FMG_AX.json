@@ -1,0 +1,104 @@
+{
+ "ticker": "FMG.AX",
+ "source": "Yahoo Finance split events",
+ "purpose": "mechanical reconstruction only; keep away from report writers",
+ "events": [],
+ "requests": [
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FMG.AX?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+   "sha256": "3c9dceded7c385c70850d1a245e56f9cbdb648363363a35d36574a5f824efc5c",
+   "fetched_at_utc": "2026-11-18T11:17:56.429796+00:00"
+  },
+  {
+   "url": "https://query1.finance.yahoo.com/v8/finance/chart/FMG.AX?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+   "sha256": "3894b43d6bde5650fefb4bc14f2ae3f6f992bd4a69b7fdf519a5db23ed6a9d54",
+   "fetched_at_utc": "2026-11-18T11:17:56.673021+00:00"
+  }
+ ],
+ "exact_action_inputs": [
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/FMG.AX?period1=1635724800&period2=1646006400&interval=1d&events=div,splits",
+    "sha256": "3c9dceded7c385c70850d1a245e56f9cbdb648363363a35d36574a5f824efc5c",
+    "fetched_at_utc": "2026-11-18T11:17:56.429796+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "AUD",
+    "symbol": "FMG.AX",
+    "exchangeName": "ASX",
+    "fullExchangeName": "ASX",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 570409200,
+    "timezone": "AEDT",
+    "exchangeTimezoneName": "Australia/Sydney"
+   },
+   "discarded_price_observations": 82,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  },
+  {
+   "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/FMG.AX?period1=1646006400&period2=1795000667&interval=1d&events=div,splits",
+    "sha256": "3894b43d6bde5650fefb4bc14f2ae3f6f992bd4a69b7fdf519a5db23ed6a9d54",
+    "fetched_at_utc": "2026-11-18T11:17:56.673021+00:00"
+   },
+   "retained_exact_split_events": {},
+   "retained_identity_meta": {
+    "currency": "AUD",
+    "symbol": "FMG.AX",
+    "exchangeName": "ASX",
+    "fullExchangeName": "ASX",
+    "instrumentType": "EQUITY",
+    "firstTradeDate": 570409200,
+    "timezone": "AEDT",
+    "exchangeTimezoneName": "Australia/Sydney"
+   },
+   "discarded_price_observations": 1198,
+   "discarded_meta_fields": [
+    "chartPreviousClose",
+    "currentTradingPeriod",
+    "dataGranularity",
+    "fiftyTwoWeekHigh",
+    "fiftyTwoWeekLow",
+    "fulldayChange",
+    "fulldayChangePercent",
+    "fulldayPrice",
+    "gmtoffset",
+    "hasPrePostMarketData",
+    "longName",
+    "priceHint",
+    "range",
+    "regularMarketChangePercent",
+    "regularMarketDayHigh",
+    "regularMarketDayLow",
+    "regularMarketPrice",
+    "regularMarketTime",
+    "regularMarketVolume",
+    "shortName",
+    "validRanges"
+   ]
+  }
+ ]
+}
