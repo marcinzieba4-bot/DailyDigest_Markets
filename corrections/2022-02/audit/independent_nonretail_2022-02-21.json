@@ -1,0 +1,101 @@
+{
+ "date": "2022-02-21",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "bda6a931904fb82c4f7b0bf1675b980c855ea7c664936ddb1a04e31e77838061",
+ "card_sha256": "d037d8aeaa40960239154302de775b69c558b3812ab78e5dbe91c9e3e8bff712",
+ "exclusions_sha256": "4ac5e63ae1420936a69c15eb86910fe051dc8eb6b28403ef549dbc7db8ddbcf7",
+ "findings": [
+  {
+   "location": "geo.CN Property",
+   "issue": "Inference that onshore equities 'expect credit carve-outs to widen' is not supported by any headline",
+   "severity": "moderate",
+   "resolution": "Reworded to a neutral observation on the Shanghai Composite's five-session move"
+  },
+  {
+   "location": "geo.CN New / Most Important",
+   "issue": "NPR Games-closing headline was used to claim it 'removes one reason for policy calm' (speculation)",
+   "severity": "minor",
+   "resolution": "Replaced with neutral wording"
+  },
+  {
+   "location": "sectors.XLF Breaking Convention",
+   "issue": "Causal link of Societe Generale's -10.01% five-session fall to the Russia standoff not evidenced by a headline",
+   "severity": "moderate",
+   "resolution": "Causal clause removed; card figure kept"
+  },
+  {
+   "location": "sectors.XLE Breaking Convention",
+   "issue": "'Vienna deal' not in cited headlines (n1375 says Iran nuclear talks)",
+   "severity": "minor",
+   "resolution": "Changed to 'An Iran deal'"
+  },
+  {
+   "location": "geo.AU Demand & Financing",
+   "issue": "'the market is already ahead of the RBA' exceeded n0069 (CBA forecast of rate-rise timing)",
+   "severity": "minor",
+   "resolution": "Reworded to bank economists pencilling in the first hike"
+  },
+  {
+   "location": "geo.PL Corporate & Sectors",
+   "issue": "PGE decline attributed ('as') to Przeworsk plant sale; hiring headline n1637 asserted as rising labour costs",
+   "severity": "moderate",
+   "resolution": "Changed to 'while' and 'labour demand is strong'"
+  },
+  {
+   "location": "sectors.XLY Breaking Convention",
+   "issue": "DraftKings -21.62% tied to path-to-profit punishment without headline support",
+   "severity": "minor",
+   "resolution": "Reworded to a generic low-margin cushion remark"
+  },
+  {
+   "location": "crypto Market Context",
+   "issue": "'as geopolitical fear rose' causal claim for Bitcoin 20-session move unsupported",
+   "severity": "minor",
+   "resolution": "Clause removed"
+  },
+  {
+   "location": "Citation/number/timing sweep (all parts)",
+   "issue": "All cited IDs exist in the own-date feed, are stamped before cutoff and within source windows by meaning; card numbers, sessions, horizons, curve wording and source tags match; no spot-FX, no recognition/invasion as fact, FB/META naming correct; no ID above two uses; no figure traced to another date",
+   "severity": "minor",
+   "resolution": "No change needed; Truth Social n0932 kept only as a pending preview (a late-Sunday stamp is possible but the launch outcome is not stated)"
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Reviewed only the 2022-02-21 feed headlines, card and exclusions; no article bodies, no other date's material, no retail drafts. Exact intraday publication times of day-stamped 20 Feb items (e.g. n0932 Truth Social preview) cannot be verified; n1211 (ECB deposit rate to -0.25% by year-end) is quoted as the headline states without knowing whether it is a poll.",
+ "recommended_exclusions": [
+  {
+   "id": "n1319",
+   "reason": "CNN 'Photos: Russia invades Ukraine' stamped 2022-02-14: misdated rolling page describing post-cutoff events"
+  },
+  {
+   "id": "n1427",
+   "reason": "CNBC Biden agrees 'in principle' to meet Putin: White House statement likely after 00:00 UTC on 2022-02-21 (day-granular 20 Feb stamp)"
+  },
+  {
+   "id": "n1440",
+   "reason": "CNN White House says Biden agreed to meet Putin 'in principle': same late-Sunday-ET timing risk, likely after cutoff"
+  },
+  {
+   "id": "n1766",
+   "reason": "Axios Truth Social to debut Monday: describes a launch on the report date itself; timing at or after cutoff"
+  },
+  {
+   "id": "n1763",
+   "reason": "Slate Truth Social set for release on Presidents Day: report-date launch coverage, timing at or after cutoff"
+  },
+  {
+   "id": "n0077",
+   "reason": "ABC 'ASX up, AGL rejects Atlassian billionaire's takeover bid' stamped 20 Feb: likely describes Monday 21 Feb Australian trading, after cutoff"
+  }
+ ],
+ "verifier": {
+  "words": 8797,
+  "distinct_sources": 256,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "8dfc177b895bfce48cfa077eaea614b85bfe545790013e8d78f0f59f4bbf4f20"
+}

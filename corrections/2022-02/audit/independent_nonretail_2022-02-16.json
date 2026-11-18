@@ -1,0 +1,99 @@
+{
+ "date": "2022-02-16",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "4bbd49a2047e598722259cbb0d858349a5508aefaeb6ab08773af4dafefba2be",
+ "card_sha256": "119ad12f0c801c4f96d12f76524bf67eb4613b30156922712eab5b3d05342bba",
+ "exclusions_sha256": "14cdfa1ed3e59e8ff3dffd6880cd3cd9bba29a1dc098adeb1f081864b632c2ae",
+ "findings": [
+  {
+   "location": "sectors/XLB/Reported (n1198)",
+   "issue": "Glencore record earnings and $1.5bn probe provision are cited from a day-granular 15 Feb 08:00 stamp, but Glencore's annual results fall on 16 Feb (07:00 UTC), after the cutoff.",
+   "severity": "major",
+   "resolution": "Removed the Glencore sentence and citation; BHP and Andy Home aluminium items remain."
+  },
+  {
+   "location": "sectors/XLC/Narrative",
+   "issue": "'weakest large sector on fundamentals' is not supported by the card, which only shows 20-session price.",
+   "severity": "moderate",
+   "resolution": "Reworded to 'weakest large sector over 20 sessions'."
+  },
+  {
+   "location": "sectors/XLY/Breaking Convention",
+   "issue": "Claims affluent consumers are absorbing price; headlines only say Louis Vuitton will raise prices and Marriott is rebounding.",
+   "severity": "moderate",
+   "resolution": "Softened to modal wording ('suggest ... may be absorbing')."
+  },
+  {
+   "location": "sectors/XLRE/Breaking Convention",
+   "issue": "'listed REITs fall' contradicts XLRE +0.49% on the day.",
+   "severity": "minor",
+   "resolution": "Changed to 'lag'."
+  },
+  {
+   "location": "sectors/XLU/EPS Upside Watch",
+   "issue": "'sector's growth leader' for NextEra is unsupported by any headline.",
+   "severity": "minor",
+   "resolution": "Reworded to a general statement about growth-oriented utilities."
+  },
+  {
+   "location": "sectors/SXAP/Narrative",
+   "issue": "Horizon ambiguity: Renault and VW pref figures are one-day moves, Mercedes is five-session.",
+   "severity": "minor",
+   "resolution": "Horizons stated explicitly."
+  },
+  {
+   "location": "earnings_pattern/Rewarded; Pattern",
+   "issue": "Twitter gain attributed causally ('because of') to the buyback; 'home fitness' losing credit has no support in that part.",
+   "severity": "minor",
+   "resolution": "Reworded to 'helped by'; removed home fitness."
+  },
+  {
+   "location": "underowned/Grains Exposure & Risk",
+   "issue": "Unsupported causal claim that soybean gains reflect weather and demand rather than war.",
+   "severity": "moderate",
+   "resolution": "Replaced with neutral 'not every grain move is a war trade'."
+  },
+  {
+   "location": "underowned/Aluminium (title and Attention Gap)",
+   "issue": "'tightest metal in the complex' / 'aluminium is tighter' is a comparative claim the card contradicts (palladium +18.28% vs aluminium +9.05% over 20 sessions) and no headline makes.",
+   "severity": "moderate",
+   "resolution": "Reworded to 'red-hot' / 'also running hot' matching the Andy Home headline."
+  },
+  {
+   "location": "crypto/Market Context and title",
+   "issue": "'crypto has stopped trading as a leveraged copy of growth equities' contradicts same-day co-movement; CNBC headline does not say the forces moved in crypto's favour; 'marketing peak' is hindsight-flavoured.",
+   "severity": "moderate",
+   "resolution": "Reworded to a 20-session outperformance statement; 'weighing against each other'; title 'blitz'."
+  },
+  {
+   "location": "flows/Global Liquidity",
+   "issue": "'lone large injector' overclaims beyond the PBOC headline.",
+   "severity": "minor",
+   "resolution": "Changed to 'leaning the other way'."
+  },
+  {
+   "location": "all parts",
+   "issue": "Checked every citation against own-date feed (id, timestamp, src, cat, title), outlet names, numbers, card horizons, reference levels (e.g. TTF 78.33, ABNB 154.69, RBLX 77.21, INTC 54.76, MBG 74.64, RIVN 73.16), VIX points (card field), curve wording, source-tag dates, no spot-FX, FB ticker, no later-date content. No other defects found.",
+   "severity": "minor",
+   "resolution": "None required."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Own-date feed headlines and card only; headlines not article bodies. Release timing of day-granular 08:00 stamps judged by meaning from general knowledge for Glencore; other 15 Feb items (Intel-Tower, Marriott, Restaurant Brands, Airbnb, Roblox, Fortescue/CSL, Polish flash CPI) judged pre-cutoff. ABC n0066 headline 'ASX rises' conflicts with card ASX -0.51%; text uses the card and cites n0066 only for the Fortescue/CSL results.",
+ "recommended_exclusions": [
+  {
+   "id": "n1198",
+   "reason": "Glencore FY2021 results (record earnings, $1.5bn probe provision) were released 16 Feb 2022 07:00 UTC; the 15 Feb 08:00 day-granular stamp is misdated and the item is after the cutoff."
+  }
+ ],
+ "verifier": {
+  "words": 8719,
+  "distinct_sources": 251,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "41520b80ea6fe392c28225756f566f943edad355d24e349bf73e07fca499029f"
+}

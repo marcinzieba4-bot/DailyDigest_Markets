@@ -129,5 +129,47 @@
   "distinct_sources": 287,
   "warnings": 0
  },
- "nonretail_content_sha256": "e2ae5aa99f46e46ca64b8924849692b1f0557010e0e5c4ee1f758858b7b56e0c"
+ "nonretail_content_sha256": "d7edcb04bd0d751d42ae8cc5bc1262a3dcbed02c548b5fd384b9174f0956f9cf",
+ "root_deltas": [
+  {
+   "previous_sha256": "e2ae5aa99f46e46ca64b8924849692b1f0557010e0e5c4ee1f758858b7b56e0c",
+   "new_sha256": "bb87fb8486ffce815bd604c935c9ebb6f22ef3f335ee79bd1c306965ae97ac1d",
+   "removed": "Nvidia at 247.28 USD rose +1.68% on the session, and Bloomberg reported it will withdraw from the acquisition of SoftBank's Arm, which would end a long distraction (Yahoo Finance, prior close 2022-02-07) [[n0819]].",
+   "inserted": "Nvidia at 247.28 USD rose +1.68% on the session (Yahoo Finance, prior close 2022-02-07), and any formal end to its stalled Arm acquisition would remove a long distraction.",
+   "reason": "Root timing correction: Bloomberg scoop n0819 is day-stamped 7 February while the formal termination came on 8 February; publication before the 00:00 UTC cutoff cannot be established, so the report is no longer cited.",
+   "severity": "major",
+   "by": "root",
+   "reverified": "287 sources, 8824 words, 0 fail"
+  },
+  {
+   "previous_sha256": "bb87fb8486ffce815bd604c935c9ebb6f22ef3f335ee79bd1c306965ae97ac1d",
+   "new_sha256": "da6c22a66bf9f8775a5e46168dec114ddd55e49bc5e7822e43f0d7c969bda59b",
+   "removed": "Bloomberg reported Nvidia will withdraw from acquiring SoftBank's Arm, which would end a long regulatory distraction and return management focus to data-centre growth [[n0819]].",
+   "inserted": "The Verdict reported that the Arm deal has bogged down [[n0851]]; any formal end to the acquisition would remove a long regulatory distraction and return management focus to data-centre growth.",
+   "reason": "Root timing correction: replaces the day-stamped Bloomberg withdrawal scoop (n0819), whose publication before the cutoff cannot be established, with the pre-cutoff report that the deal had bogged down.",
+   "severity": "major",
+   "by": "root",
+   "reverified": "286 sources, 8830 words, 0 fail"
+  },
+  {
+   "previous_sha256": "da6c22a66bf9f8775a5e46168dec114ddd55e49bc5e7822e43f0d7c969bda59b",
+   "new_sha256": "7de4da588506f1b513862d2a0f52d5153a4fe091895039b3500cc1f1ead7e9cf",
+   "removed": "Formal confirmation is still pending, and Bloomberg",
+   "inserted": "Any resolution of the deal is still pending, and Bloomberg",
+   "reason": "Root consistency correction after removing the day-stamped withdrawal scoop: no withdrawal is presupposed.",
+   "severity": "major",
+   "by": "root",
+   "reverified": "286 sources, 8833 words, 0 fail"
+  },
+  {
+   "previous_sha256": "7de4da588506f1b513862d2a0f52d5153a4fe091895039b3500cc1f1ead7e9cf",
+   "new_sha256": "d7edcb04bd0d751d42ae8cc5bc1262a3dcbed02c548b5fd384b9174f0956f9cf",
+   "removed": "Buy on confirmation of the withdrawal, paired against SOXX",
+   "inserted": "Buy on a formal end to the Arm deal, paired against SOXX",
+   "reason": "Root consistency correction after removing the day-stamped withdrawal scoop: trigger restated as a pending event.",
+   "severity": "major",
+   "by": "root",
+   "reverified": "286 sources, 8836 words, 0 fail"
+  }
+ ]
 }

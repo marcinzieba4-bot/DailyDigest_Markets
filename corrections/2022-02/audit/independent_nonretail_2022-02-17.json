@@ -1,0 +1,129 @@
+{
+ "date": "2022-02-17",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "50939d0ea22469bb9352ea79414b1fd4c6f79c9265f4ff65cb8cc3832e47aeee",
+ "card_sha256": "9092aec6ee3423ae4b3371943eadb9bc4d9bdd69cd5db9b3941c65da8ecef9ba",
+ "exclusions_sha256": "91bea93b168617665060424774b52270f4533eccfda2b2d65eff52c8c7bfc270",
+ "findings": [
+  {
+   "location": "catalysts: Cisco, Trade Expression",
+   "issue": "Referred to a 'post-results gain' that no own-date headline establishes (no after-hours reaction reported).",
+   "severity": "moderate",
+   "resolution": "Reworded to a conditional on holding above the 54.25 USD pre-results close."
+  },
+  {
+   "location": "catalysts: Shopify, Catalyst & Thesis",
+   "issue": "'Heavier investment' not supported by cited headlines.",
+   "severity": "moderate",
+   "resolution": "Replaced with the weaker growth outlook as the pandemic boost fades (n2015)."
+  },
+  {
+   "location": "catalysts: Nvidia, Catalyst & Thesis",
+   "issue": "'Data-centre and gaming demand' goes beyond the cited headline, which only states an upbeat revenue forecast.",
+   "severity": "moderate",
+   "resolution": "Thesis reworded to the upbeat revenue forecast."
+  },
+  {
+   "location": "earnings_pattern: Rewarded",
+   "issue": "'On scarcity pricing' for Mercedes-Benz not in cited headline n0449; opening claim implied all named beats were rewarded in price.",
+   "severity": "moderate",
+   "resolution": "Mercedes now 'despite supply-chain headwinds'; opener softened to 'strongest results came from'."
+  },
+  {
+   "location": "crypto: Playbook",
+   "issue": "Told readers to wait for miners to confirm the rebound although the card shows miners already strongly up over 20 sessions (MARA +14.29%, RIOT +12.01%).",
+   "severity": "moderate",
+   "resolution": "Now refers to exchange and treasury equities (Coinbase, MicroStrategy), which the card shows lagging."
+  },
+  {
+   "location": "geo PL: Markets",
+   "issue": "Attributed a margin-lag explanation to Parkiet's headline, which only states banks can continue the rally.",
+   "severity": "moderate",
+   "resolution": "Reworded as the logic that would support Parkiet's view."
+  },
+  {
+   "location": "sectors XLY: Breaking Convention",
+   "issue": "'Consumer is spending' not supported by n2142 (a question about sentiment and spending).",
+   "severity": "minor",
+   "resolution": "Reworded to falling sentiment with spending as the open question."
+  },
+  {
+   "location": "geo EU: Activity & Inflation",
+   "issue": "Outlet named Eurostat while src is European Commission.",
+   "severity": "minor",
+   "resolution": "Now 'The European Commission's Eurostat news'."
+  },
+  {
+   "location": "sectors SOXX: Narrative",
+   "issue": "'Data-centre strength' asserted without support; AMD -11.41% over five sessions.",
+   "severity": "minor",
+   "resolution": "Reworded to memory and equipment strength versus handset- and PC-linked names."
+  },
+  {
+   "location": "geo CN: PMIs & Activity (n0167)",
+   "issue": "Caixin January PMI headline is stamped 29 Jan, earlier than the 1 Feb release; stamp looks misdated but the item is inside the 35-day macro window by meaning and the direction is consistent with the text.",
+   "severity": "minor",
+   "resolution": "Kept; no figure is taken from it."
+  },
+  {
+   "location": "all parts",
+   "issue": "Checked every cited ID against own-date feed (src, stamp, cat, title), card values, session tags, curve wording, windows (news 7 / results 14 / macro 35), FB ticker, no spot-FX, no after-cutoff outcomes (Walmart, Palantir, Roku, Australia jobs, Intel meeting appear only as undated 'next print/update'). No cross-date content found; no cited ID is out of window or stamped after cutoff.",
+   "severity": "minor",
+   "resolution": "No further change required."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Own-date feed headlines and own-date card only; no body text, no web access, no other-date material. Event timing for items stamped 16 Feb (Nvidia, Cisco, DoorDash, Shopify results; Wesfarmers) judged from guardrails and headline wording, not article bodies.",
+ "recommended_exclusions": [
+  {
+   "id": "n0491",
+   "reason": "Fortune Business Insights market report titled with [2034]; misdated/irrelevant promotional page."
+  },
+  {
+   "id": "n0942",
+   "reason": "Fortune Business Insights report 'Global Report 2034'; misdated/irrelevant."
+  },
+  {
+   "id": "n0526",
+   "reason": "'Best LED Lighting Stocks to Buy in 2026' listicle; anachronistic."
+  },
+  {
+   "id": "n0651",
+   "reason": "'Desalination Stocks to Research in 2026' listicle; anachronistic."
+  },
+  {
+   "id": "n1176",
+   "reason": "ESPN '2026 Golf Tournaments Played'; anachronistic."
+  },
+  {
+   "id": "n1102",
+   "reason": "'Super Bowl LVII' (2023 game) stamped 11 Feb 2022; misdated."
+  },
+  {
+   "id": "n0487",
+   "reason": "Taiwan presidential office item about the 2021 APEC meeting envoy, stamped 11 Feb 2022; misdated."
+  },
+  {
+   "id": "n1275",
+   "reason": "Euronews German manufacturing 'in October' stamped 11 Feb 2022; misdated macro outcome."
+  },
+  {
+   "id": "n1308",
+   "reason": "Reuters LIVE MARKETS rolling live blog; unreliable for dated claims."
+  },
+  {
+   "id": "n1297",
+   "reason": "Reuters LIVE MARKETS rolling live blog; unreliable for dated claims."
+  }
+ ],
+ "verifier": {
+  "words": 8920,
+  "distinct_sources": 232,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "4b339e0d6c6b60f35c4937c10f1104f5199125cdb37e688053e41a8d9ea880d1"
+}

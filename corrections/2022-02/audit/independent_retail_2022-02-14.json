@@ -1,0 +1,86 @@
+{
+ "date": "2022-02-14",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "6bb87c7c44bf34741bccf4f55293fde7608d391473ae251c4d9eaf93246f6aa4",
+ "card_sha256": "cf962e725bd50a26a681cf34fb43403a0fc23b9bebe1075c27112a20aa016606",
+ "exclusions_sha256": "6d63e8a22480a139b93dfe0c768648810fe7fe42a5e57ac8b77463f286198c52",
+ "findings": [
+  {
+   "location": "retail[0] What Is Driving It / Smart Money View / When the Narrative Breaks",
+   "issue": "The crypto lead leaned on the same CPI, big-bang-hike and central-bank-drain headlines (n1173, n2201, n1363) that carried the strictly earlier 2022-02-11 TQQQ lead, recycling that edition's caution instead of adding new evidence.",
+   "severity": "moderate",
+   "resolution": "Kept one rate trigger (n2192, 10Y topped 2% then closed 1.92%) and replaced the rest with fresher own-date evidence: a US Treasury study finding the NFT market vulnerable to money laundering (n0928) in Smart Money View and the no-breakthrough Biden-Putin call (n1494) as the weekend-only-market risk."
+  },
+  {
+   "location": "retail[0] What Is Driving It",
+   "issue": "'The ads land on a rebound' read as if the in-game ads had aired; the game kicked off 23:30 UTC 13 February and in-game ads are after the cutoff.",
+   "severity": "moderate",
+   "resolution": "Rewritten as pending: 'The blitz is booked into a rebound that has already stalled'."
+  },
+  {
+   "location": "retail[0] Historical Analog",
+   "issue": "The Super Bowl-indicator headline (n1199) was called 'the folklore version of the same instinct', a loose link to the customer-acquisition mechanism; the paragraph also ended on a generic lesson.",
+   "severity": "minor",
+   "resolution": "Sharpened the mechanism with the card's 15.12% 20-session rebound (newcomers who buy after it and see it fade become sellers) and framed n1199 as treating the game itself as the signal, with the ad slate as the better one."
+  },
+  {
+   "location": "retail[2] Where It Breaks",
+   "issue": "The AMC carryover's break test reused the Financial News 'dark side' headline (n1839), which was the 2022-02-11 lead's social evidence.",
+   "severity": "moderate",
+   "resolution": "Replaced with the observable engine problem: Robinhood -12.25% over five sessions while AMC and GME rose, plus WIRED's Robinhood headline (n0785). Item kept at 160 words as a brief secondary carryover."
+  },
+  {
+   "location": "retail[1] Why Retail Is Here",
+   "issue": "The GDX item omitted the known 12 February Biden-Putin call and carried an off-topic ARKK 20-session figure.",
+   "severity": "minor",
+   "resolution": "Dropped the ARKK figure; added Reuters on Biden's decisive-response warning (n1487) and Al Jazeera on no breakthrough (n1494)."
+  },
+  {
+   "location": "retail[3] Why Retail Is Here",
+   "issue": "'Dip buyers cite Modern Retail' attributed an unevidenced behaviour to a crowd.",
+   "severity": "minor",
+   "resolution": "Rewritten as 'The bull case is Modern Retail's read ...' (n0755); the Where It Breaks trigger now names a close below Friday's 46.55 USD."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Checked every cited ID against the 2022-02-14 frozen feed (title, source, timestamp) and every number against the 2022-02-14 card or a same-paragraph headline. All Super Bowl material is pre-game preview or pre-game publicity (n0109, n0110, n0112, n0916, n0981); excluded in-game ad reviews (n0122, n0123, n0973-n0988) and the possibly post-airing n0119, n0120, n0970, n0971 are not cited. The NYT 'Crypto Bowl' (n0981) and other 13 February day-granular stamps are used only as previews. Headlines only; no article bodies. Chronology compared with retail drafts and notes for 2022-02-01 to 2022-02-11 only.",
+ "recommended_exclusions": [
+  {
+   "id": "n0119",
+   "reason": "NYT 'Crypto companies weren't the only advertising first-timers' (13 February stamp) is a past-tense review of the Super Bowl ad slate, which aired after the 00:00 UTC cutoff."
+  },
+  {
+   "id": "n0120",
+   "reason": "LA Times 'Et tu, Larry?' (13 February stamp) discusses celebrity crypto shilling with the FTX Larry David spot that debuted in-game, after the cutoff."
+  },
+  {
+   "id": "n0970",
+   "reason": "ADWEEK eToro Super Bowl ad piece stamped 13 February may describe the spot as aired; day-granular stamp cannot establish pre-kickoff publication."
+  },
+  {
+   "id": "n0971",
+   "reason": "ADWEEK Crypto.com LeBron James ad piece stamped 13 February; same day-granular ambiguity about in-game airing."
+  }
+ ],
+ "verifier": {
+  "words": 1292,
+  "distinct_sources": 32,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "cfe732b2d942b3d509b214e87ad4d9a40e1bb40324b3aff4d084a4ee12e62ab6",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02",
+  "2022-02-03",
+  "2022-02-04",
+  "2022-02-07",
+  "2022-02-08",
+  "2022-02-09",
+  "2022-02-10",
+  "2022-02-11"
+ ]
+}

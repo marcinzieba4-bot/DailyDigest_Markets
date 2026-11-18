@@ -1,0 +1,133 @@
+{
+ "date": "2022-02-15",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "b261fe6152029c86c2d6f5e2de3c43f8e475c0d852f25b82c49be2f7fecf2410",
+ "card_sha256": "25b9a11474e7c24d73d9b9e224054cc15ed3738b78d30a1838ab5f68cdc78837",
+ "exclusions_sha256": "edb4308a6088fd2c8be80237dd4371ccc001db99b280850e1c09a5d317bd0f0c",
+ "findings": [
+  {
+   "location": "catalysts/Rivian (RIVN) Catalyst & Thesis",
+   "issue": "n0771 (Notebookcheck, stamped 12 Feb) reports the Soros-Rivian US$2 billion stake, but the stake was disclosed in the Reuters item stamped 14 Feb and RIVN's +6.46% move is on the 14 Feb session; the 12 Feb stamp looks misdated and the dollar figure is unsupported by any other own-date headline.",
+   "severity": "major",
+   "resolution": "Removed the n0771 clause and the US$2 billion figure; claim now rests on Reuters n0840 only. n0771 recommended for exclusion."
+  },
+  {
+   "location": "geo/PL Macro Stance",
+   "issue": "'the region's most aggressive inflation problem' is a regional comparison no cited headline supports.",
+   "severity": "moderate",
+   "resolution": "Reworded to 'an aggressive inflation problem'."
+  },
+  {
+   "location": "sectors/XLF EPS Upside Watch",
+   "issue": "Kansas City Fed headline is a question about small vs large bank NIMs; text asserted a conclusion (scale deposit gatherers with floating-rate assets).",
+   "severity": "moderate",
+   "resolution": "Reworded to say the research frames the question, with scale deposit gatherers as likeliest candidates (analytical inference, modal); trimmed Apollo wording to keep 150-200 words."
+  },
+  {
+   "location": "sectors/XLE Breaking Convention",
+   "issue": "Asserted equities are discounting windfall taxation, citing a generic BBC explainer dated 8 Feb; cause of the price gap is not evidenced.",
+   "severity": "moderate",
+   "resolution": "Made modal ('may be discounting ... windfall-tax risk')."
+  },
+  {
+   "location": "sectors/XLI Narrative and Breaking Convention",
+   "issue": "'defence ... hold up' conflicted with LMT -2.33% and ITA -3.69%; 'regulators blocking vertical deals' generalised from a single Lockheed-Aerojet headline.",
+   "severity": "moderate",
+   "resolution": "Changed to 'hold up better' and tied the claim to the Aerojet deal only."
+  },
+  {
+   "location": "sectors/XLU Breaking Convention",
+   "issue": "Stated that Japanese fuel-cost squeeze 'explains' the US utilities' fall; causal claim beyond headlines.",
+   "severity": "moderate",
+   "resolution": "Made modal ('may be part of the explanation alongside rates')."
+  },
+  {
+   "location": "anticipatory/Russia-Ukraine Conditional Expression",
+   "issue": "'FEZ, where the drawdown is sharpest' is not true against the card (EPOL and others fell more over 20 sessions).",
+   "severity": "moderate",
+   "resolution": "Replaced with FEZ's own -1.08% day move."
+  },
+  {
+   "location": "geo/CN Fiscal and Playbook",
+   "issue": "'keeping tariff relief off the table' and 'defaults beyond the Cedar case' overreach: headlines say targets missed and a $3.1bn overdue payment, not a default or a tariff stance.",
+   "severity": "minor",
+   "resolution": "Reworded to 'leaving the trade backdrop unsettled' and 'further missed payments ... beyond Cedar's'."
+  },
+  {
+   "location": "sectors/XLP Breaking Convention",
+   "issue": "'treated as a margin victim' asserts a market view with no source.",
+   "severity": "minor",
+   "resolution": "Reworded as a price pattern consistent with a margin victim."
+  },
+  {
+   "location": "flows/Portfolio Implication",
+   "issue": "'protection buying' had no citation in the part.",
+   "severity": "minor",
+   "resolution": "Added Bloomberg options-hedge n2182 (now 2 uses total)."
+  },
+  {
+   "location": "sectors/XLK; geo/US New / Most Important",
+   "issue": "'net-cash acquirers', 'confirm pricing power' and 'protection is being bought' generalised from single headlines.",
+   "severity": "minor",
+   "resolution": "Softened to 'cash-rich', 'suggest', 'at least some protection'."
+  },
+  {
+   "location": "geo/EU and anticipatory Russia-Ukraine (n1339)",
+   "issue": "Reuters 'Scholz flies to Moscow' is day-stamped 14 Feb; the meeting itself must not be treated as having occurred. Text frames it only as pending, with no outcome.",
+   "severity": "minor",
+   "resolution": "No change needed; verified no outcome, pull-back, Duma, PPI, RBA-minutes or Airbnb/Roblox/Upstart results appear. Airbnb/Roblox/Upstart appear only as card five-session moves 'ahead of next prints'."
+  },
+  {
+   "location": "all parts",
+   "issue": "Checked every cited ID against own-date feed: all published before 2022-02-15T00:00Z, company results within 14 days, news within 7 days, macro within 35; card numbers (yields, indices, equities, commodities, Polish names, crypto) verified against cards/2022-02-15.json; no numeric spot-FX, no META ticker (FB used), curve wording matches positively sloped / bear flattening; no other-date data found; stances and Playbooks consistent.",
+   "severity": "minor",
+   "resolution": "No further edits needed."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Reviewed only own-date feed, card, exclusions, brief and the writer note; headlines only, no article bodies, no web access. Day-granular 08:00 stamps (e.g. Scholz Moscow trip n1339, BHP result n0835, Super Bowl items) were judged against the stated guardrails; their exact intraday release times cannot be verified from the feed.",
+ "recommended_exclusions": [
+  {
+   "id": "n0771",
+   "reason": "Notebookcheck Soros-Rivian US$2 billion item stamped 12 Feb precedes the 14 Feb disclosure reported by Reuters; likely misdated."
+  },
+  {
+   "id": "n1494",
+   "reason": "CNN 'Photos: Russia invades Ukraine' stamped 14 Feb describes an invasion that is after the cutoff; misdated or later-updated."
+  },
+  {
+   "id": "n1476",
+   "reason": "NPR 'Russia's at war with Ukraine' wording implies post-cutoff revision."
+  },
+  {
+   "id": "n1283",
+   "reason": "NPR gas article refers to 'the war in Ukraine'; likely later-revised."
+  },
+  {
+   "id": "n1502",
+   "reason": "BBC Pidgin item on Russia moving some troops away from the border describes the 15 Feb claimed partial pull-back, after the cutoff."
+  },
+  {
+   "id": "n0852",
+   "reason": "Reuters says Coinbase shares slip, contradicting the card's +0.37% close on 14 Feb; misdated or wrong direction."
+  },
+  {
+   "id": "n1313",
+   "reason": "Euronews German manufacturing 'October' PMI under a February stamp; misdated."
+  },
+  {
+   "id": "n1178",
+   "reason": "'Super Bowl LVII' headline under a February 2022 stamp is anachronistic."
+  }
+ ],
+ "verifier": {
+  "words": 8825,
+  "distinct_sources": 256,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "a4db5f4663af320e99507a4120483dcd98eae7bb939ab1a7398e6becc34c1bbc"
+}
