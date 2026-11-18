@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "2c8aa61f07eed4f8c424fd20f5642f789a61a57731a6fe90f6754d23ae76e3d7",
  "card_sha256": "c716703751e6bf4f21007bfb44290327ca3cd4dfc9f89407c539b4ed97dea35e",
- "exclusions_sha256": "c60873c6be0063fce141b60c36e68cb4d1610e1f7085ca278ce39006d48b2dff",
+ "exclusions_sha256": "e355a078f5738be54b0076c76bea416769f1c0856a93e180b86ed9bd2caeaeda",
  "findings": [
   {
    "location": "retail[0] Smart Money View",
@@ -78,7 +78,7 @@
   "distinct_sources": 29,
   "warnings": 0
  },
- "retail_draft_sha256": "7dc1e90a77634e9b262fce6b8f05841cdc1de08505e210c89b32652deb779f2a",
+ "retail_draft_sha256": "365cf0d2de56df3fd5224f6d1e60c6b9e70fefeb0ba3711844b0285e4da42863",
  "chronology_checked_against": [
   "2022-02-01",
   "2022-02-02",
@@ -98,5 +98,36 @@
   "2022-02-22",
   "2022-02-23",
   "2022-02-24"
+ ],
+ "root_deltas": [
+  {
+   "previous_sha256": "7dc1e90a77634e9b262fce6b8f05841cdc1de08505e210c89b32652deb779f2a",
+   "new_sha256": "365cf0d2de56df3fd5224f6d1e60c6b9e70fefeb0ba3711844b0285e4da42863",
+   "removed": "Fortune says the week had one of the incredible vaults in the history of equity markets [[n0144]].",
+   "inserted": "A session that opened in panic closed with the Nasdaq 100 up 3.44%, exactly the reversal the dip-buying crowd waits for.",
+   "reason": "Root timing correction: Fortune n0144 reads as a weekly wrap that may post-date the 25 February cutoff (independent nonretail review); replaced with the card-supported session reversal.",
+   "severity": "major",
+   "by": "root",
+   "reverified": "28 sources, 1341 words, 0 fail"
+  }
+ ],
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "c60873c6be0063fce141b60c36e68cb4d1610e1f7085ca278ce39006d48b2dff",
+   "new_exclusions_sha256": "e355a078f5738be54b0076c76bea416769f1c0856a93e180b86ed9bd2caeaeda",
+   "excluded_ids_now": [
+    "n0074",
+    "n0144",
+    "n0454",
+    "n1064",
+    "n1132",
+    "n1135",
+    "n1218"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
  ]
 }

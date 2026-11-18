@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "2c8aa61f07eed4f8c424fd20f5642f789a61a57731a6fe90f6754d23ae76e3d7",
  "card_sha256": "c716703751e6bf4f21007bfb44290327ca3cd4dfc9f89407c539b4ed97dea35e",
- "exclusions_sha256": "c60873c6be0063fce141b60c36e68cb4d1610e1f7085ca278ce39006d48b2dff",
+ "exclusions_sha256": "e355a078f5738be54b0076c76bea416769f1c0856a93e180b86ed9bd2caeaeda",
  "findings": [
   {
    "location": "geo.US Macro Stance (n0144)",
@@ -117,5 +117,24 @@
   "distinct_sources": 248,
   "warnings": 0
  },
- "nonretail_content_sha256": "01aad09c3c5f3c832c36dc867d3ca0beca66bbb669697a66a342bb0cb32a14b4"
+ "nonretail_content_sha256": "01aad09c3c5f3c832c36dc867d3ca0beca66bbb669697a66a342bb0cb32a14b4",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "c60873c6be0063fce141b60c36e68cb4d1610e1f7085ca278ce39006d48b2dff",
+   "new_exclusions_sha256": "e355a078f5738be54b0076c76bea416769f1c0856a93e180b86ed9bd2caeaeda",
+   "excluded_ids_now": [
+    "n0074",
+    "n0144",
+    "n0454",
+    "n1064",
+    "n1132",
+    "n1135",
+    "n1218"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
 }
