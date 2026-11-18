@@ -1,0 +1,28 @@
+{
+ "date": "2022-02-15",
+ "author": "nonretail_writer",
+ "own_date_sources_only": true,
+ "central_thesis": "At 00:00 UTC on 15 February 2022 markets are pricing two shocks at once: a Fed pushed toward a faster March lift-off by 7.5% CPI (2Y 1.58%, +59 bps over 20 observations, a bear flattening of a positively sloped curve) and a Russia-Ukraine invasion window (Brent 96.48 USD/bbl, VIX 28.33, gold 1,869.40 USD/oz, STOXX 600 -1.83% on 2022-02-14). The call is to keep equity beta below benchmark, fund energy, gold and defence hedges from long duration and long-duration growth, underweight Europe and Poland most, and prefer commodity exporters (Australia, materials) and pricing-power franchises until diplomacy in Moscow or a softer Fed path lowers the premia.",
+ "sources_policy": "Facts come only from the 2022-02-15 frozen feed (tools/digest.py) and the 2022-02-15 market card (tools/showcard.py / cards/2022-02-15.json). Every number is a card value quoted exactly or appears in a headline cited in the same part. Every cited ID was re-checked against its own-date headline text and timestamp (strictly before 2022-02-15T00:00Z, inside the 7/14/35-day windows), and every quoted card value was re-checked directly against cards/2022-02-15.json after the root's scratch-isolation warning. Previews are used only for pending events and never for outcomes. Company results are kept separate from previews. Each citation is used at most twice: 257 distinct IDs, 279 uses. There are no spot-FX levels or returns; currency direction comes only from dated reporting (zloty) or general rate-differential mechanics (yen), and DXY is the only dollar measure quoted. Period identities follow the card names: Meta Platforms (FB), Raytheon Technologies (RTX), Digital World Acquisition (DWAC), Mercedes-Benz Group, Schlumberger. No Polish companies appear in the Sector Deep Dive. The exclusions file for the date lists none.",
+ "known_ambiguities_omitted": [
+  "n1494 CNN 'Photos: Russia invades Ukraine' (stamped 2022-02-14): misdated or later-updated gallery describing the invasion; omitted.",
+  "n1476 NPR 'Russia's at war with Ukraine. Here's how we got here' (stamped 2022-02-12): war-tense wording implies a post-cutoff revision; omitted.",
+  "n1283 NPR 'How Europe's reliance on Russia's gas plays into the war in Ukraine' (stamped 2022-02-09): same later-revision risk; omitted (used GIS Reports, EIA-style and OilPrice items instead).",
+  "n1502 BBC Pidgin item on Russia withdrawing some troops (stamped 2022-02-14): describes Moscow's claimed partial pull-back, which is after the cutoff (15 February); omitted. Nothing on the pull-back or the Duma recognition appeal is used.",
+  "n0280 Bloomberg 'PBOC Pumps in More Liquidity, Spurring Gains in Chinese Stocks' (stamped 2022-02-14): contradicts the Shanghai Composite's -0.98% on the 2022-02-14 session; omitted.",
+  "n0852 Reuters 'Coinbase shares slip as app crashes briefly after Super Bowl ad': direction contradicts COIN's +0.37% close on 2022-02-14; the app crash is cited from CNN (n0127) and Investopedia (n0851) instead.",
+  "n0459 CNBC 'Dow slides 500 points as yields spike following red-hot inflation report' (stamped 2022-02-09, a day before the 10 February CPI release): misdated stamp; used n2095, n1164 and n2156 instead.",
+  "n1313 Euronews 'German manufacturing slumps in October...': misdated (October data) under a February stamp; omitted.",
+  "n0794 '17 Best LED Lighting Stocks to Buy in 2026', n1178 'Super Bowl LVII...', n0755 Taiwan names TSMC founder as 2021 APEC envoy: misdated or stale; omitted.",
+  "Live or rolling pages n1335, n0599, n1294 (Reuters LIVE MARKETS): omitted under the live-blog rule.",
+  "Spot-FX: n1696 and n1669 (Bankier) carry a numeric euro-zloty level; used only for direction (zloty strongest in eight months, strengthened after Glapiński) and the level is never quoted. n1249 (Investing.com EUR/USD) and n1243 (TorFX pound-euro) omitted.",
+  "Promotional or low-quality items omitted: n0898 Grizzle lithium 'catch-up trade', n0795 OilPrice '5 Hot Small Cap Oil And Gas Stocks', n0352 'Metaverse Stocks to Buy', Motley Fool Shiba Inu return pieces (n0955, n0939), n1754 'dollar supply up 411%'.",
+  "n1739 Newsweek Polska allegation about missing Russian-bank files at the NBP involving Glapiński: an unverified allegation not needed for the analysis; omitted.",
+  "Stale previews superseded by outcomes: n0379 (SoftBank earnings preview), n1636 and n1644 (Polish MPC decision previews); omitted.",
+  "Known-but-unevidenced events: Japan Q4 GDP (released 23:50 UTC on 14 February) and Canada's Emergencies Act invocation (14 February evening) have no own-date headline, so neither is mentioned. The Super Bowl ads (known) are used through own-date headlines.",
+  "Pending events with no dated preview: US January PPI, the RBA minutes (00:30 UTC on 15 February) and Airbnb, Roblox and Upstart results are not dated or described; the five-session run-ups in UPST, RBLX and ABNB are cited only as card moves 'ahead of their next prints'. The Scholz-Putin meeting, Munich Security Conference outcomes and the EU rule-of-law judgment are treated as pending with no outcome.",
+  "n1328 Reuters 'ECB to raise deposit rate to -0.25% by year-end' is a forecast-type item and is written as an expectation only. n0883 TipRanks is used only to establish a notable earnings slate, with no company dates inferred from it. n0233 Reuters Insight is cited as 'a Trump deal' without naming its parties beyond the headline.",
+  "Verifier status: PASS, 0 fail and 0 warn; no residual WARNs need justification."
+ ],
+ "authoring_stage": "initial nonretail draft before independent review"
+}

@@ -1,0 +1,27 @@
+{
+ "date": "2022-02-11",
+ "author": "nonretail_writer",
+ "own_date_sources_only": true,
+ "central_thesis": "January CPI at 7.5% (fastest since 1982) pushed the 10Y through 2% to 2.03% and drove a bear flattening led by the 2Y (1.61%, +69 bps over twenty observations), so the day's repricing is a discount-rate and liquidity shock rather than a growth scare: favour cash-generative financials, energy and pricing-power names, underweight long-duration growth, REITs and utilities, while China eases, Poland's NBP turns hawkish with a strong zloty, and the Russia-Belarus drills keep energy and defence premia as the main pending risk.",
+ "sources_policy": "Only the 2022-02-11 frozen feed (tools/digest.py, own-date --grep/--topic) and the 2022-02-11 card (tools/showcard.py, cards/2022-02-11.json) were used; no other date's feed, card, spec, draft or note, no specs/, retail_drafts/, notes/retail_* or audit/independent_* files, and no web access. The own-date exclusions file is empty. Every cited ID was re-resolved against feeds/2022-02-11.json.gz (273 distinct IDs, none used more than twice) and every quoted market value was re-checked programmatically against cards/2022-02-11.json (all sessions 2022-02-10). Numbers appear only with a card field or a headline cited in the same part; source tags follow the contract, with crypto on the prior completed daily close 2022-02-10. No numeric spot-FX is quoted; currency direction comes from dated reporting (zloty, ECB/dollar) and DXY. Previews are used only as previews (Pekao's 50 bp forecast, the March FOMC debate, Truth-Social-style launches not used). verify.py --nonretail: PASS, 8,841 body words, 0 FAIL, 0 WARN.",
+ "known_ambiguities_omitted": [
+  "n0686 CNBC 'Dow slides 500 points as yields spike following red-hot inflation report' is stamped 2022-02-09 but describes the 10 February CPI reaction (misdated outcome); the reaction is taken from the card instead.",
+  "n0246 Reuters 'China government bond yields rise on faster Jan credit growth': the PBOC January credit data came late on 10 February local time and the bond-yield reaction may belong to the Asian 11 February session after the cutoff despite the day-granular stamp; omitted, and no January credit-growth claim is made.",
+  "n1466 France 24 'Biden tells US citizens to leave Ukraine...' and n1493 Guardian ''Things could go crazy quickly,' Biden warns ... as talks in Berlin fail': US-evening interview and late-ending Berlin talks could have been published after 00:00 UTC; omitted (after-cutoff risk).",
+  "n1579 Guardian 'Russia and Ukraine crisis moving wrong way, says UK defence secretary': timing of the remark is uncertain relative to the cutoff; omitted.",
+  "n0880 Seattle Times and n0881 GeekWire on Zillow shares surging / up 16%: after-hours move following after-close results, possibly measured after the cutoff; omitted (only the WSJ loss figure n0882 is used).",
+  "n0879 CNBC Kurnos on Zillow profitability: post-results interview could have aired after the cutoff; removed during self-check and replaced.",
+  "n0788 UPI 'Astra Space stock plunges after rocket failure': late-session launch and after-hours trading; omitted (after-cutoff risk, not needed).",
+  "n0826 and n1326 Reuters LIVE MARKETS pages: live blogs; not used per contract.",
+  "n0501 Verdict 'SoftBank looks to sell Alibaba shares' versus n0695 FOREX.com 'Alibaba rallies on Softbank announcement': contradictory direction; both omitted.",
+  "n1759 and n1785 Bankier.pl carry a numeric EUR/PLN quote; cited only for direction (zloty strongest in eight months, Glapinski strengthened it), with no numeric spot-FX. n1644 (Czech koruna, numeric FX) not used.",
+  "n1133 Yahoo Finance 'Apple To Enable Crypto Payments With Tap To Pay': promotional and unsupported by Apple's own headline (n1092); omitted. Other promotional/listicle items (Motley Fool hypergrowth and Shiba Inu pieces, Fundstrat targets n0897, Securities.io AVAX n0893) not used.",
+  "n0175 Geopolitical Futures 'Zero COVID and Manufacturing in China': headline does not establish a directional claim; dropped during self-check.",
+  "Pending same-day events with no own-date preview headline (UK Q4 GDP, UMich preliminary sentiment, Bank of Russia decision) and the BoJ fixed-rate offer (no own-date headline) are not mentioned; the Tokyo holiday is not stated because no own-date headline or card field states it.",
+  "Affirm and Cloudflare results have no own-date headline: Affirm's -21.42% card move is reported without a cause, Cloudflare is not discussed, and Datadog's +12.28% card move is cited only as dispersion. Twitter (not on the card) is discussed via headline only, with no price.",
+  "n1625 StockWatch.pl Pekao forecast of a 50 bp hike is a preview; the size of the 8 February MPC decision is not stated because the decision headline (n1723) only says rates are the highest in almost nine years.",
+  "n1762 PolsatNews.pl quote 'I will urge tightening of monetary policy' is quoted literally without attributing the speaker beyond the headline.",
+  "FTX's Super Bowl bitcoin giveaway (n0918) is cited as an announced plan only; the game and the ads airing come after the cutoff."
+ ],
+ "authoring_stage": "initial nonretail draft before independent review"
+}

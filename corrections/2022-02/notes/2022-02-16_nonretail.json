@@ -1,0 +1,22 @@
+{
+ "date": "2022-02-16",
+ "author": "nonretail_writer",
+ "own_date_sources_only": true,
+ "central_thesis": "Russia's claimed partial pullback on 15 February removed a geopolitical discount (S&P 500 +1.58%, VIX 25.70, Brent -3.32%, TTF -12.20%), but 7.5% CPI, a bear-flattening Treasury curve (2Y 1.58%, 10Y 2.05%, 10Y-2Y +47 bps) and an open 25-versus-50 bps March debate mean the relief favours cash-generating cyclicals (financials, materials, European autos, Polish banks) over duration, while haven, defense and energy premia are vulnerable and China's easing and Poland's hawkish NBP are offset by property stress, Hong Kong Omicron and border risk.",
+ "sources_policy": "Only the 2022-02-16 frozen feed (tools/digest.py 2022-02-16) and the 2022-02-16 market card (tools/showcard.py 2022-02-16 and cards/2022-02-16.json) were used as evidence; every cited ID was re-checked against feeds/2022-02-16.json.gz titles and timestamps (all strictly before 2022-02-16T00:00Z and inside their news/result/monthly windows), each ID is cited at most twice (252 distinct IDs), and every number is a card value or appears in a headline cited in the same part. Shared scratch dumps were overwritten mid-session by other agents with other dates' digest/card content; that material was discarded unread for authoring, all tool output was regenerated into a date-named private directory, and no other-date headline, ID or price was used. Reference voice files were used for voice only. No spot-FX levels or returns are quoted; currency direction (złoty, yuan, dollar) comes only from dated headlines and DXY.",
+ "known_ambiguities_omitted": [
+  "US January PPI: the only own-date support is n1326 (Reuters LIVE MARKETS 'S&P 500 futures weigh Russia relief vs PPI pop'), a live blog; omitted per the live-blog rule, so PPI is not discussed. Other LIVE MARKETS pages (n1315, n0455, n1274) also not used.",
+  "Upstart results, Poland's Q4 flash GDP, the MLF operation details and the Duma recognition appeal: no own-date headline found, so not asserted (China liquidity is described only via n0251 'PBOC Pumps in More Liquidity').",
+  "Misdated: n0315 CNBC 'Dow slides 500 points as yields spike following red-hot inflation report' is stamped 2022-02-09, before the 10 February CPI release; omitted.",
+  "Misdated/retitled or ambiguous war wording: n1473 CNN 'Photos: Russia invades Ukraine' (stamped 14 Feb), n1455 NPR 'Russia's at war with Ukraine', n1507 Economist '...the war in Ukraine', n1263 NPR, n1562 ECFR, n1512 CU Boulder; omitted so no invasion is implied as fact.",
+  "Contradictory: n0066 ABC 'ASX rises, Fortescue Metals and CSL report weaker profits' conflicts with the card's S&P/ASX 200 -0.51% for 2022-02-15; cited only for the weaker CSL/Fortescue profits, ASX direction taken from the card.",
+  "Stale/evergreen or misdated titles not used: n1293 Euronews 'German manufacturing slumps in October', n0775 '...Stocks to Research in 2026', n0615 '[2034]' report, n1146 'Super Bowl LVII', n0611 'Morris Chang ... 2021 APEC'.",
+  "After-cutoff or pending events treated only as pending, without dates (no dated own-date preview): US January retail sales and FOMC minutes, Nvidia, Cisco and DoorDash results, Shopify results, China January CPI/PPI, and the EU rule-of-law court judgment (n1585 is a preview). Roblox's post-results regular-session move is not stated; only the after-hours drop (n0880, stamped 15 Feb) is used.",
+  "Attribution uncertainty: n1648 Polsat quote ('Będę namawiał do zacieśnienia polityki pieniężnej') names no speaker, so it is not attributed to Glapiński or any MPC member.",
+  "Spot FX: n1672 and n1645 quote a EUR/PLN level; only the złoty direction ('strongest in eight months', 'recovering losses' n1770) is used. n1248 (EUR/USD) not used. No numeric =X quotes anywhere.",
+  "Promotional, rumour or low-information items not used: n1067 'Apple To Enable Crypto Payments With Tap To Pay' (unconfirmed), Stocktwits/TradingView/Yahoo quote pages, YouTube clips, Motley Fool 'If you invested $100' pieces, n1715 Newsweek allegation about NBP files (unverified, sensitive).",
+  "Retail-attention items (Virgin Galactic +31.94% on $450,000 tickets n0920, meme/Reddit pieces, DWAC/Truth Social n1813, Musk donation) deliberately left for the separate retail section to avoid duplicating its leads.",
+  "Remaining verifier WARNs: none."
+ ],
+ "authoring_stage": "initial nonretail draft before independent review"
+}
