@@ -1,0 +1,86 @@
+{
+  "date": "2022-02-28",
+  "author": "nonretail_writer",
+  "own_date_sources_only": true,
+  "central_thesis": "Friday's relief rally (S&P 500 +2.24% to 4,384.65, VIX 27.59) priced the first, energy-sparing sanctions package, but the weekend's SWIFT exclusion of some Russian banks, Germany's EUR100 billion defence pivot and the EU airspace closure widen the shock into payments, energy and fiscal policy while the Fed still prices March lift-off (2Y 1.55%, +37 bps over 20 observations, bear flattening): own energy, defence, materials and quality defensives, keep hedges, and underweight European banks/autos, offshore China internet and Polish duration until talks show traction.",
+  "sources_policy": "Only the 2022-02-28 frozen feed (tools/digest.py) and the 2022-02-28 market card (tools/showcard.py) were used; no other date's feed, card, spec, draft or note, no retail drafts and no web access. Every number is a card value (sessions 2022-02-25; crypto 2022-02-27) or appears in a headline cited in the same part; every citation is an own-date headline published before 2022-02-28T00:00Z within its window; each ID is used at most twice (264 distinct). Excluded ID n1971 is not cited. Live blogs (Reuters LIVE MARKETS) and live price pages were rejected. Previews (n0118 State of the Union March 1, n0212 two sessions, n2040/n2058 Fed March) are used only as pending events. No numeric spot-FX; currency direction (zloty, yuan, rupee, dollar) comes from dated headlines and DXY from the card. Period identities: Meta Platforms (FB), Block (SQ), Raytheon Technologies (RTX), Mercedes-Benz Group. No Polish companies in the Sector Deep Dive.",
+  "known_ambiguities_omitted": [
+    {
+      "item": "n1971 Bank of Russia order blocking foreign clients' sales of Russian securities",
+      "why": "Listed in exclusions/2022-02-28.json; reported around the Monday Moscow open, after the cutoff."
+    },
+    {
+      "item": "Bank of Russia emergency rate hike, Monday ruble collapse, Moscow exchange closure, China's February PMI",
+      "why": "All after the 00:00 UTC 28 February cutoff; not mentioned (the February PMI appears only as the undated next activity test)."
+    },
+    {
+      "item": "Putin's nuclear-forces alert, the announced Ukraine-Russia talks at the Belarus border, sanctions on Putin and Lavrov personally, the Bank of Russia reserve sanctions, US PCE and durable goods (25 Feb), Japan's January industrial output (27 Feb 23:50 UTC)",
+      "why": "Known per timing guardrails but no own-date headline or card field supports them, so they are not stated as facts; talks appear only via n1397 (Ukraine ready for talks on neutral status) and China's call for talks (n1350); the SWIFT step via n1412/n1226/n1416."
+    },
+    {
+      "item": "n0856 Equinor to exit Russia (stamped 27 Feb)",
+      "why": "Announcement could fall on Monday 28 Feb; omitted."
+    },
+    {
+      "item": "n1415 Belarus votes to give up non-nuclear status",
+      "why": "Reads as a referendum result likely published after the cutoff; only n1414 (vote being held) is cited."
+    },
+    {
+      "item": "n0840, n0841, n0852 NIO Hong Kong/Singapore secondary listing",
+      "why": "Sunday-stamped corporate announcement whose release time may be after the cutoff; omitted."
+    },
+    {
+      "item": "n1231 Intel picks Magdeburg for European chip factory",
+      "why": "Sunday-stamped, timing and confirmation status uncertain; omitted."
+    },
+    {
+      "item": "n1514 Yamal-Europe pipeline reverts to reverse mode",
+      "why": "Flow report could describe Monday 28 Feb; omitted (n1480 from 22 Feb used instead)."
+    },
+    {
+      "item": "n0843 Bloomberg: energy firms snap up Russian gas",
+      "why": "Sunday stamp with possible Monday-trading content; omitted."
+    },
+    {
+      "item": "n0873 UPS and FedEx halting shipments to Russia and Ukraine; n0858 Orange picks Nokia for standalone 5G; n1264 Olam IPO; n0855 NBIM vote on Apple pay; n0860 Ericsson leaked files",
+      "why": "Sunday-stamped items whose publication or event time may be after the cutoff; omitted."
+    },
+    {
+      "item": "n0230 China boosts oil reserves (Reuters exclusive); n0229 Beijing low-cost housing land supply; n2183 China willing to work with US on B3W",
+      "why": "Sunday-stamped China items that may reflect Monday Beijing-time releases; omitted."
+    },
+    {
+      "item": "n0866 Taiwan says chip companies complying with Russia export controls",
+      "why": "Weekend Taiwan-time statement with uncertain UTC timing; n0653 (24 Feb, TSMC) used instead."
+    },
+    {
+      "item": "Reuters LIVE MARKETS items (n0592, n0469, n0470, n0591, n1162, n1194) and n0834 Solana live price page",
+      "why": "Live blogs and rolling pages are rejected as evidence."
+    },
+    {
+      "item": "n1680, n1648, n1569 Polish headlines carrying numeric euro/dollar-zloty quotes; n1332 rouble -3%",
+      "why": "Numeric spot-FX prohibited; only directional zloty headlines (n1729, n1681, n1666) are cited, and n1332 is cited for Russian bonds without its FX figure."
+    },
+    {
+      "item": "n1706 media report of Russian troops concentrating at the Polish border",
+      "why": "Unverified media claim on a sensitive security matter; omitted."
+    },
+    {
+      "item": "n1284 and n1149 carrying 'U.S. Department of War' source labels",
+      "why": "Later-vintage organisation names; not used."
+    },
+    {
+      "item": "n1385 Swarajya on the US backing off a SWIFT threat (25 Feb)",
+      "why": "Superseded by the 26 Feb SWIFT decision; not used."
+    },
+    {
+      "item": "Causes of Zscaler (-15.77%), Renault (-15.91% over five sessions), Beyond Meat and other single-name moves",
+      "why": "No own-date headline explains them; moves are quoted from the card without causal attribution."
+    },
+    {
+      "item": "Moderna 2022 vaccine-sales figure",
+      "why": "Headlines conflict (CNBC: at least $19 billion; Fierce Pharma: $22B); both are attributed rather than reconciled."
+    }
+  ],
+  "authoring_stage": "initial nonretail draft before independent review"
+}

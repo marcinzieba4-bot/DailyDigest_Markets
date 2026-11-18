@@ -1,0 +1,78 @@
+{
+  "date": "2022-02-24",
+  "author": "nonretail_writer",
+  "own_date_sources_only": true,
+  "central_thesis": "At 00:00 UTC on 24 February 2022 markets were pricing a March Fed lift-off and a still-pending escalation risk from the Donbas deployment at the same time: the S&P 500 in correction at 4,225.50 with the VIX at 31.02, the 2Y at 1.58% after a +56 bps 20-observation bear flattening (10Y-2Y +41 bps), Brent at 96.84 USD/bbl and TTF +25.34% over five sessions, while the last five observations show haven buying at the long end (10Y -6 bps). The stance is defensive: underweight long-duration growth, euro-area banks and Polish banks/discretionary, overweight energy, commodity producers (fertiliser, aluminium, gold miners) and defence primes, hold 10Y Treasuries as the hedge and prefer onshore China over offshore internet. The call changes on a credible diplomatic/summit track (cover European shorts first) or on an escalation beyond the separatist regions with broader sanctions (add to energy/gas, cut European financials).",
+  "sources_policy": "Only the 2022-02-24 frozen feed (tools/digest.py, own-date exclusions applied) and the 2022-02-24 market card (tools/showcard.py) were used; no other date's feed, card, spec, draft or note and no web access. Every number comes from the card (exact values, card session tags) or from a headline cited in the same part; each citation ID is used at most twice; no numeric spot-FX (DXY only); previews are used only to establish pending events and no event dates are given without a dated headline; every 23 Feb-stamped item was screened for post-cutoff content, and the invasion appears only as a pending risk with two-sided scenarios.",
+  "known_ambiguities_omitted": [
+    {
+      "item": "n1265 PBS 'Biden condemns Russia for unjustified attack'",
+      "reason": "Own-date exclusion: post-invasion statement carrying a 23 Feb day stamp; not used."
+    },
+    {
+      "item": "n1911 CNBC 'South Korea's central bank holds interest rates steady'",
+      "reason": "Bank of Korea decision falls on 24 Feb local time, after the 00:00 UTC cutoff; omitted entirely."
+    },
+    {
+      "item": "n0135 Reuters 'Expert views on Russian forces invading Ukraine'",
+      "reason": "23 Feb stamp but wording could describe the post-cutoff full-scale invasion; omitted."
+    },
+    {
+      "item": "n1287 BBC 'Ukraine conflict: Where are Russia's troops?', n1280 HRW on occupation and armed conflict, n1264 Atlantic Council 'Belarus joins Putin's new Russian empire', n1275 CFR 'Putin's Aggression Against Ukraine...', n0849 Morning Brew 'Ukraine explained', n1290 The Conversation, n0753 NYT 'Russia-Ukraine Crisis Shakes Markets, but Long-Term Outlook Is Better'",
+      "reason": "23 Feb-stamped explainers/analysis whose vintage relative to the invasion cannot be established from the headline; omitted to avoid post-cutoff leakage."
+    },
+    {
+      "item": "n1268 Reuters 'China says Taiwan is not Ukraine as island raises alert level'",
+      "reason": "Timing of the alert-level change relative to the cutoff is uncertain; omitted."
+    },
+    {
+      "item": "n1255 BBC 'possible attack routes' and n1263 ABC satellite images with directional detail",
+      "reason": "Avoided so that scenario framing carries no route or timing precision."
+    },
+    {
+      "item": "n0629 Unit 42 'Russia-Ukraine Cyberattacks (Updated)... HermeticWiper'",
+      "reason": "Updated, later-vintage page; omitted (generic cyber-risk point sourced to VOA n0090 instead)."
+    },
+    {
+      "item": "n1232 and n1064 with source label 'U.S. Department of War'",
+      "reason": "Later-vintage organisation label; not used."
+    },
+    {
+      "item": "n1721 / n1722 LATAM Airlines press releases stamped 23 Feb",
+      "reason": "Old corporate releases with misleading stamps; omitted."
+    },
+    {
+      "item": "n1027 Euronews 'German manufacturing slumps in October'",
+      "reason": "Misdated/contradictory period; omitted."
+    },
+    {
+      "item": "n1513 Obserwator Gospodarczy on GUS unemployment data (23 Feb stamp)",
+      "reason": "Exact GUS release time could fall on 24 Feb; replaced with the MRiPS 5.6% January estimate (n1367)."
+    },
+    {
+      "item": "n1458 'Kurs euro 22 lutego powyzej 4,5 zl', n1281 rouble '3%', n1900 rupee quote",
+      "reason": "Numeric spot-FX levels/returns prohibited; n1458 and n1281 used for direction only, n1900 not used."
+    },
+    {
+      "item": "n1075 New York Post 'over Russia invasion of Ukraine'; n1233 Al Jazeera 'beginning invasion'",
+      "reason": "Outlet characterisation of the 21-22 Feb Donbas deployment; NY Post not used, Al Jazeera used only as Biden's characterisation of that deployment."
+    },
+    {
+      "item": "n0837 FT 'ETF investors pile into Russian equities and defence stocks' (23 Feb stamp)",
+      "reason": "Used once as the only direct flow evidence; title describes pre-invasion bargain-hunting and no attack or reaction, flagged for independent timing review."
+    },
+    {
+      "item": "EU first sanctions package; Lucid and Booking Q4 result details",
+      "reason": "No own-date headline establishes them; not reported as facts (Lucid referenced only via TheStreet/CNET headlines)."
+    },
+    {
+      "item": "Pending 24 Feb events (Alibaba, Moderna, Coinbase, Dell results; US Q4 GDP second estimate)",
+      "reason": "No dated own-date preview; mentioned only as a company's 'next quarterly report' (Alibaba, Moderna) or omitted; only Block has a preview (n0685) and no date is stated."
+    },
+    {
+      "item": "Invasion scenario",
+      "reason": "Written only as a pending, two-sided risk (escalation beyond the separatist regions versus a summit path) without timing, routes, specific sanctions instruments or market-reaction detail."
+    }
+  ],
+  "authoring_stage": "initial nonretail draft before independent review"
+}
