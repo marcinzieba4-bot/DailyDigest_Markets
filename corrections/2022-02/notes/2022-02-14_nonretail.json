@@ -1,0 +1,105 @@
+{
+ "date": "2022-02-14",
+ "author": "nonretail_writer",
+ "own_date_sources_only": true,
+ "central_thesis": "Two shocks are hitting at once: a 7.5% January CPI that has pulled the Fed toward a faster March lift-off (two-year at 1.50%, up 59 bps over 20 observations; bear-flattening curve with 10Y−2Y at +42 bps) and White House warnings that Russia could invade Ukraine within the week (VIX 27.36, Brent 94.44 USD/bbl, S&P 500 down 1.90% on Friday). The edition therefore favours energy, defense, gold miners and short-duration cash-flow assets over long-duration growth and semiconductors, keeps China and Poland Mixed because policy support (PBOC easing, a hawkish NBP and a firm zloty) offsets property and frontline risk, and changes the call on a verifiable Russian de-escalation combined with a softer next inflation print.",
+ "sources_policy": "Evidence is limited to the frozen 2022-02-14 feed (read through tools/digest.py, topic listings and --grep) and the 2022-02-14 market card (tools/showcard.py). The cutoff is 00:00:00 UTC on 14 February 2022; every cited item is inside its feed window, and none of the IDs in exclusions/2022-02-14.json is cited. No other date's feed, card, spec, draft or note, no specs/, retail_drafts/, notes/retail_* or audit/independent_* file, and no web source was used. One process incident: the first batch of topic listings was written to a shared scratch path, and another writer's process overwrote some of those files, so one listing (the 2022-02-01 sectors topic) was briefly displayed. It was discarded on detection, nothing from it was used, and every listing relied on was then regenerated in a date-specific scratch folder and checked against own-date item counts. Card values are quoted exactly with Yahoo Finance / US Treasury / crypto daily-close tags. Japanese equities use their 2022-02-10 session because Tokyo was closed on 11 February. No numeric spot-FX level or return is quoted; the zloty is described only by direction from dated Bankier reports, and the dollar only through the DXY index. Each citation ID is used at most twice (263 distinct IDs), so the merged report stays within the four-use cap. Polish companies appear only in the PL block, Underowned and nowhere in the Sector Deep Dive. Final verifier run (tools/verify.py --nonretail 2022-02-14): PASS, 8,981 body words, 0 FAIL, 0 WARN, so no warning needed justification. Every cited sentence was then re-read against its headline wording, outlet, timestamp and outcome-versus-preview status.",
+ "known_ambiguities_omitted": [
+  {
+   "id": "n0536",
+   "item": "CNBC: Dow slides 500 points as yields spike following red-hot inflation report",
+   "reason": "Misdated: stamped 2022-02-09 08:00 but describes the 10 February CPI session. Not cited; the CPI facts are taken from correctly dated items (n2132, n1173, n2138)."
+  },
+  {
+   "id": "n1493",
+   "item": "NPR: Russia's at war with Ukraine. Here's how we got here (stamped 12 Feb)",
+   "reason": "The title reads like a later retitling that implies an invasion after the cutoff. Avoided; the invasion is treated only as a pending risk."
+  },
+  {
+   "id": "n1329",
+   "item": "Euronews: German manufacturing slumps in October as new orders drop - PMI (stamped 11 Feb)",
+   "reason": "Stale October data under a February stamp (misdated). Not used."
+  },
+  {
+   "id": "n0877, n0884",
+   "item": "Crown Resorts backs Blackstone takeover bid (Reuters, Guardian; stamped 13 Feb)",
+   "reason": "Australian deal that was probably announced on Monday morning AEDT. It could fall after the cutoff, so it is omitted."
+  },
+  {
+   "id": "n2007",
+   "item": "CNBC: Singapore bank DBS profit rebounds (stamped 13 Feb)",
+   "reason": "Results released on Monday in Singapore. It could fall after the cutoff, so it is omitted."
+  },
+  {
+   "id": "n0257, n0076, n0880",
+   "item": "Standard Chartered HK CIPS participant; Rio Tinto heritage plan; CBA's Vacy Lyle interview (all stamped 13 Feb)",
+   "reason": "Sunday-stamped Asia-Pacific items that may describe Monday local-time announcements. They were not needed, so they are omitted."
+  },
+  {
+   "id": "n0119, n0120, n0886",
+   "item": "NYT 'Crypto companies weren't the only advertising first-timers'; LA Times 'Et tu, Larry?'; Just Jared Verizon Super Bowl spot (13 Feb)",
+   "reason": "Past-tense coverage of in-game Super Bowl ads, including the FTX Larry David spot, which aired after the 23:30 UTC kickoff. Omitted. The game result, in-game ads and app outages are unknown to this edition."
+  },
+  {
+   "id": "n0970, n0971",
+   "item": "ADWEEK eToro and Crypto.com Super Bowl ad pieces (13 Feb)",
+   "reason": "It is unclear whether these describe pre-released spots or in-game airings, so they are omitted. Crypto marketing is cited only through pre-game previews (n0109 CBS, n0112 WIRED)."
+  },
+  {
+   "id": "n1199, n1959, n0094",
+   "item": "Super Bowl previews (stock-market correlation; Meta and GM ad previews)",
+   "reason": "Previews only. They are not used to support any outcome."
+  },
+  {
+   "id": "exclusions/2022-02-14.json",
+   "item": "n0122, n0123, n0973, n0974, n0976, n0977, n0978, n0979, n0980, n0984, n0987, n0988",
+   "reason": "Root-flagged post-cutoff Super Bowl ad reviews. Never cited."
+  },
+  {
+   "id": "n0654 vs n0240",
+   "item": "Didi/Tencent stake: Bloomberg 'Didi shares climb as Tencent boosts stake' vs CNBC 'Didi drops after Tencent clarifies it did not buy new shares'",
+   "reason": "The two reports point in contradictory directions, so neither is used."
+  },
+  {
+   "id": "n1720, n1746, n1230, n1224, n0900",
+   "item": "Bankier EUR/PLN pieces; Investing.com EUR/USD; TorFX pound-euro; Investors King exchange rates",
+   "reason": "Spot-FX. The Bankier items are cited only for the zloty's direction (strengthened, strongest in eight months), and no numeric exchange-rate level is reproduced. The other FX pieces are omitted."
+  },
+  {
+   "id": "n1108",
+   "item": "Yahoo Finance: Apple To Enable Crypto Payments With 'Tap To Pay'",
+   "reason": "Apple's own announcement (n1067) does not establish this claim. It is treated as speculative and omitted."
+  },
+  {
+   "id": "n0787, n0873, n0838, n0739, n0740, n0742, n0744, n0871, n0869, n0872, n0622",
+   "item": "Startup Fortune ICICB profit item; '17 Best LED Lighting Stocks to Buy in 2026'; Fortune Business Insights '[2034]' report; Yahoo/TradingView quote, options-chain and EPS pages",
+   "reason": "Promotional, misdated or non-news reference pages. Omitted."
+  },
+  {
+   "id": "n1789",
+   "item": "Newsweek Polska: Russian-bank files missing from NBP, Glapiński possibly involved",
+   "reason": "Contested allegation with no corroboration in the own-date evidence. Omitted."
+  },
+  {
+   "id": "n/a",
+   "item": "Bank of Russia rate hike (11 Feb); UK Q4 GDP figures; UMich reading",
+   "reason": "Known by the cutoff, but the own-date evidence does not carry the Bank of Russia decision or the GDP and sentiment numbers. Only the ONS release title (n1542) and Yahoo Finance's 'deep funk' characterisation (n2147) are cited, and no figures are invented."
+  },
+  {
+   "id": "n/a",
+   "item": "Japan Q4 GDP (14 Feb 23:50 UTC) and US PPI (15 Feb)",
+   "reason": "Pending, with no dated preview in the own-date evidence. They are referred to only generically as 'the next print' or 'the next inflation print'."
+  },
+  {
+   "id": "n0717 / UBER; NET",
+   "item": "Uber's -6.52% and Cloudflare's -9.52% moves on 11 February",
+   "reason": "Uber reported on 9 February, so the 11 February move is not attributed to results; the five-session change is used instead. No own-date Cloudflare results headline exists, so its move is not attributed or used."
+  },
+  {
+   "id": "n0887",
+   "item": "CNBC: Lockheed Martin terminates $4.4 billion Aerojet Rocketdyne deal (stamped 13 Feb)",
+   "reason": "Used. It is a Sunday 13 February US-time announcement made ahead of 00:00 UTC on 14 February. Flagged for the independent reviewer's timing check."
+  }
+ ],
+ "authoring_stage": "initial nonretail draft before independent review"
+}
