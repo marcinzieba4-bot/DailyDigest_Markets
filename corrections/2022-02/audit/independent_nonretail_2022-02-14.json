@@ -1,0 +1,111 @@
+{
+ "date": "2022-02-14",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "6bb87c7c44bf34741bccf4f55293fde7608d391473ae251c4d9eaf93246f6aa4",
+ "card_sha256": "cf962e725bd50a26a681cf34fb43403a0fc23b9bebe1075c27112a20aa016606",
+ "exclusions_sha256": "6d63e8a22480a139b93dfe0c768648810fe7fe42a5e57ac8b77463f286198c52",
+ "findings": [
+  {
+   "location": "sectors/XLI EPS Upside Watch; catalysts/Lockheed Martin Catalyst & Thesis",
+   "issue": "n0887 (CNBC, Lockheed terminates $4.4bn Aerojet deal, stamped Sun 13 Feb 08:00) cannot be shown from the headline or its day-granular stamp to precede 00:00 UTC 14 Feb; the claim also fed an unsupported 'freed-up capital could go to buybacks' inference.",
+   "severity": "major",
+   "resolution": "Removed n0887 and the Aerojet claim from both places. XLI paragraph now rests on n0810 (RTX DOJ probe); Lockheed catalyst rebuilt on n1581 (Pentagon 3,000 troops to Poland) and n1578 (White House invasion warning), retitled 'defense demand with a war premium'. Card figures unchanged."
+  },
+  {
+   "location": "sectors/XLC Reported",
+   "issue": "'steepest leg of the slide' for Meta exceeds what n1026 ('shares plummet') or the card (1/5/20-session returns only) establishes.",
+   "severity": "minor",
+   "resolution": "Softened to 'a sharp leg of the slide'."
+  },
+  {
+   "location": "sectors/XLB Reported",
+   "issue": "Inference that Tiwai Point smelter retention shows 'aluminium economics now justify keeping capacity open' goes beyond the RNZ headline (n0451).",
+   "severity": "minor",
+   "resolution": "Reworded to 'a decision that keeps a large block of aluminium supply in play'."
+  },
+  {
+   "location": "underowned/Hong Kong Attention Gap",
+   "issue": "'Hong Kong's platforms have quietly outperformed' is contradicted for Alibaba (-2.55% over 20 sessions) and Xiaomi (-8.59%); only the Hang Seng (+4.92%) and Tencent (+6.84%) support it.",
+   "severity": "minor",
+   "resolution": "Reworded to 'Hong Kong has quietly outperformed' (index-level claim backed by card)."
+  },
+  {
+   "location": "flows Equity & Fund Flows",
+   "issue": "n1378 (LIC files $8bn IPO, CNBC stamped 13 Feb) is a Sunday item about an Indian filing; Indian Monday begins 18:30 UTC Sunday, so a Monday-local filing could in principle post-date neither cutoff but not be provable from the stamp alone.",
+   "severity": "minor",
+   "resolution": "Kept: Sunday-dated filing report, a pending-style fact used only as an example of primary-market activity with no price or outcome attached. Flagged for root awareness."
+  },
+  {
+   "location": "Whole draft (citations, numbers, source tags, timing, hindsight, consistency)",
+   "issue": "Checked every cited sentence against own-date headline/src/stamp and every number against the card: horizons (1/5/20), sessions (Tokyo 2022-02-10; crypto 2022-02-13; US Treasury 2022-02-11), curve wording (positively sloped, bear flattening), units, no numeric spot-FX, FB ticker for Meta, no Super Bowl outcome, no Bank of Russia/Japan GDP/PPI claims, no other-date material found. Stances and Playbooks are mutually consistent; no input narration.",
+   "severity": "minor",
+   "resolution": "No further defects found; verify.py --nonretail --counts PASS (0 FAIL, 0 WARN, 9,014 words)."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Reviewed own-date feed (headlines only), own-date card, BRIEF.md, writer note and exclusions. Headlines are not article bodies; claims were checked against headline wording only. Sunday 13 Feb day-granular stamps cannot be resolved to the minute. No other date, retail draft or web source consulted. exclusions/ not edited.",
+ "recommended_exclusions": [
+  {
+   "id": "n0887",
+   "reason": "Lockheed/Aerojet termination stamped Sun 13 Feb 08:00; timing relative to 00:00 UTC 14 Feb cannot be shown from the headline, so removed from the draft."
+  },
+  {
+   "id": "n0536",
+   "reason": "CNBC 'Dow slides 500 points as yields spike following red-hot inflation report' stamped 9 Feb but describes the 10 Feb CPI session (misdated)."
+  },
+  {
+   "id": "n1493",
+   "reason": "NPR 'Russia's at war with Ukraine. Here's how we got here' stamped 12 Feb; wording implies a war that began after the cutoff (later retitling)."
+  },
+  {
+   "id": "n1329",
+   "reason": "Euronews German manufacturing PMI for October stamped 11 Feb; stale data under a February stamp."
+  },
+  {
+   "id": "n0877",
+   "reason": "Reuters Crown Resorts backs Blackstone bid stamped 13 Feb; announced Monday 14 Feb AEDT morning, after the cutoff."
+  },
+  {
+   "id": "n0884",
+   "reason": "Guardian Crown Resorts Blackstone takeover stamped 13 Feb; Monday AEDT announcement, after the cutoff."
+  },
+  {
+   "id": "n2007",
+   "reason": "CNBC DBS profit rebounds stamped 13 Feb; results released Monday 14 Feb Singapore time, after the cutoff."
+  },
+  {
+   "id": "n0119",
+   "reason": "NYT on first-time Super Bowl advertisers incl. crypto, past tense; ads aired after 23:30 UTC kickoff."
+  },
+  {
+   "id": "n0120",
+   "reason": "LA Times 'Et tu, Larry?' on celebrity crypto ads aired during the Super Bowl, after the cutoff."
+  },
+  {
+   "id": "n0886",
+   "reason": "Just Jared on Verizon Super Bowl commercial 'WATCH NOW'; in-game ad, after the cutoff."
+  },
+  {
+   "id": "n0970",
+   "reason": "ADWEEK eToro Super Bowl ad piece; may describe in-game airing after the cutoff."
+  },
+  {
+   "id": "n0971",
+   "reason": "ADWEEK Crypto.com Super Bowl ad piece; may describe in-game airing after the cutoff."
+  },
+  {
+   "id": "n0880",
+   "reason": "The Australian CBA interview stamped 13 Feb; likely a Monday-local AEDT item after the cutoff."
+  }
+ ],
+ "verifier": {
+  "words": 9014,
+  "distinct_sources": 262,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "4341576efd1f6cacd93ebaaf5fd68054ccceec1fad2a4ce50f899318e9925e03"
+}

@@ -1,0 +1,75 @@
+{
+ "date": "2022-02-02",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "2a80a9e36a973a81a0beacf7db59132273a7bf4133131aba3095b560f31963eb",
+ "card_sha256": "96cbe19a980de7533ba2de52f392f783718181ccb116fe405b36c32309deb417",
+ "exclusions_sha256": "49799efe7dc73ca4074517c482f440af9aa434b70891065918d0bb3d4017a946",
+ "findings": [
+  {
+   "location": "sectors/XLK part 1",
+   "issue": "Barron's headline ('historically bad January, even after 2-day rally') was paraphrased as tech rebounding from a bad January even after a rally, inverting the logic.",
+   "severity": "minor",
+   "resolution": "Reworded to match the headline."
+  },
+  {
+   "location": "geo/JP part 2 and playbook",
+   "issue": "Yen weakness and 'weak-yen tailwind' asserted, but cited dollar-weekly-rise headline (n1413) says nothing about the yen.",
+   "severity": "moderate",
+   "resolution": "Replaced with a policy-gap tailwind for exporters; no yen claim remains."
+  },
+  {
+   "location": "geo/PL part 6",
+   "issue": "'as rates bite' attached to Coface insolvency headline (n1655) goes beyond the headline.",
+   "severity": "minor",
+   "resolution": "Removed the clause."
+  },
+  {
+   "location": "flows part 2",
+   "issue": "Mechanism 'pushing spread-sensitive buyers to sell' attributed to Bloomberg headline n2034 is beyond the headline.",
+   "severity": "minor",
+   "resolution": "Recast as a risk statement, not a reported mechanism."
+  },
+  {
+   "location": "anticipatory/Meta part 1",
+   "issue": "Implied Meta's five-session gain priced an Alphabet beat 'after' a Deadline report published after the 5-session window began; sequencing misleading.",
+   "severity": "moderate",
+   "resolution": "Reworded: Meta closed ahead of Alphabet's print; the Deadline report raises the bar."
+  },
+  {
+   "location": "anticipatory/payrolls part 3",
+   "issue": "Claim that Marketplace headline 'shows how little a single soft report would move the committee' goes beyond headline n2046.",
+   "severity": "minor",
+   "resolution": "Reworded to what the headline frames (pace of hikes)."
+  },
+  {
+   "location": "geo/CN part 4",
+   "issue": "'drains land-sale revenue' goes beyond Bloomberg headline n0126.",
+   "severity": "minor",
+   "resolution": "Reworded to the headline's content."
+  },
+  {
+   "location": "sectors/SXAP part 1",
+   "issue": "Unsupported assertion that autos are 'trading the easing of the chip shortage' with no cited headline.",
+   "severity": "minor",
+   "resolution": "Replaced with a neutral 'rebounding'."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Checked every cited ID against the own-date feed (title, src, published_at, cat) and every card figure against the own-date card; no other date's feed, card, draft, note or spec was read and no web access was used. Headlines only; article bodies unavailable, so the intraday timing of Feb 1 US after-hours releases (Alphabet, AMD, PayPal, EA, Starbucks) rests on the guardrail list. Analytical judgments (stances, playbook triggers) were checked for consistency, not for correctness. n1413 (stamped 2022-01-27) is used as a lagging currency reference only. Verifier PASS with 0 warnings before and after edits.",
+ "recommended_exclusions": [
+  {
+   "id": "n0054",
+   "reason": "RBA 'Minutes of the Monetary Policy Meeting' titled 1 February 2022; minutes of that meeting are published two weeks later, so the record is misdated or post-cutoff. Uncited."
+  }
+ ],
+ "verifier": {
+  "words": 8906,
+  "distinct_sources": 265,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "5ee034b0f6225dbd6df241954ddfbd158a5370f87db4483932cdcc7abe757bf1"
+}
