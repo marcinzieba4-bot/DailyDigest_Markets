@@ -1,0 +1,94 @@
+{
+ "date": "2022-02-24",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "deab18b0cf5adbba7f8e0f411a66f2fac24793caaa03dd905a4d5b6d7c708f57",
+ "card_sha256": "7c1813e7d027943794291c56b118aef5a8630e0200a59fa615d016af0ae69f16",
+ "exclusions_sha256": "ab49a2d1e21a8dd1c173ac742367fdc1beb6569d3d4501f813cef3c938bd9434",
+ "findings": [
+  {
+   "location": "flows / Equity & Fund Flows (n0837)",
+   "issue": "FT 'ETF investors pile into Russian equities and defence stocks' carries a day-granular 23 Feb stamp. Nothing shows it describes flows before 00:00 UTC on 24 Feb rather than the first hours of the invasion, and the 'bargain-hunting at the epicentre' gloss added detail the headline does not give.",
+   "severity": "major",
+   "resolution": "Removed the sentence and the n0837 citation. The lead sentence now rests on the cited Wolf Street margin-debt headline (de-grossing, leverage still gigantic). Block word count is 631 (range 600-750)."
+  },
+  {
+   "location": "catalysts / Tesla (n1623 NPR Boombox recall, n1716 autoevolution 'second recall connected to FSD')",
+   "issue": "Both recalls look older than the 7-day news window by meaning, even though the stamps read 17 and 23 Feb. The headlines do not date the recall events.",
+   "severity": "moderate",
+   "resolution": "Removed both clauses. The thesis now uses CNN on the SEC leak (n1666) and Bloomberg on the $200bn club (n0770, second use). Block word count is 104 (range 100-140)."
+  },
+  {
+   "location": "sectors / XLC Reported",
+   "issue": "'Spotify is -14.22% over five sessions as Forbes reported ...' implied the Rogan-deal headline caused the price move.",
+   "severity": "minor",
+   "resolution": "Reworded to 'and Forbes reported', so the two facts are juxtaposed rather than causal."
+  },
+  {
+   "location": "geo US / New / Most Important and anticipatory[0] (n1233, n1278)",
+   "issue": "Checked invasion wording. 'Beginning of an invasion' is attributed to Biden via Al Jazeera as a characterisation of the Donbas deployment. DW's separatist request for help is stamped 23 Feb and is reported as Moscow's statement, with no outcome attached. Both are used twice or fewer.",
+   "severity": "minor",
+   "resolution": "No change needed. All invasion language is conditional or pending-risk, with no attack, war, $100 Brent or post-invasion reaction stated as fact."
+  },
+  {
+   "location": "All parts",
+   "issue": "Citation, number, session and source-tag check against the own-date feed and card. Every cited headline supports its sentence (direction, outlet and company role). Card values match instrument, session and horizon (1/5/20), curve wording matches the card (bear flattening, +41 bps, 10Y -6 bps over 5 obs), there is no numeric spot-FX, and the FB, SQ and Mercedes-Benz naming is period-correct. Results used (Cisco, NVDA, Roblox, Roku, Palantir, Deere, Stellantis, Rio, TJX, eBay, Lucid, Glencore) are within 14 days. Block, Alibaba and Moderna are referenced only as pending. Policy and macro items are within 35 days (n0137 Jan 20 and n0855 Feb 10 sit at the edge).",
+   "severity": "minor",
+   "resolution": "No change needed."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Reviewed only the own-date feed (2022-02-24 headlines, titles, srcs, stamps, cats), own-date card, BRIEF.md, the writer note and exclusions. Headlines are not article bodies. Day-granular 08:00 stamps cannot show intra-day timing. Stale-by-meaning for the Tesla recalls rests on headline wording only. n1278 (separatists' request, 23 Feb) and n1281 (Ukraine state of emergency) are kept as pre-cutoff events in line with the task's list of known items. No other date's material and no web access were used.",
+ "recommended_exclusions": [
+  {
+   "id": "n1911",
+   "reason": "CNBC 'South Korea's central bank holds interest rates steady': the Bank of Korea decision is on 24 Feb local time, after the 00:00 UTC cutoff, despite the 23 Feb stamp."
+  },
+  {
+   "id": "n0135",
+   "reason": "Reuters 'Expert views on Russian forces invading Ukraine' (23 Feb stamp): its vintage relative to the invasion cannot be established, so it could carry post-cutoff content."
+  },
+  {
+   "id": "n0742",
+   "reason": "Reuters 'Nestle says operations running normally in Ukraine, continuity plans in place' (23 Feb stamp): this is the kind of statement issued on or after the invasion morning, so its time cannot be shown to be before cutoff."
+  },
+  {
+   "id": "n1268",
+   "reason": "Reuters 'China says Taiwan is not Ukraine as island raises alert level' (23 Feb stamp): the timing of the alert-level change relative to the cutoff is uncertain."
+  },
+  {
+   "id": "n0837",
+   "reason": "FT 'ETF investors pile into Russian equities and defence stocks' (23 Feb stamp): not shown to describe pre-invasion flows; removed from the draft."
+  }
+ ],
+ "verifier": {
+  "words": 8773,
+  "distinct_sources": 250,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "c9cb6b1b1996d64995d6b35b3f2c241c12d571992bec9449679cd3bfca7ab0d8",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "4b4fe270a1273ae359276b4e67cedca5441fcad9850de3c79507d7e9ddea3790",
+   "new_exclusions_sha256": "ab49a2d1e21a8dd1c173ac742367fdc1beb6569d3d4501f813cef3c938bd9434",
+   "excluded_ids_now": [
+    "n0135",
+    "n0382",
+    "n0594",
+    "n0742",
+    "n1064",
+    "n1232",
+    "n1265",
+    "n1268",
+    "n1911"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
+}
