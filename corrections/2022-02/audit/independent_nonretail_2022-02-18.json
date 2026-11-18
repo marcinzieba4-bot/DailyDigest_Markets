@@ -1,0 +1,55 @@
+{
+ "date": "2022-02-18",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "8b56e19ca204a8afe00670f877b10e8c4116d4632439ee7e19aa17d51a6443ec",
+ "card_sha256": "e137e0f244391e77e5552d3364406b18e3c6e55c175c565c505e8c8923df760b",
+ "exclusions_sha256": "63bc2d23fbcf1c944b01eb2418c005c070d13dd0819ddd090e01bc7007cb2e1c",
+ "findings": [
+  {
+   "location": "geo[US]/Macro Stance (n0964)",
+   "issue": "Asserted that the Al Jazeera piece (day-granular 17 Feb 08:00 stamp) described the specific 17 Feb US session; headline does not establish which session.",
+   "severity": "minor",
+   "resolution": "Reworded to 'a move in line with Al Jazeera's framing' so the session identity rests only on the card."
+  },
+  {
+   "location": "underowned[1]/Attention Gap (n1552)",
+   "issue": "Economist headline is about Japan's automation industry generally; draft implied it concerned Tokyo Electron/Advantest chip equipment.",
+   "severity": "minor",
+   "resolution": "Rephrased to 'Japan's industrial suppliers are indispensable to global industry', keeping the claim within the headline."
+  },
+  {
+   "location": "geo[US]/New / Most Important (n1532)",
+   "issue": "Biden 'very high risk' PBS item carries only a day-granular 17 Feb stamp; exact remark time cannot be verified from the feed. Kept because stamp precedes cutoff and the sentence only restates the headline.",
+   "severity": "minor",
+   "resolution": "No edit; noted as residual timing uncertainty."
+  },
+  {
+   "location": "all parts",
+   "issue": "Full pass: every cited ID exists in the own-date feed with matching src/outlet; all 229 IDs used at most twice; numbers cross-checked against the 2022-02-18 card for instrument, session (2022-02-17), horizon (1/5/20) and units; curve wording matches card (positively sloped; bear flattening); no numeric spot-FX; FB/Mercedes-Benz/RTX period names correct; Deere, MSC and UK retail sales are pending-only; no input narration, hindsight or other-date numbers found.",
+   "severity": "minor",
+   "resolution": "No fatal, major or moderate issues found."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Own-date feed, card and exclusions only; headlines checked, not article bodies; day-granular 17 Feb 08:00 stamps cannot rule out items describing events after 00:00 UTC 18 Feb (e.g. n1532). No other date, retail drafts, or web read. Card numbers checked by manual comparison against showcard output plus verify.py PASS.",
+ "recommended_exclusions": [
+  {
+   "id": "n0157",
+   "reason": "NPR: Harris 'is meeting leaders in Munich' describes Munich Security Conference activity (18-20 Feb), after the cutoff despite the 17 Feb stamp; uncited."
+  },
+  {
+   "id": "n0156",
+   "reason": "Reuters 'Ukraine crisis takes centre stage at Munich Security Conference' likely describes MSC proceedings from 18 Feb; after-cutoff risk despite 17 Feb stamp; uncited."
+  }
+ ],
+ "verifier": {
+  "words": 8910,
+  "distinct_sources": 229,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "d485a82fce3590ae844632dd40b0ef9cedfb9d4ea7c6f0af00d8ee0f86db929c"
+}

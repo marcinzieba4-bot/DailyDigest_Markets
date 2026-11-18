@@ -1,0 +1,62 @@
+{
+ "date": "2022-02-03",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "6a9f3e898cdedecdc0fd06aad2a9423abe7aea3ddaca0db28d54f2e9ba717bc7",
+ "card_sha256": "0c1562874381d9508cfc9d81bbf4c3f6b5e6e73d478f28589649b4f32fc87961",
+ "exclusions_sha256": "03b98fa076abadc0786376891d2e21f734245ac3801abd6a99fabd2106ecef71",
+ "findings": [
+  {
+   "location": "retail_intro",
+   "issue": "Intro called Meta's plunge 'the same growth-to-value repricing that gave PayPal its worst-ever day' — an unsupported characterization (no headline frames either as growth-to-value) that also merged the lead and the PayPal item into one narrative, against the four-distinct-narratives rule.",
+   "severity": "moderate",
+   "resolution": "Rewritten: PayPal's worst-ever day (n0860) is now the question already put to the fintech crowd, keeping the mega-cap/metaverse lead and the fintech capitulation item distinct."
+  },
+  {
+   "location": "retail[0] The Social Signal",
+   "issue": "Attention evidence rested only on metaverse-theme pieces (Snoop Dogg neighbour, metaverse real estate) and Meta's own disclosures; no retail-buying evidence was cited although an own-date Reuters retail-buying headline exists.",
+   "severity": "moderate",
+   "resolution": "Added Reuters n0782 ('Alphabet stock split may trigger retail buying, Dow inclusion') as the competing retail pull on the same night; no posts, counts or flows invented."
+  },
+  {
+   "location": "retail[0] When the Narrative Breaks",
+   "issue": "Third trigger was a generic rates caution plus a Bank of England sterling preview (n0107) unrelated to the Meta trade; the leverage risk the standard asks for was missing.",
+   "severity": "minor",
+   "resolution": "Replaced with the card's TQQQ +21.35% five-session run into the print and the triple-leverage mechanism; n0107 removed. Rates now appear once in the section (AMD)."
+  },
+  {
+   "location": "retail[2] Where It Breaks (Spotify)",
+   "issue": "Paraphrase 'described Spotify ... as in an air pocket until its issues are addressed' shifted the subject of the Jefferies quote (headline: 'We're in an air pocket until we can address these issues with Spotify').",
+   "severity": "minor",
+   "resolution": "Replaced with the exact headline wording as a quotation."
+  },
+  {
+   "location": "retail[3] title (AMD)",
+   "issue": "Hook 'the beat-and-raise that held its gains' overstated: CNBC n0642 reported +10% after hours, while the completed regular session was +5.12% to 122.76 USD.",
+   "severity": "minor",
+   "resolution": "Hook changed to 'the beat-and-raise that survived the session'; note updated."
+  },
+  {
+   "location": "retail[1], retail[2] chronology",
+   "issue": "PayPal (2022-02-02 smaller item) and Spotify (2022-02-01 smaller item) repeat as smaller items.",
+   "severity": "minor",
+   "resolution": "Verified as material updates: each cites newly published own-date evidence of the completed outcome (PayPal n0860, n0857, n0859, n1156, n0858; Spotify results n1160, n1161, n0872, n1169) and a changed angle (trapdoor to capitulation; boycott to subscriber count). Kept, both secondary; no change."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Reviewed only the 2022-02-03 retail draft and writer note against the 2022-02-03 frozen feed (headline titles/sources/timestamps only), the 2022-02-03 card and exclusions (empty). Chronology checked against the 2022-02-01 and 2022-02-02 retail drafts and notes only. Meta's results and after-hours drop, PayPal's completed 2 February session, Spotify's and AMD's results are treated as known; the 3 February session, ECB/BoE decisions and Amazon/Snap/Pinterest/Ford results do not appear (Amazon only as a preview, n0784). Day-granular 2 February stamps were checked; none cited describes a 3 February event. Article bodies were not available.",
+ "recommended_exclusions": [],
+ "verifier": {
+  "words": 1337,
+  "distinct_sources": 34,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "60bff375c6a75546bf1af7a1b38c052021a3482bf28330c25c254a630bb0af6f",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02"
+ ]
+}
