@@ -1,0 +1,102 @@
+{
+ "date": "2022-02-25",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "2c8aa61f07eed4f8c424fd20f5642f789a61a57731a6fe90f6754d23ae76e3d7",
+ "card_sha256": "c716703751e6bf4f21007bfb44290327ca3cd4dfc9f89407c539b4ed97dea35e",
+ "exclusions_sha256": "c60873c6be0063fce141b60c36e68cb4d1610e1f7085ca278ce39006d48b2dff",
+ "findings": [
+  {
+   "location": "retail[0] Smart Money View",
+   "issue": "Opened with 'Institutions are hedging differently from the crowd', but the cited headlines (Investopedia n0800 'Investors Flee Stocks', Reuters n1164 gold-ETF inflows) name investors and ETF flows, not institutions; the part named no analyst, bank or institution for an honest split and re-cited n0690 already used in What Is Driving It.",
+   "severity": "major",
+   "resolution": "Rewritten as a named split: BAE Systems' 'sharpen the focus on defence' (n0665, moved from What Is Driving It) as the industry bull case versus the gold-and-bonds haven bid (n0800, n1164, card 10Y 1.96%, -7 bps over five observations, 2Y 1.54%), CNBC's caution (n1644) and JPMorgan's Natasha Kaneva on sanctions and commodities (n0644, moved from When the Narrative Breaks); 'larger haven bid' softened to 'much of the haven bid' to avoid an unsupported flow comparison; duplicate n0690 removed."
+  },
+  {
+   "location": "retail[0] What Is Driving It",
+   "issue": "Cross-asset backdrop gave Brent only as its 99.08 USD settle, missing the day's defining oil spike that is in own-date headlines (Brent above 100 intraday).",
+   "severity": "minor",
+   "resolution": "Added Reuters 'Oil tops $105, gas, grains, metals spike as Russia invades Ukraine' (n1774, 24 Feb) before the card settle (+2.31% to 99.08 USD)."
+  },
+  {
+   "location": "retail[0] Historical Analog",
+   "issue": "Called a same-session event ('the other half of the same trade ... in the same session') a 'precedent'.",
+   "severity": "minor",
+   "resolution": "Reframed as 'the cautionary tale arrived in the same session'; all numbers (33%, fifth-worst, $150 billion) stay with their same-paragraph Bloomberg/CNN citations (n0763, n0762, n0761); the general war-premium mechanism retained."
+  },
+  {
+   "location": "retail[0] When the Narrative Breaks",
+   "issue": "'growth rebound' was ambiguous (could read as economic growth); the input-cost risk rested only on a generic interview headline.",
+   "severity": "minor",
+   "resolution": "Changed to 'tech rebound'; added Reuters on Safran boosting titanium stocks to shore up its supply chain (n0770, 24 Feb) as a concrete input-cost observable; ITA 100.77 USD 20-session reference and White House 'all options' (n0227) kept."
+  },
+  {
+   "location": "retail[1] TQQQ brief carryover",
+   "issue": "Carryover of the 2022-02-24 lead had no reference to the 24 February intraday reversal that defines the new outcome; Opendoor/Upstart detail was filler.",
+   "severity": "minor",
+   "resolution": "Rebuilt within the cap (150 words): Al Jazeera 'Dow plunges more than 800 points as Russia attacks Ukraine' (n1126) against the card Dow close +0.28%, Fortune's 'incredible vaults' headline (n0144), TQQQ +9.79% to 49.56 USD, Nasdaq 100 +3.44%, ARKK +7.79%, AMC +12.40%; break on TQQQ -13.49% over five sessions and VIX 30.32 (-0.70 pts)."
+  },
+  {
+   "location": "retail[2] Tesla",
+   "issue": "Reuters Shanghai-plant headline is sourced ('- sources') but was presented as a flat Reuters report; the $140B wealth-loss claim carried no outlet attribution.",
+   "severity": "minor",
+   "resolution": "Now 'Reuters, citing sources, reports' (n1760) and 'YourStory counts more than $140B lost from Musk's fortune in four months' (n1643)."
+  },
+  {
+   "location": "retail[3] Coinbase",
+   "issue": "'Bloomberg's version leads with the company cautioning on trading volume' misdescribes n0678, whose headline leads with revenue topping estimates.",
+   "severity": "minor",
+   "resolution": "Now 'Bloomberg's headline pairs the beat with a caution on trading volume [[n0678]]'."
+  },
+  {
+   "location": "notes/retail_2022-02-25.json",
+   "issue": "Notes did not reflect the revised evidence and wrongly implied only some earlier editions were available for the chronology check.",
+   "severity": "minor",
+   "resolution": "why_lead, why_smaller and evidence_ids updated to match the final draft (added n1774, n0770, n1126, n0144); chronology line now states all eighteen earlier February editions were checked."
+  },
+  {
+   "location": "all items: timing and guardrails",
+   "issue": "Checked every cited ID: all stamped 2022-02-18 to 2022-02-24 (day-granular) and before 00:00 UTC 25 Feb; Coinbase results (after the 24 Feb US close) are before the cutoff and the draft keeps COIN's 3.95% as the regular-session move; no n0074 (25 Feb ASX session), no EU-summit second package, no 25 February event, no Block outcome, no numeric spot-FX, no FB/SQ/DWAC hindsight; all prices, returns, units and sessions match the 2022-02-25 card.",
+   "severity": "info",
+   "resolution": "No change needed."
+  },
+  {
+   "location": "chronology",
+   "issue": "ITA lead is a material update/promotion of the 2022-02-24 secondary ITA item (pre-invasion, ITA -1.14%) and the 2022-02-22 LMT item, now with newly published 24 February evidence (invasion, WallStreetBets coverage n0748, European defence rally n0690, BAE n0665, Russian crash n0761-n0763) and a new reaction (ITA +2.75%); TQQQ is a brief carryover (150 words); Tesla changes angle from the 21 Feb SEC-harassment fight to the 24 Feb SEC probe of Musk's own sales; Coinbase changes from the 15 Feb Super Bowl app crash to results and volume guidance. Four distinct narratives.",
+   "severity": "info",
+   "resolution": "Accepted."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Headline-level review only (no article bodies). Day-granular 08:00 stamps were treated as same-day publication; the Fortune 'incredible vaults' headline (n0144) is cited only as describing 'the week', not a specific session. The lead's Social Signal characterisation of WallStreetBets as 'the forum that made its name on short squeezes' is general context without episode details. No web access.",
+ "recommended_exclusions": [],
+ "verifier": {
+  "words": 1337,
+  "distinct_sources": 29,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "7dc1e90a77634e9b262fce6b8f05841cdc1de08505e210c89b32652deb779f2a",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02",
+  "2022-02-03",
+  "2022-02-04",
+  "2022-02-07",
+  "2022-02-08",
+  "2022-02-09",
+  "2022-02-10",
+  "2022-02-11",
+  "2022-02-14",
+  "2022-02-15",
+  "2022-02-16",
+  "2022-02-17",
+  "2022-02-18",
+  "2022-02-21",
+  "2022-02-22",
+  "2022-02-23",
+  "2022-02-24"
+ ]
+}

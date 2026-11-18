@@ -1,0 +1,91 @@
+{
+ "date": "2022-02-11",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "19df18a5b243e53e43697e87da8662d542b0b19406ea579d9bf6d4f3ea968cc5",
+ "card_sha256": "91d75a92d59c4634694e8fec04cb132242026bd5e89c5d226e3541f06187fe2a",
+ "exclusions_sha256": "b0b4ea2889f753f8d225635b19be0d9a160ea45c12ddc000e90ea6b91faa0a1d",
+ "findings": [
+  {
+   "location": "retail[0] When the Narrative Breaks",
+   "issue": "Repeated the 2022-02-04 TQQQ item's daily-reset 'decay' angle, and the arithmetic did not support it: -22.95% for TQQQ against -7.54% for the Nasdaq 100 over 20 sessions is close to plain triple exposure, so calling it 'decay arithmetic ... the cost of triple daily exposure in a choppy market' overstated the card.",
+   "severity": "medium",
+   "resolution": "Rewrote the section around new, observable triggers: the 2-year yield (1.61%, +42 bps in five observations), the Fed's first move (half-point versus quarter-point), and the VIX at 23.91. The 20-session figures stay only as a price fact; no decay claim."
+  },
+  {
+   "location": "retail[0] The Social Signal",
+   "issue": "Attention evidence leaned on a corporate results headline (Reuters Coca-Cola/PepsiCo inflation bite [[n0799]]) that is not retail attention; 'the forums that powered last year's squeezes' named a past episode without a supporting headline.",
+   "severity": "medium",
+   "resolution": "Replaced with real retail-attention headlines: Seeking Alpha on 2x QLD as a balance between TQQQ and QQQ [[n1808]], NBC News on investors whose 2021 gains evaporated [[n1810]], and The Economist on the GameStop saga [[n0380]] to support the forum reference. Kept Reddit 'dark side' [[n1833]], WaPo quiz [[n2197]] and Grocery Dive [[n2199]]."
+  },
+  {
+   "location": "retail[0] Historical Analog",
+   "issue": "General liquidity mechanism only; an own-date headline names an episode (Ideastream 'Three reasons why inflation today is different from the 1970s' [[n1351]]) that sharpens the analog.",
+   "severity": "low",
+   "resolution": "Added the 1970s comparison with Ideastream as the dip-buyer's rebuttal, cited in the same paragraph; kept the Reuters 'buy the dip' commentary [[n1361]] and yield-curve explainer [[n2198]]."
+  },
+  {
+   "location": "retail[1] title",
+   "issue": "Hook 'the bond bunker springs a leak' echoed the 2022-02-10 Coca-Cola 'dividend bunker' hook on the previous day.",
+   "severity": "low",
+   "resolution": "Title now '20+Y Treasury ETF / TLT — the safe haven that sank with stocks'. TLT is not in any strictly earlier retail draft/note, so it is a new item, not a carryover."
+  },
+  {
+   "location": "retail[2] Disney carryover",
+   "issue": "Disney led 2022-02-10. The 2022-02-11 item rests on newly published evidence (TechCrunch 11.8M new subscribers [[n1171]], Reuters 'closes gap with Netflix' [[n0803]], both absent from the 2022-02-10 feed) and the completed 10 February session (+3.35% to 152.16 USD). But at 167 words it was over the 160-word carryover limit, and its break repeated the lead's 2-year-yield caution.",
+   "severity": "low",
+   "resolution": "Trimmed to 156 words; the break now uses a Disney-specific trigger (Netflix 406.27 USD, -24.38% over 20 sessions; the 157.80 USD level)."
+  },
+  {
+   "location": "retail_intro",
+   "issue": "Run-on intro sentence with a tangled mechanism clause.",
+   "severity": "low",
+   "resolution": "Rewritten as one clean sentence: buy-the-dip faith meets the 7.5% print, highest since 1982 [[n2132]], with the forums flirting with the bear side; mechanism is liquidity."
+  },
+  {
+   "location": "retail[0] Smart Money View",
+   "issue": "'Richmond Fed President Thomas Barkin' adds a title the headline does not carry ('Fed's Barkin' [[n1363]]).",
+   "severity": "low",
+   "resolution": "Now 'the Fed's Thomas Barkin'."
+  },
+  {
+   "location": "all items: numbers, IDs, guardrails",
+   "issue": "Checked every card figure (TQQQ 58.82 USD -6.63% / +3.67% / -22.95%; 10Y 2.03%; 2Y 1.61%, +42 bps 5 obs, +69 bps 20 obs; 10Y-2Y 42 bps, -40 bps, bear flattening; Nasdaq 100 14,705.64 -2.33%, -7.54%; S&P 500 4,504.08 -1.81%; VIX 23.91 +19.79%; TLT 136.23 USD -1.59% / -3.44% / -4.74%; DIS 152.16 USD +3.35% / +8.66% / -3.57% / 157.80 USD; NFLX 406.27 USD -24.38%; UBER 37.75 USD -6.07% / -12.29% / 43.04 USD) and all 24 cited titles/sources/stamps (2022-02-05 to 2022-02-10; news within 7 days, results within 14). CPI 7.5% and 10 February results used as known; no UMich sentiment or Bank of Russia decision; no spot-FX; no FB/SQ/DWAC hindsight; misdated CNBC 'Dow slides 500' [[n0686]] not cited. Each ID used at most twice.",
+   "severity": "info",
+   "resolution": "No change needed beyond the items above."
+  },
+  {
+   "location": "chronology",
+   "issue": "TQQQ: 2022-02-04 secondary item (leveraged snap-back, daily reset) plus passing mentions on 02-01 and 02-03; the 02-11 lead is a material update on new CPI, Fed-speaker and Reddit-bear evidence with a new angle (rates/liquidity, not decay). TLT: no earlier retail use. Uber: supporting evidence only inside the 2022-02-10 Disney lead; first item here, with a new negative reaction. Four distinct narratives: leveraged dip-buy versus CPI, failed bond safe haven, quality survivor, beat sold on discount rates.",
+   "severity": "info",
+   "resolution": "Selection kept; notes updated (TLT title, evidence IDs, carryover rationale, decay angle dropped, KO results not used)."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Read only the 2022-02-11 feed, card, exclusions, retail draft and notes, plus retail drafts/notes for strictly earlier dates (2022-02-01 to 2022-02-10) as editorial memory; the 2022-02-10 feed was consulted only to confirm that the Disney evidence cited on 02-11 is newly published. Headline titles only, no article bodies; no web access; nonretail drafts, specs, later dates and other reviews not read.",
+ "recommended_exclusions": [
+  {
+   "id": "n0686",
+   "reason": "CNBC 'Dow slides 500 points as yields spike following red-hot inflation report' is stamped 2022-02-09 but describes the 10 February CPI session; the record is misdated even though its content precedes the 2022-02-11 cutoff."
+  }
+ ],
+ "verifier": {
+  "words": 1342,
+  "distinct_sources": 24,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "edc301e830eb8a0494ece3eefce4d7e3a80be971b0b1373b68d2653ac87f68c8",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02",
+  "2022-02-03",
+  "2022-02-04",
+  "2022-02-07",
+  "2022-02-08",
+  "2022-02-09",
+  "2022-02-10"
+ ]
+}

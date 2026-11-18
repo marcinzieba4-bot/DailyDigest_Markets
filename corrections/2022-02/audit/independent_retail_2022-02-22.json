@@ -1,0 +1,92 @@
+{
+ "date": "2022-02-22",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "824e2ef31feb6ed2feb2cb7a0e5f0c3705d9e5118ffcfdde249504cd19c0e714",
+ "card_sha256": "0f10a9109c80f57029418ccefa0216cb41bf713f2685e5aa5e9a58162d67ec60",
+ "exclusions_sha256": "bf18ef47fb35f96dd586f040eeca7b18229e4d4bf03aec998f38837232688541",
+ "findings": [
+  {
+   "location": "retail[2] Ford Motor / F — exploring a split to borrow Tesla's multiple (n1030)",
+   "issue": "The Ford item rested entirely on n1030 (Los Angeles Times, 'Ford's CEO is exploring ways to separate its EV business to unlock Tesla-like value'), a day-granular 21 February stamp from a US Pacific-time outlet with no earlier own-date corroboration; the report cannot be shown to precede 00:00 UTC on 22 February, and the item also implied that Ford's +2.85% on 18 February was the separation trade. Ford was also a 7 February smaller item, which the notes wrongly denied.",
+   "severity": "major",
+   "resolution": "Removed the Ford item and its supporting IDs (n1030, n0593, n1719). Replaced with a new, distinct narrative: 'China Internet ETF / KWEB — the bargain Beijing keeps repricing', built on CNBC n0155, Business Insider n0561, WSJ n0693, Bloomberg n0694, Reuters n0200 and Caixin n0324 with card values KWEB 35.60 USD (-5.04% on 18 February), BABA -4.37%, Tencent 423.03 HKD (-5.23% on 21 February) and FB 206.16 USD (-32.00% 20s). n1030 recommended for exclusion."
+  },
+  {
+   "location": "retail[0] What Is Driving It; retail[1] Why Retail Is Here (n1137)",
+   "issue": "n1137 (Atlantic Council, 'Russia just ordered troops into Ukraine again') is day-stamped 21 February. Checked whether the event precedes the cutoff: the contract dates Putin's recognition and troop order to the evening of 21 February UTC and makes them known to this edition; Putin's address itself is carried by n1284 and Reuters n0218.",
+   "severity": "minor",
+   "resolution": "Kept. The troop order is attributed as the Atlantic Council's characterisation ('in the Atlantic Council's words'), never as an invasion; the lead backdrop now names the troop order so the war risk is treated with gravity rather than as a passing aside."
+  },
+  {
+   "location": "retail[0] When the Narrative Breaks",
+   "issue": "'Crypto, the only market open through Putin's address' overstated: currency and ICE futures markets also trade on a Monday evening.",
+   "severity": "moderate",
+   "resolution": "Reworded to 'Crypto, which trades around the clock and stayed open through Putin's address [[n1284]], fell on Monday', keeping the card's BTC -3.53% to 37,075.28 USD and SOL -8.56% (prior completed daily close 2022-02-21)."
+  },
+  {
+   "location": "retail[0] Social Signal, Historical Analog, Smart Money View",
+   "issue": "The repeat lead recycled 21 February evidence and angles: the NYT 'crowded field' story (n1606, the same piece used on 21 February), ADWEEK's 'for whom' Coinbase piece (n0869, used in the 21 February Bitcoin item) and the $4.99-a-week rumour fact-check angle (Snopes on 21 February, USA Today n1611 here). The Social Signal also called the download ranking 'a direct read on consumer demand' while the analog said a ranking measures curiosity.",
+   "severity": "moderate",
+   "resolution": "Replaced with newly published evidence: PCMag explainer n1629 in the Social Signal, ADWEEK n0080 alongside the new Martin CEO critique n0883 in the analog, and Reuters n0099 (Wall Street banks fear recession) in Smart Money; the bull counter is now anchored to Forbes n1618. The Social Signal now reads 'a direct read on curiosity', and 'Scarcity reads as demand' became modal ('can read')."
+  },
+  {
+   "location": "retail[3] 3x Nasdaq 100 ETF / TQQQ",
+   "issue": "Chronology: the leveraged Nasdaq dip-buy was a 4 February smaller item and the 11 February lead (the notes omitted the 11 February lead), with SOXL leading on 16 February. At 191 words the item read as another full dip-buy essay.",
+   "severity": "moderate",
+   "resolution": "Cut to a 153-word secondary item with a new angle, the reopening gap after Putin's address (VIX 27.75; DAX -2.07% on 21 February), titled 'the YOLO dip-buy meets a war gap'. It keeps only newly published 17-21 February evidence (n0825, n0803, n1587); the A Wealth of Common Sense cite was dropped."
+  },
+  {
+   "location": "retail[1] Lockheed Martin / LMT",
+   "issue": "Voice and gravity: the war-trade hook read as purely mechanical. Numbers checked: LMT 386.46 USD, +4.11% 20s, -2.46% 5s; RTX +7.06% 20s; ITA 104.30 USD, -0.84% 5s; Rheinmetall 93.84 EUR, -2.70% on 21 February. Timing checked: n0794 (Beijing sanctions, 21 February) and n1367 (17 February).",
+   "severity": "minor",
+   "resolution": "Added 'and the grimmest' to the hook and reworded the trigger sentence so it does not duplicate the lead. All numbers and citations verified."
+  },
+  {
+   "location": "notes/retail_2022-02-22.json",
+   "issue": "The selection notes were inaccurate: they said DWAC was never used in earlier notes (it was a 17 February smaller item), that Ford was not used (it was a 7 February smaller item), and they omitted TQQQ's 11 February lead. evidence_ids also listed removed IDs.",
+   "severity": "minor",
+   "resolution": "Rewrote lead, smaller, why_lead, why_smaller and evidence_ids to match the final draft and the actual chronology, and recorded the removed Ford/n1030 item and the recycled-evidence drops in considered_not_chosen."
+  },
+  {
+   "location": "all parts",
+   "issue": "Systematic check of every cited ID (title, src, published_at), timing, numbers against the 22 February card (US values are 18 February closes; European/Asian values 21 February; crypto 21 February daily close), units, spot-FX, hindsight tickers and outlet names.",
+   "severity": "info",
+   "resolution": "No other defects. There are no numeric spot-FX values; FB/DWAC period tickers are used; Bloomberg.com is attributed as Bloomberg and WSJ as the WSJ; no Nord Stream 2 halt, sanctions tranche or Home Depot result is mentioned; each ID is used at most twice; the verifier PASSes at 1,343 words (lead 734, smaller items 201/205/153)."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Headline-only review against the frozen 22 February feed, card and exclusions, with no web access. Feed timestamps are day-granular (T08:00Z), so exact publication clocks cannot be verified; n1137 is kept on the strength of the contract's dating of the troop order to the evening of 21 February UTC, not an independently verified Atlantic Council publication time. Chronology was checked against the retail notes for 1-21 February and the full 21 February retail draft only; no 23 February or later material was consulted for this date.",
+ "recommended_exclusions": [
+  {
+   "id": "n1030",
+   "reason": "The Los Angeles Times report on Ford's CEO exploring an EV-business separation carries only a day-granular 21 February stamp from a US Pacific-time outlet and has no earlier own-date corroboration, so it cannot be shown to precede 00:00 UTC on 22 February."
+  }
+ ],
+ "verifier": {
+  "words": 1343,
+  "distinct_sources": 32,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "776517fe94be3c1469a55ec97c8dd54e37a9a6b137c5bb401b60ab5fed7dfc3e",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02",
+  "2022-02-03",
+  "2022-02-04",
+  "2022-02-07",
+  "2022-02-08",
+  "2022-02-09",
+  "2022-02-10",
+  "2022-02-11",
+  "2022-02-14",
+  "2022-02-15",
+  "2022-02-16",
+  "2022-02-17",
+  "2022-02-18",
+  "2022-02-21"
+ ]
+}

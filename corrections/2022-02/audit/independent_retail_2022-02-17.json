@@ -1,0 +1,95 @@
+{
+ "date": "2022-02-17",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "50939d0ea22469bb9352ea79414b1fd4c6f79c9265f4ff65cb8cc3832e47aeee",
+ "card_sha256": "9092aec6ee3423ae4b3371943eadb9bc4d9bdd69cd5db9b3941c65da8ecef9ba",
+ "exclusions_sha256": "91bea93b168617665060424774b52270f4533eccfda2b2d65eff52c8c7bfc270",
+ "findings": [
+  {
+   "location": "retail[2] Cisco Systems / CSCO, Where It Breaks",
+   "issue": "The break test cited Reuters 'Volkswagen expects chip shortage to ease later in 2022' [[n0933]] to assert that Cisco 'still lives with supply constraints'. An automaker's chip outlook does not establish a Cisco-specific supply constraint; the claim overreached its headline.",
+   "severity": "major",
+   "resolution": "Removed n0933 and the unsupported supply-constraint claim. The break test now rests on Cisco's own competing uses of cash: WSJ 'Cisco Made $20 Billion-Plus Takeover Offer for Splunk' [[n1094]] (11 Feb, within the 7-day news window) and Business Insider '13 Companies Cisco Could Buy to Beat Rising Competitors' [[n1116]] (14 Feb), framed modally (a large deal would compete with the buyback for that cash)."
+  },
+  {
+   "location": "retail[0] Shopify / SHOP, The Social Signal",
+   "issue": "The attention evidence was almost entirely Roblox coverage (Forbes, Barron's) plus generic retail items, with nothing showing attention to Shopify itself, and opened with a weak 'vocabulary of the coverage' line.",
+   "severity": "minor",
+   "resolution": "Added YCharts '$ARKK, Shopify & Tesla's PE – What's Trending on YCharts?' [[n0946]] (10 Feb, within 7 days; not used by any earlier retail edition), described as exactly as its headline allows. Barron's analyst item [[n0903]] moved to Smart Money View. Entrepreneur, Bloomberg/Saluzzi and AFR items kept."
+  },
+  {
+   "location": "retail[0] Shopify / SHOP, Historical Analog",
+   "issue": "Bloomberg's Roblox-specific headline phrase 'stock-pop narrative' [[n0143]] was generalised to 'through the pandemic, results days became events where the crowd expected a jump', more than the headline establishes.",
+   "severity": "minor",
+   "resolution": "Reworded to 'Bloomberg's phrase for what Roblox lost, the stock-pop narrative', keeping the pull-forward-demand mechanism as the general explanation, and added the exact ARKK card move (-3.20% to 72.87 USD, prior close 2022-02-16) next to the Bloomberg ARKK headline [[n1865]]."
+  },
+  {
+   "location": "retail[0] Shopify / SHOP, Smart Money View",
+   "issue": "Druckenmiller framing ('one of the most closely watched investors', 'rather than averaging down') added colour the 13F headline [[n0777]] does not carry; the Roblox CEO line ended with a stock caution.",
+   "severity": "minor",
+   "resolution": "Druckenmiller now attributed to Business Insider and described only as selling before the wipeout; Barron's 'analysts wonder what comes next for the metaverse' [[n0903]] set against the Roblox CEO's monetization defence [[n1199]] so the split is named on both sides; filler cut."
+  },
+  {
+   "location": "retail[1] Digital World Acquisition / DWAC, Where It Breaks",
+   "issue": "Opening line 'A SPAC trades on the deal, not the app' contradicted the item's own argument that app competition and engagement are the risk.",
+   "severity": "minor",
+   "resolution": "Replaced with 'Until the merger closes, DWAC is a shell priced on hope for an app that has not launched', consistent with the October 2021 merger agreement context; Truth Social launch timing stays at Forbes' 'slated to launch next week' [[n1866]] and no launch or App Store outcome is described."
+  },
+  {
+   "location": "retail[3] Gold ETF / GLD, Where It Breaks",
+   "issue": "'A close back below 1,843.20 USD/oz would return gold to where it stood before the scare' misdescribed the 20-session reference (19 January), when invasion fears were already present.",
+   "severity": "minor",
+   "resolution": "Reworded to 'would erase the month's gain'; opening changed from 'pullback headlines' to 'pullback claim'."
+  },
+  {
+   "location": "whole section, word count",
+   "issue": "Edits pushed the section to 1,399 words, above the 1,350 ceiling.",
+   "severity": "minor",
+   "resolution": "Trimmed filler (repeated cautions, 'the professional split is visible', 'rates add weight to every long-duration growth story') to 1,345 words; lead 724, smaller items 196/199/189; verify PASS."
+  },
+  {
+   "location": "all citations",
+   "issue": "Checked every cited ID against the 2022-02-17 feed for title, src and published_at, timing, preview-vs-outcome and outlet attribution.",
+   "severity": "info",
+   "resolution": "All 34 IDs resolve. All are stamped 10-16 February (day-granular 08:00), inside the 7-day news / 14-day results windows. Results described are all known before 00:00 UTC on 17 Feb: Shopify (16 Feb pre-market), Roblox (15 Feb after the close), Nvidia, Cisco and DoorDash (16 Feb after the close), FOMC minutes (16 Feb). DoorDash's '24%' is attributed to Reuters and not presented as the card's session move (the card shows DASH -6.80% for the regular session). Walmart, Palantir and Roku results and Intel's investor meeting are not described. No spot-FX numbers. Every number matches the card (instrument, 2022-02-16 session, 1s/5s/20s horizon, units) or a headline cited in the same part."
+  },
+  {
+   "location": "chronology",
+   "issue": "Possible repeats: Roblox (2022-02-16 smaller item), gold/GDX (2022-02-14 smaller, 2022-02-16 lead invalidation), DWAC (considered in 2, 4, 7 and 8 February notes).",
+   "severity": "info",
+   "resolution": "Roblox appears only as supporting evidence inside a new Shopify lead, with all-new 16 Feb citations (none of the 2022-02-16 Roblox item's evidence is reused). GLD is a material update on new 16 Feb NATO/Atlantic Council evidence, kept secondary. DWAC's first item rests on the new Truth Social screenshot catalyst (Forbes/Newsweek/Bloomberg, 16 Feb). No crypto item. Four distinct narratives: broken pandemic growth, political SPAC lottery ticket, buyback value, war hedge."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Headline-level review only: article bodies are not available, so claims are limited to what titles establish. Only the 2022-02-17 feed, card and exclusions plus strictly earlier retail drafts/notes (2022-02-01 to 2022-02-16) were read; no later-date files, nonretail drafts, specs or other reviews. Publication timestamps are day-granular (08:00 UTC placeholders), so within-day ordering cannot be confirmed from metadata; event timing was checked against the stated guardrails. Merged-report citation caps (four uses) depend on the nonretail component, which was not read.",
+ "recommended_exclusions": [
+  {
+   "id": "n1508",
+   "reason": "AP 'US official: Russia adds 7K more troops near Ukraine border' is stamped 2022-02-16 (day-granular) but the US official's briefing it reports may have come after 00:00 UTC on 17 February; not cited in retail, and should not be used anywhere in the 2022-02-17 edition as a pre-cutoff fact."
+  }
+ ],
+ "verifier": {
+  "words": 1345,
+  "distinct_sources": 34,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "d673894a9a6771e044c4e75582421452c3a50c9a9152f5abc1f57fbd299cf747",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02",
+  "2022-02-03",
+  "2022-02-04",
+  "2022-02-07",
+  "2022-02-08",
+  "2022-02-09",
+  "2022-02-10",
+  "2022-02-11",
+  "2022-02-14",
+  "2022-02-15",
+  "2022-02-16"
+ ]
+}

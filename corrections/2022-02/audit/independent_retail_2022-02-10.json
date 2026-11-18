@@ -1,0 +1,96 @@
+{
+ "date": "2022-02-10",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "461192ec67957c7f6282cf542277d2aaf69a3dc3581d7ce030b9c64efcb11a63",
+ "card_sha256": "b31c7a55a8c4cfc309ca6c196c9503d8a968479c76d52696818f2d0fde6538d6",
+ "exclusions_sha256": "3bda3fd0f360af758d66cea4b03d8c2ce5170201990c03814f1547d76acb865b",
+ "findings": [
+  {
+   "location": "retail_intro; retail[1] Why Retail Is Here",
+   "issue": "Calendar claim 'on the eve of the next inflation print' / 'On the eve of an inflation report' implies the CPI release is the next day, but no eligible own-date preview dates the January CPI release (only NBC Connecticut 'inflation data in focus' [[n1343]]). The intro also mis-framed Cameco's mine restart as proof of growing through inflation.",
+   "severity": "medium",
+   "resolution": "Rewrote intro as one sentence naming the must-own-brand narrative with Disney as the exhibit and the single-metric re-rating mechanism, 'with the next inflation print in focus'; Chipotle line now 'With an inflation report in focus'."
+  },
+  {
+   "location": "retail[0] Why Retail Is Here / What Is Driving It",
+   "issue": "Intraday timing claims ('Wednesday night', 'The shares went into the report at 147.23 USD', Uber 'the same night') are not established by day-granular 2022-02-09 stamps; the 147.23 USD (+3.33%) close could not be certified as pre-report.",
+   "severity": "medium",
+   "resolution": "Changed to 'on Wednesday', 'The shares closed Wednesday at 147.23 USD', and 'the same day'. The trigger 'a fade back under 147.23 USD' kept as a price level only."
+  },
+  {
+   "location": "retail[2] title and Where It Breaks",
+   "issue": "Title 'the dividend bunker before its own print' asserted an imminent Coca-Cola report with no eligible dated preview (Coca-Cola results fall after the cutoff). Investopedia [[n0775]] question headline was paraphrased as 'a steady compounder that can raise prices' (overreach).",
+   "severity": "medium",
+   "resolution": "Title now 'Coca-Cola / KO — the dividend bunker that ignored January'; body refers only to 'the next quarterly report'; Investopedia line now quotes the question only. Added genuine flow evidence: Reuters 'U.S. dividend funds receive huge inflows as investors switch out of bonds' [[n1356]]."
+  },
+  {
+   "location": "retail[0] Historical Analog",
+   "issue": "Ackman's Netflix bet [[n0535]] was given an invented motive ('effectively a wager that the single-metric punishment went too far'); Investopedia [[n0368]] headline was described as a 'diversification argument', which the headline does not establish.",
+   "severity": "low",
+   "resolution": "Ackman line reframed as 'the contrarian test of whether that punishment overshoots'; parks second-engine point now rests on Reuters 'streaming growth, park revenue boost shares' [[n0792]]."
+  },
+  {
+   "location": "retail[0] What Is Driving It; Smart Money View",
+   "issue": "'A beat on both engines' and 'the parks beat' overstate Reuters [[n0792]], which says park revenue boosted the shares, not that parks beat estimates. Redundant Al Jazeera 'top estimates' sentence repeated [[n0791]] as filler.",
+   "severity": "low",
+   "resolution": "Now 'The catalyst runs on both engines' and 'the second engine runs with constraints'; removed the redundant [[n0791]] sentence from Smart Money View."
+  },
+  {
+   "location": "retail[0] The Social Signal",
+   "issue": "Attention evidence is fandom/consumer-media breadth (TheWrap, Variety, D23, Investopedia), not trading-forum or broker evidence; no own-date Reddit/Stocktwits/options/Robinhood headline exists for Disney.",
+   "severity": "low",
+   "resolution": "Kept the real coverage-pattern evidence and added one modal sentence on what such coverage tends to do, with no invented posts, counts or rankings."
+  },
+  {
+   "location": "retail[3] Why Retail Is Here",
+   "issue": "'its flagship mine' is not established by Global News [[n0774]] ('Cameco to restart McArthur River uranium mine').",
+   "severity": "low",
+   "resolution": "Now 'a producer restarting an idled mine'."
+  },
+  {
+   "location": "retail[1] Why Retail Is Here",
+   "issue": "'jumped 10.16% ... after results' asserted a sequence that day-granular 2022-02-09 stamps do not establish.",
+   "severity": "low",
+   "resolution": "Now 'jumped 10.16% to 1,608.74 USD on Wednesday ... as MarketWatch reported record profit [[n0779]]'."
+  },
+  {
+   "location": "all items: numbers, IDs, guardrails",
+   "issue": "Checked every card figure (DIS 147.23 USD +3.33% / -6.75% / 157.89 USD; NFLX 412.89 USD -23.66%; S&P 500 4,587.18 +1.45%; Nasdaq 100 15,056.96 +2.10%, -4.97% 20s; VIX 19.96 -6.90%; 2Y 1.36% +46 bps; CMG 1,608.74 USD +10.16% / +1.72% / 1,581.61 USD; KO 61.04 USD +0.98% / -1.55%; CCJ 22.78 USD +14.82% / -3.11% / 23.51 USD; URA +7.17% / -6.31%; LEU +8.84%) and all 25 cited titles/sources/stamps (all 2022-02-03 to 2022-02-09, within windows). CNBC 'Dow slides 500' [[n0796]] (10 Feb CPI session) not used; no Twitter/Coca-Cola/PepsiCo/Zillow/Affirm/Cloudflare/CPI outcomes; no spot-FX; no FB/SQ/DWAC hindsight.",
+   "severity": "info",
+   "resolution": "No change needed beyond the items above."
+  },
+  {
+   "location": "chronology",
+   "issue": "Disney, Chipotle, Coca-Cola and Cameco do not appear as items in 2022-02-01 to 2022-02-09 retail notes/drafts (Disney only as a Statista competition aside on 02-01; Netflix used only as contrast). Four distinct narratives: streaming/brand re-rating, pricing power, defensive dividend, uranium energy security.",
+   "severity": "info",
+   "resolution": "Selection kept; notes updated (KO title, n1356, timing wording, calendar note)."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Read only the 2022-02-10 feed, card, exclusions, retail draft and notes, plus retail drafts/notes for strictly earlier dates (2022-02-01 to 2022-02-09) as editorial memory. Headline titles only, no article bodies; no web access; nonretail drafts, specs, later dates and other reviews not read. Day-granular 08:00 stamps cannot establish intraday sequencing, so no pre/post-report price claims are certified.",
+ "recommended_exclusions": [
+  {
+   "id": "n0796",
+   "reason": "CNBC 'Dow slides 500 points as yields spike following red-hot inflation report' stamped 2022-02-09 describes the 10 February CPI session, after the 2022-02-10 cutoff; misdated outcome."
+  }
+ ],
+ "verifier": {
+  "words": 1299,
+  "distinct_sources": 25,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "6d7bcb5099bc3517a32af7ea6d2d47883d18c8e9585a09f280763a0b8c0c62ee",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02",
+  "2022-02-03",
+  "2022-02-04",
+  "2022-02-07",
+  "2022-02-08",
+  "2022-02-09"
+ ]
+}
