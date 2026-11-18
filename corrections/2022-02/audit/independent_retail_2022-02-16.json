@@ -1,0 +1,64 @@
+{
+ "date": "2022-02-16",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "4bbd49a2047e598722259cbb0d858349a5508aefaeb6ab08773af4dafefba2be",
+ "card_sha256": "119ad12f0c801c4f96d12f76524bf67eb4613b30156922712eab5b3d05342bba",
+ "exclusions_sha256": "14cdfa1ed3e59e8ff3dffd6880cd3cd9bba29a1dc098adeb1f081864b632c2ae",
+ "findings": [
+  {
+   "location": "retail[0] Smart Money View",
+   "issue": "Bloomberg's 'big options trade hedges S&P 500 plunge of up to 20% by April' (n2196, 14 February) was the closing line of the strictly earlier 2022-02-15 Coinbase lead's Smart Money View, a recycled caution; the paragraph also had no bullish professional voice, so the split was one-sided.",
+   "severity": "moderate",
+   "resolution": "Removed n2196 and added Forbes on the synergies of AMD's completed Xilinx deal (n0685, 14 February) as the bull case against NATO caution, Euronews scepticism and the Fed/liquidity warnings."
+  },
+  {
+   "location": "retail[0] The Social Signal",
+   "issue": "CNBC's 'new investors are seizing their greatest money-making asset' (n1851) does not evidence attention to chips or leverage, and the paragraph ended on a repeated reversal caution already made in When the Narrative Breaks.",
+   "severity": "minor",
+   "resolution": "Cut n1851 and the repeated caution; the Seeking Alpha semiconductor-ETF ranking (n0681) and ETF Stream buy-the-dip piece (n1364) are tied to the 3x-wrapper decision."
+  },
+  {
+   "location": "retail[3] Where It Breaks",
+   "issue": "'A new Covid wave and fresh restrictions would also test the travel-resurgence story' was a generic, unevidenced hedge.",
+   "severity": "minor",
+   "resolution": "Replaced with own-date evidence that the conflict is already reaching travel: KLM suspending Ukraine flights (Forbes, n1451, 12 February), alongside the existing WTI 92.07 USD/bbl level."
+  },
+  {
+   "location": "retail[0] chronology",
+   "issue": "SOXL leverage repeats the 2022-02-04 TQQQ, 2022-02-09 Nvidia/SOXL and 2022-02-11 TQQQ items.",
+   "severity": "minor",
+   "resolution": "Accepted as a material update: new catalyst (the 15 February partial pull-back claim, n1496, n1497, n1503, n1320) plus chip-specific deals (n0687, n0781, n0851), with all evidence published 14-15 February and no reuse of earlier leverage cautions or citations; only one leveraged-ETF item on the date."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Checked every cited ID against the 2022-02-16 frozen feed and every number against the 2022-02-16 card or a same-paragraph headline. The 15 February pull-back claim, Airbnb and Roblox results (after the 15 February US close, before the cutoff) are treated as known; retail sales, FOMC minutes and Nvidia/Cisco/DoorDash/Shopify results are not described (Nvidia appears only as 'next print' without a date). The PPI outcome is not used because the only headline is a Reuters LIVE MARKETS rolling page (n1326). Headlines only. Chronology compared with retail drafts and notes for 2022-02-01 to 2022-02-15 only.",
+ "recommended_exclusions": [
+  {
+   "id": "n1326",
+   "reason": "Reuters 'LIVE MARKETS' rolling live blog; cannot certify a pre-cutoff PPI outcome."
+  }
+ ],
+ "verifier": {
+  "words": 1252,
+  "distinct_sources": 30,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "9a9102d5c197026dae77fad48d34a6b088b206baa50dfbecd8d84f72afd4aedd",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02",
+  "2022-02-03",
+  "2022-02-04",
+  "2022-02-07",
+  "2022-02-08",
+  "2022-02-09",
+  "2022-02-10",
+  "2022-02-11",
+  "2022-02-14",
+  "2022-02-15"
+ ]
+}

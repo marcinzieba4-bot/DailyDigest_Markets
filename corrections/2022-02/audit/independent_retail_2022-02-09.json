@@ -1,0 +1,78 @@
+{
+ "date": "2022-02-09",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "23be44b3c8d4ba6fc15c5f25a7ab8ab3af24a4774058446b7baacda479df4946",
+ "card_sha256": "3cffca9cef2ea2e1e839a8fd78154a6f170e1f546296b6975641b5c16c7bea36",
+ "exclusions_sha256": "785cf78b6c6c84900254a154a79129b531f7049e86c979e5d2265666fd9a97c6",
+ "findings": [
+  {
+   "location": "retail[0] What Is Driving It / Smart Money View (Peloton lead)",
+   "issue": "Chronology: the promoted Peloton lead re-cited the takeover headlines the 2022-02-08 Peloton item had just used (CNBC 'why a deal might not happen' twice, Wedbush's Apple case), so the same caution appeared twice in the lead and the smart-money split partly recycled yesterday's item.",
+   "severity": "moderate",
+   "resolution": "Removed the recycled CNBC and Wedbush citations; What Is Driving It now states the stacked turnaround-plus-bid premium as interpretation, and Smart Money View rests on 8 February evidence (Blackwells n0758, investor slides n0838, Yahoo Finance's board critique n0832). Only the BBC exploring-a-takeover report (n0651) remains as background."
+  },
+  {
+   "location": "retail[3] Why Retail Is Here (Nvidia)",
+   "issue": "'The market treated it as relief, not loss' overstated the reaction: NVDA rose 1.54% while SOXX rose 2.53%, so Nvidia lagged its own sector on the termination day.",
+   "severity": "moderate",
+   "resolution": "Reworded to 'the market shrugged off the loss' and added the SOXX +2.53% comparison from the card; intro changed from 'cheer' to 'shrug off a dead deal'."
+  },
+  {
+   "location": "retail[2] Where It Breaks (Bitcoin)",
+   "issue": "Chronology: fourth straight edition with a crypto item; the break reused the 20-day-level-close test that the 2022-02-08 lead had just used, a repeated caution.",
+   "severity": "moderate",
+   "resolution": "Kept secondary on newly published 8 February evidence only; replaced the level test with the seizure-day price reaction (BTC +0.63%, DOGE -4.33%) and added The Art Newspaper's report of the US Treasury NFT money-laundering study (n0953)."
+  },
+  {
+   "location": "retail[3] Where It Breaks (Nvidia)",
+   "issue": "Chronology: the daily-reset decay lesson repeated the 2022-02-04 TQQQ item's break almost verbatim.",
+   "severity": "minor",
+   "resolution": "Cut to the card comparison (SOXL -22.33% vs SOXX -6.30% over 20 sessions) and the point that one relief day has not repaired January."
+  },
+  {
+   "location": "retail[0] Why Retail Is Here",
+   "issue": "'redemption story in three sessions': the rally ran over the 7 and 8 February sessions (the 4 February session rose only 1.44% before the WSJ report).",
+   "severity": "minor",
+   "resolution": "Changed to 'two sessions'."
+  },
+  {
+   "location": "retail_intro",
+   "issue": "Intro said all three trades ride the kitchen-sink mechanism; AMC's lease news and the Arm termination are not kitchen-sink resets.",
+   "severity": "minor",
+   "resolution": "Intro now names Peloton as the clearest case of the mechanism."
+  },
+  {
+   "location": "retail[1] Where It Breaks (AMC)",
+   "issue": "The MarketWatch meme-era tax-bill headline was also the 2022-02-08 lead's historical analog; here it serves a different role (winners' selling as supply).",
+   "severity": "minor",
+   "resolution": "Retained; different role, within window (stamped 2022-02-07), and the AMC catalyst itself (n0754, n0753) is new."
+  },
+  {
+   "location": "whole section",
+   "issue": "All cited IDs resolved in the 2022-02-09 feed (stamps 2022-02-07 to 2022-02-08; company news within seven days); card numbers checked (PTON, NDX, 2Y, SPOT, AMC, GME, BTC, DOGE, NVDA, SOXX, MRVL, SOXL). Peloton CEO change, Nvidia–Arm termination and Bitfinex-linked seizure/arrests used as known; no Disney/Uber/Toyota results. No own-date headline gives Peloton's quarterly figures, so none are stated. Four distinct narratives.",
+   "severity": "minor",
+   "resolution": "No further change required."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Headlines only (no article bodies); the card is the sole price source; the 2022-02-01 to 02-08 retail drafts and notes were read as editorial memory only. No later-date files were read.",
+ "recommended_exclusions": [],
+ "verifier": {
+  "words": 1325,
+  "distinct_sources": 27,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "889a4009368ee53a0a4e0ed13b5268b9349dce0e2197eae4171e023518476de4",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02",
+  "2022-02-03",
+  "2022-02-04",
+  "2022-02-07",
+  "2022-02-08"
+ ]
+}

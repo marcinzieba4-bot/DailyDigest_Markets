@@ -1,0 +1,94 @@
+{
+ "date": "2022-02-24",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "deab18b0cf5adbba7f8e0f411a66f2fac24793caaa03dd905a4d5b6d7c708f57",
+ "card_sha256": "7c1813e7d027943794291c56b118aef5a8630e0200a59fa615d016af0ae69f16",
+ "exclusions_sha256": "4b4fe270a1273ae359276b4e67cedca5441fcad9850de3c79507d7e9ddea3790",
+ "findings": [
+  {
+   "location": "retail_intro",
+   "issue": "'On the eve of a possible invasion' carries uncanny timing precision: at the 00:00 UTC 24 February cutoff nobody could know an attack was hours away, so 'eve' leaks what happened about 03:00 UTC.",
+   "severity": "moderate",
+   "resolution": "Rewritten as 'With an invasion feared but not launched', keeping the invasion strictly a pending risk; note why_lead aligned."
+  },
+  {
+   "location": "retail[0] The Social Signal",
+   "issue": "UKTN's evergreen 'best stocks and shares to buy today' list (n1593) is generic and does not show attention to the correction or to leverage; the paragraph's attention evidence was thin for a leveraged-ETF lead.",
+   "severity": "moderate",
+   "resolution": "Replaced with Wolf Street's 18 February margin-debt headline (n1135: margin debt plunged, leverage still gigantic) as positioning evidence tied to TQQQ's borrowed exposure; Mahaney (n1719), Canstar (n1533) and the HOOD card move retained. n1135 was cited once before (2022-02-21, DWAC smart-money paragraph) and is used here only as context, not as the repeat's new evidence."
+  },
+  {
+   "location": "retail[0] Historical Analog",
+   "issue": "The five-session TQQQ -21.22% vs Nasdaq 100 -7.60% comparison was offered as proof that the daily reset 'erodes value', but in a one-way fall the figures show roughly triple exposure, not decay; the leveraged-decay caution also repeated the 2022-02-04, 02-11 and 02-22 TQQQ items almost verbatim.",
+   "severity": "moderate",
+   "resolution": "Recast: the analog now tests the 'shocks that do not dent earnings' premise against the energy channel (Brent 96.84 USD/bbl, card) and states the card figures as amplification of the path; the reset point is kept to one clause."
+  },
+  {
+   "location": "retail[0] Smart Money View",
+   "issue": "'the Fed is tightening into the drawdown' - no hike had occurred by the cutoff; the cited evidence (n1801, n1850) is about a pending March lift-off.",
+   "severity": "minor",
+   "resolution": "Changed to 'the Fed is preparing to tighten into the drawdown, not to rescue it'."
+  },
+  {
+   "location": "retail[0] When the Narrative Breaks",
+   "issue": "Closing 'One clean invalidation: an invasion that lifts volatility...' restated the paragraph's opening trigger ('The trade dies if the threat becomes an event').",
+   "severity": "minor",
+   "resolution": "Redundant sentence cut; observable S&P 4,225.50 / VIX 31.02 triggers and the n1278 pending risk kept."
+  },
+  {
+   "location": "retail[1], retail[2], retail[3] (and lead wording)",
+   "issue": "'The war trade' phrasing presupposed a war that had not started at the cutoff.",
+   "severity": "minor",
+   "resolution": "Changed to 'war-scare trade' in ITA, PLTR and wheat items; titles unchanged (the lead hook reads as a scare)."
+  },
+  {
+   "location": "all cited IDs",
+   "issue": "Checked all 24 cited IDs against the own-date feed: titles support the sentences, outlet names match src, all stamps precede the cutoff (day-granular 23 February items describe 22-23 February events: correction, state of emergency, separatists' request, Nord Stream sanctions context); n1801 (15 Feb Reuters poll) used as a policy baseline; n0093/n0445/n1533/n1135 within seven days. Every number matches the 2022-02-24 card (TQQQ, S&P, NDX, VIX points, 2Y and 20-observation bps with bear flattening, HOOD, LMT, GD, ITA, RTX/NOC direction, PLTR, wheat/corn/soy in US cents/bu, MOS, Brent) or a same-paragraph headline (ruble 3%, 80% Fastly, 40c/32c grains). No spot-FX, no invented posts or counts.",
+   "severity": "minor",
+   "resolution": "No change needed beyond the edits above."
+  },
+  {
+   "location": "chronology",
+   "issue": "TQQQ (02-04 smaller, 02-11 lead, 02-22 smaller), LMT/defence (02-22), PLTR (02-18 lead), wheat (inside the 02-23 Brent lead) recur. Each needed new evidence and a new angle.",
+   "severity": "minor",
+   "resolution": "Accepted: the TQQQ lead rests on evidence published after the 02-23 cutoff (n1908, n1909, n1719, n1281, n1282, n1278) and a new angle (dip-buying a pending invasion after the confirmed correction); ITA adds the FT two-leg ETF story (n0837); PLTR is secondary with Karp's 22 February line (n0558) and the CDC contract (n0564); wheat stands alone on 23 February evidence (n1703, n1714, n0715). Four distinct narratives: leveraged dip-buy, defence-plus-Russia ETF bet, growth-darling faith, food-supply premium."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Headline-level review only (no article bodies); day-granular 08:00 stamps were judged by content. Chronology compared with the current retail drafts and notes of 1-23 February only; earlier IDs were not resolved in earlier feeds, so prior-use checks rely on the earlier drafts' prose. No nonretail drafts, specs or other reviews read.",
+ "recommended_exclusions": [
+  {
+   "id": "n0135",
+   "reason": "Reuters 'Expert views on Russian forces invading Ukraine' carries a 23 February day stamp but describes the invasion that began about 03:00 UTC on 24 February; not cited, but should not be usable by any 24 February section."
+  }
+ ],
+ "verifier": {
+  "words": 1344,
+  "distinct_sources": 24,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "75cb1c09c7783adff04cdf06eae4881fbdc262b0c6d045dc046e646faa9c8c90",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02",
+  "2022-02-03",
+  "2022-02-04",
+  "2022-02-07",
+  "2022-02-08",
+  "2022-02-09",
+  "2022-02-10",
+  "2022-02-11",
+  "2022-02-14",
+  "2022-02-15",
+  "2022-02-16",
+  "2022-02-17",
+  "2022-02-18",
+  "2022-02-21",
+  "2022-02-22",
+  "2022-02-23"
+ ]
+}
