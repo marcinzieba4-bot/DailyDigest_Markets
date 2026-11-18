@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "2a80a9e36a973a81a0beacf7db59132273a7bf4133131aba3095b560f31963eb",
  "card_sha256": "96cbe19a980de7533ba2de52f392f783718181ccb116fe405b36c32309deb417",
- "exclusions_sha256": "49799efe7dc73ca4074517c482f440af9aa434b70891065918d0bb3d4017a946",
+ "exclusions_sha256": "f1bcd895134bc46d10fb39b498878d4102057718056616cd433335cdcc22d5a8",
  "findings": [
   {
    "location": "retail[0] The Social Signal",
@@ -56,5 +56,23 @@
  "retail_draft_sha256": "dea90e631e89ae342a7668136089546de8bd09638e20302ae24189f103d9ddd3",
  "chronology_checked_against": [
   "2022-02-01"
+ ],
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "49799efe7dc73ca4074517c482f440af9aa434b70891065918d0bb3d4017a946",
+   "new_exclusions_sha256": "f1bcd895134bc46d10fb39b498878d4102057718056616cd433335cdcc22d5a8",
+   "excluded_ids_now": [
+    "n0054",
+    "n0452",
+    "n0586",
+    "n0757",
+    "n1088",
+    "n1971"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
  ]
 }

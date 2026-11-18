@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "50939d0ea22469bb9352ea79414b1fd4c6f79c9265f4ff65cb8cc3832e47aeee",
  "card_sha256": "9092aec6ee3423ae4b3371943eadb9bc4d9bdd69cd5db9b3941c65da8ecef9ba",
- "exclusions_sha256": "91bea93b168617665060424774b52270f4533eccfda2b2d65eff52c8c7bfc270",
+ "exclusions_sha256": "661240e202af4a9cc786326e5fb870433b27db9cc1370cf3984856632369bb36",
  "findings": [
   {
    "location": "catalysts: Cisco, Trade Expression",
@@ -125,5 +125,29 @@
   "distinct_sources": 232,
   "warnings": 0
  },
- "nonretail_content_sha256": "4b339e0d6c6b60f35c4937c10f1104f5199125cdb37e688053e41a8d9ea880d1"
+ "nonretail_content_sha256": "4b339e0d6c6b60f35c4937c10f1104f5199125cdb37e688053e41a8d9ea880d1",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "91bea93b168617665060424774b52270f4533eccfda2b2d65eff52c8c7bfc270",
+   "new_exclusions_sha256": "661240e202af4a9cc786326e5fb870433b27db9cc1370cf3984856632369bb36",
+   "excluded_ids_now": [
+    "n0487",
+    "n0491",
+    "n0526",
+    "n0651",
+    "n0942",
+    "n1102",
+    "n1176",
+    "n1275",
+    "n1297",
+    "n1308",
+    "n1501",
+    "n1508"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
 }

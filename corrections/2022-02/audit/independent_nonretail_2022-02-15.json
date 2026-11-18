@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "b261fe6152029c86c2d6f5e2de3c43f8e475c0d852f25b82c49be2f7fecf2410",
  "card_sha256": "25b9a11474e7c24d73d9b9e224054cc15ed3738b78d30a1838ab5f68cdc78837",
- "exclusions_sha256": "edb4308a6088fd2c8be80237dd4371ccc001db99b280850e1c09a5d317bd0f0c",
+ "exclusions_sha256": "7c81cc5b42face2b0a962e11ba38f3105da969eed397d324afbd32ed91a12b6a",
  "findings": [
   {
    "location": "catalysts/Rivian (RIVN) Catalyst & Thesis",
@@ -129,5 +129,25 @@
   "distinct_sources": 256,
   "warnings": 0
  },
- "nonretail_content_sha256": "a4db5f4663af320e99507a4120483dcd98eae7bb939ab1a7398e6becc34c1bbc"
+ "nonretail_content_sha256": "a4db5f4663af320e99507a4120483dcd98eae7bb939ab1a7398e6becc34c1bbc",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "edb4308a6088fd2c8be80237dd4371ccc001db99b280850e1c09a5d317bd0f0c",
+   "new_exclusions_sha256": "7c81cc5b42face2b0a962e11ba38f3105da969eed397d324afbd32ed91a12b6a",
+   "excluded_ids_now": [
+    "n0759",
+    "n0794",
+    "n1178",
+    "n1283",
+    "n1313",
+    "n1476",
+    "n1494",
+    "n1502"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
 }

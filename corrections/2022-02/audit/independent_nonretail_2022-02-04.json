@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "58bdc4b1baea03d7eeadccd84d839de656b87a227615183692ea7fd6e0d30ad3",
  "card_sha256": "e6fadb9f3c0f159924fa9e4fbd131dfeed8bebecc5c53afec3b37adc19589df4",
- "exclusions_sha256": "fcfa0394843a31e14d096c2e8d231cdccba0c14526cfec6379e835be8afe5d5e",
+ "exclusions_sha256": "e1c17f05653773460d8a4017ef4069a5cd413e275f8e4694df69e67deba4c47f",
  "findings": [
   {
    "location": "flows/Credit Check",
@@ -66,5 +66,24 @@
   "distinct_sources": 263,
   "warnings": 0
  },
- "nonretail_content_sha256": "7a4459b06d1260a51c829f112e289c38e7e66cd3eed35834376bcacfdc2f5e1d"
+ "nonretail_content_sha256": "7a4459b06d1260a51c829f112e289c38e7e66cd3eed35834376bcacfdc2f5e1d",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "fcfa0394843a31e14d096c2e8d231cdccba0c14526cfec6379e835be8afe5d5e",
+   "new_exclusions_sha256": "e1c17f05653773460d8a4017ef4069a5cd413e275f8e4694df69e67deba4c47f",
+   "excluded_ids_now": [
+    "n0223",
+    "n0357",
+    "n0528",
+    "n1022",
+    "n1260",
+    "n1493",
+    "n2010"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
 }

@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "2a80a9e36a973a81a0beacf7db59132273a7bf4133131aba3095b560f31963eb",
  "card_sha256": "96cbe19a980de7533ba2de52f392f783718181ccb116fe405b36c32309deb417",
- "exclusions_sha256": "49799efe7dc73ca4074517c482f440af9aa434b70891065918d0bb3d4017a946",
+ "exclusions_sha256": "f1bcd895134bc46d10fb39b498878d4102057718056616cd433335cdcc22d5a8",
  "findings": [
   {
    "location": "sectors/XLK part 1",
@@ -71,5 +71,23 @@
   "distinct_sources": 265,
   "warnings": 0
  },
- "nonretail_content_sha256": "5ee034b0f6225dbd6df241954ddfbd158a5370f87db4483932cdcc7abe757bf1"
+ "nonretail_content_sha256": "5ee034b0f6225dbd6df241954ddfbd158a5370f87db4483932cdcc7abe757bf1",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "49799efe7dc73ca4074517c482f440af9aa434b70891065918d0bb3d4017a946",
+   "new_exclusions_sha256": "f1bcd895134bc46d10fb39b498878d4102057718056616cd433335cdcc22d5a8",
+   "excluded_ids_now": [
+    "n0054",
+    "n0452",
+    "n0586",
+    "n0757",
+    "n1088",
+    "n1971"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
 }

@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "8b56e19ca204a8afe00670f877b10e8c4116d4632439ee7e19aa17d51a6443ec",
  "card_sha256": "e137e0f244391e77e5552d3364406b18e3c6e55c175c565c505e8c8923df760b",
- "exclusions_sha256": "63bc2d23fbcf1c944b01eb2418c005c070d13dd0819ddd090e01bc7007cb2e1c",
+ "exclusions_sha256": "c0be2d5068e03f6d0eff6cdcda4a8bdfb0a57da044b02da900664f64799c73c1",
  "findings": [
   {
    "location": "retail_intro",
@@ -102,5 +102,26 @@
   "2022-02-15",
   "2022-02-16",
   "2022-02-17"
+ ],
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "63bc2d23fbcf1c944b01eb2418c005c070d13dd0819ddd090e01bc7007cb2e1c",
+   "new_exclusions_sha256": "c0be2d5068e03f6d0eff6cdcda4a8bdfb0a57da044b02da900664f64799c73c1",
+   "excluded_ids_now": [
+    "n0156",
+    "n0157",
+    "n0373",
+    "n0408",
+    "n0534",
+    "n0829",
+    "n0981",
+    "n1105",
+    "n1496"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
  ]
 }

@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "25c5d2be5f6efbf235343341102ec4d02995fbcb913710a4ec437097cb803ed6",
  "card_sha256": "88349872481b72af59b53decc92276c032e9c93b95cc682d273403b0979e16b0",
- "exclusions_sha256": "9770b3389cd6208ac4c63454bb4a5758fd6f6ad3182bd66cb792379d64f0ea47",
+ "exclusions_sha256": "83cf251e851ee69cb4fc47b171850e88cf8140132252fbce54027a0783c118ed",
  "findings": [
   {
    "location": "retail[0] Why Retail Is Here (n1121)",
@@ -60,5 +60,23 @@
   "2022-02-02",
   "2022-02-03",
   "2022-02-04"
+ ],
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "9770b3389cd6208ac4c63454bb4a5758fd6f6ad3182bd66cb792379d64f0ea47",
+   "new_exclusions_sha256": "83cf251e851ee69cb4fc47b171850e88cf8140132252fbce54027a0783c118ed",
+   "excluded_ids_now": [
+    "n0022",
+    "n0373",
+    "n0879",
+    "n1242",
+    "n1278",
+    "n1484"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
  ]
 }

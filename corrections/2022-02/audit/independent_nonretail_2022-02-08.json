@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "8b7bea8dd62eaaed1b9e9bf22421b356397bbe0e6028ac19a98904c7ee6c0f21",
  "card_sha256": "39a03a526242eee2a831d9ad16f137984f86c41f615d03f50053cbab92839dfa",
- "exclusions_sha256": "e7440109bc5fe1e05d0b3b3f47c73f80d179806a0d9914e1c13c8ad7247c56c2",
+ "exclusions_sha256": "3418b8a5b959ca81b383f7ff9a280d9bb72893f656720d68daa4d7c7c8aa63b1",
  "findings": [
   {
    "location": "geo/US/New / Most Important",
@@ -170,6 +170,23 @@
    "severity": "major",
    "by": "root",
    "reverified": "286 sources, 8836 words, 0 fail"
+  }
+ ],
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "e7440109bc5fe1e05d0b3b3f47c73f80d179806a0d9914e1c13c8ad7247c56c2",
+   "new_exclusions_sha256": "3418b8a5b959ca81b383f7ff9a280d9bb72893f656720d68daa4d7c7c8aa63b1",
+   "excluded_ids_now": [
+    "n0257",
+    "n0771",
+    "n0819",
+    "n1495",
+    "n1949"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
   }
  ]
 }

@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "bda6a931904fb82c4f7b0bf1675b980c855ea7c664936ddb1a04e31e77838061",
  "card_sha256": "d037d8aeaa40960239154302de775b69c558b3812ab78e5dbe91c9e3e8bff712",
- "exclusions_sha256": "4ac5e63ae1420936a69c15eb86910fe051dc8eb6b28403ef549dbc7db8ddbcf7",
+ "exclusions_sha256": "24b9ac41ee1e9cef15fa66a06ed6fffd97589c635fa3d847ec90ddad3bcfa761",
  "findings": [
   {
    "location": "geo.CN Property",
@@ -97,5 +97,25 @@
   "distinct_sources": 256,
   "warnings": 0
  },
- "nonretail_content_sha256": "8dfc177b895bfce48cfa077eaea614b85bfe545790013e8d78f0f59f4bbf4f20"
+ "nonretail_content_sha256": "8dfc177b895bfce48cfa077eaea614b85bfe545790013e8d78f0f59f4bbf4f20",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "4ac5e63ae1420936a69c15eb86910fe051dc8eb6b28403ef549dbc7db8ddbcf7",
+   "new_exclusions_sha256": "24b9ac41ee1e9cef15fa66a06ed6fffd97589c635fa3d847ec90ddad3bcfa761",
+   "excluded_ids_now": [
+    "n0077",
+    "n0375",
+    "n0672",
+    "n0825",
+    "n1319",
+    "n1370",
+    "n1427",
+    "n1440"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
 }

@@ -1,0 +1,117 @@
+{
+ "date": "2022-02-04",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "58bdc4b1baea03d7eeadccd84d839de656b87a227615183692ea7fd6e0d30ad3",
+ "card_sha256": "e6fadb9f3c0f159924fa9e4fbd131dfeed8bebecc5c53afec3b37adc19589df4",
+ "exclusions_sha256": "e1c17f05653773460d8a4017ef4069a5cd413e275f8e4694df69e67deba4c47f",
+ "findings": [
+  {
+   "location": "retail[0].parts[5] (When the Narrative Breaks)",
+   "issue": "Cited n1260 (Reuters, stamped 2022-02-03: 'Bank of England raises rates by most since 1995 even as long recession looms'). Own-date coverage of the 3 February decision shows a hike to 0.5% (Yahoo Finance UK n1259), the second in a row (Barron's n0790), not enough for 4 officials (Reuters n1262). A move to 0.5% cannot be the largest since 1995, so the headline describes a different, later decision and is misdated evidence.",
+   "severity": "major",
+   "resolution": "Removed n1260 and the claim; rate trigger now rests on the card's 2Y (1.19%, +36 bps over 20 observations, bear flattening). Recommended for exclusion."
+  },
+  {
+   "location": "retail[0] (lead), retail_intro",
+   "issue": "Chronology: the repeat Meta lead recycled the 2022-02-03 lead's angle ('bargain or trap' vs the 3 Feb intro's 'value or a falling knife'), its Historical Analog mechanism (growth holders selling into the first rebound vs 3 Feb 'holders who owned it for growth become sellers into every bounce') and its closing trigger (next user count vs 3 Feb 'if daily users fall again next quarter').",
+   "severity": "major",
+   "resolution": "Lead rewritten around a new angle resting on newly published 3 February evidence: the completed -26.39% session and record coverage (n0811, n1141), with the crowd's contested diagnosis of the core business, Apple's privacy prompt (WSJ n1137, Macworld n1133) vs TikTok competition and the first user shrink (n1166, n1142). New ownership-handover mechanism in the analog; new triggers (237.76 USD close, Friday's read-through from Pinterest's after-close beat n0856, 2Y). New title: 'the record crash everyone thinks they understand'."
+  },
+  {
+   "location": "retail[0].parts[4] (Smart Money View)",
+   "issue": "'The investor Main Street quotes most has already answered: Business Insider reported Warren Buffett ... ruled out buying its stock [[n0877]]' implies Buffett responded to the crash; the headline gives no timing for the remark.",
+   "severity": "moderate",
+   "resolution": "Rephrased with neutral timing via TheStreet (n0793: he said he likes Facebook, but not so much its stock); n0877 dropped."
+  },
+  {
+   "location": "retail[0].parts[2] (The Social Signal)",
+   "issue": "Social Signal led with fund exposure (Bloomberg n0837), which is institutional exposure rather than attention evidence, and did not use the coverage-reach evidence available on the date.",
+   "severity": "moderate",
+   "resolution": "Rebuilt on coverage reach and the competing record figures (Bloomberg $251 billion n0838, Business Insider nearly $240 billion n1149, CBS $237 billion n0868, alongside CNBC's $232 billion n1141), local and foreign broadcast pickup (WPTV n0843, ABC n1134), retail explainers (Motley Fool n0882, Yahoo Finance n0879) and the Berkshire scoreboard (n0841). n0837 moved to Smart Money View."
+  },
+  {
+   "location": "retail[2] (TQQQ smaller item)",
+   "issue": "No attention evidence; repeated the daily-reset leverage caution already used in the 2022-02-01 GameStop lead and the 2022-02-03 Meta trigger list; cited The Edge Singapore n0836, a reprint of the 'house always wins' meme-stock headline already cited on 2022-02-01, and extended it to leveraged ETFs (overreach).",
+   "severity": "moderate",
+   "resolution": "Replaced with Tesla / TSLA — the record recall you fix by download: a distinct brand-faith narrative on own-date evidence (Reuters n1857, Notebookcheck n1917, Teslarati n1921 written as a pending fix, Wccftech/Morgan Stanley n1154, Washington Post n1884) and card resilience (-1.60% to 891.14 USD vs Nasdaq 100 -4.22%). TQQQ recorded in considered_not_chosen."
+  },
+  {
+   "location": "retail[3] (Bitcoin smaller item)",
+   "issue": "'Where It Breaks' leaned on CNBC's Texas-grid miners headline (n0791), which has no bearing on the decoupling thesis; the safe-haven framing lacked headline support.",
+   "severity": "minor",
+   "resolution": "Replaced with the card's listed crypto proxies trading like tech (GBTC -3.60%, Coinbase -3.23%, Marathon -7.86%) plus the -13.79% 20-session gap; added Barron's better-than-gold report (n1757); retitled 'the safe-haven claim gets one good day'; crowd behaviour kept modal."
+  },
+  {
+   "location": "retail[0].parts[5]",
+   "issue": "Recycled sentence: the White House jobs-report line ending 'a print that can move that yield either way' repeats the 2022-02-01 GameStop lead ('a print that can swing rate expectations either way').",
+   "severity": "minor",
+   "resolution": "Rewritten as a discount-rate trigger without a date for the pending print (n2022)."
+  },
+  {
+   "location": "retail[0].parts[3] (Historical Analog)",
+   "issue": "'CNBC reported PayPal closed down 24% in its worst-ever trading day' was verbatim the 2022-02-03 PayPal item's opening sentence.",
+   "severity": "minor",
+   "resolution": "Rephrased; analog now carries the new card follow-through (PYPL -6.24% to 124.30 USD, -21.38% 5-session)."
+  },
+  {
+   "location": "retail[0].parts[1]",
+   "issue": "Snap and Pinterest session drops sat next to the Meta contagion with no marker that their own results came after the 3 February close (guardrail).",
+   "severity": "minor",
+   "resolution": "Added 'before either reported'; Pinterest's after-close beat used only as a pending Friday read-through."
+  },
+  {
+   "location": "retail[1] (Amazon smaller item)",
+   "issue": "Item was accurate but disconnected from the day's lead; GeekWire n0785 and the generic inflation-squeeze aside added little.",
+   "severity": "minor",
+   "resolution": "Added CNBC's $31 billion advertising-business disclosure (n1128) tied to Reuters' data divide (n1153) and Reuters' cost-driven Prime hike (n1129); kept the 2,776.91 USD close as the trigger for Friday's pending session."
+  },
+  {
+   "location": "retail_intro",
+   "issue": "Intro restated the recycled bargain-or-trap framing.",
+   "severity": "minor",
+   "resolution": "Rewritten as one sentence naming the diagnosis narrative (n0811) and the ownership-handover mechanism via PayPal's worst-ever day (n0733), with modal crowd language."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Headline-level review only (no article bodies). All cited items carry day-granular 08:00 stamps; timing was judged from wording and own-date cross-references, and every cited item describes 3 February sessions, after-hours results or events completed before 00:00 UTC on 4 February, or is a dated-window preview (n2022). No web access. Chronology checked only against retail_drafts and notes/retail_* for 2022-02-01 to 2022-02-03; nonretail drafts, specs, later dates and other reviews were not read. The shared retail_quality.py preflight was not run (root step). n0690 (Fortune Tesla $138 valuation) and n0671 (Ark adding Tesla; source label misspelt) were deliberately not used.",
+ "recommended_exclusions": [
+  {
+   "id": "n1260",
+   "reason": "Reuters 'Bank of England raises rates by most since 1995 even as long recession looms', stamped 2022-02-03, contradicts own-date coverage of the 3 February decision (hike to 0.5%, n1259; second consecutive hike, n0790; not enough for 4 officials, n1262). A move to 0.5% cannot be the largest since 1995, so the item describes a different, later BoE decision and is misdated."
+  }
+ ],
+ "verifier": {
+  "words": 1344,
+  "distinct_sources": 40,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "0bcef991d94fa34e02b7ca679a9e6895181ac07c2db967aa27a84ce4d55230a4",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02",
+  "2022-02-03"
+ ],
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "fcfa0394843a31e14d096c2e8d231cdccba0c14526cfec6379e835be8afe5d5e",
+   "new_exclusions_sha256": "e1c17f05653773460d8a4017ef4069a5cd413e275f8e4694df69e67deba4c47f",
+   "excluded_ids_now": [
+    "n0223",
+    "n0357",
+    "n0528",
+    "n1022",
+    "n1260",
+    "n1493",
+    "n2010"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
+}

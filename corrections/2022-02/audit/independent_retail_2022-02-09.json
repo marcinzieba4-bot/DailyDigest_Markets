@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "23be44b3c8d4ba6fc15c5f25a7ab8ab3af24a4774058446b7baacda479df4946",
  "card_sha256": "3cffca9cef2ea2e1e839a8fd78154a6f170e1f546296b6975641b5c16c7bea36",
- "exclusions_sha256": "785cf78b6c6c84900254a154a79129b531f7049e86c979e5d2265666fd9a97c6",
+ "exclusions_sha256": "a5d50e09d47f8e5c8790e38218558b5c7e5cde71c333a142d16a6044f1956233",
  "findings": [
   {
    "location": "retail[0] What Is Driving It / Smart Money View (Peloton lead)",
@@ -74,5 +74,18 @@
   "2022-02-04",
   "2022-02-07",
   "2022-02-08"
+ ],
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "785cf78b6c6c84900254a154a79129b531f7049e86c979e5d2265666fd9a97c6",
+   "new_exclusions_sha256": "a5d50e09d47f8e5c8790e38218558b5c7e5cde71c333a142d16a6044f1956233",
+   "excluded_ids_now": [
+    "n1507"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
  ]
 }

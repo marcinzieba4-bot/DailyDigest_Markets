@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "824e2ef31feb6ed2feb2cb7a0e5f0c3705d9e5118ffcfdde249504cd19c0e714",
  "card_sha256": "0f10a9109c80f57029418ccefa0216cb41bf713f2685e5aa5e9a58162d67ec60",
- "exclusions_sha256": "bf18ef47fb35f96dd586f040eeca7b18229e4d4bf03aec998f38837232688541",
+ "exclusions_sha256": "33ccff620c50a412c25a64b4b161d515cc713c2c0d0066f0b3b6b5ac02aefd79",
  "findings": [
   {
    "location": "retail[2] Ford Motor / F — exploring a split to borrow Tesla's multiple (n1030)",
@@ -88,5 +88,22 @@
   "2022-02-17",
   "2022-02-18",
   "2022-02-21"
+ ],
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "bf18ef47fb35f96dd586f040eeca7b18229e4d4bf03aec998f38837232688541",
+   "new_exclusions_sha256": "33ccff620c50a412c25a64b4b161d515cc713c2c0d0066f0b3b6b5ac02aefd79",
+   "excluded_ids_now": [
+    "n0221",
+    "n0515",
+    "n0671",
+    "n1030",
+    "n1212"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
  ]
 }

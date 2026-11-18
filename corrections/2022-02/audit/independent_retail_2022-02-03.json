@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "6a9f3e898cdedecdc0fd06aad2a9423abe7aea3ddaca0db28d54f2e9ba717bc7",
  "card_sha256": "0c1562874381d9508cfc9d81bbf4c3f6b5e6e73d478f28589649b4f32fc87961",
- "exclusions_sha256": "03b98fa076abadc0786376891d2e21f734245ac3801abd6a99fabd2106ecef71",
+ "exclusions_sha256": "4d43a903ef08d55b5bc0b2c612469f4d99c50ce403d88aa8ad4a189745efec8b",
  "findings": [
   {
    "location": "retail_intro",
@@ -58,5 +58,23 @@
  "chronology_checked_against": [
   "2022-02-01",
   "2022-02-02"
+ ],
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "03b98fa076abadc0786376891d2e21f734245ac3801abd6a99fabd2106ecef71",
+   "new_exclusions_sha256": "4d43a903ef08d55b5bc0b2c612469f4d99c50ce403d88aa8ad4a189745efec8b",
+   "excluded_ids_now": [
+    "n0350",
+    "n0484",
+    "n0655",
+    "n1071",
+    "n1491",
+    "n2018"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
  ]
 }

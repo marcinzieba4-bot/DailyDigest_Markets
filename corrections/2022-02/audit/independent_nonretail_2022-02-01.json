@@ -6,7 +6,7 @@
  "fatal_or_major_remaining": 0,
  "feed_sha256": "046d8b641a66e67dfe567296c3c373d6295e5ca085295ef4244630d6801ecb29",
  "card_sha256": "b4a94ffeda67344c93a8487a5a5cc65eb29b6821a55513cbd3805a12f55ed3b4",
- "exclusions_sha256": "d3f326d4b2d88d0e98f8e7c49b0ee9a68cb9e458e56144a77e7cb41305d58f71",
+ "exclusions_sha256": "8d06f5292a58b029ba71bef9d65ebe49ec05165d16ecf4b451788199b0ae28b6",
  "findings": [
   {
    "location": "geo/CN/PMIs & Activity",
@@ -81,5 +81,23 @@
   "distinct_sources": 262,
   "warnings": 0
  },
- "nonretail_content_sha256": "b4139168e782f8c5c3e4ca662caad055ddc1cc3efdf47967520ea3bc0bcb8f8d"
+ "nonretail_content_sha256": "b4139168e782f8c5c3e4ca662caad055ddc1cc3efdf47967520ea3bc0bcb8f8d",
+ "exclusion_rebinds": [
+  {
+   "previous_exclusions_sha256": "d3f326d4b2d88d0e98f8e7c49b0ee9a68cb9e458e56144a77e7cb41305d58f71",
+   "new_exclusions_sha256": "8d06f5292a58b029ba71bef9d65ebe49ec05165d16ecf4b451788199b0ae28b6",
+   "excluded_ids_now": [
+    "n0569",
+    "n0703",
+    "n0837",
+    "n1095",
+    "n1922",
+    "n1926"
+   ],
+   "cited_ids_excluded": [],
+   "components_reverified": true,
+   "by": "root",
+   "reason": "Root added editorial exclusions for uncited records after review; reviewed component content unchanged."
+  }
+ ]
 }
