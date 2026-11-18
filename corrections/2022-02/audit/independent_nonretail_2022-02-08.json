@@ -1,0 +1,133 @@
+{
+ "date": "2022-02-08",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "8b7bea8dd62eaaed1b9e9bf22421b356397bbe0e6028ac19a98904c7ee6c0f21",
+ "card_sha256": "39a03a526242eee2a831d9ad16f137984f86c41f615d03f50053cbab92839dfa",
+ "exclusions_sha256": "e7440109bc5fe1e05d0b3b3f47c73f80d179806a0d9914e1c13c8ad7247c56c2",
+ "findings": [
+  {
+   "location": "geo/US/New / Most Important",
+   "issue": "VIX move quoted as points (-0.36 / +4.10) that are derived, not card fields (card gives -1.55% session, +21.86% over 20)",
+   "severity": "moderate",
+   "resolution": "Replaced with card percentages."
+  },
+  {
+   "location": "geo/JP/Macro Stance",
+   "issue": "n1441 (Guardian snack price hike, stamped 2022-01-28) is company news older than the 7-day window",
+   "severity": "moderate",
+   "resolution": "Removed sentence fragment and citation."
+  },
+  {
+   "location": "geo/JP/Activity & Currency",
+   "issue": "'Import bill inflated by fuel' goes beyond the cited headlines (record imports; utilities hit by fuel prices)",
+   "severity": "minor",
+   "resolution": "Reworded to two separately sourced facts."
+  },
+  {
+   "location": "geo/PL/Markets",
+   "issue": "'PKO +1.45% and mBank +3.61% over five' mixed horizons (PKO +1.45% is the 20-session figure)",
+   "severity": "moderate",
+   "resolution": "Horizons made explicit."
+  },
+  {
+   "location": "geo/PL/Playbook",
+   "issue": "'wages ... keep building' not supported by the Money.pl GUS headline",
+   "severity": "minor",
+   "resolution": "Reworded to wage data staying in focus."
+  },
+  {
+   "location": "geo/CN/Markets & Flows",
+   "issue": "Causal 'as the Verdict reported' for same-day HK/ADR drop; ASHR +0.03% beside Shanghai +2.03% could mislead on sessions",
+   "severity": "minor",
+   "resolution": "Softened link; noted ASHR traded through the closure."
+  },
+  {
+   "location": "sectors/XLE/Breaking Convention",
+   "issue": "'A deal would release barrels, which helps explain WTI's -1.07%' attributes a move to an unconcluded deal",
+   "severity": "moderate",
+   "resolution": "Reframed as risk."
+  },
+  {
+   "location": "sectors/XLC/Breaking Convention",
+   "issue": "Joe Rogan row asserted with no headline naming it",
+   "severity": "moderate",
+   "resolution": "Added own-date citation n1048 (THR, Spotify/Rogan/180M subscribers)."
+  },
+  {
+   "location": "sectors/XLF/Narrative",
+   "issue": "'Financials gain from bear flattening' contradicts usual NII logic",
+   "severity": "minor",
+   "resolution": "Reworded to higher yields."
+  },
+  {
+   "location": "sectors/XLRE/Breaking Convention",
+   "issue": "ProPublica headline is a critical investigation; 'cushions owners' overstated",
+   "severity": "minor",
+   "resolution": "Made modal."
+  },
+  {
+   "location": "sectors/SXAP/EPS Upside Watch",
+   "issue": "'mix shift that lifts margins' unsupported by ACEA share headline",
+   "severity": "minor",
+   "resolution": "Neutral wording."
+  },
+  {
+   "location": "sectors/SOXX and catalysts/Nvidia",
+   "issue": "Bloomberg Nvidia-Arm withdrawal report written as accomplished ('ends a long distraction'); SoftBank +2.61% (Tokyo session) attributed to the news, which broke after it",
+   "severity": "major",
+   "resolution": "Conditional wording; formal confirmation stays pending; SoftBank move described neutrally."
+  },
+  {
+   "location": "catalysts/BP",
+   "issue": "Brent -0.62% presented as proof the tailwind fades on Iran talks",
+   "severity": "minor",
+   "resolution": "Softened to a reminder."
+  },
+  {
+   "location": "anticipatory/Iran",
+   "issue": "Boeing +2.65% presented as response to a deal that has not happened",
+   "severity": "minor",
+   "resolution": "Reworded to already-bid."
+  },
+  {
+   "location": "flows/Credit Check, Equity & Fund Flows",
+   "issue": "'Credit is cracking' and 'spread plus outflow' overstated (HYG -2.52% vs LQD -3.11%; no spread data); n0565 is an exposure headline, not a flow",
+   "severity": "moderate",
+   "resolution": "Toned down; record-outflow headline retained."
+  },
+  {
+   "location": "all parts",
+   "issue": "Cross-date contamination check: every cited ID resolves in this date's feed (max stamp 2022-02-07T18:53Z); all claims match their headline; no other-date IDs found",
+   "severity": "minor",
+   "resolution": "No change needed."
+  },
+  {
+   "location": "all numbers",
+   "issue": "Every other card value (prices, 1/5/20-session returns, yields, curve wording, source tags, FB ticker, no spot FX) matched the card",
+   "severity": "minor",
+   "resolution": "No change needed."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Own-date feed, card, exclusions, BRIEF only; headlines not article bodies; no web; Caixin PMI item n0143 is stamped 2022-01-29 and the Take-Two (n0844) result, released late on the US day, are accepted as pre-cutoff on the stamps. Not checked: other dates, retail.",
+ "recommended_exclusions": [
+  {
+   "id": "n1949",
+   "reason": "NYT states the Nvidia-Arm deal 'is off' as fact; formal termination is an 8 Feb event"
+  },
+  {
+   "id": "n0771",
+   "reason": "Fierce Pharma Amgen Q4 results coverage stamped 2022-02-07; results were released after the US close on 8 Feb (after cutoff)"
+  }
+ ],
+ "verifier": {
+  "words": 8829,
+  "distinct_sources": 287,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "e2ae5aa99f46e46ca64b8924849692b1f0557010e0e5c4ee1f758858b7b56e0c"
+}
