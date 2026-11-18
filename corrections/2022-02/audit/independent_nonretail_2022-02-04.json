@@ -1,0 +1,70 @@
+{
+ "date": "2022-02-04",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "58bdc4b1baea03d7eeadccd84d839de656b87a227615183692ea7fd6e0d30ad3",
+ "card_sha256": "e6fadb9f3c0f159924fa9e4fbd131dfeed8bebecc5c53afec3b37adc19589df4",
+ "exclusions_sha256": "fcfa0394843a31e14d096c2e8d231cdccba0c14526cfec6379e835be8afe5d5e",
+ "findings": [
+  {
+   "location": "flows/Credit Check",
+   "issue": "'spreads are widening in sympathy with rates' asserted without spread data or a supporting headline",
+   "severity": "moderate",
+   "resolution": "Replaced with card-derived observation (LQD down more than HYG over twenty sessions) and the cited record outflows"
+  },
+  {
+   "location": "flows/Equity & Fund Flows",
+   "issue": "'rotation' claim not supported by any cited headline",
+   "severity": "moderate",
+   "resolution": "Reworded to concentration risk and capital return, no wholesale exit claimed"
+  },
+  {
+   "location": "geo EU/Activity & Inflation",
+   "issue": "'broadening' inflation not supported by cited headlines",
+   "severity": "minor",
+   "resolution": "Changed to 'still surprising to the upside' (n1663)"
+  },
+  {
+   "location": "crypto/Playbook",
+   "issue": "'bridge exploit' goes beyond the Wormhole headlines cited",
+   "severity": "minor",
+   "resolution": "Reworded to 'another exploit on the Wormhole scale'"
+  },
+  {
+   "location": "earnings_pattern/Attention into EPS",
+   "issue": "PayPal 'record one-day fall' claim had no in-sentence citation",
+   "severity": "minor",
+   "resolution": "Added n0733 (CNBC worst-ever trading day); ID still cited at most twice"
+  },
+  {
+   "location": "geo US/New / Most Important",
+   "issue": "Raskin named but n2112 headline does not name her",
+   "severity": "minor",
+   "resolution": "Added own-date n2106 (Christian Science Monitor, Raskin hearing)"
+  },
+  {
+   "location": "underowned/0/Exposure & Risk",
+   "issue": "CEE-franchise bank exposure to Ukraine is analyst inference, not headline-supported",
+   "severity": "minor",
+   "resolution": "Left as framed inference; no numeric or factual claim attributed to a source"
+  },
+  {
+   "location": "earnings_pattern/Attention into EPS",
+   "issue": "Amazon preview (n0523) used only for pre-print expectations, results now known",
+   "severity": "minor",
+   "resolution": "Acceptable: preview supports expectations only, not outcomes"
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Own-date feed, card, BRIEF and note only; headlines checked, not article bodies. Item n0144 (Caixin Jan PMI) carries a 29 Jan stamp though the release was around 1 Feb; either date is before cutoff and within the 7-day window. No other dates read.",
+ "recommended_exclusions": [],
+ "verifier": {
+  "words": 9008,
+  "distinct_sources": 263,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "7a4459b06d1260a51c829f112e289c38e7e66cd3eed35834376bcacfdc2f5e1d"
+}

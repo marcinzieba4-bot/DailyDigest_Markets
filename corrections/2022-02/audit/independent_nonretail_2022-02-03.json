@@ -1,0 +1,94 @@
+{
+ "date": "2022-02-03",
+ "kind": "nonretail",
+ "status": "accepted",
+ "reviewer": "independent_reviewer_sonnet",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "6a9f3e898cdedecdc0fd06aad2a9423abe7aea3ddaca0db28d54f2e9ba717bc7",
+ "card_sha256": "0c1562874381d9508cfc9d81bbf4c3f6b5e6e73d478f28589649b4f32fc87961",
+ "exclusions_sha256": "03b98fa076abadc0786376891d2e21f734245ac3801abd6a99fabd2106ecef71",
+ "findings": [
+  {
+   "location": "geo US Playbook",
+   "issue": "Tilted toward Alphabet while telling readers to avoid 'ad-funded' growth, an internal contradiction (Alphabet is the largest ad business and is a Bullish catalyst).",
+   "severity": "moderate",
+   "resolution": "Reworded to 'away from social-advertising and consumer-fintech growth'."
+  },
+  {
+   "location": "geo US New / Most Important",
+   "issue": "'St. Louis Fed President Bullard' adds a role not in the cited headline (\"Fed's Bullard\").",
+   "severity": "minor",
+   "resolution": "Changed to 'the Fed's Bullard'."
+  },
+  {
+   "location": "geo CN Fiscal, Policy & Trade",
+   "issue": "'keeping tariff relief off the table' went beyond the Phase 1 headline (n0206).",
+   "severity": "minor",
+   "resolution": "Softened to 'which complicates any tariff relief'."
+  },
+  {
+   "location": "geo CN New / Most Important",
+   "issue": "Attributed FXI/ASHR gap to 'offshore platforms that benefit from a softer regulatory tone' (no own-date support; FXI is a large-cap ETF) and tied Liu's donation causally to common-prosperity politics.",
+   "severity": "moderate",
+   "resolution": "Reworded to offshore large caps vs domestic A-shares; donation link made modal ('may be adapting')."
+  },
+  {
+   "location": "geo JP Activity & Currency",
+   "issue": "Sony/Toyota gains attributed to the dollar rally; Sony's move has other evidenced drivers (Barron's profit story).",
+   "severity": "minor",
+   "resolution": "Reworded to 'a backdrop that favours exporters' without causal claim for individual stocks."
+  },
+  {
+   "location": "geo PL Corporate & Sectors",
+   "issue": "Attributed CD Projekt's five-session +7.35% to Sony's Bungie deal; the headline only says shares rose with Ubisoft's after the deal.",
+   "severity": "minor",
+   "resolution": "Reworded to match n1666; card figure kept separate."
+  },
+  {
+   "location": "sectors XLF",
+   "issue": "'retail-trading boom has turned' exceeds the Robinhood net-loss headline.",
+   "severity": "minor",
+   "resolution": "Changed to 'a sign the retail-trading boom is cooling'."
+  },
+  {
+   "location": "sectors SXAP",
+   "issue": "Claimed Mercedes-Benz's rename is 'a bet on luxury pricing'; n0673 only supports a rename after the truck split.",
+   "severity": "moderate",
+   "resolution": "Replaced with 'newly renamed Mercedes-Benz Group must fund it from car margins'."
+  },
+  {
+   "location": "sectors SOXX vs geo JP / underowned #4 / catalyst AMD",
+   "issue": "SOXX said prefer designers over toolmakers while JP Playbook and Underowned recommend Tokyo Electron (equipment).",
+   "severity": "moderate",
+   "resolution": "SOXX now keeps designers as core and toolmakers, Tokyo Electron included, as a smaller laggard catch-up position."
+  },
+  {
+   "location": "earnings_pattern Pattern",
+   "issue": "'retail-access story' for the Alphabet split cited only the announcement headline.",
+   "severity": "minor",
+   "resolution": "Added Reuters n0782 (split may trigger retail buying); n0782 now cited twice in total."
+  },
+  {
+   "location": "anticipatory Amazon after Meta",
+   "issue": "Said a good print supports an XLY rebound but expressed it as long AMZN against XLY (self-contradictory, and AMZN is a large XLY weight).",
+   "severity": "minor",
+   "resolution": "Changed to 'long AMZN rather than the broader XLY'."
+  },
+  {
+   "location": "All sections (spot check)",
+   "issue": "No numeric spot-FX, no META-as-ticker anachronism (FB/Meta Platforms used correctly), no post-cutoff events presented as known (ECB/BoE decisions, Amazon/Snap/Pinterest/Ford results, ISM services treated as pending or omitted); Meta -20% presented as after-hours only; all card figures checked against right instrument/session/horizon and curve wording matches bear flattening/moderately steep; no input narration; citations at most twice per ID.",
+   "severity": "minor",
+   "resolution": "No change required; verified."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Checked every cited sentence against this date's feed title/src/stamp/cat and every card figure against the own-date card; timing by meaning (company news within 7 days, results within 14, macro within 35); verifier now PASS with 0 FAIL and 0 WARN. Limits: headlines only (no article bodies); day-granular 08:00 stamps for 2 Feb cannot prove release time, so Meta after-hours, PayPal, Alphabet, AMD and Spotify reactions rely on the guardrail list and card sessions; qualitative interpretations (e.g. defensive rotation, liquidity reading) are analytic judgments not headline facts and were left where modal. No other date's data was read.",
+ "recommended_exclusions": [],
+ "verifier": {
+  "words": 8891,
+  "distinct_sources": 260,
+  "warnings": 0
+ },
+ "nonretail_content_sha256": "d7f935e048e1721b4f402fb0e16f8734804369afcbd4b75f5788f366bcd00930"
+}
