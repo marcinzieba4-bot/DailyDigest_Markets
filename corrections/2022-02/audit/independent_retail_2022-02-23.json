@@ -1,0 +1,88 @@
+{
+ "date": "2022-02-23",
+ "kind": "retail",
+ "status": "accepted",
+ "reviewer": "independent_retail_reviewer",
+ "fatal_or_major_remaining": 0,
+ "feed_sha256": "f20cb912d8a94b7ddffaa6a07aad5e495bc9d8c8ea572fbb17a6316e15fe670a",
+ "card_sha256": "67211e27b16f3d1f7d9fcf1e6c0ea8a525db34d5d208ddd1f0644b927dff3522",
+ "exclusions_sha256": "7ba03e69187ae1f84f48369e7ca0495282e75055030919c8f4cb77871a9daa12",
+ "findings": [
+  {
+   "location": "retail[0] Why Retail Is Here, Historical Analog, When the Narrative Breaks (Brent 3.53%)",
+   "issue": "Wrong horizon. Brent's +3.53% was written as 'on the day' and 'Tuesday's 3.53% jump', but the card's one-session change for BZ=F runs from the 18 February close (the card has no 21 February Brent session), so the move spans the holiday. Dutch TTF's +8.17% also lacked a horizon and runs from the same 18 February base.",
+   "severity": "moderate",
+   "resolution": "All three Brent mentions now read 'up 3.53% from its February 18 close' or 'the 3.53% gained since February 18', and TTF reads 'jumped 8.17% from its February 18 close to 79.79 EUR/MWh'. DWAC, SOFI, AMC, GME, wheat and corn one-session changes are genuine single US sessions and stay as written."
+  },
+  {
+   "location": "retail[1] title",
+   "issue": "Chronology error: 'the ticket paid, then the app crashed' reverses the sequence. The Week (n1609) says the app crashed for 13 hours immediately after the Monday launch, before Tuesday's +10.18% session.",
+   "severity": "moderate",
+   "resolution": "Retitled 'Digital World Acquisition / DWAC — the stock outruns its stumbling app'. The CNBC chart-topping cite (n1611) was also dropped, since it only restated the ranking used on 22 February; the item keeps the newly published n0780, n1604, n1609 and n1603."
+  },
+  {
+   "location": "retail[0] lead chronology",
+   "issue": "This is a repeat of the oil war trade (USO smaller item on 15 February, with producer non-confirmation and stalled Iran talks; Exxon on 2 and 8 February, with the Nord Stream pledge and a $100 strategist target). The Smart Money and break paragraphs recycled the 15 February mechanisms (energy shares not confirming the barrel, Iran as the supply valve) without marking what had changed.",
+   "severity": "moderate",
+   "resolution": "Kept as lead under the material-update rule: there is newly published 22 February evidence (Nord Stream 2 frozen, n1099/n1101; first US and UK tranches, n1255/n1272; $100 headlines, n1109/n1263/n1264/n1275; Sberbank/VTB rebound, n0764) and new 22 February prices. The Iran valve is now updated with own-date evidence (WSJ n1245: US nears a deal, qualified by Reuters n1184: the draft puts oil later), so relief would not be instant. The notes now record the earlier oil items and the new angle; the recurring non-confirmation is stated with 22 February data only and makes no claim about earlier sessions."
+  },
+  {
+   "location": "retail[0] What Is Driving It (war framing; n1255, n1263, n1101, n1104)",
+   "issue": "Invasion framing and gravity. The full-scale invasion has not happened at this cutoff. Biden's 'beginning invasion' (n1255) and the Guardian's 'Russia orders troops into Ukraine' (n1263) are characterisations, and 'the Ukrainian republics' read as if the breakaway entities were endorsed. n1104 (New York Post, 'Russia invasion of Ukraine') must not be used as fact.",
+   "severity": "minor",
+   "resolution": "n1255 is now cited as 'Biden imposed new Russia sanctions and, in Al Jazeera's account, decried a 'beginning invasion''. The Guardian's framing stays attributed, the halt is tied to 'Russia's recognition of Ukraine's breakaway 'republics'', and n1104 is not cited. A gravity line was added to the hook ('a bet that pays most when the news is worst')."
+  },
+  {
+   "location": "retail[0] Smart Money View (n0122)",
+   "issue": "Misattribution: 'OPEC+ says it will continue to maintain balance' cited a panel-session headline whose src is the Ministry of Petroleum and Mineral Resources.",
+   "severity": "minor",
+   "resolution": "Now reads 'an OPEC+ ministerial panel pledged to keep maintaining balance in oil markets, per the Ministry of Petroleum and Mineral Resources [[n0122]]'."
+  },
+  {
+   "location": "retail[0] What Is Driving It (n0541)",
+   "issue": "Reuters' 18 February conditional preview, 'Commodity supplies at risk if Russia hit by sanctions', was superseded by the actual 22 February tranches and added only words.",
+   "severity": "minor",
+   "resolution": "Removed, freeing words for the horizon, attribution and Iran fixes within the 1,350-word cap."
+  },
+  {
+   "location": "notes/retail_2022-02-23.json",
+   "issue": "The notes described the 22 February Ford item as live (it was removed in review), omitted the 18 February Bitcoin item and the 3 February PayPal item from the chronology, stated the LMT trigger ambiguously, did not follow up the 22 February KWEB and TQQQ break conditions, and listed removed IDs (n0541, n1611) as evidence.",
+   "severity": "minor",
+   "resolution": "Updated lead, smaller, why_lead, why_smaller, evidence_ids and considered_not_chosen to match the final draft and the reviewed 22 February edition (LMT 386.20 USD, just below 386.46; KWEB 34.09 USD, below 35.60; TQQQ 48.88 USD)."
+  },
+  {
+   "location": "all parts",
+   "issue": "Systematic check of every cited ID (title, src, published_at), timing, numbers against the 23 February card (US values are 22 February closes), units, spot-FX, hindsight and known/unknown events.",
+   "severity": "info",
+   "resolution": "Known facts used correctly: the Nord Stream 2 halt, the first US/UK sanctions, Biden's 22 February remarks and the S&P 500 correction. Home Depot and Palo Alto results are known but unused. RBNZ and the Lowe's/TJX/Lucid/eBay results are absent. There is no numeric spot-FX. All prices and returns match the card (Brent 96.84, USO 65.54 +1.24%, WTI +1.41%, XLE -1.62%, XOM -1.16%, OXY -3.13%, DWAC 92.90 +10.18%, SOFI 10.26 -9.92%, HOOD -15.28% 5s, SQ -15.88% 5s, 2Y 1.56% +57 bps, AMC 16.47 -7.99%, GME 118.06 +17.88% 20s). Headline numbers ($100, $1.1B, 170k, 13 hours, 20 grand) come from cited headlines in the same part. Each ID is used at most twice, and the verifier PASSes at 1,342 words (lead 788; smaller items 164/174/176)."
+  }
+ ],
+ "reviewed_validation_warnings": [],
+ "stale_warning_dispositions_dropped": [],
+ "scope_limits": "Headline-only review against the frozen 23 February feed, card and exclusions, with no web access. Timestamps are day-granular (T08:00Z), so exact publication clocks cannot be verified. n1274 (Los Angeles Times, California gas prices) is kept as coverage-pattern evidence because the event it reports, a daytime retail-price move, precedes the cutoff, but its publication clock is unverified. Chronology was checked against the retail notes for 1-22 February and the full 15, 8, 21 and reviewed 22 February retail drafts; nothing dated 24 February or later was read.",
+ "recommended_exclusions": [],
+ "verifier": {
+  "words": 1342,
+  "distinct_sources": 27,
+  "warnings": 0
+ },
+ "retail_draft_sha256": "f64f556e85f46135ea43dfaf4e9bbd9ce5f96ec7b424c31c52afb65580da2346",
+ "chronology_checked_against": [
+  "2022-02-01",
+  "2022-02-02",
+  "2022-02-03",
+  "2022-02-04",
+  "2022-02-07",
+  "2022-02-08",
+  "2022-02-09",
+  "2022-02-10",
+  "2022-02-11",
+  "2022-02-14",
+  "2022-02-15",
+  "2022-02-16",
+  "2022-02-17",
+  "2022-02-18",
+  "2022-02-21",
+  "2022-02-22"
+ ]
+}
