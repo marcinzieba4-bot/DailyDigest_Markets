@@ -1,0 +1,104 @@
+{
+ "date": "2022-02-01",
+ "author": "nonretail_writer",
+ "own_date_sources_only": true,
+ "central_thesis": "January's violent repricing of the Fed path (2Y +45 bps in twenty observations, a bear flattening to a +61 bps 10Y-2Y spread) has moved markets from paying for long-dated growth to paying for cash flow now; the last-session rebound (S&P 500 +1.89%, VIX -10.23%) is a positioning squeeze rather than a regime change, so own cash-generative energy, banks and megacap compounders, fade duration-heavy growth, crypto and REITs until the front end stabilises, and keep an energy, gas and defence premium while the Russia-Ukraine standoff and an Iran-deal swing factor remain unresolved; China is the one major economy easing, which supports a small offshore-internet overweight, while Poland's 5.7% growth and bank rally contrast with a squeezed household and frontline security risk.",
+ "sources_policy": "Only the 2022-02-01 frozen feed (via tools/digest.py with own-date exclusions applied; exclusions list is empty) and the 2022-02-01 market card (via tools/showcard.py) were used. Every number is quoted from the own-date card (instrument, session and horizon checked; Shanghai/Korea tagged 2022-01-28, crypto as prior completed daily close 2022-01-31, everything else 2022-01-31) or from a headline cited in the same part. No later-date feed, card, spec, draft or note was used, and no web access. Process disclosure: an early card dump was written to a generic scratch filename that another session was also writing to; part of that display showed rows from a different date's card. Those rows were discarded unread for authoring; the own-date card was re-exported to a uniquely named file and every figure was taken from it, and the verifier's card-number check passed. Each citation ID is used at most twice in this component. Headlines were treated as headlines only: previews are used only for pending events (UPS automation focus, January payrolls skew, BoE February hike poll, RBA next step, Iran-deal timetable, Polish VAT cut from 1 February, Daimler renaming on Feb. 1), never for outcomes. No numeric spot-FX is quoted; currency direction comes from dated reporting (Reuters dollar slide, Investing.com dollar weekly rise, Euronews sterling near 23-month high versus the euro, Money.pl Ukraine conflict hitting the zloty) and DXY from the card.",
+ "known_ambiguities_omitted": [
+  {
+   "ids": [
+    "n0837"
+   ],
+   "category": "after-cutoff",
+   "reason": "CNBC 'Stocks rise for a third day ... Dow jumps 270 points' carries a 31 January stamp but describes the 1 February US session (the card shows the Dow +1.17% on 2022-01-31); not used."
+  },
+  {
+   "ids": [
+    "n1926"
+   ],
+   "category": "after-cutoff (possible)",
+   "reason": "Al Jazeera 'Asia shares in cautious mood, oil keeps climbing' could describe the 1 February Asian morning; not used."
+  },
+  {
+   "ids": [
+    "n0173"
+   ],
+   "category": "misdated / timing ambiguity",
+   "reason": "Reuters Caixin January PMI item is stamped 29 January, earlier than any plausible January PMI release; release timing could not be confirmed before the cutoff, so only the official PMI (n0177, stamped 30 January) and secondary coverage were used."
+  },
+  {
+   "ids": [
+    "n1796",
+    "n1197",
+    "n1149"
+   ],
+   "category": "live blog",
+   "reason": "Reuters LIVE MARKETS posts are rolling live-blog entries; rejected under the contract."
+  },
+  {
+   "ids": [
+    "n0095"
+   ],
+   "category": "contradictory",
+   "reason": "WTTW 'Stocks Mixed as Wall Street Ends Worst Month' conflicts with the strong 31 January close (S&P 500 +1.89%, Nasdaq 100 +3.29%); not used."
+  },
+  {
+   "ids": [
+    "n1599",
+    "n1586"
+   ],
+   "category": "spot-FX / contradictory",
+   "reason": "Business Insider Polska quotes a numeric dollar-zloty level and Money.pl reports a stronger dollar on the same day Reuters reports the dollar sliding; numeric spot-FX is prohibited and the direction conflicts, so neither is used. n1201 (TorFX) is cited only for the German inflation drop, not for any exchange-rate level."
+  },
+  {
+   "ids": [
+    "n1904"
+   ],
+   "category": "contradictory framing",
+   "reason": "NYT 'U.S. Economy Grew 1.7% in 4th Quarter' uses a non-annualised figure that conflicts with the 6.9% annualised framing used; omitted to avoid confusion."
+  },
+  {
+   "ids": [
+    "n0750",
+    "n0569",
+    "n0703",
+    "n1922",
+    "n1031",
+    "n1032",
+    "n0933"
+   ],
+   "category": "misdated / promotional",
+   "reason": "eToro CEG 'analyst target 353.80' page, '2026'/'2027'/'2023' list and events pages and ESPN 2026 PGA pages are later-dated or promotional records under January stamps; never cited."
+  },
+  {
+   "ids": [
+    "n1786"
+   ],
+   "category": "timing uncertainty",
+   "reason": "FTC review of the Microsoft-Activision deal: could not be confirmed as published before the cutoff from the headline alone; not used."
+  },
+  {
+   "ids": [
+    "n0828"
+   ],
+   "category": "attribution care",
+   "reason": "Business Insider 'Sony jumps after announcing deal' is cited for the share reaction to the Bungie deal; the Tokyo card close (+3.96% on 2022-01-31) is quoted without attributing it to the deal, because the announcement timing relative to the Tokyo session is not established."
+  },
+  {
+   "ids": [],
+   "category": "after-cutoff events",
+   "reason": "RBA decision (1 February 03:30 UTC), Australian December retail sales (00:30 UTC), US January ISM manufacturing and JOLTS, and results from Alphabet, AMD, PayPal, Starbucks, GM, Exxon and UPS are after the cutoff; none is described as an outcome and none is given a date, since no own-date preview dates them (UPS appears only via the Reuters analyst-focus preview n0761, the RBA only via previews n0058/n0018)."
+  },
+  {
+   "ids": [],
+   "category": "calendar context",
+   "reason": "Lunar New Year market closures are not asserted as dated facts; the text relies on the card's last completed sessions (Shanghai and Korea 2022-01-28, Hong Kong 2022-01-31, TAIEX 2022-01-26) and the SCMP 'closing the Year of the Ox' headline."
+  },
+  {
+   "ids": [],
+   "category": "verifier warnings",
+   "reason": "None remaining: final run is PASS with 0 FAIL and 0 WARN."
+  }
+ ],
+ "authoring_stage": "initial nonretail draft before independent review"
+}

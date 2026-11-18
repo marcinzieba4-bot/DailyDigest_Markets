@@ -1,0 +1,32 @@
+{
+ "date": "2022-02-03",
+ "author": "nonretail_writer",
+ "own_date_sources_only": true,
+ "central_thesis": "Going into 3 February 2022, markets are pricing a March Fed lift-off through a bear-flattening Treasury curve (2Y 1.16%, +39 bps over twenty observations; 10Y-2Y +62 bps, moderately steep) and rewarding only self-funding, guidance-backed earnings (Alphabet, AMD, Exxon, UPS) while de-rating growth whose user or margin outlook cracked (PayPal on the session, Meta and Spotify after hours), so the call is neutral beta tilted to energy, semiconductors and Alphabet against ad-funded, consumer-fintech and rate-sensitive exposure, with the pending BoE/ECB decisions, Amazon's report, January payrolls and Russia-Ukraine/European gas as the swing risks.",
+ "sources_policy": "Only the 2022-02-03 frozen feed (tools/digest.py) and the 2022-02-03 market card (tools/showcard.py) were used; no other date's feed, card, spec, draft or note, and no specs/, retail_drafts/, notes/retail_* or audit/independent_* files were read. Every number is either a card value quoted exactly (with the card's session in the source tag: US/Europe/Japan/Australia/Poland 2022-02-02, Shanghai 2022-01-28, Hang Seng 2022-01-31, crypto prior completed daily close 2022-02-02, Treasury prior close 2022-02-02) or appears in a headline cited in the same part. Previews (Amazon via n0784/n0650, BoE via n0107/n1193, ECB via n1182/n1255, payrolls via n2030) are used only to establish that an event is pending, never an outcome, and no pending event is given a calendar date that a cited headline does not carry. Company roles and claims were checked against headline wording; analyst opinions are attributed as opinions (e.g., MoneyWeek short call, Soros, Wolfe's Peller, BofA's Arya, Jefferies' Uerkwitz). Meta, Spotify and AMD reactions are described only as reported after-hours moves; the card's FB close (323.00 USD, 2022-02-02) is treated as the last regular-session level, and the 3 February session is not described. Polish-language headlines were translated for the PL block. No numeric spot-FX levels or returns are quoted; currency direction comes only from dated reporting (dollar via n0044/n1440; zloty via n1650; pound via n0107/n1283) and DXY from the card. 260 distinct own-date IDs are cited, none more than twice. tools/verify.py --nonretail 2022-02-03: PASS, 0 fail, 0 warn, 8,863 body words.",
+ "known_ambiguities_omitted": [
+  "n0048 (RBA '1 February 2022 | Minutes of the Monetary Policy Meeting of the Board'): minutes of the 1 February meeting would normally be published about two weeks later, so the 2022-02-01 stamp looks misdated and the content may be after the cutoff; not cited.",
+  "RBA ending bond purchases: no own-date headline states it (n0059 is only the decision-statement title), so the AU block does not claim QE ended and its label avoids it.",
+  "ADP January private payrolls: no own-date headline carries the release, so it is not mentioned.",
+  "Eurozone January flash CPI: only direction is evidenced (n1684 'European inflation surprised economists again'; n1269 'High Eurozone Inflation'); no inflation rate is quoted.",
+  "ECB and BoE 3 February decisions: treated strictly as pending; no outcome, and no weekday/date asserted because no cited preview gives one (BoE only 'in February' per n1193).",
+  "Amazon, Snap, Pinterest and Ford results (pending after the 3 February close): Amazon appears only through preview headlines; no Snap/Pinterest/Ford preview exists in the feed, so they are referenced only as 'their own next reports' and Ford's results are not mentioned (n0824 Ford EV investment not used).",
+  "US January ISM services and January payrolls: no dated preview; ISM services omitted, payrolls framed only through n2030 (White House warning of Omicron distortion) without a release date.",
+  "Meta's 3 February regular session: unknown at the cutoff; only after-hours reporting (n0846 'sink 20%', n1138) and the card's 2 February close are used.",
+  "Qualcomm (+6.25% on the 2 February regular session) reported after that close; no own-date headline on its results, so the move is not attributed or discussed.",
+  "Sony Group's +4.93% 2 February Tokyo session is not attributed to its results (n0869, n1890) because headline timing does not establish whether the release preceded the session.",
+  "Spot-FX headlines with numeric levels omitted: n1693 (dollar above 4 zł), n1694 (franc near 4.40 zł), n1646 (euro above 4.5 zł), n1608, n1595, n1245 (TorFX pound/euro); n1269 and n1283 used only for direction, with no level.",
+  "n1089 (Tom's Hardware 'AMD's 2022 Sales Hit $21.5 Billion'): wording conflates guidance with achieved sales; contradictory/misleading, not used.",
+  "n0531 (eToro 'CEG Stock Price | Analyst Target 353.80'): stamped 31 January, before Constellation began trading, with later-looking quote data; misdated/promotional, not used.",
+  "Misdated or evergreen pages not used: n0350 ('Stocks to Research in 2026'), n0934 ('Fake Crypto Websites 2023'), n0655 ('Bitcoin Price Predictions for 2025'), n2018 ('February 13, 2027').",
+  "Rolling quote/data pages not used: n0040, n0031, n0771, n0469, n0217 (LPR swaps page), n1678 (Stooq WIG140).",
+  "Reuters 'LIVE MARKETS' rolling items (n1262, n1241, n1828) treated as live-blog material and not cited; n1830 used instead for the oil-month context.",
+  "n1491 carries an anachronistic source label ('U.S. Department of War (.gov)'); the troop-deployment point is sourced from n1492 (PBS), n1489 (Sky News) and n1493 (CNN) instead.",
+  "n0487 (Business Insider 'Expert Warns of 41% Drop in S&P 500'): sensational single-source forecast; not used.",
+  "n1691 (Wyborcza 'Krajobraz po klęsce Kaczyńskiego w Sejmie'): ambiguous which vote is meant; not used.",
+  "n1557 (TVP 3, Orlen 'terminala gazu płynnego' at Police): 'gaz płynny' can mean LPG rather than LNG, so it is rendered literally as a 'liquid-gas terminal'.",
+  "n1650 (FXMAG zloty commentary) has a promotional tone; used only, with attribution, for the direction 'worst-performing currency again'.",
+  "Russia-Ukraine: only the build-up, US troop deployments, rhetoric and pending escalation risk are discussed; no invasion, sanctions package or later event is described."
+ ],
+ "authoring_stage": "initial nonretail draft before independent review"
+}
