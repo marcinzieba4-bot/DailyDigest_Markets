@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/mapp-extended-history.yml'
       - 'strategies/mapp_strategy/ci/run_extended_history.py'
+      - 'strategies/mapp_strategy/ci/extended_input_audit.py'
       - 'strategies/mapp_strategy/ci/extended_outputs.py'
 permissions:
   contents: read
@@ -25,30 +26,15 @@ jobs:
           python-version: '3.12'
       - name: Install research dependencies
         run: python -m pip install -r requirements.txt
-      - name: Inspect published archive index
-        run: |
-          python - <<'PY'
-          import collections,datetime as dt,hashlib,json,re,urllib.request
-          url='https://d7g7nkeytae81.cloudfront.net/reports/index.html'
-          request=urllib.request.Request(url,headers={'User-Agent':'mapp_strategy historical research'})
-          with urllib.request.urlopen(request,timeout=45) as response:
-              body=response.read()
-              modified=response.headers.get('Last-Modified','')
-          dates=sorted(set(re.findall(r'archive/(\d{4}-\d{2}-\d{2})\.html',body.decode('utf-8'))))
-          dates=[d for d in dates if '2022-01-01'<=d<='2026-11-20']
-          assert dates,'Archive index contains no dates in the requested window'
-          print(json.dumps({'phase':'index_inventory_not_yet_validated_daily_reports','index_sha256':hashlib.sha256(body).hexdigest(),'last_modified':modified,'indexed_dates':len(dates),'first':dates[0],'last':dates[-1],'monthly_counts':dict(collections.Counter(d[:7] for d in dates))},sort_keys=True))
-          PY
-      - name: Check price history and January 2022 warmup
-        run: |
-          python market/fetch_prices.py --root /tmp/mapp-extended-price-probe --start 2021-01-01 --end 2026-11-20
-          python - <<'PY'
-          import collections,csv,json
-          from pathlib import Path
-          rows=list(csv.DictReader(Path('/tmp/mapp-extended-price-probe/prices.csv').open()))
-          grouped=collections.defaultdict(list)
-          for row in rows:grouped[row['symbol']].append(row['session_date'])
-          assert len(grouped)==17
-          assert all(max(days)=='2026-11-20' and sum(day<'2022-01-01' for day in days)>=41 for days in grouped.values())
-          print(json.dumps({'status':'passed','series':17,'last_completed_session':'2026-11-20','minimum_prior_closes_before_2022':min(sum(day<'2022-01-01' for day in days) for days in grouped.values()),'price_rows':len(rows)}))
-          PY
+      - name: Compile extended-history code
+        run: python -m compileall -q .
+      - name: Simulate fixed strategies with explicit missing-month policy
+        run: python ci/run_extended_history.py --root . --start 2022-01-01 --end 2026-11-20 --workers 12
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mapp_strategy_extended_2022_2026
+          path: |
+            strategies/mapp_strategy/publication/
+            strategies/mapp_strategy/mapp_strategy_extended_simulated_results.zip
+          if-no-files-found: error
+          retention-days: 90
