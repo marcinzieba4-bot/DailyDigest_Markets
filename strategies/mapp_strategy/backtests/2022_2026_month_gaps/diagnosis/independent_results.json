@@ -1,0 +1,608 @@
+{
+  "strategy_id": "mapp_strategy",
+  "status": "passed",
+  "cases": 3,
+  "method": "Independent physical-order cash/NAV and ACT365 borrow reconstruction, virtual source/hedge attribution, exposure and 40-return beta diagnostics. Production engine is not imported by the auditor.",
+  "same_source_signatures_across_policies": true,
+  "ledger_audits": [
+    {
+      "scope": "main",
+      "corpus": "archive_replay",
+      "family": "etf_own",
+      "policy": "unhedged25",
+      "status": "passed",
+      "daily_rows": 1227,
+      "baskets": 54,
+      "source_legs": 55,
+      "orders": 110,
+      "borrow_rows": 0
+    },
+    {
+      "scope": "main",
+      "corpus": "archive_replay",
+      "family": "etf_own",
+      "policy": "dollar_short25",
+      "status": "passed",
+      "daily_rows": 1227,
+      "baskets": 54,
+      "source_legs": 55,
+      "orders": 212,
+      "borrow_rows": 1060
+    },
+    {
+      "scope": "main",
+      "corpus": "archive_replay",
+      "family": "etf_own",
+      "policy": "beta40_daily_short25",
+      "status": "passed",
+      "daily_rows": 1227,
+      "baskets": 54,
+      "source_legs": 55,
+      "orders": 637,
+      "borrow_rows": 964
+    }
+  ],
+  "beta_audits": [
+    {
+      "status": "passed",
+      "corpus": "archive_replay",
+      "policy": "unhedged25",
+      "exante_rows": 540,
+      "unknown_beta_rows": 0,
+      "negative_known_beta_short_only_constraint_rows": 0,
+      "max_abs_opening_estimated_beta": 0.7662034770900917,
+      "min_hedge_qty": 0,
+      "max_hedge_qty": 0
+    },
+    {
+      "status": "passed",
+      "corpus": "archive_replay",
+      "policy": "dollar_short25",
+      "exante_rows": 540,
+      "unknown_beta_rows": 0,
+      "negative_known_beta_short_only_constraint_rows": 0,
+      "max_abs_opening_estimated_beta": 0.5258903755252443,
+      "min_hedge_qty": -0.0007066886304447729,
+      "max_hedge_qty": -0.0002418388698728827
+    },
+    {
+      "status": "passed",
+      "corpus": "archive_replay",
+      "policy": "beta40_daily_short25",
+      "exante_rows": 540,
+      "unknown_beta_rows": 0,
+      "negative_known_beta_short_only_constraint_rows": 48,
+      "max_abs_opening_estimated_beta": 0.23296298176591354,
+      "min_hedge_qty": -0.0011926817142106035,
+      "max_hedge_qty": 0
+    }
+  ],
+  "metrics": [
+    {
+      "scope": "main",
+      "family": "etf_own",
+      "corpus": "archive_replay",
+      "policy": "unhedged25",
+      "start": "2022-01-03",
+      "end": "2026-11-20",
+      "total_return": 0.19453435481317127,
+      "max_drawdown": -0.03551608312639121,
+      "baskets": 54,
+      "completed_baskets": 54,
+      "max_gross_exposure": 0.2878244273583478,
+      "average_gross_exposure": 0.10949813789831567,
+      "transaction_cost": 0.02904260321863636,
+      "borrow_cost": 0.0,
+      "realized_all": {
+        "observations": 1227,
+        "beta": 0.06319595569216685,
+        "correlation": 0.31854119320122143,
+        "intercept": 0.00012095725442713228
+      },
+      "realized_active": {
+        "observations": 594,
+        "beta": 0.197396160796857,
+        "correlation": 0.5622885671393923,
+        "intercept": 0.00014744231419425993
+      },
+      "max_abs_opening_estimated_beta": 0.7662034770900918,
+      "short_only_beta_constrained_openings": 0,
+      "unknown_beta_active_openings": 0,
+      "ending_nav_usd": 119453.43548131712,
+      "initial_capital_recovery": {
+        "anchor_nav": 1.0,
+        "anchor_usd": 100000.0,
+        "state": "recovered",
+        "first_under": {
+          "date": "2022-01-05",
+          "index": 2,
+          "nav": 0.993337500092301,
+          "nav_usd": 99333.7500092301,
+          "pnl_usd": -666.249990769896
+        },
+        "first_recovery": {
+          "date": "2022-08-10",
+          "index": 151,
+          "nav": 1.000932667560853,
+          "nav_usd": 100093.2667560853,
+          "pnl_usd": 93.26675608529733
+        },
+        "durable_recovery_in_observed_sample": {
+          "date": "2022-10-26",
+          "index": 205,
+          "nav": 1.0017556570072337,
+          "nav_usd": 100175.56570072337,
+          "pnl_usd": 175.56570072336797
+        },
+        "strict_underwater_closes_before_first_recovery": 149,
+        "first_under_to_first_recovery_session_intervals": 149,
+        "first_under_to_first_recovery_calendar_days": 217
+      },
+      "maximum_drawdown_episode": {
+        "anchor_nav": 1.2385217979427536,
+        "anchor_usd": 123852.17979427536,
+        "state": "unrecovered",
+        "first_under": {
+          "date": "2026-11-10",
+          "index": 1218,
+          "nav": 1.2300623380003657,
+          "nav_usd": 123006.23380003657,
+          "pnl_usd": 23006.233800036567
+        },
+        "first_recovery": null,
+        "durable_recovery_in_observed_sample": null,
+        "strict_underwater_closes_before_first_recovery": 9,
+        "peak": {
+          "date": "2026-11-09",
+          "index": 1217,
+          "nav": 1.2385217979427536,
+          "nav_usd": 123852.17979427536,
+          "pnl_usd": 23852.179794275362
+        },
+        "trough": {
+          "date": "2026-11-20",
+          "index": 1226,
+          "nav": 1.1945343548131713,
+          "nav_usd": 119453.43548131712,
+          "pnl_usd": 19453.435481317127
+        },
+        "drawdown": -0.03551608312639121
+      },
+      "calendar_year_returns": [
+        {
+          "year": "2022",
+          "start": "2022-01-03",
+          "end": "2022-12-30",
+          "starting_nav": 1.0,
+          "ending_nav": 1.0286087854702735,
+          "return_value": 0.028608785470273457
+        },
+        {
+          "year": "2023",
+          "start": "2023-01-03",
+          "end": "2023-12-29",
+          "starting_nav": 1.0286087854702735,
+          "ending_nav": 1.064686498121736,
+          "return_value": 0.035074280096653254
+        },
+        {
+          "year": "2024",
+          "start": "2024-01-02",
+          "end": "2024-12-31",
+          "starting_nav": 1.064686498121736,
+          "ending_nav": 1.0632772159278099,
+          "return_value": -0.0013236593085499404
+        },
+        {
+          "year": "2025",
+          "start": "2025-01-02",
+          "end": "2025-12-31",
+          "starting_nav": 1.0632772159278099,
+          "ending_nav": 1.0952467920434386,
+          "return_value": 0.03006701887026919
+        },
+        {
+          "year": "2026",
+          "start": "2026-01-02",
+          "end": "2026-11-20",
+          "starting_nav": 1.0952467920434386,
+          "ending_nav": 1.1945343548131713,
+          "return_value": 0.0906531418224823
+        }
+      ],
+      "lowest_observed_nav_close": {
+        "date": "2022-02-22",
+        "index": 34,
+        "nav": 0.9721039085724029,
+        "nav_usd": 97210.39085724029,
+        "pnl_usd": -2789.609142759708
+      },
+      "peak_gross_observation": {
+        "date": "2026-06-03",
+        "kind": "open",
+        "gross_exposure": 0.2878244273583478
+      },
+      "closed_trade_attribution": {
+        "source_gross_pnl_usd": 22357.695803180784,
+        "hedge_gross_pnl_usd": 0.0,
+        "transaction_cost_usd": 2904.260321863635,
+        "borrow_cost_usd": 0.0,
+        "net_pnl_usd": 19453.43548131715
+      },
+      "pre_april_2025_return": 0.07037055404250347,
+      "continuous_april_onward_return": 0.11600076282156158,
+      "pre_april_2025_filled_baskets": 33,
+      "pre_april_2025_closed": {
+        "source_gross_pnl_usd": 8741.289153200763,
+        "hedge_gross_pnl_usd": 0.0,
+        "transaction_cost_usd": 1704.2337489504155,
+        "borrow_cost_usd": 0.0,
+        "net_pnl_usd": 7037.055404250349,
+        "baskets": 33
+      },
+      "calendar_2025_closed": {
+        "source_gross_pnl_usd": 4085.5935634627667,
+        "hedge_gross_pnl_usd": 0.0,
+        "transaction_cost_usd": 715.4878461463534,
+        "borrow_cost_usd": 0.0,
+        "net_pnl_usd": 3370.1057173164136,
+        "baskets": 13
+      },
+      "pre_september_2024_return": 0.05855503830245512,
+      "continuous_september_2024_onward_return": 0.1284574836361636,
+      "pre_september_2024_filled_baskets": 25
+    },
+    {
+      "scope": "main",
+      "family": "etf_own",
+      "corpus": "archive_replay",
+      "policy": "dollar_short25",
+      "start": "2022-01-03",
+      "end": "2026-11-20",
+      "total_return": 0.02734187071352734,
+      "max_drawdown": -0.08967176896385454,
+      "baskets": 54,
+      "completed_baskets": 54,
+      "max_gross_exposure": 0.5363689410827993,
+      "average_gross_exposure": 0.21295532752887808,
+      "transaction_cost": 0.052113974034167766,
+      "borrow_cost": 0.01544276150232901,
+      "realized_all": {
+        "observations": 1227,
+        "beta": -0.006425061352615859,
+        "correlation": -0.039367450200798404,
+        "intercept": 2.6263469568507445e-05
+      },
+      "realized_active": {
+        "observations": 584,
+        "beta": -0.020624998405380197,
+        "correlation": -0.07094066743892329,
+        "intercept": 6.586624606159387e-05
+      },
+      "max_abs_opening_estimated_beta": 0.5258903755252444,
+      "short_only_beta_constrained_openings": 0,
+      "unknown_beta_active_openings": 0,
+      "ending_nav_usd": 102734.18707135273,
+      "initial_capital_recovery": {
+        "anchor_nav": 1.0,
+        "anchor_usd": 100000.0,
+        "state": "recovered",
+        "first_under": {
+          "date": "2022-01-05",
+          "index": 2,
+          "nav": 0.997677728247698,
+          "nav_usd": 99767.7728247698,
+          "pnl_usd": -232.2271752302041
+        },
+        "first_recovery": {
+          "date": "2022-02-11",
+          "index": 28,
+          "nav": 1.0037101906900618,
+          "nav_usd": 100371.01906900619,
+          "pnl_usd": 371.0190690061843
+        },
+        "durable_recovery_in_observed_sample": {
+          "date": "2026-05-26",
+          "index": 1101,
+          "nav": 1.0036288220894654,
+          "nav_usd": 100362.88220894654,
+          "pnl_usd": 362.88220894653557
+        },
+        "strict_underwater_closes_before_first_recovery": 26,
+        "first_under_to_first_recovery_session_intervals": 26,
+        "first_under_to_first_recovery_calendar_days": 37
+      },
+      "maximum_drawdown_episode": {
+        "anchor_nav": 1.0436389798181804,
+        "anchor_usd": 104363.89798181804,
+        "state": "recovered",
+        "first_under": {
+          "date": "2023-03-24",
+          "index": 307,
+          "nav": 1.0425926374436876,
+          "nav_usd": 104259.26374436876,
+          "pnl_usd": 4259.263744368757
+        },
+        "first_recovery": {
+          "date": "2026-09-01",
+          "index": 1169,
+          "nav": 1.0481099930675861,
+          "nav_usd": 104810.99930675862,
+          "pnl_usd": 4810.999306758612
+        },
+        "durable_recovery_in_observed_sample": null,
+        "strict_underwater_closes_before_first_recovery": 862,
+        "first_under_to_first_recovery_session_intervals": 862,
+        "first_under_to_first_recovery_calendar_days": 1257,
+        "peak": {
+          "date": "2023-03-23",
+          "index": 306,
+          "nav": 1.0436389798181804,
+          "nav_usd": 104363.89798181804,
+          "pnl_usd": 4363.897981818043
+        },
+        "trough": {
+          "date": "2025-11-17",
+          "index": 972,
+          "nav": 0.9500540263382518,
+          "nav_usd": 95005.40263382517,
+          "pnl_usd": -4994.597366174825
+        },
+        "drawdown": -0.08967176896385454,
+        "peak_to_first_recovery_session_intervals": 863,
+        "peak_to_first_recovery_calendar_days": 1258
+      },
+      "calendar_year_returns": [
+        {
+          "year": "2022",
+          "start": "2022-01-03",
+          "end": "2022-12-30",
+          "starting_nav": 1.0,
+          "ending_nav": 1.0370812745356095,
+          "return_value": 0.0370812745356095
+        },
+        {
+          "year": "2023",
+          "start": "2023-01-03",
+          "end": "2023-12-29",
+          "starting_nav": 1.0370812745356095,
+          "ending_nav": 1.0179848902993078,
+          "return_value": -0.018413585034454227
+        },
+        {
+          "year": "2024",
+          "start": "2024-01-02",
+          "end": "2024-12-31",
+          "starting_nav": 1.0179848902993078,
+          "ending_nav": 0.9637563761235539,
+          "return_value": -0.05327045095906058
+        },
+        {
+          "year": "2025",
+          "start": "2025-01-02",
+          "end": "2025-12-31",
+          "starting_nav": 0.9637563761235539,
+          "ending_nav": 0.9522310184065453,
+          "return_value": -0.011958787513672409
+        },
+        {
+          "year": "2026",
+          "start": "2026-01-02",
+          "end": "2026-11-20",
+          "starting_nav": 0.9522310184065453,
+          "ending_nav": 1.0273418707135273,
+          "return_value": 0.07887881286693621
+        }
+      ],
+      "lowest_observed_nav_close": {
+        "date": "2025-11-17",
+        "index": 972,
+        "nav": 0.9500540263382518,
+        "nav_usd": 95005.40263382517,
+        "pnl_usd": -4994.597366174825
+      },
+      "peak_gross_observation": {
+        "date": "2026-06-03",
+        "kind": "open",
+        "gross_exposure": 0.5363689410827993
+      },
+      "closed_trade_attribution": {
+        "source_gross_pnl_usd": 20699.048722034793,
+        "hedge_gross_pnl_usd": -11209.188097032331,
+        "transaction_cost_usd": 5211.397403416775,
+        "borrow_cost_usd": 1544.2761502329008,
+        "net_pnl_usd": 2734.187071352785
+      },
+      "pre_april_2025_return": -0.02409150803090543,
+      "continuous_april_onward_return": 0.052703075306431035,
+      "pre_april_2025_filled_baskets": 33,
+      "pre_april_2025_closed": {
+        "source_gross_pnl_usd": 8707.752667008834,
+        "hedge_gross_pnl_usd": -7064.122379568082,
+        "transaction_cost_usd": 3124.6488775371545,
+        "borrow_cost_usd": 928.1322129938798,
+        "net_pnl_usd": -2409.1508030902824,
+        "baskets": 33
+      },
+      "calendar_2025_closed": {
+        "source_gross_pnl_usd": 3728.2646817559566,
+        "hedge_gross_pnl_usd": -3118.3656107718225,
+        "transaction_cost_usd": 1266.432222790276,
+        "borrow_cost_usd": 375.0219292316614,
+        "net_pnl_usd": -1031.555081037804,
+        "baskets": 13
+      },
+      "pre_september_2024_return": -0.016335426604850323,
+      "continuous_september_2024_onward_return": 0.04440263327530847,
+      "pre_september_2024_filled_baskets": 25
+    },
+    {
+      "scope": "main",
+      "family": "etf_own",
+      "corpus": "archive_replay",
+      "policy": "beta40_daily_short25",
+      "start": "2022-01-03",
+      "end": "2026-11-20",
+      "total_return": -0.0346099496468788,
+      "max_drawdown": -0.1101331676484576,
+      "baskets": 54,
+      "completed_baskets": 54,
+      "max_gross_exposure": 1.07582770564227,
+      "average_gross_exposure": 0.217716257572774,
+      "transaction_cost": 0.054769268333905476,
+      "borrow_cost": 0.01568862967420435,
+      "realized_all": {
+        "observations": 1227,
+        "beta": -0.0053594810436189185,
+        "correlation": -0.036667061647445716,
+        "intercept": -2.5187950267321904e-05
+      },
+      "realized_active": {
+        "observations": 584,
+        "beta": -0.01674087160253754,
+        "correlation": -0.06429853726606949,
+        "intercept": -4.437323619491631e-05
+      },
+      "max_abs_opening_estimated_beta": 0.2329629817659136,
+      "short_only_beta_constrained_openings": 48,
+      "unknown_beta_active_openings": 0,
+      "ending_nav_usd": 96539.00503531212,
+      "initial_capital_recovery": {
+        "anchor_nav": 1.0,
+        "anchor_usd": 100000.0,
+        "state": "recovered",
+        "first_under": {
+          "date": "2022-01-05",
+          "index": 2,
+          "nav": 0.9987070861785531,
+          "nav_usd": 99870.70861785531,
+          "pnl_usd": -129.2913821446917
+        },
+        "first_recovery": {
+          "date": "2022-02-11",
+          "index": 28,
+          "nav": 1.002189421950482,
+          "nav_usd": 100218.9421950482,
+          "pnl_usd": 218.94219504821066
+        },
+        "durable_recovery_in_observed_sample": null,
+        "strict_underwater_closes_before_first_recovery": 26,
+        "first_under_to_first_recovery_session_intervals": 26,
+        "first_under_to_first_recovery_calendar_days": 37
+      },
+      "maximum_drawdown_episode": {
+        "anchor_nav": 1.024442310879611,
+        "anchor_usd": 102444.2310879611,
+        "state": "unrecovered",
+        "first_under": {
+          "date": "2023-02-03",
+          "index": 273,
+          "nav": 1.0238047752974935,
+          "nav_usd": 102380.47752974935,
+          "pnl_usd": 2380.4775297493475
+        },
+        "first_recovery": null,
+        "durable_recovery_in_observed_sample": null,
+        "strict_underwater_closes_before_first_recovery": 954,
+        "peak": {
+          "date": "2023-02-02",
+          "index": 272,
+          "nav": 1.024442310879611,
+          "nav_usd": 102444.2310879611,
+          "pnl_usd": 2444.231087961102
+        },
+        "trough": {
+          "date": "2026-01-14",
+          "index": 1011,
+          "nav": 0.9116172341093335,
+          "nav_usd": 91161.72341093335,
+          "pnl_usd": -8838.276589066652
+        },
+        "drawdown": -0.1101331676484576
+      },
+      "calendar_year_returns": [
+        {
+          "year": "2022",
+          "start": "2022-01-03",
+          "end": "2022-12-30",
+          "starting_nav": 1.0,
+          "ending_nav": 1.0213116224368701,
+          "return_value": 0.021311622436870126
+        },
+        {
+          "year": "2023",
+          "start": "2023-01-03",
+          "end": "2023-12-29",
+          "starting_nav": 1.0213116224368701,
+          "ending_nav": 0.9984690186007864,
+          "return_value": -0.022365949171890165
+        },
+        {
+          "year": "2024",
+          "start": "2024-01-02",
+          "end": "2024-12-31",
+          "starting_nav": 0.9984690186007864,
+          "ending_nav": 0.9368724375503878,
+          "return_value": -0.06169102886809397
+        },
+        {
+          "year": "2025",
+          "start": "2025-01-02",
+          "end": "2025-12-31",
+          "starting_nav": 0.9368724375503878,
+          "ending_nav": 0.9146121915433607,
+          "return_value": -0.023760167462317905
+        },
+        {
+          "year": "2026",
+          "start": "2026-01-02",
+          "end": "2026-11-20",
+          "starting_nav": 0.9146121915433607,
+          "ending_nav": 0.9653900503531212,
+          "return_value": 0.055518458292225015
+        }
+      ],
+      "lowest_observed_nav_close": {
+        "date": "2026-01-14",
+        "index": 1011,
+        "nav": 0.9116172341093335,
+        "nav_usd": 91161.72341093335,
+        "pnl_usd": -8838.276589066652
+      },
+      "peak_gross_observation": {
+        "date": "2026-06-03",
+        "kind": "open",
+        "gross_exposure": 1.07582770564227
+      },
+      "closed_trade_attribution": {
+        "source_gross_pnl_usd": 20001.720279331967,
+        "hedge_gross_pnl_usd": -16416.925443208704,
+        "transaction_cost_usd": 5476.926833390547,
+        "borrow_cost_usd": 1568.862967420437,
+        "net_pnl_usd": -3460.9949646877176
+      },
+      "pre_april_2025_return": -0.056018337630789006,
+      "continuous_april_onward_return": 0.022678817647981964,
+      "pre_april_2025_filled_baskets": 33,
+      "pre_april_2025_closed": {
+        "source_gross_pnl_usd": 8536.490439674099,
+        "hedge_gross_pnl_usd": -9733.056817930237,
+        "transaction_cost_usd": 3405.6734863234587,
+        "borrow_cost_usd": 999.5938984991557,
+        "net_pnl_usd": -5601.833763078755,
+        "baskets": 33
+      },
+      "calendar_2025_closed": {
+        "source_gross_pnl_usd": 3610.752074031149,
+        "hedge_gross_pnl_usd": -4282.983286018992,
+        "transaction_cost_usd": 1162.1239424735415,
+        "borrow_cost_usd": 294.95688878168187,
+        "net_pnl_usd": -2129.312043243066,
+        "baskets": 13
+      },
+      "pre_september_2024_return": -0.04256807429320597,
+      "continuous_september_2024_onward_return": 0.008311948278152848,
+      "pre_september_2024_filled_baskets": 25
+    }
+  ]
+}

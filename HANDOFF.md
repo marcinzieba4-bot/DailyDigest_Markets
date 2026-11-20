@@ -1,46 +1,28 @@
 # mapp_strategy handoff
 
-The public strategy implementation is documented in [strategies/mapp_strategy/README.md](strategies/mapp_strategy/README.md). It compares three unchanged hedge policies on three explicit report schedules, with the input freeze and an independent accounting audit carried alongside the results.
+Start with [the strategy README](strategies/mapp_strategy/README.md) and [the completed extended-history report](strategies/mapp_strategy/backtests/2022_2026_month_gaps/README.md).
 
-The named command entry point is `strategies/mapp_strategy/mapp_strategy.py`; the stock crosswalk is `strategies/mapp_strategy/sector_mapping.csv`. New simulation records use `strategy_id=mapp_strategy`.
+The current completed profile runs from 3 January 2022 through 20 November 2026. It compares unhedged25, dollar_short25 and beta40_daily_short25 on one continuous source calendar, using 1,171 validated reports. Missing months block new theme entries; existing positions retain their normal exits and hedge management. The five gaps are July–October 2023 and May 2024.
 
-## Start here
+## Implementation
 
-| Item | Purpose |
-|---|---|
-| strategies/mapp_strategy/README.md | Trading rules, scope, price conventions and reproduction |
-| strategies/mapp_strategy/engine/run_nohedge.py | Recovered economic simulator; preserve its core accounting semantics |
-| strategies/mapp_strategy/engine/data.py | Completed-bar indicators, eligibility and reserved report calendar |
-| strategies/mapp_strategy/ci/independent_ledger.py | Independent physical-order, cash/NAV, borrow, beta and recovery verification |
-| strategies/mapp_strategy/ci/check_study.py | Input preflight and validation entry point |
-| Input and price manifests | Pin the source editions, current price snapshot, case configuration and code used for a run |
+- `strategies/mapp_strategy/mapp_strategy.py`: named command entry point.
+- `strategies/mapp_strategy/ci/run_extended_history.py`: public archive inventory union, source identity normalization, explicit monthly entry mask, fixed-book execution and result export.
+- `strategies/mapp_strategy/ci/extended_input_audit.py`: independent raw source/price, mapping, clock and eligibility checks.
+- `strategies/mapp_strategy/ci/extended_outputs.py`: independent financial audit, chart and approved result package.
+- `strategies/mapp_strategy/engine/run_nohedge.py`: unchanged economic simulator. Use the named adapter rather than its historical wrapper.
+- `strategies/mapp_strategy/engine/data.py`: unchanged completed-bar indicators and core calendar functions.
+- `strategies/mapp_strategy/source_tools/frozen_mapping/`: frozen stock/ETF map; `sector_mapping.csv` exposes its 153-stock crosswalk.
+- `strategies/mapp_strategy/ci/independent_ledger.py`: independent orders, physical positions, cash/NAV, fees, borrow, beta and recovery reconstruction.
 
-The recovered simulator file contains its historical wrapper. Use the current study adapter documented by the workflow; do not call a legacy three-book wrapper that expects an old local baseline directory.
+The complete GC=F identity is normalized to GLD in the extended adapter. Other unsupported complete futures remain unmapped; the F suffix must not become Ford. This was fixed before viewing the extended returns. The economic simulator and static crosswalk bytes remain unchanged.
 
-## Fixed experiment
+## Reproduction and interpretation
 
-Run the November 2023 continuous schedule, the September 2024 current-archive schedule and the recorded 25-signature September fixture, each under unhedged25, dollar_short25 and beta40_daily_short25. Keep the source allocation at 25% of opening NAV, the original SMA20/liquidity checks, reserved wait and ten-session exit. Do not add RSI, weekly, stop or new sizing parameters.
+Run `python mapp_strategy.py extended-history --start 2022-01-01 --end 2026-11-20 --workers 12` from the strategy directory after installing requirements, using a fresh checkout without prior result files. Inputs are fetched once, checked and frozen before simulation. Raw reports and prices remain local; public packages contain only simulated outputs and validation metadata.
 
-The recorded fixture is repriced on the current snapshot. Historical recorded trade and order CSVs are reference records; their old prices, units, fees and PnL are not assertions for the fresh run. Treat current report-edition and start-calendar effects separately from hedge-policy effects.
+Availability at printed-date end of day in New York is a retrospective assumption. Do not describe this replay as verified point-in-time history or untouched live validation. Inventories identify dates only, and full canonical HTML supplies each signal. The current index once dropped later links; the pinned earlier public inventory plus recent probes prevents those known reports from becoming false gaps.
 
-Source SPY positions and source shorts are valid if produced by the frozen map. Only the conceptual hedge must remain short or flat. Net source and hedge units in the same physical SPY instrument before charging fees or borrow. Preserve the simulator’s physical-exposure definition of active_day, which differs from a conceptual held window when source SPY and hedge SPY cancel.
+Keep the source allocation, trend/liquidity checks, reserved wait, original leg weights, ten-session exit, 21-day cap, costs and hedge policies fixed when reproducing this result. No RSI, weekly filter, stop or new regime was added. Source SPY and shorts are allowed; only the conceptual hedge must be SPY short or flat. Net same-symbol positions before fees and borrow.
 
-## Validation sequence
-
-1. Pin the report files, extraction/mapping rules, price responses, configuration and code.
-2. Prepare source calendars without calculating portfolio outcomes.
-3. Run preflight and save its receipt against research_freeze.json.
-4. Run only the fixed case/policy combinations.
-5. Rebuild the accounts independently and verify the frozen hashes.
-6. Inspect total return, drawdown, gross exposure, market beta, fees/borrow and first versus sustained recovery.
-7. Export charts and ledgers with their source/price provenance.
-
-The independent module writes detailed trade attribution locally. Console output contains aggregate counts and summary metrics. No brokerage orders are placed.
-
-## Continue the work
-
-Use the exact commands in strategies/mapp_strategy/README.md. prepare_study.py builds the three schedules and freezes inputs without portfolio returns; run_study.py calls the unchanged simulate() only after a matching independent preflight. The GitHub workflow runs code checks only. Full historical execution remains a separate, explicit local command and still requires complete input coverage and a matching independent preflight.
-
-Start with the README’s reproduction section, then check the matching input freeze and preflight receipt. Do not claim a fresh adjusted-price replay is byte-identical to an old price vintage. Do not describe reconstructed report dates as verified historical publication times or the additional history as untouched live validation.
-
-When changing a rule, create an explicit new experiment before reading its outcomes. For a backward extension under unchanged rules, retain the full continuous reservation calendar and report any changed later trade dates.
+The older nine-book calendar/recorded-fixture comparison remains a separate reference profile. Its saved 25-trade records are historical results, and its code is not the completed extended-history run. Avoid mixing those benchmark rows with the new 54-trade accounts.

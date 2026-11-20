@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "strategy_id": "mapp_strategy",
+  "start": "2022-01-03",
+  "end": "2026-11-20",
+  "initial_capital_usd": 100000.0,
+  "policies": [
+    "unhedged25",
+    "dollar_short25",
+    "beta40_daily_short25"
+  ],
+  "endpoint_checks": [
+    {
+      "policy": "unhedged25",
+      "date": "2026-11-20",
+      "nav_usd": 119453.43548131712,
+      "pnl_usd": 19453.435481317127,
+      "drawdown_pct": -3.5516083126391207
+    },
+    {
+      "policy": "dollar_short25",
+      "date": "2026-11-20",
+      "nav_usd": 102734.18707135273,
+      "pnl_usd": 2734.1870713527337,
+      "drawdown_pct": -2.847811101433284
+    },
+    {
+      "policy": "beta40_daily_short25",
+      "date": "2026-11-20",
+      "nav_usd": 96539.00503531212,
+      "pnl_usd": -3460.99496468788,
+      "drawdown_pct": -5.764332446966791
+    }
+  ],
+  "files": {
+    "mapp_strategy_extended_pnl.png": {
+      "bytes": 286066,
+      "sha256": "df5724cfb0d1cd8668f516e459f2b52febae90c3dea2c930cdf017009a07c5f5"
+    },
+    "mapp_strategy_extended_pnl.svg": {
+      "bytes": 182228,
+      "sha256": "0bcba0710327561298655f4454bc47eda14d3fd03d70fdd3b494ce52d0eb6c9e"
+    }
+  }
+}

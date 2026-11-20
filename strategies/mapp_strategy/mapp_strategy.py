@@ -5,6 +5,7 @@ from pathlib import Path
 STRATEGY_ID="mapp_strategy"
 ROOT=Path(__file__).resolve().parent
 COMMANDS={
+    "extended-history":("ci/run_extended_history.py",[],"Run the three policies on extended history with explicit missing-month entry blocking"),
     "fetch":("ci/fetch_inputs.py",[],"Fetch the one approved local source/price snapshot"),
     "prepare":("prepare_study.py",[],"Prepare fixed schedules and freeze exact inputs"),
     "preflight":("ci/check_study.py",["--preflight"],"Independently verify inputs before returns"),
