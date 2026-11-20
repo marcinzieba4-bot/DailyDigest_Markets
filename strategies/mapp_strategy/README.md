@@ -16,6 +16,12 @@ The latest completed study covers **3 January 2022–20 November 2026**, using *
 
 July–October 2023 and May 2024 had no available reports. They generated no new entries; existing positions and hedges kept their normal schedules. Calendar time and the account history remain continuous through gaps.
 
+## Timing versus sector selection
+
+Buying SPY on the same 54 funded signals returned **+8.62% net**, versus **+19.45%** for the mapped instruments. Selection is concentrated: 95.63% of aggregate gross sector excess comes from 2026 entries and 88.44% from six XLE baskets. The actual schedule ranked around the 64th percentile of 20,000 year/count/gap/holding-period-matched random schedules in a separate close-to-close diagnostic, providing no compelling evidence of superior timing.
+
+[Comparison, chart and methodology](backtests/2022_2026_timing_selection/README.md) · [54 matched windows](backtests/2022_2026_timing_selection/matched_windows.csv) · [Reproduction code](ci/analyze_timing_selection.py)
+
 ## Strategy rules
 
 1. Read only the fourth positional topic of **What Retail Is Playing**.
