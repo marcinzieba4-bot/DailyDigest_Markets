@@ -127,6 +127,7 @@ def browser_check():
                 button.click()
                 frame=page.frame_locator(f'iframe[src="/reports/archive/{day}.html"]')
                 frame.get_by_role("heading",name="Market Intelligence Briefing",exact=True).wait_for()
+                frame.locator("#retail article").nth(3).wait_for(state="attached")
                 assert frame.locator("#retail article").count()==4
                 assert frame.locator("html").evaluate("el=>el.scrollWidth<=innerWidth+1")
                 page.get_by_role("button", name=re.compile(r"^←\s*Back$")).click()
