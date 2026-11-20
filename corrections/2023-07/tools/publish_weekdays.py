@@ -123,17 +123,17 @@ def browser_check():
             page.get_by_role("button",name=re.compile(r"^2023\b")).click()
             page.get_by_role("button",name=re.compile(r"^July\b")).click()
             for day in DAYS:
-                button=page.get_by_role("button",name=day,exact=True)
-                assert button.count()==1,day
-            for day in (DAYS[0],DAYS[-1]):
-                page.get_by_role("button",name=day,exact=True).click()
+                button = page.get_by_role("button").filter(has=page.get_by_text(day, exact=True))
+                button.click()
                 frame=page.frame_locator(f'iframe[src="/reports/archive/{day}.html"]')
                 frame.get_by_role("heading",name="Market Intelligence Briefing",exact=True).wait_for()
                 assert frame.locator("#retail article").count()==4
                 assert frame.locator("html").evaluate("el=>el.scrollWidth<=innerWidth+1")
+                page.get_by_role("button", name=re.compile(r"^←\s*Back$")).click()
+                button.wait_for()
             page.close()
         br.close()
-    print("Verified July selection on desktop and mobile through the live Daily Summary archive.",flush=True)
+    print(f"Verified all {len(DAYS)} July editions on desktop and mobile through the live Daily Summary archive.", flush=True)
 
 def publish(objects):
     cfg=Config(connect_timeout=10,read_timeout=60,retries={"max_attempts":3},max_pool_connections=10)
