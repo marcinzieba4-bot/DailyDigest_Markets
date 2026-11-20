@@ -103,8 +103,11 @@ def read_public(objects):
         key, (_,digest)=item
         actual=hashlib.sha256(public_bytes(key)).hexdigest()
         if digest!=actual:raise ValueError("Public content mismatch: "+key)
-    with ThreadPoolExecutor(6) as pool:list(pool.map(verify,objects.items()))
-    print(f"Verified {len(objects)} public objects and all {len(DAYS)} archive entries.",flush=True)
+    # CloudFront serves reports/ from the archive bucket. Strategies/ contains S3-only mirrors.
+    public_objects = {key: item for key, item in objects.items() if key.startswith("reports/")}
+    with ThreadPoolExecutor(6) as pool:
+        list(pool.map(verify, public_objects.items()))
+    print(f"Verified {len(public_objects)} public report files and all {len(DAYS)} entries in the archive index.", flush=True)
 
 def browser_check():
     from playwright.sync_api import sync_playwright
