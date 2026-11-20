@@ -179,8 +179,8 @@ def audit_source(root,start,end,available_months):
         day=row["report_date"];assert day in valid
         assert int(row["slot"]) in (1,2,3,4)
         assert len(row["source_sha256"])==64 and all(c in "0123456789abcdef" for c in row["source_sha256"])
-        expected=dt.datetime.combine(dt.date.fromisoformat(day),dt.time(23,59,59),NY)
-        assert stamp(row["available_at"])==expected
+        expected_available=dt.datetime.combine(dt.date.fromisoformat(day),dt.time(23,59,59),NY)
+        assert stamp(row["available_at"])==expected_available
         targets=json.loads(row["targets"])
         assert len({t["symbol"] for t in targets})==len(targets)
         assert all(t["symbol"] in SYMBOLS and int(t["direction"]) in (-1,1) for t in targets)
