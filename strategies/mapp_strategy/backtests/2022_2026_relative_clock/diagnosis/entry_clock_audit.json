@@ -1,0 +1,64 @@
+{
+  "strategy_id": "mapp_strategy",
+  "status": "passed",
+  "start": "2022-01-01",
+  "end": "2026-11-20",
+  "method": "Independent direct-price/metadata/source-CSV replay; no production clock, qualification or SMA imports.",
+  "price_sha256": "df1f241228d4e40f702cb83566097da1f9b3761f7af017b6518a8c389b6265b1",
+  "mapped_source_csv_sha256": "4d4f7c4b743b337e8928fd7c1c2f6ae03fe4eaaed751bfd2ec8ec8b4db49aa32",
+  "variants": {
+    "absolute_reserved": {
+      "attempted_opportunities": 88,
+      "funded_baskets": 55,
+      "unfunded_opportunities": 33,
+      "source_legs": 56,
+      "qualifications": 91,
+      "terminal_censored_baskets": 0,
+      "held_exits_in_missing_months": 2,
+      "relative_gate": false,
+      "rejections_reserve_window": true
+    },
+    "absolute_filled": {
+      "attempted_opportunities": 161,
+      "funded_baskets": 71,
+      "unfunded_opportunities": 90,
+      "source_legs": 72,
+      "qualifications": 165,
+      "terminal_censored_baskets": 0,
+      "held_exits_in_missing_months": 2,
+      "relative_gate": false,
+      "rejections_reserve_window": false
+    },
+    "relative_reserved": {
+      "attempted_opportunities": 88,
+      "funded_baskets": 44,
+      "unfunded_opportunities": 44,
+      "source_legs": 44,
+      "qualifications": 91,
+      "terminal_censored_baskets": 0,
+      "held_exits_in_missing_months": 1,
+      "relative_gate": true,
+      "rejections_reserve_window": true
+    },
+    "relative_filled": {
+      "attempted_opportunities": 175,
+      "funded_baskets": 71,
+      "unfunded_opportunities": 104,
+      "source_legs": 71,
+      "qualifications": 179,
+      "terminal_censored_baskets": 0,
+      "held_exits_in_missing_months": 2,
+      "relative_gate": true,
+      "rejections_reserve_window": false
+    }
+  },
+  "self_tests": {
+    "rejected_report_consumed_without_reservation": true,
+    "reserved_rejections_and_actual_fill_cooldown_distinguished": true,
+    "rejected_target_weight_not_renormalized": true,
+    "constant_spy_relative_ratio_rejects_both_directions": true,
+    "entry_day_close_excluded": true
+  },
+  "relative_qualification_field_semantics": "prior_close and prior_sma20 contain ETF/SPY ratio and its preceding20-completed-session mean.",
+  "held_price_and_financial_accounting": "Checked separately by the unchanged independent ledger auditor."
+}

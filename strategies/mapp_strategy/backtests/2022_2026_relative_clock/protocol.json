@@ -1,0 +1,51 @@
+{
+  "strategy_id": "mapp_strategy",
+  "experiment": "relative_strength_and_fill_clock_v1",
+  "start": "2022-01-01",
+  "end": "2026-11-20",
+  "variants": [
+    "absolute_reserved",
+    "absolute_filled",
+    "relative_reserved",
+    "relative_filled"
+  ],
+  "policies": [
+    "unhedged25",
+    "dollar_short25",
+    "beta40_daily_short25"
+  ],
+  "cases": 12,
+  "primary_policy": "dollar_short25",
+  "initial_capital_usd": 100000,
+  "source_allocation": 0.25,
+  "source_slot": 4,
+  "sma_sessions": 20,
+  "absolute_gate": "Previous adjusted close strictly above prior20-close mean for longs; inverse for shorts.",
+  "relative_gate": "Previous sector/SPY adjusted-close ratio strictly above prior20-ratio mean for longs; inverse for shorts. SPY ratio is constant and fails the strict test.",
+  "reserved_clock": "Reserve before SMA even if all legs fail; after release skip release session and following session.",
+  "filled_clock": "A rejected basic-eligible SMA attempt consumes its report without reservation/cooldown. Next new report may qualify. A funded basket retains original reservation and cooldown.",
+  "unchanged_basic_prescreen": "Latest ready report at most four calendar days old; at least one metadata/liquidity-eligible mapped leg before qualification.",
+  "weights": "Original distinct mapped-target weights; rejected weights remain cash, without renormalization.",
+  "exit": "Opening of tenth subsequent SPY session, at most21 calendar days; terminal endpoint-close liquidation is flagged.",
+  "fees_per_net_physical_order": 0.001,
+  "short_borrow_act365": 0.03,
+  "cash_interest": 0.0,
+  "hedges": "No hedge; fixed entry-dollar SPY short; daily strictly-prior40-return beta SPY short/flat. Hedge never buys SPY.",
+  "no_parameter_search": true,
+  "filters_excluded": [
+    "RSI",
+    "weekly",
+    "new stop",
+    "regime filter"
+  ],
+  "monthly_gap_rule": "Zero valid public reports in a month means no new entries in that month, including spillover from the preceding month. Existing positions and hedges keep their ordinary time exits/rebalances.",
+  "source_availability": "Counterfactual printed report date 23:59:59 America/New_York; current objects are reconstructed snapshots, not verified historical publication times.",
+  "baseline_comparison_path": "baseline_comparison.json",
+  "qualification_columns": "For relative variants prior_close and prior_sma20 are ratio values; for absolute variants they are adjusted prices.",
+  "frozen_core_sha256": {
+    "engine/data.py": "abe17e5490cc748968542bdf14dbcff2679e002025cd171498e8fe0b6d0fc4b0",
+    "engine/run_nohedge.py": "05ed248a6122db21e016f0a409b6e0f1311773c74eae26c851f4506a8a18c613",
+    "source_tools/frozen_mapping/map_retail.py": "7ba29285967df019e609050edc0806ee87de84764f5ee3efa7a38f6492167f7f",
+    "source_tools/frozen_mapping/map_retail_etf.py": "887c0f530bb667a08b421b088cfa0670b05c882fefaf613facf49ee30ca06674"
+  }
+}

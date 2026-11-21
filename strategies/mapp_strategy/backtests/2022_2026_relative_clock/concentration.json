@@ -1,0 +1,1790 @@
+[
+  {
+    "variant": "absolute_reserved",
+    "policy": "unhedged25",
+    "method": "Additive attribution on actual account notionals. Group removal is not a separately replayed strategy.",
+    "by_entry_year": {
+      "2022": {
+        "baskets": 6,
+        "source_gross_pnl_usd": 3161.8989679179704,
+        "spy_market_component_usd": -1242.7017039067186,
+        "selection_component_usd": 4404.600671824688,
+        "net_pnl_usd": 2860.8975613865487
+      },
+      "2023": {
+        "baskets": 11,
+        "source_gross_pnl_usd": 3829.5523534626304,
+        "spy_market_component_usd": 4579.190949308752,
+        "selection_component_usd": -749.6385958461212,
+        "net_pnl_usd": 3250.8711650178375
+      },
+      "2024": {
+        "baskets": 15,
+        "source_gross_pnl_usd": 625.9120139143367,
+        "spy_market_component_usd": 4400.994769965723,
+        "selection_component_usd": -3775.0827560513862,
+        "net_pnl_usd": -140.45667802355388
+      },
+      "2025": {
+        "baskets": 14,
+        "source_gross_pnl_usd": 4296.377742637341,
+        "spy_market_component_usd": 3666.2451865157013,
+        "selection_component_usd": 630.1325561216402,
+        "net_pnl_usd": 3528.4533176851264
+      },
+      "2026": {
+        "baskets": 9,
+        "source_gross_pnl_usd": 10089.055940326954,
+        "spy_market_component_usd": 131.94897825588214,
+        "selection_component_usd": 9957.106962071073,
+        "net_pnl_usd": 9553.668955609523
+      }
+    },
+    "by_source_instrument": {
+      "XLY": {
+        "source_legs": 9,
+        "source_long_legs": 9,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -639.6690764631396,
+        "spy_market_component_usd": 834.1073259511297,
+        "selection_component_usd": -1473.776402414269
+      },
+      "XLE": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 6590.226726006272,
+        "spy_market_component_usd": -2631.153815542164,
+        "selection_component_usd": 9221.380541548435
+      },
+      "XLI": {
+        "source_legs": 3,
+        "source_long_legs": 3,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2796.9845722567247,
+        "spy_market_component_usd": 1987.6102763452989,
+        "selection_component_usd": 809.3742959114257
+      },
+      "XLF": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -891.5603779117987,
+        "spy_market_component_usd": -295.2506086150808,
+        "selection_component_usd": -596.3097692967177
+      },
+      "XLK": {
+        "source_legs": 11,
+        "source_long_legs": 11,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 8546.325966433837,
+        "spy_market_component_usd": 6022.598366855642,
+        "selection_component_usd": 2523.7275995781943
+      },
+      "QQQ": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 419.60162093591174,
+        "spy_market_component_usd": -18.592550556484355,
+        "selection_component_usd": 438.1941714923961
+      },
+      "SPY": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 315.72350208933244,
+        "spy_market_component_usd": 315.7235020893316,
+        "selection_component_usd": 8.064660050877137e-13
+      },
+      "XLC": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 317.47269631492037,
+        "spy_market_component_usd": 1245.665718572061,
+        "selection_component_usd": -928.1930222571405
+      },
+      "SOXX": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 4930.442614013676,
+        "spy_market_component_usd": 2525.1814631686607,
+        "selection_component_usd": 2405.2611508450145
+      },
+      "GLD": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -1991.8795146581333,
+        "spy_market_component_usd": 1033.3421364353098,
+        "selection_component_usd": -3025.2216510934427
+      },
+      "XLV": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1609.1282892416336,
+        "spy_market_component_usd": 516.4463654356362,
+        "selection_component_usd": 1092.6819238059975
+      }
+    },
+    "gross_selection_component_usd": 10467.118838119895,
+    "gross_selection_2026_entries_usd": 9957.106962071073,
+    "gross_selection_before_2026_entries_usd": 510.01187604882216,
+    "gross_selection_XLE_legs_usd": 9221.380541548435,
+    "selection_share_from_2026_if_positive_total": 0.951274855675525,
+    "selection_share_from_XLE_if_positive_total": 0.8809855590790999,
+    "XLE_containing_baskets": 6,
+    "XLE_containing_baskets_net_contribution_usd": 6258.256222073404,
+    "other_baskets_net_contribution_usd": 12795.178099602077,
+    "net_before_2026_entry_contribution_usd": 9499.765366065958,
+    "net_2026_entry_contribution_usd": 9553.668955609523
+  },
+  {
+    "variant": "absolute_reserved",
+    "policy": "dollar_short25",
+    "method": "Additive attribution on actual account notionals. Group removal is not a separately replayed strategy.",
+    "by_entry_year": {
+      "2022": {
+        "baskets": 6,
+        "source_gross_pnl_usd": 3289.2906405046497,
+        "spy_market_component_usd": -1205.7726694725225,
+        "selection_component_usd": 4495.063309977172,
+        "net_pnl_usd": 3708.1530304669022
+      },
+      "2023": {
+        "baskets": 11,
+        "source_gross_pnl_usd": 3811.254009011892,
+        "spy_market_component_usd": 4532.3020777411575,
+        "selection_component_usd": -721.0480687292652,
+        "net_pnl_usd": -2003.482649713546
+      },
+      "2024": {
+        "baskets": 15,
+        "source_gross_pnl_usd": 569.6862779320256,
+        "spy_market_component_usd": 4128.480934087573,
+        "selection_component_usd": -3558.794656155546,
+        "net_pnl_usd": -5417.868577881058
+      },
+      "2025": {
+        "baskets": 14,
+        "source_gross_pnl_usd": 3920.4098934036397,
+        "spy_market_component_usd": 3285.938238135388,
+        "selection_component_usd": 634.471655268252,
+        "net_pnl_usd": -1132.4368562896314
+      },
+      "2026": {
+        "baskets": 9,
+        "source_gross_pnl_usd": 8799.546593115638,
+        "spy_market_component_usd": 125.74187297950016,
+        "selection_component_usd": 8673.804720136137,
+        "net_pnl_usd": 7485.4775172630925
+      }
+    },
+    "by_source_instrument": {
+      "XLY": {
+        "source_legs": 9,
+        "source_long_legs": 9,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -734.7690699316888,
+        "spy_market_component_usd": 671.8666171431253,
+        "selection_component_usd": -1406.6356870748136
+      },
+      "XLE": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 5933.7869286612695,
+        "spy_market_component_usd": -2547.439841072721,
+        "selection_component_usd": 8481.22676973399
+      },
+      "XLI": {
+        "source_legs": 3,
+        "source_long_legs": 3,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2777.6981791629937,
+        "spy_market_component_usd": 1988.3310043984382,
+        "selection_component_usd": 789.3671747645556
+      },
+      "XLF": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -791.2388922501265,
+        "spy_market_component_usd": -336.7873899619839,
+        "selection_component_usd": -454.45150228814265
+      },
+      "XLK": {
+        "source_legs": 11,
+        "source_long_legs": 11,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 7948.528079385849,
+        "spy_market_component_usd": 5653.021048554484,
+        "selection_component_usd": 2295.507030831365
+      },
+      "QQQ": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 431.62919918724714,
+        "spy_market_component_usd": -9.100926417842572,
+        "selection_component_usd": 440.7301256050897
+      },
+      "SPY": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 318.49661515557597,
+        "spy_market_component_usd": 318.49661515557517,
+        "selection_component_usd": 8.348877145181177e-13
+      },
+      "XLC": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 328.25522316835657,
+        "spy_market_component_usd": 1176.3170620667033,
+        "selection_component_usd": -848.0618388983469
+      },
+      "SOXX": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 4410.578235243234,
+        "spy_market_component_usd": 2399.5520787177275,
+        "selection_component_usd": 2011.0261565255073
+      },
+      "GLD": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -1630.332951468699,
+        "spy_market_component_usd": 1103.891546510864,
+        "selection_component_usd": -2734.224497979563
+      },
+      "XLV": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1397.5558676538317,
+        "spy_market_component_usd": 448.5426383767251,
+        "selection_component_usd": 949.0132292771066
+      }
+    },
+    "gross_selection_component_usd": 9523.49696049675,
+    "gross_selection_2026_entries_usd": 8673.804720136137,
+    "gross_selection_before_2026_entries_usd": 849.6922403606131,
+    "gross_selection_XLE_legs_usd": 8481.22676973399,
+    "selection_share_from_2026_if_positive_total": 0.9107793866176346,
+    "selection_share_from_XLE_if_positive_total": 0.8905580381779852,
+    "XLE_containing_baskets": 6,
+    "XLE_containing_baskets_net_contribution_usd": 7700.021066327383,
+    "other_baskets_net_contribution_usd": -5060.178602481621,
+    "net_before_2026_entry_contribution_usd": -4845.6350534173325,
+    "net_2026_entry_contribution_usd": 7485.477517263094
+  },
+  {
+    "variant": "absolute_reserved",
+    "policy": "beta40_daily_short25",
+    "method": "Additive attribution on actual account notionals. Group removal is not a separately replayed strategy.",
+    "by_entry_year": {
+      "2022": {
+        "baskets": 6,
+        "source_gross_pnl_usd": 3227.4103027500205,
+        "spy_market_component_usd": -1242.354467504436,
+        "selection_component_usd": 4469.7647702544555,
+        "net_pnl_usd": 2131.1626071439077
+      },
+      "2023": {
+        "baskets": 11,
+        "source_gross_pnl_usd": 3747.4758159733137,
+        "spy_market_component_usd": 4438.0411727196715,
+        "selection_component_usd": -690.5653567463573,
+        "net_pnl_usd": -2269.174445337722
+      },
+      "2024": {
+        "baskets": 15,
+        "source_gross_pnl_usd": 554.711925036363,
+        "spy_market_component_usd": 4041.704918993138,
+        "selection_component_usd": -3486.992993956775,
+        "net_pnl_usd": -6160.6134079625635
+      },
+      "2025": {
+        "baskets": 14,
+        "source_gross_pnl_usd": 3799.3136116031337,
+        "spy_market_component_usd": 3173.02488471101,
+        "selection_component_usd": 626.2887268921236,
+        "net_pnl_usd": -2374.197525150343
+      },
+      "2026": {
+        "baskets": 9,
+        "source_gross_pnl_usd": 8387.788558210405,
+        "spy_market_component_usd": 114.49527298387545,
+        "selection_component_usd": 8273.293285226526,
+        "net_pnl_usd": 5226.722251459538
+      }
+    },
+    "by_source_instrument": {
+      "XLY": {
+        "source_legs": 9,
+        "source_long_legs": 9,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -766.235365266637,
+        "spy_market_component_usd": 623.2440688656488,
+        "selection_component_usd": -1389.4794341322859
+      },
+      "XLE": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 5707.435477866446,
+        "spy_market_component_usd": -2531.3597007194344,
+        "selection_component_usd": 8238.795178585879
+      },
+      "XLI": {
+        "source_legs": 3,
+        "source_long_legs": 3,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2726.821559252525,
+        "spy_market_component_usd": 1953.867572950027,
+        "selection_component_usd": 772.9539863024977
+      },
+      "XLF": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -765.124435752574,
+        "spy_market_component_usd": -337.4195390039172,
+        "selection_component_usd": -427.7048967486567
+      },
+      "XLK": {
+        "source_legs": 11,
+        "source_long_legs": 11,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 7715.833755579769,
+        "spy_market_component_usd": 5505.27136627884,
+        "selection_component_usd": 2210.562389300929
+      },
+      "QQQ": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 429.49421492053034,
+        "spy_market_component_usd": -3.979573915698836,
+        "selection_component_usd": 433.4737888362292
+      },
+      "SPY": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 313.74095015130615,
+        "spy_market_component_usd": 313.74095015130536,
+        "selection_component_usd": 7.958078640513122e-13
+      },
+      "XLC": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 324.64015990377516,
+        "spy_market_component_usd": 1149.610568980102,
+        "selection_component_usd": -824.9704090763269
+      },
+      "SOXX": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 4211.457467597314,
+        "spy_market_component_usd": 2335.8872164744753,
+        "selection_component_usd": 1875.570251122838
+      },
+      "GLD": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -1499.82972041637,
+        "spy_market_component_usd": 1092.8898933336513,
+        "selection_component_usd": -2592.719613750021
+      },
+      "XLV": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1318.4661497371499,
+        "spy_market_component_usd": 423.15895850826024,
+        "selection_component_usd": 895.3071912288897
+      }
+    },
+    "gross_selection_component_usd": 9191.788431669975,
+    "gross_selection_2026_entries_usd": 8273.293285226528,
+    "gross_selection_before_2026_entries_usd": 918.4951464434471,
+    "gross_selection_XLE_legs_usd": 8238.795178585879,
+    "selection_share_from_2026_if_positive_total": 0.900074381251117,
+    "selection_share_from_XLE_if_positive_total": 0.8963212371380751,
+    "XLE_containing_baskets": 6,
+    "XLE_containing_baskets_net_contribution_usd": 5568.464799181519,
+    "other_baskets_net_contribution_usd": -9014.565319028703,
+    "net_before_2026_entry_contribution_usd": -8672.82277130672,
+    "net_2026_entry_contribution_usd": 5226.722251459537
+  },
+  {
+    "variant": "absolute_filled",
+    "policy": "unhedged25",
+    "method": "Additive attribution on actual account notionals. Group removal is not a separately replayed strategy.",
+    "by_entry_year": {
+      "2022": {
+        "baskets": 13,
+        "source_gross_pnl_usd": -3368.229628834866,
+        "spy_market_component_usd": -3309.044773451713,
+        "selection_component_usd": -59.1848553831545,
+        "net_pnl_usd": -3960.326899784847
+      },
+      "2023": {
+        "baskets": 13,
+        "source_gross_pnl_usd": 4216.95537022841,
+        "spy_market_component_usd": 5308.196712422989,
+        "selection_component_usd": -1091.2413421945785,
+        "net_pnl_usd": 3600.4596850191183
+      },
+      "2024": {
+        "baskets": 17,
+        "source_gross_pnl_usd": 3529.3405795352146,
+        "spy_market_component_usd": 4800.385560606714,
+        "selection_component_usd": -1271.044981071501,
+        "net_pnl_usd": 2682.6413261724338
+      },
+      "2025": {
+        "baskets": 16,
+        "source_gross_pnl_usd": 8866.133508564033,
+        "spy_market_component_usd": 4625.883971008276,
+        "selection_component_usd": 4240.249537555757,
+        "net_pnl_usd": 8010.402417390134
+      },
+      "2026": {
+        "baskets": 12,
+        "source_gross_pnl_usd": 3904.3026890084816,
+        "spy_market_component_usd": 436.46976951527677,
+        "selection_component_usd": 3467.8329194932035,
+        "net_pnl_usd": 3219.341027031932
+      }
+    },
+    "by_source_instrument": {
+      "XLY": {
+        "source_legs": 20,
+        "source_long_legs": 20,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -4473.86397213648,
+        "spy_market_component_usd": 181.0405060827901,
+        "selection_component_usd": -4654.90447821927
+      },
+      "XLE": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 3173.710316394211,
+        "spy_market_component_usd": -3148.575446065139,
+        "selection_component_usd": 6322.28576245935
+      },
+      "GLD": {
+        "source_legs": 8,
+        "source_long_legs": 8,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -1701.4156008258278,
+        "spy_market_component_usd": 2959.716795271437,
+        "selection_component_usd": -4661.132396097266
+      },
+      "XLK": {
+        "source_legs": 14,
+        "source_long_legs": 14,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 3265.2453678198895,
+        "spy_market_component_usd": 2439.1774423673714,
+        "selection_component_usd": 826.0679254525177
+      },
+      "XLI": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2906.391012137663,
+        "spy_market_component_usd": 2170.9860169043045,
+        "selection_component_usd": 735.4049952333585
+      },
+      "XLF": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 978.6549978688488,
+        "spy_market_component_usd": 1088.885745658207,
+        "selection_component_usd": -110.23074778935825
+      },
+      "SPY": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2252.0559584690805,
+        "spy_market_component_usd": 2252.055958469081,
+        "selection_component_usd": -7.958078640513122e-13
+      },
+      "IEF": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -46.98149187407229,
+        "spy_market_component_usd": 78.8033850733128,
+        "selection_component_usd": -125.78487694738509
+      },
+      "QQQ": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 727.4143410859583,
+        "spy_market_component_usd": 336.4048103120484,
+        "selection_component_usd": 391.0095307739099
+      },
+      "XLC": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1784.7159393426398,
+        "spy_market_component_usd": 2192.012244700758,
+        "selection_component_usd": -407.29630535811793
+      },
+      "SOXX": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 5335.100934408963,
+        "spy_market_component_usd": 1570.426354064287,
+        "selection_component_usd": 3764.6745803446765
+      },
+      "XLV": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2947.4747158103983,
+        "spy_market_component_usd": -259.0425727369132,
+        "selection_component_usd": 3206.5172885473116
+      }
+    },
+    "gross_selection_component_usd": 5286.611278399727,
+    "gross_selection_2026_entries_usd": 3467.8329194932044,
+    "gross_selection_before_2026_entries_usd": 1818.7783589065225,
+    "gross_selection_XLE_legs_usd": 6322.28576245935,
+    "selection_share_from_2026_if_positive_total": 0.6559651801262997,
+    "selection_share_from_XLE_if_positive_total": 1.195905170537359,
+    "XLE_containing_baskets": 4,
+    "XLE_containing_baskets_net_contribution_usd": 2951.0720474047002,
+    "other_baskets_net_contribution_usd": 10601.44550842407,
+    "net_before_2026_entry_contribution_usd": 10333.17652879684,
+    "net_2026_entry_contribution_usd": 3219.3410270319323
+  },
+  {
+    "variant": "absolute_filled",
+    "policy": "dollar_short25",
+    "method": "Additive attribution on actual account notionals. Group removal is not a separately replayed strategy.",
+    "by_entry_year": {
+      "2022": {
+        "baskets": 13,
+        "source_gross_pnl_usd": -3316.3033111814816,
+        "spy_market_component_usd": -3260.430715067899,
+        "selection_component_usd": -55.87259611358357,
+        "net_pnl_usd": -1513.6780383253006
+      },
+      "2023": {
+        "baskets": 13,
+        "source_gross_pnl_usd": 4253.490672953716,
+        "spy_market_component_usd": 5304.317367331673,
+        "selection_component_usd": -1050.8266943779574,
+        "net_pnl_usd": -2403.345578254954
+      },
+      "2024": {
+        "baskets": 17,
+        "source_gross_pnl_usd": 3379.145022950462,
+        "spy_market_component_usd": 4525.029264716684,
+        "selection_component_usd": -1145.8842417662229,
+        "net_pnl_usd": -3194.035847369143
+      },
+      "2025": {
+        "baskets": 16,
+        "source_gross_pnl_usd": 7845.002220301959,
+        "spy_market_component_usd": 4114.905084154711,
+        "selection_component_usd": 3730.0971361472475,
+        "net_pnl_usd": 1776.6397126116703
+      },
+      "2026": {
+        "baskets": 12,
+        "source_gross_pnl_usd": 3369.2985452254325,
+        "spy_market_component_usd": 385.1788143629552,
+        "selection_component_usd": 2984.1197308624774,
+        "net_pnl_usd": 1475.2213541389383
+      }
+    },
+    "by_source_instrument": {
+      "XLY": {
+        "source_legs": 20,
+        "source_long_legs": 20,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -4418.467919193219,
+        "spy_market_component_usd": -184.8681717790866,
+        "selection_component_usd": -4233.599747414131
+      },
+      "XLE": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2741.2385349219917,
+        "spy_market_component_usd": -3065.6086995035184,
+        "selection_component_usd": 5806.847234425509
+      },
+      "GLD": {
+        "source_legs": 8,
+        "source_long_legs": 8,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -1432.1246269129201,
+        "spy_market_component_usd": 2943.058601138592,
+        "selection_component_usd": -4375.183228051512
+      },
+      "XLK": {
+        "source_legs": 14,
+        "source_long_legs": 14,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2922.5864965254214,
+        "spy_market_component_usd": 2122.774353321644,
+        "selection_component_usd": 799.8121432037772
+      },
+      "XLI": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2855.848631468653,
+        "spy_market_component_usd": 2150.358038237205,
+        "selection_component_usd": 705.490593231448
+      },
+      "XLF": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1007.9931643390405,
+        "spy_market_component_usd": 1031.5232326890193,
+        "selection_component_usd": -23.530068349978777
+      },
+      "SPY": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2324.494565517449,
+        "spy_market_component_usd": 2324.4945655174492,
+        "selection_component_usd": -5.684341886080801e-13
+      },
+      "IEF": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -48.23802929543998,
+        "spy_market_component_usd": 80.91101082816267,
+        "selection_component_usd": -129.14904012360265
+      },
+      "QQQ": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 744.1077145754058,
+        "spy_market_component_usd": 344.12493737718444,
+        "selection_component_usd": 399.98277719822136
+      },
+      "XLC": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1712.7622091634532,
+        "spy_market_component_usd": 2125.8268572288284,
+        "selection_component_usd": -413.0646480653754
+      },
+      "SOXX": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 4583.833555874343,
+        "spy_market_component_usd": 1420.838875463351,
+        "selection_component_usd": 3162.994680410992
+      },
+      "XLV": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2536.5988532659103,
+        "spy_market_component_usd": -224.43378502070334,
+        "selection_component_usd": 2761.0326382866137
+      }
+    },
+    "gross_selection_component_usd": 4461.63333475196,
+    "gross_selection_2026_entries_usd": 2984.119730862477,
+    "gross_selection_before_2026_entries_usd": 1477.5136038894834,
+    "gross_selection_XLE_legs_usd": 5806.847234425509,
+    "selection_share_from_2026_if_positive_total": 0.6688401997580053,
+    "selection_share_from_XLE_if_positive_total": 1.3015070488190026,
+    "XLE_containing_baskets": 4,
+    "XLE_containing_baskets_net_contribution_usd": 5306.688234031225,
+    "other_baskets_net_contribution_usd": -9165.886631230012,
+    "net_before_2026_entry_contribution_usd": -5334.419751337727,
+    "net_2026_entry_contribution_usd": 1475.2213541389388
+  },
+  {
+    "variant": "absolute_filled",
+    "policy": "beta40_daily_short25",
+    "method": "Additive attribution on actual account notionals. Group removal is not a separately replayed strategy.",
+    "by_entry_year": {
+      "2022": {
+        "baskets": 13,
+        "source_gross_pnl_usd": -3248.796032815054,
+        "spy_market_component_usd": -3237.509733495626,
+        "selection_component_usd": -11.286299319426632,
+        "net_pnl_usd": -642.4625448434424
+      },
+      "2023": {
+        "baskets": 13,
+        "source_gross_pnl_usd": 4280.473133564284,
+        "spy_market_component_usd": 5319.426319526807,
+        "selection_component_usd": -1038.9531859625226,
+        "net_pnl_usd": -2476.1795106461987
+      },
+      "2024": {
+        "baskets": 17,
+        "source_gross_pnl_usd": 3405.5722474117388,
+        "spy_market_component_usd": 4546.880610709898,
+        "selection_component_usd": -1141.308363298158,
+        "net_pnl_usd": -4405.137135553808
+      },
+      "2025": {
+        "baskets": 16,
+        "source_gross_pnl_usd": 7784.384464119373,
+        "spy_market_component_usd": 4079.884986455683,
+        "selection_component_usd": 3704.4994776636886,
+        "net_pnl_usd": 573.191678617145
+      },
+      "2026": {
+        "baskets": 12,
+        "source_gross_pnl_usd": 3311.8348035150007,
+        "spy_market_component_usd": 367.1946756731047,
+        "selection_component_usd": 2944.640127841896,
+        "net_pnl_usd": -67.15745656368244
+      }
+    },
+    "by_source_instrument": {
+      "XLY": {
+        "source_legs": 20,
+        "source_long_legs": 20,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -4377.361997080632,
+        "spy_market_component_usd": -205.265404221268,
+        "selection_component_usd": -4172.096592859365
+      },
+      "XLE": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2694.946858213859,
+        "spy_market_component_usd": -3064.9402484523084,
+        "selection_component_usd": 5759.887106666168
+      },
+      "GLD": {
+        "source_legs": 8,
+        "source_long_legs": 8,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -1352.419019973826,
+        "spy_market_component_usd": 2932.7699187891612,
+        "selection_component_usd": -4285.188938762986
+      },
+      "XLK": {
+        "source_legs": 14,
+        "source_long_legs": 14,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2920.6029604966634,
+        "spy_market_component_usd": 2119.7408254276647,
+        "selection_component_usd": 800.8621350689991
+      },
+      "XLI": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2871.1621687847887,
+        "spy_market_component_usd": 2162.6279442879872,
+        "selection_component_usd": 708.5342244968012
+      },
+      "XLF": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1019.4698853536759,
+        "spy_market_component_usd": 1033.3504095075539,
+        "selection_component_usd": -13.880524153878156
+      },
+      "SPY": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2343.8158520312604,
+        "spy_market_component_usd": 2343.815852031262,
+        "selection_component_usd": -8.526512829121202e-13
+      },
+      "IEF": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -48.61707611985074,
+        "spy_market_component_usd": 81.5467967871297,
+        "selection_component_usd": -130.16387290698043
+      },
+      "QQQ": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 750.6901328934514,
+        "spy_market_component_usd": 347.1690857539828,
+        "selection_component_usd": 403.5210471394686
+      },
+      "XLC": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1725.3522836852821,
+        "spy_market_component_usd": 2136.331755204238,
+        "selection_component_usd": -410.9794715189558
+      },
+      "SOXX": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 4492.637153745522,
+        "spy_market_component_usd": 1417.019967232406,
+        "selection_component_usd": 3075.6171865131155
+      },
+      "XLV": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2493.1894137651493,
+        "spy_market_component_usd": -228.2900434779434,
+        "selection_component_usd": 2721.479457243093
+      }
+    },
+    "gross_selection_component_usd": 4457.591756925478,
+    "gross_selection_2026_entries_usd": 2944.6401278418966,
+    "gross_selection_before_2026_entries_usd": 1512.9516290835813,
+    "gross_selection_XLE_legs_usd": 5759.887106666168,
+    "selection_share_from_2026_if_positive_total": 0.6605899078279198,
+    "selection_share_from_XLE_if_positive_total": 1.2921522249581057,
+    "XLE_containing_baskets": 4,
+    "XLE_containing_baskets_net_contribution_usd": 3343.3204962663485,
+    "other_baskets_net_contribution_usd": -10361.065465256333,
+    "net_before_2026_entry_contribution_usd": -6950.587512426304,
+    "net_2026_entry_contribution_usd": -67.15745656368216
+  },
+  {
+    "variant": "relative_reserved",
+    "policy": "unhedged25",
+    "method": "Additive attribution on actual account notionals. Group removal is not a separately replayed strategy.",
+    "by_entry_year": {
+      "2022": {
+        "baskets": 7,
+        "source_gross_pnl_usd": 3639.499811948932,
+        "spy_market_component_usd": -1355.9579292463156,
+        "selection_component_usd": 4995.457741195248,
+        "net_pnl_usd": 3289.337295667684
+      },
+      "2023": {
+        "baskets": 9,
+        "source_gross_pnl_usd": 4836.179350053022,
+        "spy_market_component_usd": 5009.720681698681,
+        "selection_component_usd": -173.54133164565854,
+        "net_pnl_usd": 4383.2764312594845
+      },
+      "2024": {
+        "baskets": 10,
+        "source_gross_pnl_usd": 865.8201067135556,
+        "spy_market_component_usd": 4359.371188271818,
+        "selection_component_usd": -3493.551081558263,
+        "net_pnl_usd": 354.62026474980627
+      },
+      "2025": {
+        "baskets": 10,
+        "source_gross_pnl_usd": 4012.2463132045564,
+        "spy_market_component_usd": 1982.0457198960341,
+        "selection_component_usd": 2030.2005933085238,
+        "net_pnl_usd": 3455.781257282178
+      },
+      "2026": {
+        "baskets": 8,
+        "source_gross_pnl_usd": 7703.357103770884,
+        "spy_market_component_usd": 346.07090579234693,
+        "selection_component_usd": 7357.2861979785375,
+        "net_pnl_usd": 7225.866370254056
+      }
+    },
+    "by_source_instrument": {
+      "XLY": {
+        "source_legs": 7,
+        "source_long_legs": 7,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 825.317621929461,
+        "spy_market_component_usd": 1098.832860358788,
+        "selection_component_usd": -273.51523842932704
+      },
+      "XLE": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 4075.5584173942816,
+        "spy_market_component_usd": -2428.627177273993,
+        "selection_component_usd": 6504.185594668275
+      },
+      "XLB": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -403.0895105930898,
+        "spy_market_component_usd": -858.6228415187661,
+        "selection_component_usd": 455.5333309256763
+      },
+      "XLI": {
+        "source_legs": 3,
+        "source_long_legs": 3,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2827.036970259042,
+        "spy_market_component_usd": 2007.645919046942,
+        "selection_component_usd": 819.3910512121
+      },
+      "XLK": {
+        "source_legs": 9,
+        "source_long_legs": 9,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 8502.77152731575,
+        "spy_market_component_usd": 5956.9396156926405,
+        "selection_component_usd": 2545.8319116231105
+      },
+      "QQQ": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 725.0252280381185,
+        "spy_market_component_usd": 323.0358568544835,
+        "selection_component_usd": 401.989371183635
+      },
+      "SOXX": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 5437.500824660378,
+        "spy_market_component_usd": 2173.54838719515,
+        "selection_component_usd": 3263.952437465228
+      },
+      "XLC": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 7.73898396778722,
+        "spy_market_component_usd": 1076.0517294151994,
+        "selection_component_usd": -1068.312745447412
+      },
+      "GLD": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -1951.131845214048,
+        "spy_market_component_usd": 1066.6654210051806,
+        "selection_component_usd": -3017.7972662192283
+      },
+      "XLF": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -627.8982078787768,
+        "spy_market_component_usd": -600.0193998306299,
+        "selection_component_usd": -27.87880804814688
+      },
+      "XLV": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1638.2726758120486,
+        "spy_market_component_usd": 525.8001954675696,
+        "selection_component_usd": 1112.4724803444792
+      }
+    },
+    "gross_selection_component_usd": 10715.852119278388,
+    "gross_selection_2026_entries_usd": 7357.286197978538,
+    "gross_selection_before_2026_entries_usd": 3358.56592129985,
+    "gross_selection_XLE_legs_usd": 6504.185594668275,
+    "selection_share_from_2026_if_positive_total": 0.6865796687080432,
+    "selection_share_from_XLE_if_positive_total": 0.6069685846977021,
+    "XLE_containing_baskets": 5,
+    "XLE_containing_baskets_net_contribution_usd": 3802.9014425110445,
+    "other_baskets_net_contribution_usd": 14905.980176702164,
+    "net_before_2026_entry_contribution_usd": 11483.015248959153,
+    "net_2026_entry_contribution_usd": 7225.866370254055
+  },
+  {
+    "variant": "relative_reserved",
+    "policy": "dollar_short25",
+    "method": "Additive attribution on actual account notionals. Group removal is not a separately replayed strategy.",
+    "by_entry_year": {
+      "2022": {
+        "baskets": 7,
+        "source_gross_pnl_usd": 3798.165820511381,
+        "spy_market_component_usd": -1316.4540476379416,
+        "selection_component_usd": 5114.619868149323,
+        "net_pnl_usd": 4194.089767472951
+      },
+      "2023": {
+        "baskets": 9,
+        "source_gross_pnl_usd": 4810.317296291453,
+        "spy_market_component_usd": 4945.293170646897,
+        "selection_component_usd": -134.97587435544312,
+        "net_pnl_usd": -1295.8859968215659
+      },
+      "2024": {
+        "baskets": 10,
+        "source_gross_pnl_usd": 800.4525279722872,
+        "spy_market_component_usd": 4086.3137113024427,
+        "selection_component_usd": -3285.8611833301557,
+        "net_pnl_usd": -4527.758601118253
+      },
+      "2025": {
+        "baskets": 10,
+        "source_gross_pnl_usd": 3658.598717656529,
+        "spy_market_component_usd": 1802.294194126321,
+        "selection_component_usd": 1856.3045235302075,
+        "net_pnl_usd": 557.561663293395
+      },
+      "2026": {
+        "baskets": 8,
+        "source_gross_pnl_usd": 6882.7179970001525,
+        "spy_market_component_usd": 317.4193196120108,
+        "selection_component_usd": 6565.29867738814,
+        "net_pnl_usd": 5480.127482941511
+      }
+    },
+    "by_source_instrument": {
+      "XLY": {
+        "source_legs": 7,
+        "source_long_legs": 7,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 786.1567783990091,
+        "spy_market_component_usd": 1044.973462735079,
+        "selection_component_usd": -258.81668433606995
+      },
+      "XLE": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 3816.920877304665,
+        "spy_market_component_usd": -2389.5750325171466,
+        "selection_component_usd": 6206.495909821811
+      },
+      "XLB": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -417.3736427284075,
+        "spy_market_component_usd": -889.0495378240366,
+        "selection_component_usd": 471.67589509562913
+      },
+      "XLI": {
+        "source_legs": 3,
+        "source_long_legs": 3,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2803.784368387521,
+        "spy_market_component_usd": 2005.7313283937065,
+        "selection_component_usd": 798.0530399938145
+      },
+      "XLK": {
+        "source_legs": 9,
+        "source_long_legs": 9,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 7960.634467788083,
+        "spy_market_component_usd": 5618.184246960665,
+        "selection_component_usd": 2342.450220827418
+      },
+      "QQQ": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 731.3760129725879,
+        "spy_market_component_usd": 325.86545667207355,
+        "selection_component_usd": 405.51055630051434
+      },
+      "SOXX": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 4996.252190648043,
+        "spy_market_component_usd": 2053.3502338690437,
+        "selection_component_usd": 2942.901956778999
+      },
+      "XLC": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 29.238848699579677,
+        "spy_market_component_usd": 1017.7781488172722,
+        "selection_component_usd": -988.5393001176926
+      },
+      "GLD": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -1653.7475891663057,
+        "spy_market_component_usd": 1112.5620986643758,
+        "selection_component_usd": -2766.309687830681
+      },
+      "XLF": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -555.9702391912062,
+        "spy_market_component_usd": -531.2850475719202,
+        "selection_component_usd": -24.685191619286
+      },
+      "XLV": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1452.9802863182326,
+        "spy_market_component_usd": 466.33098985061713,
+        "selection_component_usd": 986.6492964676155
+      }
+    },
+    "gross_selection_component_usd": 10115.386011382072,
+    "gross_selection_2026_entries_usd": 6565.29867738814,
+    "gross_selection_before_2026_entries_usd": 3550.0873339939317,
+    "gross_selection_XLE_legs_usd": 6206.495909821811,
+    "selection_share_from_2026_if_positive_total": 0.649040844313871,
+    "selection_share_from_XLE_if_positive_total": 0.6135698531759555,
+    "XLE_containing_baskets": 5,
+    "XLE_containing_baskets_net_contribution_usd": 5548.2323016340415,
+    "other_baskets_net_contribution_usd": -1140.097985866003,
+    "net_before_2026_entry_contribution_usd": -1071.9931671734735,
+    "net_2026_entry_contribution_usd": 5480.127482941512
+  },
+  {
+    "variant": "relative_reserved",
+    "policy": "beta40_daily_short25",
+    "method": "Additive attribution on actual account notionals. Group removal is not a separately replayed strategy.",
+    "by_entry_year": {
+      "2022": {
+        "baskets": 7,
+        "source_gross_pnl_usd": 3702.58013522323,
+        "spy_market_component_usd": -1364.3967882176516,
+        "selection_component_usd": 5066.976923440881,
+        "net_pnl_usd": 2061.992435194055
+      },
+      "2023": {
+        "baskets": 9,
+        "source_gross_pnl_usd": 4709.396426134563,
+        "spy_market_component_usd": 4823.752948609443,
+        "selection_component_usd": -114.35652247487957,
+        "net_pnl_usd": -1409.0514593009825
+      },
+      "2024": {
+        "baskets": 10,
+        "source_gross_pnl_usd": 778.2427066202453,
+        "spy_market_component_usd": 3986.5964063756246,
+        "selection_component_usd": -3208.3536997553792,
+        "net_pnl_usd": -5042.966038072224
+      },
+      "2025": {
+        "baskets": 10,
+        "source_gross_pnl_usd": 3538.2875198265424,
+        "spy_market_component_usd": 1736.7809896002914,
+        "selection_component_usd": 1801.5065302262517,
+        "net_pnl_usd": -308.5308623329647
+      },
+      "2026": {
+        "baskets": 8,
+        "source_gross_pnl_usd": 6595.070984517757,
+        "spy_market_component_usd": 297.1360119807832,
+        "selection_component_usd": 6297.934972536974,
+        "net_pnl_usd": 3375.350325952127
+      }
+    },
+    "by_source_instrument": {
+      "XLY": {
+        "source_legs": 7,
+        "source_long_legs": 7,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 728.2315740556534,
+        "spy_market_component_usd": 996.3548300220448,
+        "selection_component_usd": -268.1232559663914
+      },
+      "XLE": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 3703.810224410504,
+        "spy_market_component_usd": -2387.3061171530276,
+        "selection_component_usd": 6091.116341563531
+      },
+      "XLB": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -411.8852776638811,
+        "spy_market_component_usd": -877.3587458705016,
+        "selection_component_usd": 465.4734682066205
+      },
+      "XLI": {
+        "source_legs": 3,
+        "source_long_legs": 3,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2741.035066626707,
+        "spy_market_component_usd": 1962.5545845929262,
+        "selection_component_usd": 778.4804820337805
+      },
+      "XLK": {
+        "source_legs": 9,
+        "source_long_legs": 9,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 7720.174131712847,
+        "spy_market_component_usd": 5462.648670362188,
+        "selection_component_usd": 2257.5254613506586
+      },
+      "QQQ": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 716.4100504152912,
+        "spy_market_component_usd": 319.1973541683435,
+        "selection_component_usd": 397.21269624694764
+      },
+      "SOXX": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 4794.040934054731,
+        "spy_market_component_usd": 1992.8635564053848,
+        "selection_component_usd": 2801.177377649346
+      },
+      "XLC": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 30.76647225021503,
+        "spy_market_component_usd": 992.5170989753476,
+        "selection_component_usd": -961.7506267251324
+      },
+      "GLD": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -1537.23781880046,
+        "spy_market_component_usd": 1090.5640638454458,
+        "selection_component_usd": -2627.8018826459056
+      },
+      "XLF": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -537.6091671408899,
+        "spy_market_component_usd": -513.7392108524679,
+        "selection_component_usd": -23.86995628842203
+      },
+      "XLV": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1375.8415824016215,
+        "spy_market_component_usd": 441.57348385280466,
+        "selection_component_usd": 934.2680985488169
+      }
+    },
+    "gross_selection_component_usd": 9843.70820397385,
+    "gross_selection_2026_entries_usd": 6297.934972536975,
+    "gross_selection_before_2026_entries_usd": 3545.773231436876,
+    "gross_selection_XLE_legs_usd": 6091.116341563531,
+    "selection_share_from_2026_if_positive_total": 0.6397929359582737,
+    "selection_share_from_XLE_if_positive_total": 0.6187827001113849,
+    "XLE_containing_baskets": 5,
+    "XLE_containing_baskets_net_contribution_usd": 3612.1306309416404,
+    "other_baskets_net_contribution_usd": -4935.33622950163,
+    "net_before_2026_entry_contribution_usd": -4698.555924512117,
+    "net_2026_entry_contribution_usd": 3375.350325952127
+  },
+  {
+    "variant": "relative_filled",
+    "policy": "unhedged25",
+    "method": "Additive attribution on actual account notionals. Group removal is not a separately replayed strategy.",
+    "by_entry_year": {
+      "2022": {
+        "baskets": 15,
+        "source_gross_pnl_usd": -4259.724605179138,
+        "spy_market_component_usd": -6650.036518962016,
+        "selection_component_usd": 2390.3119137828794,
+        "net_pnl_usd": -4943.434961864833
+      },
+      "2023": {
+        "baskets": 13,
+        "source_gross_pnl_usd": 5907.091414071617,
+        "spy_market_component_usd": 6308.9885264910135,
+        "selection_component_usd": -401.8971124193961,
+        "net_pnl_usd": 5264.464701189627
+      },
+      "2024": {
+        "baskets": 16,
+        "source_gross_pnl_usd": 4404.25569814973,
+        "spy_market_component_usd": 6492.247899932617,
+        "selection_component_usd": -2087.9922017828853,
+        "net_pnl_usd": 3601.235642373202
+      },
+      "2025": {
+        "baskets": 16,
+        "source_gross_pnl_usd": -91.56779887169358,
+        "spy_market_component_usd": 1749.3143622570765,
+        "selection_component_usd": -1840.882161128769,
+        "net_pnl_usd": -915.773748915528
+      },
+      "2026": {
+        "baskets": 11,
+        "source_gross_pnl_usd": -1381.32611443511,
+        "spy_market_component_usd": -1378.4035586864138,
+        "selection_component_usd": -2.9225557486965954,
+        "net_pnl_usd": -1950.0919526903217
+      }
+    },
+    "by_source_instrument": {
+      "XLY": {
+        "source_legs": 15,
+        "source_long_legs": 15,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -1482.744038147682,
+        "spy_market_component_usd": -2374.573526826875,
+        "selection_component_usd": 891.8294886791932
+      },
+      "XLE": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2946.414079481087,
+        "spy_market_component_usd": -3109.941613123912,
+        "selection_component_usd": 6056.355692604998
+      },
+      "XLB": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -481.571419803669,
+        "spy_market_component_usd": -444.0539511163037,
+        "selection_component_usd": -37.517468687365294
+      },
+      "XLV": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -5.351039044016325,
+        "spy_market_component_usd": 511.1719104879143,
+        "selection_component_usd": -516.5229495319306
+      },
+      "XLI": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2630.873827147314,
+        "spy_market_component_usd": 1889.5787145302656,
+        "selection_component_usd": 741.2951126170483
+      },
+      "XLK": {
+        "source_legs": 10,
+        "source_long_legs": 10,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -175.498563980886,
+        "spy_market_component_usd": 509.7320158735236,
+        "selection_component_usd": -685.2305798544096
+      },
+      "XLF": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 533.7038767376436,
+        "spy_market_component_usd": 763.261473842053,
+        "selection_component_usd": -229.55759710440947
+      },
+      "SOXX": {
+        "source_legs": 7,
+        "source_long_legs": 7,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -855.9411293863194,
+        "spy_market_component_usd": 1283.1226284717818,
+        "selection_component_usd": -2139.063757858101
+      },
+      "IEF": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -46.5005668361273,
+        "spy_market_component_usd": 77.99671590541665,
+        "selection_component_usd": -124.49728274154396
+      },
+      "XLC": {
+        "source_legs": 9,
+        "source_long_legs": 9,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1771.4606185790003,
+        "spy_market_component_usd": 2603.677141379817,
+        "selection_component_usd": -832.2165228008168
+      },
+      "GLD": {
+        "source_legs": 7,
+        "source_long_legs": 7,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -2495.6365560018735,
+        "spy_market_component_usd": 3092.6269465108558,
+        "selection_component_usd": -5588.263502512729
+      },
+      "XLU": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1181.9623363573533,
+        "spy_market_component_usd": 901.8999034881319,
+        "selection_component_usd": 280.06243286922137
+      },
+      "QQQ": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1057.5571686335834,
+        "spy_market_component_usd": 817.6123516096058,
+        "selection_component_usd": 239.94481702397752
+      }
+    },
+    "gross_selection_component_usd": -1943.3821172968676,
+    "gross_selection_2026_entries_usd": -2.9225557486964675,
+    "gross_selection_before_2026_entries_usd": -1940.4595615481712,
+    "gross_selection_XLE_legs_usd": 6056.355692604998,
+    "selection_share_from_2026_if_positive_total": null,
+    "selection_share_from_XLE_if_positive_total": null,
+    "XLE_containing_baskets": 4,
+    "XLE_containing_baskets_net_contribution_usd": 2740.2678454205848,
+    "other_baskets_net_contribution_usd": -1683.8681653284377,
+    "net_before_2026_entry_contribution_usd": 3006.491632782469,
+    "net_2026_entry_contribution_usd": -1950.0919526903217
+  },
+  {
+    "variant": "relative_filled",
+    "policy": "dollar_short25",
+    "method": "Additive attribution on actual account notionals. Group removal is not a separately replayed strategy.",
+    "by_entry_year": {
+      "2022": {
+        "baskets": 15,
+        "source_gross_pnl_usd": -4224.095756933677,
+        "spy_market_component_usd": -6742.355501040299,
+        "selection_component_usd": 2518.2597441066205,
+        "net_pnl_usd": 646.444345422814
+      },
+      "2023": {
+        "baskets": 13,
+        "source_gross_pnl_usd": 6113.472445535582,
+        "spy_market_component_usd": 6459.808376790591,
+        "selection_component_usd": -346.33593125500863,
+        "net_pnl_usd": -2070.2758210378174
+      },
+      "2024": {
+        "baskets": 16,
+        "source_gross_pnl_usd": 4274.920531424255,
+        "spy_market_component_usd": 6189.908127529542,
+        "selection_component_usd": -1914.987596105289,
+        "net_pnl_usd": -3889.3189062690426
+      },
+      "2025": {
+        "baskets": 16,
+        "source_gross_pnl_usd": -53.33192521501044,
+        "spy_market_component_usd": 1595.7199102323848,
+        "selection_component_usd": -1649.0518354473952,
+        "net_pnl_usd": -3569.9975586866367
+      },
+      "2026": {
+        "baskets": 11,
+        "source_gross_pnl_usd": -1223.7181232528646,
+        "spy_market_component_usd": -1212.2552276492906,
+        "selection_component_usd": -11.462895603574225,
+        "net_pnl_usd": -1317.973626553774
+      }
+    },
+    "by_source_instrument": {
+      "XLY": {
+        "source_legs": 15,
+        "source_long_legs": 15,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -1380.7509824657682,
+        "spy_market_component_usd": -2387.6941547264014,
+        "selection_component_usd": 1006.9431722606334
+      },
+      "XLE": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2632.1224321425934,
+        "spy_market_component_usd": -3048.994484976824,
+        "selection_component_usd": 5681.116917119418
+      },
+      "XLB": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -487.08278384692017,
+        "spy_market_component_usd": -520.8214764134854,
+        "selection_component_usd": 33.73869256656519
+      },
+      "XLV": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -5.585157641222824,
+        "spy_market_component_usd": 533.5366978928241,
+        "selection_component_usd": -539.121855534047
+      },
+      "XLI": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2625.1807052792606,
+        "spy_market_component_usd": 1877.674673676033,
+        "selection_component_usd": 747.5060316032279
+      },
+      "XLK": {
+        "source_legs": 10,
+        "source_long_legs": 10,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -378.3406874065976,
+        "spy_market_component_usd": 259.26822173131046,
+        "selection_component_usd": -637.6089091379081
+      },
+      "XLF": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 869.7611085183725,
+        "spy_market_component_usd": 986.1567882199579,
+        "selection_component_usd": -116.39567970158532
+      },
+      "SOXX": {
+        "source_legs": 7,
+        "source_long_legs": 7,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -631.7345922494484,
+        "spy_market_component_usd": 1243.478404351925,
+        "selection_component_usd": -1875.2129966013736
+      },
+      "IEF": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -49.29604471071276,
+        "spy_market_component_usd": 82.68565000749564,
+        "selection_component_usd": -131.98169471820842
+      },
+      "XLC": {
+        "source_legs": 9,
+        "source_long_legs": 9,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1774.7910330528973,
+        "spy_market_component_usd": 2599.688196914705,
+        "selection_component_usd": -824.8971638618073
+      },
+      "GLD": {
+        "source_legs": 7,
+        "source_long_legs": 7,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -2155.882847565809,
+        "spy_market_component_usd": 3068.5743377530835,
+        "selection_component_usd": -5224.457185318893
+      },
+      "XLU": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1083.357822262065,
+        "spy_market_component_usd": 832.1632960762404,
+        "selection_component_usd": 251.19452618582466
+      },
+      "QQQ": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 990.7071661895739,
+        "spy_market_component_usd": 765.1095353560663,
+        "selection_component_usd": 225.59763083350748
+      }
+    },
+    "gross_selection_component_usd": -1403.5785143046462,
+    "gross_selection_2026_entries_usd": -11.462895603573912,
+    "gross_selection_before_2026_entries_usd": -1392.1156187010722,
+    "gross_selection_XLE_legs_usd": 5681.116917119418,
+    "selection_share_from_2026_if_positive_total": null,
+    "selection_share_from_XLE_if_positive_total": null,
+    "XLE_containing_baskets": 4,
+    "XLE_containing_baskets_net_contribution_usd": 5201.846213850388,
+    "other_baskets_net_contribution_usd": -15402.967780974846,
+    "net_before_2026_entry_contribution_usd": -8883.147940570685,
+    "net_2026_entry_contribution_usd": -1317.973626553774
+  },
+  {
+    "variant": "relative_filled",
+    "policy": "beta40_daily_short25",
+    "method": "Additive attribution on actual account notionals. Group removal is not a separately replayed strategy.",
+    "by_entry_year": {
+      "2022": {
+        "baskets": 15,
+        "source_gross_pnl_usd": -4135.492050719664,
+        "spy_market_component_usd": -6680.860818206925,
+        "selection_component_usd": 2545.368767487261,
+        "net_pnl_usd": 918.3142860272025
+      },
+      "2023": {
+        "baskets": 13,
+        "source_gross_pnl_usd": 6116.87161635705,
+        "spy_market_component_usd": 6444.649650848966,
+        "selection_component_usd": -327.77803449191674,
+        "net_pnl_usd": -2172.232742247477
+      },
+      "2024": {
+        "baskets": 16,
+        "source_gross_pnl_usd": 4280.927013406255,
+        "spy_market_component_usd": 6223.658638269201,
+        "selection_component_usd": -1942.7316248629459,
+        "net_pnl_usd": -1824.8021177097523
+      },
+      "2025": {
+        "baskets": 16,
+        "source_gross_pnl_usd": -53.08434529531212,
+        "spy_market_component_usd": 1643.4138648538851,
+        "selection_component_usd": -1696.4982101491971,
+        "net_pnl_usd": -3664.951685581201
+      },
+      "2026": {
+        "baskets": 11,
+        "source_gross_pnl_usd": -1220.8691148719904,
+        "spy_market_component_usd": -1235.4967095285556,
+        "selection_component_usd": 14.627594656565861,
+        "net_pnl_usd": -2803.278863607176
+      }
+    },
+    "by_source_instrument": {
+      "XLY": {
+        "source_legs": 15,
+        "source_long_legs": 15,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -1374.9708560831566,
+        "spy_market_component_usd": -2385.2959008122234,
+        "selection_component_usd": 1010.3250447290677
+      },
+      "XLE": {
+        "source_legs": 4,
+        "source_long_legs": 4,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2681.893681696247,
+        "spy_market_component_usd": -3073.1560672730957,
+        "selection_component_usd": 5755.0497489693425
+      },
+      "XLB": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -483.44366448153016,
+        "spy_market_component_usd": -499.3623219763682,
+        "selection_component_usd": 15.918657494838044
+      },
+      "XLV": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -5.505396802969326,
+        "spy_market_component_usd": 525.9173365432279,
+        "selection_component_usd": -531.4227333461972
+      },
+      "XLI": {
+        "source_legs": 6,
+        "source_long_legs": 6,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 2658.0724219634185,
+        "spy_market_component_usd": 1900.5623032664112,
+        "selection_component_usd": 757.5101186970069
+      },
+      "XLK": {
+        "source_legs": 10,
+        "source_long_legs": 10,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -328.7954915676485,
+        "spy_market_component_usd": 311.6693986881276,
+        "selection_component_usd": -640.4648902557764
+      },
+      "XLF": {
+        "source_legs": 5,
+        "source_long_legs": 5,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 851.5135461631131,
+        "spy_market_component_usd": 976.1684650698176,
+        "selection_component_usd": -124.65491890670437
+      },
+      "SOXX": {
+        "source_legs": 7,
+        "source_long_legs": 7,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -675.9815032085007,
+        "spy_market_component_usd": 1262.0651114944512,
+        "selection_component_usd": -1938.0466147029522
+      },
+      "IEF": {
+        "source_legs": 1,
+        "source_long_legs": 1,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -49.38078673442583,
+        "spy_market_component_usd": 82.82779020058386,
+        "selection_component_usd": -132.2085769350097
+      },
+      "XLC": {
+        "source_legs": 9,
+        "source_long_legs": 9,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1778.6166691869548,
+        "spy_market_component_usd": 2604.909205388227,
+        "selection_component_usd": -826.292536201272
+      },
+      "GLD": {
+        "source_legs": 7,
+        "source_long_legs": 7,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": -2198.8040684413995,
+        "spy_market_component_usd": 3047.8376249857793,
+        "selection_component_usd": -5246.641693427179
+      },
+      "XLU": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1105.7110283343804,
+        "spy_market_component_usd": 846.6025209049815,
+        "selection_component_usd": 259.1085074293989
+      },
+      "QQQ": {
+        "source_legs": 2,
+        "source_long_legs": 2,
+        "source_short_legs": 0,
+        "source_gross_pnl_usd": 1029.4275388518558,
+        "spy_market_component_usd": 794.6191597566532,
+        "selection_component_usd": 234.80837909520255
+      }
+    },
+    "gross_selection_component_usd": -1407.0115073602333,
+    "gross_selection_2026_entries_usd": 14.627594656565677,
+    "gross_selection_before_2026_entries_usd": -1421.639102016799,
+    "gross_selection_XLE_legs_usd": 5755.0497489693425,
+    "selection_share_from_2026_if_positive_total": null,
+    "selection_share_from_XLE_if_positive_total": null,
+    "XLE_containing_baskets": 4,
+    "XLE_containing_baskets_net_contribution_usd": 3333.1218350877452,
+    "other_baskets_net_contribution_usd": -12880.07295820615,
+    "net_before_2026_entry_contribution_usd": -6743.672259511229,
+    "net_2026_entry_contribution_usd": -2803.278863607176
+  }
+]

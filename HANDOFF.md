@@ -1,8 +1,12 @@
 # mapp_strategy handoff
 
-Start with [the strategy README](strategies/mapp_strategy/README.md) and [the completed extended-history report](strategies/mapp_strategy/backtests/2022_2026_month_gaps/README.md).
+Start with [the strategy README](strategies/mapp_strategy/README.md) and [the gate/clock comparison](strategies/mapp_strategy/backtests/2022_2026_relative_clock/README.md). The [original extended-history report](strategies/mapp_strategy/backtests/2022_2026_month_gaps/README.md) remains an immutable older snapshot.
 
-The current completed profile runs from 3 January 2022 through 20 November 2026. It compares unhedged25, dollar_short25 and beta40_daily_short25 on one continuous source calendar, using 1,171 validated reports. Missing months block new theme entries; existing positions retain their normal exits and hedge management. The five gaps are July–October 2023 and May 2024.
+The original saved profile runs from 3 January 2022 through 20 November 2026. It compares unhedged25, dollar_short25 and beta40_daily_short25 on one continuous source calendar, using 1,171 validated reports. Missing months block new theme entries; existing positions retain their normal exits and hedge management. The five gaps are July–October 2023 and May 2024.
+
+The newer gate/clock experiment uses 1,192 reports because July 2023 is now available. Its four gaps are August–October 2023 and May 2024. It compares absolute/relative SMA20 and pre-gate/fill-only reservation across all three unchanged hedge policies. Fixed-short returns are +2.64%, −3.86%, +4.41% and −10.20% respectively. Do not replace the saved original results with this refreshed control or call the combined proposal an improvement.
+
+Run `python mapp_strategy.py relative-clock --start 2022-01-01 --end 2026-11-20 --workers 12` in a fresh checkout. New components are `ci/run_relative_clock.py`, `ci/relative_clock_audit.py` and `ci/relative_clock_outputs.py`. They share one immutable campaign, independently verify all four schedules and twelve ledgers, retain rejected-candidate logs and export simulated data only. The economic simulator and mapping are unchanged.
 
 ## Implementation
 

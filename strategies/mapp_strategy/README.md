@@ -2,9 +2,17 @@
 
 The mapped-sector strategy is isolated in this directory. Its entry point is [mapp_strategy.py](mapp_strategy.py), and simulated outputs use `strategy_id=mapp_strategy`.
 
-## Completed simulation
+## Gate and reservation-clock experiment
 
-The latest completed study covers **3 January 2022–20 November 2026**, using **1,171** validated public reports. The three separately compounded accounts start with $100,000 and use the same 54 completed theme trades.
+The four predeclared variants were simulated on **1,192 reports**, including newly available July 2023 history. With the fixed SPY-short hedge, the refreshed control returned **+2.64%**; changing only the clock returned **−3.86%**; changing only the gate to sector/SPY relative strength returned **+4.41%**; combining both changes returned **−10.20%**. The combined proposal failed. The relative-only result has lower costs and drawdown but still depends on XLE and 2026.
+
+[Full experiment, daily PnL and all twelve accounts](backtests/2022_2026_relative_clock/README.md) · [Trades](backtests/2022_2026_relative_clock/all_trades.csv) · [Rejected/funded entry attempts](backtests/2022_2026_relative_clock/entry_attempts.csv)
+
+Reproduce in a fresh checkout with `python mapp_strategy.py relative-clock --start 2022-01-01 --end 2026-11-20 --workers 12`. This is a research comparison; the existing extended-history command and frozen economic engine remain unchanged. August–October 2023 and May 2024 are absent in this experiment.
+
+## Original extended-history simulation
+
+The original saved study covers **3 January 2022–20 November 2026**, using **1,171** validated public reports. The three separately compounded accounts start with $100,000 and use the same 54 completed theme trades.
 
 | Variant | Total net return | Maximum drawdown |
 |---|---:|---:|
@@ -14,7 +22,7 @@ The latest completed study covers **3 January 2022–20 November 2026**, using *
 
 [Full report, PnL chart and trade mapping](backtests/2022_2026_month_gaps/README.md) · [All trades](backtests/2022_2026_month_gaps/all_trades.csv) · [Result ZIP](backtests/2022_2026_month_gaps/mapp_strategy_extended_simulated_results.zip)
 
-July–October 2023 and May 2024 had no available reports. They generated no new entries; existing positions and hedges kept their normal schedules. Calendar time and the account history remain continuous through gaps.
+In that original snapshot, July–October 2023 and May 2024 had no available reports. They generated no new entries; existing positions and hedges kept their normal schedules. Calendar time and the account history remain continuous through gaps.
 
 ## Timing versus sector selection
 
