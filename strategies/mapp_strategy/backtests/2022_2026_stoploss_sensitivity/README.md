@@ -182,6 +182,7 @@ This run used a fresh download made on November 21, 2026. It reproduced the publ
 | File | Contents |
 |---|---|
 | [README.md](README.md) | This report |
+| [mapp_strategy_stoploss_report.pdf](mapp_strategy_stoploss_report.pdf) | This report as a 7-page A4 PDF |
 | [figures/stoploss_pnl_drawdown.png](figures/stoploss_pnl_drawdown.png) | Net P&L and drawdown for all seven variants |
 | [figures/position_excursions.png](figures/position_excursions.png) | Worst intraday dip against the return at the normal exit, per position |
 | [risk_metrics.json](risk_metrics.json) | Every risk statistic per variant, reproduction checks and input fingerprints |
