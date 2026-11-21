@@ -2,6 +2,10 @@
 
 The mapped-sector strategy is isolated in this directory. Its entry point is [mapp_strategy.py](mapp_strategy.py), and simulated outputs use `strategy_id=mapp_strategy`.
 
+## Fixed 25% backtest with full archive coverage
+
+The unhedged `absolute_reserved` schedule returned **+22.31% net** with a **−3.55% maximum closing drawdown** across 1,227 market sessions through November 20, 2026. The replay used 1,281 reports and a 25% opening-equity budget for every basket. [Risk report, P&L chart and complete trade history](backtests/2022_2026_no_gaps_fixed25/README.md)
+
 ## Gate and reservation-clock experiment
 
 The four predeclared variants were simulated on **1,192 reports**, including newly available July 2023 history. With the fixed SPY-short hedge, the refreshed control returned **+2.64%**; changing only the clock returned **−3.86%**; changing only the gate to sector/SPY relative strength returned **+4.41%**; combining both changes returned **−10.20%**. The combined proposal failed. The relative-only result has lower costs and drawdown but still depends on XLE and 2026.

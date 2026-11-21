@@ -1,5 +1,7 @@
 # mapp_strategy handoff
 
+The [fixed 25% full-coverage backtest](strategies/mapp_strategy/backtests/2022_2026_no_gaps_fixed25/README.md) is the latest reference for the unhedged `absolute_reserved` / `unhedged25` strategy. It uses 1,281 reports through November 20, 2026, with no missing weekdays or months, and records +22.31% net return, −3.55% maximum closing drawdown and 55 funded baskets. The report links to the trade ledger, daily equity, recovery episodes and exact risk metrics.
+
 Start with [the strategy README](strategies/mapp_strategy/README.md) and [the gate/clock comparison](strategies/mapp_strategy/backtests/2022_2026_relative_clock/README.md). The [original extended-history report](strategies/mapp_strategy/backtests/2022_2026_month_gaps/README.md) remains an immutable older snapshot.
 
 The original saved profile runs from 3 January 2022 through 20 November 2026. It compares unhedged25, dollar_short25 and beta40_daily_short25 on one continuous source calendar, using 1,171 validated reports. Missing months block new theme entries; existing positions retain their normal exits and hedge management. The five gaps are July–October 2023 and May 2024.
