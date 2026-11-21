@@ -4,7 +4,7 @@ The mapped-sector strategy is isolated in this directory. Its entry point is [ma
 
 ## Fixed 25% backtest with full archive coverage
 
-The unhedged `absolute_reserved` schedule returned **+22.31% net** with a **−3.55% maximum closing drawdown** across 1,227 market sessions through November 20, 2026. The replay used 1,281 reports and a 25% opening-equity budget for every basket. [Risk report, P&L chart and complete trade history](backtests/2022_2026_no_gaps_fixed25/README.md)
+The unhedged `absolute_reserved` schedule returned **+22.31% net** with a **−3.55% maximum closing drawdown** across 1,227 market sessions through November 20, 2026. The replay used 1,281 reports and a 25% opening-equity budget for every basket. [Risk report, P&L chart and complete trade history](backtests/2022_2026_no_gaps_fixed25/README.md) · [PDF strategy report](backtests/2022_2026_no_gaps_fixed25/mapp_strategy_report.pdf)
 
 ## Stop-loss test
 

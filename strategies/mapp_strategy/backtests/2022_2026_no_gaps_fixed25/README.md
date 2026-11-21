@@ -1,5 +1,7 @@
 # mapp_strategy fixed 25% backtest with full archive coverage
 
+**[Download the 6-page PDF strategy report](mapp_strategy_report.pdf)**: strategy logic, risk statistics, comparison with SPY, monthly returns and trade charts. It is built from this folder's ledgers by [`ci/strategy_report_pdf.py`](../../ci/strategy_report_pdf.py).
+
 The unhedged, fixed-size strategy grew **$100,000 to $122,305.16** from **January 3, 2022 through November 20, 2026**. It returned **22.31% net** with a **3.55% maximum closing drawdown**. The median completed recovery to a new equity high was **13.5 calendar days**. Three completed recoveries took more than 200 days.
 
 This is the `absolute_reserved` schedule and `unhedged25` policy from the earlier comparison. The basket budget stays at 25% of opening equity after every win or loss. The continuous replay covers **1,227 U.S. market sessions** and **1,281 validated reports**, including 1,275 weekday reports and six weekend reports. The new archive adds 89 reports since the prior comparison. August, September, and October 2023 contribute 23, 21, and 22 reports, respectively, and May 2024 contributes 23. All report months and weekdays in the study are represented. [Previous comparison](../2022_2026_relative_clock/README.md) · [Report archive](https://d7g7nkeytae81.cloudfront.net/reports/index.html)
