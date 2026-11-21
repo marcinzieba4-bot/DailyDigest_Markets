@@ -1,0 +1,42 @@
+name: mapp_strategy relative strength and filled clock
+on:
+  workflow_dispatch:
+  push:
+    branches: ['research/mapp-relative-clock']
+    paths:
+      - '.github/workflows/mapp-relative-clock.yml'
+      - 'strategies/mapp_strategy/ci/run_relative_clock.py'
+      - 'strategies/mapp_strategy/ci/relative_clock_audit.py'
+      - 'strategies/mapp_strategy/ci/relative_clock_outputs.py'
+permissions:
+  contents: read
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: strategies/mapp_strategy
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install research dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Compile comparison and audit code
+        run: python -m compileall -q .
+      - name: Check named comparison command
+        run: python mapp_strategy.py relative-clock --help
+      - name: Simulate four fixed variants on a shared input campaign
+        run: python mapp_strategy.py relative-clock --root . --start 2022-01-01 --end 2026-11-20 --workers 12
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mapp_strategy_relative_clock_2022_2026
+          path: |
+            strategies/mapp_strategy/publication_relative_clock/
+            strategies/mapp_strategy/mapp_strategy_relative_clock_simulated_results.zip
+          if-no-files-found: error
+          retention-days: 90
