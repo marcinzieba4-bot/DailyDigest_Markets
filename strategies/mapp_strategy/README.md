@@ -6,6 +6,10 @@ The mapped-sector strategy is isolated in this directory. Its entry point is [ma
 
 The unhedged `absolute_reserved` schedule returned **+22.31% net** with a **−3.55% maximum closing drawdown** across 1,227 market sessions through November 20, 2026. The replay used 1,281 reports and a 25% opening-equity budget for every basket. [Risk report, P&L chart and complete trade history](backtests/2022_2026_no_gaps_fixed25/README.md)
 
+## Stop-loss test
+
+Adding a fixed −5%, −8% or −10% stop to the same fixed 25% unhedged strategy did not improve it. No stop returned **+22.31%**. The best stop, a −8% resting stop order, returned **+22.01%** with a smaller **−2.93%** maximum drawdown, but that gain rests on the final GLD basket alone. The other five stop variants returned +19.25% to +20.93%. [Report with logic, risk tables and P&L chart](backtests/2022_2026_stoploss_sensitivity/README.md) · [Code](ci/stoploss_sensitivity.py)
+
 ## Gate and reservation-clock experiment
 
 The four predeclared variants were simulated on **1,192 reports**, including newly available July 2023 history. With the fixed SPY-short hedge, the refreshed control returned **+2.64%**; changing only the clock returned **−3.86%**; changing only the gate to sector/SPY relative strength returned **+4.41%**; combining both changes returned **−10.20%**. The combined proposal failed. The relative-only result has lower costs and drawdown but still depends on XLE and 2026.

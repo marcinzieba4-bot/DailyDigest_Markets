@@ -7,6 +7,7 @@ ROOT=Path(__file__).resolve().parent
 COMMANDS={
     "relative-clock":("ci/run_relative_clock.py",[],"Compare absolute/relative SMA20 and reservation-after-fill rules across the three hedge policies"),
     "extended-history":("ci/run_extended_history.py",[],"Run the three policies on extended history with explicit missing-month entry blocking"),
+    "stoploss-sensitivity":("ci/stoploss_sensitivity.py",[],"Re-simulate unhedged25 from a completed extended-history run with -5/-8/-10% stops"),
     "fetch":("ci/fetch_inputs.py",[],"Fetch the one approved local source/price snapshot"),
     "prepare":("prepare_study.py",[],"Prepare fixed schedules and freeze exact inputs"),
     "preflight":("ci/check_study.py",["--preflight"],"Independently verify inputs before returns"),

@@ -1,0 +1,450 @@
+{
+  "strategy_id": "mapp_strategy",
+  "schedule": "absolute_reserved",
+  "policy": "unhedged25",
+  "constant_basket_budget_fraction": 0.25,
+  "first_session": "2022-01-03",
+  "last_session": "2026-11-20",
+  "market_sessions": 1227,
+  "baskets": 55,
+  "stop_levels_pct": [
+    -5.0,
+    -8.0,
+    -10.0
+  ],
+  "executions": [
+    "intraday",
+    "close"
+  ],
+  "checks": {
+    "no_stop_daily_nav_max_abs_error": 0.0,
+    "published_fixed25_statistics_identity": "passed"
+  },
+  "variants": {
+    "none": {
+      "stop_pct": null,
+      "execution": "none",
+      "ending_nav_usd": 122305.18067572826,
+      "net_pnl_usd": 22305.180675728265,
+      "total_net_return_pct": 22.305180675728266,
+      "cagr_pct": 4.213324546847863,
+      "annualized_daily_volatility_pct": 3.582086948771917,
+      "annualized_downside_deviation_pct": 2.3455757678199536,
+      "sharpe_zero_rate": 1.172418828430958,
+      "sortino_zero_target": 1.7904798648735722,
+      "calmar": 1.186426704325335,
+      "max_drawdown_pct": -3.551272515602877,
+      "max_drawdown_trough_date": "2026-11-20",
+      "worst_session": {
+        "date": "2024-09-03",
+        "return_pct": -1.9318383019492291
+      },
+      "empirical_daily_95": {
+        "loss_var_pct": 0.3488552603680751,
+        "mean_tail_loss_pct": 0.534842732342406,
+        "tail_sessions": 62
+      },
+      "empirical_daily_99": {
+        "loss_var_pct": 0.6438423203366195,
+        "mean_tail_loss_pct": 0.8527539473994223,
+        "tail_sessions": 13
+      },
+      "basket_count": 55,
+      "stopped_baskets": 0,
+      "winners": 38,
+      "losers": 17,
+      "win_rate_pct": 69.0909090909091,
+      "profit_factor": 2.5984886736682977,
+      "average_winner_net_usd": 954.1868204169908,
+      "average_loser_net_usd": -820.8187353010251,
+      "worst_basket": {
+        "entry_date": "2026-11-06",
+        "positions": "Long GLD",
+        "net_pnl_usd": -3675.455204149889,
+        "basket_return_pct": -11.493068204440682
+      },
+      "best_basket": {
+        "entry_date": "2026-05-20",
+        "positions": "Long SOXX",
+        "net_pnl_usd": 4458.400283085558,
+        "basket_return_pct": 15.738685594022094
+      },
+      "worst_basket_return_pct": -11.493068204440682,
+      "longest_losing_streak_baskets": 4,
+      "transaction_cost_usd": 3020.5226714993237,
+      "recovery": {
+        "completed_episodes": 46,
+        "median_calendar_days": 13.5,
+        "p90_calendar_days": 80.0,
+        "max_calendar_days": 242,
+        "sessions_below_high": 1075
+      },
+      "stopped_baskets_net_change_vs_holding_usd": 0
+    },
+    "intraday_5": {
+      "stop_pct": -5.0,
+      "execution": "intraday",
+      "ending_nav_usd": 119250.83732795047,
+      "net_pnl_usd": 19250.837327950478,
+      "total_net_return_pct": 19.250837327950478,
+      "cagr_pct": 3.674516859656829,
+      "annualized_daily_volatility_pct": 3.382511722561856,
+      "annualized_downside_deviation_pct": 2.1906034952437854,
+      "sharpe_zero_rate": 1.0859557999079419,
+      "sortino_zero_target": 1.6768247797230253,
+      "calmar": 0.9262304996198895,
+      "max_drawdown_pct": -3.9671732480897504,
+      "max_drawdown_trough_date": "2023-11-09",
+      "worst_session": {
+        "date": "2024-09-03",
+        "return_pct": -1.7096027602219843
+      },
+      "empirical_daily_95": {
+        "loss_var_pct": 0.3346273315053339,
+        "mean_tail_loss_pct": 0.5045990012462105,
+        "tail_sessions": 62
+      },
+      "empirical_daily_99": {
+        "loss_var_pct": 0.608979944049535,
+        "mean_tail_loss_pct": 0.7917345456210078,
+        "tail_sessions": 13
+      },
+      "basket_count": 55,
+      "stopped_baskets": 7,
+      "winners": 37,
+      "losers": 18,
+      "win_rate_pct": 67.27272727272727,
+      "profit_factor": 2.215130869959204,
+      "average_winner_net_usd": 948.4713905117397,
+      "average_loser_net_usd": -880.1446733879953,
+      "worst_basket": {
+        "entry_date": "2026-11-06",
+        "positions": "Long GLD",
+        "net_pnl_usd": -1953.855873465364,
+        "basket_return_pct": -6.260828478226566
+      },
+      "best_basket": {
+        "entry_date": "2026-05-20",
+        "positions": "Long SOXX",
+        "net_pnl_usd": 4289.381734790887,
+        "basket_return_pct": 15.738685594022094
+      },
+      "worst_basket_return_pct": -6.260828478226566,
+      "longest_losing_streak_baskets": 4,
+      "transaction_cost_usd": 2962.7315111962635,
+      "recovery": {
+        "completed_episodes": 36,
+        "median_calendar_days": 16.5,
+        "p90_calendar_days": 120.5,
+        "max_calendar_days": 396,
+        "sessions_below_high": 1125
+      },
+      "stopped_baskets_net_change_vs_holding_usd": -2407.0486418313
+    },
+    "intraday_8": {
+      "stop_pct": -8.0,
+      "execution": "intraday",
+      "ending_nav_usd": 122008.68523788682,
+      "net_pnl_usd": 22008.685237886817,
+      "total_net_return_pct": 22.008685237886816,
+      "cagr_pct": 4.1614925595807595,
+      "annualized_daily_volatility_pct": 3.4950911706661856,
+      "annualized_downside_deviation_pct": 2.279397201416487,
+      "sharpe_zero_rate": 1.1864564030441809,
+      "sortino_zero_target": 1.8192411994202438,
+      "calmar": 1.4224434464163715,
+      "max_drawdown_pct": -2.925594384834773,
+      "max_drawdown_trough_date": "2023-10-26",
+      "worst_session": {
+        "date": "2024-09-03",
+        "return_pct": -1.9318383019492513
+      },
+      "empirical_daily_95": {
+        "loss_var_pct": 0.3390641051514588,
+        "mean_tail_loss_pct": 0.5197496250358854,
+        "tail_sessions": 62
+      },
+      "empirical_daily_99": {
+        "loss_var_pct": 0.6348228738864221,
+        "mean_tail_loss_pct": 0.8235535980891483,
+        "tail_sessions": 13
+      },
+      "basket_count": 55,
+      "stopped_baskets": 3,
+      "winners": 38,
+      "losers": 17,
+      "win_rate_pct": 69.0909090909091,
+      "profit_factor": 2.5671529098881276,
+      "average_winner_net_usd": 948.7479860815665,
+      "average_loser_net_usd": -826.102249012521,
+      "worst_basket": {
+        "entry_date": "2026-11-06",
+        "positions": "Long GLD",
+        "net_pnl_usd": -2548.7923036793777,
+        "basket_return_pct": -8.001298550035063
+      },
+      "best_basket": {
+        "entry_date": "2026-05-20",
+        "positions": "Long SOXX",
+        "net_pnl_usd": 4408.035324263986,
+        "basket_return_pct": 15.738685594022094
+      },
+      "worst_basket_return_pct": -8.001298550035063,
+      "longest_losing_streak_baskets": 4,
+      "transaction_cost_usd": 3006.219251698535,
+      "recovery": {
+        "completed_episodes": 42,
+        "median_calendar_days": 12.5,
+        "p90_calendar_days": 82.39999999999999,
+        "max_calendar_days": 244,
+        "sessions_below_high": 1083
+      },
+      "stopped_baskets_net_change_vs_holding_usd": -111.01976884411272
+    },
+    "intraday_10": {
+      "stop_pct": -10.0,
+      "execution": "intraday",
+      "ending_nav_usd": 120077.05468886533,
+      "net_pnl_usd": 20077.054688865337,
+      "total_net_return_pct": 20.07705468886534,
+      "cagr_pct": 3.8213400335403547,
+      "annualized_daily_volatility_pct": 3.5385079194384343,
+      "annualized_downside_deviation_pct": 2.342555343187399,
+      "sharpe_zero_rate": 1.0796924068412757,
+      "sortino_zero_target": 1.6309113649229872,
+      "calmar": 1.0760480973371964,
+      "max_drawdown_pct": -3.551272515602877,
+      "max_drawdown_trough_date": "2026-11-20",
+      "worst_session": {
+        "date": "2024-09-03",
+        "return_pct": -1.9318383019492291
+      },
+      "empirical_daily_95": {
+        "loss_var_pct": 0.3488552603680751,
+        "mean_tail_loss_pct": 0.5343821552046455,
+        "tail_sessions": 62
+      },
+      "empirical_daily_99": {
+        "loss_var_pct": 0.6438423203366277,
+        "mean_tail_loss_pct": 0.8505573487424157,
+        "tail_sessions": 13
+      },
+      "basket_count": 55,
+      "stopped_baskets": 1,
+      "winners": 38,
+      "losers": 17,
+      "win_rate_pct": 69.0909090909091,
+      "profit_factor": 2.270601859247187,
+      "average_winner_net_usd": 944.1650235315842,
+      "average_loser_net_usd": -929.4833061961701,
+      "worst_basket": {
+        "entry_date": "2026-11-06",
+        "positions": "Long GLD",
+        "net_pnl_usd": -3608.4966566159983,
+        "basket_return_pct": -11.493068204440682
+      },
+      "best_basket": {
+        "entry_date": "2026-05-20",
+        "positions": "Long SOXX",
+        "net_pnl_usd": 4377.1782328363715,
+        "basket_return_pct": 15.738685594022094
+      },
+      "worst_basket_return_pct": -11.493068204440682,
+      "longest_losing_streak_baskets": 4,
+      "transaction_cost_usd": 2991.1844195833455,
+      "recovery": {
+        "completed_episodes": 42,
+        "median_calendar_days": 12.5,
+        "p90_calendar_days": 82.39999999999999,
+        "max_calendar_days": 245,
+        "sessions_below_high": 1084
+      },
+      "stopped_baskets_net_change_vs_holding_usd": -1962.6495440610577
+    },
+    "close_5": {
+      "stop_pct": -5.0,
+      "execution": "close",
+      "ending_nav_usd": 120934.00733776532,
+      "net_pnl_usd": 20934.007337765313,
+      "total_net_return_pct": 20.934007337765316,
+      "cagr_pct": 3.972778910102015,
+      "annualized_daily_volatility_pct": 3.441341122441359,
+      "annualized_downside_deviation_pct": 2.250752151183354,
+      "sharpe_zero_rate": 1.1516383917341282,
+      "sortino_zero_target": 1.7608249551480855,
+      "calmar": 1.2246190979510065,
+      "max_drawdown_pct": -3.2440935444736585,
+      "max_drawdown_trough_date": "2023-10-26",
+      "worst_session": {
+        "date": "2024-09-03",
+        "return_pct": -1.9318383019492513
+      },
+      "empirical_daily_95": {
+        "loss_var_pct": 0.3331145921151947,
+        "mean_tail_loss_pct": 0.5130070082236793,
+        "tail_sessions": 62
+      },
+      "empirical_daily_99": {
+        "loss_var_pct": 0.6348228738864273,
+        "mean_tail_loss_pct": 0.8235535980891499,
+        "tail_sessions": 13
+      },
+      "basket_count": 55,
+      "stopped_baskets": 5,
+      "winners": 37,
+      "losers": 18,
+      "win_rate_pct": 67.27272727272727,
+      "profit_factor": 2.42815429479224,
+      "average_winner_net_usd": 961.9484470793202,
+      "average_loser_net_usd": -814.3380668983076,
+      "worst_basket": {
+        "entry_date": "2026-11-06",
+        "positions": "Long GLD",
+        "net_pnl_usd": -2526.342010444733,
+        "basket_return_pct": -8.001298550035063
+      },
+      "best_basket": {
+        "entry_date": "2026-05-20",
+        "positions": "Long SOXX",
+        "net_pnl_usd": 4369.208431434963,
+        "basket_return_pct": 15.738685594022094
+      },
+      "worst_basket_return_pct": -8.001298550035063,
+      "longest_losing_streak_baskets": 4,
+      "transaction_cost_usd": 3005.2020275843006,
+      "recovery": {
+        "completed_episodes": 40,
+        "median_calendar_days": 15.5,
+        "p90_calendar_days": 91.10000000000011,
+        "max_calendar_days": 242,
+        "sessions_below_high": 1091
+      },
+      "stopped_baskets_net_change_vs_holding_usd": -1136.9192611490669
+    },
+    "close_8": {
+      "stop_pct": -8.0,
+      "execution": "close",
+      "ending_nav_usd": 120462.84911877035,
+      "net_pnl_usd": 20462.849118770344,
+      "total_net_return_pct": 20.462849118770343,
+      "cagr_pct": 3.8896228019600354,
+      "annualized_daily_volatility_pct": 3.5434478859127183,
+      "annualized_downside_deviation_pct": 2.3450692847550223,
+      "sharpe_zero_rate": 1.0968315844243528,
+      "sortino_zero_target": 1.657335066514583,
+      "calmar": 1.0952757877269543,
+      "max_drawdown_pct": -3.551272515602888,
+      "max_drawdown_trough_date": "2026-11-20",
+      "worst_session": {
+        "date": "2024-09-03",
+        "return_pct": -1.9318383019492291
+      },
+      "empirical_daily_95": {
+        "loss_var_pct": 0.34885526036806735,
+        "mean_tail_loss_pct": 0.5348427323424052,
+        "tail_sessions": 62
+      },
+      "empirical_daily_99": {
+        "loss_var_pct": 0.6438423203366277,
+        "mean_tail_loss_pct": 0.8527539473994249,
+        "tail_sessions": 13
+      },
+      "basket_count": 55,
+      "stopped_baskets": 3,
+      "winners": 38,
+      "losers": 17,
+      "win_rate_pct": 69.0909090909091,
+      "profit_factor": 2.321773247479223,
+      "average_winner_net_usd": 945.900272543007,
+      "average_loser_net_usd": -910.6683081096419,
+      "worst_basket": {
+        "entry_date": "2026-11-06",
+        "positions": "Long GLD",
+        "net_pnl_usd": -3620.0903612922198,
+        "basket_return_pct": -11.493068204440682
+      },
+      "best_basket": {
+        "entry_date": "2026-05-20",
+        "positions": "Long SOXX",
+        "net_pnl_usd": 4391.241627256774,
+        "basket_return_pct": 15.738685594022094
+      },
+      "worst_basket_return_pct": -11.493068204440682,
+      "longest_losing_streak_baskets": 4,
+      "transaction_cost_usd": 2996.2642643672893,
+      "recovery": {
+        "completed_episodes": 42,
+        "median_calendar_days": 12.5,
+        "p90_calendar_days": 82.39999999999999,
+        "max_calendar_days": 244,
+        "sessions_below_high": 1083
+      },
+      "stopped_baskets_net_change_vs_holding_usd": -1567.4568519620125
+    },
+    "close_10": {
+      "stop_pct": -10.0,
+      "execution": "close",
+      "ending_nav_usd": 120462.84911877035,
+      "net_pnl_usd": 20462.849118770344,
+      "total_net_return_pct": 20.462849118770343,
+      "cagr_pct": 3.8896228019600354,
+      "annualized_daily_volatility_pct": 3.5434478859127183,
+      "annualized_downside_deviation_pct": 2.3450692847550223,
+      "sharpe_zero_rate": 1.0968315844243528,
+      "sortino_zero_target": 1.657335066514583,
+      "calmar": 1.0952757877269543,
+      "max_drawdown_pct": -3.551272515602888,
+      "max_drawdown_trough_date": "2026-11-20",
+      "worst_session": {
+        "date": "2024-09-03",
+        "return_pct": -1.9318383019492291
+      },
+      "empirical_daily_95": {
+        "loss_var_pct": 0.34885526036806735,
+        "mean_tail_loss_pct": 0.5348427323424052,
+        "tail_sessions": 62
+      },
+      "empirical_daily_99": {
+        "loss_var_pct": 0.6438423203366277,
+        "mean_tail_loss_pct": 0.8527539473994249,
+        "tail_sessions": 13
+      },
+      "basket_count": 55,
+      "stopped_baskets": 1,
+      "winners": 38,
+      "losers": 17,
+      "win_rate_pct": 69.0909090909091,
+      "profit_factor": 2.321773247479223,
+      "average_winner_net_usd": 945.900272543007,
+      "average_loser_net_usd": -910.6683081096419,
+      "worst_basket": {
+        "entry_date": "2026-11-06",
+        "positions": "Long GLD",
+        "net_pnl_usd": -3620.0903612922198,
+        "basket_return_pct": -11.493068204440682
+      },
+      "best_basket": {
+        "entry_date": "2026-05-20",
+        "positions": "Long SOXX",
+        "net_pnl_usd": 4391.241627256774,
+        "basket_return_pct": 15.738685594022094
+      },
+      "worst_basket_return_pct": -11.493068204440682,
+      "longest_losing_streak_baskets": 4,
+      "transaction_cost_usd": 2996.2642643672893,
+      "recovery": {
+        "completed_episodes": 42,
+        "median_calendar_days": 12.5,
+        "p90_calendar_days": 82.39999999999999,
+        "max_calendar_days": 244,
+        "sessions_below_high": 1083
+      },
+      "stopped_baskets_net_change_vs_holding_usd": -1622.8216948196816
+    }
+  },
+  "input_sha256": {
+    "prices.csv": "005dfb4f17d263c1f6c438c520f5837fad4df53f0c61edbff492b15fcf60c192",
+    "inputs/main_archive_replay_prepared.json": "f672d2a8ef33e6adddce96f5053bc19c55ffa9a74b595402600db9878805499f",
+    "results/archive_replay_unhedged25_daily.csv": "3352b9355c9994bccca4bb579ef575fbc069bc95fdc7b7f6c64b6b4cedf3f7ee"
+  }
+}
