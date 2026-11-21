@@ -1,0 +1,153 @@
+{
+  "status": "passed",
+  "workflowRun": 44888424156,
+  "workflowJob": 136798704390,
+  "payloadSHA256verified": [
+    "PNG",
+    "ZIP",
+    "METRICS",
+    "YEARS",
+    "TRADES"
+  ],
+  "zipMembers": 99,
+  "allZipCRCVerified": true,
+  "manifestEntries": 98,
+  "allManifestSizesAndSHA256Verified": true,
+  "caseCount": 12,
+  "dailyNavRows": 14724,
+  "tradeRows": 723,
+  "calendarYearRows": 60,
+  "checks": [
+    "dailyNAV endpoints/maxDD",
+    "tradePnL and fees/borrow sums",
+    "physical order fees",
+    "daily fee/borrow sums",
+    "average/max gross/net exposures",
+    "all-day and active-day beta",
+    "calendar-year start/end NAV and returns",
+    "all12plot endpoint and drawdown labels"
+  ],
+  "rawSourceOrPriceFilesInExport": 0,
+  "cases": [
+    {
+      "variant": "absolute_reserved",
+      "policy": "unhedged25",
+      "days": 1227,
+      "trades": 55,
+      "netReturn": 0.19053434321675544,
+      "maxDrawdown": -0.0355127251560291,
+      "feesUsd": 2949.3626965837516,
+      "borrowUsd": 0
+    },
+    {
+      "variant": "absolute_reserved",
+      "policy": "dollar_short25",
+      "days": 1227,
+      "trades": 55,
+      "netReturn": 0.026398424638455653,
+      "maxDrawdown": -0.0905113414573473,
+      "feesUsd": 5310.725831963041,
+      "borrowUsd": 1572.9286646879343
+    },
+    {
+      "variant": "absolute_reserved",
+      "policy": "beta40_daily_short25",
+      "days": 1227,
+      "trades": 55,
+      "netReturn": -0.034461005198473504,
+      "maxDrawdown": -0.10999897093424071,
+      "feesUsd": 5611.3106813660015,
+      "borrowUsd": 1611.021647113578
+    },
+    {
+      "variant": "absolute_filled",
+      "policy": "unhedged25",
+      "days": 1227,
+      "trades": 71,
+      "netReturn": 0.1355251755582887,
+      "maxDrawdown": -0.08559556147581548,
+      "feesUsd": 3595.9849626725036,
+      "borrowUsd": 0
+    },
+    {
+      "variant": "absolute_filled",
+      "policy": "dollar_short25",
+      "days": 1227,
+      "trades": 71,
+      "netReturn": -0.038591983971988375,
+      "maxDrawdown": -0.10783099452722544,
+      "feesUsd": 6411.213480779136,
+      "borrowUsd": 1909.6182511716527
+    },
+    {
+      "variant": "absolute_filled",
+      "policy": "beta40_daily_short25",
+      "days": 1227,
+      "trades": 71,
+      "netReturn": -0.07017744968990258,
+      "maxDrawdown": -0.09688898064342755,
+      "feesUsd": 6981.35366307607,
+      "borrowUsd": 2066.6895897139207
+    },
+    {
+      "variant": "relative_reserved",
+      "policy": "unhedged25",
+      "days": 1227,
+      "trades": 44,
+      "netReturn": 0.18708881619213136,
+      "maxDrawdown": -0.03551272515602899,
+      "feesUsd": 2348.2210664777454,
+      "borrowUsd": 0
+    },
+    {
+      "variant": "relative_reserved",
+      "policy": "dollar_short25",
+      "days": 1227,
+      "trades": 44,
+      "netReturn": 0.04408134315767942,
+      "maxDrawdown": -0.06831552803519592,
+      "feesUsd": 4401.984980418671,
+      "borrowUsd": 1305.2667151953763
+    },
+    {
+      "variant": "relative_reserved",
+      "policy": "beta40_daily_short25",
+      "days": 1227,
+      "trades": 44,
+      "netReturn": -0.013232055985605173,
+      "maxDrawdown": -0.07870569578603182,
+      "feesUsd": 4679.990836781203,
+      "borrowUsd": 1345.3605574509797
+    },
+    {
+      "variant": "relative_filled",
+      "policy": "unhedged25",
+      "days": 1227,
+      "trades": 71,
+      "netReturn": 0.010563996800921238,
+      "maxDrawdown": -0.09324027497041643,
+      "feesUsd": 3522.328913643262,
+      "borrowUsd": 0
+    },
+    {
+      "variant": "relative_filled",
+      "policy": "dollar_short25",
+      "days": 1227,
+      "trades": 71,
+      "netReturn": -0.1020112156712476,
+      "maxDrawdown": -0.12484103979952321,
+      "feesUsd": 6772.4620486217555,
+      "borrowUsd": 2025.0810041980706
+    },
+    {
+      "variant": "relative_filled",
+      "policy": "beta40_daily_short25",
+      "days": 1227,
+      "trades": 71,
+      "netReturn": -0.09546951123118275,
+      "maxDrawdown": -0.11939708433394125,
+      "feesUsd": 7240.863368765864,
+      "borrowUsd": 2078.2175711722434
+    }
+  ]
+}

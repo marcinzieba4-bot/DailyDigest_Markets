@@ -1,0 +1,51 @@
+{
+  "reference": "Committed January 2022–November 20, 2026 simulation.",
+  "reference_path": "backtests/2022_2026_month_gaps",
+  "current_control": "absolute_reserved",
+  "prior_price_vintage_identity_claimed": false,
+  "fresh_all_four_variants_share_one_input_campaign": true,
+  "reference_available": true,
+  "status": "refreshed_input_vintage_difference",
+  "cases": [
+    {
+      "policy": "unhedged25",
+      "same_funded_schedule_and_directions": false,
+      "reference_baskets": 54,
+      "current_baskets": 55,
+      "metric_deltas": {
+        "total_return": -0.004000011596415831,
+        "max_drawdown": 3.357970362105611e-06,
+        "transaction_cost": 0.0004510237472011569,
+        "borrow_cost": 0.0,
+        "baskets": 1.0
+      }
+    },
+    {
+      "policy": "dollar_short25",
+      "same_funded_schedule_and_directions": false,
+      "reference_baskets": 54,
+      "current_baskets": 55,
+      "metric_deltas": {
+        "total_return": -0.0009434460750716855,
+        "max_drawdown": -0.0008395724934927573,
+        "transaction_cost": 0.0009932842854626436,
+        "borrow_cost": 0.0002865251445503345,
+        "baskets": 1.0
+      }
+    },
+    {
+      "policy": "beta40_daily_short25",
+      "same_funded_schedule_and_directions": false,
+      "reference_baskets": 54,
+      "current_baskets": 55,
+      "metric_deltas": {
+        "total_return": 0.00014894444840529708,
+        "max_drawdown": 0.00013419671421688317,
+        "transaction_cost": 0.0013438384797545416,
+        "borrow_cost": 0.00042158679693142867,
+        "baskets": 1.0
+      }
+    }
+  ],
+  "message": "This study reports its current unchanged-rule control alongside all three new schedules; earlier saved returns are not substituted."
+}
